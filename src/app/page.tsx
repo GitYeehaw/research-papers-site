@@ -3,7 +3,7 @@ import CategorySection from "@/components/CategorySection";
 
 export default function HomePage() {
   const allData = getAllCategoryData();
-  const categories = ["cs", "biology", "electrochem", "physics"];
+  const categories = ["cs", "physics", "biology", "electrochem"];
 
   const latestScrape = categories
     .map((c) => allData[c]?.scraped_at)
