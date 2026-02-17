@@ -8,9 +8,9 @@ const NAV_ITEMS = [
   { href: "/", label: "Home" },
   { href: "/projects", label: "Projects" },
   { href: "/cs", label: "CS" },
+  { href: "/physics", label: "Physics" },
   { href: "/biology", label: "Biology" },
   { href: "/electrochem", label: "Electrochem" },
-  { href: "/physics", label: "Physics" },
 ];
 
 export default function Navbar() {
