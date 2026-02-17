@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --bg-card: #ffffff;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #94a3b8;
+    --border: #e2e8f0;
+    --accent: #6366f1;
+    --accent-light: #818cf8;
+  }
+
+  .dark {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-card: #1e293b;
+    --text-primary: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --text-muted: #64748b;
+    --border: #334155;
+    --accent: #818cf8;
+    --accent-light: #a5b4fc;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200;
+    color: var(--text-secondary);
+  }
+  .nav-link:hover {
+    color: var(--accent);
+    background-color: var(--bg-secondary);
+  }
+  .nav-link.active {
+    color: var(--accent);
+    background-color: var(--bg-secondary);
+  }
+
+  .card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    @apply rounded-xl p-6 transition-all duration-200;
+  }
+  .card:hover {
+    border-color: var(--accent);
+    @apply shadow-lg;
+  }
+
+  .category-badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+    background-color: var(--bg-secondary);
+    color: var(--accent);
+    border: 1px solid var(--border);
+  }
+
+  .section-title {
+    @apply text-3xl font-bold tracking-tight mb-2;
+    color: var(--text-primary);
+  }
+
+  .section-desc {
+    @apply text-lg mb-8;
+    color: var(--text-secondary);
+  }
+}
