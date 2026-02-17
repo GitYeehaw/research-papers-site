@@ -43,6 +43,7 @@ jobs:
           git add data/
           # Only commit if there are changes
           git diff --staged --quiet || git commit -m "chore: update paper data $(date -u +%Y-%m-%d)"
+          git pull --rebase origin main
           git push
 
   build-and-deploy:
