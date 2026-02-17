@@ -5,7 +5,6 @@ export default function HomePage() {
   const allData = getAllCategoryData();
   const categories = ["cs", "biology", "electrochem", "physics"];
 
-  // Find the latest scrape time
   const latestScrape = categories
     .map((c) => allData[c]?.scraped_at)
     .filter(Boolean)
@@ -19,19 +18,48 @@ export default function HomePage() {
         month: "long",
         day: "numeric",
       })
-    : "Not yet scraped";
+    : "Awaiting first collection";
 
   return (
     <div>
       {/* Hero section */}
-      <div className="mb-12">
-        <h1 className="section-title text-4xl">Research Papers</h1>
-        <p className="section-desc">
-          Daily curated papers from arXiv across CS, Biology, Electrochemistry, and Physics.
+      <div className="mb-16 pt-6">
+        <h1
+          className="text-5xl mb-4"
+          style={{
+            fontFamily: "var(--font-heading)",
+            color: "var(--text-primary)",
+            fontWeight: 600,
+            lineHeight: 1.2,
+          }}
+        >
+          Research Papers
+        </h1>
+        <p
+          className="text-xl mb-6"
+          style={{
+            color: "var(--text-secondary)",
+            fontStyle: "italic",
+            fontWeight: 300,
+            maxWidth: "36rem",
+          }}
+        >
+          A daily collection of scholarly works from the arXiv, spanning the
+          sciences and computation.
         </p>
-        <p className="text-sm" style={{ color: "var(--text-muted)" }}>
-          Last updated: {formattedDate}
+        <p
+          className="text-xs tracking-wider uppercase"
+          style={{
+            color: "var(--text-muted)",
+            fontFamily: "var(--font-mono)",
+            letterSpacing: "0.12em",
+          }}
+        >
+          Last collected: {formattedDate}
         </p>
+
+        {/* Decorative flourish */}
+        <div className="flourish mt-8">&mdash;&nbsp;&bull;&nbsp;&mdash;</div>
       </div>
 
       {/* Category previews — 3 papers each */}

@@ -8,7 +8,7 @@ function formatDate(dateStr: string): string {
     const date = new Date(dateStr);
     return date.toLocaleDateString("en-US", {
       year: "numeric",
-      month: "short",
+      month: "long",
       day: "numeric",
     });
   } catch {
@@ -16,9 +16,9 @@ function formatDate(dateStr: string): string {
   }
 }
 
-function truncateAbstract(text: string, maxLen: number = 250): string {
+function truncateAbstract(text: string, maxLen: number = 280): string {
   if (text.length <= maxLen) return text;
-  return text.slice(0, maxLen).trimEnd() + "...";
+  return text.slice(0, maxLen).trimEnd() + "\u2026";
 }
 
 export default function PaperCard({ paper }: { paper: Paper }) {
@@ -27,76 +27,113 @@ export default function PaperCard({ paper }: { paper: Paper }) {
   return (
     <article className="card group">
       {/* Title */}
-      <h3 className="text-lg font-semibold mb-2 leading-snug">
+      <h3
+        className="text-lg mb-2 leading-snug"
+        style={{ fontFamily: "var(--font-heading)", fontWeight: 500 }}
+      >
         <a
           href={paper.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:underline"
-          style={{ color: "var(--accent)" }}
+          className="transition-colors duration-200"
+          style={{ color: "var(--accent-light)" }}
+          onMouseOver={(e) => (e.currentTarget.style.color = "var(--accent)")}
+          onMouseOut={(e) => (e.currentTarget.style.color = "var(--accent-light)")}
         >
           {paper.title}
         </a>
       </h3>
 
-      {/* Authors */}
-      <p className="text-sm mb-3" style={{ color: "var(--text-muted)" }}>
+      {/* Authors — italic, scholarly style */}
+      <p
+        className="text-sm mb-3"
+        style={{ color: "var(--text-muted)", fontStyle: "italic" }}
+      >
         {paper.authors.slice(0, 5).join(", ")}
-        {paper.authors.length > 5 && ` +${paper.authors.length - 5} more`}
+        {paper.authors.length > 5 && (
+          <span style={{ color: "var(--accent-dim)" }}>
+            {" "}et al. ({paper.authors.length} authors)
+          </span>
+        )}
       </p>
 
       {/* Abstract */}
-      <p className="text-sm mb-4 leading-relaxed" style={{ color: "var(--text-secondary)" }}>
+      <p
+        className="text-sm mb-5 leading-relaxed"
+        style={{ color: "var(--text-secondary)" }}
+      >
         {expanded ? paper.abstract : truncateAbstract(paper.abstract)}
-        {paper.abstract.length > 250 && (
+        {paper.abstract.length > 280 && (
           <button
             onClick={() => setExpanded(!expanded)}
-            className="ml-1 font-medium hover:underline"
-            style={{ color: "var(--accent)" }}
+            className="ml-1 transition-colors duration-200"
+            style={{
+              color: "var(--accent-dim)",
+              fontStyle: "italic",
+              fontSize: "0.8rem",
+            }}
+            onMouseOver={(e) => (e.currentTarget.style.color = "var(--accent)")}
+            onMouseOut={(e) => (e.currentTarget.style.color = "var(--accent-dim)")}
           >
-            {expanded ? "Show less" : "Read more"}
+            {expanded ? "[collapse]" : "[continue reading]"}
           </button>
         )}
       </p>
 
       {/* Footer: date, categories, links */}
-      <div className="flex flex-wrap items-center gap-3 text-xs">
-        <time style={{ color: "var(--text-muted)" }}>{formatDate(paper.published)}</time>
+      <div
+        className="flex flex-wrap items-center gap-3 pt-3"
+        style={{ borderTop: "1px solid var(--border)" }}
+      >
+        <time
+          className="text-xs"
+          style={{
+            color: "var(--text-muted)",
+            fontFamily: "var(--font-mono)",
+            fontSize: "0.65rem",
+          }}
+        >
+          {formatDate(paper.published)}
+        </time>
 
         {paper.primary_category && (
           <span className="category-badge">{paper.primary_category}</span>
         )}
 
-        <div className="ml-auto flex gap-2">
+        <div className="ml-auto flex gap-3">
           <a
             href={paper.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 px-3 py-1 rounded-md text-xs font-medium transition-colors"
+            className="text-xs transition-colors duration-200"
             style={{
-              color: "var(--accent)",
-              backgroundColor: "var(--bg-secondary)",
+              color: "var(--text-muted)",
+              fontFamily: "var(--font-mono)",
+              fontSize: "0.65rem",
+              letterSpacing: "0.05em",
+              textTransform: "uppercase",
             }}
+            onMouseOver={(e) => (e.currentTarget.style.color = "var(--accent)")}
+            onMouseOut={(e) => (e.currentTarget.style.color = "var(--text-muted)")}
           >
-            <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-            </svg>
-            arXiv
+            Abstract
           </a>
           {paper.pdf_url && (
             <a
               href={paper.pdf_url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 px-3 py-1 rounded-md text-xs font-medium transition-colors"
+              className="text-xs transition-colors duration-200"
               style={{
-                color: "var(--accent)",
-                backgroundColor: "var(--bg-secondary)",
+                color: "var(--text-muted)",
+                fontFamily: "var(--font-mono)",
+                fontSize: "0.65rem",
+                letterSpacing: "0.05em",
+                textTransform: "uppercase",
               }}
+              onMouseOver={(e) => (e.currentTarget.style.color = "var(--accent)")}
+              onMouseOut={(e) => (e.currentTarget.style.color = "var(--text-muted)")}
             >
-              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
               PDF
             </a>
           )}

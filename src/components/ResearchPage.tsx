@@ -15,21 +15,35 @@ export default function ResearchPage({ data }: ResearchPageProps) {
         hour: "numeric",
         minute: "2-digit",
       })
-    : "Not yet scraped";
+    : "Awaiting first collection";
 
   return (
     <div>
-      <div className="mb-8">
-        <h1 className="section-title">{data.name}</h1>
+      <div className="pt-6 mb-10">
+        <h1
+          className="text-4xl mb-3"
+          style={{
+            fontFamily: "var(--font-heading)",
+            color: "var(--text-primary)",
+            fontWeight: 600,
+          }}
+        >
+          {data.name}
+        </h1>
         <p className="section-desc">{data.description}</p>
         <div
-          className="flex items-center gap-4 text-sm"
-          style={{ color: "var(--text-muted)" }}
+          className="flex items-center gap-4 text-xs tracking-wider uppercase"
+          style={{
+            color: "var(--text-muted)",
+            fontFamily: "var(--font-mono)",
+            letterSpacing: "0.1em",
+          }}
         >
           <span>{data.paper_count} papers</span>
-          <span>&middot;</span>
-          <span>Updated: {formattedDate}</span>
+          <span style={{ color: "var(--border-hover)" }}>&bull;</span>
+          <span>Collected: {formattedDate}</span>
         </div>
+        <div className="divider" />
       </div>
 
       <PaperGrid

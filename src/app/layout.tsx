@@ -1,12 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
-  title: "Research Papers",
+  title: "Research Papers — A Daily Scholarly Digest",
   description:
     "Daily curated research papers from arXiv — CS, Biology, Electrochemistry, and Physics.",
 };
@@ -18,17 +15,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <Navbar />
-        <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
           {children}
         </main>
         <footer
-          className="border-t py-8 mt-16 text-center text-sm"
-          style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}
+          className="py-12 mt-20 text-center text-sm"
+          style={{ color: "var(--text-muted)" }}
         >
-          <p>
-            Papers scraped daily from{" "}
+          <div className="flourish">&mdash;&nbsp;&bull;&nbsp;&mdash;</div>
+          <p className="mt-4" style={{ fontFamily: "var(--font-body)", fontStyle: "italic" }}>
+            Papers gathered daily from{" "}
             <a
               href="https://arxiv.org"
               target="_blank"
@@ -38,7 +36,9 @@ export default function RootLayout({
             >
               arXiv.org
             </a>
-            . Built with Next.js &amp; GitHub Actions.
+          </p>
+          <p className="mt-1 text-xs" style={{ color: "var(--text-muted)", opacity: 0.6 }}>
+            Built with Next.js &amp; GitHub Actions
           </p>
         </footer>
       </body>
