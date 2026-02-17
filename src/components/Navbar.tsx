@@ -11,6 +11,7 @@ const NAV_ITEMS = [
   { href: "/physics", label: "Physics" },
   { href: "/biology", label: "Biology" },
   { href: "/electrochem", label: "Electrochem" },
+  { href: "/robotics", label: "Robotics" },
 ];
 
 export default function Navbar() {

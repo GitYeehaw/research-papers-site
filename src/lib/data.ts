@@ -22,7 +22,7 @@ export function getCategoryData(category: string): CategoryData {
 }
 
 export function getAllCategories(): string[] {
-  return ["cs", "physics", "biology", "electrochem"];
+  return ["cs", "physics", "biology", "electrochem", "robotics"];
 }
 
 export function getAllCategoryData(): Record<string, CategoryData> {
