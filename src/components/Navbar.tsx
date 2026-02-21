@@ -7,11 +7,11 @@ import { useState } from "react";
 const NAV_ITEMS = [
   { href: "/", label: "Home" },
   { href: "/projects", label: "Projects" },
-  { href: "/cs", label: "CS" },
+  { href: "/robotics", label: "Robotics" },
   { href: "/physics", label: "Physics" },
+  { href: "/cs", label: "CS" },
   { href: "/biology", label: "Biology" },
   { href: "/electrochem", label: "Electrochem" },
-  { href: "/robotics", label: "Robotics" },
 ];
 
 export default function Navbar() {
