@@ -25,7 +25,7 @@ export default function PaperCard({ paper }: { paper: Paper }) {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <article className="card group">
+    <article className="card">
       {/* Title */}
       <h3
         className="text-lg mb-2 leading-snug"
