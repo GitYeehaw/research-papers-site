@@ -4,34 +4,35 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This repository contains the **Research Hub** — a static GitHub Pages site that auto-scrapes academic papers from the arXiv API and displays them across research categories (CS, Biology, Electrochemistry, Physics).
+**Research Hub** — a Next.js 14 (App Router) static site deployed to GitHub Pages that auto-scrapes academic papers from the arXiv API daily across five categories: CS, Biology, Electrochemistry, Physics, and Robotics.
 
-The main project files live in `Code/research-hub-site.zip` (or unzipped as `research-hub-site/`).
+Live site: `https://gityeehaw.github.io/research-papers-site/`
 
-## Running Locally
+## Tech Stack
+
+- **Next.js 14** with App Router, TypeScript, Tailwind CSS, PostCSS
+- **Static export** (`output: 'export'` in `next.config.js`) — no server, all pages prerendered at build time
+- **`basePath: '/research-papers-site'`** — required for GitHub Pages subpath deployment
+- **Python 3** scraper (`scripts/scrape.py`) using stdlib only; config in `scripts/config.json`
+
+## Commands
 
 ```bash
-# Serve the static site
-python -m http.server 8000
-# Visit http://localhost:8000
+npm run build      # Next.js static export → out/
+npm run dev        # Local dev server
 
-# Manually run the paper scraper
-python scripts/scrape_papers.py
+python scripts/scrape.py   # Manually fetch papers from arXiv → data/*.json
 ```
 
 ## Architecture
 
-**Data flow:** arXiv API → `scripts/scrape_papers.py` → `data/*.json` → git commit → GitHub Pages serves the site → `js/app.js` loads JSON at runtime.
+**Data flow:** arXiv API → `scripts/scrape.py` → `data/*.json` committed to `main` → Next.js build reads JSON at build time via `fs.readFileSync` → static HTML in `out/` → deployed to `gh-pages` branch → served by GitHub Pages.
+
+Papers are embedded into static HTML at **build time** (not fetched client-side). `src/lib/data.ts` handles all data reading using Node.js `fs`; it falls back to empty results if a file is missing.
 
 **Key files:**
-- `scripts/scrape_papers.py` — Python stdlib-only scraper; `CATEGORIES` dict controls which arXiv subcategories are fetched
-- `js/app.js` — Client-side router (hash-based: `#cs`, `#physics`, etc.) and data loading; `PROJECTS` array defines the Projects page content
-- `css/style.css` — All styling via CSS custom properties at the top of the file
-- `data/manifest.json` — Metadata listing available paper categories
-- `.github/workflows/scrape.yml` — Runs scraper daily at 6 AM UTC, auto-commits updated JSON
-
-**Design constraints:**
-- Zero frontend dependencies (no npm, no build step, no frameworks)
-- Python scraper uses stdlib only (`urllib`, `xml.etree`, `json`) — no `pip install` needed
-- arXiv API requests include 3-second delays for rate limiting; papers are deduplicated by arXiv ID
-- The frontend gracefully handles missing data files
+- `src/lib/data.ts` — reads `data/*.json` at build time; single source of truth for data access
+- `src/app/[category]/page.tsx` — one Server Component per category (`cs`, `physics`, `biology`, `electrochem`, `robotics`), each calls `getCategoryData()`
+- `src/components/ResearchPage.tsx` — shared layout for all category pages
+- `scripts/scrape.py` — arXiv scraper; categories controlled by `scripts/config.json`
+- `.github/workflows/scrape-and-deploy.yml` — two jobs: `scrape` (runs scraper, commits data) then `build-and-deploy` (Next.js build + `peaceiris/actions-gh-pages` to `gh-pages` branch); triggered daily at 8 AM UTC and on every push to `main`
