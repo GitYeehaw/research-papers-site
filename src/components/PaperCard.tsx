@@ -58,6 +58,7 @@ export default function PaperCard({ paper }: { paper: Paper }) {
         style={{
           maxHeight: expanded ? "1000px" : "5.5em",
           overflow: "hidden",
+          width: "100%",
           transition: "max-height 0.4s ease",
         }}
       >
