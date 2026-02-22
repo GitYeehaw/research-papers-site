@@ -17,6 +17,7 @@ from datetime import datetime, timezone
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.dirname(SCRIPT_DIR)
 CONFIG_PATH = os.path.join(SCRIPT_DIR, "config.json")
+RESEARCHERS_PATH = os.path.join(SCRIPT_DIR, "researchers.json")
 DATA_DIR = os.path.join(PROJECT_ROOT, "data")
 
 ARXIV_API_URL = "http://export.arxiv.org/api/query"
@@ -149,6 +150,48 @@ def prioritize_lab_papers(papers: list[dict], labs: list[dict]) -> list[dict]:
     return priority + regular
 
 
+def scrape_researchers():
+    """Fetch latest papers for each tracked researcher and write data/researchers.json."""
+    if not os.path.exists(RESEARCHERS_PATH):
+        print("  No researchers.json found, skipping.")
+        return
+
+    with open(RESEARCHERS_PATH, "r") as f:
+        researchers = json.load(f)
+
+    results = []
+    for researcher in researchers:
+        name = researcher["name"]
+        arxiv_id = researcher["arxiv_id"]
+        print(f"  [{name}]")
+
+        papers = fetch_arxiv_papers(f"au:{arxiv_id}", max_results=5)
+        print(f"    Found {len(papers)} papers")
+
+        results.append({
+            "id": arxiv_id,
+            "name": name,
+            "field": researcher.get("field", ""),
+            "institution": researcher.get("institution", ""),
+            "website": researcher.get("website", ""),
+            "paper_count": len(papers),
+            "papers": papers,
+        })
+
+        time.sleep(3)
+
+    output = {
+        "scraped_at": datetime.now(timezone.utc).isoformat(),
+        "researcher_count": len(results),
+        "researchers": results,
+    }
+
+    output_path = os.path.join(DATA_DIR, "researchers.json")
+    with open(output_path, "w") as f:
+        json.dump(output, f, indent=2)
+    print(f"  Saved to {output_path}")
+
+
 def main():
     print("=" * 60)
     print(f"arXiv Paper Scraper — {datetime.now(timezone.utc).isoformat()}")
@@ -186,6 +229,9 @@ def main():
 
         # Be polite to the arXiv API — wait between requests
         time.sleep(3)
+
+    print(f"\n[Researchers]")
+    scrape_researchers()
 
     print(f"\nDone! Data files written to {DATA_DIR}/")
 
