@@ -85,7 +85,7 @@ export default function PaperGrid({ papers, emptyMessage = "No papers found." }:
           ))}
         </div>
       )}
-      <div className="grid gap-4">
+      <div className="grid gap-4" style={{ minWidth: 0 }}>
         {filtered.map((paper) => (
           <PaperCard key={paper.id} paper={paper} />
         ))}
