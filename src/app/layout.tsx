@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import BackToTop from "@/components/BackToTop";
+import MathJaxTypeset from "@/components/MathJaxTypeset";
 import Script from "next/script";
 
 export const metadata: Metadata = {
@@ -23,6 +24,7 @@ export default function RootLayout({
           {children}
         </main>
         <BackToTop />
+        <MathJaxTypeset />
         <footer
           className="py-12 mt-20 text-center text-sm"
           style={{ color: "var(--text-muted)" }}
