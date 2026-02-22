@@ -21,7 +21,7 @@ export default function PaperCard({ paper }: { paper: Paper }) {
   const isLong = paper.abstract.length > 280;
 
   return (
-    <article className="card" style={{ display: "flex", flexDirection: "column" }}>
+    <article className="card" style={{ display: "flex", flexDirection: "column", minWidth: 0, overflow: "hidden" }}>
       {/* Title */}
       <h3
         className="text-lg mb-2 leading-snug"
@@ -54,7 +54,7 @@ export default function PaperCard({ paper }: { paper: Paper }) {
       </p>
 
       {/* Abstract + expand button — grows to fill card */}
-      <div style={{ flex: 1 }}>
+      <div style={{ flex: 1, minWidth: 0, overflow: "hidden" }}>
         <div
           style={{
             maxHeight: expanded ? "1000px" : "5.5em",
@@ -65,7 +65,7 @@ export default function PaperCard({ paper }: { paper: Paper }) {
         >
           <p
             className="text-sm leading-relaxed"
-            style={{ color: "var(--text-secondary)" }}
+            style={{ color: "var(--text-secondary)", wordBreak: "break-word" }}
           >
             {paper.abstract}
           </p>
