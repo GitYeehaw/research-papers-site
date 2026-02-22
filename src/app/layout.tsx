@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import BackToTop from "@/components/BackToTop";
 
 export const metadata: Metadata = {
   title: "Research Papers — A Daily Scholarly Digest",
@@ -20,6 +21,7 @@ export default function RootLayout({
         <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
           {children}
         </main>
+        <BackToTop />
         <footer
           className="py-12 mt-20 text-center text-sm"
           style={{ color: "var(--text-muted)" }}

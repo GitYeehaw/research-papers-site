@@ -16,13 +16,9 @@ function formatDate(dateStr: string): string {
   }
 }
 
-function truncateAbstract(text: string, maxLen: number = 280): string {
-  if (text.length <= maxLen) return text;
-  return text.slice(0, maxLen).trimEnd() + "\u2026";
-}
-
 export default function PaperCard({ paper }: { paper: Paper }) {
   const [expanded, setExpanded] = useState(false);
+  const isLong = paper.abstract.length > 280;
 
   return (
     <article className="card">
@@ -44,7 +40,7 @@ export default function PaperCard({ paper }: { paper: Paper }) {
         </a>
       </h3>
 
-      {/* Authors — italic, scholarly style */}
+      {/* Authors */}
       <p
         className="text-sm mb-3"
         style={{ color: "var(--text-muted)", fontStyle: "italic" }}
@@ -57,28 +53,37 @@ export default function PaperCard({ paper }: { paper: Paper }) {
         )}
       </p>
 
-      {/* Abstract */}
-      <p
-        className="text-sm mb-5 leading-relaxed"
-        style={{ color: "var(--text-secondary)" }}
+      {/* Abstract with smooth expand */}
+      <div
+        style={{
+          maxHeight: expanded ? "1000px" : "5.5em",
+          overflow: "hidden",
+          transition: "max-height 0.4s ease",
+        }}
       >
-        {expanded ? paper.abstract : truncateAbstract(paper.abstract)}
-        {paper.abstract.length > 280 && (
-          <button
-            onClick={() => setExpanded(!expanded)}
-            className="ml-1 transition-colors duration-200"
-            style={{
-              color: "var(--accent-dim)",
-              fontStyle: "italic",
-              fontSize: "0.8rem",
-            }}
-            onMouseOver={(e) => (e.currentTarget.style.color = "var(--accent)")}
-            onMouseOut={(e) => (e.currentTarget.style.color = "var(--accent-dim)")}
-          >
-            {expanded ? "[collapse]" : "[continue reading]"}
-          </button>
-        )}
-      </p>
+        <p
+          className="text-sm leading-relaxed"
+          style={{ color: "var(--text-secondary)" }}
+        >
+          {paper.abstract}
+        </p>
+      </div>
+      {isLong && (
+        <button
+          onClick={() => setExpanded(!expanded)}
+          className="mt-1 mb-5 transition-colors duration-200"
+          style={{
+            color: "var(--accent-dim)",
+            fontStyle: "italic",
+            fontSize: "0.8rem",
+          }}
+          onMouseOver={(e) => (e.currentTarget.style.color = "var(--accent)")}
+          onMouseOut={(e) => (e.currentTarget.style.color = "var(--accent-dim)")}
+        >
+          {expanded ? "[collapse]" : "[continue reading]"}
+        </button>
+      )}
+      {!isLong && <div className="mb-5" />}
 
       {/* Footer: date, categories, links */}
       <div

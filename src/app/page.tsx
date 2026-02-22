@@ -230,6 +230,68 @@ export default function HomePage() {
         </div>
       </div>
 
+      {/* Browse by Field */}
+      <div className="mb-16">
+        <p
+          style={{
+            fontFamily: "var(--font-body)",
+            fontSize: "0.65rem",
+            letterSpacing: "0.22em",
+            textTransform: "uppercase",
+            color: "var(--text-muted)",
+            marginBottom: "1rem",
+            fontWeight: 600,
+          }}
+        >
+          Browse by Field
+        </p>
+        <div className="flex flex-wrap gap-3">
+          {categories.map((cat) => {
+            const meta = CATEGORY_META[cat];
+            return (
+              <a
+                key={cat}
+                href={`/research-papers-site/${cat}`}
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "8px",
+                  padding: "8px 16px",
+                  borderRadius: "8px",
+                  border: "1px solid var(--border-hover)",
+                  fontFamily: "var(--font-mono)",
+                  fontSize: "0.65rem",
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                  color: meta?.color ?? "var(--text-muted)",
+                  textDecoration: "none",
+                  transition: "border-color 0.15s ease, background 0.15s ease",
+                }}
+                onMouseOver={(e) => {
+                  e.currentTarget.style.borderColor = meta?.color ?? "var(--text-muted)";
+                  e.currentTarget.style.background = "var(--bg-card)";
+                }}
+                onMouseOut={(e) => {
+                  e.currentTarget.style.borderColor = "var(--border-hover)";
+                  e.currentTarget.style.background = "transparent";
+                }}
+              >
+                <span
+                  style={{
+                    width: "6px",
+                    height: "6px",
+                    borderRadius: "50%",
+                    backgroundColor: meta?.color ?? "var(--text-muted)",
+                    flexShrink: 0,
+                  }}
+                />
+                {meta?.label ?? cat}
+              </a>
+            );
+          })}
+        </div>
+      </div>
+
       {/* Latest section */}
       <div>
         <h2
