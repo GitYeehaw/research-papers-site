@@ -14,6 +14,8 @@ export default function ResearchPage({ data }: ResearchPageProps) {
         day: "numeric",
         hour: "numeric",
         minute: "2-digit",
+        timeZone: "America/Los_Angeles",
+        timeZoneName: "short",
       })
     : "Awaiting first collection";
 
