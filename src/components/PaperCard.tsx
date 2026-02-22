@@ -25,7 +25,7 @@ export default function PaperCard({ paper }: { paper: Paper }) {
       {/* Title */}
       <h3
         className="text-lg mb-2 leading-snug"
-        style={{ fontFamily: "var(--font-heading)", fontWeight: 500 }}
+        style={{ fontFamily: "var(--font-heading)", fontWeight: 500, wordBreak: "break-word" }}
       >
         <a
           href={paper.url}
@@ -43,11 +43,11 @@ export default function PaperCard({ paper }: { paper: Paper }) {
       {/* Authors */}
       <p
         className="text-sm mb-3"
-        style={{ color: "var(--text-muted)", fontStyle: "italic" }}
+        style={{ color: "var(--text-muted)", fontStyle: "italic", wordBreak: "break-word", overflow: "hidden" }}
       >
         {paper.authors.slice(0, 5).join(", ")}
         {paper.authors.length > 5 && (
-          <span style={{ color: "var(--accent-dim)" }}>
+          <span style={{ color: "var(--accent-dim)", whiteSpace: "nowrap" }}>
             {" "}et al. ({paper.authors.length} authors)
           </span>
         )}
