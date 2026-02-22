@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import BackToTop from "@/components/BackToTop";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Research Papers — A Daily Scholarly Digest",
@@ -43,6 +44,22 @@ export default function RootLayout({
             Built with Next.js &amp; GitHub Actions
           </p>
         </footer>
+        <Script id="mathjax-config" strategy="beforeInteractive">{`
+          window.MathJax = {
+            tex: {
+              inlineMath: [['$', '$'], ['\\(', '\\)']],
+              displayMath: [['$$', '$$'], ['\\[', '\\]']],
+            },
+            options: {
+              skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            },
+          };
+        `}</Script>
+        <Script
+          id="mathjax"
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
