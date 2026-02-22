@@ -10,7 +10,7 @@ interface PaperGridProps {
 }
 
 export default function PaperGrid({ papers, emptyMessage = "No papers found." }: PaperGridProps) {
-  const subcategories = [...new Set(papers.map((p) => p.primary_category).filter(Boolean))].sort();
+  const subcategories = Array.from(new Set(papers.map((p) => p.primary_category).filter(Boolean))).sort();
   const [activeFilter, setActiveFilter] = useState<string | null>(null);
 
   if (papers.length === 0) {
