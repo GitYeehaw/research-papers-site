@@ -165,7 +165,8 @@ def scrape_researchers():
         arxiv_id = researcher["arxiv_id"]
         print(f"  [{name}]")
 
-        papers = fetch_arxiv_papers(f"au:{arxiv_id}", max_results=5)
+        query = researcher.get("arxiv_query") or f"au:{arxiv_id}"
+        papers = fetch_arxiv_papers(query, max_results=5)
         print(f"    Found {len(papers)} papers")
 
         results.append({
