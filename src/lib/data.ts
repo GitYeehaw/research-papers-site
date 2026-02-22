@@ -1,4 +1,4 @@
-import { CategoryData } from "@/types";
+import { CategoryData, ResearchersData } from "@/types";
 import fs from "fs";
 import path from "path";
 
@@ -23,6 +23,20 @@ export function getCategoryData(category: string): CategoryData {
 
 export function getAllCategories(): string[] {
   return ["cs", "physics", "biology", "electrochem", "robotics"];
+}
+
+export function getResearchersData(): ResearchersData {
+  const filePath = path.join(DATA_DIR, "researchers.json");
+  try {
+    const raw = fs.readFileSync(filePath, "utf-8");
+    return JSON.parse(raw) as ResearchersData;
+  } catch {
+    return {
+      scraped_at: new Date().toISOString(),
+      researcher_count: 0,
+      researchers: [],
+    };
+  }
 }
 
 export function getAllCategoryData(): Record<string, CategoryData> {
