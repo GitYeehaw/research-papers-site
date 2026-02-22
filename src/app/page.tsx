@@ -43,16 +43,7 @@ export default function HomePage() {
   return (
     <div>
       {/* Hero */}
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: "3rem",
-          marginBottom: "6rem",
-          paddingTop: "2rem",
-          alignItems: "start",
-        }}
-      >
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-16 lg:mb-24 pt-8 items-start">
         {/* Left: title + description + CTA */}
         <div>
           <p
@@ -131,13 +122,7 @@ export default function HomePage() {
         </div>
 
         {/* Right: stats grid */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: "1rem",
-          }}
-        >
+        <div className="grid grid-cols-2 gap-4">
           <div className="stat-card">
             <div
               style={{
@@ -268,13 +253,7 @@ export default function HomePage() {
           Most recently published papers from every category
         </p>
         <div className="divider" />
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
-            gap: "1rem",
-          }}
-        >
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {featuredPapers.map((paper) => (
             <FeaturedPaperCard
               key={paper.id}
