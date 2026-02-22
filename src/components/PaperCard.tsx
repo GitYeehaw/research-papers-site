@@ -21,7 +21,7 @@ export default function PaperCard({ paper }: { paper: Paper }) {
   const isLong = paper.abstract.length > 280;
 
   return (
-    <article className="card">
+    <article className="card" style={{ display: "flex", flexDirection: "column" }}>
       {/* Title */}
       <h3
         className="text-lg mb-2 leading-snug"
@@ -53,42 +53,46 @@ export default function PaperCard({ paper }: { paper: Paper }) {
         )}
       </p>
 
-      {/* Abstract with smooth expand */}
-      <div
-        style={{
-          maxHeight: expanded ? "1000px" : "5.5em",
-          overflow: "hidden",
-          width: "100%",
-          transition: "max-height 0.4s ease",
-        }}
-      >
-        <p
-          className="text-sm leading-relaxed"
-          style={{ color: "var(--text-secondary)" }}
-        >
-          {paper.abstract}
-        </p>
-      </div>
-      {isLong && (
-        <button
-          onClick={() => setExpanded(!expanded)}
-          className="mt-1 mb-5 transition-colors duration-200"
+      {/* Abstract + expand button — grows to fill card */}
+      <div style={{ flex: 1 }}>
+        <div
           style={{
-            color: "var(--accent-dim)",
-            fontStyle: "italic",
-            fontSize: "0.8rem",
+            maxHeight: expanded ? "1000px" : "5.5em",
+            overflow: "hidden",
+            width: "100%",
+            transition: "max-height 0.4s ease",
           }}
-          onMouseOver={(e) => (e.currentTarget.style.color = "var(--accent)")}
-          onMouseOut={(e) => (e.currentTarget.style.color = "var(--accent-dim)")}
         >
-          {expanded ? "[collapse]" : "[continue reading]"}
-        </button>
-      )}
-      {!isLong && <div className="mb-5" />}
+          <p
+            className="text-sm leading-relaxed"
+            style={{ color: "var(--text-secondary)" }}
+          >
+            {paper.abstract}
+          </p>
+        </div>
+        {isLong && (
+          <button
+            onClick={() => setExpanded(!expanded)}
+            className="mt-2 transition-colors duration-200"
+            style={{
+              color: "var(--accent-dim)",
+              fontStyle: "italic",
+              fontSize: "0.8rem",
+              minWidth: "9rem",
+              textAlign: "left",
+              display: "block",
+            }}
+            onMouseOver={(e) => (e.currentTarget.style.color = "var(--accent)")}
+            onMouseOut={(e) => (e.currentTarget.style.color = "var(--accent-dim)")}
+          >
+            {expanded ? "[collapse]" : "[continue reading]"}
+          </button>
+        )}
+      </div>
 
       {/* Footer: date, categories, links */}
       <div
-        className="flex flex-wrap items-center gap-3 pt-3"
+        className="flex flex-wrap items-center gap-3 pt-3 mt-5"
         style={{ borderTop: "1px solid var(--border)" }}
       >
         <time
