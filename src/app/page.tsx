@@ -117,7 +117,7 @@ export default function HomePage() {
             }}
           >
             Automatically scraped from arXiv. Updated daily via GitHub Actions.
-            Covering CS, Biology, Electrochemistry, Physics, and Robotics.
+            Covering Robotics, CS, Physics, Biology, and Electrochemistry.
           </p>
 
           <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
