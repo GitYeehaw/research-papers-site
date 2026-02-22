@@ -1,5 +1,3 @@
-"use client";
-
 import { Researcher } from "@/types";
 
 function formatDate(dateStr: string): string {
@@ -33,9 +31,7 @@ export default function ResearcherCard({ researcher }: { researcher: Researcher 
               href={researcher.website}
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: "var(--accent-light)", transition: "color 0.2s" }}
-              onMouseOver={(e) => (e.currentTarget.style.color = "var(--accent)")}
-              onMouseOut={(e) => (e.currentTarget.style.color = "var(--accent-light)")}
+              className="researcher-name-link"
             >
               {researcher.name}
             </a>
@@ -64,18 +60,15 @@ export default function ResearcherCard({ researcher }: { researcher: Researcher 
                 href={paper.url}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="paper-title-link"
                 style={{
                   fontFamily: "var(--font-body)",
                   fontSize: "0.8rem",
-                  color: "var(--text-secondary)",
                   lineHeight: 1.4,
                   display: "block",
                   width: "100%",
                   wordBreak: "break-word",
-                  transition: "color 0.15s",
                 }}
-                onMouseOver={(e) => (e.currentTarget.style.color = "var(--text-primary)")}
-                onMouseOut={(e) => (e.currentTarget.style.color = "var(--text-secondary)")}
               >
                 {paper.title}
               </a>
