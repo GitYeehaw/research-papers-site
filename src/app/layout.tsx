@@ -30,21 +30,6 @@ export default function RootLayout({
           style={{ color: "var(--text-muted)" }}
         >
           <div className="flourish">&mdash;&nbsp;&bull;&nbsp;&mdash;</div>
-          <p className="mt-4" style={{ fontFamily: "var(--font-body)", fontStyle: "italic" }}>
-            Papers gathered daily from{" "}
-            <a
-              href="https://arxiv.org"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:underline"
-              style={{ color: "var(--accent)" }}
-            >
-              arXiv.org
-            </a>
-          </p>
-          <p className="mt-1 text-xs" style={{ color: "var(--text-muted)", opacity: 0.6 }}>
-            Built with Next.js &amp; GitHub Actions
-          </p>
         </footer>
         <Script id="mathjax-config" strategy="beforeInteractive">{`
           window.MathJax = {
