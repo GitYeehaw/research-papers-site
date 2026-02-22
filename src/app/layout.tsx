@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 export const metadata: Metadata = {
   title: "Research Papers — A Daily Scholarly Digest",
   description:
-    "Daily curated research papers from arXiv — CS, Biology, Electrochemistry, and Physics.",
+    "Daily curated research papers from arXiv — Robotics, CS, Physics, Biology, and Electrochemistry.",
 };
 
 export default function RootLayout({
