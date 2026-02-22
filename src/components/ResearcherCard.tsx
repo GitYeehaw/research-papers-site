@@ -17,7 +17,7 @@ function formatDate(dateStr: string): string {
 
 export default function ResearcherCard({ researcher }: { researcher: Researcher }) {
   return (
-    <div className="card" style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+    <div className="card" style={{ display: "flex", flexDirection: "column", gap: "12px", minWidth: 0 }}>
       {/* Name + website */}
       <div>
         <h3
@@ -57,9 +57,9 @@ export default function ResearcherCard({ researcher }: { researcher: Researcher 
 
       {/* Latest papers */}
       {researcher.papers.length > 0 ? (
-        <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "8px" }}>
+        <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "8px", width: "100%", minWidth: 0 }}>
           {researcher.papers.slice(0, 3).map((paper) => (
-            <li key={paper.id}>
+            <li key={paper.id} style={{ minWidth: 0 }}>
               <a
                 href={paper.url}
                 target="_blank"
@@ -70,6 +70,8 @@ export default function ResearcherCard({ researcher }: { researcher: Researcher 
                   color: "var(--text-secondary)",
                   lineHeight: 1.4,
                   display: "block",
+                  width: "100%",
+                  wordBreak: "break-word",
                   transition: "color 0.15s",
                 }}
                 onMouseOver={(e) => (e.currentTarget.style.color = "var(--text-primary)")}
