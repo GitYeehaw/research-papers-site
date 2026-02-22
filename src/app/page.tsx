@@ -2,6 +2,7 @@ import { getAllCategoryData } from "@/lib/data";
 import { Paper } from "@/types";
 import Link from "next/link";
 import FeaturedPaperCard from "@/components/FeaturedPaperCard";
+import CategoryNav from "@/components/CategoryNav";
 
 const CATEGORY_META: Record<string, { label: string; color: string }> = {
   robotics: { label: "Robotics", color: "#f4a261" },
@@ -39,6 +40,13 @@ export default function HomePage() {
       return paper ? { ...paper, cat } : null;
     })
     .filter(Boolean) as (Paper & { cat: string })[];
+
+  const categoryNavItems = categories.map((cat) => ({
+    cat,
+    label: CATEGORY_META[cat]?.label ?? cat,
+    color: CATEGORY_META[cat]?.color ?? "#888888",
+    href: `/research-papers-site/${cat}`,
+  }));
 
   return (
     <div>
@@ -245,51 +253,7 @@ export default function HomePage() {
         >
           Browse by Field
         </p>
-        <div className="flex flex-wrap gap-3">
-          {categories.map((cat) => {
-            const meta = CATEGORY_META[cat];
-            return (
-              <a
-                key={cat}
-                href={`/research-papers-site/${cat}`}
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "8px",
-                  padding: "8px 16px",
-                  borderRadius: "8px",
-                  border: "1px solid var(--border-hover)",
-                  fontFamily: "var(--font-mono)",
-                  fontSize: "0.65rem",
-                  letterSpacing: "0.1em",
-                  textTransform: "uppercase",
-                  color: meta?.color ?? "var(--text-muted)",
-                  textDecoration: "none",
-                  transition: "border-color 0.15s ease, background 0.15s ease",
-                }}
-                onMouseOver={(e) => {
-                  e.currentTarget.style.borderColor = meta?.color ?? "var(--text-muted)";
-                  e.currentTarget.style.background = "var(--bg-card)";
-                }}
-                onMouseOut={(e) => {
-                  e.currentTarget.style.borderColor = "var(--border-hover)";
-                  e.currentTarget.style.background = "transparent";
-                }}
-              >
-                <span
-                  style={{
-                    width: "6px",
-                    height: "6px",
-                    borderRadius: "50%",
-                    backgroundColor: meta?.color ?? "var(--text-muted)",
-                    flexShrink: 0,
-                  }}
-                />
-                {meta?.label ?? cat}
-              </a>
-            );
-          })}
-        </div>
+        <CategoryNav items={categoryNavItems} />
       </div>
 
       {/* Latest section */}
