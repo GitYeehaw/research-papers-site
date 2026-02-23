@@ -1,83 +1,66 @@
-# Research Papers Site
+# Research Hub
 
-A Next.js website that automatically scrapes research papers from arXiv every morning via GitHub Actions and deploys to GitHub Pages.
+A static site that scrapes academic papers from arXiv every morning and deploys to GitHub Pages. Papers are embedded into static HTML at build time — no client-side fetching, no backend.
+
+**Live site:** [gityeehaw.github.io/research-papers-site](https://gityeehaw.github.io/research-papers-site)
 
 ## Categories
 
-- **CS Research** — AI, Machine Learning, NLP, Computer Vision
-- **Biology Research** — Genomics, Biophysics, Neuroscience
-- **Electrochem Research** — Materials Science, Chemical Physics
-- **Physics Research** — Quantum Physics, High Energy Theory, General Relativity
+| Category | Topics |
+|----------|--------|
+| **CS** | AI, Machine Learning, NLP, Computer Vision |
+| **Biology** | Genomics, Biophysics, Neuroscience |
+| **Electrochemistry** | Materials Science, Chemical Physics |
+| **Physics** | Quantum Physics, High Energy Theory, General Relativity |
+| **Robotics** | Motion Planning, Control, Robot Learning |
 
-## Quick Start
+## How It Works
 
-### 1. Create a GitHub repo and push this code
+1. GitHub Actions runs `scripts/scrape.py` at 8:00 AM UTC daily
+2. The scraper queries the arXiv API and saves results to `data/*.json`
+3. Updated JSON is committed back to `main`
+4. Next.js reads the JSON at build time and generates static HTML
+5. The `out/` directory is deployed to the `gh-pages` branch
 
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-git remote add origin https://github.com/YOUR_USERNAME/research-papers-site.git
-git push -u origin main
-```
+## Tech Stack
 
-### 2. Enable GitHub Pages
-
-1. Go to your repo's **Settings → Pages**
-2. Set **Source** to **Deploy from a branch**
-3. Set **Branch** to `gh-pages` / `/ (root)`
-4. Save
-
-### 3. Update `next.config.js` (if using a subpath)
-
-If your site is at `username.github.io/research-papers-site`, uncomment the `basePath` line:
-
-```js
-basePath: '/research-papers-site',
-```
-
-### 4. Trigger the first run
-
-Go to **Actions → Scrape Papers & Deploy → Run workflow** to trigger manually, or just push to `main`.
+- **Next.js 14** (App Router, static export)
+- **TypeScript + Tailwind CSS**
+- **Python 3** scraper (stdlib only)
+- **GitHub Actions** for daily scraping and deployment
 
 ## Local Development
 
 ```bash
 npm install
-python scripts/scrape.py   # Fetch papers locally
-npm run dev                 # Start dev server at localhost:3000
+python scripts/scrape.py   # Fetch papers from arXiv
+npm run dev                 # Dev server at localhost:3000
+npm run build              # Static export → out/
 ```
 
-## Customizing Paper Sources
+## Configuration
 
-Edit `scripts/config.json` to:
-
-- Change arXiv categories per research area
-- Add specific labs/authors to prioritize
-- Adjust the number of papers per category
-
-### Adding a Lab/Author Filter
+Edit `scripts/config.json` to change arXiv categories, adjust paper counts, or prioritize specific authors and keywords.
 
 ```json
 {
   "cs": {
+    "categories": ["cs.AI", "cs.LG"],
+    "max_results": 50,
     "labs": [
       {
-        "name": "MIT CSAIL",
-        "authors": ["Yann LeCun", "Geoffrey Hinton"],
-        "keywords": ["transformer", "attention"]
+        "name": "Example Lab",
+        "authors": ["Author Name"],
+        "keywords": ["diffusion", "transformer"]
       }
     ]
   }
 }
 ```
 
-Papers matching these authors or keywords will be shown first.
+## Deployment (GitHub Pages)
 
-## How It Works
-
-1. **GitHub Actions** runs `scripts/scrape.py` at 8:00 AM UTC daily
-2. The script queries the arXiv API and saves JSON to `data/`
-3. The updated data is committed back to the repo
-4. Next.js builds a static site reading from `data/*.json`
-5. The `out/` directory is deployed to the `gh-pages` branch
+1. Fork or clone this repo and push to GitHub
+2. Go to **Settings → Pages**, set source to `gh-pages` branch, root
+3. In `next.config.js`, set `basePath` to match your repo name
+4. Go to **Actions → Scrape Papers & Deploy → Run workflow** to trigger the first build
