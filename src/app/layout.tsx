@@ -38,7 +38,7 @@ export default function RootLayout({
               displayMath: [['$$', '$$'], ['\\[', '\\]']],
             },
             options: {
-              skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'button', 'a'],
+              skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'button'],
             },
           };
         `}</Script>
