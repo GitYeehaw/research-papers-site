@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-02-23T01:38:38.267110+00:00",
+  "scraped_at": "2026-02-23T03:32:28.195400+00:00",
   "researcher_count": 39,
   "researchers": [
     {
@@ -4621,6 +4621,29 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2602.18164v1",
+          "title": "GrandTour: A Legged Robotics Dataset in the Wild for Multi-Modal Perception and State Estimation",
+          "authors": [
+            "Jonas Frey",
+            "Turcan Tuna",
+            "Frank Fu",
+            "Katharine Patterson",
+            "Tianao Xu",
+            "Maurice Fallon",
+            "Cesar Cadena",
+            "Marco Hutter"
+          ],
+          "abstract": "Accurate state estimation and multi-modal perception are prerequisites for autonomous legged robots in complex, large-scale environments. To date, no large-scale public legged-robot dataset captures the real-world conditions needed to develop and benchmark algorithms for legged-robot state estimation, perception, and navigation. To address this, we introduce the GrandTour dataset, a multi-modal legged-robotics dataset collected across challenging outdoor and indoor environments, featuring an ANYbotics ANYmal-D quadruped equipped with the \\boxi multi-modal sensor payload. GrandTour spans a broad range of environments and operational scenarios across distinct test sites, ranging from alpine scenery and forests to demolished buildings and urban areas, and covers a wide variation in scale, complexity, illumination, and weather conditions. The dataset provides time-synchronized sensor data from spinning LiDARs, multiple RGB cameras with complementary characteristics, proprioceptive sensors, and stereo depth cameras. Moreover, it includes high-precision ground-truth trajectories from satellite-based RTK-GNSS and a Leica Geosystems total station. This dataset supports research in SLAM, high-precision state estimation, and multi-modal learning, enabling rigorous evaluation and development of new approaches to sensor fusion in legged robotic systems. With its extensive scope, GrandTour represents the largest open-access legged-robotics dataset to date. The dataset is available at https://grand-tour.leggedrobotics.com, on HuggingFace (ROS-independent), and in ROS formats, along with tools and demo resources.",
+          "url": "https://arxiv.org/abs/2602.18164v1",
+          "pdf_url": "https://arxiv.org/pdf/2602.18164v1",
+          "published": "2026-02-20T11:57:52Z",
+          "updated": "2026-02-20T11:57:52Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2602.15201v1",
           "title": "DexEvolve: Evolutionary Optimization for Robust and Diverse Dexterous Grasp Synthesis",
           "authors": [
@@ -4712,30 +4735,6 @@
           "categories": [
             "cs.RO",
             "cs.MA"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2601.18923v1",
-          "title": "DeFM: Learning Foundation Representations from Depth for Robotics",
-          "authors": [
-            "Manthan Patel",
-            "Jonas Frey",
-            "Mayank Mittal",
-            "Fan Yang",
-            "Alexander Hansson",
-            "Amir Bar",
-            "Cesar Cadena",
-            "Marco Hutter"
-          ],
-          "abstract": "Depth sensors are widely deployed across robotic platforms, and advances in fast, high-fidelity depth simulation have enabled robotic policies trained on depth observations to achieve robust sim-to-real transfer for a wide range of tasks. Despite this, representation learning for depth modality remains underexplored compared to RGB, where large-scale foundation models now define the state of the art. To address this gap, we present DeFM, a self-supervised foundation model trained entirely on depth images for robotic applications. Using a DINO-style self-distillation objective on a curated dataset of 60M depth images, DeFM learns geometric and semantic representations that generalize to diverse environments, tasks, and sensors. To retain metric awareness across multiple scales, we introduce a novel input normalization strategy. We further distill DeFM into compact models suitable for resource-constrained robotic systems. When evaluated on depth-based classification, segmentation, navigation, locomotion, and manipulation benchmarks, DeFM achieves state-of-the-art performance and demonstrates strong generalization from simulation to real-world environments. We release all our pretrained models, which can be adopted off-the-shelf for depth-based robotic learning without task-specific fine-tuning. Webpage: https://de-fm.github.io/",
-          "url": "https://arxiv.org/abs/2601.18923v1",
-          "pdf_url": "https://arxiv.org/pdf/2601.18923v1",
-          "published": "2026-01-26T19:45:31Z",
-          "updated": "2026-01-26T19:45:31Z",
-          "categories": [
-            "cs.RO",
-            "cs.CV"
           ],
           "primary_category": "cs.RO"
         }
@@ -6658,8 +6657,8 @@
           "primary_category": "cs.RO"
         },
         {
-          "id": "2601.09920v1",
-          "title": "SyncTwin: Fast Digital Twin Construction and Synchronization for Safe Robotic Grasping",
+          "id": "2601.09920v2",
+          "title": "SyncTwin: Fast Digital Twin Construction and Synchronization for Safe Robotic Manipulation",
           "authors": [
             "Ruopeng Huang",
             "Boyu Yang",
@@ -6668,11 +6667,11 @@
             "Erdem Biyik",
             "Jiachen Li"
           ],
-          "abstract": "Accurate and safe grasping under dynamic and visually occluded conditions remains a core challenge in real-world robotic manipulation. We present SyncTwin, a digital twin framework that unifies fast 3D scene reconstruction and real-to-sim synchronization for robust and safety-aware grasping in such environments. In the offline stage, we employ VGGT to rapidly reconstruct object-level 3D assets from RGB images, forming a reusable geometry library for simulation. During execution, SyncTwin continuously synchronizes the digital twin by tracking real-world object states via point cloud segmentation updates and aligning them through colored-ICP registration. The updated twin enables motion planners to compute collision-free and dynamically feasible trajectories in simulation, which are safely executed on the real robot through a closed real-to-sim-to-real loop. Experiments in dynamic and occluded scenes show that SyncTwin improves grasp accuracy and motion safety, demonstrating the effectiveness of digital-twin synchronization for real-world robotic execution.",
-          "url": "https://arxiv.org/abs/2601.09920v1",
-          "pdf_url": "https://arxiv.org/pdf/2601.09920v1",
+          "abstract": "Accurate and safe robotic manipulation under dynamic and visually occluded conditions remains a core challenge in real-world deployment. We introduce SyncTwin, a novel digital twin framework that unifies fast 3D scene reconstruction and real-to-sim synchronization for robust and safety-aware robotic manipulation in such environments. In the offline stage, we employ VGGT to rapidly reconstruct object-level 3D assets from RGB images, forming a reusable geometry library. During execution, SyncTwin continuously synchronizes the digital twin by tracking real-world object states via point cloud segmentation updates and aligning them through colored-ICP registration. The synchronized twin enables motion planners to compute collision-free and dynamically feasible trajectories in simulation, which are safely executed on the real robot through a closed real-to-sim-to-real loop. Experiments in dynamic and occluded scenes show that SyncTwin improves manipulation performance and motion safety, demonstrating the effectiveness of digital twin synchronization for real-world robotic execution. The video demos and code can be found on the project website: https://sync-twin.github.io/.",
+          "url": "https://arxiv.org/abs/2601.09920v2",
+          "pdf_url": "https://arxiv.org/pdf/2601.09920v2",
           "published": "2026-01-14T23:03:43Z",
-          "updated": "2026-01-14T23:03:43Z",
+          "updated": "2026-02-20T06:17:03Z",
           "categories": [
             "cs.RO"
           ],
@@ -7247,6 +7246,28 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2602.17973v1",
+          "title": "PenTiDef: Enhancing Privacy and Robustness in Decentralized Federated Intrusion Detection Systems against Poisoning Attacks",
+          "authors": [
+            "Phan The Duy",
+            "Nghi Hoang Khoa",
+            "Nguyen Tran Anh Quan",
+            "Luong Ha Tien",
+            "Ngo Duc Hoang Son",
+            "Van-Hau Pham"
+          ],
+          "abstract": "The increasing deployment of Federated Learning (FL) in Intrusion Detection Systems (IDS) introduces new challenges related to data privacy, centralized coordination, and susceptibility to poisoning attacks. While significant research has focused on protecting traditional FL-IDS with centralized aggregation servers, there remains a notable gap in addressing the unique challenges of decentralized FL-IDS (DFL-IDS). This study aims to address the limitations of traditional centralized FL-IDS by proposing a novel defense framework tailored for the decentralized FL-IDS architecture, with a focus on privacy preservation and robustness against poisoning attacks. We propose PenTiDef, a privacy-preserving and robust defense framework for DFL-IDS, which incorporates Distributed Differential Privacy (DDP) to protect data confidentiality and utilizes latent space representations (LSR) derived from neural networks to detect malicious updates in the decentralized model aggregation context. To eliminate single points of failure and enhance trust without a centralized aggregation server, PenTiDef employs a blockchain-based decentralized coordination mechanism that manages model aggregation, tracks update history, and supports trust enforcement through smart contracts. Experimental results on CIC-IDS2018 and Edge-IIoTSet demonstrate that PenTiDef consistently outperforms existing defenses (e.g., FLARE, FedCC) across various attack scenarios and data distributions. These findings highlight the potential of PenTiDef as a scalable and secure framework for deploying DFL-based IDS in adversarial environments. By leveraging privacy protection, malicious behavior detection in hidden data, and working without a central server, it provides a useful security solution against real-world attacks from untrust participants.",
+          "url": "https://arxiv.org/abs/2602.17973v1",
+          "pdf_url": "https://arxiv.org/pdf/2602.17973v1",
+          "published": "2026-02-20T03:58:48Z",
+          "updated": "2026-02-20T03:58:48Z",
+          "categories": [
+            "cs.CR",
+            "cs.AI"
+          ],
+          "primary_category": "cs.CR"
+        },
+        {
           "id": "2602.02962v1",
           "title": "Q-ShiftDP: A Differentially Private Parameter-Shift Rule for Quantum Machine Learning",
           "authors": [
@@ -7332,23 +7353,6 @@
             "eess.SY"
           ],
           "primary_category": "eess.SY"
-        },
-        {
-          "id": "2510.03478v2",
-          "title": "How to Set $\u03b2_1, \u03b2_2$ in Adam: An Online Learning Perspective",
-          "authors": [
-            "Quan Nguyen"
-          ],
-          "abstract": "While Adam is one of the most effective optimizer for training large-scale machine learning models, a theoretical understanding of how to optimally set its momentum factors, $\u03b2_1$ and $\u03b2_2$, remains largely incomplete.   Prior works have shown that Adam can be seen as an instance of Follow-the-Regularized-Leader (FTRL), one of the most important class of algorithms in online learning.   The prior analyses in these works required setting $\u03b2_1 = \\sqrt{\u03b2_2}$, which does not cover the more practical cases with $\u03b2_1 \\neq \\sqrt{\u03b2_2}$.   We derive novel, more general analyses that hold for both $\u03b2_1 \\geq \\sqrt{\u03b2_2}$ and $\u03b2_1 \\leq \\sqrt{\u03b2_2}$.   In both cases, our results strictly generalize the existing bounds.   Furthermore, we show that our bounds are tight in the worst case.   We also prove that setting $\u03b2_1 = \\sqrt{\u03b2_2}$ is optimal for an oblivious adversary, but sub-optimal for an non-oblivious adversary.",
-          "url": "https://arxiv.org/abs/2510.03478v2",
-          "pdf_url": "https://arxiv.org/pdf/2510.03478v2",
-          "published": "2025-10-03T19:54:38Z",
-          "updated": "2025-12-24T19:40:46Z",
-          "categories": [
-            "cs.LG",
-            "math.OC"
-          ],
-          "primary_category": "cs.LG"
         }
       ]
     },
