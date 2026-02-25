@@ -2,242 +2,67 @@
   "category": "robotics",
   "name": "Robotics Research",
   "description": "Robotics \u2014 Motion Planning, Control Systems, Human-Robot Interaction, Autonomous Systems",
-  "scraped_at": "2026-02-24T08:59:52.717388+00:00",
+  "scraped_at": "2026-02-25T09:00:30.284691+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2602.20159v1",
-      "title": "A Very Big Video Reasoning Suite",
+      "id": "2602.21203v1",
+      "title": "Squint: Fast Visual Reinforcement Learning for Sim-to-Real Robotics",
       "authors": [
-        "Maijunxian Wang",
-        "Ruisi Wang",
-        "Juyi Lin",
-        "Ran Ji",
-        "Thadd\u00e4us Wiedemer",
-        "Qingying Gao",
-        "Dezhi Luo",
-        "Yaoyao Qian",
-        "Lianyu Huang",
-        "Zelong Hong",
-        "Jiahui Ge",
-        "Qianli Ma",
-        "Hang He",
-        "Yifan Zhou",
-        "Lingzi Guo",
-        "Lantao Mei",
-        "Jiachen Li",
-        "Hanwen Xing",
-        "Tianqi Zhao",
-        "Fengyuan Yu",
-        "Weihang Xiao",
-        "Yizheng Jiao",
-        "Jianheng Hou",
-        "Danyang Zhang",
-        "Pengcheng Xu",
-        "Boyang Zhong",
-        "Zehong Zhao",
-        "Gaoyun Fang",
-        "John Kitaoka",
-        "Yile Xu",
-        "Hua Xu",
-        "Kenton Blacutt",
-        "Tin Nguyen",
-        "Siyuan Song",
-        "Haoran Sun",
-        "Shaoyue Wen",
-        "Linyang He",
-        "Runming Wang",
-        "Yanzhi Wang",
-        "Mengyue Yang",
-        "Ziqiao Ma",
-        "Rapha\u00ebl Milli\u00e8re",
-        "Freda Shi",
-        "Nuno Vasconcelos",
-        "Daniel Khashabi",
-        "Alan Yuille",
-        "Yilun Du",
-        "Ziming Liu",
-        "Bo Li",
-        "Dahua Lin",
-        "Ziwei Liu",
-        "Vikash Kumar",
-        "Yijiang Li",
-        "Lei Yang",
-        "Zhongang Cai",
-        "Hokin Deng"
+        "Abdulaziz Almuzairee",
+        "Henrik I. Christensen"
       ],
-      "abstract": "Rapid progress in video models has largely focused on visual quality, leaving their reasoning capabilities underexplored. Video reasoning grounds intelligence in spatiotemporally consistent visual environments that go beyond what text can naturally capture, enabling intuitive reasoning over spatiotemporal structure such as continuity, interaction, and causality. However, systematically studying video reasoning and its scaling behavior is hindered by the lack of large-scale training data. To address this gap, we introduce the Very Big Video Reasoning (VBVR) Dataset, an unprecedentedly large-scale resource spanning 200 curated reasoning tasks following a principled taxonomy and over one million video clips, approximately three orders of magnitude larger than existing datasets. We further present VBVR-Bench, a verifiable evaluation framework that moves beyond model-based judging by incorporating rule-based, human-aligned scorers, enabling reproducible and interpretable diagnosis of video reasoning capabilities. Leveraging the VBVR suite, we conduct one of the first large-scale scaling studies of video reasoning and observe early signs of emergent generalization to unseen reasoning tasks. Together, VBVR lays a foundation for the next stage of research in generalizable video reasoning. The data, benchmark toolkit, and models are publicly available at https://video-reason.com/ .",
-      "url": "https://arxiv.org/abs/2602.20159v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.20159v1",
-      "published": "2026-02-23T18:59:41Z",
-      "updated": "2026-02-23T18:59:41Z",
+      "abstract": "Visual reinforcement learning is appealing for robotics but expensive -- off-policy methods are sample-efficient yet slow; on-policy methods parallelize well but waste samples. Recent work has shown that off-policy methods can train faster than on-policy methods in wall-clock time for state-based control. Extending this to vision remains challenging, where high-dimensional input images complicate training dynamics and introduce substantial storage and encoding overhead. To address these challenges, we introduce Squint, a visual Soft Actor Critic method that achieves faster wall-clock training than prior visual off-policy and on-policy methods. Squint achieves this via parallel simulation, a distributional critic, resolution squinting, layer normalization, a tuned update-to-data ratio, and an optimized implementation. We evaluate on the SO-101 Task Set, a new suite of eight manipulation tasks in ManiSkill3 with heavy domain randomization, and demonstrate sim-to-real transfer to a real SO-101 robot. We train policies for 15 minutes on a single RTX 3090 GPU, with most tasks converging in under 6 minutes.",
+      "url": "https://arxiv.org/abs/2602.21203v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.21203v1",
+      "published": "2026-02-24T18:58:11Z",
+      "updated": "2026-02-24T18:58:11Z",
       "categories": [
+        "cs.RO",
         "cs.CV",
-        "cs.AI",
+        "cs.LG"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2602.21198v1",
+      "title": "Learning from Trials and Errors: Reflective Test-Time Planning for Embodied LLMs",
+      "authors": [
+        "Yining Hong",
+        "Huang Huang",
+        "Manling Li",
+        "Li Fei-Fei",
+        "Jiajun Wu",
+        "Yejin Choi"
+      ],
+      "abstract": "Embodied LLMs endow robots with high-level task reasoning, but they cannot reflect on what went wrong or why, turning deployment into a sequence of independent trials where mistakes repeat rather than accumulate into experience. Drawing upon human reflective practitioners, we introduce Reflective Test-Time Planning, which integrates two modes of reflection: \\textit{reflection-in-action}, where the agent uses test-time scaling to generate and score multiple candidate actions using internal reflections before execution; and \\textit{reflection-on-action}, which uses test-time training to update both its internal reflection model and its action policy based on external reflections after execution. We also include retrospective reflection, allowing the agent to re-evaluate earlier decisions and perform model updates with hindsight for proper long-horizon credit assignment. Experiments on our newly-designed Long-Horizon Household benchmark and MuJoCo Cupboard Fitting benchmark show significant gains over baseline models, with ablative studies validating the complementary roles of reflection-in-action and reflection-on-action. Qualitative analyses, including real-robot trials, highlight behavioral correction through reflection.",
+      "url": "https://arxiv.org/abs/2602.21198v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.21198v1",
+      "published": "2026-02-24T18:55:18Z",
+      "updated": "2026-02-24T18:55:18Z",
+      "categories": [
         "cs.LG",
-        "cs.MM",
-        "cs.RO"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2602.20150v1",
-      "title": "Simulation-Ready Cluttered Scene Estimation via Physics-aware Joint Shape and Pose Optimization",
-      "authors": [
-        "Wei-Cheng Huang",
-        "Jiaheng Han",
-        "Xiaohan Ye",
-        "Zherong Pan",
-        "Kris Hauser"
-      ],
-      "abstract": "Estimating simulation-ready scenes from real-world observations is crucial for downstream planning and policy learning tasks. Regretfully, existing methods struggle in cluttered environments, often exhibiting prohibitive computational cost, poor robustness, and restricted generality when scaling to multiple interacting objects. We propose a unified optimization-based formulation for real-to-sim scene estimation that jointly recovers the shapes and poses of multiple rigid objects under physical constraints. Our method is built on two key technical innovations. First, we leverage the recently introduced shape-differentiable contact model, whose global differentiability permits joint optimization over object geometry and pose while modeling inter-object contacts. Second, we exploit the structured sparsity of the augmented Lagrangian Hessian to derive an efficient linear system solver whose computational cost scales favorably with scene complexity. Building on this formulation, we develop an end-to-end real-to-sim scene estimation pipeline that integrates learning-based object initialization, physics-constrained joint shape-pose optimization, and differentiable texture refinement. Experiments on cluttered scenes with up to 5 objects and 22 convex hulls demonstrate that our approach robustly reconstructs physically valid, simulation-ready object shapes and poses.",
-      "url": "https://arxiv.org/abs/2602.20150v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.20150v1",
-      "published": "2026-02-23T18:58:24Z",
-      "updated": "2026-02-23T18:58:24Z",
-      "categories": [
-        "cs.RO",
-        "cs.CV"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2602.20144v1",
-      "title": "Agentic AI for Scalable and Robust Optical Systems Control",
-      "authors": [
-        "Zehao Wang",
-        "Mingzhe Han",
-        "Wei Cheng",
-        "Yue-Kai Huang",
-        "Philip Ji",
-        "Denton Wu",
-        "Mahdi Safari",
-        "Flemming Holtorf",
-        "Kenaish AlQubaisi",
-        "Norbert M. Linke",
-        "Danyang Zhuo",
-        "Yiran Chen",
-        "Ting Wang",
-        "Dirk Englund",
-        "Tingjun Chen"
-      ],
-      "abstract": "We present AgentOptics, an agentic AI framework for high-fidelity, autonomous optical system control built on the Model Context Protocol (MCP). AgentOptics interprets natural language tasks and executes protocol-compliant actions on heterogeneous optical devices through a structured tool abstraction layer. We implement 64 standardized MCP tools across 8 representative optical devices and construct a 410-task benchmark to evaluate request understanding, role-aware responses, multi-step coordination, robustness to linguistic variation, and error handling. We assess two deployment configurations--commercial online LLMs and locally hosted open-source LLMs--and compare them with LLM-based code generation baselines. AgentOptics achieves 87.7%--99.0% average task success rates, significantly outperforming code-generation approaches, which reach up to 50% success. We further demonstrate broader applicability through five case studies extending beyond device-level control to system orchestration, monitoring, and closed-loop optimization. These include DWDM link provisioning and coordinated monitoring of coherent 400 GbE and analog radio-over-fiber (ARoF) channels; autonomous characterization and bias optimization of a wideband ARoF link carrying 5G fronthaul traffic; multi-span channel provisioning with launch power optimization; closed-loop fiber polarization stabilization; and distributed acoustic sensing (DAS)-based fiber monitoring with LLM-assisted event detection. These results establish AgentOptics as a scalable, robust paradigm for autonomous control and orchestration of heterogeneous optical systems.",
-      "url": "https://arxiv.org/abs/2602.20144v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.20144v1",
-      "published": "2026-02-23T18:54:32Z",
-      "updated": "2026-02-23T18:54:32Z",
-      "categories": [
-        "eess.SY",
         "cs.AI",
-        "cs.NI"
-      ],
-      "primary_category": "eess.SY"
-    },
-    {
-      "id": "2602.20119v1",
-      "title": "NovaPlan: Zero-Shot Long-Horizon Manipulation via Closed-Loop Video Language Planning",
-      "authors": [
-        "Jiahui Fu",
-        "Junyu Nan",
-        "Lingfeng Sun",
-        "Hongyu Li",
-        "Jianing Qian",
-        "Jennifer L. Barry",
-        "Kris Kitani",
-        "George Konidaris"
-      ],
-      "abstract": "Solving long-horizon tasks requires robots to integrate high-level semantic reasoning with low-level physical interaction. While vision-language models (VLMs) and video generation models can decompose tasks and imagine outcomes, they often lack the physical grounding necessary for real-world execution. We introduce NovaPlan, a hierarchical framework that unifies closed-loop VLM and video planning with geometrically grounded robot execution for zero-shot long-horizon manipulation. At the high level, a VLM planner decomposes tasks into sub-goals and monitors robot execution in a closed loop, enabling the system to recover from single-step failures through autonomous re-planning. To compute low-level robot actions, we extract and utilize both task-relevant object keypoints and human hand poses as kinematic priors from the generated videos, and employ a switching mechanism to choose the better one as a reference for robot actions, maintaining stable execution even under heavy occlusion or depth inaccuracy. We demonstrate the effectiveness of NovaPlan on three long-horizon tasks and the Functional Manipulation Benchmark (FMB). Our results show that NovaPlan can perform complex assembly tasks and exhibit dexterous error recovery behaviors without any prior demonstrations or training. Project page: https://nova-plan.github.io/",
-      "url": "https://arxiv.org/abs/2602.20119v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.20119v1",
-      "published": "2026-02-23T18:35:18Z",
-      "updated": "2026-02-23T18:35:18Z",
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.CV"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2602.20107v1",
-      "title": "Informativity and Identifiability for Identification of Networks of Dynamical Systems",
-      "authors": [
-        "Anders Hansson",
-        "Jo\u00e3o Victor Galv\u00e3o da Mata",
-        "Martin S. Andersen"
-      ],
-      "abstract": "In this paper, we show how informativity and identifiability for networks of dynamical systems can be investigated using Gr\u00f6bner bases. We provide a sufficient condition for informativity in terms of positive definiteness of the spectrum of external signals and full generic rank of the transfer function relating the external signals to the inputs of the predictor. Moreover, we show how generic local network identifiability can be investigated by computing the dimension of the fiber associated with the closed loop transfer function from external measurable signals to the measured outputs.",
-      "url": "https://arxiv.org/abs/2602.20107v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.20107v1",
-      "published": "2026-02-23T18:25:36Z",
-      "updated": "2026-02-23T18:25:36Z",
-      "categories": [
-        "eess.SY"
-      ],
-      "primary_category": "eess.SY"
-    },
-    {
-      "id": "2602.20076v1",
-      "title": "Robust Taylor-Lagrange Control for Safety-Critical Systems",
-      "authors": [
-        "Wei Xiao",
-        "Christos Cassandras",
-        "Anni Li"
-      ],
-      "abstract": "Solving safety-critical control problem has widely adopted the Control Barrier Function (CBF) method. However, the existence of a CBF is only a sufficient condition for system safety. The recently proposed Taylor-Lagrange Control (TLC) method addresses this limitation, but is vulnerable to the feasibility preservation problem (e.g., inter-sampling effect). In this paper, we propose a robust TLC (rTLC) method to address the feasibility preservation problem. Specifically, the rTLC method expands the safety function at an order higher than the relative degree of the function using Taylor's expansion with Lagrange remainder, which allows the control to explicitly show up at the current time instead of the future time in the TLC method. The rTLC method naturally addresses the feasibility preservation problem with only one hyper-parameter (the discretization time interval size during implementation), which is much less than its counterparts. Finally, we illustrate the effectiveness of the proposed rTLC method through an adaptive cruise control problem, and compare it with existing safety-critical control methods.",
-      "url": "https://arxiv.org/abs/2602.20076v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.20076v1",
-      "published": "2026-02-23T17:40:05Z",
-      "updated": "2026-02-23T17:40:05Z",
-      "categories": [
-        "eess.SY",
-        "cs.AI",
-        "cs.RO"
-      ],
-      "primary_category": "eess.SY"
-    },
-    {
-      "id": "2602.20060v1",
-      "title": "MeanFuser: Fast One-Step Multi-Modal Trajectory Generation and Adaptive Reconstruction via MeanFlow for End-to-End Autonomous Driving",
-      "authors": [
-        "Junli Wang",
-        "Xueyi Liu",
-        "Yinan Zheng",
-        "Zebing Xing",
-        "Pengfei Li",
-        "Guang Li",
-        "Kun Ma",
-        "Guang Chen",
-        "Hangjun Ye",
-        "Zhongpu Xia",
-        "Long Chen",
-        "Qichao Zhang"
-      ],
-      "abstract": "Generative models have shown great potential in trajectory planning. Recent studies demonstrate that anchor-guided generative models are effective in modeling the uncertainty of driving behaviors and improving overall performance. However, these methods rely on discrete anchor vocabularies that must sufficiently cover the trajectory distribution during testing to ensure robustness, inducing an inherent trade-off between vocabulary size and model performance. To overcome this limitation, we propose MeanFuser, an end-to-end autonomous driving method that enhances both efficiency and robustness through three key designs. (1) We introduce Gaussian Mixture Noise (GMN) to guide generative sampling, enabling a continuous representation of the trajectory space and eliminating the dependency on discrete anchor vocabularies. (2) We adapt ``MeanFlow Identity\" to end-to-end planning, which models the mean velocity field between GMN and trajectory distribution instead of the instantaneous velocity field used in vanilla flow matching methods, effectively eliminating numerical errors from ODE solvers and significantly accelerating inference. (3) We design a lightweight Adaptive Reconstruction Module (ARM) that enables the model to implicitly select from all sampled proposals or reconstruct a new trajectory when none is satisfactory via attention weights. Experiments on the NAVSIM closed-loop benchmark demonstrate that MeanFuser achieves outstanding performance without the supervision of the PDM Score. and exceptional inference efficiency, offering a robust and efficient solution for end-to-end autonomous driving. Our code and model are available at https://github.com/wjl2244/MeanFuser.",
-      "url": "https://arxiv.org/abs/2602.20060v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.20060v1",
-      "published": "2026-02-23T17:17:26Z",
-      "updated": "2026-02-23T17:17:26Z",
-      "categories": [
+        "cs.CL",
         "cs.CV",
         "cs.RO"
       ],
-      "primary_category": "cs.CV"
+      "primary_category": "cs.LG"
     },
     {
-      "id": "2602.20057v1",
-      "title": "AdaWorldPolicy: World-Model-Driven Diffusion Policy with Online Adaptive Learning for Robotic Manipulation",
+      "id": "2602.21174v1",
+      "title": "Efficient Hierarchical Any-Angle Path Planning on Multi-Resolution 3D Grids",
       "authors": [
-        "Ge Yuan",
-        "Qiyuan Qiao",
-        "Jing Zhang",
-        "Dong Xu"
+        "Victor Reijgwart",
+        "Cesar Cadena",
+        "Roland Siegwart",
+        "Lionel Ott"
       ],
-      "abstract": "Effective robotic manipulation requires policies that can anticipate physical outcomes and adapt to real-world environments. Effective robotic manipulation requires policies that can anticipate physical outcomes and adapt to real-world environments. In this work, we introduce a unified framework, World-Model-Driven Diffusion Policy with Online Adaptive Learning (AdaWorldPolicy) to enhance robotic manipulation under dynamic conditions with minimal human involvement. Our core insight is that world models provide strong supervision signals, enabling online adaptive learning in dynamic environments, which can be complemented by force-torque feedback to mitigate dynamic force shifts. Our AdaWorldPolicy integrates a world model, an action expert, and a force predictor-all implemented as interconnected Flow Matching Diffusion Transformers (DiT). They are interconnected via the multi-modal self-attention layers, enabling deep feature exchange for joint learning while preserving their distinct modularity characteristics. We further propose a novel Online Adaptive Learning (AdaOL) strategy that dynamically switches between an Action Generation mode and a Future Imagination mode to drive reactive updates across all three modules. This creates a powerful closed-loop mechanism that adapts to both visual and physical domain shifts with minimal overhead. Across a suite of simulated and real-robot benchmarks, our AdaWorldPolicy achieves state-of-the-art performance, with dynamical adaptive capacity to out-of-distribution scenarios.",
-      "url": "https://arxiv.org/abs/2602.20057v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.20057v1",
-      "published": "2026-02-23T17:12:25Z",
-      "updated": "2026-02-23T17:12:25Z",
+      "abstract": "Hierarchical, multi-resolution volumetric mapping approaches are widely used to represent large and complex environments as they can efficiently capture their occupancy and connectivity information. Yet widely used path planning methods such as sampling and trajectory optimization do not exploit this explicit connectivity information, and search-based methods such as A* suffer from scalability issues in large-scale high-resolution maps. In many applications, Euclidean shortest paths form the underpinning of the navigation system. For such applications, any-angle planning methods, which find optimal paths by connecting corners of obstacles with straight-line segments, provide a simple and efficient solution. In this paper, we present a method that has the optimality and completeness properties of any-angle planners while overcoming computational tractability issues common to search-based methods by exploiting multi-resolution representations. Extensive experiments on real and synthetic environments demonstrate the proposed approach's solution quality and speed, outperforming even sampling-based methods. The framework is open-sourced to allow the robotics and planning community to build on our research.",
+      "url": "https://arxiv.org/abs/2602.21174v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.21174v1",
+      "published": "2026-02-24T18:18:36Z",
+      "updated": "2026-02-24T18:18:36Z",
       "categories": [
         "cs.RO",
         "cs.AI"
@@ -245,51 +70,146 @@
       "primary_category": "cs.RO"
     },
     {
-      "id": "2602.20055v1",
-      "title": "To Move or Not to Move: Constraint-based Planning Enables Zero-Shot Generalization for Interactive Navigation",
+      "id": "2602.21161v1",
+      "title": "ActionReasoning: Robot Action Reasoning in 3D Space with LLM for Robotic Brick Stacking",
       "authors": [
-        "Apoorva Vashisth",
-        "Manav Kulshrestha",
-        "Pranav Bakshi",
-        "Damon Conover",
-        "Guillaume Sartoretti",
-        "Aniket Bera"
+        "Guangming Wang",
+        "Qizhen Ying",
+        "Yixiong Jing",
+        "Olaf Wysocki",
+        "Brian Sheil"
       ],
-      "abstract": "Visual navigation typically assumes the existence of at least one obstacle-free path between start and goal, which must be discovered/planned by the robot. However, in real-world scenarios, such as home environments and warehouses, clutter can block all routes. Targeted at such cases, we introduce the Lifelong Interactive Navigation problem, where a mobile robot with manipulation abilities can move clutter to forge its own path to complete sequential object- placement tasks - each involving placing an given object (eg. Alarm clock, Pillow) onto a target object (eg. Dining table, Desk, Bed). To address this lifelong setting - where effects of environment changes accumulate and have long-term effects - we propose an LLM-driven, constraint-based planning framework with active perception. Our framework allows the LLM to reason over a structured scene graph of discovered objects and obstacles, deciding which object to move, where to place it, and where to look next to discover task-relevant information. This coupling of reasoning and active perception allows the agent to explore the regions expected to contribute to task completion rather than exhaustively mapping the environment. A standard motion planner then executes the corresponding navigate-pick-place, or detour sequence, ensuring reliable low-level control. Evaluated in physics-enabled ProcTHOR-10k simulator, our approach outperforms non-learning and learning-based baselines. We further demonstrate our approach qualitatively on real-world hardware.",
-      "url": "https://arxiv.org/abs/2602.20055v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.20055v1",
-      "published": "2026-02-23T17:10:00Z",
-      "updated": "2026-02-23T17:10:00Z",
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.CV"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2602.20054v1",
-      "title": "Hydrodynamic Performance Enhancement of Unmanned Underwater Gliders with Soft Robotic Morphing Wings for Agility Improvement",
-      "authors": [
-        "A. Giordano",
-        "G. De Meurichy",
-        "V. Telazzi",
-        "C. Mucignat",
-        "I. Lunati",
-        "D. A. L. M. Louchard",
-        "M. Iovieno",
-        "S. F. Armanini",
-        "M. Kovac"
-      ],
-      "abstract": "This work assesses the hydrodynamic efficiency of Underwater Unmanned Vehicles (UUVs) equipped with soft morphing wings compared to conventional rigid wings. Unlike rigid wings, deformable counterparts can alter their aerodynamic properties on demand. Improvements in hydrodynamic efficiency extend a UUV's operational range and may determine mission feasibility. Structural and Computational Fluid Dynamics (CFD) simulations were conducted for both a soft morphing wing and a UUV incorporating it. The results show that a UUV employing soft wings achieves 9.75 percent higher overall efficiency than an equivalent vehicle with traditional rigid wings. These findings confirm the potential of soft robotics to enhance underwater vehicle performance, particularly in applications requiring pressure-agnostic operation.",
-      "url": "https://arxiv.org/abs/2602.20054v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.20054v1",
-      "published": "2026-02-23T17:04:21Z",
-      "updated": "2026-02-23T17:04:21Z",
+      "abstract": "Classical robotic systems typically rely on custom planners designed for constrained environments. While effective in restricted settings, these systems lack generalization capabilities, limiting the scalability of embodied AI and general-purpose robots. Recent data-driven Vision-Language-Action (VLA) approaches aim to learn policies from large-scale simulation and real-world data. However, the continuous action space of the physical world significantly exceeds the representational capacity of linguistic tokens, making it unclear if scaling data alone can yield general robotic intelligence. To address this gap, we propose ActionReasoning, an LLM-driven framework that performs explicit action reasoning to produce physics-consistent, prior-guided decisions for robotic manipulation. ActionReasoning leverages the physical priors and real-world knowledge already encoded in Large Language Models (LLMs) and structures them within a multi-agent architecture. We instantiate this framework on a tractable case study of brick stacking, where the environment states are assumed to be already accurately measured. The environmental states are then serialized and passed to a multi-agent LLM framework that generates physics-aware action plans. The experiments demonstrate that the proposed multi-agent LLM framework enables stable brick placement while shifting effort from low-level domain-specific coding to high-level tool invocation and prompting, highlighting its potential for broader generalization. This work introduces a promising approach to bridging perception and execution in robotic manipulation by integrating physical reasoning with LLMs.",
+      "url": "https://arxiv.org/abs/2602.21161v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.21161v1",
+      "published": "2026-02-24T18:07:06Z",
+      "updated": "2026-02-24T18:07:06Z",
       "categories": [
         "cs.RO"
       ],
       "primary_category": "cs.RO"
+    },
+    {
+      "id": "2602.21157v1",
+      "title": "HALO: A Unified Vision-Language-Action Model for Embodied Multimodal Chain-of-Thought Reasoning",
+      "authors": [
+        "Quanxin Shou",
+        "Fangqi Zhu",
+        "Shawn Chen",
+        "Puxin Yan",
+        "Zhengyang Yan",
+        "Yikun Miao",
+        "Xiaoyi Pang",
+        "Zicong Hong",
+        "Ruikai Shi",
+        "Hao Huang",
+        "Jie Zhang",
+        "Song Guo"
+      ],
+      "abstract": "Vision-Language-Action (VLA) models have shown strong performance in robotic manipulation, but often struggle in long-horizon or out-of-distribution scenarios due to the lack of explicit mechanisms for multimodal reasoning and anticipating how the world will evolve under action. Recent works introduce textual chain-of-thought or visual subgoal prediction within VLA models to reason, but still fail to offer a unified human-like reasoning framework for joint textual reasoning, visual foresight, and action prediction. To this end, we propose HALO, a unified VLA model that enables embodied multimodal chain-of-thought (EM-CoT) reasoning through a sequential process of textual task reasoning, visual subgoal prediction for fine-grained guidance, and EM-CoT-augmented action prediction. We instantiate HALO with a Mixture-of-Transformers (MoT) architecture that decouples semantic reasoning, visual foresight, and action prediction into specialized experts while allowing seamless cross-expert collaboration. To enable HALO learning at scale, we introduce an automated pipeline to synthesize EM-CoT training data along with a carefully crafted training recipe. Extensive experiments demonstrate that: (1) HALO achieves superior performance in both simulated and real-world environments, surpassing baseline policy pi_0 by 34.1% on RoboTwin benchmark; (2) all proposed components of the training recipe and EM-CoT design help improve task success rate; and (3) HALO exhibits strong generalization capabilities under aggressive unseen environmental randomization with our proposed EM-CoT reasoning.",
+      "url": "https://arxiv.org/abs/2602.21157v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.21157v1",
+      "published": "2026-02-24T18:04:31Z",
+      "updated": "2026-02-24T18:04:31Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2602.21155v1",
+      "title": "KAN-Koopman Based Rapid Detection Of Battery Thermal Anomalies With Diagnostics Guarantees",
+      "authors": [
+        "Sanchita Ghosh",
+        "Tanushree Roy"
+      ],
+      "abstract": "Early diagnosis of battery thermal anomalies is crucial to ensure safe and reliable battery operation by preventing catastrophic thermal failures. Battery diagnostics primarily rely on battery surface temperature measurements and/or estimation of core temperatures. However, aging-induced changes in the battery model and limited training data remain major challenges for model-based and machine-learning based battery state estimation and diagnostics. To address these issues, we propose a Kolomogorov-Arnold network (KAN) in conjunction with a Koopman-based detection algorithm that leverages the unique advantages of both methods. Firstly, the lightweight KAN provides a model-free estimation of the core temperature to ensure rapid detection of battery thermal anomalies. Secondly, the Koopman operator is learned in real time using the estimated core temperature from KAN and the measured surface temperature of the battery to provide a prediction for diagnostic residual generation. This online learning approach overcomes the challenges of model changes, while the integrated structure reduces the dependence on large datasets. Furthermore, we derive analytical conditions that provide diagnostic guarantees on our KAN-Koopman detection scheme. Our simulation results illustrate a significant reduction in detection time with the proposed algorithm compared to the baseline Koopman-only algorithm.",
+      "url": "https://arxiv.org/abs/2602.21155v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.21155v1",
+      "published": "2026-02-24T18:00:28Z",
+      "updated": "2026-02-24T18:00:28Z",
+      "categories": [
+        "eess.SY"
+      ],
+      "primary_category": "eess.SY"
+    },
+    {
+      "id": "2602.21148v1",
+      "title": "A Micro-Macro Model of Encounter-Driven Information Diffusion in Robot Swarms",
+      "authors": [
+        "Davis S. Catherman",
+        "Carlo Pinciroli"
+      ],
+      "abstract": "In this paper, we propose the problem of Encounter-Driven Information Diffusion (EDID). In EDID, robots are allowed to exchange information only upon meeting. Crucially, EDID assumes that the robots are not allowed to schedule their meetings. As such, the robots have no means to anticipate when, where, and who they will meet. As a step towards the design of storage and routing algorithms for EDID, in this paper we propose a model of information diffusion that captures the essential dynamics of EDID. The model is derived from first principles and is composed of two levels: a micro model, based on a generalization of the concept of `mean free path'; and a macro model, which captures the global dynamics of information diffusion. We validate the model through extensive robot simulations, in which we consider swarm size, communication range, environment size, and different random motion regimes. We conclude the paper with a discussion of the implications of this model on the algorithms that best support information diffusion according to the parameters of interest.",
+      "url": "https://arxiv.org/abs/2602.21148v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.21148v1",
+      "published": "2026-02-24T17:49:56Z",
+      "updated": "2026-02-24T17:49:56Z",
+      "categories": [
+        "cs.RO",
+        "cs.MA"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2602.21119v1",
+      "title": "Cooperative-Competitive Team Play of Real-World Craft Robots",
+      "authors": [
+        "Rui Zhao",
+        "Xihui Li",
+        "Yizheng Zhang",
+        "Yuzhen Liu",
+        "Zhong Zhang",
+        "Yufeng Zhang",
+        "Cheng Zhou",
+        "Zhengyou Zhang",
+        "Lei Han"
+      ],
+      "abstract": "Multi-agent deep Reinforcement Learning (RL) has made significant progress in developing intelligent game-playing agents in recent years. However, the efficient training of collective robots using multi-agent RL and the transfer of learned policies to real-world applications remain open research questions. In this work, we first develop a comprehensive robotic system, including simulation, distributed learning framework, and physical robot components. We then propose and evaluate reinforcement learning techniques designed for efficient training of cooperative and competitive policies on this platform. To address the challenges of multi-agent sim-to-real transfer, we introduce Out of Distribution State Initialization (OODSI) to mitigate the impact of the sim-to-real gap. In the experiments, OODSI improves the Sim2Real performance by 20%. We demonstrate the effectiveness of our approach through experiments with a multi-robot car competitive game and a cooperative task in real-world settings.",
+      "url": "https://arxiv.org/abs/2602.21119v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.21119v1",
+      "published": "2026-02-24T17:15:37Z",
+      "updated": "2026-02-24T17:15:37Z",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2602.21113v1",
+      "title": "A Survey of Recent Developments in SYCL Compiler Implementations",
+      "authors": [
+        "Huy Trinh"
+      ],
+      "abstract": "This survey discusses recent advancements in SYCL compiler implementations, one of the crucial aspects of compiler construction for heterogeneous computing systems. We explore the transition from traditional compiler construction, from Single-Source Multiple Compiler Passes (SMCP) to a more advanced approach to Single-Source Single Compiler Pass (SSCP). The survey analyzes multiple papers that researched the different developments of SYCL implementation based on SSCP and their approach to enhancing performance and addressing separate challenges.",
+      "url": "https://arxiv.org/abs/2602.21113v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.21113v1",
+      "published": "2026-02-24T17:11:17Z",
+      "updated": "2026-02-24T17:11:17Z",
+      "categories": [
+        "eess.SY"
+      ],
+      "primary_category": "eess.SY"
+    },
+    {
+      "id": "2602.21101v1",
+      "title": "Event-Aided Sharp Radiance Field Reconstruction for Fast-Flying Drones",
+      "authors": [
+        "Rong Zou",
+        "Marco Cannici",
+        "Davide Scaramuzza"
+      ],
+      "abstract": "Fast-flying aerial robots promise rapid inspection under limited battery constraints, with direct applications in infrastructure inspection, terrain exploration, and search and rescue. However, high speeds lead to severe motion blur in images and induce significant drift and noise in pose estimates, making dense 3D reconstruction with Neural Radiance Fields (NeRFs) particularly challenging due to their high sensitivity to such degradations. In this work, we present a unified framework that leverages asynchronous event streams alongside motion-blurred frames to reconstruct high-fidelity radiance fields from agile drone flights. By embedding event-image fusion into NeRF optimization and jointly refining event-based visual-inertial odometry priors using both event and frame modalities, our method recovers sharp radiance fields and accurate camera trajectories without ground-truth supervision. We validate our approach on both synthetic data and real-world sequences captured by a fast-flying drone. Despite highly dynamic drone flights, where RGB frames are severely degraded by motion blur and pose priors become unreliable, our method reconstructs high-fidelity radiance fields and preserves fine scene details, delivering a performance gain of over 50% on real-world data compared to state-of-the-art methods.",
+      "url": "https://arxiv.org/abs/2602.21101v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.21101v1",
+      "published": "2026-02-24T17:02:56Z",
+      "updated": "2026-02-24T17:02:56Z",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "primary_category": "cs.CV"
     }
   ]
 }
