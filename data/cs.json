@@ -2,232 +2,220 @@
   "category": "cs",
   "name": "CS Research",
   "description": "Computer Science \u2014 AI, Machine Learning, NLP, Computer Vision",
-  "scraped_at": "2026-02-25T09:00:14.927353+00:00",
+  "scraped_at": "2026-02-26T08:59:14.017906+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2602.21204v1",
-      "title": "Test-Time Training with KV Binding Is Secretly Linear Attention",
+      "id": "2602.22212v1",
+      "title": "Neu-PiG: Neural Preconditioned Grids for Fast Dynamic Surface Reconstruction on Long Sequences",
       "authors": [
-        "Junchen Liu",
-        "Sven Elflein",
-        "Or Litany",
-        "Zan Gojcic",
-        "Ruilong Li"
+        "Julian Kaltheuner",
+        "Hannah Dr\u00f6ge",
+        "Markus Plack",
+        "Patrick Stotko",
+        "Reinhard Klein"
       ],
-      "abstract": "Test-time training (TTT) with KV binding as sequence modeling layer is commonly interpreted as a form of online meta-learning that memorizes a key-value mapping at test time. However, our analysis reveals multiple phenomena that contradict this memorization-based interpretation. Motivated by these findings, we revisit the formulation of TTT and show that a broad class of TTT architectures can be expressed as a form of learned linear attention operator. Beyond explaining previously puzzling model behaviors, this perspective yields multiple practical benefits: it enables principled architectural simplifications, admits fully parallel formulations that preserve performance while improving efficiency, and provides a systematic reduction of diverse TTT variants to a standard linear attention form. Overall, our results reframe TTT not as test-time memorization, but as learned linear attention with enhanced representational capacity.",
-      "url": "https://arxiv.org/abs/2602.21204v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.21204v1",
-      "published": "2026-02-24T18:59:30Z",
-      "updated": "2026-02-24T18:59:30Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CV"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2602.21203v1",
-      "title": "Squint: Fast Visual Reinforcement Learning for Sim-to-Real Robotics",
-      "authors": [
-        "Abdulaziz Almuzairee",
-        "Henrik I. Christensen"
-      ],
-      "abstract": "Visual reinforcement learning is appealing for robotics but expensive -- off-policy methods are sample-efficient yet slow; on-policy methods parallelize well but waste samples. Recent work has shown that off-policy methods can train faster than on-policy methods in wall-clock time for state-based control. Extending this to vision remains challenging, where high-dimensional input images complicate training dynamics and introduce substantial storage and encoding overhead. To address these challenges, we introduce Squint, a visual Soft Actor Critic method that achieves faster wall-clock training than prior visual off-policy and on-policy methods. Squint achieves this via parallel simulation, a distributional critic, resolution squinting, layer normalization, a tuned update-to-data ratio, and an optimized implementation. We evaluate on the SO-101 Task Set, a new suite of eight manipulation tasks in ManiSkill3 with heavy domain randomization, and demonstrate sim-to-real transfer to a real SO-101 robot. We train policies for 15 minutes on a single RTX 3090 GPU, with most tasks converging in under 6 minutes.",
-      "url": "https://arxiv.org/abs/2602.21203v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.21203v1",
-      "published": "2026-02-24T18:58:11Z",
-      "updated": "2026-02-24T18:58:11Z",
-      "categories": [
-        "cs.RO",
-        "cs.CV",
-        "cs.LG"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2602.21202v1",
-      "title": "Multi-Vector Index Compression in Any Modality",
-      "authors": [
-        "Hanxiang Qin",
-        "Alexander Martin",
-        "Rohan Jha",
-        "Chunsheng Zuo",
-        "Reno Kriz",
-        "Benjamin Van Durme"
-      ],
-      "abstract": "We study efficient multi-vector retrieval for late interaction in any modality. Late interaction has emerged as a dominant paradigm for information retrieval in text, images, visual documents, and videos, but its computation and storage costs grow linearly with document length, making it costly for image-, video-, and audio-rich corpora. To address this limitation, we explore query-agnostic methods for compressing multi-vector document representations under a constant vector budget. We introduce four approaches for index compression: sequence resizing, memory tokens, hierarchical pooling, and a novel attention-guided clustering (AGC). AGC uses an attention-guided mechanism to identify the most semantically salient regions of a document as cluster centroids and to weight token aggregation. Evaluating these methods on retrieval tasks spanning text (BEIR), visual-document (ViDoRe), and video (MSR-VTT, MultiVENT 2.0), we show that attention-guided clustering consistently outperforms other parameterized compression methods (sequence resizing and memory tokens), provides greater flexibility in index size than non-parametric hierarchical clustering, and achieves competitive or improved performance compared to a full, uncompressed index. The source code is available at: github.com/hanxiangqin/omni-col-press.",
-      "url": "https://arxiv.org/abs/2602.21202v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.21202v1",
-      "published": "2026-02-24T18:57:33Z",
-      "updated": "2026-02-24T18:57:33Z",
-      "categories": [
-        "cs.IR",
-        "cs.CL",
-        "cs.CV"
-      ],
-      "primary_category": "cs.IR"
-    },
-    {
-      "id": "2602.21201v1",
-      "title": "Aletheia tackles FirstProof autonomously",
-      "authors": [
-        "Tony Feng",
-        "Junehyuk Jung",
-        "Sang-hyun Kim",
-        "Carlo Pagano",
-        "Sergei Gukov",
-        "Chiang-Chiang Tsai",
-        "David Woodruff",
-        "Adel Javanmard",
-        "Aryan Mokhtari",
-        "Dawsen Hwang",
-        "Yuri Chervonyi",
-        "Jonathan N. Lee",
-        "Garrett Bingham",
-        "Trieu H. Trinh",
-        "Vahab Mirrokni",
-        "Quoc V. Le",
-        "Thang Luong"
-      ],
-      "abstract": "We report the performance of Aletheia (Feng et al., 2026b), a mathematics research agent powered by Gemini 3 Deep Think, on the inaugural FirstProof challenge. Within the allowed timeframe of the challenge, Aletheia autonomously solved 6 problems (2, 5, 7, 8, 9, 10) out of 10 according to majority expert assessments; we note that experts were not unanimous on Problem 8 (only). For full transparency, we explain our interpretation of FirstProof and disclose details about our experiments as well as our evaluation. Raw prompts and outputs are available at https://github.com/google-deepmind/superhuman/tree/main/aletheia.",
-      "url": "https://arxiv.org/abs/2602.21201v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.21201v1",
-      "published": "2026-02-24T18:56:10Z",
-      "updated": "2026-02-24T18:56:10Z",
-      "categories": [
-        "cs.AI",
-        "cs.CL",
-        "cs.LG"
-      ],
-      "primary_category": "cs.AI"
-    },
-    {
-      "id": "2602.21198v1",
-      "title": "Learning from Trials and Errors: Reflective Test-Time Planning for Embodied LLMs",
-      "authors": [
-        "Yining Hong",
-        "Huang Huang",
-        "Manling Li",
-        "Li Fei-Fei",
-        "Jiajun Wu",
-        "Yejin Choi"
-      ],
-      "abstract": "Embodied LLMs endow robots with high-level task reasoning, but they cannot reflect on what went wrong or why, turning deployment into a sequence of independent trials where mistakes repeat rather than accumulate into experience. Drawing upon human reflective practitioners, we introduce Reflective Test-Time Planning, which integrates two modes of reflection: \\textit{reflection-in-action}, where the agent uses test-time scaling to generate and score multiple candidate actions using internal reflections before execution; and \\textit{reflection-on-action}, which uses test-time training to update both its internal reflection model and its action policy based on external reflections after execution. We also include retrospective reflection, allowing the agent to re-evaluate earlier decisions and perform model updates with hindsight for proper long-horizon credit assignment. Experiments on our newly-designed Long-Horizon Household benchmark and MuJoCo Cupboard Fitting benchmark show significant gains over baseline models, with ablative studies validating the complementary roles of reflection-in-action and reflection-on-action. Qualitative analyses, including real-robot trials, highlight behavioral correction through reflection.",
-      "url": "https://arxiv.org/abs/2602.21198v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.21198v1",
-      "published": "2026-02-24T18:55:18Z",
-      "updated": "2026-02-24T18:55:18Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL",
-        "cs.CV",
-        "cs.RO"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2602.21196v1",
-      "title": "Untied Ulysses: Memory-Efficient Context Parallelism via Headwise Chunking",
-      "authors": [
-        "Ravi Ghadia",
-        "Maksim Abraham",
-        "Sergei Vorobyov",
-        "Max Ryabinin"
-      ],
-      "abstract": "Efficiently processing long sequences with Transformer models usually requires splitting the computations across accelerators via context parallelism. The dominant approaches in this family of methods, such as Ring Attention or DeepSpeed Ulysses, enable scaling over the context dimension but do not focus on memory efficiency, which limits the sequence lengths they can support. More advanced techniques, such as Fully Pipelined Distributed Transformer or activation offloading, can further extend the possible context length at the cost of training throughput. In this paper, we present UPipe, a simple yet effective context parallelism technique that performs fine-grained chunking at the attention head level. This technique significantly reduces the activation memory usage of self-attention, breaking the activation memory barrier and unlocking much longer context lengths. Our approach reduces intermediate tensor memory usage in the attention layer by as much as 87.5$\\%$ for 32B Transformers, while matching previous context parallelism techniques in terms of training speed. UPipe can support the context length of 5M tokens when training Llama3-8B on a single 8$\\times$H100 node, improving upon prior methods by over 25$\\%$.",
-      "url": "https://arxiv.org/abs/2602.21196v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.21196v1",
-      "published": "2026-02-24T18:54:39Z",
-      "updated": "2026-02-24T18:54:39Z",
-      "categories": [
-        "cs.LG",
-        "cs.DC"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2602.21195v1",
-      "title": "Region of Interest Segmentation and Morphological Analysis for Membranes in Cryo-Electron Tomography",
-      "authors": [
-        "Xingyi Cheng",
-        "Julien Maufront",
-        "Aur\u00e9lie Di Cicco",
-        "Dani\u00ebl M. Pelt",
-        "Manuela Dezi",
-        "Daniel L\u00e9vy"
-      ],
-      "abstract": "Cryo-electron tomography (cryo-ET) enables high resolution, three-dimensional reconstruction of biological structures, including membranes and membrane proteins. Identification of regions of interest (ROIs) is central to scientific imaging, as it enables isolation and quantitative analysis of specific structural features within complex datasets. In practice, however, ROIs are typically derived indirectly through full structure segmentation followed by post hoc analysis. This limitation is especially apparent for continuous and geometrically complex structures such as membranes, which are segmented as single entities. Here, we developed TomoROIS-SurfORA, a two step framework for direct, shape-agnostic ROI segmentation and morphological surface analysis. TomoROIS performs deep learning-based ROI segmentation and can be trained from scratch using small annotated datasets, enabling practical application across diverse imaging data. SurfORA processes segmented structures as point clouds and surface meshes to extract quantitative morphological features, including inter-membrane distances, curvature, and surface roughness. It supports both closed and open surfaces, with specific considerations for open surfaces, which are common in cryo-ET due to the missing wedge effect. We demonstrate both tools using in vitro reconstituted membrane systems containing deformable vesicles with complex geometries, enabling automatic quantitative analysis of membrane contact sites and remodeling events such as invagination. While demonstrated here on cryo-ET membrane data, the combined approach is applicable to ROI detection and surface analysis in broader scientific imaging contexts.",
-      "url": "https://arxiv.org/abs/2602.21195v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.21195v1",
-      "published": "2026-02-24T18:53:33Z",
-      "updated": "2026-02-24T18:53:33Z",
+      "abstract": "Temporally consistent surface reconstruction of dynamic 3D objects from unstructured point cloud data remains challenging, especially for very long sequences. Existing methods either optimize deformations incrementally, risking drift and requiring long runtimes, or rely on complex learned models that demand category-specific training. We present Neu-PiG, a fast deformation optimization method based on a novel preconditioned latent-grid encoding that distributes spatial features parameterized on the position and normal direction of a keyframe surface. Our method encodes entire deformations across all time steps at various spatial scales into a multi-resolution latent grid, parameterized by the position and normal direction of a reference surface from a single keyframe. This latent representation is then augmented for time modulation and decoded into per-frame 6-DoF deformations via a lightweight multilayer perceptron (MLP). To achieve high-fidelity, drift-free surface reconstructions in seconds, we employ Sobolev preconditioning during gradient-based training of the latent space, completely avoiding the need for any explicit correspondences or further priors. Experiments across diverse human and animal datasets demonstrate that Neu-PiG outperforms state-the-art approaches, offering both superior accuracy and scalability to long sequences while running at least 60x faster than existing training-free methods and achieving inference speeds on the same order as heavy pretrained models.",
+      "url": "https://arxiv.org/abs/2602.22212v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.22212v1",
+      "published": "2026-02-25T18:59:53Z",
+      "updated": "2026-02-25T18:59:53Z",
       "categories": [
         "cs.CV"
       ],
       "primary_category": "cs.CV"
     },
     {
-      "id": "2602.21193v1",
-      "title": "On Data Engineering for Scaling LLM Terminal Capabilities",
+      "id": "2602.22209v1",
+      "title": "WHOLE: World-Grounded Hand-Object Lifted from Egocentric Videos",
       "authors": [
-        "Renjie Pi",
-        "Grace Lam",
-        "Mohammad Shoeybi",
-        "Pooya Jannaty",
-        "Bryan Catanzaro",
-        "Wei Ping"
+        "Yufei Ye",
+        "Jiaman Li",
+        "Ryan Rong",
+        "C. Karen Liu"
       ],
-      "abstract": "Despite rapid recent progress in the terminal capabilities of large language models, the training data strategies behind state-of-the-art terminal agents remain largely undisclosed. We address this gap through a systematic study of data engineering practices for terminal agents, making two key contributions: (1) Terminal-Task-Gen, a lightweight synthetic task generation pipeline that supports seed-based and skill-based task construction, and (2) a comprehensive analysis of data and training strategies, including filtering, curriculum learning, long context training, and scaling behavior. Our pipeline yields Terminal-Corpus, a large-scale open-source dataset for terminal tasks. Using this dataset, we train Nemotron-Terminal, a family of models initialized from Qwen3(8B, 14B, 32B) that achieve substantial gains on Terminal-Bench 2.0: Nemotron-Terminal-8B improves from 2.5% to 13.0% Nemotron-Terminal-14B improves from 4.0% to 20.2%, and Nemotron-Terminal-32B improves from 3.4% to 27.4%, matching the performance of significantly larger models. To accelerate research in this domain, we open-source our model checkpoints and most of our synthetic datasets at https://huggingface.co/collections/nvidia/nemotron-terminal.",
-      "url": "https://arxiv.org/abs/2602.21193v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.21193v1",
-      "published": "2026-02-24T18:51:04Z",
-      "updated": "2026-02-24T18:51:04Z",
+      "abstract": "Egocentric manipulation videos are highly challenging due to severe occlusions during interactions and frequent object entries and exits from the camera view as the person moves. Current methods typically focus on recovering either hand or object pose in isolation, but both struggle during interactions and fail to handle out-of-sight cases. Moreover, their independent predictions often lead to inconsistent hand-object relations. We introduce WHOLE, a method that holistically reconstructs hand and object motion in world space from egocentric videos given object templates. Our key insight is to learn a generative prior over hand-object motion to jointly reason about their interactions. At test time, the pretrained prior is guided to generate trajectories that conform to the video observations. This joint generative reconstruction substantially outperforms approaches that process hands and objects separately followed by post-processing. WHOLE achieves state-of-the-art performance on hand motion estimation, 6D object pose estimation, and their relative interaction reconstruction. Project website: https://judyye.github.io/whole-www",
+      "url": "https://arxiv.org/abs/2602.22209v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.22209v1",
+      "published": "2026-02-25T18:59:10Z",
+      "updated": "2026-02-25T18:59:10Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2602.22208v1",
+      "title": "Solaris: Building a Multiplayer Video World Model in Minecraft",
+      "authors": [
+        "Georgy Savva",
+        "Oscar Michel",
+        "Daohan Lu",
+        "Suppakit Waiwitlikhit",
+        "Timothy Meehan",
+        "Dhairya Mishra",
+        "Srivats Poddar",
+        "Jack Lu",
+        "Saining Xie"
+      ],
+      "abstract": "Existing action-conditioned video generation models (video world models) are limited to single-agent perspectives, failing to capture the multi-agent interactions of real-world environments. We introduce Solaris, a multiplayer video world model that simulates consistent multi-view observations. To enable this, we develop a multiplayer data system designed for robust, continuous, and automated data collection on video games such as Minecraft. Unlike prior platforms built for single-player settings, our system supports coordinated multi-agent interaction and synchronized videos + actions capture. Using this system, we collect 12.64 million multiplayer frames and propose an evaluation framework for multiplayer movement, memory, grounding, building, and view consistency. We train Solaris using a staged pipeline that progressively transitions from single-player to multiplayer modeling, combining bidirectional, causal, and Self Forcing training. In the final stage, we introduce Checkpointed Self Forcing, a memory-efficient Self Forcing variant that enables a longer-horizon teacher. Results show our architecture and training design outperform existing baselines. Through open-sourcing our system and models, we hope to lay the groundwork for a new generation of multi-agent world models.",
+      "url": "https://arxiv.org/abs/2602.22208v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.22208v1",
+      "published": "2026-02-25T18:59:01Z",
+      "updated": "2026-02-25T18:59:01Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2602.22207v1",
+      "title": "Recovered in Translation: Efficient Pipeline for Automated Translation of Benchmarks and Datasets",
+      "authors": [
+        "Hanna Yukhymenko",
+        "Anton Alexandrov",
+        "Martin Vechev"
+      ],
+      "abstract": "The reliability of multilingual Large Language Model (LLM) evaluation is currently compromised by the inconsistent quality of translated benchmarks. Existing resources often suffer from semantic drift and context loss, which can lead to misleading performance metrics. In this work, we present a fully automated framework designed to address these challenges by enabling scalable, high-quality translation of datasets and benchmarks. We demonstrate that adapting test-time compute scaling strategies, specifically Universal Self-Improvement (USI) and our proposed multi-round ranking method, T-RANK, allows for significantly higher quality outputs compared to traditional pipelines. Our framework ensures that benchmarks preserve their original task structure and linguistic nuances during localization. We apply this approach to translate popular benchmarks and datasets into eight Eastern and Southern European languages (Ukrainian, Bulgarian, Slovak, Romanian, Lithuanian, Estonian, Turkish, Greek). Evaluations using both reference-based metrics and LLM-as-a-judge show that our translations surpass existing resources, resulting in more accurate downstream model assessment. We release both the framework and the improved benchmarks to facilitate robust and reproducible multilingual AI development.",
+      "url": "https://arxiv.org/abs/2602.22207v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.22207v1",
+      "published": "2026-02-25T18:58:25Z",
+      "updated": "2026-02-25T18:58:25Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "primary_category": "cs.CL"
+    },
+    {
+      "id": "2602.22200v1",
+      "title": "SumTablets: A Transliteration Dataset of Sumerian Tablets",
+      "authors": [
+        "Cole Simmons",
+        "Richard Diehl Martinez",
+        "Dan Jurafsky"
+      ],
+      "abstract": "Sumerian transliteration is a conventional system for representing a scholar's interpretation of a tablet in the Latin script. Thanks to visionary digital Assyriology projects such as ETCSL, CDLI, and Oracc, a large number of Sumerian transliterations have been published online, and these data are well-structured for a variety of search and analysis tasks. However, the absence of a comprehensive, accessible dataset pairing transliterations with a digital representation of the tablet's cuneiform glyphs has prevented the application of modern Natural Language Processing (NLP) methods to the task of Sumerian transliteration.   To address this gap, we present SumTablets, a dataset pairing Unicode representations of 91,606 Sumerian cuneiform tablets (totaling 6,970,407 glyphs) with the associated transliterations published by Oracc. We construct SumTablets by first preprocessing and standardizing the Oracc transliterations before mapping each reading back to the Unicode representation of the source glyph. Further, we retain parallel structural information (e.g., surfaces, newlines, broken segments) through the use of special tokens. We release SumTablets as a Hugging Face Dataset (CC BY 4.0) and open source data preparation code via GitHub.   Additionally, we leverage SumTablets to implement and evaluate two transliteration baselines: (1) weighted sampling from a glyph's possible readings, and (2) fine-tuning an autoregressive language model. Our fine-tuned language model achieves an average transliteration character-level F-score (chrF) of 97.55, demonstrating the immediate potential of transformer-based transliteration models in allowing experts to rapidly verify generated transliterations rather than manually transliterating tablets one-by-one.",
+      "url": "https://arxiv.org/abs/2602.22200v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.22200v1",
+      "published": "2026-02-25T18:50:42Z",
+      "updated": "2026-02-25T18:50:42Z",
       "categories": [
         "cs.CL"
       ],
       "primary_category": "cs.CL"
     },
     {
-      "id": "2602.21191v1",
-      "title": "Statistical Query Lower Bounds for Smoothed Agnostic Learning",
+      "id": "2602.22197v1",
+      "title": "Off-The-Shelf Image-to-Image Models Are All You Need To Defeat Image Protection Schemes",
       "authors": [
-        "Ilias Diakonikolas",
-        "Daniel M. Kane"
+        "Xavier Pleimling",
+        "Sifat Muhammad Abdullah",
+        "Gunjan Balde",
+        "Peng Gao",
+        "Mainack Mondal",
+        "Murtuza Jadliwala",
+        "Bimal Viswanath"
       ],
-      "abstract": "We study the complexity of smoothed agnostic learning, recently introduced by~\\cite{CKKMS24}, in which the learner competes with the best classifier in a target class under slight Gaussian perturbations of the inputs. Specifically, we focus on the prototypical task of agnostically learning halfspaces under subgaussian distributions in the smoothed model. The best known upper bound for this problem relies on $L_1$-polynomial regression and has complexity $d^{\\tilde{O}(1/\u03c3^2) \\log(1/\u03b5)}$, where $\u03c3$ is the smoothing parameter and $\u03b5$ is the excess error. Our main result is a Statistical Query (SQ) lower bound providing formal evidence that this upper bound is close to best possible. In more detail, we show that (even for Gaussian marginals) any SQ algorithm for smoothed agnostic learning of halfspaces requires complexity $d^{\u03a9(1/\u03c3^{2}+\\log(1/\u03b5))}$. This is the first non-trivial lower bound on the complexity of this task and nearly matches the known upper bound. Roughly speaking, we show that applying $L_1$-polynomial regression to a smoothed version of the function is essentially best possible. Our techniques involve finding a moment-matching hard distribution by way of linear programming duality. This dual program corresponds exactly to finding a low-degree approximating polynomial to the smoothed version of the target function (which turns out to be the same condition required for the $L_1$-polynomial regression to work). Our explicit SQ lower bound then comes from proving lower bounds on this approximation degree for the class of halfspaces.",
-      "url": "https://arxiv.org/abs/2602.21191v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.21191v1",
-      "published": "2026-02-24T18:46:46Z",
-      "updated": "2026-02-24T18:46:46Z",
+      "abstract": "Advances in Generative AI (GenAI) have led to the development of various protection strategies to prevent the unauthorized use of images. These methods rely on adding imperceptible protective perturbations to images to thwart misuse such as style mimicry or deepfake manipulations. Although previous attacks on these protections required specialized, purpose-built methods, we demonstrate that this is no longer necessary. We show that off-the-shelf image-to-image GenAI models can be repurposed as generic ``denoisers\" using a simple text prompt, effectively removing a wide range of protective perturbations. Across 8 case studies spanning 6 diverse protection schemes, our general-purpose attack not only circumvents these defenses but also outperforms existing specialized attacks while preserving the image's utility for the adversary. Our findings reveal a critical and widespread vulnerability in the current landscape of image protection, indicating that many schemes provide a false sense of security. We stress the urgent need to develop robust defenses and establish that any future protection mechanism must be benchmarked against attacks from off-the-shelf GenAI models. Code is available in this repository: https://github.com/mlsecviswanath/img2imgdenoiser",
+      "url": "https://arxiv.org/abs/2602.22197v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.22197v1",
+      "published": "2026-02-25T18:46:30Z",
+      "updated": "2026-02-25T18:46:30Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2602.22193v1",
+      "title": "Improving Parametric Knowledge Access in Reasoning Language Models",
+      "authors": [
+        "Melody Ma",
+        "John Hewitt"
+      ],
+      "abstract": "We study reasoning for accessing world knowledge stored in a language model's parameters. For example, recalling that Canberra is Australia's capital may benefit from thinking through major cities and the concept of purpose-built capitals. While reasoning language models are trained via reinforcement learning to produce reasoning traces on tasks such as mathematics, they may not reason well for accessing their own world knowledge. We first find that models do not generate their best world knowledge reasoning by default: adding a simple \"think step-by-step\" cue demonstrates statistically significant improvement in knowledge recall but not math. Motivated by this, we propose training models to reason over their parametric knowledge using world-knowledge question answering as a verifiable reward. After reinforcement learning on TriviaQA (+9.9%), performance also improves on Natural Questions, HotpotQA, SimpleQA, and StrategyQA by 4.2%, 2.1%, 0.6%, and 3.0%, respectively. Reasoning models are under-optimized for parametric knowledge access, but can be easily trained to reason better.",
+      "url": "https://arxiv.org/abs/2602.22193v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.22193v1",
+      "published": "2026-02-25T18:43:01Z",
+      "updated": "2026-02-25T18:43:01Z",
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL"
+    },
+    {
+      "id": "2602.22190v1",
+      "title": "GUI-Libra: Training Native GUI Agents to Reason and Act with Action-aware Supervision and Partially Verifiable RL",
+      "authors": [
+        "Rui Yang",
+        "Qianhui Wu",
+        "Zhaoyang Wang",
+        "Hanyang Chen",
+        "Ke Yang",
+        "Hao Cheng",
+        "Huaxiu Yao",
+        "Baoling Peng",
+        "Huan Zhang",
+        "Jianfeng Gao",
+        "Tong Zhang"
+      ],
+      "abstract": "Open-source native GUI agents still lag behind closed-source systems on long-horizon navigation tasks. This gap stems from two limitations: a shortage of high-quality, action-aligned reasoning data, and the direct adoption of generic post-training pipelines that overlook the unique challenges of GUI agents. We identify two fundamental issues in these pipelines: (i) standard SFT with CoT reasoning often hurts grounding, and (ii) step-wise RLVR-tyle training faces partial verifiability, where multiple actions can be correct but only a single demonstrated action is used for verification. This makes offline step-wise metrics weak predictors of online task success. In this work, we present GUI-Libra, a tailored training recipe that addresses these challenges. First, to mitigate the scarcity of action-aligned reasoning data, we introduce a data construction and filtering pipeline and release a curated 81K GUI reasoning dataset. Second, to reconcile reasoning with grounding, we propose action-aware SFT that mixes reasoning-then-action and direct-action data and reweights tokens to emphasize action and grounding. Third, to stabilize RL under partial verifiability, we identify the overlooked importance of KL regularization in RLVR and show that a KL trust region is critical for improving offline-to-online predictability; we further introduce success-adaptive scaling to downweight unreliable negative gradients. Across diverse web and mobile benchmarks, GUI-Libra consistently improves both step-wise accuracy and end-to-end task completion. Our results suggest that carefully designed post-training and data curation can unlock significantly stronger task-solving capabilities without costly online data collection. We release our dataset, code, and models to facilitate further research on data-efficient post-training for reasoning-capable GUI agents.",
+      "url": "https://arxiv.org/abs/2602.22190v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.22190v1",
+      "published": "2026-02-25T18:34:57Z",
+      "updated": "2026-02-25T18:34:57Z",
       "categories": [
         "cs.LG",
-        "cs.DS",
-        "stat.ML"
+        "cs.AI",
+        "cs.CL"
       ],
       "primary_category": "cs.LG"
     },
     {
-      "id": "2602.21189v1",
-      "title": "Why Pass@k Optimization Can Degrade Pass@1: Prompt Interference in LLM Post-training",
+      "id": "2602.22188v1",
+      "title": "Surrogate models for Rock-Fluid Interaction: A Grid-Size-Invariant Approach",
       "authors": [
-        "Anas Barakat",
-        "Souradip Chakraborty",
-        "Khushbu Pahwa",
-        "Amrit Singh Bedi"
+        "Nathalie C. Pinheiro",
+        "Donghu Guo",
+        "Hannah P. Menke",
+        "Aniket C. Joshi",
+        "Claire E. Heaney",
+        "Ahmed H. ElSheikh",
+        "Christopher C. Pain"
       ],
-      "abstract": "Pass@k is a widely used performance metric for verifiable large language model tasks, including mathematical reasoning, code generation, and short-answer reasoning. It defines success if any of $k$ independently sampled solutions passes a verifier. This multi-sample inference metric has motivated inference-aware fine-tuning methods that directly optimize pass@$k$. However, prior work reports a recurring trade-off: pass@k improves while pass@1 degrades under such methods. This trade-off is practically important because pass@1 often remains a hard operational constraint due to latency and cost budgets, imperfect verifier coverage, and the need for a reliable single-shot fallback. We study the origin of this trade-off and provide a theoretical characterization of when pass@k policy optimization can reduce pass@1 through gradient conflict induced by prompt interference. We show that pass@$k$ policy gradients can conflict with pass@1 gradients because pass@$k$ optimization implicitly reweights prompts toward low-success prompts; when these prompts are what we term negatively interfering, their upweighting can rotate the pass@k update direction away from the pass@1 direction. We illustrate our theoretical findings with large language model experiments on verifiable mathematical reasoning tasks.",
-      "url": "https://arxiv.org/abs/2602.21189v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.21189v1",
-      "published": "2026-02-24T18:43:08Z",
-      "updated": "2026-02-24T18:43:08Z",
+      "abstract": "Modelling rock-fluid interaction requires solving a set of partial differential equations (PDEs) to predict the flow behaviour and the reactions of the fluid with the rock on the interfaces. Conventional high-fidelity numerical models require a high resolution to obtain reliable results, resulting in huge computational expense. This restricts the applicability of these models for multi-query problems, such as uncertainty quantification and optimisation, which require running numerous scenarios. As a cheaper alternative to high-fidelity models, this work develops eight surrogate models for predicting the fluid flow in porous media. Four of these are reduced-order models (ROM) based on one neural network for compression and another for prediction. The other four are single neural networks with the property of grid-size invariance; a term which we use to refer to image-to-image models that are capable of inferring on computational domains that are larger than those used during training. In addition to the novel grid-size-invariant framework for surrogate models, we compare the predictive performance of UNet and UNet++ architectures, and demonstrate that UNet++ outperforms UNet for surrogate models. Furthermore, we show that the grid-size-invariant approach is a reliable way to reduce memory consumption during training, resulting in good correlation between predicted and ground-truth values and outperforming the ROMs analysed. The application analysed is particularly challenging because fluid-induced rock dissolution results in a non-static solid field and, consequently, it cannot be used to help in adjustments of the future prediction.",
+      "url": "https://arxiv.org/abs/2602.22188v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.22188v1",
+      "published": "2026-02-25T18:34:03Z",
+      "updated": "2026-02-25T18:34:03Z",
       "categories": [
         "cs.LG",
-        "cs.AI"
+        "cs.AI",
+        "physics.flu-dyn"
       ],
       "primary_category": "cs.LG"
+    },
+    {
+      "id": "2602.22182v1",
+      "title": "LiCQA : A Lightweight Complex Question Answering System",
+      "authors": [
+        "Sourav Saha",
+        "Dwaipayan Roy",
+        "Mandar Mitra"
+      ],
+      "abstract": "Over the last twenty years, significant progress has been made in designing and implementing Question Answering (QA) systems. However, addressing complex questions, the answers to which are spread across multiple documents, remains a challenging problem. Recent QA systems that are designed to handle complex questions work either on the basis of knowledge graphs, or utilise contem- porary neural models that are expensive to train, in terms of both computational resources and the volume of training data required. In this paper, we present LiCQA, an unsupervised question answer- ing model that works primarily on the basis of corpus evidence. We empirically compare the effectiveness and efficiency of LiCQA with two recently presented QA systems, which are based on different underlying principles. The results of our experiments show that LiCQA significantly outperforms these two state-of-the-art systems on benchmark data with noteworthy reduction in latency.",
+      "url": "https://arxiv.org/abs/2602.22182v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.22182v1",
+      "published": "2026-02-25T18:28:38Z",
+      "updated": "2026-02-25T18:28:38Z",
+      "categories": [
+        "cs.CL",
+        "cs.IR"
+      ],
+      "primary_category": "cs.CL"
     }
   ]
 }
