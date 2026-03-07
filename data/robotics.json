@@ -2,143 +2,129 @@
   "category": "robotics",
   "name": "Robotics Research",
   "description": "Robotics \u2014 Motion Planning, Control Systems, Human-Robot Interaction, Autonomous Systems",
-  "scraped_at": "2026-03-02T21:09:16.442209+00:00",
+  "scraped_at": "2026-03-07T19:55:51.211904+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2602.24268v1",
-      "title": "Virtual Constraint for a Quadrotor UAV Enforcing a Body-Axis Pointing Direction",
+      "id": "2603.05504v1",
+      "title": "RoboPocket: Improve Robot Policies Instantly with Your Phone",
       "authors": [
-        "Alexandre Anahory Simoes",
-        "Leonardo Colombo",
-        "Juan Giribet",
-        "Efstratios Stratoglou"
+        "Junjie Fang",
+        "Wendi Chen",
+        "Han Xue",
+        "Fangyuan Zhou",
+        "Tian Le",
+        "Yi Wang",
+        "Yuting Zhang",
+        "Jun Lv",
+        "Chuan Wen",
+        "Cewu Lu"
       ],
-      "abstract": "We propose a geometric control framework on $SE(3)$ for quadrotors that enforces pointing-driven missions without completing a full attitude reference. The mission is encoded through virtual constraints defining a task manifold and an associated set of admissible velocities, and invariance is achieved by a feedback law obtained from a linear system in selected inputs. Under a transversality condition with the effective actuation distribution, the invariance-enforcing input is uniquely defined, yielding a constructive control law and, for relevant tasks, closed-form expressions. We further derive a local off-manifold stabilization extension. As a case study, we lock a body axis to a prescribed line-of-sight direction while maintaining fixed altitude.",
-      "url": "https://arxiv.org/abs/2602.24268v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.24268v1",
-      "published": "2026-02-27T18:38:15Z",
-      "updated": "2026-02-27T18:38:15Z",
+      "abstract": "Scaling imitation learning is fundamentally constrained by the efficiency of data collection. While handheld interfaces have emerged as a scalable solution for in-the-wild data acquisition, they predominantly operate in an open-loop manner: operators blindly collect demonstrations without knowing the underlying policy's weaknesses, leading to inefficient coverage of critical state distributions. Conversely, interactive methods like DAgger effectively address covariate shift but rely on physical robot execution, which is costly and difficult to scale. To reconcile this trade-off, we introduce RoboPocket, a portable system that enables Robot-Free Instant Policy Iteration using single consumer smartphones. Its core innovation is a Remote Inference framework that visualizes the policy's predicted trajectory via Augmented Reality (AR) Visual Foresight. This immersive feedback allows collectors to proactively identify potential failures and focus data collection on the policy's weak regions without requiring a physical robot. Furthermore, we implement an asynchronous Online Finetuning pipeline that continuously updates the policy with incoming data, effectively closing the learning loop in minutes. Extensive experiments demonstrate that RoboPocket adheres to data scaling laws and doubles the data efficiency compared to offline scaling strategies, overcoming their long-standing efficiency bottleneck. Moreover, our instant iteration loop also boosts sample efficiency by up to 2$\\times$ in distributed environments a small number of interactive corrections per person. Project page and videos: https://robo-pocket.github.io.",
+      "url": "https://arxiv.org/abs/2603.05504v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.05504v1",
+      "published": "2026-03-05T18:59:38Z",
+      "updated": "2026-03-05T18:59:38Z",
       "categories": [
-        "eess.SY",
-        "math.OC"
-      ],
-      "primary_category": "eess.SY"
-    },
-    {
-      "id": "2602.24260v1",
-      "title": "Observer-Based Estimation and Hydrostatic Inertia Modeling for Cooperative Transport of Variable-Inertia Loads with Quadrotors",
-      "authors": [
-        "Jacob Goodman",
-        "Leonardo Colombo",
-        "Juan Giribet"
-      ],
-      "abstract": "We address load-parameter estimation in cooperative aerial transport with time-varying mass and inertia, as in fluid-carrying payloads. Using an intrinsic manifold model of the multi-quadrotor-load dynamics, we combine a geometric tracking controller with an observer for parameter identification. We estimate mass from measurable kinematics and commanded forces, and handle variable inertia via an inertia surrogate that reproduces the load's rotational dynamics for control and state propagation.   Instead of real-time identification of the true inertia tensor, driven by high-dimensional internal fluid motion, we leverage known tank geometry and fluid-mechanical structure to pre-compute inertia tensors and update them through a lookup table indexed by fill level and attitude. The surrogate is justified via the incompressible Navier-Stokes equations in the translating/rotating load frame: when effective forcing is gravity-dominated (i.e., translational/rotational accelerations and especially jerk are limited), the fluid approaches hydrostatic equilibrium and the free surface is well approximated by a plane orthogonal to the body-frame gravity direction.",
-      "url": "https://arxiv.org/abs/2602.24260v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.24260v1",
-      "published": "2026-02-27T18:31:01Z",
-      "updated": "2026-02-27T18:31:01Z",
-      "categories": [
-        "eess.SY",
-        "math.OC"
-      ],
-      "primary_category": "eess.SY"
-    },
-    {
-      "id": "2602.24259v1",
-      "title": "Curriculum-Based Soft Actor-Critic for Multi-Section R2R Tension Control",
-      "authors": [
-        "Shihao Li",
-        "Jiachen Li",
-        "Christopher Martin",
-        "Zijun Chen",
-        "Dongmei Chen",
-        "Wei Li"
-      ],
-      "abstract": "Precise tension control in roll-to-roll (R2R) manufacturing is difficult under varying operating conditions and process uncertainty. This paper presents a curriculum-based Soft Actor-Critic (SAC) controller for multi-section R2R tension control. The policy is trained in three phases with progressively wider reference ranges, from 27 to 33 N to the full operating envelope of 20 to 40 N, so it can generalize across nominal and disturbed conditions. On a three-section R2R benchmark, the learned controller achieves accurate tracking in nominal operation and handles large disturbances, including 20 N to 40 N step changes, with a single policy and no scenario-specific retuning. These results indicate that curriculum-trained SAC is a practical alternative to model-based control when system parameters vary and process uncertainty is significant.",
-      "url": "https://arxiv.org/abs/2602.24259v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.24259v1",
-      "published": "2026-02-27T18:30:37Z",
-      "updated": "2026-02-27T18:30:37Z",
-      "categories": [
-        "eess.SY"
-      ],
-      "primary_category": "eess.SY"
-    },
-    {
-      "id": "2602.24254v1",
-      "title": "FaultXformer: A Transformer-Encoder Based Fault Classification and Location Identification model in PMU-Integrated Active Electrical Distribution System",
-      "authors": [
-        "Kriti Thakur",
-        "Alivelu Manga Parimi",
-        "Mayukha Pal"
-      ],
-      "abstract": "Accurate fault detection and localization in electrical distribution systems is crucial, especially with the increasing integration of distributed energy resources (DERs), which inject greater variability and complexity into grid operations. In this study, FaultXformer is proposed, a Transformer encoder-based architecture developed for automatic fault analysis using real-time current data obtained from phasor measurement unit (PMU). The approach utilizes time-series current data to initially extract rich temporal information in stage 1, which is crucial for identifying the fault type and precisely determining its location across multiple nodes. In Stage 2, these extracted features are processed to differentiate among distinct fault types and identify the respective fault location within the distribution system. Thus, this dual-stage transformer encoder pipeline enables high-fidelity representation learning, considerably boosting the performance of the work. The model was validated on a dataset generated from the IEEE 13-node test feeder, simulated with 20 separate fault locations and several DER integration scenarios, utilizing current measurements from four strategically located PMUs. To demonstrate robust performance evaluation, stratified 10-fold cross-validation is performed. FaultXformer achieved average accuracies of 98.76% in fault type classification and 98.92% in fault location identification across cross-validation, consistently surpassing conventional deep learning baselines convolutional neural network (CNN), recurrent neural network (RNN). long short-term memory (LSTM) by 1.70%, 34.95%, and 2.04% in classification accuracy and by 10.82%, 40.89%, and 6.27% in location accuracy, respectively. These results demonstrate the efficacy of the proposed model with significant DER penetration.",
-      "url": "https://arxiv.org/abs/2602.24254v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.24254v1",
-      "published": "2026-02-27T18:28:12Z",
-      "updated": "2026-02-27T18:28:12Z",
-      "categories": [
-        "eess.SY",
+        "cs.RO",
         "cs.AI",
         "cs.LG"
       ],
-      "primary_category": "eess.SY"
+      "primary_category": "cs.RO"
     },
     {
-      "id": "2602.24252v1",
-      "title": "Neural Luenberger state observer for nonautonomous nonlinear systems",
+      "id": "2603.05497v1",
+      "title": "Safe-SAGE: Social-Semantic Adaptive Guidance for Safe Engagement through Laplace-Modulated Poisson Safety Functions",
       "authors": [
-        "Moritz Woelk",
-        "Jarod Morris",
-        "Wentao Tang"
+        "Lizhi Yang",
+        "Ryan M. Bena",
+        "Meg Wilkinson",
+        "Gilbert Bahati",
+        "Andy Navarro Brenes",
+        "Ryan K. Cosner",
+        "Aaron D. Ames"
       ],
-      "abstract": "This work proposes a method for model-free synthesis of a state observer for nonlinear systems with manipulated inputs, where the observer is trained offline using a historical or simulation dataset of state measurements. We use the structure of the Kazantzis-Kravaris/Luenberger (KKL) observer, extended to nonautonomous systems by adding an additional input-affine term to the linear time-invariant (LTI) observer-state dynamics, which determines a nonlinear injective mapping of the true states. Both this input-affine term and the nonlinear mapping from the observer states to the system states are learned from data using fully connected feedforward multi-layer perceptron neural networks. Furthermore, we theoretically prove that trained neural networks, when given new input-output data, can be used to observe the states with a guaranteed error bound. To validate the proposed observer synthesis method, case studies are performed on a bioreactor and a Williams-Otto reactor.",
-      "url": "https://arxiv.org/abs/2602.24252v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.24252v1",
-      "published": "2026-02-27T18:27:00Z",
-      "updated": "2026-02-27T18:27:00Z",
+      "abstract": "Traditional safety-critical control methods, such as control barrier functions, suffer from semantic blindness, exhibiting the same behavior around obstacles regardless of contextual significance. This limitation leads to the uniform treatment of all obstacles, despite their differing semantic meanings. We present Safe-SAGE (Social-Semantic Adaptive Guidance for Safe Engagement), a unified framework that bridges the gap between high-level semantic understanding and low-level safety-critical control through a Poisson safety function (PSF) modulated using a Laplace guidance field. Our approach perceives the environment by fusing multi-sensor point clouds with vision-based instance segmentation and persistent object tracking to maintain up-to-date semantics beyond the camera's field of view. A multi-layer safety filter is then used to modulate system inputs to achieve safe navigation using this semantic understanding of the environment. This safety filter consists of both a model predictive control layer and a control barrier function layer. Both layers utilize the PSF and flux modulation of the guidance field to introduce varying levels of conservatism and multi-agent passing norms for different obstacles in the environment. Our framework enables legged robots to navigate semantically rich, dynamic environments with context-dependent safety margins while maintaining rigorous safety guarantees.",
+      "url": "https://arxiv.org/abs/2603.05497v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.05497v1",
+      "published": "2026-03-05T18:59:02Z",
+      "updated": "2026-03-05T18:59:02Z",
       "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2603.05493v1",
+      "title": "cuRoboV2: Dynamics-Aware Motion Generation with Depth-Fused Distance Fields for High-DoF Robots",
+      "authors": [
+        "Balakumar Sundaralingam",
+        "Adithyavairavan Murali",
+        "Stan Birchfield"
+      ],
+      "abstract": "Effective robot autonomy requires motion generation that is safe, feasible, and reactive. Current methods are fragmented: fast planners output physically unexecutable trajectories, reactive controllers struggle with high-fidelity perception, and existing solvers fail on high-DoF systems. We present cuRoboV2, a unified framework with three key innovations: (1) B-spline trajectory optimization that enforces smoothness and torque limits; (2) a GPU-native TSDF/ESDF perception pipeline that generates dense signed distance fields covering the full workspace, unlike existing methods that only provide distances within sparsely allocated blocks, up to 10x faster and in 8x less memory than the state-of-the-art at manipulation scale, with up to 99% collision recall; and (3) scalable GPU-native whole-body computation, namely topology-aware kinematics, differentiable inverse dynamics, and map-reduce self-collision, that achieves up to 61x speedup while also extending to high-DoF humanoids (where previous GPU implementations fail). On benchmarks, cuRoboV2 achieves 99.7% success under 3kg payload (where baselines achieve only 72--77%), 99.6% collision-free IK on a 48-DoF humanoid (where prior methods fail entirely), and 89.5% retargeting constraint satisfaction (vs. 61% for PyRoki); these collision-free motions yield locomotion policies with 21% lower tracking error than PyRoki and 12x lower cross-seed variance than mink. A ground-up codebase redesign for discoverability enabled LLM coding assistants to author up to 73% of new modules, including hand-optimized CUDA kernels, demonstrating that well-structured robotics code can unlock productive human--LLM collaboration. Together, these advances provide a unified, dynamics-aware motion generation stack that scales from single-arm manipulators to full humanoids.",
+      "url": "https://arxiv.org/abs/2603.05493v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.05493v1",
+      "published": "2026-03-05T18:58:04Z",
+      "updated": "2026-03-05T18:58:04Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2603.05489v1",
+      "title": "NL2GDS: LLM-aided interface for Open Source Chip Design",
+      "authors": [
+        "Max Eland",
+        "Jeyan Thiyagalingam",
+        "Dinesh Pamunuwa",
+        "Roshan Weerasekera"
+      ],
+      "abstract": "The growing complexity of hardware design and the widening gap between high-level specifications and register-transfer level (RTL) implementation hinder rapid prototyping and system design. We introduce NL2GDS (Natural Language to Layout), a novel framework that leverages large language models (LLMs) to translate natural language hardware descriptions into synthesizable RTL and complete GDSII layouts via the open-source OpenLane ASIC flow. NL2GDS employs a modular pipeline that captures informal design intent, generates HDL using multiple LLM engines and verifies them, and orchestrates automated synthesis and layout. Evaluations on ISCAS'85 and ISCAS'89 benchmark designs demonstrate up to 36% area reduction, 35% delay reduction, and 70% power savings compared to baseline designs, highlighting its potential to democratize ASIC design and accelerate hardware innovation.",
+      "url": "https://arxiv.org/abs/2603.05489v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.05489v1",
+      "published": "2026-03-05T18:55:54Z",
+      "updated": "2026-03-05T18:55:54Z",
+      "categories": [
+        "cs.AR",
+        "cs.CY",
+        "cs.LO",
         "eess.SY"
       ],
-      "primary_category": "eess.SY"
+      "primary_category": "cs.AR"
     },
     {
-      "id": "2602.24247v1",
-      "title": "Data-Driven Linearization based Arc Fault Prediction in Medium Voltage Electrical Distribution System",
+      "id": "2603.05487v1",
+      "title": "Observing and Controlling Features in Vision-Language-Action Models",
       "authors": [
-        "Mihir Sinha",
-        "Kriti Thakur",
-        "Prasanta K. Panigrahi",
-        "Alivelu Manga Parimi",
-        "Mayukha Pal"
+        "Hugo Buurmeijer",
+        "Carmen Amo Alonso",
+        "Aiden Swann",
+        "Marco Pavone"
       ],
-      "abstract": "High-impedance arc faults (HIAFs) in medium-voltage electrical distribution systems are difficult to detect due to their low fault current levels and nonlinear transient behavior. Traditional detection algorithms generally struggle with predictions under dynamic waveform scenarios. This research provides our approach of using a unique data-driven linearization (DDL) framework for early prediction of HIAFs, giving both interpretability and scalability. The proposed method translates nonlinear current waveforms into a linearized space using coordinate embeddings and polynomial transformation, enabling precise modelling of fault precursors.The total duration of the test waveform is 0.5 seconds, within which the arc fault occurs between 0.2 seconds to 0.3 seconds. Our proposed approach using DDL, trained solely on the pre-fault healthy region (0.10 seconds to 0.18 seconds) effectively captures certain invisible fault precursors, to accurately predict the onset of fault at 0.189 seconds, which is approximately 0.011 seconds (i.e., 11 milliseconds) earlier than the actual fault occurrence. In particular, the framework predicts the start of arc faults at 0.189 seconds, significantly earlier of the actual fault incidence at 0.200 seconds, demonstrating substantial early warning capability. Performance evaluation comprises eigenvalue analysis, prediction error measures, error growth rate and waveform regeneration fidelity. Such early prediction proves that the model is capable of correctly foreseeing faults which is especially helpful in preventing real-world faults and accidents. It confirms that our proposed approach reliably predicts arc faults in medium-voltage power distribution systems",
-      "url": "https://arxiv.org/abs/2602.24247v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.24247v1",
-      "published": "2026-02-27T18:19:56Z",
-      "updated": "2026-02-27T18:19:56Z",
+      "abstract": "Vision-Language-Action Models (VLAs) have shown remarkable progress towards embodied intelligence. While their architecture partially resembles that of Large Language Models (LLMs), VLAs exhibit higher complexity due to their multi-modal inputs/outputs and often hybrid nature of transformer and diffusion heads. This is part of the reason why insights from mechanistic interpretability in LLMs, which explain how the internal model representations relate to their output behavior, do not trivially transfer to VLA counterparts. In this work, we propose to close this gap by introducing and analyzing two main concepts: feature-observability and feature-controllability. In particular, we first study features that are linearly encoded in representation space, and show how they can be observed by means of a linear classifier. Then, we use a minimal linear intervention grounded in optimal control to accurately place internal representations and steer the VLA's output towards a desired region. Our results show that targeted, lightweight interventions can reliably steer a robot's behavior while preserving closed-loop capabilities. We demonstrate on different VLA architectures ($\u03c0_{0.5}$ and OpenVLA) through simulation experiments that VLAs possess interpretable internal structure amenable to online adaptation without fine-tuning, enabling real-time alignment with user preferences and task requirements.",
+      "url": "https://arxiv.org/abs/2603.05487v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.05487v1",
+      "published": "2026-03-05T18:53:50Z",
+      "updated": "2026-03-05T18:53:50Z",
       "categories": [
-        "eess.SY"
+        "cs.RO"
       ],
-      "primary_category": "eess.SY"
+      "primary_category": "cs.RO"
     },
     {
-      "id": "2602.24235v1",
-      "title": "SafeGen-LLM: Enhancing Safety Generalization in Task Planning for Robotic Systems",
+      "id": "2603.05448v1",
+      "title": "Residual RL--MPC for Robust Microrobotic Cell Pushing Under Time-Varying Flow",
       "authors": [
-        "Jialiang Fan",
-        "Weizhe Xu",
-        "Mengyu Liu",
-        "Oleg Sokolsky",
-        "Insup Lee",
-        "Fangxin Kong"
+        "Yanda Yang",
+        "Sambeeta Das"
       ],
-      "abstract": "Safety-critical task planning in robotic systems remains challenging: classical planners suffer from poor scalability, Reinforcement Learning (RL)-based methods generalize poorly, and base Large Language Models (LLMs) cannot guarantee safety. To address this gap, we propose safety-generalizable large language models, named SafeGen-LLM. SafeGen-LLM can not only enhance the safety satisfaction of task plans but also generalize well to novel safety properties in various domains. We first construct a multi-domain Planning Domain Definition Language 3 (PDDL3) benchmark with explicit safety constraints. Then, we introduce a two-stage post-training framework: Supervised Fine-Tuning (SFT) on a constraint-compliant planning dataset to learn planning syntax and semantics, and Group Relative Policy Optimization (GRPO) guided by fine-grained reward machines derived from formal verification to enforce safety alignment and by curriculum learning to better handle complex tasks. Extensive experiments show that SafeGen-LLM achieves strong safety generalization and outperforms frontier proprietary baselines across multi-domain planning tasks and multiple input formats (e.g., PDDLs and natural language).",
-      "url": "https://arxiv.org/abs/2602.24235v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.24235v1",
-      "published": "2026-02-27T18:06:10Z",
-      "updated": "2026-02-27T18:06:10Z",
+      "abstract": "Contact-rich micromanipulation in microfluidic flow is challenging because small disturbances can break pushing contact and induce large lateral drift. We study planar cell pushing with a magnetic rolling microrobot that tracks a waypoint-sampled reference curve under time-varying Poiseuille flow. We propose a hybrid controller that augments a nominal MPC with a learned residual policy trained by SAC. The policy outputs a bounded 2D velocity correction that is contact-gated, so residual actions are applied only during robot--cell contact, preserving reliable approach behavior and stabilizing learning. All methods share the same actuation interface and speed envelope for fair comparisons. Experiments show improved robustness and tracking accuracy over pure MPC and PID under nonstationary flow, with generalization from a clover training curve to unseen circle and square trajectories. A residual-bound sweep identifies an intermediate correction limit as the best trade-off, which we use in all benchmarks.",
+      "url": "https://arxiv.org/abs/2603.05448v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.05448v1",
+      "published": "2026-03-05T18:20:07Z",
+      "updated": "2026-03-05T18:20:07Z",
       "categories": [
         "cs.RO",
         "cs.AI"
@@ -146,64 +132,81 @@
       "primary_category": "cs.RO"
     },
     {
-      "id": "2602.24202v1",
-      "title": "Evaluating Accuracy of Vine Robot Shape Sensing with Distributed Inertial Measurement Units",
+      "id": "2603.05441v1",
+      "title": "Near-Optimal Low-Complexity MIMO Detection via Structured Reduced-Search Enumeration",
       "authors": [
-        "Alexis E. Laudenslager",
-        "Antonio Alvarez Valdivia",
-        "Nathaniel Hanson",
-        "Margaret McGuinness"
+        "Logeshwaran Vijayan"
       ],
-      "abstract": "Soft, tip-extending vine robots are well suited for navigating tight, debris-filled environments, making them ideal for urban search and rescue. Sensing the full shape of a vine robot's body is helpful both for localizing information from other sensors placed along the robot body and for determining the robot's configuration within the space being explored. Prior approaches have localized vine robot tips using a single inertial measurement unit (IMU) combined with force sensing or length estimation, while one method demonstrated full-body shape sensing using distributed IMUs on a passively steered robot in controlled maze environments. However, the accuracy of distributed IMU-based shape sensing under active steering, varying robot lengths, and different sensor spacings has not been systematically quantified. In this work, we experimentally evaluate the accuracy of vine robot shape sensing using distributed IMUs along the robot body. We quantify IMU drift, measuring an average orientation drift rate of 1.33 degrees/min across 15 sensors. For passive steering, mean tip position error was 11% of robot length. For active steering, mean tip position error increased to 16%. During growth experiments across lengths from 30-175 cm, mean tip error was 8%, with a positive trend with increasing length. We also analyze the influence of sensor spacing and observe that intermediate spacings can minimize error for single-curvature shapes. These results demonstrate the feasibility of distributed IMU-based shape sensing for vine robots while highlighting key limitations and opportunities for improved modeling and algorithmic integration for field deployment.",
-      "url": "https://arxiv.org/abs/2602.24202v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.24202v1",
-      "published": "2026-02-27T17:28:42Z",
-      "updated": "2026-02-27T17:28:42Z",
+      "abstract": "Maximum-likelihood (ML) detection in high-order MIMO systems is computationally prohibitive due to exponential complexity in the number of transmit layers and constellation size. In this white paper, we demonstrate that for practical MIMO dimensions (up to 8x8) and modulation orders, near-ML hard-decision performance can be achieved using a structured reduced-search strategy with complexity linear in constellation size. Extensive simulations over i.i.d. Rayleigh fading channels show that list sizes of 3|X| for 3x3, 4|X| for 4x4, and 8|X| for 8x8 systems closely match full ML performance, even under high channel condition numbers, |X| being the constellation size. In addition, we provide a trellis based interpretation of the method. We further discuss implications for soft LLR generation and FEC interaction.",
+      "url": "https://arxiv.org/abs/2603.05441v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.05441v1",
+      "published": "2026-03-05T18:02:19Z",
+      "updated": "2026-03-05T18:02:19Z",
+      "categories": [
+        "eess.SP",
+        "eess.SY"
+      ],
+      "primary_category": "eess.SP"
+    },
+    {
+      "id": "2603.05438v1",
+      "title": "Planning in 8 Tokens: A Compact Discrete Tokenizer for Latent World Model",
+      "authors": [
+        "Dongwon Kim",
+        "Gawon Seo",
+        "Jinsung Lee",
+        "Minsu Cho",
+        "Suha Kwak"
+      ],
+      "abstract": "World models provide a powerful framework for simulating environment dynamics conditioned on actions or instructions, enabling downstream tasks such as action planning or policy learning. Recent approaches leverage world models as learned simulators, but its application to decision-time planning remains computationally prohibitive for real-time control. A key bottleneck lies in latent representations: conventional tokenizers encode each observation into hundreds of tokens, making planning both slow and resource-intensive. To address this, we propose CompACT, a discrete tokenizer that compresses each observation into as few as 8 tokens, drastically reducing computational cost while preserving essential information for planning. An action-conditioned world model that occupies CompACT tokenizer achieves competitive planning performance with orders-of-magnitude faster planning, offering a practical step toward real-world deployment of world models.",
+      "url": "https://arxiv.org/abs/2603.05438v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.05438v1",
+      "published": "2026-03-05T18:00:02Z",
+      "updated": "2026-03-05T18:00:02Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2603.05410v1",
+      "title": "PhysiFlow: Physics-Aware Humanoid Whole-Body VLA via Multi-Brain Latent Flow Matching and Robust Tracking",
+      "authors": [
+        "Weikai Qin",
+        "Sichen Wu",
+        "Ci Chen",
+        "Mengfan Liu",
+        "Linxi Feng",
+        "Xinru Cui",
+        "Haoqi Han",
+        "Hesheng Wang"
+      ],
+      "abstract": "In the domain of humanoid robot control, the fusion of Vision-Language-Action (VLA) with whole-body control is essential for semantically guided execution of real-world tasks. However, existing methods encounter challenges in terms of low VLA inference efficiency or an absence of effective semantic guidance for whole-body control, resulting in instability in dynamic limb-coordinated tasks. To bridge this gap, we present a semantic-motion intent guided, physics-aware multi-brain VLA framework for humanoid whole-body control. A series of experiments was conducted to evaluate the performance of the proposed framework. The experimental results demonstrated that the framework enabled reliable vision-language-guided full-body coordination for humanoid robots.",
+      "url": "https://arxiv.org/abs/2603.05410v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.05410v1",
+      "published": "2026-03-05T17:33:20Z",
+      "updated": "2026-03-05T17:33:20Z",
       "categories": [
         "cs.RO"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2602.24192v1",
-      "title": "How IMU Drift Influences Multi-Radar Inertial Odometry for Ground Robots in Subterranean Terrains",
+      "id": "2603.05404v1",
+      "title": "ROScopter: A Multirotor Autopilot based on ROSflight 2.0",
       "authors": [
-        "Moumita Mukherjee",
-        "Magnus Nor\u00e9n",
-        "Anton Koval",
-        "Avijit Banerjee",
-        "George Nikolakopoulos"
+        "Jacob Moore",
+        "Ian Reid",
+        "Phil Tokumaru",
+        "Tim McLain"
       ],
-      "abstract": "Reliable radar inertial odometry (RIO) requires mitigating IMU bias drift, a challenge that intensifies in subterranean environments due to extreme temperatures and gravity-induced accelerations. Cost-effective IMUs such as the Pixhawk, when paired with FMCW TI IWR6843AOP EVM radars, suffer from drift-induced degradation compounded by sparse, noisy, and flickering radar returns, making fusion less stable than LiDAR-based odometry. Yet, LiDAR fails under smoke, dust, and aerosols, whereas FMCW radars remain compact, lightweight, cost-effective, and robust in these situations. To address these challenges, we propose a two-stage MRIO framework that combines an IMU bias estimator for resilient localization and mapping in GPS-denied subterranean environments affected by smoke. Radar-based ego-velocity estimation is formulated through a least-squares approach and incorporated into an EKF for online IMU bias correction; the corrected IMU accelerations are fused with heterogeneous measurements from multiple radars and an IMU to refine odometry. The proposed framework further supports radar-only mapping by exploiting the robot's estimated translational and rotational displacements. In subterranean field trials, MRIO delivers robust localization and mapping, outperforming EKF-RIO. It maintains accuracy across cost-efficient FMCW radar setups and different IMUs, showing resilience with Pixhawk and higher-grade units such as VectorNav. The implementation will be provided as an open-source resource to the community (code available at https://github.com/LTU-RAI/MRIO",
-      "url": "https://arxiv.org/abs/2602.24192v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.24192v1",
-      "published": "2026-02-27T17:15:50Z",
-      "updated": "2026-02-27T17:15:50Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2602.24156v1",
-      "title": "Humanoid Robots as First Assistants in Endoscopic Surgery",
-      "authors": [
-        "Sue Min Cho",
-        "Jan Emily Mangulabnan",
-        "Han Zhang",
-        "Zhekai Mao",
-        "Yufan He",
-        "Pengfei Guo",
-        "Daguang Xu",
-        "Gregory Hager",
-        "Masaru Ishii",
-        "Mathias Unberath"
-      ],
-      "abstract": "Humanoid robots have become a focal point of technological ambition, with claims of surgical capability within years in mainstream discourse. These projections are aspirational yet lack empirical grounding. To date, no humanoid has assisted a surgeon through an actual procedure, let alone performed one. The work described here breaks this new ground. Here we report a proof of concept in which a teleoperated Unitree G1 provided endoscopic visualization while an attending otolaryngologist performed a cadaveric sphenoidectomy. The procedure was completed successfully, with stable visualization maintained throughout. Teleoperation allowed assessment of whether the humanoid form factor could meet the physical demands of surgical assistance in terms of sustenance and precision; the cognitive demands were satisfied -- for now -- by the operator. Post-procedure analysis identified engineering targets for clinical translation, alongside near-term opportunities such as autonomous diagnostic scoping. This work establishes form-factor feasibility for humanoid surgical assistance while identifying challenges for continued development.",
-      "url": "https://arxiv.org/abs/2602.24156v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.24156v1",
-      "published": "2026-02-27T16:37:33Z",
-      "updated": "2026-02-27T16:37:33Z",
+      "abstract": "ROScopter is a lean multirotor autopilot built for researchers. ROScopter seeks to accelerate simulation and hardware testing of research code with an architecture that is both easy to understand and simple to modify. ROScopter is designed to interface with ROSflight 2.0 and runs entirely on an onboard flight computer, leveraging the features of ROS 2 to improve modularity. This work describes the architecture of ROScopter and how it can be used to test application code in both simulated and hardware environments. Hardware results of the default ROScopter behavior are presented, showing that ROScopter achieves similar performance to another state-of-the-art autopilot for basic waypoint-following maneuvers, but with a significantly reduced and more modular code-base.",
+      "url": "https://arxiv.org/abs/2603.05404v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.05404v1",
+      "published": "2026-03-05T17:30:58Z",
+      "updated": "2026-03-05T17:30:58Z",
       "categories": [
         "cs.RO"
       ],

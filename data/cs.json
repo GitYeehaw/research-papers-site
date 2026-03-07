@@ -2,75 +2,133 @@
   "category": "cs",
   "name": "CS Research",
   "description": "Computer Science \u2014 AI, Machine Learning, NLP, Computer Vision",
-  "scraped_at": "2026-03-02T21:09:02.478624+00:00",
+  "scraped_at": "2026-03-07T19:55:37.437369+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2602.24290v1",
-      "title": "UFO-4D: Unposed Feedforward 4D Reconstruction from Two Images",
+      "id": "2603.05507v1",
+      "title": "Transformer-Based Inpainting for Real-Time 3D Streaming in Sparse Multi-Camera Setups",
       "authors": [
-        "Junhwa Hur",
-        "Charles Herrmann",
-        "Songyou Peng",
-        "Philipp Henzler",
-        "Zeyu Ma",
-        "Todd Zickler",
-        "Deqing Sun"
+        "Leif Van Holland",
+        "Domenic Zingsheim",
+        "Mana Takhsha",
+        "Hannah Dr\u00f6ge",
+        "Patrick Stotko",
+        "Markus Plack",
+        "Reinhard Klein"
       ],
-      "abstract": "Dense 4D reconstruction from unposed images remains a critical challenge, with current methods relying on slow test-time optimization or fragmented, task-specific feedforward models. We introduce UFO-4D, a unified feedforward framework to reconstruct a dense, explicit 4D representation from just a pair of unposed images. UFO-4D directly estimates dynamic 3D Gaussian Splats, enabling the joint and consistent estimation of 3D geometry, 3D motion, and camera pose in a feedforward manner. Our core insight is that differentiably rendering multiple signals from a single Dynamic 3D Gaussian representation offers major training advantages. This approach enables a self-supervised image synthesis loss while tightly coupling appearance, depth, and motion. Since all modalities share the same geometric primitives, supervising one inherently regularizes and improves the others. This synergy overcomes data scarcity, allowing UFO-4D to outperform prior work by up to 3 times in joint geometry, motion, and camera pose estimation. Our representation also enables high-fidelity 4D interpolation across novel views and time. Please visit our project page for visual results: https://ufo-4d.github.io/",
-      "url": "https://arxiv.org/abs/2602.24290v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.24290v1",
-      "published": "2026-02-27T18:59:54Z",
-      "updated": "2026-02-27T18:59:54Z",
+      "abstract": "High-quality 3D streaming from multiple cameras is crucial for immersive experiences in many AR/VR applications. The limited number of views - often due to real-time constraints - leads to missing information and incomplete surfaces in the rendered images. Existing approaches typically rely on simple heuristics for the hole filling, which can result in inconsistencies or visual artifacts. We propose to complete the missing textures using a novel, application-targeted inpainting method independent of the underlying representation as an image-based post-processing step after the novel view rendering. The method is designed as a standalone module compatible with any calibrated multi-camera system. For this we introduce a multi-view aware, transformer-based network architecture using spatio-temporal embeddings to ensure consistency across frames while preserving fine details. Additionally, our resolution-independent design allows adaptation to different camera setups, while an adaptive patch selection strategy balances inference speed and quality, allowing real-time performance. We evaluate our approach against state-of-the-art inpainting techniques under the same real-time constraints and demonstrate that our model achieves the best trade-off between quality and speed, outperforming competitors in both image and video-based metrics.",
+      "url": "https://arxiv.org/abs/2603.05507v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.05507v1",
+      "published": "2026-03-05T18:59:59Z",
+      "updated": "2026-03-05T18:59:59Z",
+      "categories": [
+        "cs.CV",
+        "cs.GR"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2603.05506v1",
+      "title": "FaceCam: Portrait Video Camera Control via Scale-Aware Conditioning",
+      "authors": [
+        "Weijie Lyu",
+        "Ming-Hsuan Yang",
+        "Zhixin Shu"
+      ],
+      "abstract": "We introduce FaceCam, a system that generates video under customizable camera trajectories for monocular human portrait video input. Recent camera control approaches based on large video-generation models have shown promising progress but often exhibit geometric distortions and visual artifacts on portrait videos due to scale-ambiguous camera representations or 3D reconstruction errors. To overcome these limitations, we propose a face-tailored scale-aware representation for camera transformations that provides deterministic conditioning without relying on 3D priors. We train a video generation model on both multi-view studio captures and in-the-wild monocular videos, and introduce two camera-control data generation strategies: synthetic camera motion and multi-shot stitching, to exploit stationary training cameras while generalizing to dynamic, continuous camera trajectories at inference time. Experiments on Ava-256 dataset and diverse in-the-wild videos demonstrate that FaceCam achieves superior performance in camera controllability, visual quality, identity and motion preservation.",
+      "url": "https://arxiv.org/abs/2603.05506v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.05506v1",
+      "published": "2026-03-05T18:59:58Z",
+      "updated": "2026-03-05T18:59:58Z",
       "categories": [
         "cs.CV"
       ],
       "primary_category": "cs.CV"
     },
     {
-      "id": "2602.24289v1",
-      "title": "Mode Seeking meets Mean Seeking for Fast Long Video Generation",
+      "id": "2603.05504v1",
+      "title": "RoboPocket: Improve Robot Policies Instantly with Your Phone",
       "authors": [
-        "Shengqu Cai",
-        "Weili Nie",
-        "Chao Liu",
-        "Julius Berner",
-        "Lvmin Zhang",
-        "Nanye Ma",
-        "Hansheng Chen",
-        "Maneesh Agrawala",
-        "Leonidas Guibas",
-        "Gordon Wetzstein",
-        "Arash Vahdat"
+        "Junjie Fang",
+        "Wendi Chen",
+        "Han Xue",
+        "Fangyuan Zhou",
+        "Tian Le",
+        "Yi Wang",
+        "Yuting Zhang",
+        "Jun Lv",
+        "Chuan Wen",
+        "Cewu Lu"
       ],
-      "abstract": "Scaling video generation from seconds to minutes faces a critical bottleneck: while short-video data is abundant and high-fidelity, coherent long-form data is scarce and limited to narrow domains. To address this, we propose a training paradigm where Mode Seeking meets Mean Seeking, decoupling local fidelity from long-term coherence based on a unified representation via a Decoupled Diffusion Transformer. Our approach utilizes a global Flow Matching head trained via supervised learning on long videos to capture narrative structure, while simultaneously employing a local Distribution Matching head that aligns sliding windows to a frozen short-video teacher via a mode-seeking reverse-KL divergence. This strategy enables the synthesis of minute-scale videos that learns long-range coherence and motions from limited long videos via supervised flow matching, while inheriting local realism by aligning every sliding-window segment of the student to a frozen short-video teacher, resulting in a few-step fast long video generator. Evaluations show that our method effectively closes the fidelity-horizon gap by jointly improving local sharpness, motion and long-range consistency. Project website: https://primecai.github.io/mmm/.",
-      "url": "https://arxiv.org/abs/2602.24289v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.24289v1",
-      "published": "2026-02-27T18:59:02Z",
-      "updated": "2026-02-27T18:59:02Z",
+      "abstract": "Scaling imitation learning is fundamentally constrained by the efficiency of data collection. While handheld interfaces have emerged as a scalable solution for in-the-wild data acquisition, they predominantly operate in an open-loop manner: operators blindly collect demonstrations without knowing the underlying policy's weaknesses, leading to inefficient coverage of critical state distributions. Conversely, interactive methods like DAgger effectively address covariate shift but rely on physical robot execution, which is costly and difficult to scale. To reconcile this trade-off, we introduce RoboPocket, a portable system that enables Robot-Free Instant Policy Iteration using single consumer smartphones. Its core innovation is a Remote Inference framework that visualizes the policy's predicted trajectory via Augmented Reality (AR) Visual Foresight. This immersive feedback allows collectors to proactively identify potential failures and focus data collection on the policy's weak regions without requiring a physical robot. Furthermore, we implement an asynchronous Online Finetuning pipeline that continuously updates the policy with incoming data, effectively closing the learning loop in minutes. Extensive experiments demonstrate that RoboPocket adheres to data scaling laws and doubles the data efficiency compared to offline scaling strategies, overcoming their long-standing efficiency bottleneck. Moreover, our instant iteration loop also boosts sample efficiency by up to 2$\\times$ in distributed environments a small number of interactive corrections per person. Project page and videos: https://robo-pocket.github.io.",
+      "url": "https://arxiv.org/abs/2603.05504v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.05504v1",
+      "published": "2026-03-05T18:59:38Z",
+      "updated": "2026-03-05T18:59:38Z",
       "categories": [
-        "cs.CV",
+        "cs.RO",
+        "cs.AI",
         "cs.LG"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2603.05503v1",
+      "title": "Accelerating Text-to-Video Generation with Calibrated Sparse Attention",
+      "authors": [
+        "Shai Yehezkel",
+        "Shahar Yadin",
+        "Noam Elata",
+        "Yaron Ostrovsky-Berman",
+        "Bahjat Kawar"
+      ],
+      "abstract": "Recent diffusion models enable high-quality video generation, but suffer from slow runtimes. The large transformer-based backbones used in these models are bottlenecked by spatiotemporal attention. In this paper, we identify that a significant fraction of token-to-token connections consistently yield negligible scores across various inputs, and their patterns often repeat across queries. Thus, the attention computation in these cases can be skipped with little to no effect on the result. This observation continues to hold for connections among local token blocks. Motivated by this, we introduce CalibAtt, a training-free method that accelerates video generation via calibrated sparse attention. CalibAtt performs an offline calibration pass that identifies block-level sparsity and repetition patterns that are stable across inputs, and compiles these patterns into optimized attention operations for each layer, head, and diffusion timestep. At inference time, we compute the selected input-dependent connections densely, and skip the unselected ones in a hardware-efficient manner. Extensive experiments on Wan 2.1 14B, Mochi 1, and few-step distilled models at various resolutions show that CalibAtt achieves up to 1.58x end-to-end speedup, outperforming existing training-free methods while maintaining video generation quality and text-video alignment.",
+      "url": "https://arxiv.org/abs/2603.05503v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.05503v1",
+      "published": "2026-03-05T18:59:32Z",
+      "updated": "2026-03-05T18:59:32Z",
+      "categories": [
+        "cs.CV"
       ],
       "primary_category": "cs.CV"
     },
     {
-      "id": "2602.24288v1",
-      "title": "DARE-bench: Evaluating Modeling and Instruction Fidelity of LLMs in Data Science",
+      "id": "2603.05500v1",
+      "title": "POET-X: Memory-efficient LLM Training by Scaling Orthogonal Transformation",
       "authors": [
-        "Fan Shu",
-        "Yite Wang",
-        "Ruofan Wu",
-        "Boyi Liu",
-        "Zhewei Yao",
-        "Yuxiong He",
-        "Feng Yan"
+        "Zeju Qiu",
+        "Lixin Liu",
+        "Adrian Weller",
+        "Han Shi",
+        "Weiyang Liu"
       ],
-      "abstract": "The fast-growing demands in using Large Language Models (LLMs) to tackle complex multi-step data science tasks create an emergent need for accurate benchmarking. There are two major gaps in existing benchmarks: (i) the lack of standardized, process-aware evaluation that captures instruction adherence and process fidelity, and (ii) the scarcity of accurately labeled training data. To bridge these gaps, we introduce DARE-bench, a benchmark designed for machine learning modeling and data science instruction following. Unlike many existing benchmarks that rely on human- or model-based judges, all tasks in DARE-bench have verifiable ground truth, ensuring objective and reproducible evaluation. To cover a broad range of tasks and support agentic tools, DARE-bench consists of 6,300 Kaggle-derived tasks and provides both large-scale training data and evaluation sets. Extensive evaluations show that even highly capable models such as gpt-o4-mini struggle to achieve good performance, especially in machine learning modeling tasks. Using DARE-bench training tasks for fine-tuning can substantially improve model performance. For example, supervised fine-tuning boosts Qwen3-32B's accuracy by 1.83x and reinforcement learning boosts Qwen3-4B's accuracy by more than 8x. These significant improvements verify the importance of DARE-bench both as an accurate evaluation benchmark and critical training data.",
-      "url": "https://arxiv.org/abs/2602.24288v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.24288v1",
-      "published": "2026-02-27T18:58:57Z",
-      "updated": "2026-02-27T18:58:57Z",
+      "abstract": "Efficient and stable training of large language models (LLMs) remains a core challenge in modern machine learning systems. To address this challenge, Reparameterized Orthogonal Equivalence Training (POET), a spectrum-preserving framework that optimizes each weight matrix through orthogonal equivalence transformation, has been proposed. Although POET provides strong training stability, its original implementation incurs high memory consumption and computational overhead due to intensive matrix multiplications. To overcome these limitations, we introduce POET-X, a scalable and memory-efficient variant that performs orthogonal equivalence transformations with significantly reduced computational cost. POET-X maintains the generalization and stability benefits of POET while achieving substantial improvements in throughput and memory efficiency. In our experiments, POET-X enables the pretraining of billion-parameter LLMs on a single Nvidia H100 GPU, and in contrast, standard optimizers such as AdamW run out of memory under the same settings.",
+      "url": "https://arxiv.org/abs/2603.05500v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.05500v1",
+      "published": "2026-03-05T18:59:23Z",
+      "updated": "2026-03-05T18:59:23Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "primary_category": "cs.LG"
+    },
+    {
+      "id": "2603.05498v1",
+      "title": "The Spike, the Sparse and the Sink: Anatomy of Massive Activations and Attention Sinks",
+      "authors": [
+        "Shangwen Sun",
+        "Alfredo Canziani",
+        "Yann LeCun",
+        "Jiachen Zhu"
+      ],
+      "abstract": "We study two recurring phenomena in Transformer language models: massive activations, in which a small number of tokens exhibit extreme outliers in a few channels, and attention sinks, in which certain tokens attract disproportionate attention mass regardless of semantic relevance. Prior work observes that these phenomena frequently co-occur and often involve the same tokens, but their functional roles and causal relationship remain unclear. Through systematic experiments, we show that the co-occurrence is largely an architectural artifact of modern Transformer design, and that the two phenomena serve related but distinct functions. Massive activations operate globally: they induce near-constant hidden representations that persist across layers, effectively functioning as implicit parameters of the model. Attention sinks operate locally: they modulate attention outputs across heads and bias individual heads toward short-range dependencies. We identify the pre-norm configuration as the key choice that enables the co-occurrence, and show that ablating it causes the two phenomena to decouple.",
+      "url": "https://arxiv.org/abs/2603.05498v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.05498v1",
+      "published": "2026-03-05T18:59:04Z",
+      "updated": "2026-03-05T18:59:04Z",
       "categories": [
         "cs.AI",
         "cs.CL"
@@ -78,73 +136,41 @@
       "primary_category": "cs.AI"
     },
     {
-      "id": "2602.24287v1",
-      "title": "Do LLMs Benefit From Their Own Words?",
+      "id": "2603.05495v1",
+      "title": "Cheap Thrills: Effective Amortized Optimization Using Inexpensive Labels",
       "authors": [
-        "Jenny Y. Huang",
-        "Leshem Choshen",
-        "Ramon Astudillo",
-        "Tamara Broderick",
-        "Jacob Andreas"
+        "Khai Nguyen",
+        "Petros Ellinas",
+        "Anvita Bhagavathula",
+        "Priya Donti"
       ],
-      "abstract": "Multi-turn interactions with large language models typically retain the assistant's own past responses in the conversation history. In this work, we revisit this design choice by asking whether large language models benefit from conditioning on their own prior responses. Using in-the-wild, multi-turn conversations, we compare standard (full-context) prompting with a user-turn-only prompting approach that omits all previous assistant responses, across three open reasoning models and one state-of-the-art model. To our surprise, we find that removing prior assistant responses does not affect response quality on a large fraction of turns. Omitting assistant-side history can reduce cumulative context lengths by up to 10x. To explain this result, we find that multi-turn conversations consist of a substantial proportion (36.4%) of self-contained prompts, and that many follow-up prompts provide sufficient instruction to be answered using only the current user turn and prior user turns. When analyzing cases where user-turn-only prompting substantially outperforms full context, we identify instances of context pollution, in which models over-condition on their previous responses, introducing errors, hallucinations, or stylistic artifacts that propagate across turns. Motivated by these findings, we design a context-filtering approach that selectively omits assistant-side context. Our findings suggest that selectively omitting assistant history can improve response quality while reducing memory consumption.",
-      "url": "https://arxiv.org/abs/2602.24287v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.24287v1",
-      "published": "2026-02-27T18:58:26Z",
-      "updated": "2026-02-27T18:58:26Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "primary_category": "cs.CL"
-    },
-    {
-      "id": "2602.24286v1",
-      "title": "CUDA Agent: Large-Scale Agentic RL for High-Performance CUDA Kernel Generation",
-      "authors": [
-        "Weinan Dai",
-        "Hanlin Wu",
-        "Qiying Yu",
-        "Huan-ang Gao",
-        "Jiahao Li",
-        "Chengquan Jiang",
-        "Weiqiang Lou",
-        "Yufan Song",
-        "Hongli Yu",
-        "Jiaze Chen",
-        "Wei-Ying Ma",
-        "Ya-Qin Zhang",
-        "Jingjing Liu",
-        "Mingxuan Wang",
-        "Xin Liu",
-        "Hao Zhou"
-      ],
-      "abstract": "GPU kernel optimization is fundamental to modern deep learning but remains a highly specialized task requiring deep hardware expertise. Despite strong performance in general programming, large language models (LLMs) remain uncompetitive with compiler-based systems such as torch.compile for CUDA kernel generation. Existing CUDA code generation approaches either rely on training-free refinement or fine-tune models within fixed multi-turn execution-feedback loops, but both paradigms fail to fundamentally improve the model's intrinsic CUDA optimization ability, resulting in limited performance gains. We present CUDA Agent, a large-scale agentic reinforcement learning system that develops CUDA kernel expertise through three components: a scalable data synthesis pipeline, a skill-augmented CUDA development environment with automated verification and profiling to provide reliable reward signals, and reinforcement learning algorithmic techniques enabling stable training. CUDA Agent achieves state-of-the-art results on KernelBench, delivering 100\\%, 100\\%, and 92\\% faster rate over torch.compile on KernelBench Level-1, Level-2, and Level-3 splits, outperforming the strongest proprietary models such as Claude Opus 4.5 and Gemini 3 Pro by about 40\\% on the hardest Level-3 setting.",
-      "url": "https://arxiv.org/abs/2602.24286v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.24286v1",
-      "published": "2026-02-27T18:58:05Z",
-      "updated": "2026-02-27T18:58:05Z",
+      "abstract": "To scale the solution of optimization and simulation problems, prior work has explored machine-learning surrogates that inexpensively map problem parameters to corresponding solutions. Commonly used approaches, including supervised and self-supervised learning with either soft or hard feasibility enforcement, face inherent challenges such as reliance on expensive, high-quality labels or difficult optimization landscapes. To address their trade-offs, we propose a novel framework that first collects \"cheap\" imperfect labels, then performs supervised pretraining, and finally refines the model through self-supervised learning to improve overall performance. Our theoretical analysis and merit-based criterion show that labeled data need only place the model within a basin of attraction, confirming that only modest numbers of inexact labels and training epochs are required. We empirically validate our simple three-stage strategy across challenging domains, including nonconvex constrained optimization, power-grid operation, and stiff dynamical systems, and show that it yields faster convergence; improved accuracy, feasibility, and optimality; and up to 59x reductions in total offline cost.",
+      "url": "https://arxiv.org/abs/2603.05495v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.05495v1",
+      "published": "2026-03-05T18:58:39Z",
+      "updated": "2026-03-05T18:58:39Z",
       "categories": [
         "cs.LG",
-        "cs.AI"
+        "math.OC"
       ],
       "primary_category": "cs.LG"
     },
     {
-      "id": "2602.24283v1",
-      "title": "Taming Momentum: Rethinking Optimizer States Through Low-Rank Approximation",
+      "id": "2603.05494v1",
+      "title": "Censored LLMs as a Natural Testbed for Secret Knowledge Elicitation",
       "authors": [
-        "Zhengbo Wang",
-        "Jian Liang",
-        "Ran He",
-        "Zilei Wang",
-        "Tieniu Tan"
+        "Helena Casademunt",
+        "Bartosz Cywi\u0144ski",
+        "Khoi Tran",
+        "Arya Jakkli",
+        "Samuel Marks",
+        "Neel Nanda"
       ],
-      "abstract": "Modern optimizers like Adam and Muon are central to training large language models, but their reliance on first- and second-order momenta introduces significant memory overhead, which constrains scalability and computational efficiency. In this work, we reframe the exponential moving average (EMA) used in these momenta as the training of a linear regressor via online gradient flow. Building on this equivalence, we introduce LoRA-Pre, a novel low-rank optimizer designed for efficient pre-training. Specifically, LoRA-Pre reduces the optimizer's memory footprint by decomposing the full momentum matrix into a compact low-rank subspace within the online linear learner, thereby maintaining optimization performance while improving memory efficiency. We empirically validate LoRA-Pre's efficacy by pre-training models from the Llama architecture family, scaling from 60M to 1B parameters. LoRA-Pre achieves the highest performance across all model sizes. Notably, LoRA-Pre demonstrates remarkable rank efficiency, achieving comparable or superior results using only 1/8 the rank of baseline methods. Beyond pre-training, we evaluate LoRA-Pre's effectiveness in fine-tuning scenarios. With the same rank, LoRA-Pre consistently outperforms all efficient fine-tuning baselines. Specifically, compared to standard LoRA, LoRA-Pre achieves substantial improvements of 3.14 points on Llama-3.1-8B and 6.17 points on Llama-2-7B, validating our approach's effectiveness across both pre-training and fine-tuning paradigms. Our code is publicly available at https://github.com/mrflogs/LoRA-Pre.",
-      "url": "https://arxiv.org/abs/2602.24283v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.24283v1",
-      "published": "2026-02-27T18:57:06Z",
-      "updated": "2026-02-27T18:57:06Z",
+      "abstract": "Large language models sometimes produce false or misleading responses. Two approaches to this problem are honesty elicitation -- modifying prompts or weights so that the model answers truthfully -- and lie detection -- classifying whether a given response is false. Prior work evaluates such methods on models specifically trained to lie or conceal information, but these artificial constructions may not resemble naturally-occurring dishonesty. We instead study open-weights LLMs from Chinese developers, which are trained to censor politically sensitive topics: Qwen3 models frequently produce falsehoods about subjects like Falun Gong or the Tiananmen protests while occasionally answering correctly, indicating they possess knowledge they are trained to suppress. Using this as a testbed, we evaluate a suite of elicitation and lie detection techniques. For honesty elicitation, sampling without a chat template, few-shot prompting, and fine-tuning on generic honesty data most reliably increase truthful responses. For lie detection, prompting the censored model to classify its own responses performs near an uncensored-model upper bound, and linear probes trained on unrelated data offer a cheaper alternative. The strongest honesty elicitation techniques also transfer to frontier open-weights models including DeepSeek R1. Notably, no technique fully eliminates false responses. We release all prompts, code, and transcripts.",
+      "url": "https://arxiv.org/abs/2603.05494v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.05494v1",
+      "published": "2026-03-05T18:58:14Z",
+      "updated": "2026-03-05T18:58:14Z",
       "categories": [
         "cs.LG",
         "cs.AI",
@@ -153,89 +179,47 @@
       "primary_category": "cs.LG"
     },
     {
-      "id": "2602.24281v1",
-      "title": "Memory Caching: RNNs with Growing Memory",
+      "id": "2603.05488v1",
+      "title": "Reasoning Theater: Disentangling Model Beliefs from Chain-of-Thought",
       "authors": [
-        "Ali Behrouz",
-        "Zeman Li",
-        "Yuan Deng",
-        "Peilin Zhong",
-        "Meisam Razaviyayn",
-        "Vahab Mirrokni"
+        "Siddharth Boppana",
+        "Annabel Ma",
+        "Max Loeffler",
+        "Raphael Sarfati",
+        "Eric Bigelow",
+        "Atticus Geiger",
+        "Owen Lewis",
+        "Jack Merullo"
       ],
-      "abstract": "Transformers have been established as the de-facto backbones for most recent advances in sequence modeling, mainly due to their growing memory capacity that scales with the context length. While plausible for retrieval tasks, it causes quadratic complexity and so has motivated recent studies to explore viable subquadratic recurrent alternatives. Despite showing promising preliminary results in diverse domains, such recurrent architectures underperform Transformers in recall-intensive tasks, often attributed to their fixed-size memory. In this paper, we introduce Memory Caching (MC), a simple yet effective technique that enhances recurrent models by caching checkpoints of their memory states (a.k.a. hidden states). Memory Caching allows the effective memory capacity of RNNs to grow with sequence length, offering a flexible trade-off that interpolates between the fixed memory (i.e., $O(L)$ complexity) of RNNs and the growing memory (i.e., $O(L^2)$ complexity) of Transformers. We propose four variants of MC, including gated aggregation and sparse selective mechanisms, and discuss their implications on both linear and deep memory modules. Our experimental results on language modeling, and long-context understanding tasks show that MC enhances the performance of recurrent models, supporting its effectiveness. The results of in-context recall tasks indicate that while Transformers achieve the best accuracy, our MC variants show competitive performance, close the gap with Transformers, and performs better than state-of-the-art recurrent models.",
-      "url": "https://arxiv.org/abs/2602.24281v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.24281v1",
-      "published": "2026-02-27T18:53:41Z",
-      "updated": "2026-02-27T18:53:41Z",
+      "abstract": "We provide evidence of performative chain-of-thought (CoT) in reasoning models, where a model becomes strongly confident in its final answer, but continues generating tokens without revealing its internal belief. Our analysis compares activation probing, early forced answering, and a CoT monitor across two large models (DeepSeek-R1 671B & GPT-OSS 120B) and find task difficulty-specific differences: The model's final answer is decodable from activations far earlier in CoT than a monitor is able to say, especially for easy recall-based MMLU questions. We contrast this with genuine reasoning in difficult multihop GPQA-Diamond questions. Despite this, inflection points (e.g., backtracking, 'aha' moments) occur almost exclusively in responses where probes show large belief shifts, suggesting these behaviors track genuine uncertainty rather than learned \"reasoning theater.\" Finally, probe-guided early exit reduces tokens by up to 80% on MMLU and 30% on GPQA-Diamond with similar accuracy, positioning attention probing as an efficient tool for detecting performative reasoning and enabling adaptive computation.",
+      "url": "https://arxiv.org/abs/2603.05488v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.05488v1",
+      "published": "2026-03-05T18:55:16Z",
+      "updated": "2026-03-05T18:55:16Z",
       "categories": [
-        "cs.LG",
-        "cs.AI"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2602.24278v1",
-      "title": "Who Guards the Guardians? The Challenges of Evaluating Identifiability of Learned Representations",
-      "authors": [
-        "Shruti Joshi",
-        "Th\u00e9o Saulus",
-        "Wieland Brendel",
-        "Philippe Brouillard",
-        "Dhanya Sridhar",
-        "Patrik Reizinger"
-      ],
-      "abstract": "Identifiability in representation learning is commonly evaluated using standard metrics (e.g., MCC, DCI, R^2) on synthetic benchmarks with known ground-truth factors. These metrics are assumed to reflect recovery up to the equivalence class guaranteed by identifiability theory. We show that this assumption holds only under specific structural conditions: each metric implicitly encodes assumptions about both the data-generating process (DGP) and the encoder. When these assumptions are violated, metrics become misspecified and can produce systematic false positives and false negatives. Such failures occur both within classical identifiability regimes and in post-hoc settings where identifiability is most needed. We introduce a taxonomy separating DGP assumptions from encoder geometry, use it to characterise the validity domains of existing metrics, and release an evaluation suite for reproducible stress testing and comparison.",
-      "url": "https://arxiv.org/abs/2602.24278v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.24278v1",
-      "published": "2026-02-27T18:50:13Z",
-      "updated": "2026-02-27T18:50:13Z",
-      "categories": [
+        "cs.CL",
+        "cs.AI",
         "cs.LG"
       ],
-      "primary_category": "cs.LG"
+      "primary_category": "cs.CL"
     },
     {
-      "id": "2602.24277v1",
-      "title": "Resources for Automated Evaluation of Assistive RAG Systems that Help Readers with News Trustworthiness Assessment",
+      "id": "2603.05485v1",
+      "title": "Towards Provably Unbiased LLM Judges via Bias-Bounded Evaluation",
       "authors": [
-        "Dake Zhang",
-        "Mark D. Smucker",
-        "Charles L. A. Clarke"
+        "Benjamin Feuer",
+        "Lucas Rosenblatt",
+        "Oussama Elachqar"
       ],
-      "abstract": "Many readers today struggle to assess the trustworthiness of online news because reliable reporting coexists with misinformation. The TREC 2025 DRAGUN (Detection, Retrieval, and Augmented Generation for Understanding News) Track provided a venue for researchers to develop and evaluate assistive RAG systems that support readers' news trustworthiness assessment by producing reader-oriented, well-attributed reports. As the organizers of the DRAGUN track, we describe the resources that we have newly developed to allow for the reuse of the track's tasks. The track had two tasks: (Task 1) Question Generation, producing 10 ranked investigative questions; and (Task 2, the main task) Report Generation, producing a 250-word report grounded in the MS MARCO V2.1 Segmented Corpus. As part of the track's evaluation, we had TREC assessors create importance-weighted rubrics of questions with expected short answers for 30 different news articles. These rubrics represent the information that assessors believe is important for readers to assess an article's trustworthiness. The assessors then used their rubrics to manually judge the participating teams' submitted runs. To make these tasks and their rubrics reusable, we have created an automated process to judge runs not part of the original assessing. We show that our AutoJudge ranks existing runs well compared to the TREC human-assessed evaluation (Kendall's $\u03c4= 0.678$ for Task 1 and $\u03c4= 0.872$ for Task 2). These resources enable both the evaluation of RAG systems for assistive news trustworthiness assessment and, with the human evaluation as a benchmark, research on improving automated RAG evaluation.",
-      "url": "https://arxiv.org/abs/2602.24277v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.24277v1",
-      "published": "2026-02-27T18:49:31Z",
-      "updated": "2026-02-27T18:49:31Z",
+      "abstract": "As AI models progress beyond simple chatbots into more complex workflows, we draw ever closer to the event horizon beyond which AI systems will be utilized in autonomous, self-maintaining feedback loops. Any autonomous AI system will depend on automated, verifiable rewards and feedback; in settings where ground truth is sparse or non-deterministic, one practical source of such rewards is an LLM-as-a-Judge. Although LLM judges continue to improve, the literature has yet to introduce systems capable of enforcing standards with strong guarantees, particularly when bias vectors are unknown or adversarially discovered. To remedy this issue, we propose average bias-boundedness (A-BB), an algorithmic framework which formally guarantees reductions of harm/impact as a result of any measurable bias in an LLM judge. Evaluating on Arena-Hard-Auto with four LLM judges, we achieve (tau=0.5, delta=0.01) bias-bounded guarantees while retaining 61-99% correlation with original rankings across formatting and schematic bias settings, with most judge-bias combinations exceeding 80%. The code to reproduce our findings is available at https://github.com/penfever/bias-bounded-evaluation.",
+      "url": "https://arxiv.org/abs/2603.05485v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.05485v1",
+      "published": "2026-03-05T18:52:28Z",
+      "updated": "2026-03-05T18:52:28Z",
       "categories": [
-        "cs.IR",
         "cs.AI"
       ],
-      "primary_category": "cs.IR"
-    },
-    {
-      "id": "2602.24275v1",
-      "title": "Hierarchical Action Learning for Weakly-Supervised Action Segmentation",
-      "authors": [
-        "Junxian Huang",
-        "Ruichu Cai",
-        "Hao Zhu",
-        "Juntao Fang",
-        "Boyan Xu",
-        "Weilin Chen",
-        "Zijian Li",
-        "Shenghua Gao"
-      ],
-      "abstract": "Humans perceive actions through key transitions that structure actions across multiple abstraction levels, whereas machines, relying on visual features, tend to over-segment. This highlights the difficulty of enabling hierarchical reasoning in video understanding. Interestingly, we observe that lower-level visual and high-level action latent variables evolve at different rates, with low-level visual variables changing rapidly, while high-level action variables evolve more slowly, making them easier to identify. Building on this insight, we propose the Hierarchical Action Learning (\\textbf{HAL}) model for weakly-supervised action segmentation. Our approach introduces a hierarchical causal data generation process, where high-level latent action governs the dynamics of low-level visual features. To model these varying timescales effectively, we introduce deterministic processes to align these latent variables over time. The \\textbf{HAL} model employs a hierarchical pyramid transformer to capture both visual features and latent variables, and a sparse transition constraint is applied to enforce the slower dynamics of high-level action variables. This mechanism enhances the identification of these latent variables over time. Under mild assumptions, we prove that these latent action variables are strictly identifiable. Experimental results on several benchmarks show that the \\textbf{HAL} model significantly outperforms existing methods for weakly-supervised action segmentation, confirming its practical effectiveness in real-world applications.",
-      "url": "https://arxiv.org/abs/2602.24275v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.24275v1",
-      "published": "2026-02-27T18:48:22Z",
-      "updated": "2026-02-27T18:48:22Z",
-      "categories": [
-        "cs.CV"
-      ],
-      "primary_category": "cs.CV"
+      "primary_category": "cs.AI"
     }
   ]
 }
