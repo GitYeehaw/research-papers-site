@@ -36,3 +36,7 @@ Papers are embedded into static HTML at **build time** (not fetched client-side)
 - `src/components/ResearchPage.tsx` — shared layout for all category pages
 - `scripts/scrape.py` — arXiv scraper; categories controlled by `scripts/config.json`
 - `.github/workflows/scrape-and-deploy.yml` — two jobs: `scrape` (runs scraper, commits data) then `build-and-deploy` (Next.js build + `peaceiris/actions-gh-pages` to `gh-pages` branch); triggered daily at 8 AM UTC and on every push to `main`
+
+## Git Commits
+
+- **Never** add `Co-Authored-By` lines referencing Claude or Anthropic in commit messages.
