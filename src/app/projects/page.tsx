@@ -13,13 +13,12 @@ export default function ProjectsPage() {
           Projects
         </h1>
         <p className="section-desc">
-          Current and past research endeavours. Edit this page to chronicle your own work.
+          Current research.
         </p>
         <div className="divider" />
       </div>
 
       <div className="grid gap-6 md:grid-cols-2">
-        {/* Example project cards — replace with your own */}
         <div className="card">
           <p
             className="text-xs mb-4 tracking-wider uppercase"
@@ -39,18 +38,24 @@ export default function ProjectsPage() {
               fontWeight: 500,
             }}
           >
-            Example Project I
+            Cost-Effective Leader Arms for Teleoperation
           </h3>
           <p
             className="text-sm mb-5 leading-relaxed"
             style={{ color: "var(--text-secondary)" }}
           >
-            Replace this with a description of your project. You may include
-            links to repositories, published papers, or demonstrations of your work.
+            Benchmarking the most cost-effective and performant leader arms
+            per dollar for robot teleoperation. Comparing affordable builds
+            such as GELLO and Koch-style arms to identify the best options
+            for low-budget research labs looking to collect high-quality
+            demonstration data. The evaluation also factors in ergonomic
+            design to prevent overuse injuries for operators during extended
+            data collection sessions.
           </p>
-          <div className="flex gap-2">
-            <span className="category-badge">Machine Learning</span>
-            <span className="category-badge">Python</span>
+          <div className="flex gap-2 flex-wrap">
+            <span className="category-badge">Robotics</span>
+            <span className="category-badge">Teleoperation</span>
+            <span className="category-badge">Hardware</span>
           </div>
         </div>
 
@@ -73,43 +78,26 @@ export default function ProjectsPage() {
               fontWeight: 500,
             }}
           >
-            Example Project II
+            Auto-Labeling for Robotic Data Collection
           </h3>
           <p
             className="text-sm mb-5 leading-relaxed"
             style={{ color: "var(--text-secondary)" }}
           >
-            Another project placeholder. Add details about methodology, results,
-            or ongoing investigation.
+            Building software that automatically generates labels for
+            robotic data collection, covering both visual annotations such as
+            object detection and segmentation, and behavioral labels including
+            task segmentation and success or failure classification. The
+            labeled data feeds into a reinforcement learning pipeline to train
+            reward models and fine-tune vision language action models with
+            diverse language instructions and proprioceptive state.
           </p>
-          <div className="flex gap-2">
-            <span className="category-badge">Electrochemistry</span>
-            <span className="category-badge">Simulation</span>
+          <div className="flex gap-2 flex-wrap">
+            <span className="category-badge">Reinforcement Learning</span>
+            <span className="category-badge">Computer Vision</span>
+            <span className="category-badge">VLA</span>
           </div>
         </div>
-      </div>
-
-      <div
-        className="mt-10 p-6 text-sm"
-        style={{
-          borderLeft: "2px solid var(--accent-dim)",
-          backgroundColor: "var(--bg-secondary)",
-          color: "var(--text-secondary)",
-          fontStyle: "italic",
-        }}
-      >
-        Edit{" "}
-        <code
-          className="px-1.5 py-0.5 text-xs"
-          style={{
-            fontFamily: "var(--font-mono)",
-            color: "var(--accent)",
-            backgroundColor: "var(--bg-card)",
-          }}
-        >
-          src/app/projects/page.tsx
-        </code>{" "}
-        to add your own projects here.
       </div>
     </div>
   );
