@@ -367,10 +367,23 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  transition: filter 0.2s;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+  transition: filter 0.2s, border-color 0.2s;
+}
+.researcher-name-link::after {
+  content: ' \2197';
+  font-size: 0.7em;
+  opacity: 0;
+  transition: opacity 0.2s;
 }
 .researcher-name-link:hover {
   filter: brightness(1.25);
+  border-bottom: 1px solid rgba(192,132,252,0.4);
+}
+.researcher-name-link:hover::after {
+  opacity: 0.7;
 }
 .paper-title-link {
   color: var(--text-secondary);
@@ -378,6 +391,87 @@
 }
 .paper-title-link:hover {
   color: var(--text-primary);
+}
+
+/* ── Completed project styles ── */
+@keyframes pulse-green {
+  0%, 100% { opacity: 1; box-shadow: 0 0 10px rgba(74,222,128,0.5); }
+  50% { opacity: 0.6; box-shadow: 0 0 4px rgba(74,222,128,0.2); }
+}
+
+.project-expand-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.04);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+}
+.project-expand-btn:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: var(--border-hover);
+  color: var(--cultured);
+}
+.project-expand-btn svg {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.project-expand-btn.expanded svg {
+  transform: rotate(90deg);
+}
+
+.project-expanded-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.project-expanded-content.open {
+  max-height: 2000px;
+}
+
+.project-media-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+@media (max-width: 640px) {
+  .project-media-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.project-media-grid img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.project-media-grid img:hover {
+  transform: scale(1.02);
+}
+
+.project-video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 */
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #000;
+}
+.project-video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 /* MathJax overflow fix */

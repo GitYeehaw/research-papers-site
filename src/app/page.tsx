@@ -281,19 +281,20 @@ export default function HomePage() {
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {featuredPapers.map((paper) => {
+            {featuredPapers.map((paper, i) => {
               const isNew =
                 Date.now() - new Date(paper.published).getTime() <
                 24 * 60 * 60 * 1000;
               return (
-                <FeaturedPaperCard
-                  key={paper.id}
-                  paper={paper}
-                  categoryLabel={CATEGORY_META[paper.cat]?.label ?? paper.cat}
-                  categoryColor={CATEGORY_META[paper.cat]?.color ?? "#888888"}
-                  categoryKey={paper.cat}
-                  isNew={isNew}
-                />
+                <ScrollFadeIn key={paper.id} delay={i * 50}>
+                  <FeaturedPaperCard
+                    paper={paper}
+                    categoryLabel={CATEGORY_META[paper.cat]?.label ?? paper.cat}
+                    categoryColor={CATEGORY_META[paper.cat]?.color ?? "#888888"}
+                    categoryKey={paper.cat}
+                    isNew={isNew}
+                  />
+                </ScrollFadeIn>
               );
             })}
           </div>

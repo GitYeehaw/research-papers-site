@@ -28,12 +28,6 @@ export default function RootLayout({
         </main>
         <BackToTop />
         <MathJaxTypeset />
-        <footer
-          className="py-12 mt-20 text-center text-sm relative z-[1]"
-          style={{ color: "var(--text-muted)" }}
-        >
-          <div className="flourish">&mdash;&nbsp;&bull;&nbsp;&mdash;</div>
-        </footer>
         <Script id="mathjax-config" strategy="beforeInteractive">{`
           window.MathJax = {
             tex: {
