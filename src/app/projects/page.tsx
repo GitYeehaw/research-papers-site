@@ -20,7 +20,7 @@ export default function ProjectsPage() {
           <p
             className="text-xs mb-4 tracking-wider uppercase flex items-center gap-2"
             style={{
-              color: "var(--blue)",
+              color: "#fbbf24",
               fontFamily: "var(--font-mono)",
               letterSpacing: "0.12em",
               fontWeight: 600,
@@ -31,8 +31,8 @@ export default function ProjectsPage() {
                 width: "6px",
                 height: "6px",
                 borderRadius: "50%",
-                background: "var(--blue)",
-                boxShadow: "0 0 8px rgba(0,102,204,0.4)",
+                background: "linear-gradient(135deg, #fbbf24, #f59e0b)",
+                boxShadow: "0 0 10px rgba(251,191,36,0.5)",
                 animation: "pulse 2s infinite",
                 display: "inline-block",
               }}
@@ -72,7 +72,7 @@ export default function ProjectsPage() {
           <p
             className="text-xs mb-4 tracking-wider uppercase flex items-center gap-2"
             style={{
-              color: "var(--blue)",
+              color: "#fbbf24",
               fontFamily: "var(--font-mono)",
               letterSpacing: "0.12em",
               fontWeight: 600,
@@ -83,8 +83,8 @@ export default function ProjectsPage() {
                 width: "6px",
                 height: "6px",
                 borderRadius: "50%",
-                background: "var(--blue)",
-                boxShadow: "0 0 8px rgba(0,102,204,0.4)",
+                background: "linear-gradient(135deg, #fbbf24, #f59e0b)",
+                boxShadow: "0 0 10px rgba(251,191,36,0.5)",
                 animation: "pulse 2s infinite",
                 display: "inline-block",
               }}
