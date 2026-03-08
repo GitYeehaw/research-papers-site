@@ -19,14 +19,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <div className="aurora" />
+        <div className="aurora-2" />
+        <div className="aurora-3" />
         <Navbar />
-        <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 relative z-[1]">
           {children}
         </main>
         <BackToTop />
         <MathJaxTypeset />
         <footer
-          className="py-12 mt-20 text-center text-sm"
+          className="py-12 mt-20 text-center text-sm relative z-[1]"
           style={{ color: "var(--text-muted)" }}
         >
           <div className="flourish">&mdash;&nbsp;&bull;&nbsp;&mdash;</div>

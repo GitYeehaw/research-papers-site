@@ -32,9 +32,9 @@ export default function PaperCard({ paper }: { paper: Paper }) {
           target="_blank"
           rel="noopener noreferrer"
           className="transition-colors duration-200"
-          style={{ color: "var(--accent-light)" }}
-          onMouseOver={(e) => (e.currentTarget.style.color = "var(--accent)")}
-          onMouseOut={(e) => (e.currentTarget.style.color = "var(--accent-light)")}
+          style={{ color: "var(--cultured)" }}
+          onMouseOver={(e) => (e.currentTarget.style.color = "#4d9aff")}
+          onMouseOut={(e) => (e.currentTarget.style.color = "var(--cultured)")}
         >
           {paper.title}
         </a>
@@ -47,13 +47,13 @@ export default function PaperCard({ paper }: { paper: Paper }) {
       >
         {paper.authors.slice(0, 5).join(", ")}
         {paper.authors.length > 5 && (
-          <span style={{ color: "var(--accent-dim)", whiteSpace: "nowrap" }}>
+          <span style={{ color: "var(--text-muted)", whiteSpace: "nowrap" }}>
             {" "}et al. ({paper.authors.length} authors)
           </span>
         )}
       </p>
 
-      {/* Abstract + expand button — grows to fill card */}
+      {/* Abstract + expand button */}
       <div style={{ flex: 1, minWidth: 0, overflow: "hidden" }}>
         <div
           style={{
@@ -75,15 +75,15 @@ export default function PaperCard({ paper }: { paper: Paper }) {
             onClick={() => setExpanded(!expanded)}
             className="mt-2 transition-colors duration-200"
             style={{
-              color: "var(--accent-dim)",
+              color: "var(--text-muted)",
               fontStyle: "italic",
               fontSize: "0.8rem",
               minWidth: "9rem",
               textAlign: "left",
               display: "block",
             }}
-            onMouseOver={(e) => (e.currentTarget.style.color = "var(--accent)")}
-            onMouseOut={(e) => (e.currentTarget.style.color = "var(--accent-dim)")}
+            onMouseOver={(e) => (e.currentTarget.style.color = "var(--blue)")}
+            onMouseOut={(e) => (e.currentTarget.style.color = "var(--text-muted)")}
           >
             {expanded ? "[collapse]" : "[continue reading]"}
           </button>
@@ -123,7 +123,7 @@ export default function PaperCard({ paper }: { paper: Paper }) {
               letterSpacing: "0.05em",
               textTransform: "uppercase",
             }}
-            onMouseOver={(e) => (e.currentTarget.style.color = "var(--accent)")}
+            onMouseOver={(e) => (e.currentTarget.style.color = "var(--blue)")}
             onMouseOut={(e) => (e.currentTarget.style.color = "var(--text-muted)")}
           >
             Abstract
@@ -141,7 +141,7 @@ export default function PaperCard({ paper }: { paper: Paper }) {
                 letterSpacing: "0.05em",
                 textTransform: "uppercase",
               }}
-              onMouseOver={(e) => (e.currentTarget.style.color = "var(--accent)")}
+              onMouseOver={(e) => (e.currentTarget.style.color = "var(--blue)")}
               onMouseOut={(e) => (e.currentTarget.style.color = "var(--text-muted)")}
             >
               PDF

@@ -3,6 +3,7 @@ import { Paper } from "@/types";
 import Link from "next/link";
 import FeaturedPaperCard from "@/components/FeaturedPaperCard";
 import CategoryNav from "@/components/CategoryNav";
+import ScrollFadeIn from "@/components/ScrollFadeIn";
 
 const CATEGORY_META: Record<string, { label: string; color: string }> = {
   robotics: { label: "Robotics", color: "#f4a261" },
@@ -32,7 +33,7 @@ export default function HomePage() {
         month: "short",
         day: "numeric",
       })
-    : "—";
+    : "\u2014";
 
   const featuredPapers = categories
     .map((cat) => {
@@ -46,250 +47,258 @@ export default function HomePage() {
     label: CATEGORY_META[cat]?.label ?? cat,
     color: CATEGORY_META[cat]?.color ?? "#888888",
     href: `/research-papers-site/${cat}`,
+    paperCount: allData[cat]?.paper_count ?? 0,
   }));
 
   return (
-    <div>
+    <div style={{ paddingTop: "24px" }}>
       {/* Hero */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-16 lg:mb-24 pt-8 items-start">
-        {/* Left: title + description + CTA */}
-        <div>
+      <ScrollFadeIn>
+        <div className="mb-16 lg:mb-24">
           <p
             style={{
-              fontFamily: "var(--font-body)",
-              fontSize: "0.65rem",
-              letterSpacing: "0.22em",
+              fontSize: "0.7rem",
+              letterSpacing: "0.15em",
               textTransform: "uppercase",
-              color: "var(--text-muted)",
-              marginBottom: "1.5rem",
-              fontWeight: 600,
+              color: "#c084fc",
+              fontWeight: 500,
+              marginBottom: "32px",
+              display: "flex",
+              alignItems: "center",
+              gap: "12px",
             }}
           >
+            <span
+              style={{
+                display: "inline-block",
+                width: "48px",
+                height: "1px",
+                background: "linear-gradient(90deg, var(--blue), #c084fc)",
+              }}
+            />
             Research Paper Aggregator
           </p>
 
-          <h1 style={{ marginBottom: "1.5rem", lineHeight: 0.95 }}>
+          <h1 style={{ marginBottom: "40px", lineHeight: 1.0 }}>
             <span
               style={{
                 display: "block",
                 fontFamily: "var(--font-heading)",
-                fontSize: "clamp(3.5rem, 7vw, 5.5rem)",
-                color: "var(--text-primary)",
+                fontSize: "clamp(3.5rem, 8vw, 7rem)",
+                color: "var(--cultured)",
                 fontWeight: 400,
+                letterSpacing: "-0.03em",
               }}
             >
-              Curated
+              Daily
             </span>
+            <em
+              style={{
+                display: "block",
+                fontFamily: "var(--font-heading)",
+                fontSize: "clamp(3.5rem, 8vw, 7rem)",
+                fontWeight: 400,
+                letterSpacing: "-0.03em",
+                background: "linear-gradient(135deg, #4d9aff, var(--purple), #ff8533)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+            >
+              Academic
+            </em>
             <span
               style={{
                 display: "block",
                 fontFamily: "var(--font-heading)",
-                fontStyle: "italic",
-                fontSize: "clamp(3.5rem, 7vw, 5.5rem)",
-                color: "var(--accent)",
+                fontSize: "clamp(3.5rem, 8vw, 7rem)",
+                color: "var(--cultured)",
                 fontWeight: 400,
+                letterSpacing: "-0.03em",
               }}
             >
-              Research
-            </span>
-            <span
-              style={{
-                display: "block",
-                fontFamily: "var(--font-heading)",
-                fontSize: "clamp(3.5rem, 7vw, 5.5rem)",
-                color: "var(--text-primary)",
-                fontWeight: 400,
-              }}
-            >
-              Papers
+              Pulse
             </span>
           </h1>
 
-          <p
-            style={{
-              color: "var(--text-secondary)",
-              fontSize: "1rem",
-              lineHeight: 1.7,
-              marginBottom: "2rem",
-              maxWidth: "28rem",
-              fontFamily: "var(--font-body)",
-            }}
-          >
-            Automatically scraped from arXiv. Updated daily via GitHub Actions.
-            Covering Robotics, CS, Physics, Biology, and Electrochemistry.
-          </p>
-
-          <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+<div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
             <Link href="/cs" className="btn-primary">
               Browse Papers
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
             </Link>
             <Link href="/projects" className="btn-secondary">
               View Projects
             </Link>
           </div>
         </div>
+      </ScrollFadeIn>
 
-        {/* Right: stats grid */}
-        <div className="grid grid-cols-2 gap-4">
-          <div className="stat-card">
+      {/* Stats strip */}
+      <ScrollFadeIn delay={100}>
+        <div className="flex flex-col sm:flex-row mb-24">
+          {[
+            { value: totalPapers.toLocaleString(), label: "Papers Indexed" },
+            { value: String(categories.length), label: "Research Fields" },
+            { value: scrapeDate, label: "Last Scraped", italic: true },
+            { value: "\u221E", label: "Curiosity" },
+          ].map((stat, i) => (
             <div
+              key={stat.label}
+              className="flex-1 py-12 group"
               style={{
-                fontFamily: "var(--font-heading)",
-                fontSize: "3rem",
-                color: "var(--accent)",
-                lineHeight: 1,
-                marginBottom: "0.6rem",
+                borderTop: "1px solid var(--border)",
+                paddingLeft: i > 0 ? "48px" : undefined,
+                position: "relative",
               }}
             >
-              {totalPapers}
+              <div
+                style={{
+                  fontFamily: "var(--font-heading)",
+                  fontSize: "3.5rem",
+                  fontWeight: 400,
+                  color: "var(--platinum)",
+                  lineHeight: 1,
+                  marginBottom: "8px",
+                  letterSpacing: "-0.03em",
+                  fontStyle: stat.italic ? "italic" : undefined,
+                  transition: "color 0.3s",
+                }}
+              >
+                {stat.italic ? (
+                  <em
+                    style={{
+                      background: "linear-gradient(135deg, #4d9aff, var(--purple), #ff8533)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                      backgroundClip: "text",
+                    }}
+                  >
+                    {stat.value}
+                  </em>
+                ) : (
+                  stat.value
+                )}
+              </div>
+              <div
+                style={{
+                  fontSize: "0.7rem",
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                  color: "var(--text-muted)",
+                  fontWeight: 500,
+                }}
+              >
+                {stat.label}
+              </div>
             </div>
-            <div
-              style={{
-                fontFamily: "var(--font-body)",
-                fontSize: "0.62rem",
-                letterSpacing: "0.18em",
-                textTransform: "uppercase",
-                color: "var(--text-muted)",
-                fontWeight: 600,
-              }}
-            >
-              Papers Indexed
-            </div>
-          </div>
-
-          <div className="stat-card">
-            <div
-              style={{
-                fontFamily: "var(--font-heading)",
-                fontSize: "3rem",
-                color: "var(--accent)",
-                lineHeight: 1,
-                marginBottom: "0.6rem",
-              }}
-            >
-              {categories.length}
-            </div>
-            <div
-              style={{
-                fontFamily: "var(--font-body)",
-                fontSize: "0.62rem",
-                letterSpacing: "0.18em",
-                textTransform: "uppercase",
-                color: "var(--text-muted)",
-                fontWeight: 600,
-              }}
-            >
-              Research Fields
-            </div>
-          </div>
-
-          <div className="stat-card">
-            <div
-              style={{
-                fontFamily: "var(--font-heading)",
-                fontStyle: "italic",
-                fontSize: "3rem",
-                color: "var(--accent)",
-                lineHeight: 1,
-                marginBottom: "0.6rem",
-              }}
-            >
-              {scrapeDate}
-            </div>
-            <div
-              style={{
-                fontFamily: "var(--font-body)",
-                fontSize: "0.62rem",
-                letterSpacing: "0.18em",
-                textTransform: "uppercase",
-                color: "var(--text-muted)",
-                fontWeight: 600,
-              }}
-            >
-              Last Scraped
-            </div>
-          </div>
-
-          <div className="stat-card">
-            <div
-              style={{
-                fontFamily: "var(--font-heading)",
-                fontSize: "3rem",
-                color: "var(--accent)",
-                lineHeight: 1,
-                marginBottom: "0.6rem",
-              }}
-            >
-              ∞
-            </div>
-            <div
-              style={{
-                fontFamily: "var(--font-body)",
-                fontSize: "0.62rem",
-                letterSpacing: "0.18em",
-                textTransform: "uppercase",
-                color: "var(--text-muted)",
-                fontWeight: 600,
-              }}
-            >
-              Curiosity
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Browse by Field */}
-      <div className="mb-16">
-        <p
-          style={{
-            fontFamily: "var(--font-body)",
-            fontSize: "0.65rem",
-            letterSpacing: "0.22em",
-            textTransform: "uppercase",
-            color: "var(--text-muted)",
-            marginBottom: "1rem",
-            fontWeight: 600,
-          }}
-        >
-          Browse by Field
-        </p>
-        <CategoryNav items={categoryNavItems} />
-      </div>
-
-      {/* Latest section */}
-      <div>
-        <h2
-          style={{
-            fontFamily: "var(--font-heading)",
-            fontSize: "2rem",
-            color: "var(--text-primary)",
-            marginBottom: "0.4rem",
-            fontWeight: 400,
-          }}
-        >
-          Latest Across All Fields
-        </h2>
-        <p
-          style={{
-            color: "var(--text-secondary)",
-            fontSize: "0.9rem",
-            fontFamily: "var(--font-body)",
-          }}
-        >
-          Most recently published papers from every category
-        </p>
-        <div className="divider" />
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {featuredPapers.map((paper) => (
-            <FeaturedPaperCard
-              key={paper.id}
-              paper={paper}
-              categoryLabel={CATEGORY_META[paper.cat]?.label ?? paper.cat}
-              categoryColor={CATEGORY_META[paper.cat]?.color ?? "#888888"}
-            />
           ))}
         </div>
-      </div>
+      </ScrollFadeIn>
+
+      {/* Browse by Field */}
+      <ScrollFadeIn delay={150}>
+        <div className="mb-24">
+          <div className="flex justify-between items-end mb-12">
+            <h2
+              style={{
+                fontFamily: "var(--font-heading)",
+                fontSize: "3rem",
+                fontWeight: 400,
+                color: "var(--cultured)",
+                letterSpacing: "-0.03em",
+                lineHeight: 1.1,
+              }}
+            >
+              Browse by{" "}
+              <em
+                style={{
+                  background: "linear-gradient(135deg, #4d9aff, var(--purple), #ff8533)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                }}
+              >
+                Field
+              </em>
+            </h2>
+            <p
+              style={{
+                color: "var(--text-muted)",
+                fontSize: "0.85rem",
+                maxWidth: "400px",
+                textAlign: "right",
+                lineHeight: 1.6,
+              }}
+              className="hidden sm:block"
+            >
+              Five research categories updated daily from arXiv
+            </p>
+          </div>
+          <CategoryNav items={categoryNavItems} />
+        </div>
+      </ScrollFadeIn>
+
+      {/* Latest section */}
+      <ScrollFadeIn delay={200}>
+        <div>
+          <div className="flex justify-between items-end mb-12">
+            <h2
+              style={{
+                fontFamily: "var(--font-heading)",
+                fontSize: "3rem",
+                fontWeight: 400,
+                color: "var(--cultured)",
+                letterSpacing: "-0.03em",
+                lineHeight: 1.1,
+              }}
+            >
+              Latest Across
+              <br />
+              <em
+                style={{
+                  background: "linear-gradient(135deg, #4d9aff, var(--purple), #ff8533)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                }}
+              >
+                All Fields
+              </em>
+            </h2>
+            <p
+              style={{
+                color: "var(--text-muted)",
+                fontSize: "0.85rem",
+                maxWidth: "400px",
+                textAlign: "right",
+                lineHeight: 1.6,
+              }}
+              className="hidden sm:block"
+            >
+              Most recently published papers from every category
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {featuredPapers.map((paper) => {
+              const isNew =
+                Date.now() - new Date(paper.published).getTime() <
+                24 * 60 * 60 * 1000;
+              return (
+                <FeaturedPaperCard
+                  key={paper.id}
+                  paper={paper}
+                  categoryLabel={CATEGORY_META[paper.cat]?.label ?? paper.cat}
+                  categoryColor={CATEGORY_META[paper.cat]?.color ?? "#888888"}
+                  categoryKey={paper.cat}
+                  isNew={isNew}
+                />
+              );
+            })}
+          </div>
+        </div>
+      </ScrollFadeIn>
     </div>
   );
 }

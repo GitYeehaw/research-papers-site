@@ -23,6 +23,11 @@ export default function ResearchersPage() {
 
   const institutions = Object.keys(byInstitution).sort();
 
+  const INSTITUTION_COLORS = [
+    "#818cf8", "#f4a261", "#5eead4", "#c084fc", "#4ade80",
+    "#f472b6", "#fbbf24", "#38bdf8", "#fb923c", "#a78bfa",
+  ];
+
   const scrapeDate = data.scraped_at
     ? new Date(data.scraped_at).toLocaleDateString("en-US", {
         month: "long",
@@ -39,8 +44,8 @@ export default function ResearchersPage() {
           className="text-4xl mb-3"
           style={{
             fontFamily: "var(--font-heading)",
-            color: "var(--text-primary)",
-            fontWeight: 600,
+            color: "var(--cultured)",
+            fontWeight: 400,
           }}
         >
           Researchers
@@ -81,17 +86,30 @@ export default function ResearchersPage() {
         </div>
       ) : (
         <div style={{ display: "flex", flexDirection: "column", gap: "3rem" }}>
-          {institutions.map((institution) => (
+          {institutions.map((institution, i) => (
             <div key={institution}>
               <h2
                 style={{
                   fontFamily: "var(--font-heading)",
                   fontSize: "1.4rem",
-                  color: "var(--text-primary)",
+                  color: "var(--cultured)",
                   fontWeight: 400,
                   marginBottom: "1rem",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "10px",
                 }}
               >
+                <span
+                  style={{
+                    width: "8px",
+                    height: "8px",
+                    borderRadius: "50%",
+                    backgroundColor: INSTITUTION_COLORS[i % INSTITUTION_COLORS.length],
+                    boxShadow: `0 0 8px ${INSTITUTION_COLORS[i % INSTITUTION_COLORS.length]}60`,
+                    flexShrink: 0,
+                  }}
+                />
                 {institution}
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

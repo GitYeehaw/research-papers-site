@@ -26,8 +26,8 @@ export default function ResearchPage({ data }: ResearchPageProps) {
           className="text-4xl mb-3"
           style={{
             fontFamily: "var(--font-heading)",
-            color: "var(--text-primary)",
-            fontWeight: 600,
+            color: "var(--cultured)",
+            fontWeight: 400,
           }}
         >
           {data.name}

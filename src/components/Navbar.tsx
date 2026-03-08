@@ -21,53 +21,39 @@ export default function Navbar() {
 
   return (
     <nav
-      className="sticky top-0 z-50 border-b"
+      className="fixed top-0 left-0 right-0 z-50"
       style={{
-        backgroundColor: "var(--bg-primary)",
-        borderColor: "var(--border)",
+        height: "48px",
+        background: "rgba(14,14,26,0.6)",
+        backdropFilter: "saturate(180%) blur(20px)",
+        WebkitBackdropFilter: "saturate(180%) blur(20px)",
+        borderBottom: "1px solid rgba(230,230,230,0.05)",
       }}
     >
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo — open book icon */}
-          <Link href="/" className="flex items-center gap-3 shrink-0 group">
-            <svg
-              className="w-7 h-7 opacity-60 group-hover:opacity-100 transition-opacity duration-300"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M4 19.5A2.5 2.5 0 016.5 17H20"
-                stroke="var(--accent)"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"
-                stroke="var(--accent)"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M8 7h8M8 11h5"
-                stroke="var(--accent-dim)"
-                strokeWidth="1"
-                strokeLinecap="round"
-              />
-            </svg>
-            <span
-              className="text-xs tracking-widest uppercase hidden sm:block"
-              style={{
-                color: "var(--text-muted)",
-                fontFamily: "var(--font-body)",
-                letterSpacing: "0.18em",
-              }}
-            >
-              Research Papers
-            </span>
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+        <div className="flex items-center justify-between h-full">
+          {/* Logo */}
+          <Link
+            href="/"
+            className="shrink-0"
+            style={{
+              fontFamily: "var(--font-heading)",
+              fontSize: "1.15rem",
+              color: "var(--platinum)",
+              textDecoration: "none",
+              fontStyle: "italic",
+              transition: "all 0.3s",
+            }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.color = "var(--cultured)";
+              e.currentTarget.style.textShadow = "0 0 20px rgba(168,85,247,0.3)";
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.color = "var(--platinum)";
+              e.currentTarget.style.textShadow = "none";
+            }}
+          >
+            Research Papers
           </Link>
 
           {/* Desktop nav */}
@@ -104,10 +90,11 @@ export default function Navbar() {
       {/* Mobile menu */}
       {mobileOpen && (
         <div
-          className="md:hidden border-t"
+          className="md:hidden"
           style={{
-            borderColor: "var(--border)",
-            backgroundColor: "var(--bg-secondary)",
+            borderTop: "1px solid var(--border)",
+            background: "rgba(14,14,26,0.9)",
+            backdropFilter: "blur(20px)",
           }}
         >
           <div className="px-4 pt-3 pb-4 space-y-1">

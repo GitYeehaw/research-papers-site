@@ -6,36 +6,45 @@ export default function ProjectsPage() {
           className="text-4xl mb-3"
           style={{
             fontFamily: "var(--font-heading)",
-            color: "var(--text-primary)",
-            fontWeight: 600,
+            color: "var(--cultured)",
+            fontWeight: 400,
           }}
         >
           Projects
         </h1>
-        <p className="section-desc">
-          Current research.
-        </p>
-        <div className="divider" />
+<div className="divider" />
       </div>
 
       <div className="grid gap-6 md:grid-cols-2">
         <div className="card">
           <p
-            className="text-xs mb-4 tracking-wider uppercase"
+            className="text-xs mb-4 tracking-wider uppercase flex items-center gap-2"
             style={{
-              color: "var(--accent-dim)",
+              color: "var(--blue)",
               fontFamily: "var(--font-mono)",
-              letterSpacing: "0.1em",
+              letterSpacing: "0.12em",
+              fontWeight: 600,
             }}
           >
+            <span
+              style={{
+                width: "6px",
+                height: "6px",
+                borderRadius: "50%",
+                background: "var(--blue)",
+                boxShadow: "0 0 8px rgba(0,102,204,0.4)",
+                animation: "pulse 2s infinite",
+                display: "inline-block",
+              }}
+            />
             Ongoing
           </p>
           <h3
             className="text-xl mb-3"
             style={{
               fontFamily: "var(--font-heading)",
-              color: "var(--text-primary)",
-              fontWeight: 500,
+              color: "var(--cultured)",
+              fontWeight: 400,
             }}
           >
             Cost-Effective Leader Arms for Teleoperation
@@ -61,21 +70,33 @@ export default function ProjectsPage() {
 
         <div className="card">
           <p
-            className="text-xs mb-4 tracking-wider uppercase"
+            className="text-xs mb-4 tracking-wider uppercase flex items-center gap-2"
             style={{
-              color: "var(--accent-dim)",
+              color: "var(--blue)",
               fontFamily: "var(--font-mono)",
-              letterSpacing: "0.1em",
+              letterSpacing: "0.12em",
+              fontWeight: 600,
             }}
           >
+            <span
+              style={{
+                width: "6px",
+                height: "6px",
+                borderRadius: "50%",
+                background: "var(--blue)",
+                boxShadow: "0 0 8px rgba(0,102,204,0.4)",
+                animation: "pulse 2s infinite",
+                display: "inline-block",
+              }}
+            />
             Ongoing
           </p>
           <h3
             className="text-xl mb-3"
             style={{
               fontFamily: "var(--font-heading)",
-              color: "var(--text-primary)",
-              fontWeight: 500,
+              color: "var(--cultured)",
+              fontWeight: 400,
             }}
           >
             Auto-Labeling for Robotic Data Collection

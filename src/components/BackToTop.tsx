@@ -23,7 +23,8 @@ export default function BackToTop() {
         height: "2.5rem",
         borderRadius: "50%",
         border: "1px solid var(--border-hover)",
-        background: "var(--bg-card)",
+        background: "var(--card-bg)",
+        backdropFilter: "blur(16px)",
         color: "var(--text-muted)",
         fontFamily: "var(--font-mono)",
         fontSize: "1rem",
@@ -33,16 +34,18 @@ export default function BackToTop() {
         justifyContent: "center",
         opacity: visible ? 1 : 0,
         pointerEvents: visible ? "auto" : "none",
-        transition: "opacity 0.25s ease, color 0.15s ease, border-color 0.15s ease",
+        transition: "opacity 0.25s ease, color 0.15s ease, border-color 0.15s ease, transform 0.3s ease",
         zIndex: 50,
       }}
       onMouseOver={(e) => {
-        (e.currentTarget as HTMLButtonElement).style.color = "var(--accent)";
-        (e.currentTarget as HTMLButtonElement).style.borderColor = "var(--accent)";
+        (e.currentTarget as HTMLButtonElement).style.color = "var(--blue)";
+        (e.currentTarget as HTMLButtonElement).style.borderColor = "var(--blue)";
+        (e.currentTarget as HTMLButtonElement).style.transform = "translateY(-2px)";
       }}
       onMouseOut={(e) => {
         (e.currentTarget as HTMLButtonElement).style.color = "var(--text-muted)";
         (e.currentTarget as HTMLButtonElement).style.borderColor = "var(--border-hover)";
+        (e.currentTarget as HTMLButtonElement).style.transform = "translateY(0)";
       }}
     >
       ↑
