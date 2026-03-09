@@ -2,224 +2,241 @@
   "category": "cs",
   "name": "CS Research",
   "description": "Computer Science \u2014 AI, Machine Learning, NLP, Computer Vision",
-  "scraped_at": "2026-03-08T17:37:46.863538+00:00",
+  "scraped_at": "2026-03-09T08:56:13.582332+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2603.05507v1",
-      "title": "Transformer-Based Inpainting for Real-Time 3D Streaming in Sparse Multi-Camera Setups",
+      "id": "2603.06578v1",
+      "title": "Multimodal Large Language Models as Image Classifiers",
       "authors": [
-        "Leif Van Holland",
-        "Domenic Zingsheim",
-        "Mana Takhsha",
-        "Hannah Dr\u00f6ge",
-        "Patrick Stotko",
-        "Markus Plack",
-        "Reinhard Klein"
+        "Nikita Kisel",
+        "Illia Volkov",
+        "Klara Janouskova",
+        "Jiri Matas"
       ],
-      "abstract": "High-quality 3D streaming from multiple cameras is crucial for immersive experiences in many AR/VR applications. The limited number of views - often due to real-time constraints - leads to missing information and incomplete surfaces in the rendered images. Existing approaches typically rely on simple heuristics for the hole filling, which can result in inconsistencies or visual artifacts. We propose to complete the missing textures using a novel, application-targeted inpainting method independent of the underlying representation as an image-based post-processing step after the novel view rendering. The method is designed as a standalone module compatible with any calibrated multi-camera system. For this we introduce a multi-view aware, transformer-based network architecture using spatio-temporal embeddings to ensure consistency across frames while preserving fine details. Additionally, our resolution-independent design allows adaptation to different camera setups, while an adaptive patch selection strategy balances inference speed and quality, allowing real-time performance. We evaluate our approach against state-of-the-art inpainting techniques under the same real-time constraints and demonstrate that our model achieves the best trade-off between quality and speed, outperforming competitors in both image and video-based metrics.",
-      "url": "https://arxiv.org/abs/2603.05507v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.05507v1",
-      "published": "2026-03-05T18:59:59Z",
-      "updated": "2026-03-05T18:59:59Z",
-      "categories": [
-        "cs.CV",
-        "cs.GR"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2603.05506v1",
-      "title": "FaceCam: Portrait Video Camera Control via Scale-Aware Conditioning",
-      "authors": [
-        "Weijie Lyu",
-        "Ming-Hsuan Yang",
-        "Zhixin Shu"
-      ],
-      "abstract": "We introduce FaceCam, a system that generates video under customizable camera trajectories for monocular human portrait video input. Recent camera control approaches based on large video-generation models have shown promising progress but often exhibit geometric distortions and visual artifacts on portrait videos due to scale-ambiguous camera representations or 3D reconstruction errors. To overcome these limitations, we propose a face-tailored scale-aware representation for camera transformations that provides deterministic conditioning without relying on 3D priors. We train a video generation model on both multi-view studio captures and in-the-wild monocular videos, and introduce two camera-control data generation strategies: synthetic camera motion and multi-shot stitching, to exploit stationary training cameras while generalizing to dynamic, continuous camera trajectories at inference time. Experiments on Ava-256 dataset and diverse in-the-wild videos demonstrate that FaceCam achieves superior performance in camera controllability, visual quality, identity and motion preservation.",
-      "url": "https://arxiv.org/abs/2603.05506v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.05506v1",
-      "published": "2026-03-05T18:59:58Z",
-      "updated": "2026-03-05T18:59:58Z",
+      "abstract": "Multimodal Large Language Models (MLLM) classification performance depends critically on evaluation protocol and ground truth quality. Studies comparing MLLMs with supervised and vision-language models report conflicting conclusions, and we show these conflicts stem from protocols that either inflate or underestimate performance. Across the most common evaluation protocols, we identify and fix key issues: model outputs that fall outside the provided class list and are discarded, inflated results from weak multiple-choice distractors, and an open-world setting that underperforms only due to poor output mapping. We additionally quantify the impact of commonly overlooked design choices - batch size, image ordering, and text encoder selection - showing they substantially affect accuracy. Evaluating on ReGT, our multilabel reannotation of 625 ImageNet-1k classes, reveals that MLLMs benefit most from corrected labels (up to +10.8%), substantially narrowing the perceived gap with supervised models. Much of the reported MLLMs underperformance on classification is thus an artifact of noisy ground truth and flawed evaluation protocol rather than genuine model deficiency. Models less reliant on supervised training signals prove most sensitive to annotation quality. Finally, we show that MLLMs can assist human annotators: in a controlled case study, annotators confirmed or integrated MLLMs predictions in approximately 50% of difficult cases, demonstrating their potential for large-scale dataset curation.",
+      "url": "https://arxiv.org/abs/2603.06578v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.06578v1",
+      "published": "2026-03-06T18:59:58Z",
+      "updated": "2026-03-06T18:59:58Z",
       "categories": [
         "cs.CV"
       ],
       "primary_category": "cs.CV"
     },
     {
-      "id": "2603.05504v1",
-      "title": "RoboPocket: Improve Robot Policies Instantly with Your Phone",
+      "id": "2603.06577v1",
+      "title": "Omni-Diffusion: Unified Multimodal Understanding and Generation with Masked Discrete Diffusion",
       "authors": [
-        "Junjie Fang",
-        "Wendi Chen",
-        "Han Xue",
-        "Fangyuan Zhou",
-        "Tian Le",
-        "Yi Wang",
-        "Yuting Zhang",
-        "Jun Lv",
-        "Chuan Wen",
-        "Cewu Lu"
+        "Lijiang Li",
+        "Zuwei Long",
+        "Yunhang Shen",
+        "Heting Gao",
+        "Haoyu Cao",
+        "Xing Sun",
+        "Caifeng Shan",
+        "Ran He",
+        "Chaoyou Fu"
       ],
-      "abstract": "Scaling imitation learning is fundamentally constrained by the efficiency of data collection. While handheld interfaces have emerged as a scalable solution for in-the-wild data acquisition, they predominantly operate in an open-loop manner: operators blindly collect demonstrations without knowing the underlying policy's weaknesses, leading to inefficient coverage of critical state distributions. Conversely, interactive methods like DAgger effectively address covariate shift but rely on physical robot execution, which is costly and difficult to scale. To reconcile this trade-off, we introduce RoboPocket, a portable system that enables Robot-Free Instant Policy Iteration using single consumer smartphones. Its core innovation is a Remote Inference framework that visualizes the policy's predicted trajectory via Augmented Reality (AR) Visual Foresight. This immersive feedback allows collectors to proactively identify potential failures and focus data collection on the policy's weak regions without requiring a physical robot. Furthermore, we implement an asynchronous Online Finetuning pipeline that continuously updates the policy with incoming data, effectively closing the learning loop in minutes. Extensive experiments demonstrate that RoboPocket adheres to data scaling laws and doubles the data efficiency compared to offline scaling strategies, overcoming their long-standing efficiency bottleneck. Moreover, our instant iteration loop also boosts sample efficiency by up to 2$\\times$ in distributed environments a small number of interactive corrections per person. Project page and videos: https://robo-pocket.github.io.",
-      "url": "https://arxiv.org/abs/2603.05504v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.05504v1",
-      "published": "2026-03-05T18:59:38Z",
-      "updated": "2026-03-05T18:59:38Z",
+      "abstract": "While recent multimodal large language models (MLLMs) have made impressive strides, they predominantly employ a conventional autoregressive architecture as their backbone, leaving significant room to explore effective and efficient alternatives in architectural design. Concurrently, recent studies have successfully applied discrete diffusion models to various domains, such as visual understanding and image generation, revealing their considerable potential as a promising backbone for multimodal systems. Drawing inspiration from these pioneering research, we introduce Omni-Diffusion, the first any-to-any multimodal language model built entirely on mask-based discrete diffusion models, which unifies understanding and generation across text, speech, and images. Omni-Diffusion employs a unified mask-based discrete diffusion model to directly capture the joint distribution over discrete multimodal tokens. This approach supports not only bimodal tasks but also more complex scenarios involving multiple modalities. On a diverse set of benchmarks, our method outperforms or performs on par with existing multimodal systems that process two or more modalities, highlighting the significant promise of diffusion models in powering the next generation of multimodal foundation models. Project webpage: https://omni-diffusion.github.io.",
+      "url": "https://arxiv.org/abs/2603.06577v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.06577v1",
+      "published": "2026-03-06T18:59:57Z",
+      "updated": "2026-03-06T18:59:57Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2603.06576v1",
+      "title": "BEVLM: Distilling Semantic Knowledge from LLMs into Bird's-Eye View Representations",
+      "authors": [
+        "Thomas Monninger",
+        "Shaoyuan Xie",
+        "Qi Alfred Chen",
+        "Sihao Ding"
+      ],
+      "abstract": "The integration of Large Language Models (LLMs) into autonomous driving has attracted growing interest for their strong reasoning and semantic understanding abilities, which are essential for handling complex decision-making and long-tail scenarios. However, existing methods typically feed LLMs with tokens from multi-view and multi-frame images independently, leading to redundant computation and limited spatial consistency. This separation in visual processing hinders accurate 3D spatial reasoning and fails to maintain geometric coherence across views. On the other hand, Bird's-Eye View (BEV) representations learned from geometrically annotated tasks (e.g., object detection) provide spatial structure but lack the semantic richness of foundation vision encoders. To bridge this gap, we propose BEVLM, a framework that connects a spatially consistent and semantically distilled BEV representation with LLMs. Through extensive experiments, we show that BEVLM enables LLMs to reason more effectively in cross-view driving scenes, improving accuracy by 46%, by leveraging BEV features as unified inputs. Furthermore, by distilling semantic knowledge from LLMs into BEV representations, BEVLM significantly improves closed-loop end-to-end driving performance by 29% in safety-critical scenarios.",
+      "url": "https://arxiv.org/abs/2603.06576v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.06576v1",
+      "published": "2026-03-06T18:59:55Z",
+      "updated": "2026-03-06T18:59:55Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG",
+        "cs.RO"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2603.06573v1",
+      "title": "Fly360: Omnidirectional Obstacle Avoidance within Drone View",
+      "authors": [
+        "Xiangkai Zhang",
+        "Dizhe Zhang",
+        "WenZhuo Cao",
+        "Zhaoliang Wan",
+        "Yingjie Niu",
+        "Lu Qi",
+        "Xu Yang",
+        "Zhiyong Liu"
+      ],
+      "abstract": "Obstacle avoidance in unmanned aerial vehicles (UAVs), as a fundamental capability, has gained increasing attention with the growing focus on spatial intelligence. However, current obstacle-avoidance methods mainly depend on limited field-of-view sensors and are ill-suited for UAV scenarios which require full-spatial awareness when the movement direction differs from the UAV's heading. This limitation motivates us to explore omnidirectional obstacle avoidance for panoramic drones with full-view perception. We first study an under explored problem setting in which a UAV must generate collision-free motion in environments with obstacles from arbitrary directions, and then construct a benchmark that consists of three representative flight tasks. Based on such settings, we propose Fly360, a two-stage perception-decision pipeline with a fixed random-yaw training strategy. At the perception stage, panoramic RGB observations are input and converted into depth maps as a robust intermediate representation. For the policy network, it is lightweight and used to output body-frame velocity commands from depth inputs. Extensive simulation and real-world experiments demonstrate that Fly360 achieves stable omnidirectional obstacle avoidance and outperforms forward-view baselines across all tasks. Our model is available at https://zxkai.github.io/fly360/",
+      "url": "https://arxiv.org/abs/2603.06573v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.06573v1",
+      "published": "2026-03-06T18:59:43Z",
+      "updated": "2026-03-06T18:59:43Z",
       "categories": [
         "cs.RO",
-        "cs.AI",
-        "cs.LG"
+        "cs.AI"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2603.05503v1",
-      "title": "Accelerating Text-to-Video Generation with Calibrated Sparse Attention",
+      "id": "2603.06572v1",
+      "title": "SCOPE: Scene-Contextualized Incremental Few-Shot 3D Segmentation",
       "authors": [
-        "Shai Yehezkel",
-        "Shahar Yadin",
-        "Noam Elata",
-        "Yaron Ostrovsky-Berman",
-        "Bahjat Kawar"
+        "Vishal Thengane",
+        "Zhaochong An",
+        "Tianjin Huang",
+        "Son Lam Phung",
+        "Abdesselam Bouzerdoum",
+        "Lu Yin",
+        "Na Zhao",
+        "Xiatian Zhu"
       ],
-      "abstract": "Recent diffusion models enable high-quality video generation, but suffer from slow runtimes. The large transformer-based backbones used in these models are bottlenecked by spatiotemporal attention. In this paper, we identify that a significant fraction of token-to-token connections consistently yield negligible scores across various inputs, and their patterns often repeat across queries. Thus, the attention computation in these cases can be skipped with little to no effect on the result. This observation continues to hold for connections among local token blocks. Motivated by this, we introduce CalibAtt, a training-free method that accelerates video generation via calibrated sparse attention. CalibAtt performs an offline calibration pass that identifies block-level sparsity and repetition patterns that are stable across inputs, and compiles these patterns into optimized attention operations for each layer, head, and diffusion timestep. At inference time, we compute the selected input-dependent connections densely, and skip the unselected ones in a hardware-efficient manner. Extensive experiments on Wan 2.1 14B, Mochi 1, and few-step distilled models at various resolutions show that CalibAtt achieves up to 1.58x end-to-end speedup, outperforming existing training-free methods while maintaining video generation quality and text-video alignment.",
-      "url": "https://arxiv.org/abs/2603.05503v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.05503v1",
-      "published": "2026-03-05T18:59:32Z",
-      "updated": "2026-03-05T18:59:32Z",
+      "abstract": "Incremental Few-Shot (IFS) segmentation aims to learn new categories over time from only a few annotations. Although widely studied in 2D, it remains underexplored for 3D point clouds. Existing methods suffer from catastrophic forgetting or fail to learn discriminative prototypes under sparse supervision, and often overlook a key cue: novel categories frequently appear as unlabelled background in base-training scenes. We introduce SCOPE (Scene-COntextualised Prototype Enrichment), a plug-and-play background-guided prototype enrichment framework that integrates with any prototype-based 3D segmentation method. After base training, a class-agnostic segmentation model extracts high-confidence pseudo-instances from background regions to build a prototype pool. When novel classes arrive with few labelled samples, relevant background prototypes are retrieved and fused with few-shot prototypes to form enriched representations without retraining the backbone or adding parameters. Experiments on ScanNet and S3DIS show that SCOPE achieves SOTA performance, improving novel-class IoU by up to 6.98% and 3.61%, and mean IoU by 2.25% and 1.70%, respectively, while maintaining low forgetting. Code is available https://github.com/Surrey-UP-Lab/SCOPE.",
+      "url": "https://arxiv.org/abs/2603.06572v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.06572v1",
+      "published": "2026-03-06T18:59:36Z",
+      "updated": "2026-03-06T18:59:36Z",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2603.06570v1",
+      "title": "SUREON: A Benchmark and Vision-Language-Model for Surgical Reasoning",
+      "authors": [
+        "Alejandra Perez",
+        "Anita Rau",
+        "Lee White",
+        "Busisiwe Mlambo",
+        "Chinedu Nwoye",
+        "Muhammad Abdullah Jamal",
+        "Omid Mohareri"
+      ],
+      "abstract": "Surgeons don't just see -- they interpret. When an expert observes a surgical scene, they understand not only what instrument is being used, but why it was chosen, what risk it poses, and what comes next. Current surgical AI cannot answer such questions, largely because training data that explicitly encodes surgical reasoning is immensely difficult to annotate at scale. Yet surgical video lectures already contain exactly this -- explanations of intent, rationale, and anticipation, narrated by experts for the purpose of teaching. Though inherently noisy and unstructured, these narrations encode the reasoning that surgical AI currently lacks. We introduce SUREON, a large-scale video QA dataset that systematically harvests this training signal from surgical academic videos. SUREON defines 12 question categories covering safety assessment, decision rationale, and forecasting, and uses a multi-agent pipeline to extract and structure supervision at scale. Across 134.7K clips and 170 procedure types, SUREON yields 206.8k QA pairs and an expert-validated benchmark of 354 examples. To evaluate the extent to which this supervision translates to surgical reasoning ability, we introduce two models: SureonVLM, a vision-language model adapted through supervised fine-tuning, and SureonVLM-R1, a reasoning model trained with Group Relative Policy Optimization. Both models can answer complex questions about surgery and substantially outperform larger general-domain models, exceeding 84% accuracy on the SUREON benchmark while outperforming general-domain models on standard surgical perception tasks. Qualitative analysis of SureonVLM-R1 reveals explicit reasoning behavior, such as inferring operative intent from visual context.",
+      "url": "https://arxiv.org/abs/2603.06570v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.06570v1",
+      "published": "2026-03-06T18:58:36Z",
+      "updated": "2026-03-06T18:58:36Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2603.06569v1",
+      "title": "Penguin-VL: Exploring the Efficiency Limits of VLM with LLM-based Vision Encoders",
+      "authors": [
+        "Boqiang Zhang",
+        "Lei Ke",
+        "Ruihan Yang",
+        "Qi Gao",
+        "Tianyuan Qu",
+        "Rossell Chen",
+        "Dong Yu",
+        "Leoweiliang"
+      ],
+      "abstract": "Vision Language Model (VLM) development has largely relied on scaling model size, which hinders deployment on compute-constrained mobile and edge devices such as smartphones and robots. In this work, we explore the performance limits of compact (e.g., 2B and 8B) VLMs. We challenge the prevailing practice that state-of-the-art VLMs must rely on vision encoders initialized via massive contrastive pretraining (e.g., CLIP/SigLIP). We identify an objective mismatch: contrastive learning, optimized for discrimination, enforces coarse and category-level invariances that suppress fine-grained visual cues needed for dense captioning and complex VLM reasoning. To address this issue, we present Penguin-VL, whose vision encoder is initialized from a text-only LLM. Our experiments reveal that Penguin-Encoder serves as a superior alternative to traditional contrastive pretraining, unlocking a higher degree of visual fidelity and data efficiency for multimodal understanding. Across various image and video benchmarks, Penguin-VL achieves performance comparable to leading VLMs (e.g., Qwen3-VL) in mathematical reasoning and surpasses them in tasks such as document understanding, visual knowledge, and multi-perspective video understanding. Notably, these gains are achieved with a lightweight architecture, demonstrating that improved visual representation rather than model scaling is the primary driver of performance. Our ablations show that Penguin-Encoder consistently outperforms contrastive-pretrained encoders, preserving fine-grained spatial and temporal cues that are critical for dense perception and complex reasoning. This makes it a strong drop-in alternative for compute-efficient VLMs and enables high performance in resource-constrained settings. Code: https://github.com/tencent-ailab/Penguin-VL",
+      "url": "https://arxiv.org/abs/2603.06569v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.06569v1",
+      "published": "2026-03-06T18:58:04Z",
+      "updated": "2026-03-06T18:58:04Z",
       "categories": [
         "cs.CV"
       ],
       "primary_category": "cs.CV"
     },
     {
-      "id": "2603.05500v1",
-      "title": "POET-X: Memory-efficient LLM Training by Scaling Orthogonal Transformation",
+      "id": "2603.06567v1",
+      "title": "A recipe for scalable attention-based MLIPs: unlocking long-range accuracy with all-to-all node attention",
       "authors": [
-        "Zeju Qiu",
-        "Lixin Liu",
-        "Adrian Weller",
-        "Han Shi",
-        "Weiyang Liu"
+        "Eric Qu",
+        "Brandon M. Wood",
+        "Aditi S. Krishnapriyan",
+        "Zachary W. Ulissi"
       ],
-      "abstract": "Efficient and stable training of large language models (LLMs) remains a core challenge in modern machine learning systems. To address this challenge, Reparameterized Orthogonal Equivalence Training (POET), a spectrum-preserving framework that optimizes each weight matrix through orthogonal equivalence transformation, has been proposed. Although POET provides strong training stability, its original implementation incurs high memory consumption and computational overhead due to intensive matrix multiplications. To overcome these limitations, we introduce POET-X, a scalable and memory-efficient variant that performs orthogonal equivalence transformations with significantly reduced computational cost. POET-X maintains the generalization and stability benefits of POET while achieving substantial improvements in throughput and memory efficiency. In our experiments, POET-X enables the pretraining of billion-parameter LLMs on a single Nvidia H100 GPU, and in contrast, standard optimizers such as AdamW run out of memory under the same settings.",
-      "url": "https://arxiv.org/abs/2603.05500v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.05500v1",
-      "published": "2026-03-05T18:59:23Z",
-      "updated": "2026-03-05T18:59:23Z",
+      "abstract": "Machine-learning interatomic potentials (MLIPs) have advanced rapidly, with many top models relying on strong physics-based inductive biases. However, as models scale to larger systems like biomolecules and electrolytes, they struggle to accurately capture long-range (LR) interactions, leading current approaches to rely on explicit physics-based terms or components. In this work, we propose AllScAIP, a straightforward, attention-based, and energy-conserving MLIP model that scales to O(100 million) training samples. It addresses the long-range challenge using an all-to-all node attention component that is data-driven. Extensive ablations reveal that in low-data/small-model regimes, inductive biases improve sample efficiency. However, as data and model size scale, these benefits diminish or even reverse, while all-to-all attention remains critical for capturing LR interactions. Our model achieves state-of-the-art energy/force accuracy on molecular systems, as well as a number of physics-based evaluations (OMol25), while being competitive on materials (OMat24) and catalysts (OC20). Furthermore, it enables stable, long-timescale MD simulations that accurately recover experimental observables, including density and heat of vaporization predictions.",
+      "url": "https://arxiv.org/abs/2603.06567v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.06567v1",
+      "published": "2026-03-06T18:57:04Z",
+      "updated": "2026-03-06T18:57:04Z",
       "categories": [
         "cs.LG",
-        "cs.AI",
-        "cs.CL"
+        "cond-mat.mtrl-sci",
+        "cs.CE",
+        "physics.chem-ph",
+        "q-bio.QM"
       ],
       "primary_category": "cs.LG"
     },
     {
-      "id": "2603.05498v1",
-      "title": "The Spike, the Sparse and the Sink: Anatomy of Massive Activations and Attention Sinks",
+      "id": "2603.06565v1",
+      "title": "Boosting deep Reinforcement Learning using pretraining with Logical Options",
       "authors": [
-        "Shangwen Sun",
-        "Alfredo Canziani",
-        "Yann LeCun",
-        "Jiachen Zhu"
+        "Zihan Ye",
+        "Phil Chau",
+        "Raban Emunds",
+        "Jannis Bl\u00fcml",
+        "Cedric Derstroff",
+        "Quentin Delfosse",
+        "Oleg Arenz",
+        "Kristian Kersting"
       ],
-      "abstract": "We study two recurring phenomena in Transformer language models: massive activations, in which a small number of tokens exhibit extreme outliers in a few channels, and attention sinks, in which certain tokens attract disproportionate attention mass regardless of semantic relevance. Prior work observes that these phenomena frequently co-occur and often involve the same tokens, but their functional roles and causal relationship remain unclear. Through systematic experiments, we show that the co-occurrence is largely an architectural artifact of modern Transformer design, and that the two phenomena serve related but distinct functions. Massive activations operate globally: they induce near-constant hidden representations that persist across layers, effectively functioning as implicit parameters of the model. Attention sinks operate locally: they modulate attention outputs across heads and bias individual heads toward short-range dependencies. We identify the pre-norm configuration as the key choice that enables the co-occurrence, and show that ablating it causes the two phenomena to decouple.",
-      "url": "https://arxiv.org/abs/2603.05498v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.05498v1",
-      "published": "2026-03-05T18:59:04Z",
-      "updated": "2026-03-05T18:59:04Z",
+      "abstract": "Deep reinforcement learning agents are often misaligned, as they over-exploit early reward signals. Recently, several symbolic approaches have addressed these challenges by encoding sparse objectives along with aligned plans. However, purely symbolic architectures are complex to scale and difficult to apply to continuous settings. Hence, we propose a hybrid approach, inspired by humans' ability to acquire new skills. We use a two-stage framework that injects symbolic structure into neural-based reinforcement learning agents without sacrificing the expressivity of deep policies. Our method, called Hybrid Hierarchical RL (H^2RL), introduces a logical option-based pretraining strategy to steer the learning policy away from short-term reward loops and toward goal-directed behavior while allowing the final policy to be refined via standard environment interaction. Empirically, we show that this approach consistently improves long-horizon decision-making and yields agents that outperform strong neural, symbolic, and neuro-symbolic baselines.",
+      "url": "https://arxiv.org/abs/2603.06565v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.06565v1",
+      "published": "2026-03-06T18:55:15Z",
+      "updated": "2026-03-06T18:55:15Z",
       "categories": [
-        "cs.AI",
-        "cs.CL"
-      ],
-      "primary_category": "cs.AI"
-    },
-    {
-      "id": "2603.05495v1",
-      "title": "Cheap Thrills: Effective Amortized Optimization Using Inexpensive Labels",
-      "authors": [
-        "Khai Nguyen",
-        "Petros Ellinas",
-        "Anvita Bhagavathula",
-        "Priya Donti"
-      ],
-      "abstract": "To scale the solution of optimization and simulation problems, prior work has explored machine-learning surrogates that inexpensively map problem parameters to corresponding solutions. Commonly used approaches, including supervised and self-supervised learning with either soft or hard feasibility enforcement, face inherent challenges such as reliance on expensive, high-quality labels or difficult optimization landscapes. To address their trade-offs, we propose a novel framework that first collects \"cheap\" imperfect labels, then performs supervised pretraining, and finally refines the model through self-supervised learning to improve overall performance. Our theoretical analysis and merit-based criterion show that labeled data need only place the model within a basin of attraction, confirming that only modest numbers of inexact labels and training epochs are required. We empirically validate our simple three-stage strategy across challenging domains, including nonconvex constrained optimization, power-grid operation, and stiff dynamical systems, and show that it yields faster convergence; improved accuracy, feasibility, and optimality; and up to 59x reductions in total offline cost.",
-      "url": "https://arxiv.org/abs/2603.05495v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.05495v1",
-      "published": "2026-03-05T18:58:39Z",
-      "updated": "2026-03-05T18:58:39Z",
-      "categories": [
-        "cs.LG",
-        "math.OC"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2603.05494v1",
-      "title": "Censored LLMs as a Natural Testbed for Secret Knowledge Elicitation",
-      "authors": [
-        "Helena Casademunt",
-        "Bartosz Cywi\u0144ski",
-        "Khoi Tran",
-        "Arya Jakkli",
-        "Samuel Marks",
-        "Neel Nanda"
-      ],
-      "abstract": "Large language models sometimes produce false or misleading responses. Two approaches to this problem are honesty elicitation -- modifying prompts or weights so that the model answers truthfully -- and lie detection -- classifying whether a given response is false. Prior work evaluates such methods on models specifically trained to lie or conceal information, but these artificial constructions may not resemble naturally-occurring dishonesty. We instead study open-weights LLMs from Chinese developers, which are trained to censor politically sensitive topics: Qwen3 models frequently produce falsehoods about subjects like Falun Gong or the Tiananmen protests while occasionally answering correctly, indicating they possess knowledge they are trained to suppress. Using this as a testbed, we evaluate a suite of elicitation and lie detection techniques. For honesty elicitation, sampling without a chat template, few-shot prompting, and fine-tuning on generic honesty data most reliably increase truthful responses. For lie detection, prompting the censored model to classify its own responses performs near an uncensored-model upper bound, and linear probes trained on unrelated data offer a cheaper alternative. The strongest honesty elicitation techniques also transfer to frontier open-weights models including DeepSeek R1. Notably, no technique fully eliminates false responses. We release all prompts, code, and transcripts.",
-      "url": "https://arxiv.org/abs/2603.05494v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.05494v1",
-      "published": "2026-03-05T18:58:14Z",
-      "updated": "2026-03-05T18:58:14Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2603.05488v1",
-      "title": "Reasoning Theater: Disentangling Model Beliefs from Chain-of-Thought",
-      "authors": [
-        "Siddharth Boppana",
-        "Annabel Ma",
-        "Max Loeffler",
-        "Raphael Sarfati",
-        "Eric Bigelow",
-        "Atticus Geiger",
-        "Owen Lewis",
-        "Jack Merullo"
-      ],
-      "abstract": "We provide evidence of performative chain-of-thought (CoT) in reasoning models, where a model becomes strongly confident in its final answer, but continues generating tokens without revealing its internal belief. Our analysis compares activation probing, early forced answering, and a CoT monitor across two large models (DeepSeek-R1 671B & GPT-OSS 120B) and find task difficulty-specific differences: The model's final answer is decodable from activations far earlier in CoT than a monitor is able to say, especially for easy recall-based MMLU questions. We contrast this with genuine reasoning in difficult multihop GPQA-Diamond questions. Despite this, inflection points (e.g., backtracking, 'aha' moments) occur almost exclusively in responses where probes show large belief shifts, suggesting these behaviors track genuine uncertainty rather than learned \"reasoning theater.\" Finally, probe-guided early exit reduces tokens by up to 80% on MMLU and 30% on GPQA-Diamond with similar accuracy, positioning attention probing as an efficient tool for detecting performative reasoning and enabling adaptive computation.",
-      "url": "https://arxiv.org/abs/2603.05488v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.05488v1",
-      "published": "2026-03-05T18:55:16Z",
-      "updated": "2026-03-05T18:55:16Z",
-      "categories": [
-        "cs.CL",
         "cs.AI",
         "cs.LG"
       ],
-      "primary_category": "cs.CL"
+      "primary_category": "cs.AI"
     },
     {
-      "id": "2603.05485v1",
-      "title": "Towards Provably Unbiased LLM Judges via Bias-Bounded Evaluation",
+      "id": "2603.06561v1",
+      "title": "EgoReasoner: Learning Egocentric 4D Reasoning via Task-Adaptive Structured Thinking",
       "authors": [
-        "Benjamin Feuer",
-        "Lucas Rosenblatt",
-        "Oussama Elachqar"
+        "Fangrui Zhu",
+        "Yunfeng Xi",
+        "Jianmo Ni",
+        "Mu Cai",
+        "Boqing Gong",
+        "Long Zhao",
+        "Chen Qu",
+        "Ian Miao",
+        "Yi Li",
+        "Cheng Zhong",
+        "Huaizu Jiang",
+        "Shwetak Patel"
       ],
-      "abstract": "As AI models progress beyond simple chatbots into more complex workflows, we draw ever closer to the event horizon beyond which AI systems will be utilized in autonomous, self-maintaining feedback loops. Any autonomous AI system will depend on automated, verifiable rewards and feedback; in settings where ground truth is sparse or non-deterministic, one practical source of such rewards is an LLM-as-a-Judge. Although LLM judges continue to improve, the literature has yet to introduce systems capable of enforcing standards with strong guarantees, particularly when bias vectors are unknown or adversarially discovered. To remedy this issue, we propose average bias-boundedness (A-BB), an algorithmic framework which formally guarantees reductions of harm/impact as a result of any measurable bias in an LLM judge. Evaluating on Arena-Hard-Auto with four LLM judges, we achieve (tau=0.5, delta=0.01) bias-bounded guarantees while retaining 61-99% correlation with original rankings across formatting and schematic bias settings, with most judge-bias combinations exceeding 80%. The code to reproduce our findings is available at https://github.com/penfever/bias-bounded-evaluation.",
-      "url": "https://arxiv.org/abs/2603.05485v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.05485v1",
-      "published": "2026-03-05T18:52:28Z",
-      "updated": "2026-03-05T18:52:28Z",
+      "abstract": "Egocentric video understanding is inherently complex due to the dynamic 4D nature of the environment, where camera motion and object displacements necessitate a continuous re-evaluation of spatial relations. In this work, we target a suite of under-explored egocentric 4D reasoning tasks, including fixture interaction counting, viewpoint-relative fixture location, object movement itinerary tracking, and stationary object localization, that require fundamentally different cognitive operations: spatial anchoring, temporal tracking, and duration reasoning. We observe that these structural differences make task-agnostic approaches insufficient: generic Chain-of-Thought methods lack task-appropriate reasoning primitives, and uniform reinforcement learning actively destabilizes performance on spatial tasks. To address this, we propose EgoReasoner, a two-stage framework that aligns both the reasoning scaffold and the reward signal to each task's cognitive structure. In the first stage, Task-Adaptive Thinking Templates guide the synthesis of structured CoT traces that teach the model to reason adaptively across task types via supervised fine-tuning. In the second stage, task-aware reward functions verify entity grounding, temporal alignment, and task-adaptive logical consistency, selectively strengthening each reasoning pathway via reinforcement fine-tuning with GRPO. Our 3B-parameter model, trained on only 16K samples, achieves 37.5% average accuracy on the challenging HD-EPIC benchmark, surpassing Qwen2.5-VL-7B (25.7%) by over 10 points.",
+      "url": "https://arxiv.org/abs/2603.06561v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.06561v1",
+      "published": "2026-03-06T18:49:04Z",
+      "updated": "2026-03-06T18:49:04Z",
       "categories": [
-        "cs.AI"
+        "cs.CV"
       ],
-      "primary_category": "cs.AI"
+      "primary_category": "cs.CV"
     }
   ]
 }
