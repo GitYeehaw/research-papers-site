@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-03-09T18:42:49.979828+00:00",
+  "scraped_at": "2026-03-09T18:58:37.611969+00:00",
   "researcher_count": 52,
   "researchers": [
     {
@@ -6498,8 +6498,128 @@
       "field": "Data-efficient robot learning, sim-to-real transfer, dexterous manipulation, Bayesian optimization, active learning",
       "institution": "University of Cambridge",
       "website": "https://contactrika.github.io/",
-      "paper_count": 0,
-      "papers": []
+      "paper_count": 5,
+      "papers": [
+        {
+          "id": "2601.20706v1",
+          "title": "Beyond GEMM-Centric NPUs: Enabling Efficient Diffusion LLM Sampling",
+          "authors": [
+            "Binglei Lou",
+            "Haoran Wu",
+            "Yao Lai",
+            "Jiayi Nie",
+            "Can Xiao",
+            "Xuan Guo",
+            "Rika Antonova",
+            "Robert Mullins",
+            "Aaron Zhao"
+          ],
+          "abstract": "Diffusion Large Language Models (dLLMs) introduce iterative denoising to enable parallel token generation, but their sampling phase displays fundamentally different characteristics compared to GEMM-centric transformer layers. Profiling on modern GPUs reveals that sampling can account for up to 70% of total model inference latency-primarily due to substantial memory loads and writes from vocabulary-wide logits, reduction-based token selection, and iterative masked updates. These processes demand large on-chip SRAM and involve irregular memory accesses that conventional NPUs struggle to handle efficiently. To address this, we identify a set of critical instructions that an NPU architecture must specifically optimize for dLLM sampling. Our design employs lightweight non-GEMM vector primitives, in-place memory reuse strategies, and a decoupled mixed-precision memory hierarchy. Together, these optimizations deliver up to a 2.53x speedup over the NVIDIA RTX A6000 GPU under an equivalent nm technology node. We also open-source our cycle-accurate simulation and post-synthesis RTL verification code, confirming functional equivalence with current dLLM PyTorch implementations.",
+          "url": "https://arxiv.org/abs/2601.20706v1",
+          "pdf_url": "https://arxiv.org/pdf/2601.20706v1",
+          "published": "2026-01-28T15:37:50Z",
+          "updated": "2026-01-28T15:37:50Z",
+          "categories": [
+            "cs.AR",
+            "cs.AI",
+            "cs.DC"
+          ],
+          "primary_category": "cs.AR"
+        },
+        {
+          "id": "2510.03679v1",
+          "title": "Group Policy Gradient",
+          "authors": [
+            "Junhua Chen",
+            "Zixi Zhang",
+            "Hantao Zhong",
+            "Rika Antonova"
+          ],
+          "abstract": "We introduce Group Policy Gradient (GPG), a family of critic-free policy-gradient estimators for general MDPs. Inspired by the success of GRPO's approach in Reinforcement Learning from Human Feedback (RLHF), GPG replaces a learned value function with a group-based Monte Carlo advantage estimator, removing the memory, compute, and hyperparameter costs of training a critic while preserving PPO's clipped-objective structure. We prove the consistency of the GPG estimator, analyze the bias-variance tradeoffs, and demonstrate empirically that GPG matches or outperforms PPO on standard benchmarks. GPG makes better use of parallel simulations, which, together with its critic-free design, results in more efficient use of computational resources than PPO.",
+          "url": "https://arxiv.org/abs/2510.03679v1",
+          "pdf_url": "https://arxiv.org/pdf/2510.03679v1",
+          "published": "2025-10-04T05:20:44Z",
+          "updated": "2025-10-04T05:20:44Z",
+          "categories": [
+            "cs.LG",
+            "stat.ML"
+          ],
+          "primary_category": "cs.LG"
+        },
+        {
+          "id": "2506.19121v2",
+          "title": "CUPID: Curating Data your Robot Loves with Influence Functions",
+          "authors": [
+            "Christopher Agia",
+            "Rohan Sinha",
+            "Jingyun Yang",
+            "Rika Antonova",
+            "Marco Pavone",
+            "Haruki Nishimura",
+            "Masha Itkina",
+            "Jeannette Bohg"
+          ],
+          "abstract": "In robot imitation learning, policy performance is tightly coupled with the quality and composition of the demonstration data. Yet, developing a precise understanding of how individual demonstrations contribute to downstream outcomes - such as closed-loop task success or failure - remains a persistent challenge. We propose CUPID, a robot data curation method based on a novel influence function-theoretic formulation for imitation learning policies. Given a set of evaluation rollouts, CUPID estimates the influence of each training demonstration on the policy's expected return. This enables ranking and selection of demonstrations according to their impact on the policy's closed-loop performance. We use CUPID to curate data by 1) filtering out training demonstrations that harm policy performance and 2) subselecting newly collected trajectories that will most improve the policy. Extensive simulated and hardware experiments show that our approach consistently identifies which data drives test-time performance. For example, training with less than 33% of curated data can yield state-of-the-art diffusion policies on the simulated RoboMimic benchmark, with similar gains observed in hardware. Furthermore, hardware experiments show that our method can identify robust strategies under distribution shift, isolate spurious correlations, and even enhance the post-training of generalist robot policies. Videos and code are made available at: https://cupid-curation.github.io.",
+          "url": "https://arxiv.org/abs/2506.19121v2",
+          "pdf_url": "https://arxiv.org/pdf/2506.19121v2",
+          "published": "2025-06-23T20:49:34Z",
+          "updated": "2025-09-23T19:35:35Z",
+          "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.LG"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2506.01185v2",
+          "title": "HoMeR: Learning In-the-Wild Mobile Manipulation via Hybrid Imitation and Whole-Body Control",
+          "authors": [
+            "Priya Sundaresan",
+            "Rhea Malhotra",
+            "Phillip Miao",
+            "Jingyun Yang",
+            "Jimmy Wu",
+            "Hengyuan Hu",
+            "Rika Antonova",
+            "Francis Engelmann",
+            "Dorsa Sadigh",
+            "Jeannette Bohg"
+          ],
+          "abstract": "We introduce HoMeR, an imitation learning framework for mobile manipulation that combines whole-body control with hybrid action modes that handle both long-range and fine-grained motion, enabling effective performance on realistic in-the-wild tasks. At its core is a fast, kinematics-based whole-body controller that maps desired end-effector poses to coordinated motion across the mobile base and arm. Within this reduced end-effector action space, HoMeR learns to switch between absolute pose predictions for long-range movement and relative pose predictions for fine-grained manipulation, offloading low-level coordination to the controller and focusing learning on task-level decisions. We deploy HoMeR on a holonomic mobile manipulator with a 7-DoF arm in a real home. We compare HoMeR to baselines without hybrid actions or whole-body control across 3 simulated and 3 real household tasks such as opening cabinets, sweeping trash, and rearranging pillows. Across tasks, HoMeR achieves an overall success rate of 79.17% using just 20 demonstrations per task, outperforming the next best baseline by 29.17 on average. HoMeR is also compatible with vision-language models and can leverage their internet-scale priors to better generalize to novel object appearances, layouts, and cluttered scenes. In summary, HoMeR moves beyond tabletop settings and demonstrates a scalable path toward sample-efficient, generalizable manipulation in everyday indoor spaces. Code, videos, and supplementary material are available at: http://homer-manip.github.io",
+          "url": "https://arxiv.org/abs/2506.01185v2",
+          "pdf_url": "https://arxiv.org/pdf/2506.01185v2",
+          "published": "2025-06-01T21:43:35Z",
+          "updated": "2025-10-13T04:13:26Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2505.23692v2",
+          "title": "Mobi-$\u03c0$: Mobilizing Your Robot Learning Policy",
+          "authors": [
+            "Jingyun Yang",
+            "Isabella Huang",
+            "Brandon Vu",
+            "Max Bajracharya",
+            "Rika Antonova",
+            "Jeannette Bohg"
+          ],
+          "abstract": "Learned visuomotor policies are capable of performing increasingly complex manipulation tasks. However, most of these policies are trained on data collected from limited robot positions and camera viewpoints. This leads to poor generalization to novel robot positions, which limits the use of these policies on mobile platforms, especially for precise tasks like pressing buttons or turning faucets. In this work, we formulate the policy mobilization problem: find a mobile robot base pose in a novel environment that is in distribution with respect to a manipulation policy trained on a limited set of camera viewpoints. Compared to retraining the policy itself to be more robust to unseen robot base pose initializations, policy mobilization decouples navigation from manipulation and thus does not require additional demonstrations. Crucially, this problem formulation complements existing efforts to improve manipulation policy robustness to novel viewpoints and remains compatible with them. We propose a novel approach for policy mobilization that bridges navigation and manipulation by optimizing the robot's base pose to align with an in-distribution base pose for a learned policy. Our approach utilizes 3D Gaussian Splatting for novel view synthesis, a score function to evaluate pose suitability, and sampling-based optimization to identify optimal robot poses. To understand policy mobilization in more depth, we also introduce the Mobi-$\u03c0$ framework, which includes: (1) metrics that quantify the difficulty of mobilizing a given policy, (2) a suite of simulated mobile manipulation tasks based on RoboCasa to evaluate policy mobilization, and (3) visualization tools for analysis. In both our developed simulation task suite and the real world, we show that our approach outperforms baselines, demonstrating its effectiveness for policy mobilization.",
+          "url": "https://arxiv.org/abs/2505.23692v2",
+          "pdf_url": "https://arxiv.org/pdf/2505.23692v2",
+          "published": "2025-05-29T17:27:54Z",
+          "updated": "2025-09-26T16:17:30Z",
+          "categories": [
+            "cs.RO",
+            "cs.CV",
+            "cs.LG"
+          ],
+          "primary_category": "cs.RO"
+        }
+      ]
     },
     {
       "id": "finn_c",
