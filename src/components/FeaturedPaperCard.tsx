@@ -1,5 +1,3 @@
-"use client";
-
 import { Paper } from "@/types";
 
 interface FeaturedPaperCardProps {
@@ -72,9 +70,7 @@ export default function FeaturedPaperCard({
           href={paper.url}
           target="_blank"
           rel="noopener noreferrer"
-          style={{ color: "inherit", transition: "color 0.2s" }}
-          onMouseOver={(e) => (e.currentTarget.style.color = "#fff")}
-          onMouseOut={(e) => (e.currentTarget.style.color = "inherit")}
+          className="featured-title-link"
         >
           {paper.title}
         </a>

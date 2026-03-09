@@ -2,13 +2,15 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import BackToTop from "@/components/BackToTop";
-import MathJaxTypeset from "@/components/MathJaxTypeset";
 import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Research Papers — A Daily Scholarly Digest",
   description:
     "Daily curated research papers from arXiv — Robotics, CS, Physics, Biology, and Electrochemistry.",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
@@ -18,6 +20,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link rel="preconnect" href="https://api.fontshare.com" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap"
+        />
+        <link
+          rel="stylesheet"
+          href="https://api.fontshare.com/v2/css?f[]=clash+display@400,500,600,700&f[]=general+sans@400,500,600&display=swap"
+        />
+      </head>
       <body>
         <div className="aurora" />
         <div className="aurora-2" />
@@ -27,7 +42,6 @@ export default function RootLayout({
           {children}
         </main>
         <BackToTop />
-        <MathJaxTypeset />
         <Script id="mathjax-config" strategy="beforeInteractive">{`
           window.MathJax = {
             tex: {
@@ -39,11 +53,6 @@ export default function RootLayout({
             },
           };
         `}</Script>
-        <Script
-          id="mathjax"
-          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
-          strategy="afterInteractive"
-        />
       </body>
     </html>
   );

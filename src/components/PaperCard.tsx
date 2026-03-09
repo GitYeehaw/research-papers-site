@@ -31,10 +31,7 @@ export default function PaperCard({ paper }: { paper: Paper }) {
           href={paper.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="transition-colors duration-200"
-          style={{ color: "var(--cultured)" }}
-          onMouseOver={(e) => (e.currentTarget.style.color = "#4d9aff")}
-          onMouseOut={(e) => (e.currentTarget.style.color = "var(--cultured)")}
+          className="paper-card-title"
         >
           {paper.title}
         </a>
@@ -74,17 +71,14 @@ export default function PaperCard({ paper }: { paper: Paper }) {
         {isLong && (
           <button
             onClick={() => setExpanded(!expanded)}
-            className="mt-2 transition-colors duration-200"
+            className="mt-2 paper-action"
             style={{
-              color: "var(--text-muted)",
               fontStyle: "italic",
               fontSize: "0.8rem",
               minWidth: "9rem",
               textAlign: "left",
               display: "block",
             }}
-            onMouseOver={(e) => (e.currentTarget.style.color = "var(--blue)")}
-            onMouseOut={(e) => (e.currentTarget.style.color = "var(--text-muted)")}
           >
             {expanded ? "[collapse]" : "[continue reading]"}
           </button>
@@ -116,16 +110,13 @@ export default function PaperCard({ paper }: { paper: Paper }) {
             href={paper.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs transition-colors duration-200"
+            className="paper-action text-xs"
             style={{
-              color: "var(--text-muted)",
               fontFamily: "var(--font-mono)",
               fontSize: "0.65rem",
               letterSpacing: "0.05em",
               textTransform: "uppercase",
             }}
-            onMouseOver={(e) => (e.currentTarget.style.color = "var(--blue)")}
-            onMouseOut={(e) => (e.currentTarget.style.color = "var(--text-muted)")}
           >
             Abstract
           </a>
@@ -134,16 +125,13 @@ export default function PaperCard({ paper }: { paper: Paper }) {
               href={paper.pdf_url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs transition-colors duration-200"
+              className="paper-action text-xs"
               style={{
-                color: "var(--text-muted)",
                 fontFamily: "var(--font-mono)",
                 fontSize: "0.65rem",
                 letterSpacing: "0.05em",
                 textTransform: "uppercase",
               }}
-              onMouseOver={(e) => (e.currentTarget.style.color = "var(--blue)")}
-              onMouseOut={(e) => (e.currentTarget.style.color = "var(--text-muted)")}
             >
               PDF
             </a>

@@ -1,6 +1,8 @@
 import { CategoryData } from "@/types";
 import PaperGrid from "./PaperGrid";
 import ScrollFadeIn from "./ScrollFadeIn";
+import MathJaxTypeset from "./MathJaxTypeset";
+import Script from "next/script";
 
 interface ResearchPageProps {
   data: CategoryData;
@@ -57,6 +59,13 @@ export default function ResearchPage({ data }: ResearchPageProps) {
           emptyMessage={`No ${data.name.toLowerCase()} papers found yet.`}
         />
       </ScrollFadeIn>
+
+      <MathJaxTypeset />
+      <Script
+        id="mathjax"
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+        strategy="afterInteractive"
+      />
     </div>
   );
 }

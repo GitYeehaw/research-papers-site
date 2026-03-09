@@ -46,7 +46,7 @@ export default function HomePage() {
     cat,
     label: CATEGORY_META[cat]?.label ?? cat,
     color: CATEGORY_META[cat]?.color ?? "#888888",
-    href: `/research-papers-site/${cat}`,
+    href: `/${cat}`,
     paperCount: allData[cat]?.paper_count ?? 0,
   }));
 

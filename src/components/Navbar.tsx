@@ -35,7 +35,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link
             href="/"
-            className="shrink-0"
+            className="shrink-0 logo-link"
             style={{
               fontFamily: "var(--font-heading)",
               fontSize: "1.15rem",
@@ -43,14 +43,6 @@ export default function Navbar() {
               textDecoration: "none",
               fontStyle: "italic",
               transition: "all 0.3s",
-            }}
-            onMouseOver={(e) => {
-              e.currentTarget.style.color = "var(--cultured)";
-              e.currentTarget.style.textShadow = "0 0 20px rgba(168,85,247,0.3)";
-            }}
-            onMouseOut={(e) => {
-              e.currentTarget.style.color = "var(--platinum)";
-              e.currentTarget.style.textShadow = "none";
             }}
           >
             Research Papers

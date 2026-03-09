@@ -1,5 +1,3 @@
-"use client";
-
 import { CategoryData } from "@/types";
 import PaperCard from "./PaperCard";
 import Link from "next/link";
@@ -47,17 +45,7 @@ export default function CategorySection({
         {showViewAll && (
           <Link
             href={`/${data.category}`}
-            className="text-sm transition-colors duration-200"
-            style={{
-              color: "var(--accent-dim)",
-              fontStyle: "italic",
-            }}
-            onMouseOver={(e: React.MouseEvent<HTMLAnchorElement>) =>
-              (e.currentTarget.style.color = "var(--accent)")
-            }
-            onMouseOut={(e: React.MouseEvent<HTMLAnchorElement>) =>
-              (e.currentTarget.style.color = "var(--accent-dim)")
-            }
+            className="text-sm view-all-link"
           >
             View all &rarr;
           </Link>

@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
-@import url('https://api.fontshare.com/v2/css?f[]=clash+display@400,500,600,700&f[]=general+sans@400,500,600&display=swap');
-
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -150,6 +147,11 @@
     radial-gradient(ellipse 40% 30% at 70% 80%, rgba(168,85,247,0.06) 0%, transparent 50%);
   filter: blur(120px);
   animation: aurora-drift 18s ease-in-out infinite alternate;
+}
+
+.aurora, .aurora-2, .aurora-3 {
+  will-change: transform, filter;
+  contain: layout style;
 }
 
 /* ── Scroll fade-in ── */
@@ -564,4 +566,97 @@ mjx-container {
 }
 mjx-container > svg {
   max-width: 100%;
+}
+
+/* ── Logo hover ── */
+.logo-link:hover {
+  color: var(--cultured);
+  text-shadow: 0 0 20px rgba(168,85,247,0.3);
+}
+
+/* ── Featured paper title hover ── */
+.featured-title-link {
+  color: inherit;
+  transition: color 0.2s;
+}
+.featured-title-link:hover {
+  color: #fff;
+}
+
+/* ── Category nav link ── */
+.cat-nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 24px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  backdrop-filter: blur(16px);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgba(230,230,230,0.5);
+  text-decoration: none;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.cat-nav-link:hover {
+  border-color: var(--cat-color-border);
+  background: var(--card-hover);
+  color: var(--cultured);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 0 24px var(--cat-color-glow), 0 8px 24px rgba(0,0,0,0.3);
+}
+.cat-nav-link:hover .cat-dot {
+  box-shadow: 0 0 8px var(--cat-color);
+}
+
+/* ── View all link ── */
+.view-all-link {
+  color: var(--accent-dim);
+  font-style: italic;
+  transition: color 0.2s;
+}
+.view-all-link:hover {
+  color: var(--accent);
+}
+
+/* ── Paper card title ── */
+.paper-card-title {
+  color: var(--cultured);
+  transition: color 0.2s;
+}
+.paper-card-title:hover {
+  color: #4d9aff;
+}
+
+/* ── Paper action link ── */
+.paper-action {
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+.paper-action:hover {
+  color: var(--blue);
+}
+
+/* ── Back to top button ── */
+.back-to-top {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px) scale(0.9);
+  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              color 0.2s ease, border-color 0.2s ease,
+              box-shadow 0.2s ease;
+}
+.back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+.back-to-top.visible:hover {
+  color: var(--blue);
+  border-color: var(--blue);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 4px 16px rgba(0,102,204,0.2);
 }
