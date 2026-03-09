@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-03-09T08:58:55.564680+00:00",
+  "scraped_at": "2026-03-09T18:42:49.979828+00:00",
   "researcher_count": 51,
   "researchers": [
     {
@@ -4601,8 +4601,105 @@
       "field": "Robot learning, one-shot imitation learning, dexterous manipulation, sim-to-real",
       "institution": "Imperial College London",
       "website": "https://www.robot-learning.uk/",
-      "paper_count": 0,
-      "papers": []
+      "paper_count": 5,
+      "papers": [
+        {
+          "id": "2511.18140v2",
+          "title": "Observer-Actor: Active Vision Imitation Learning with Sparse-View Gaussian Splatting",
+          "authors": [
+            "Yilong Wang",
+            "Cheng Qian",
+            "Ruomeng Fan",
+            "Edward Johns"
+          ],
+          "abstract": "We propose Observer Actor (ObAct), a novel framework for active vision imitation learning in which the observer moves to optimal visual observations for the actor. We study ObAct on a dual-arm robotic system equipped with wrist-mounted cameras. At test time, ObAct dynamically assigns observer and actor roles: the observer arm constructs a 3D Gaussian Splatting (3DGS) representation from three images, virtually explores this to find an optimal camera pose, then moves to this pose; the actor arm then executes a policy using the observer's observations. This formulation enhances the clarity and visibility of both the object and the gripper in the policy's observations. As a result, we enable the training of ambidextrous policies on observations that remain closer to the occlusion-free training distribution, leading to more robust policies. We study this formulation with two existing imitation learning methods -- trajectory transfer and behavior cloning -- and experiments show that ObAct significantly outperforms static-camera setups: trajectory transfer improves by 145% without occlusion and 233% with occlusion, while behavior cloning improves by 75% and 143%, respectively. Videos are available at https://obact.github.io.",
+          "url": "https://arxiv.org/abs/2511.18140v2",
+          "pdf_url": "https://arxiv.org/pdf/2511.18140v2",
+          "published": "2025-11-22T17:53:16Z",
+          "updated": "2026-03-04T22:32:45Z",
+          "categories": [
+            "cs.RO",
+            "cs.CV",
+            "cs.LG"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2511.10110v1",
+          "title": "Learning a Thousand Tasks in a Day",
+          "authors": [
+            "Kamil Dreczkowski",
+            "Pietro Vitiello",
+            "Vitalis Vosylius",
+            "Edward Johns"
+          ],
+          "abstract": "Humans are remarkably efficient at learning tasks from demonstrations, but today's imitation learning methods for robot manipulation often require hundreds or thousands of demonstrations per task. We investigate two fundamental priors for improving learning efficiency: decomposing manipulation trajectories into sequential alignment and interaction phases, and retrieval-based generalisation. Through 3,450 real-world rollouts, we systematically study this decomposition. We compare different design choices for the alignment and interaction phases, and examine generalisation and scaling trends relative to today's dominant paradigm of behavioural cloning with a single-phase monolithic policy. In the few-demonstrations-per-task regime (<10 demonstrations), decomposition achieves an order of magnitude improvement in data efficiency over single-phase learning, with retrieval consistently outperforming behavioural cloning for both alignment and interaction. Building on these insights, we develop Multi-Task Trajectory Transfer (MT3), an imitation learning method based on decomposition and retrieval. MT3 learns everyday manipulation tasks from as little as a single demonstration each, whilst also generalising to novel object instances. This efficiency enables us to teach a robot 1,000 distinct everyday tasks in under 24 hours of human demonstrator time. Through 2,200 additional real-world rollouts, we reveal MT3's capabilities and limitations across different task families. Videos of our experiments can be found on at https://www.robot-learning.uk/learning-1000-tasks.",
+          "url": "https://arxiv.org/abs/2511.10110v1",
+          "pdf_url": "https://arxiv.org/pdf/2511.10110v1",
+          "published": "2025-11-13T09:17:58Z",
+          "updated": "2025-11-13T09:17:58Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2510.25769v1",
+          "title": "Neural Stochastic Flows: Solver-Free Modelling and Inference for SDE Solutions",
+          "authors": [
+            "Naoki Kiyohara",
+            "Edward Johns",
+            "Yingzhen Li"
+          ],
+          "abstract": "Stochastic differential equations (SDEs) are well suited to modelling noisy and irregularly sampled time series found in finance, physics, and machine learning. Traditional approaches require costly numerical solvers to sample between arbitrary time points. We introduce Neural Stochastic Flows (NSFs) and their latent variants, which directly learn (latent) SDE transition laws using conditional normalising flows with architectural constraints that preserve properties inherited from stochastic flows. This enables one-shot sampling between arbitrary states and yields up to two orders of magnitude speed-ups at large time gaps. Experiments on synthetic SDE simulations and on real-world tracking and video data show that NSFs maintain distributional accuracy comparable to numerical approaches while dramatically reducing computation for arbitrary time-point sampling.",
+          "url": "https://arxiv.org/abs/2510.25769v1",
+          "pdf_url": "https://arxiv.org/pdf/2510.25769v1",
+          "published": "2025-10-29T17:59:06Z",
+          "updated": "2025-10-29T17:59:06Z",
+          "categories": [
+            "cs.LG",
+            "stat.ML"
+          ],
+          "primary_category": "cs.LG"
+        },
+        {
+          "id": "2509.06191v1",
+          "title": "Learning in ImaginationLand: Omnidirectional Policies through 3D Generative Models (OP-Gen)",
+          "authors": [
+            "Yifei Ren",
+            "Edward Johns"
+          ],
+          "abstract": "Recent 3D generative models, which are capable of generating full object shapes from just a few images, now open up new opportunities in robotics. In this work, we show that 3D generative models can be used to augment a dataset from a single real-world demonstration, after which an omnidirectional policy can be learned within this imagined dataset. We found that this enables a robot to perform a task when initialised from states very far from those observed during the demonstration, including starting from the opposite side of the object relative to the real-world demonstration, significantly reducing the number of demonstrations required for policy learning. Through several real-world experiments across tasks such as grasping objects, opening a drawer, and placing trash into a bin, we study these omnidirectional policies by investigating the effect of various design choices on policy behaviour, and we show superior performance to recent baselines which use alternative methods for data augmentation.",
+          "url": "https://arxiv.org/abs/2509.06191v1",
+          "pdf_url": "https://arxiv.org/pdf/2509.06191v1",
+          "published": "2025-09-07T20:00:59Z",
+          "updated": "2025-09-07T20:00:59Z",
+          "categories": [
+            "cs.RO",
+            "cs.CV",
+            "cs.LG"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2503.06831v1",
+          "title": "One-Shot Dual-Arm Imitation Learning",
+          "authors": [
+            "Yilong Wang",
+            "Edward Johns"
+          ],
+          "abstract": "We introduce One-Shot Dual-Arm Imitation Learning (ODIL), which enables dual-arm robots to learn precise and coordinated everyday tasks from just a single demonstration of the task. ODIL uses a new three-stage visual servoing (3-VS) method for precise alignment between the end-effector and target object, after which replay of the demonstration trajectory is sufficient to perform the task. This is achieved without requiring prior task or object knowledge, or additional data collection and training following the single demonstration. Furthermore, we propose a new dual-arm coordination paradigm for learning dual-arm tasks from a single demonstration. ODIL was tested on a real-world dual-arm robot, demonstrating state-of-the-art performance across six precise and coordinated tasks in both 4-DoF and 6-DoF settings, and showing robustness in the presence of distractor objects and partial occlusions. Videos are available at: https://www.robot-learning.uk/one-shot-dual-arm.",
+          "url": "https://arxiv.org/abs/2503.06831v1",
+          "pdf_url": "https://arxiv.org/pdf/2503.06831v1",
+          "published": "2025-03-10T01:36:14Z",
+          "updated": "2025-03-10T01:36:14Z",
+          "categories": [
+            "cs.RO",
+            "cs.CV"
+          ],
+          "primary_category": "cs.RO"
+        }
+      ]
     },
     {
       "id": "hutter_m",
@@ -6055,8 +6152,111 @@
       "field": "Multi-robot systems, multi-agent RL, graph neural networks",
       "institution": "University of Cambridge",
       "website": "https://www.proroklab.org/",
-      "paper_count": 0,
-      "papers": []
+      "paper_count": 5,
+      "papers": [
+        {
+          "id": "2602.06733v1",
+          "title": "Pairwise is Not Enough: Hypergraph Neural Networks for Multi-Agent Pathfinding",
+          "authors": [
+            "Rishabh Jain",
+            "Keisuke Okumura",
+            "Michael Amir",
+            "Pietro Lio",
+            "Amanda Prorok"
+          ],
+          "abstract": "Multi-Agent Path Finding (MAPF) is a representative multi-agent coordination problem, where multiple agents are required to navigate to their respective goals without collisions. Solving MAPF optimally is known to be NP-hard, leading to the adoption of learning-based approaches to alleviate the online computational burden. Prevailing approaches, such as Graph Neural Networks (GNNs), are typically constrained to pairwise message passing between agents. However, this limitation leads to suboptimal behaviours and critical issues, such as attention dilution, particularly in dense environments where group (i.e. beyond just two agents) coordination is most critical. Despite the importance of such higher-order interactions, existing approaches have not been able to fully explore them. To address this representational bottleneck, we introduce HMAGAT (Hypergraph Multi-Agent Attention Network), a novel architecture that leverages attentional mechanisms over directed hypergraphs to explicitly capture group dynamics. Empirically, HMAGAT establishes a new state-of-the-art among learning-based MAPF solvers: e.g., despite having just 1M parameters and being trained on 100$\\times$ less data, it outperforms the current SoTA 85M parameter model. Through detailed analysis of HMAGAT's attention values, we demonstrate how hypergraph representations mitigate the attention dilution inherent in GNNs and capture complex interactions where pairwise methods fail. Our results illustrate that appropriate inductive biases are often more critical than the training data size or sheer parameter count for multi-agent problems.",
+          "url": "https://arxiv.org/abs/2602.06733v1",
+          "pdf_url": "https://arxiv.org/pdf/2602.06733v1",
+          "published": "2026-02-06T14:28:54Z",
+          "updated": "2026-02-06T14:28:54Z",
+          "categories": [
+            "cs.LG",
+            "cs.AI",
+            "cs.MA"
+          ],
+          "primary_category": "cs.LG"
+        },
+        {
+          "id": "2602.05683v1",
+          "title": "From Vision to Decision: Neuromorphic Control for Autonomous Navigation and Tracking",
+          "authors": [
+            "Chuwei Wang",
+            "Eduardo Sebasti\u00e1n",
+            "Amanda Prorok",
+            "Anastasia Bizyaeva"
+          ],
+          "abstract": "Robotic navigation has historically struggled to reconcile reactive, sensor-based control with the decisive capabilities of model-based planners. This duality becomes critical when the absence of a predominant option among goals leads to indecision, challenging reactive systems to break symmetries without computationally-intense planners. We propose a parsimonious neuromorphic control framework that bridges this gap for vision-guided navigation and tracking. Image pixels from an onboard camera are encoded as inputs to dynamic neuronal populations that directly transform visual target excitation into egocentric motion commands. A dynamic bifurcation mechanism resolves indecision by delaying commitment until a critical point induced by the environmental geometry. Inspired by recently proposed mechanistic models of animal cognition and opinion dynamics, the neuromorphic controller provides real-time autonomy with a minimal computational burden, a small number of interpretable parameters, and can be seamlessly integrated with application-specific image processing pipelines. We validate our approach in simulation environments as well as on an experimental quadrotor platform.",
+          "url": "https://arxiv.org/abs/2602.05683v1",
+          "pdf_url": "https://arxiv.org/pdf/2602.05683v1",
+          "published": "2026-02-05T14:09:09Z",
+          "updated": "2026-02-05T14:09:09Z",
+          "categories": [
+            "cs.RO",
+            "eess.SY"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2512.15379v1",
+          "title": "Remotely Detectable Robot Policy Watermarking",
+          "authors": [
+            "Michael Amir",
+            "Manon Flageat",
+            "Amanda Prorok"
+          ],
+          "abstract": "The success of machine learning for real-world robotic systems has created a new form of intellectual property: the trained policy. This raises a critical need for novel methods that verify ownership and detect unauthorized, possibly unsafe misuse. While watermarking is established in other domains, physical policies present a unique challenge: remote detection. Existing methods assume access to the robot's internal state, but auditors are often limited to external observations (e.g., video footage). This ``Physical Observation Gap'' means the watermark must be detected from signals that are noisy, asynchronous, and filtered by unknown system dynamics. We formalize this challenge using the concept of a \\textit{glimpse sequence}, and introduce Colored Noise Coherency (CoNoCo), the first watermarking strategy designed for remote detection. CoNoCo embeds a spectral signal into the robot's motions by leveraging the policy's inherent stochasticity. To show it does not degrade performance, we prove CoNoCo preserves the marginal action distribution. Our experiments demonstrate strong, robust detection across various remote modalities, including motion capture and side-way/top-down video footage, in both simulated and real-world robot experiments. This work provides a necessary step toward protecting intellectual property in robotics, offering the first method for validating the provenance of physical policies non-invasively, using purely remote observations.",
+          "url": "https://arxiv.org/abs/2512.15379v1",
+          "pdf_url": "https://arxiv.org/pdf/2512.15379v1",
+          "published": "2025-12-17T12:28:03Z",
+          "updated": "2025-12-17T12:28:03Z",
+          "categories": [
+            "cs.RO",
+            "cs.CR",
+            "cs.LG",
+            "eess.SY"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2512.06796v2",
+          "title": "db-LaCAM: Fast and Scalable Multi-Robot Kinodynamic Motion Planning with Discontinuity-Bounded Search and Lightweight MAPF",
+          "authors": [
+            "Akmaral Moldagalieva",
+            "Keisuke Okumura",
+            "Amanda Prorok",
+            "Wolfgang H\u00f6nig"
+          ],
+          "abstract": "State-of-the-art multi-robot kinodynamic motion planners struggle to handle more than a few robots due to high computational burden, which limits their scalability and results in slow planning time. In this work, we combine the scalability and speed of modern multi-agent path finding (MAPF) algorithms with the dynamic-awareness of kinodynamic planners to address these limitations. To this end, we propose discontinuity-Bounded LaCAM (db-LaCAM), a planner that utilizes a precomputed set of motion primitives that respect robot dynamics to generate horizon-length motion sequences, while allowing a user-defined discontinuity between successive motions. The planner db-LaCAM is resolution-complete with respect to motion primitives and supports arbitrary robot dynamics. Extensive experiments demonstrate that db-LaCAM scales efficiently to scenarios with up to 50 robots, achieving up to ten times faster runtime compared to state-of-the-art planners, while maintaining comparable solution quality. The approach is validated in both 2D and 3D environments with dynamics such as the unicycle and 3D double integrator. We demonstrate the safe execution of trajectories planned with db-LaCAM in two distinct physical experiments involving teams of flying robots and car-with-trailer robots.",
+          "url": "https://arxiv.org/abs/2512.06796v2",
+          "pdf_url": "https://arxiv.org/pdf/2512.06796v2",
+          "published": "2025-12-07T11:17:10Z",
+          "updated": "2025-12-09T11:50:21Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2511.03100v1",
+          "title": "Scaling Multi-Agent Environment Co-Design with Diffusion Models",
+          "authors": [
+            "Hao Xiang Li",
+            "Michael Amir",
+            "Amanda Prorok"
+          ],
+          "abstract": "The agent-environment co-design paradigm jointly optimises agent policies and environment configurations in search of improved system performance. With application domains ranging from warehouse logistics to windfarm management, co-design promises to fundamentally change how we deploy multi-agent systems. However, current co-design methods struggle to scale. They collapse under high-dimensional environment design spaces and suffer from sample inefficiency when addressing moving targets inherent to joint optimisation. We address these challenges by developing Diffusion Co-Design (DiCoDe), a scalable and sample-efficient co-design framework pushing co-design towards practically relevant settings. DiCoDe incorporates two core innovations. First, we introduce Projected Universal Guidance (PUG), a sampling technique that enables DiCoDe to explore a distribution of reward-maximising environments while satisfying hard constraints such as spatial separation between obstacles. Second, we devise a critic distillation mechanism to share knowledge from the reinforcement learning critic, ensuring that the guided diffusion model adapts to evolving agent policies using a dense and up-to-date learning signal. Together, these improvements lead to superior environment-policy pairs when validated on challenging multi-agent environment co-design benchmarks including warehouse automation, multi-agent pathfinding and wind farm optimisation. Our method consistently exceeds the state-of-the-art, achieving, for example, 39% higher rewards in the warehouse setting with 66% fewer simulation samples. This sets a new standard in agent-environment co-design, and is a stepping stone towards reaping the rewards of co-design in real world domains.",
+          "url": "https://arxiv.org/abs/2511.03100v1",
+          "pdf_url": "https://arxiv.org/pdf/2511.03100v1",
+          "published": "2025-11-05T01:09:40Z",
+          "updated": "2025-11-05T01:09:40Z",
+          "categories": [
+            "cs.LG",
+            "cs.AI",
+            "cs.MA"
+          ],
+          "primary_category": "cs.LG"
+        }
+      ]
     },
     {
       "id": "rasmussen_c",
@@ -6064,8 +6264,121 @@
       "field": "Gaussian processes, Bayesian optimization, probabilistic ML for robotics",
       "institution": "University of Cambridge",
       "website": "https://mlg.eng.cam.ac.uk/carl/",
-      "paper_count": 0,
-      "papers": []
+      "paper_count": 5,
+      "papers": [
+        {
+          "id": "2509.26255v2",
+          "title": "ExoPredicator: Learning Abstract Models of Dynamic Worlds for Robot Planning",
+          "authors": [
+            "Yichao Liang",
+            "Dat Nguyen",
+            "Cambridge Yang",
+            "Tianyang Li",
+            "Joshua B. Tenenbaum",
+            "Carl Edward Rasmussen",
+            "Adrian Weller",
+            "Zenna Tavares",
+            "Tom Silver",
+            "Kevin Ellis"
+          ],
+          "abstract": "Long-horizon embodied planning is challenging because the world does not only change through an agent's actions: exogenous processes (e.g., water heating, dominoes cascading) unfold concurrently with the agent's actions. We propose a framework for abstract world models that jointly learns (i) symbolic state representations and (ii) causal processes for both endogenous actions and exogenous mechanisms. Each causal process models the time course of a stochastic cause-effect relation. We learn these world models from limited data via variational Bayesian inference combined with LLM proposals. Across five simulated tabletop robotics environments, the learned models enable fast planning that generalizes to held-out tasks with more objects and more complex goals, outperforming a range of baselines.",
+          "url": "https://arxiv.org/abs/2509.26255v2",
+          "pdf_url": "https://arxiv.org/pdf/2509.26255v2",
+          "published": "2025-09-30T13:44:34Z",
+          "updated": "2025-10-01T01:58:01Z",
+          "categories": [
+            "cs.AI",
+            "cs.CV",
+            "cs.LG",
+            "cs.RO"
+          ],
+          "primary_category": "cs.AI"
+        },
+        {
+          "id": "2308.14142v2",
+          "title": "Integrated Variational Fourier Features for Fast Spatial Modelling with Gaussian Processes",
+          "authors": [
+            "Talay M Cheema",
+            "Carl Edward Rasmussen"
+          ],
+          "abstract": "Sparse variational approximations are popular methods for scaling up inference and learning in Gaussian processes to larger datasets. For $N$ training points, exact inference has $O(N^3)$ cost; with $M \\ll N$ features, state of the art sparse variational methods have $O(NM^2)$ cost. Recently, methods have been proposed using more sophisticated features; these promise $O(M^3)$ cost, with good performance in low dimensional tasks such as spatial modelling, but they only work with a very limited class of kernels, excluding some of the most commonly used. In this work, we propose integrated Fourier features, which extends these performance benefits to a very broad class of stationary covariance functions. We motivate the method and choice of parameters from a convergence analysis and empirical exploration, and show practical speedup in synthetic and real world spatial regression tasks.",
+          "url": "https://arxiv.org/abs/2308.14142v2",
+          "pdf_url": "https://arxiv.org/pdf/2308.14142v2",
+          "published": "2023-08-27T15:44:28Z",
+          "updated": "2024-04-12T14:31:51Z",
+          "categories": [
+            "stat.ML",
+            "cs.LG"
+          ],
+          "primary_category": "stat.ML"
+        },
+        {
+          "id": "2211.02476v1",
+          "title": "Sparse Gaussian Process Hyperparameters: Optimize or Integrate?",
+          "authors": [
+            "Vidhi Lalchand",
+            "Wessel P. Bruinsma",
+            "David R. Burt",
+            "Carl E. Rasmussen"
+          ],
+          "abstract": "The kernel function and its hyperparameters are the central model selection choice in a Gaussian proces (Rasmussen and Williams, 2006). Typically, the hyperparameters of the kernel are chosen by maximising the marginal likelihood, an approach known as Type-II maximum likelihood (ML-II). However, ML-II does not account for hyperparameter uncertainty, and it is well-known that this can lead to severely biased estimates and an underestimation of predictive uncertainty. While there are several works which employ a fully Bayesian characterisation of GPs, relatively few propose such approaches for the sparse GPs paradigm. In this work we propose an algorithm for sparse Gaussian process regression which leverages MCMC to sample from the hyperparameter posterior within the variational inducing point framework of Titsias (2009). This work is closely related to Hensman et al. (2015b) but side-steps the need to sample the inducing points, thereby significantly improving sampling efficiency in the Gaussian likelihood case. We compare this scheme against natural baselines in literature along with stochastic variational GPs (SVGPs) along with an extensive computational analysis.",
+          "url": "https://arxiv.org/abs/2211.02476v1",
+          "pdf_url": "https://arxiv.org/pdf/2211.02476v1",
+          "published": "2022-11-04T14:06:59Z",
+          "updated": "2022-11-04T14:06:59Z",
+          "categories": [
+            "stat.ML",
+            "cs.LG",
+            "stat.ME"
+          ],
+          "primary_category": "stat.ML"
+        },
+        {
+          "id": "2210.07893v4",
+          "title": "Numerically Stable Sparse Gaussian Processes via Minimum Separation using Cover Trees",
+          "authors": [
+            "Alexander Terenin",
+            "David R. Burt",
+            "Artem Artemev",
+            "Seth Flaxman",
+            "Mark van der Wilk",
+            "Carl Edward Rasmussen",
+            "Hong Ge"
+          ],
+          "abstract": "Gaussian processes are frequently deployed as part of larger machine learning and decision-making systems, for instance in geospatial modeling, Bayesian optimization, or in latent Gaussian models. Within a system, the Gaussian process model needs to perform in a stable and reliable manner to ensure it interacts correctly with other parts of the system. In this work, we study the numerical stability of scalable sparse approximations based on inducing points. To do so, we first review numerical stability, and illustrate typical situations in which Gaussian process models can be unstable. Building on stability theory originally developed in the interpolation literature, we derive sufficient and in certain cases necessary conditions on the inducing points for the computations performed to be numerically stable. For low-dimensional tasks such as geospatial modeling, we propose an automated method for computing inducing points satisfying these conditions. This is done via a modification of the cover tree data structure, which is of independent interest. We additionally propose an alternative sparse approximation for regression with a Gaussian likelihood which trades off a small amount of performance to further improve stability. We provide illustrative examples showing the relationship between stability of calculations and predictive performance of inducing point methods on spatial tasks.",
+          "url": "https://arxiv.org/abs/2210.07893v4",
+          "pdf_url": "https://arxiv.org/pdf/2210.07893v4",
+          "published": "2022-10-14T15:20:17Z",
+          "updated": "2024-01-16T16:37:16Z",
+          "categories": [
+            "stat.ML",
+            "cs.LG"
+          ],
+          "primary_category": "stat.ML"
+        },
+        {
+          "id": "2106.08185v2",
+          "title": "Kernel Identification Through Transformers",
+          "authors": [
+            "Fergus Simpson",
+            "Ian Davies",
+            "Vidhi Lalchand",
+            "Alessandro Vullo",
+            "Nicolas Durrande",
+            "Carl Rasmussen"
+          ],
+          "abstract": "Kernel selection plays a central role in determining the performance of Gaussian Process (GP) models, as the chosen kernel determines both the inductive biases and prior support of functions under the GP prior. This work addresses the challenge of constructing custom kernel functions for high-dimensional GP regression models. Drawing inspiration from recent progress in deep learning, we introduce a novel approach named KITT: Kernel Identification Through Transformers. KITT exploits a transformer-based architecture to generate kernel recommendations in under 0.1 seconds, which is several orders of magnitude faster than conventional kernel search algorithms. We train our model using synthetic data generated from priors over a vocabulary of known kernels. By exploiting the nature of the self-attention mechanism, KITT is able to process datasets with inputs of arbitrary dimension. We demonstrate that kernels chosen by KITT yield strong performance over a diverse collection of regression benchmarks.",
+          "url": "https://arxiv.org/abs/2106.08185v2",
+          "pdf_url": "https://arxiv.org/pdf/2106.08185v2",
+          "published": "2021-06-15T14:32:38Z",
+          "updated": "2021-11-19T17:58:56Z",
+          "categories": [
+            "stat.ML",
+            "cs.LG"
+          ],
+          "primary_category": "stat.ML"
+        }
+      ]
     },
     {
       "id": "iida_f",
@@ -6073,8 +6386,111 @@
       "field": "Bio-inspired robotics, adaptive locomotion, soft robotics",
       "institution": "University of Cambridge",
       "website": "https://mi.eng.cam.ac.uk/Main/FI224",
-      "paper_count": 0,
-      "papers": []
+      "paper_count": 5,
+      "papers": [
+        {
+          "id": "2602.24097v1",
+          "title": "Bi-level RL-Heuristic Optimization for Real-world Winter Road Maintenance",
+          "authors": [
+            "Yue Xie",
+            "Zizhen Xu",
+            "William Beazley",
+            "Fumiya Iida"
+          ],
+          "abstract": "Winter road maintenance is critical for ensuring public safety and reducing environmental impacts, yet existing methods struggle to manage large-scale routing problems effectively and mostly reply on human decision. This study presents a novel, scalable bi-level optimization framework, validated on real operational data on UK strategic road networks (M25, M6, A1), including interconnected local road networks in surrounding areas for vehicle traversing, as part of the highway operator's efforts to solve existing planning challenges. At the upper level, a reinforcement learning (RL) agent strategically partitions the road network into manageable clusters and optimally allocates resources from multiple depots. At the lower level, a multi-objective vehicle routing problem (VRP) is solved within each cluster, minimizing the maximum vehicle travel time and total carbon emissions. Unlike existing approaches, our method handles large-scale, real-world networks efficiently, explicitly incorporating vehicle-specific constraints, depot capacities, and road segment requirements. Results demonstrate significant improvements, including balanced workloads, reduced maximum travel times below the targeted two-hour threshold, lower emissions, and substantial cost savings. This study illustrates how advanced AI-driven bi-level optimization can directly enhance operational decision-making in real-world transportation and logistics.",
+          "url": "https://arxiv.org/abs/2602.24097v1",
+          "pdf_url": "https://arxiv.org/pdf/2602.24097v1",
+          "published": "2026-02-27T15:37:35Z",
+          "updated": "2026-02-27T15:37:35Z",
+          "categories": [
+            "cs.AI"
+          ],
+          "primary_category": "cs.AI"
+        },
+        {
+          "id": "2602.17415v1",
+          "title": "Distributed Virtual Model Control for Scalable Human-Robot Collaboration in Shared Workspace",
+          "authors": [
+            "Yi Zhang",
+            "Omar Faris",
+            "Chapa Sirithunge",
+            "Kai-Fung Chu",
+            "Fumiya Iida",
+            "Fulvio Forni"
+          ],
+          "abstract": "We present a decentralized, agent agnostic, and safety-aware control framework for human-robot collaboration based on Virtual Model Control (VMC). In our approach, both humans and robots are embedded in the same virtual-component-shaped workspace, where motion is the result of the interaction with virtual springs and dampers rather than explicit trajectory planning. A decentralized, force-based stall detector identifies deadlocks, which are resolved through negotiation. This reduces the probability of robots getting stuck in the block placement task from up to 61.2% to zero in our experiments. The framework scales without structural changes thanks to the distributed implementation: in experiments we demonstrate safe collaboration with up to two robots and two humans, and in simulation up to four robots, maintaining inter-agent separation at around 20 cm. Results show that the method shapes robot behavior intuitively by adjusting control parameters and achieves deadlock-free operation across team sizes in all tested scenarios.",
+          "url": "https://arxiv.org/abs/2602.17415v1",
+          "pdf_url": "https://arxiv.org/pdf/2602.17415v1",
+          "published": "2026-02-19T14:45:10Z",
+          "updated": "2026-02-19T14:45:10Z",
+          "categories": [
+            "cs.RO",
+            "eess.SY"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2602.13163v1",
+          "title": "Human Emotion-Mediated Soft Robotic Arts: Exploring the Intersection of Human Emotions, Soft Robotics and Arts",
+          "authors": [
+            "Saitarun Nadipineni",
+            "Chenhao Hong",
+            "Tanishtha Ramlall",
+            "Chapa Sirithunge",
+            "Kaspar Althoefer",
+            "Fumiya Iida",
+            "Thilina Dulantha Lalitharatne"
+          ],
+          "abstract": "Soft robotics has emerged as a versatile field with applications across various domains, from healthcare to industrial automation, and more recently, art and interactive installations. The inherent flexibility, adaptability, and safety of soft robots make them ideal for applications that require delicate, organic, and lifelike movement, allowing for immersive and responsive interactions. This study explores the intersection of human emotions, soft robotics, and art to establish and create new forms of human emotion-mediated soft robotic art. In this paper, we introduce two soft embodiments: a soft character and a soft flower as an art display that dynamically responds to brain signals based on alpha waves, reflecting different emotion levels. We present how human emotions can be measured as alpha waves based on brain/EEG signals, how we map the alpha waves to the dynamic movements of the two soft embodiments, and demonstrate our proposed concept using experiments. The findings of this study highlight how soft robotics can embody human emotional states, offering a new medium for insightful artistic expression and interaction, and demonstrating how art displays can be embodied.",
+          "url": "https://arxiv.org/abs/2602.13163v1",
+          "pdf_url": "https://arxiv.org/pdf/2602.13163v1",
+          "published": "2026-02-13T18:23:35Z",
+          "updated": "2026-02-13T18:23:35Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2510.08368v1",
+          "title": "Co-design is powerful and not free",
+          "authors": [
+            "Yi Zhang",
+            "Yue Xie",
+            "Tao Sun",
+            "Fumiya Iida"
+          ],
+          "abstract": "Robotic performance emerges from the coupling of body and controller, yet it remains unclear when morphology-control co-design is necessary. We present a unified framework that embeds morphology and control parameters within a single neural network, enabling end-to-end joint optimization. Through case studies in static-obstacle-constrained reaching, we evaluate trajectory error, success rate, and collision probability. The results show that co-design provides clear benefits when morphology is poorly matched to the task, such as near obstacles or workspace boundaries, where structural adaptation simplifies control. Conversely, when the baseline morphology already affords sufficient capability, control-only optimization often matches or exceeds co-design. By clarifying when control is enough and when it is not, this work advances the understanding of embodied intelligence and offers practical guidance for embodiment-aware robot design.",
+          "url": "https://arxiv.org/abs/2510.08368v1",
+          "pdf_url": "https://arxiv.org/pdf/2510.08368v1",
+          "published": "2025-10-09T15:52:48Z",
+          "updated": "2025-10-09T15:52:48Z",
+          "categories": [
+            "cs.NE",
+            "cs.RO"
+          ],
+          "primary_category": "cs.NE"
+        },
+        {
+          "id": "2508.02604v2",
+          "title": "Periodic robust robotic rock chop via virtual model control",
+          "authors": [
+            "Yi Zhang",
+            "Fumiya Iida",
+            "Fulvio Forni"
+          ],
+          "abstract": "Robotic cutting is a challenging contact-rich manipulation task where the robot must simultaneously negotiate unknown object mechanics, large contact forces, and precise motion requirements. We introduce a new active virtual-model control scheme that enables knife rocking motion for robot manipulators, without pre-planned trajectories or precise information of the environment. Motion is generated and controlled through switching virtual coupling with virtual mechanisms, given by virtual springs, dampers, and masses arranged in a suitable way. Through analysis and experiments, we demonstrate that the controlled robot behavior settles into a periodic motion. Experiments with a Franka manipulator demonstrate robust cuts with five different vegetables, and sub-millimeter slice accuracy from 1 mm to 6 mm at nearly one cut per second. The same controller survives changes in knife shape and cutting board height, and adaptation to a different humanoid manipulator, demonstrating robustness and platform independence.",
+          "url": "https://arxiv.org/abs/2508.02604v2",
+          "pdf_url": "https://arxiv.org/pdf/2508.02604v2",
+          "published": "2025-08-04T16:56:32Z",
+          "updated": "2026-01-14T16:50:29Z",
+          "categories": [
+            "cs.RO",
+            "eess.SY"
+          ],
+          "primary_category": "cs.RO"
+        }
+      ]
     },
     {
       "id": "finn_c",
@@ -7237,8 +7653,118 @@
       "field": "Robot learning, data-efficient learning, real-world robot deployment",
       "institution": "University of Oxford",
       "website": "https://ori.ox.ac.uk/people/ingmar-posner/",
-      "paper_count": 0,
-      "papers": []
+      "paper_count": 5,
+      "papers": [
+        {
+          "id": "2512.05865v4",
+          "title": "Sparse Attention Post-Training for Mechanistic Interpretability",
+          "authors": [
+            "Florent Draye",
+            "Anson Lei",
+            "Hsiao-Ru Pan",
+            "Ingmar Posner",
+            "Bernhard Sch\u00f6lkopf"
+          ],
+          "abstract": "We introduce a simple post-training method that makes transformer attention sparse without sacrificing performance. Applying a flexible sparsity regularisation under a constrained-loss objective, we show on models up to 7B parameters that it is possible to retain the original pretraining loss while reducing attention connectivity to $\\approx 0.4 \\%$ of its edges. Unlike sparse-attention methods designed for computational efficiency, our approach leverages sparsity as a structural prior: it preserves capability while exposing a more organized and interpretable connectivity pattern. We find that this local sparsity cascades into global circuit simplification: task-specific circuits involve far fewer components (attention heads and MLPs) with up to 100x fewer edges connecting them. Additionally, using cross-layer transcoders, we show that sparse attention substantially simplifies attention attribution, enabling a unified view of feature-based and circuit-based perspectives. These results demonstrate that transformer attention can be made orders of magnitude sparser, suggesting that much of its computation is redundant and that sparsity may serve as a guiding principle for more structured and interpretable models.",
+          "url": "https://arxiv.org/abs/2512.05865v4",
+          "pdf_url": "https://arxiv.org/pdf/2512.05865v4",
+          "published": "2025-12-05T16:40:08Z",
+          "updated": "2026-03-05T16:34:47Z",
+          "categories": [
+            "cs.LG",
+            "cs.AI"
+          ],
+          "primary_category": "cs.LG"
+        },
+        {
+          "id": "2510.07077v1",
+          "title": "Vision-Language-Action Models for Robotics: A Review Towards Real-World Applications",
+          "authors": [
+            "Kento Kawaharazuka",
+            "Jihoon Oh",
+            "Jun Yamada",
+            "Ingmar Posner",
+            "Yuke Zhu"
+          ],
+          "abstract": "Amid growing efforts to leverage advances in large language models (LLMs) and vision-language models (VLMs) for robotics, Vision-Language-Action (VLA) models have recently gained significant attention. By unifying vision, language, and action data at scale, which have traditionally been studied separately, VLA models aim to learn policies that generalise across diverse tasks, objects, embodiments, and environments. This generalisation capability is expected to enable robots to solve novel downstream tasks with minimal or no additional task-specific data, facilitating more flexible and scalable real-world deployment. Unlike previous surveys that focus narrowly on action representations or high-level model architectures, this work offers a comprehensive, full-stack review, integrating both software and hardware components of VLA systems. In particular, this paper provides a systematic review of VLAs, covering their strategy and architectural transition, architectures and building blocks, modality-specific processing techniques, and learning paradigms. In addition, to support the deployment of VLAs in real-world robotic applications, we also review commonly used robot platforms, data collection strategies, publicly available datasets, data augmentation methods, and evaluation benchmarks. Throughout this comprehensive survey, this paper aims to offer practical guidance for the robotics community in applying VLAs to real-world robotic systems. All references categorized by training approach, evaluation method, modality, and dataset are available in the table on our project website: https://vla-survey.github.io .",
+          "url": "https://arxiv.org/abs/2510.07077v1",
+          "pdf_url": "https://arxiv.org/pdf/2510.07077v1",
+          "published": "2025-10-08T14:38:25Z",
+          "updated": "2025-10-08T14:38:25Z",
+          "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV",
+            "cs.LG"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2510.05903v1",
+          "title": "Kaputt: A Large-Scale Dataset for Visual Defect Detection",
+          "authors": [
+            "Sebastian H\u00f6fer",
+            "Dorian Henning",
+            "Artemij Amiranashvili",
+            "Douglas Morrison",
+            "Mariliza Tzes",
+            "Ingmar Posner",
+            "Marc Matvienko",
+            "Alessandro Rennola",
+            "Anton Milan"
+          ],
+          "abstract": "We present a novel large-scale dataset for defect detection in a logistics setting. Recent work on industrial anomaly detection has primarily focused on manufacturing scenarios with highly controlled poses and a limited number of object categories. Existing benchmarks like MVTec-AD [6] and VisA [33] have reached saturation, with state-of-the-art methods achieving up to 99.9% AUROC scores. In contrast to manufacturing, anomaly detection in retail logistics faces new challenges, particularly in the diversity and variability of object pose and appearance. Leading anomaly detection methods fall short when applied to this new setting. To bridge this gap, we introduce a new benchmark that overcomes the current limitations of existing datasets. With over 230,000 images (and more than 29,000 defective instances), it is 40 times larger than MVTec-AD and contains more than 48,000 distinct objects. To validate the difficulty of the problem, we conduct an extensive evaluation of multiple state-of-the-art anomaly detection methods, demonstrating that they do not surpass 56.96% AUROC on our dataset. Further qualitative analysis confirms that existing methods struggle to leverage normal samples under heavy pose and appearance variation. With our large-scale dataset, we set a new benchmark and encourage future research towards solving this challenging problem in retail logistics anomaly detection. The dataset is available for download under https://www.kaputt-dataset.com.",
+          "url": "https://arxiv.org/abs/2510.05903v1",
+          "pdf_url": "https://arxiv.org/pdf/2510.05903v1",
+          "published": "2025-10-07T13:13:18Z",
+          "updated": "2025-10-07T13:13:18Z",
+          "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG"
+          ],
+          "primary_category": "cs.CV"
+        },
+        {
+          "id": "2510.04696v2",
+          "title": "Building Gradient by Gradient: Decentralised Energy Functions for Bimanual Robot Assembly",
+          "authors": [
+            "Alexander L. Mitchell",
+            "Joe Watson",
+            "Ingmar Posner"
+          ],
+          "abstract": "There are many challenges in bimanual assembly, including high-level sequencing, multi-robot coordination, and low-level, contact-rich operations such as component mating. Task and motion planning (TAMP) methods, while effective in this domain, may be prohibitively slow to converge when adapting to disturbances that require new task sequencing and optimisation. These events are common during tight-tolerance assembly, where difficult-to-model dynamics such as friction or deformation require rapid replanning and reattempts. Moreover, defining explicit task sequences for assembly can be cumbersome, limiting flexibility when task replanning is required. To simplify this planning, we introduce a decentralised gradient-based framework that uses a piecewise continuous energy function through the automatic composition of adaptive potential functions. This approach generates sub-goals using only myopic optimisation, rather than long-horizon planning. It demonstrates effectiveness at solving long-horizon tasks due to the structure and adaptivity of the energy function. We show that our approach scales to physical bimanual assembly tasks for constructing tight-tolerance assemblies. In these experiments, we discover that our gradient-based rapid replanning framework generates automatic retries, coordinated motions and autonomous handovers in an emergent fashion.",
+          "url": "https://arxiv.org/abs/2510.04696v2",
+          "pdf_url": "https://arxiv.org/pdf/2510.04696v2",
+          "published": "2025-10-06T11:10:11Z",
+          "updated": "2025-12-08T11:05:46Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2509.25174v1",
+          "title": "XQC: Well-conditioned Optimization Accelerates Deep Reinforcement Learning",
+          "authors": [
+            "Daniel Palenicek",
+            "Florian Vogt",
+            "Joe Watson",
+            "Ingmar Posner",
+            "Jan Peters"
+          ],
+          "abstract": "Sample efficiency is a central property of effective deep reinforcement learning algorithms. Recent work has improved this through added complexity, such as larger models, exotic network architectures, and more complex algorithms, which are typically motivated purely by empirical performance. We take a more principled approach by focusing on the optimization landscape of the critic network. Using the eigenspectrum and condition number of the critic's Hessian, we systematically investigate the impact of common architectural design decisions on training dynamics. Our analysis reveals that a novel combination of batch normalization (BN), weight normalization (WN), and a distributional cross-entropy (CE) loss produces condition numbers orders of magnitude smaller than baselines. This combination also naturally bounds gradient norms, a property critical for maintaining a stable effective learning rate under non-stationary targets and bootstrapping. Based on these insights, we introduce XQC: a well-motivated, sample-efficient deep actor-critic algorithm built upon soft actor-critic that embodies these optimization-aware principles. We achieve state-of-the-art sample efficiency across 55 proprioception and 15 vision-based continuous control tasks, all while using significantly fewer parameters than competing methods.",
+          "url": "https://arxiv.org/abs/2509.25174v1",
+          "pdf_url": "https://arxiv.org/pdf/2509.25174v1",
+          "published": "2025-09-29T17:58:53Z",
+          "updated": "2025-09-29T17:58:53Z",
+          "categories": [
+            "cs.LG",
+            "cs.AI"
+          ],
+          "primary_category": "cs.LG"
+        }
+      ]
     },
     {
       "id": "havoutis_i",
@@ -7246,8 +7772,112 @@
       "field": "Legged robotics, machine learning for locomotion and control, sim-to-real",
       "institution": "University of Oxford",
       "website": "https://ori.ox.ac.uk/people/ioannis-havoutis/",
-      "paper_count": 0,
-      "papers": []
+      "paper_count": 5,
+      "papers": [
+        {
+          "id": "2602.16005v1",
+          "title": "ODYN: An All-Shifted Non-Interior-Point Method for Quadratic Programming in Robotics and AI",
+          "authors": [
+            "Jose Rojas",
+            "Aristotelis Papatheodorou",
+            "Sergi Martinez",
+            "Ioannis Havoutis",
+            "Carlos Mastalli"
+          ],
+          "abstract": "We introduce ODYN, a novel all-shifted primal-dual non-interior-point quadratic programming (QP) solver designed to efficiently handle challenging dense and sparse QPs. ODYN combines all-shifted nonlinear complementarity problem (NCP) functions with proximal method of multipliers to robustly address ill-conditioned and degenerate problems, without requiring linear independence of the constraints. It exhibits strong warm-start performance and is well suited to both general-purpose optimization, and robotics and AI applications, including model-based control, estimation, and kernel-based learning methods. We provide an open-source implementation and benchmark ODYN on the Maros-M\u00e9sz\u00e1ros test set, demonstrating state-of-the-art convergence performance in small-to-high-scale problems. The results highlight ODYN's superior warm-starting capabilities, which are critical in sequential and real-time settings common in robotics and AI. These advantages are further demonstrated by deploying ODYN as the backend of an SQP-based predictive control framework (OdynSQP), as the implicitly differentiable optimization layer for deep learning (ODYNLayer), and the optimizer of a contact-dynamics simulation (ODYNSim).",
+          "url": "https://arxiv.org/abs/2602.16005v1",
+          "pdf_url": "https://arxiv.org/pdf/2602.16005v1",
+          "published": "2026-02-17T20:52:32Z",
+          "updated": "2026-02-17T20:52:32Z",
+          "categories": [
+            "cs.RO",
+            "cs.AI"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2601.22891v1",
+          "title": "PlatoLTL: Learning to Generalize Across Symbols in LTL Instructions for Multi-Task RL",
+          "authors": [
+            "Jacques Cloete",
+            "Mathias Jackermeier",
+            "Ioannis Havoutis",
+            "Alessandro Abate"
+          ],
+          "abstract": "A central challenge in multi-task reinforcement learning (RL) is to train generalist policies capable of performing tasks not seen during training. To facilitate such generalization, linear temporal logic (LTL) has recently emerged as a powerful formalism for specifying structured, temporally extended tasks to RL agents. While existing approaches to LTL-guided multi-task RL demonstrate successful generalization across LTL specifications, they are unable to generalize to unseen vocabularies of propositions (or \"symbols\"), which describe high-level events in LTL. We present PlatoLTL, a novel approach that enables policies to zero-shot generalize not only compositionally across LTL formula structures, but also parametrically across propositions. We achieve this by treating propositions as instances of parameterized predicates rather than discrete symbols, allowing policies to learn shared structure across related propositions. We propose a novel architecture that embeds and composes predicates to represent LTL specifications, and demonstrate successful zero-shot generalization to novel propositions and tasks across challenging environments.",
+          "url": "https://arxiv.org/abs/2601.22891v1",
+          "pdf_url": "https://arxiv.org/pdf/2601.22891v1",
+          "published": "2026-01-30T12:11:55Z",
+          "updated": "2026-01-30T12:11:55Z",
+          "categories": [
+            "cs.LG"
+          ],
+          "primary_category": "cs.LG"
+        },
+        {
+          "id": "2512.19178v1",
+          "title": "Vision-Language-Policy Model for Dynamic Robot Task Planning",
+          "authors": [
+            "Jin Wang",
+            "Kim Tien Ly",
+            "Jacques Cloete",
+            "Nikos Tsagarakis",
+            "Ioannis Havoutis"
+          ],
+          "abstract": "Bridging the gap between natural language commands and autonomous execution in unstructured environments remains an open challenge for robotics. This requires robots to perceive and reason over the current task scene through multiple modalities, and to plan their behaviors to achieve their intended goals. Traditional robotic task-planning approaches often struggle to bridge low-level execution with high-level task reasoning, and cannot dynamically update task strategies when instructions change during execution, which ultimately limits their versatility and adaptability to new tasks. In this work, we propose a novel language model-based framework for dynamic robot task planning. Our Vision-Language-Policy (VLP) model, based on a vision-language model fine-tuned on real-world data, can interpret semantic instructions and integrate reasoning over the current task scene to generate behavior policies that control the robot to accomplish the task. Moreover, it can dynamically adjust the task strategy in response to changes in the task, enabling flexible adaptation to evolving task requirements. Experiments conducted with different robots and a variety of real-world tasks show that the trained model can efficiently adapt to novel scenarios and dynamically update its policy, demonstrating strong planning autonomy and cross-embodiment generalization. Videos: https://robovlp.github.io/",
+          "url": "https://arxiv.org/abs/2512.19178v1",
+          "pdf_url": "https://arxiv.org/pdf/2512.19178v1",
+          "published": "2025-12-22T09:12:48Z",
+          "updated": "2025-12-22T09:12:48Z",
+          "categories": [
+            "cs.RO",
+            "cs.AI"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2512.15476v1",
+          "title": "QuantGraph: A Receding-Horizon Quantum Graph Solver",
+          "authors": [
+            "Pranav Vaidhyanathan",
+            "Aristotelis Papatheodorou",
+            "David R. M. Arvidsson-Shukur",
+            "Mark T. Mitchison",
+            "Natalia Ares",
+            "Ioannis Havoutis"
+          ],
+          "abstract": "Dynamic programming is a cornerstone of graph-based optimization. While effective, it scales unfavorably with problem size. In this work, we present QuantGraph, a two-stage quantum-enhanced framework that casts local and global graph-optimization problems as quantum searches over discrete trajectory spaces. The solver is designed to operate efficiently by first finding a sequence of locally optimal transitions in the graph (local stage), without considering full trajectories. The accumulated cost of these transitions acts as a threshold that prunes the search space (up to 60% reduction for certain examples). The subsequent global stage, based on this threshold, refines the solution. Both stages utilize variants of the Grover-adaptive-search algorithm. To achieve scalability and robustness, we draw on principles from control theory and embed QuantGraph's global stage within a receding-horizon model-predictive-control scheme. This classical layer stabilizes and guides the quantum search, improving precision and reducing computational burden. In practice, the resulting closed-loop system exhibits robust behavior and lower overall complexity. Notably, for a fixed query budget, QuantGraph attains a 2x increase in control-discretization precision while still benefiting from Grover-search's inherent quadratic speedup compared to classical methods.",
+          "url": "https://arxiv.org/abs/2512.15476v1",
+          "pdf_url": "https://arxiv.org/pdf/2512.15476v1",
+          "published": "2025-12-17T14:22:08Z",
+          "updated": "2025-12-17T14:22:08Z",
+          "categories": [
+            "quant-ph",
+            "cs.RO",
+            "eess.SY",
+            "physics.comp-ph"
+          ],
+          "primary_category": "quant-ph"
+        },
+        {
+          "id": "2510.07094v1",
+          "title": "Sampling Strategies for Robust Universal Quadrupedal Locomotion Policies",
+          "authors": [
+            "David Rytz",
+            "Kim Tien Ly",
+            "Ioannis Havoutis"
+          ],
+          "abstract": "This work focuses on sampling strategies of configuration variations for generating robust universal locomotion policies for quadrupedal robots. We investigate the effects of sampling physical robot parameters and joint proportional-derivative gains to enable training a single reinforcement learning policy that generalizes to multiple parameter configurations. Three fundamental joint gain sampling strategies are compared: parameter sampling with (1) linear and polynomial function mappings of mass-to-gains, (2) performance-based adaptive filtering, and (3) uniform random sampling. We improve the robustness of the policy by biasing the configurations using nominal priors and reference models. All training was conducted on RaiSim, tested in simulation on a range of diverse quadrupeds, and zero-shot deployed onto hardware using the ANYmal quadruped robot. Compared to multiple baseline implementations, our results demonstrate the need for significant joint controller gains randomization for robust closing of the sim-to-real gap.",
+          "url": "https://arxiv.org/abs/2510.07094v1",
+          "pdf_url": "https://arxiv.org/pdf/2510.07094v1",
+          "published": "2025-10-08T14:51:42Z",
+          "updated": "2025-10-08T14:51:42Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        }
+      ]
     },
     {
       "id": "maiolino_p",
@@ -7255,8 +7885,111 @@
       "field": "Tactile sensing, soft robotics, robot manipulation",
       "institution": "University of Oxford",
       "website": "https://ori.ox.ac.uk/people/perla-maiolino/",
-      "paper_count": 0,
-      "papers": []
+      "paper_count": 5,
+      "papers": [
+        {
+          "id": "2602.07209v1",
+          "title": "Continuum Robot Localization using Distributed Time-of-Flight Sensors",
+          "authors": [
+            "Spencer Teetaert",
+            "Giammarco Caroleo",
+            "Marco Pontin",
+            "Sven Lilge",
+            "Jessica Burgner-Kahrs",
+            "Timothy D. Barfoot",
+            "Perla Maiolino"
+          ],
+          "abstract": "Localization and mapping of an environment are crucial tasks for any robot operating in unstructured environments. Time-of-flight (ToF) sensors (e.g.,~lidar) have proven useful in mobile robotics, where high-resolution sensors can be used for simultaneous localization and mapping. In soft and continuum robotics, however, these high-resolution sensors are too large for practical use. This, combined with the deformable nature of such robots, has resulted in continuum robot (CR) localization and mapping in unstructured environments being a largely untouched area. In this work, we present a localization technique for CRs that relies on small, low-resolution ToF sensors distributed along the length of the robot. By fusing measurement information with a robot shape prior, we show that accurate localization is possible despite each sensor experiencing frequent degenerate scenarios. We achieve an average localization error of 2.5cm in position and 7.2\u00b0 in rotation across all experimental conditions with a 53cm long robot. We demonstrate that the results are repeated across multiple environments, in both simulation and real-world experiments, and study robustness in the estimation to deviations in the prior map.",
+          "url": "https://arxiv.org/abs/2602.07209v1",
+          "pdf_url": "https://arxiv.org/pdf/2602.07209v1",
+          "published": "2026-02-06T21:42:37Z",
+          "updated": "2026-02-06T21:42:37Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2601.13250v1",
+          "title": "Diffusion-based Inverse Model of a Distributed Tactile Sensor for Object Pose Estimation",
+          "authors": [
+            "Ante Mari\u0107",
+            "Giammarco Caroleo",
+            "Alessandro Albini",
+            "Julius Jankowski",
+            "Perla Maiolino",
+            "Sylvain Calinon"
+          ],
+          "abstract": "Tactile sensing provides a promising sensing modality for object pose estimation in manipulation settings where visual information is limited due to occlusion or environmental effects. However, efficiently leveraging tactile data for estimation remains a challenge due to partial observability, with single observations corresponding to multiple possible contact configurations. This limits conventional estimation approaches largely tailored to vision. We propose to address these challenges by learning an inverse tactile sensor model using denoising diffusion. The model is conditioned on tactile observations from a distributed tactile sensor and trained in simulation using a geometric sensor model based on signed distance fields. Contact constraints are enforced during inference through single-step projection using distance and gradient information from the signed distance field. For online pose estimation, we integrate the inverse model with a particle filter through a proposal scheme that combines generated hypotheses with particles from the prior belief. Our approach is validated in simulated and real-world planar pose estimation settings, without access to visual data or tight initial pose priors. We further evaluate robustness to unmodeled contact and sensor dynamics for pose tracking in a box-pushing scenario. Compared to local sampling baselines, the inverse sensor model improves sampling efficiency and estimation accuracy while preserving multimodal beliefs across objects with varying tactile discriminability.",
+          "url": "https://arxiv.org/abs/2601.13250v1",
+          "pdf_url": "https://arxiv.org/pdf/2601.13250v1",
+          "published": "2026-01-19T17:36:28Z",
+          "updated": "2026-01-19T17:36:28Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2510.10804v1",
+          "title": "Representing Data in Robotic Tactile Perception -- A Review",
+          "authors": [
+            "Alessandro Albini",
+            "Mohsen Kaboli",
+            "Giorgio Cannata",
+            "Perla Maiolino"
+          ],
+          "abstract": "Robotic tactile perception is a complex process involving several computational steps performed at different levels. Tactile information is shaped by the interplay of robot actions, the mechanical properties of its body, and the software that processes the data. In this respect, high-level computation, required to process and extract information, is commonly performed by adapting existing techniques from other domains, such as computer vision, which expects input data to be properly structured. Therefore, it is necessary to transform tactile sensor data to match a specific data structure. This operation directly affects the tactile information encoded and, as a consequence, the task execution. This survey aims to address this specific aspect of the tactile perception pipeline, namely Data Representation. The paper first clearly defines its contributions to the perception pipeline and then reviews how previous studies have dealt with the problem of representing tactile information, investigating the relationships among hardware, representations, and high-level computation methods. The analysis has led to the identification of six structures commonly used in the literature to represent data. The manuscript provides discussions and guidelines for properly selecting a representation depending on operating conditions, including the available hardware, the tactile information required to be encoded, and the task at hand.",
+          "url": "https://arxiv.org/abs/2510.10804v1",
+          "pdf_url": "https://arxiv.org/pdf/2510.10804v1",
+          "published": "2025-10-12T20:48:35Z",
+          "updated": "2025-10-12T20:48:35Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2508.04338v1",
+          "title": "Improving Tactile Gesture Recognition with Optical Flow",
+          "authors": [
+            "Shaohong Zhong",
+            "Alessandro Albini",
+            "Giammarco Caroleo",
+            "Giorgio Cannata",
+            "Perla Maiolino"
+          ],
+          "abstract": "Tactile gesture recognition systems play a crucial role in Human-Robot Interaction (HRI) by enabling intuitive communication between humans and robots. The literature mainly addresses this problem by applying machine learning techniques to classify sequences of tactile images encoding the pressure distribution generated when executing the gestures. However, some gestures can be hard to differentiate based on the information provided by tactile images alone. In this paper, we present a simple yet effective way to improve the accuracy of a gesture recognition classifier. Our approach focuses solely on processing the tactile images used as input by the classifier. In particular, we propose to explicitly highlight the dynamics of the contact in the tactile image by computing the dense optical flow. This additional information makes it easier to distinguish between gestures that produce similar tactile images but exhibit different contact dynamics. We validate the proposed approach in a tactile gesture recognition task, showing that a classifier trained on tactile images augmented with optical flow information achieved a 9% improvement in gesture classification accuracy compared to one trained on standard tactile images.",
+          "url": "https://arxiv.org/abs/2508.04338v1",
+          "pdf_url": "https://arxiv.org/pdf/2508.04338v1",
+          "published": "2025-08-06T11:33:21Z",
+          "updated": "2025-08-06T11:33:21Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2506.22472v1",
+          "title": "Optical Waveguide-based Spider Web Enables Resilient Impact Detection and Localization",
+          "authors": [
+            "Dylan Wilson",
+            "Marco Pontin",
+            "Peter Walters",
+            "Perla Maiolino"
+          ],
+          "abstract": "Spiders use their webs as multifunctional tools that enable capturing and localizing prey and more general environmental sensing through vibrations. Inspired by their biological function, we present a spider web-inspired optical waveguide system for resilient impulse detection and localization. The structure consists of six clear thermoplastic polyurethane (TPU) waveguides arranged radially and interconnected by a spiral TPU thread, mimicking orb spider webs. Light transmission losses, induced by vibrations, are measured via coupled LEDs and photo-diodes, allowing real-time detection. We systematically characterize individual waveguides, analyzing key parameters such as tension, impulse position, and break angle to optimize vibrational response. The complete system is validated through controlled experiments, revealing a 5 ms propagation delay in vibration transfer between adjacent radii, enhancing localization capabilities. We demonstrate a robust impulse detection and localization algorithm leveraging time delay analysis, achieving reliable event identification even in cases of sensor failure. This study highlights the potential of bioinspired optical waveguide structures for adaptive sensing, with applications in soft robotics, structural monitoring, and environmental sensing.",
+          "url": "https://arxiv.org/abs/2506.22472v1",
+          "pdf_url": "https://arxiv.org/pdf/2506.22472v1",
+          "published": "2025-06-20T12:36:26Z",
+          "updated": "2025-06-20T12:36:26Z",
+          "categories": [
+            "eess.SP",
+            "cs.RO"
+          ],
+          "primary_category": "eess.SP"
+        }
+      ]
     },
     {
       "id": "seita_d",
