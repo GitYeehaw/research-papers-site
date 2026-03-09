@@ -90,7 +90,7 @@ export default function Navbar() {
       {/* Mobile menu */}
       {mobileOpen && (
         <div
-          className="md:hidden"
+          className="md:hidden mobile-menu-enter"
           style={{
             borderTop: "1px solid var(--border)",
             background: "rgba(14,14,26,0.9)",
@@ -98,12 +98,13 @@ export default function Navbar() {
           }}
         >
           <div className="px-4 pt-3 pb-4 space-y-1">
-            {NAV_ITEMS.map((item) => (
+            {NAV_ITEMS.map((item, i) => (
               <Link
                 key={item.href}
                 href={item.href}
                 onClick={() => setMobileOpen(false)}
                 className={`nav-link block ${pathname === item.href ? "active" : ""}`}
+                style={{ animationDelay: `${i * 30}ms`, animation: "cardFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) both" }}
               >
                 {item.label}
               </Link>

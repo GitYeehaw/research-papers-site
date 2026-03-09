@@ -1,6 +1,7 @@
 import { getResearchersData } from "@/lib/data";
 import { Researcher } from "@/types";
 import ResearcherCard from "@/components/ResearcherCard";
+import ScrollFadeIn from "@/components/ScrollFadeIn";
 
 export const metadata = {
   title: "Researchers — Research Papers",
@@ -39,38 +40,40 @@ export default function ResearchersPage() {
 
   return (
     <div>
-      <div className="pt-6 mb-10">
-        <h1
-          className="text-4xl mb-3"
-          style={{
-            fontFamily: "var(--font-heading)",
-            color: "var(--cultured)",
-            fontWeight: 400,
-          }}
-        >
-          Researchers
-        </h1>
-        <p className="section-desc">
-          Tracked principal investigators and their latest work.
-        </p>
-        <div
-          className="flex items-center gap-4 text-xs tracking-wider uppercase"
-          style={{
-            color: "var(--text-muted)",
-            fontFamily: "var(--font-mono)",
-            letterSpacing: "0.1em",
-          }}
-        >
-          <span>{data.researcher_count} researchers</span>
-          {scrapeDate && (
-            <>
-              <span style={{ color: "var(--border-hover)" }}>&bull;</span>
-              <span>Updated: {scrapeDate}</span>
-            </>
-          )}
+      <ScrollFadeIn>
+        <div className="pt-6 mb-10">
+          <h1
+            className="text-4xl mb-3"
+            style={{
+              fontFamily: "var(--font-heading)",
+              color: "var(--cultured)",
+              fontWeight: 400,
+            }}
+          >
+            Researchers
+          </h1>
+          <p className="section-desc">
+            Tracked principal investigators and their latest work.
+          </p>
+          <div
+            className="flex items-center gap-4 text-xs tracking-wider uppercase"
+            style={{
+              color: "var(--text-muted)",
+              fontFamily: "var(--font-mono)",
+              letterSpacing: "0.1em",
+            }}
+          >
+            <span>{data.researcher_count} researchers</span>
+            {scrapeDate && (
+              <>
+                <span style={{ color: "var(--border-hover)" }}>&bull;</span>
+                <span>Updated: {scrapeDate}</span>
+              </>
+            )}
+          </div>
+          <div className="divider" />
         </div>
-        <div className="divider" />
-      </div>
+      </ScrollFadeIn>
 
       {data.researchers.length === 0 ? (
         <div className="text-center py-20" style={{ color: "var(--text-muted)" }}>
@@ -87,37 +90,39 @@ export default function ResearchersPage() {
       ) : (
         <div style={{ display: "flex", flexDirection: "column", gap: "3rem" }}>
           {institutions.map((institution, i) => (
-            <div key={institution}>
-              <h2
-                style={{
-                  fontFamily: "var(--font-heading)",
-                  fontSize: "1.4rem",
-                  color: "var(--cultured)",
-                  fontWeight: 400,
-                  marginBottom: "1rem",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "10px",
-                }}
-              >
-                <span
+            <ScrollFadeIn key={institution} delay={Math.min(i * 60, 300)}>
+              <div>
+                <h2
                   style={{
-                    width: "8px",
-                    height: "8px",
-                    borderRadius: "50%",
-                    backgroundColor: INSTITUTION_COLORS[i % INSTITUTION_COLORS.length],
-                    boxShadow: `0 0 8px ${INSTITUTION_COLORS[i % INSTITUTION_COLORS.length]}60`,
-                    flexShrink: 0,
+                    fontFamily: "var(--font-heading)",
+                    fontSize: "1.4rem",
+                    color: "var(--cultured)",
+                    fontWeight: 400,
+                    marginBottom: "1rem",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "10px",
                   }}
-                />
-                {institution}
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {byInstitution[institution].map((researcher) => (
-                  <ResearcherCard key={researcher.id} researcher={researcher} />
-                ))}
+                >
+                  <span
+                    style={{
+                      width: "8px",
+                      height: "8px",
+                      borderRadius: "50%",
+                      backgroundColor: INSTITUTION_COLORS[i % INSTITUTION_COLORS.length],
+                      boxShadow: `0 0 8px ${INSTITUTION_COLORS[i % INSTITUTION_COLORS.length]}60`,
+                      flexShrink: 0,
+                    }}
+                  />
+                  {institution}
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {byInstitution[institution].map((researcher) => (
+                    <ResearcherCard key={researcher.id} researcher={researcher} />
+                  ))}
+                </div>
               </div>
-            </div>
+            </ScrollFadeIn>
           ))}
         </div>
       )}

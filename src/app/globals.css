@@ -62,6 +62,10 @@
     --font-mono: 'JetBrains Mono', monospace;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   * {
     scrollbar-width: thin;
     scrollbar-color: var(--border-hover) var(--bg);
@@ -88,6 +92,13 @@
 
   main {
     animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  /* Keyboard focus ring */
+  :focus-visible {
+    outline: 2px solid rgba(0,102,204,0.6);
+    outline-offset: 2px;
+    border-radius: 4px;
   }
 }
 
@@ -161,8 +172,23 @@
     text-decoration: none;
     padding: 6px 14px;
     border-radius: 100px;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: color 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                background 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     font-family: var(--font-body);
+    position: relative;
+  }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    width: 0;
+    height: 1.5px;
+    background: var(--blue);
+    border-radius: 1px;
+    transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                left 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
   .nav-link:hover {
     color: var(--cultured);
@@ -172,6 +198,10 @@
   .nav-link.active {
     color: var(--blue);
     background: rgba(0,102,204,0.08);
+  }
+  .nav-link.active::after {
+    width: 12px;
+    left: calc(50% - 6px);
   }
 
   .card {
@@ -228,10 +258,14 @@
     border: 1px solid var(--border);
     backdrop-filter: blur(16px);
     @apply rounded-2xl p-6;
-    transition: all 0.3s;
+    transition: background 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
   .stat-card:hover {
     background: var(--card-hover);
+    border-color: var(--border-hover);
+    transform: translateY(-2px);
   }
 
   .category-badge {
@@ -244,11 +278,14 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
     border-radius: 100px;
-    transition: all 0.3s;
+    transition: background 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+                color 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   }
   .category-badge:hover {
-    background: rgba(230,230,230,0.1);
-    color: rgba(230,230,230,0.6);
+    background: rgba(230,230,230,0.12);
+    color: rgba(230,230,230,0.7);
+    transform: translateY(-1px);
   }
 
   .section-desc {
@@ -370,13 +407,16 @@
   text-decoration: none;
   border-bottom: 1px solid transparent;
   padding-bottom: 1px;
-  transition: filter 0.2s, border-color 0.2s;
+  transition: filter 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .researcher-name-link::after {
   content: ' \2197';
   font-size: 0.7em;
   opacity: 0;
-  transition: opacity 0.2s;
+  display: inline-block;
+  transform: translateX(-2px) translateY(2px);
+  transition: opacity 0.25s, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .researcher-name-link:hover {
   filter: brightness(1.25);
@@ -384,10 +424,11 @@
 }
 .researcher-name-link:hover::after {
   opacity: 0.7;
+  transform: translateX(0) translateY(0);
 }
 .paper-title-link {
   color: var(--text-secondary);
-  transition: color 0.15s;
+  transition: color 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .paper-title-link:hover {
   color: var(--text-primary);
@@ -472,6 +513,48 @@
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+/* ── Mobile menu animation ── */
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.mobile-menu-enter {
+  animation: slideDown 0.25s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ── Abstract fade mask ── */
+.abstract-mask {
+  position: relative;
+}
+.abstract-mask.collapsed::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2.5em;
+  background: linear-gradient(to bottom, transparent, var(--card-bg));
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+/* ── Card stagger entrance ── */
+@keyframes cardFadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.card-stagger {
+  animation: cardFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ── Filter transition ── */
+.paper-grid-animated {
+  transition: opacity 0.2s ease;
+}
+.paper-grid-animated.filtering {
+  opacity: 0.4;
 }
 
 /* MathJax overflow fix */

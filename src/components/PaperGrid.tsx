@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback, useRef } from "react";
 import { Paper } from "@/types";
 import PaperCard from "./PaperCard";
 
@@ -12,6 +12,17 @@ interface PaperGridProps {
 export default function PaperGrid({ papers, emptyMessage = "No papers found." }: PaperGridProps) {
   const subcategories = Array.from(new Set(papers.map((p) => p.primary_category).filter(Boolean))).sort();
   const [activeFilter, setActiveFilter] = useState<string | null>(null);
+  const [animating, setAnimating] = useState(false);
+  const gridRef = useRef<HTMLDivElement>(null);
+
+  const handleFilter = useCallback((filter: string | null) => {
+    if (filter === activeFilter) return;
+    setAnimating(true);
+    setTimeout(() => {
+      setActiveFilter(filter);
+      setAnimating(false);
+    }, 150);
+  }, [activeFilter]);
 
   if (papers.length === 0) {
     return (
@@ -45,7 +56,7 @@ export default function PaperGrid({ papers, emptyMessage = "No papers found." }:
           style={{ fontFamily: "var(--font-mono)" }}
         >
           <button
-            onClick={() => setActiveFilter(null)}
+            onClick={() => handleFilter(null)}
             style={{
               fontSize: "0.6rem",
               letterSpacing: "0.1em",
@@ -57,7 +68,7 @@ export default function PaperGrid({ papers, emptyMessage = "No papers found." }:
               color: activeFilter === null ? "var(--blue)" : "var(--text-muted)",
               background: activeFilter === null ? "rgba(0,102,204,0.08)" : "transparent",
               cursor: "pointer",
-              transition: "all 0.15s ease",
+              transition: "all 0.25s cubic-bezier(0.16, 1, 0.3, 1)",
             }}
           >
             All
@@ -65,7 +76,7 @@ export default function PaperGrid({ papers, emptyMessage = "No papers found." }:
           {subcategories.map((sub) => (
             <button
               key={sub}
-              onClick={() => setActiveFilter(sub === activeFilter ? null : sub)}
+              onClick={() => handleFilter(sub === activeFilter ? null : sub)}
               style={{
                 fontSize: "0.6rem",
                 letterSpacing: "0.1em",
@@ -77,7 +88,7 @@ export default function PaperGrid({ papers, emptyMessage = "No papers found." }:
                 color: activeFilter === sub ? "var(--blue)" : "var(--text-muted)",
                 background: activeFilter === sub ? "rgba(0,102,204,0.08)" : "transparent",
                 cursor: "pointer",
-                transition: "all 0.15s ease",
+                transition: "all 0.25s cubic-bezier(0.16, 1, 0.3, 1)",
               }}
             >
               {sub}
@@ -85,9 +96,19 @@ export default function PaperGrid({ papers, emptyMessage = "No papers found." }:
           ))}
         </div>
       )}
-      <div className="grid gap-4" style={{ minWidth: 0 }}>
-        {filtered.map((paper) => (
-          <PaperCard key={paper.id} paper={paper} />
+      <div
+        ref={gridRef}
+        className={`grid gap-4 paper-grid-animated ${animating ? "filtering" : ""}`}
+        style={{ minWidth: 0 }}
+      >
+        {filtered.map((paper, i) => (
+          <div
+            key={paper.id}
+            className="card-stagger"
+            style={{ animationDelay: `${Math.min(i * 40, 300)}ms` }}
+          >
+            <PaperCard paper={paper} />
+          </div>
         ))}
       </div>
       {filtered.length === 0 && (

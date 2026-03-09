@@ -1,5 +1,6 @@
 import { CategoryData } from "@/types";
 import PaperGrid from "./PaperGrid";
+import ScrollFadeIn from "./ScrollFadeIn";
 
 interface ResearchPageProps {
   data: CategoryData;
@@ -21,37 +22,41 @@ export default function ResearchPage({ data }: ResearchPageProps) {
 
   return (
     <div>
-      <div className="pt-6 mb-10">
-        <h1
-          className="text-4xl mb-3"
-          style={{
-            fontFamily: "var(--font-heading)",
-            color: "var(--cultured)",
-            fontWeight: 400,
-          }}
-        >
-          {data.name}
-        </h1>
-        <p className="section-desc">{data.description}</p>
-        <div
-          className="flex items-center gap-4 text-xs tracking-wider uppercase"
-          style={{
-            color: "var(--text-muted)",
-            fontFamily: "var(--font-mono)",
-            letterSpacing: "0.1em",
-          }}
-        >
-          <span>{data.paper_count} papers</span>
-          <span style={{ color: "var(--border-hover)" }}>&bull;</span>
-          <span>Collected: {formattedDate}</span>
+      <ScrollFadeIn>
+        <div className="pt-6 mb-10">
+          <h1
+            className="text-4xl mb-3"
+            style={{
+              fontFamily: "var(--font-heading)",
+              color: "var(--cultured)",
+              fontWeight: 400,
+            }}
+          >
+            {data.name}
+          </h1>
+          <p className="section-desc">{data.description}</p>
+          <div
+            className="flex items-center gap-4 text-xs tracking-wider uppercase"
+            style={{
+              color: "var(--text-muted)",
+              fontFamily: "var(--font-mono)",
+              letterSpacing: "0.1em",
+            }}
+          >
+            <span>{data.paper_count} papers</span>
+            <span style={{ color: "var(--border-hover)" }}>&bull;</span>
+            <span>Collected: {formattedDate}</span>
+          </div>
+          <div className="divider" />
         </div>
-        <div className="divider" />
-      </div>
+      </ScrollFadeIn>
 
-      <PaperGrid
-        papers={data.papers}
-        emptyMessage={`No ${data.name.toLowerCase()} papers found yet.`}
-      />
+      <ScrollFadeIn delay={100}>
+        <PaperGrid
+          papers={data.papers}
+          emptyMessage={`No ${data.name.toLowerCase()} papers found yet.`}
+        />
+      </ScrollFadeIn>
     </div>
   );
 }

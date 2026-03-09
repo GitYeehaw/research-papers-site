@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import ScrollFadeIn from "@/components/ScrollFadeIn";
 
 interface Project {
   title: string;
@@ -257,24 +258,28 @@ function CompletedCard({ project }: { project: Project }) {
 export default function ProjectsPage() {
   return (
     <div>
-      <div className="pt-6 mb-12">
-        <h1
-          className="text-4xl mb-3"
-          style={{
-            fontFamily: "var(--font-heading)",
-            color: "var(--cultured)",
-            fontWeight: 400,
-          }}
-        >
-          Projects
-        </h1>
-        <div className="divider" />
-      </div>
+      <ScrollFadeIn>
+        <div className="pt-6 mb-12">
+          <h1
+            className="text-4xl mb-3"
+            style={{
+              fontFamily: "var(--font-heading)",
+              color: "var(--cultured)",
+              fontWeight: 400,
+            }}
+          >
+            Projects
+          </h1>
+          <div className="divider" />
+        </div>
+      </ScrollFadeIn>
 
       {/* Ongoing */}
       <div className="grid gap-6 md:grid-cols-2">
-        {ongoingProjects.map((project) => (
-          <OngoingCard key={project.title} project={project} />
+        {ongoingProjects.map((project, i) => (
+          <ScrollFadeIn key={project.title} delay={i * 80}>
+            <OngoingCard project={project} />
+          </ScrollFadeIn>
         ))}
       </div>
 

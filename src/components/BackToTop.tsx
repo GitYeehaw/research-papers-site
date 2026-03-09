@@ -34,21 +34,28 @@ export default function BackToTop() {
         justifyContent: "center",
         opacity: visible ? 1 : 0,
         pointerEvents: visible ? "auto" : "none",
-        transition: "opacity 0.25s ease, color 0.15s ease, border-color 0.15s ease, transform 0.3s ease",
+        transform: visible ? "translateY(0) scale(1)" : "translateY(8px) scale(0.9)",
+        transition: "opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease",
         zIndex: 50,
       }}
       onMouseOver={(e) => {
-        (e.currentTarget as HTMLButtonElement).style.color = "var(--blue)";
-        (e.currentTarget as HTMLButtonElement).style.borderColor = "var(--blue)";
-        (e.currentTarget as HTMLButtonElement).style.transform = "translateY(-2px)";
+        const btn = e.currentTarget as HTMLButtonElement;
+        btn.style.color = "var(--blue)";
+        btn.style.borderColor = "var(--blue)";
+        btn.style.transform = "translateY(-3px) scale(1.05)";
+        btn.style.boxShadow = "0 4px 16px rgba(0,102,204,0.2)";
       }}
       onMouseOut={(e) => {
-        (e.currentTarget as HTMLButtonElement).style.color = "var(--text-muted)";
-        (e.currentTarget as HTMLButtonElement).style.borderColor = "var(--border-hover)";
-        (e.currentTarget as HTMLButtonElement).style.transform = "translateY(0)";
+        const btn = e.currentTarget as HTMLButtonElement;
+        btn.style.color = "var(--text-muted)";
+        btn.style.borderColor = "var(--border-hover)";
+        btn.style.transform = "translateY(0) scale(1)";
+        btn.style.boxShadow = "none";
       }}
     >
-      ↑
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M7 12V2M3 5l4-3 4 3" />
+      </svg>
     </button>
   );
 }

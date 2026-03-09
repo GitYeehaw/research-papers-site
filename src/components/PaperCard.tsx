@@ -56,11 +56,12 @@ export default function PaperCard({ paper }: { paper: Paper }) {
       {/* Abstract + expand button */}
       <div style={{ flex: 1, minWidth: 0, overflow: "hidden" }}>
         <div
+          className={`abstract-mask ${!expanded && isLong ? "collapsed" : ""}`}
           style={{
             maxHeight: expanded ? "1000px" : "5.5em",
             overflow: "hidden",
             width: "100%",
-            transition: "max-height 0.4s ease",
+            transition: "max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1)",
           }}
         >
           <p
