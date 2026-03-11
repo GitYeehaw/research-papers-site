@@ -2,90 +2,169 @@
   "category": "cs",
   "name": "CS Research",
   "description": "Computer Science \u2014 AI, Machine Learning, NLP, Computer Vision",
-  "scraped_at": "2026-03-10T08:55:56.711181+00:00",
+  "scraped_at": "2026-03-11T08:55:03.536814+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2603.08709v1",
-      "title": "Scale Space Diffusion",
+      "id": "2603.09974v1",
+      "title": "Task Aware Modulation Using Representation Learning for Upsaling of Terrestrial Carbon Fluxes",
       "authors": [
-        "Soumik Mukhopadhyay",
-        "Prateksha Udhayanan",
-        "Abhinav Shrivastava"
+        "Aleksei Rozanov",
+        "Arvind Renganathan",
+        "Vipin Kumar"
       ],
-      "abstract": "Diffusion models degrade images through noise, and reversing this process reveals an information hierarchy across timesteps. Scale-space theory exhibits a similar hierarchy via low-pass filtering. We formalize this connection and show that highly noisy diffusion states contain no more information than small, downsampled images - raising the question of why they must be processed at full resolution. To address this, we fuse scale spaces into the diffusion process by formulating a family of diffusion models with generalized linear degradations and practical implementations. Using downsampling as the degradation yields our proposed Scale Space Diffusion. To support Scale Space Diffusion, we introduce Flexi-UNet, a UNet variant that performs resolution-preserving and resolution-increasing denoising using only the necessary parts of the network. We evaluate our framework on CelebA and ImageNet and analyze its scaling behavior across resolutions and network depths. Our project website ( https://prateksha.github.io/projects/scale-space-diffusion/ ) is available publicly.",
-      "url": "https://arxiv.org/abs/2603.08709v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.08709v1",
-      "published": "2026-03-09T17:59:42Z",
-      "updated": "2026-03-09T17:59:42Z",
+      "abstract": "Accurately upscaling terrestrial carbon fluxes is central to estimating the global carbon budget, yet remains challenging due to the sparse and regionally biased distribution of ground measurements. Existing data-driven upscaling products often fail to generalize beyond observed domains, leading to systematic regional biases and high predictive uncertainty. We introduce Task-Aware Modulation with Representation Learning (TAM-RL), a framework that couples spatio-temporal representation learning with knowledge-guided encoder-decoder architecture and loss function derived from the carbon balance equation. Across 150+ flux tower sites representing diverse biomes and climate regimes, TAM-RL improves predictive performance relative to existing state-of-the-art datasets, reducing RMSE by 8-9.6% and increasing explained variance ($R^2$) from 19.4% to 43.8%, depending on the target flux. These results demonstrate that integrating physically grounded constraints with adaptive representation learning can substantially enhance the robustness and transferability of global carbon flux estimates.",
+      "url": "https://arxiv.org/abs/2603.09974v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.09974v1",
+      "published": "2026-03-10T17:59:29Z",
+      "updated": "2026-03-10T17:59:29Z",
       "categories": [
-        "cs.CV",
-        "cs.AI"
+        "cs.LG",
+        "physics.ao-ph"
       ],
-      "primary_category": "cs.CV"
+      "primary_category": "cs.LG"
     },
     {
-      "id": "2603.08708v1",
-      "title": "FVG-PT: Adaptive Foreground View-Guided Prompt Tuning for Vision-Language Models",
+      "id": "2603.09972v1",
+      "title": "From Data Statistics to Feature Geometry: How Correlations Shape Superposition",
       "authors": [
-        "Haoyang Li",
-        "Liang Wang",
-        "Siyu Zhou",
-        "Jiacheng Sun",
-        "Jing Jiang",
-        "Chao Wang",
-        "Guodong Long",
-        "Yan Peng"
+        "Lucas Prieto",
+        "Edward Stevinson",
+        "Melih Barsbey",
+        "Tolga Birdal",
+        "Pedro A. M. Mediano"
       ],
-      "abstract": "CLIP-based prompt tuning enables pretrained Vision-Language Models (VLMs) to efficiently adapt to downstream tasks. Although existing studies have made significant progress, they pay limited attention to changes in the internal attention representations of VLMs during the tuning process. In this paper, we attribute the failure modes of prompt tuning predictions to shifts in foreground attention of the visual encoder, and propose Foreground View-Guided Prompt Tuning (FVG-PT), an adaptive plug-and-play foreground attention guidance module, to alleviate the shifts. Concretely, FVG-PT introduces a learnable Foreground Reliability Gate to automatically enhance the foreground view quality, applies a Foreground Distillation Compensation module to guide visual attention toward the foreground, and further introduces a Prior Calibration module to mitigate generalization degradation caused by excessive focus on the foreground. Experiments on multiple backbone models and datasets show the effectiveness and compatibility of FVG-PT. Codes are available at: https://github.com/JREion/FVG-PT",
-      "url": "https://arxiv.org/abs/2603.08708v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.08708v1",
-      "published": "2026-03-09T17:59:18Z",
-      "updated": "2026-03-09T17:59:18Z",
+      "abstract": "A central idea in mechanistic interpretability is that neural networks represent more features than they have dimensions, arranging them in superposition to form an over-complete basis. This framing has been influential, motivating dictionary learning approaches such as sparse autoencoders. However, superposition has mostly been studied in idealized settings where features are sparse and uncorrelated. In these settings, superposition is typically understood as introducing interference that must be minimized geometrically and filtered out by non-linearities such as ReLUs, yielding local structures like regular polytopes. We show that this account is incomplete for realistic data by introducing Bag-of-Words Superposition (BOWS), a controlled setting to encode binary bag-of-words representations of internet text in superposition. Using BOWS, we find that when features are correlated, interference can be constructive rather than just noise to be filtered out. This is achieved by arranging features according to their co-activation patterns, making interference between active features constructive, while still using ReLUs to avoid false positives. We show that this kind of arrangement is more prevalent in models trained with weight decay and naturally gives rise to semantic clusters and cyclical structures which have been observed in real language models yet were not explained by the standard picture of superposition. Code for this paper can be found at https://github.com/LucasPrietoAl/correlations-feature-geometry.",
+      "url": "https://arxiv.org/abs/2603.09972v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.09972v1",
+      "published": "2026-03-10T17:59:02Z",
+      "updated": "2026-03-10T17:59:02Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "primary_category": "cs.LG"
+    },
+    {
+      "id": "2603.09970v1",
+      "title": "CREATE: Testing LLMs for Associative Creativity",
+      "authors": [
+        "Manya Wadhwa",
+        "Tiasa Singha Roy",
+        "Harvey Lederman",
+        "Junyi Jessy Li",
+        "Greg Durrett"
+      ],
+      "abstract": "A key component of creativity is associative reasoning: the ability to draw novel yet meaningful connections between concepts. We introduce CREATE, a benchmark designed to evaluate models' capacity for creative associative reasoning. CREATE requires models to generate sets of paths connecting concepts in a model's parametric knowledge. Paths should have high specificity (distinctiveness and closeness of the concept connection) and high diversity (dissimilarity from other paths), and models are scored more highly if they produce a larger set of strong, diverse paths. This task shares demands of real creativity tasks like hypothesis generation, including an extremely large search space, but enables collection of a sizable benchmark with objective answer grading. Evaluation of frontier models shows that the strongest models achieve higher creative utility than others, with the high multiplicity of answers and complexity of the search making benchmark saturation difficult to achieve. Furthermore, our results illustrate that thinking models are not always more effective on our task, even with high token budgets. Recent approaches for creative prompting give some but limited additional improvement. CREATE provides a sandbox for developing new methods to improve models' capacity for associative creativity.",
+      "url": "https://arxiv.org/abs/2603.09970v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.09970v1",
+      "published": "2026-03-10T17:58:44Z",
+      "updated": "2026-03-10T17:58:44Z",
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL"
+    },
+    {
+      "id": "2603.09968v1",
+      "title": "ReCoSplat: Autoregressive Feed-Forward Gaussian Splatting Using Render-and-Compare",
+      "authors": [
+        "Freeman Cheng",
+        "Botao Ye",
+        "Xueting Li",
+        "Junqi You",
+        "Fangneng Zhan",
+        "Ming-Hsuan Yang"
+      ],
+      "abstract": "Online novel view synthesis remains challenging, requiring robust scene reconstruction from sequential, often unposed, observations. We present ReCoSplat, an autoregressive feed-forward Gaussian Splatting model supporting posed or unposed inputs, with or without camera intrinsics. While assembling local Gaussians using camera poses scales better than canonical-space prediction, it creates a dilemma during training: using ground-truth poses ensures stability but causes a distribution mismatch when predicted poses are used at inference. To address this, we introduce a Render-and-Compare (ReCo) module. ReCo renders the current reconstruction from the predicted viewpoint and compares it with the incoming observation, providing a stable conditioning signal that compensates for pose errors. To support long sequences, we propose a hybrid KV cache compression strategy combining early-layer truncation with chunk-level selective retention, reducing the KV cache size by over 90% for 100+ frames. ReCoSplat achieves state-of-the-art performance across different input settings on both in- and out-of-distribution benchmarks. Code and pretrained models will be released. Our project page is at https://freemancheng.com/ReCoSplat .",
+      "url": "https://arxiv.org/abs/2603.09968v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.09968v1",
+      "published": "2026-03-10T17:58:08Z",
+      "updated": "2026-03-10T17:58:08Z",
       "categories": [
         "cs.CV"
       ],
       "primary_category": "cs.CV"
     },
     {
-      "id": "2603.08707v1",
-      "title": "Impermanent: A Live Benchmark for Temporal Generalization in Time Series Forecasting",
+      "id": "2603.09964v1",
+      "title": "Understanding the Use of a Large Language Model-Powered Guide to Make Virtual Reality Accessible for Blind and Low Vision People",
       "authors": [
-        "Azul Garza",
-        "Ren\u00e9e Rosillo",
-        "Rodrigo Mendoza-Smith",
-        "David Salinas",
-        "Andrew Robert Williams",
-        "Arjun Ashok",
-        "Mononito Goswami",
-        "Jos\u00e9 Mart\u00edn Ju\u00e1rez"
+        "Jazmin Collins",
+        "Sharon Y Lin",
+        "Tianqi Liu",
+        "Andrea Stevenson Won",
+        "Shiri Azenkot"
       ],
-      "abstract": "Recent advances in time-series forecasting increasingly rely on pre-trained foundation-style models. While these models often claim broad generalization, existing evaluation protocols provide limited evidence. Indeed, most current benchmarks use static train-test splits that can easily lead to contamination as foundation models can inadvertently train on test data or perform model selection using test scores, which can inflate performance. We introduce Impermanent, a live benchmark that evaluates forecasting models under open-world temporal change by scoring forecasts sequentially over time on continuously updated data streams, enabling the study of temporal robustness, distributional shift, and performance stability rather than one-off accuracy on a frozen test set. Impermanent is instantiated on GitHub open-source activity, providing a naturally live and highly non-stationary dataset shaped by releases, shifting contributor behavior, platform/tooling changes, and external events. We focus on the top 400 repositories by star count and construct time series from issues opened, pull requests opened, push events, and new stargazers, evaluated over a rolling window with daily updates, alongside standardized protocols and leaderboards for reproducible, ongoing comparison. By shifting evaluation from static accuracy to sustained performance, Impermanent takes a concrete step toward assessing when and whether foundation-level generalization in time-series forecasting can be meaningfully claimed. Code and a live dashboard are available at https://github.com/TimeCopilot/impermanent and https://impermanent.timecopilot.dev.",
-      "url": "https://arxiv.org/abs/2603.08707v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.08707v1",
-      "published": "2026-03-09T17:59:00Z",
-      "updated": "2026-03-09T17:59:00Z",
+      "abstract": "As social virtual reality (VR) grows more popular, addressing accessibility for blind and low vision (BLV) users is increasingly critical. Researchers have proposed an AI \"sighted guide\" to help users navigate VR and answer their questions, but it has not been studied with users. To address this gap, we developed a large language model (LLM)-powered guide and studied its use with 16 BLV participants in virtual environments with confederates posing as other users. We found that when alone, participants treated the guide as a tool, but treated it companionably around others, giving it nicknames, rationalizing its mistakes with its appearance, and encouraging confederate-guide interaction. Our work furthers understanding of guides as a versatile method for VR accessibility and presents design recommendations for future guides.",
+      "url": "https://arxiv.org/abs/2603.09964v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.09964v1",
+      "published": "2026-03-10T17:56:57Z",
+      "updated": "2026-03-10T17:56:57Z",
       "categories": [
-        "cs.LG"
+        "cs.HC",
+        "cs.AI",
+        "cs.ET"
       ],
-      "primary_category": "cs.LG"
+      "primary_category": "cs.HC"
     },
     {
-      "id": "2603.08706v1",
-      "title": "Agentic Critical Training",
+      "id": "2603.09963v1",
+      "title": "Emotional Modulation in Swarm Decision Dynamics",
       "authors": [
-        "Weize Liu",
-        "Minghui Liu",
-        "Sy-Tuyen Ho",
-        "Souradip Chakraborty",
-        "Xiyao Wang",
-        "Furong Huang"
+        "David Freire-Obreg\u00f3n"
       ],
-      "abstract": "Training large language models (LLMs) as autonomous agents often begins with imitation learning, but it only teaches agents what to do without understanding why: agents never contrast successful actions against suboptimal alternatives and thus lack awareness of action quality. Recent approaches attempt to address this by introducing self-reflection supervision derived from contrasts between expert and alternative actions. However, the training paradigm fundamentally remains imitation learning: the model imitates pre-constructed reflection text rather than learning to reason autonomously. We propose Agentic Critical Training (ACT), a reinforcement learning paradigm that trains agents to identify the better action among alternatives. By rewarding whether the model's judgment is correct, ACT drives the model to autonomously develop reasoning about action quality, producing genuine self-reflection rather than imitating it. Across three challenging agent benchmarks, ACT consistently improves agent performance when combined with different post-training methods. It achieves an average improvement of 5.07 points over imitation learning and 4.62 points over reinforcement learning. Compared to approaches that inject reflection capability through knowledge distillation, ACT also demonstrates clear advantages, yielding an average improvement of 2.42 points. Moreover, ACT enables strong out-of-distribution generalization on agentic benchmarks and improves performance on general reasoning benchmarks without any reasoning-specific training data, highlighting the value of our method. These results suggest that ACT is a promising path toward developing more reflective and capable LLM agents.",
-      "url": "https://arxiv.org/abs/2603.08706v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.08706v1",
-      "published": "2026-03-09T17:58:56Z",
-      "updated": "2026-03-09T17:58:56Z",
+      "abstract": "Collective decision-making in biological and human groups often emerges from simple interaction rules that amplify minor differences into consensus. The bee equation, developed initially to describe nest-site selection in honeybee swarms, captures this dynamic through recruitment and inhibition processes. Here, we extend the bee equation into an agent-based model in which emotional valence (positive-negative) and arousal (low-high) act as modulators of interaction rates, effectively altering the recruitment and cross-inhibition parameters. Agents display simulated facial expressions mapped from their valence-arousal states, allowing the study of emotional contagion in consensus formation.   Three scenarios are explored: (1) the joint effect of valence and arousal on consensus outcomes and speed, (2) the role of arousal in breaking ties when valence is matched, and (3) the \"snowball effect\" in which consensus accelerates after surpassing intermediate support thresholds. Results show that emotional modulation can bias decision outcomes and alter convergence times by shifting effective recruitment and inhibition rates. At the same time, intrinsic non-linear amplification can produce decisive wins even in fully symmetric emotional conditions.   These findings link classical swarm decision theory with affective and social modelling, highlighting how both emotional asymmetries and structural tipping points shape collective outcomes. The proposed framework offers a flexible tool for studying the emotional dimensions of collective choice in both natural and artificial systems.",
+      "url": "https://arxiv.org/abs/2603.09963v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.09963v1",
+      "published": "2026-03-10T17:56:42Z",
+      "updated": "2026-03-10T17:56:42Z",
+      "categories": [
+        "cs.MA",
+        "cs.AI"
+      ],
+      "primary_category": "cs.MA"
+    },
+    {
+      "id": "2603.09961v1",
+      "title": "BEACON: Language-Conditioned Navigation Affordance Prediction under Occlusion",
+      "authors": [
+        "Xinyu Gao",
+        "Gang Chen",
+        "Javier Alonso-Mora"
+      ],
+      "abstract": "Language-conditioned local navigation requires a robot to infer a nearby traversable target location from its current observation and an open-vocabulary, relational instruction. Existing vision-language spatial grounding methods usually rely on vision-language models (VLMs) to reason in image space, producing 2D predictions tied to visible pixels. As a result, they struggle to infer target locations in occluded regions, typically caused by furniture or moving humans. To address this issue, we propose BEACON, which predicts an ego-centric Bird's-Eye View (BEV) affordance heatmap over a bounded local region including occluded areas. Given an instruction and surround-view RGB-D observations from four directions around the robot, BEACON predicts the BEV heatmap by injecting spatial cues into a VLM and fusing the VLM's output with depth-derived BEV features. Using an occlusion-aware dataset built in the Habitat simulator, we conduct detailed experimental analysis to validate both our BEV space formulation and the design choices of each module. Our method improves the accuracy averaged across geodesic thresholds by 22.74 percentage points over the state-of-the-art image-space baseline on the validation subset with occluded target locations. Our project page is: https://xin-yu-gao.github.io/beacon.",
+      "url": "https://arxiv.org/abs/2603.09961v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.09961v1",
+      "published": "2026-03-10T17:56:16Z",
+      "updated": "2026-03-10T17:56:16Z",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2603.09957v1",
+      "title": "Think Before You Lie: How Reasoning Improves Honesty",
+      "authors": [
+        "Ann Yuan",
+        "Asma Ghandeharioun",
+        "Carter Blum",
+        "Alicia Machado",
+        "Jessica Hoffmann",
+        "Daphne Ippolito",
+        "Martin Wattenberg",
+        "Lucas Dixon",
+        "Katja Filippova"
+      ],
+      "abstract": "While existing evaluations of large language models (LLMs) measure deception rates, the underlying conditions that give rise to deceptive behavior are poorly understood. We investigate this question using a novel dataset of realistic moral trade-offs where honesty incurs variable costs. Contrary to humans, who tend to become less honest given time to deliberate (Capraro, 2017; Capraro et al., 2019), we find that reasoning consistently increases honesty across scales and for several LLM families. This effect is not only a function of the reasoning content, as reasoning traces are often poor predictors of final behaviors. Rather, we show that the underlying geometry of the representational space itself contributes to the effect. Namely, we observe that deceptive regions within this space are metastable: deceptive answers are more easily destabilized by input paraphrasing, output resampling, and activation noise than honest ones. We interpret the effect of reasoning in this vein: generating deliberative tokens as part of moral reasoning entails the traversal of a biased representational space, ultimately nudging the model toward its more stable, honest defaults.",
+      "url": "https://arxiv.org/abs/2603.09957v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.09957v1",
+      "published": "2026-03-10T17:52:49Z",
+      "updated": "2026-03-10T17:52:49Z",
       "categories": [
         "cs.AI",
         "cs.CL",
@@ -94,128 +173,45 @@
       "primary_category": "cs.AI"
     },
     {
-      "id": "2603.08704v1",
-      "title": "Evaluating Financial Intelligence in Large Language Models: Benchmarking SuperInvesting AI with LLM Engines",
+      "id": "2603.09955v1",
+      "title": "From Semantics to Pixels: Coarse-to-Fine Masked Autoencoders for Hierarchical Visual Understanding",
       "authors": [
-        "Akshay Gulati",
-        "Kanha Singhania",
-        "Tushar Banga",
-        "Parth Arora",
-        "Anshul Verma",
-        "Vaibhav Kumar Singh",
-        "Agyapal Digra",
-        "Jayant Singh Bisht",
-        "Danish Sharma",
-        "Varun Singla",
-        "Shubh Garg"
+        "Wenzhao Xiang",
+        "Yue Wu",
+        "Hongyang Yu",
+        "Feng Gao",
+        "Fan Yang",
+        "Xilin Chen"
       ],
-      "abstract": "Large language models are increasingly used for financial analysis and investment research, yet systematic evaluation of their financial reasoning capabilities remains limited. In this work, we introduce the AI Financial Intelligence Benchmark (AFIB), a multi-dimensional evaluation framework designed to assess financial analysis capabilities across five dimensions: factual accuracy, analytical completeness, data recency, model consistency, and failure patterns. We evaluate five AI systems: GPT, Gemini, Perplexity, Claude, and SuperInvesting, using a dataset of 95+ structured financial analysis questions derived from real-world equity research tasks. The results reveal substantial differences in performance across models. Within this benchmark setting, SuperInvesting achieves the highest aggregate performance, with an average factual accuracy score of 8.96/10 and the highest completeness score of 56.65/70, while also demonstrating the lowest hallucination rate among evaluated systems. Retrieval-oriented systems such as Perplexity perform strongly on data recency tasks due to live information access but exhibit weaker analytical synthesis and consistency. Overall, the results highlight that financial intelligence in large language models is inherently multi-dimensional, and systems that combine structured financial data access with analytical reasoning capabilities provide the most reliable performance for complex investment research workflows.",
-      "url": "https://arxiv.org/abs/2603.08704v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.08704v1",
-      "published": "2026-03-09T17:58:54Z",
-      "updated": "2026-03-09T17:58:54Z",
+      "abstract": "Self-supervised visual pre-training methods face an inherent tension: contrastive learning (CL) captures global semantics but loses fine-grained detail, while masked image modeling (MIM) preserves local textures but suffers from \"attention drift\" due to semantically-agnostic random masking. We propose C2FMAE, a coarse-to-fine masked autoencoder that resolves this tension by explicitly learning hierarchical visual representations across three data granularities: semantic masks (scene-level), instance masks (object-level), and RGB images (pixel-level). Two synergistic innovations enforce a strict top-down learning principle. First, a cascaded decoder sequentially reconstructs from scene semantics to object instances to pixel details, establishing explicit cross-granularity dependencies that parallel decoders cannot capture. Second, a progressive masking curriculum dynamically shifts the training focus from semantic-guided to instance-guided and finally to random masking, creating a structured learning path from global context to local features. To support this framework, we construct a large-scale multi-granular dataset with high-quality pseudo-labels for all 1.28M ImageNet-1K images. Extensive experiments show that C2FMAE achieves significant performance gains on image classification, object detection, and semantic segmentation, validating the effectiveness of our hierarchical design in learning more robust and generalizable representations.",
+      "url": "https://arxiv.org/abs/2603.09955v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.09955v1",
+      "published": "2026-03-10T17:51:12Z",
+      "updated": "2026-03-10T17:51:12Z",
       "categories": [
-        "cs.AI"
-      ],
-      "primary_category": "cs.AI"
-    },
-    {
-      "id": "2603.08703v1",
-      "title": "HiAR: Efficient Autoregressive Long Video Generation via Hierarchical Denoising",
-      "authors": [
-        "Kai Zou",
-        "Dian Zheng",
-        "Hongbo Liu",
-        "Tiankai Hang",
-        "Bin Liu",
-        "Nenghai Yu"
-      ],
-      "abstract": "Autoregressive (AR) diffusion offers a promising framework for generating videos of theoretically infinite length. However, a major challenge is maintaining temporal continuity while preventing the progressive quality degradation caused by error accumulation. To ensure continuity, existing methods typically condition on highly denoised contexts; yet, this practice propagates prediction errors with high certainty, thereby exacerbating degradation. In this paper, we argue that a highly clean context is unnecessary. Drawing inspiration from bidirectional diffusion models, which denoise frames at a shared noise level while maintaining coherence, we propose that conditioning on context at the same noise level as the current block provides sufficient signal for temporal consistency while effectively mitigating error propagation. Building on this insight, we propose HiAR, a hierarchical denoising framework that reverses the conventional generation order: instead of completing each block sequentially, it performs causal generation across all blocks at every denoising step, so that each block is always conditioned on context at the same noise level. This hierarchy naturally admits pipelined parallel inference, yielding a 1.8 wall-clock speedup in our 4-step setting. We further observe that self-rollout distillation under this paradigm amplifies a low-motion shortcut inherent to the mode-seeking reverse-KL objective. To counteract this, we introduce a forward-KL regulariser in bidirectional-attention mode, which preserves motion diversity for causal inference without interfering with the distillation loss. On VBench (20s generation), HiAR achieves the best overall score and the lowest temporal drift among all compared methods.",
-      "url": "https://arxiv.org/abs/2603.08703v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.08703v1",
-      "published": "2026-03-09T17:58:16Z",
-      "updated": "2026-03-09T17:58:16Z",
-      "categories": [
-        "cs.CV"
+        "cs.CV",
+        "cs.LG"
       ],
       "primary_category": "cs.CV"
     },
     {
-      "id": "2603.08692v1",
-      "title": "A Multi-Objective Optimization Approach for Sustainable AI-Driven Entrepreneurship in Resilient Economies",
+      "id": "2603.09953v1",
+      "title": "Leveraging whole slide difficulty in Multiple Instance Learning to improve prostate cancer grading",
       "authors": [
-        "Anas ALsobeh",
-        "Raneem Alkurdi"
+        "Marie Arrivat",
+        "R\u00e9my Peyret",
+        "Elsa Angelini",
+        "Pietro Gori"
       ],
-      "abstract": "The rapid advancement of artificial intelligence (AI) technologies presents both unprecedented opportunities and significant challenges for sustainable economic development. While AI offers transformative potential for addressing environmental challenges and enhancing economic resilience, its deployment often involves substantial energy consumption and environmental costs. This research introduces the EcoAI-Resilience framework, a multi-objective optimization approach designed to maximize the sustainability benefits of AI deployment while minimizing environmental costs and enhancing economic resilience. The framework addresses three critical objectives through mathematical optimization: sustainability impact maximization, economic resilience enhancement, and environmental cost minimization. The methodology integrates diverse data sources, including energy consumption metrics, sustainability indicators, economic performance data, and entrepreneurship outcomes across 53 countries and 14 sectors from 2015-2024. Our experimental validation demonstrates exceptional performance with R scores exceeding 0.99 across all model components, significantly outperforming baseline methods, including Linear Regression (R = 0.943), Random Forest (R = 0.957), and Gradient Boosting (R = 0.989). The framework successfully identifies optimal AI deployment strategies featuring 100\\% renewable energy integration, 80% efficiency improvement targets, and optimal investment levels of $202.48 per capita. Key findings reveal strong correlations between economic complexity and resilience (r = 0.82), renewable energy adoption and sustainability outcomes (r = 0.71), and demonstrate significant temporal improvements in AI readiness (+1.12 points/year) and renewable energy adoption (+0.67 year) globally.",
-      "url": "https://arxiv.org/abs/2603.08692v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.08692v1",
-      "published": "2026-03-09T17:54:32Z",
-      "updated": "2026-03-09T17:54:32Z",
+      "abstract": "Multiple Instance Learning (MIL) has been widely applied in histopathology to classify Whole Slide Images (WSIs) with slide-level diagnoses. While the ground truth is established by expert pathologists, the slides can be difficult to diagnose for non-experts and lead to disagreements between the annotators. In this paper, we introduce the notion of Whole Slide Difficulty (WSD), based on the disagreement between an expert and a non-expert pathologist. We propose two different methods to leverage WSD, a multi-task approach and a weighted classification loss approach, and we apply them to Gleason grading of prostate cancer slides. Results show that integrating WSD during training consistently improves the classification performance across different feature encoders and MIL methods, particularly for higher Gleason grades (i.e. worse diagnosis).",
+      "url": "https://arxiv.org/abs/2603.09953v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.09953v1",
+      "published": "2026-03-10T17:49:29Z",
+      "updated": "2026-03-10T17:49:29Z",
       "categories": [
-        "cs.AI"
+        "cs.CV"
       ],
-      "primary_category": "cs.AI"
-    },
-    {
-      "id": "2603.08687v1",
-      "title": "Split Federated Learning Architectures for High-Accuracy and Low-Delay Model Training",
-      "authors": [
-        "Yiannis Papageorgiou",
-        "Yannis Thomas",
-        "Ramin Khalili",
-        "Iordanis Koutsopoulos"
-      ],
-      "abstract": "Can we find a network architecture for ML model training so as to optimize training loss (and thus, accuracy) in Split Federated Learning (SFL)? And can this architecture also reduce training delay and communication overhead? While accuracy is not influenced by how we split the model in ordinary, state-of-the-art SFL, in this work we answer the questions above in the affirmative. Recent Hierarchical SFL (HSFL) architectures adopt a three-tier training structure consisting of clients, (local) aggregators, and a central server. In this architecture, the model is partitioned at two partitioning layers into three sub-models, which are executed across the three tiers. Despite their merits, HSFL architectures overlook the impact of the partitioning layers and client-to-aggregator assignments on accuracy, delay, and overhead. This work explicitly captures the impact of the partitioning layers and client-to-aggregator assignments on accuracy, delay and overhead by formulating a joint optimization problem. We prove that the problem is NP-hard and propose the first accuracy-aware heuristic algorithm that explicitly accounts for model accuracy, while remaining delay-efficient. Simulation results on public datasets show that our approach can improve accuracy by 3%, while reducing delay by 20% and overhead by 50%, compared to state-of-the-art SFL and HSFL schemes.",
-      "url": "https://arxiv.org/abs/2603.08687v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.08687v1",
-      "published": "2026-03-09T17:53:20Z",
-      "updated": "2026-03-09T17:53:20Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2603.08683v1",
-      "title": "Benchmarking Language Modeling for Lossless Compression of Full-Fidelity Audio",
-      "authors": [
-        "Phillip Long",
-        "Zachary Novack",
-        "Chris Donahue"
-      ],
-      "abstract": "Autoregressive \"language\" models (LMs) trained on raw waveforms can be repurposed for lossless audio compression, but prior work is limited to 8-bit audio, leaving open whether such approaches work for practical settings (16/24-bit) and can compete with existing codecs. We benchmark LM-based compression on full-fidelity audio across diverse domains (music, speech, bioacoustics), sampling rates (16kHz-48kHz), and bit depths (8, 16, 24-bit). Standard sample-level tokenization becomes intractable at higher bit depths due to vocabulary size (65K for 16-bit; 16.7M for 24-bit). We propose Trilobyte, a byte-level tokenization schema for full resolution audio, improving vocabulary scaling from $O(2^{b})$ to $O(1)$ and enabling the first tractable 24-bit LM-based lossless compression. While LMs consistently outperform FLAC and yield state-of-the-art compression at 8-bit and 16-bit, we observe that compression gains become more modest as bit depth increases beyond 8-bit.",
-      "url": "https://arxiv.org/abs/2603.08683v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.08683v1",
-      "published": "2026-03-09T17:52:02Z",
-      "updated": "2026-03-09T17:52:02Z",
-      "categories": [
-        "cs.SD",
-        "cs.AI",
-        "cs.LG",
-        "eess.AS"
-      ],
-      "primary_category": "cs.SD"
-    },
-    {
-      "id": "2603.08682v1",
-      "title": "Structural Causal Bottleneck Models",
-      "authors": [
-        "Simon Bing",
-        "Jonas Wahl",
-        "Jakob Runge"
-      ],
-      "abstract": "We introduce structural causal bottleneck models (SCBMs), a novel class of structural causal models. At the core of SCBMs lies the assumption that causal effects between high-dimensional variables only depend on low-dimensional summary statistics, or bottlenecks, of the causes. SCBMs provide a flexible framework for task-specific dimension reduction while being estimable via standard, simple learning algorithms in practice. We analyse identifiability in SCBMs, connect them to information bottlenecks in the sense of Tishby & Zaslavsky (2015), and illustrate how to estimate them experimentally. We also demonstrate the benefit of bottlenecks for effect estimation in low-sample transfer learning settings. We argue that SCBMs provide an alternative to existing causal dimension reduction frameworks like causal representation learning or causal abstraction learning.",
-      "url": "https://arxiv.org/abs/2603.08682v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.08682v1",
-      "published": "2026-03-09T17:50:10Z",
-      "updated": "2026-03-09T17:50:10Z",
-      "categories": [
-        "stat.ML",
-        "cs.LG"
-      ],
-      "primary_category": "stat.ML"
+      "primary_category": "cs.CV"
     }
   ]
 }
