@@ -1,4 +1,5 @@
 import { Paper } from "@/types";
+import { cleanLatex } from "@/lib/cleanLatex";
 
 interface FeaturedPaperCardProps {
   paper: Paper;
@@ -72,7 +73,7 @@ export default function FeaturedPaperCard({
           rel="noopener noreferrer"
           className="featured-title-link"
         >
-          {paper.title}
+          <span dangerouslySetInnerHTML={{ __html: cleanLatex(paper.title) }} />
         </a>
       </h3>
 

@@ -1,4 +1,5 @@
 import { Researcher } from "@/types";
+import { cleanLatex } from "@/lib/cleanLatex";
 
 function formatDate(dateStr: string): string {
   try {
@@ -70,7 +71,7 @@ export default function ResearcherCard({ researcher }: { researcher: Researcher 
                   wordBreak: "break-word",
                 }}
               >
-                {paper.title}
+                <span dangerouslySetInnerHTML={{ __html: cleanLatex(paper.title) }} />
               </a>
               <span
                 style={{

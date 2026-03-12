@@ -1,6 +1,7 @@
 "use client";
 
 import { Paper } from "@/types";
+import { cleanLatex } from "@/lib/cleanLatex";
 import { useState } from "react";
 
 function formatDate(dateStr: string): string {
@@ -33,7 +34,7 @@ export default function PaperCard({ paper }: { paper: Paper }) {
           rel="noopener noreferrer"
           className="paper-card-title"
         >
-          {paper.title}
+          <span dangerouslySetInnerHTML={{ __html: cleanLatex(paper.title) }} />
         </a>
       </h3>
 
@@ -65,7 +66,7 @@ export default function PaperCard({ paper }: { paper: Paper }) {
             className="text-sm leading-relaxed"
             style={{ color: "var(--text-secondary)", wordBreak: "break-word" }}
           >
-            {paper.abstract}
+            <span dangerouslySetInnerHTML={{ __html: cleanLatex(paper.abstract) }} />
           </p>
         </div>
         {isLong && (
