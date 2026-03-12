@@ -1,4 +1,4 @@
-import { CategoryData, ResearchersData } from "@/types";
+import { CategoryData, Researcher, ResearchersData } from "@/types";
 import fs from "fs";
 import path from "path";
 
@@ -37,6 +37,24 @@ export function getResearchersData(): ResearchersData {
       researchers: [],
     };
   }
+}
+
+export function getRecentResearcherPapers(): {
+  researcher: Researcher;
+  recentCount: number;
+}[] {
+  const { researchers } = getResearchersData();
+  const cutoff = Date.now() - 48 * 60 * 60 * 1000;
+
+  return researchers
+    .map((r) => ({
+      researcher: r,
+      recentCount: r.papers.filter(
+        (p) => new Date(p.published).getTime() > cutoff
+      ).length,
+    }))
+    .filter((entry) => entry.recentCount > 0)
+    .sort((a, b) => b.recentCount - a.recentCount);
 }
 
 export function getAllCategoryData(): Record<string, CategoryData> {

@@ -1,8 +1,9 @@
-import { getAllCategoryData } from "@/lib/data";
+import { getAllCategoryData, getRecentResearcherPapers } from "@/lib/data";
 import { Paper } from "@/types";
 import Link from "next/link";
 import FeaturedPaperCard from "@/components/FeaturedPaperCard";
 import CategoryNav from "@/components/CategoryNav";
+import ResearcherAlerts from "@/components/ResearcherAlerts";
 import ScrollFadeIn from "@/components/ScrollFadeIn";
 
 const CATEGORY_META: Record<string, { label: string; color: string }> = {
@@ -41,6 +42,8 @@ export default function HomePage() {
       return paper ? { ...paper, cat } : null;
     })
     .filter(Boolean) as (Paper & { cat: string })[];
+
+  const researcherAlerts = getRecentResearcherPapers();
 
   const categoryNavItems = categories.map((cat) => ({
     cat,
@@ -197,8 +200,17 @@ export default function HomePage() {
         </div>
       </ScrollFadeIn>
 
+      {/* Followed Researcher alerts */}
+      {researcherAlerts.length > 0 && (
+        <ScrollFadeIn delay={125}>
+          <div className="mb-24">
+            <ResearcherAlerts alerts={researcherAlerts} />
+          </div>
+        </ScrollFadeIn>
+      )}
+
       {/* Browse by Field */}
-      <ScrollFadeIn delay={150}>
+      <ScrollFadeIn delay={175}>
         <div className="mb-24">
           <div className="flex justify-between items-end mb-12">
             <h2
@@ -241,7 +253,7 @@ export default function HomePage() {
       </ScrollFadeIn>
 
       {/* Latest section */}
-      <ScrollFadeIn delay={200}>
+      <ScrollFadeIn delay={225}>
         <div>
           <div className="flex justify-between items-end mb-12">
             <h2
