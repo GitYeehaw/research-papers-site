@@ -15,9 +15,13 @@ function formatDate(dateStr: string): string {
 }
 
 export default function ResearcherCard({ researcher }: { researcher: Researcher }) {
+  const hasNewPaper = researcher.papers.some(
+    (p) => Date.now() - new Date(p.published).getTime() < 24 * 60 * 60 * 1000
+  );
+
   return (
     <div className="card" style={{ display: "flex", flexDirection: "column", gap: "12px", minWidth: 0 }}>
-      {/* Name + website */}
+      {/* Name + website + New tag */}
       <div>
         <h3
           style={{
@@ -25,6 +29,9 @@ export default function ResearcherCard({ researcher }: { researcher: Researcher 
             fontSize: "1.15rem",
             fontWeight: 400,
             marginBottom: "4px",
+            display: "flex",
+            alignItems: "center",
+            gap: "8px",
           }}
         >
           {researcher.website ? (
@@ -39,6 +46,7 @@ export default function ResearcherCard({ researcher }: { researcher: Researcher 
           ) : (
             <span style={{ color: "var(--text-primary)" }}>{researcher.name}</span>
           )}
+          {hasNewPaper && <span className="tag-new">New</span>}
         </h3>
         <p
           style={{
