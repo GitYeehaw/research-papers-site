@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-03-12T07:17:39.789559+00:00",
-  "researcher_count": 52,
+  "scraped_at": "2026-03-12T07:24:17.949261+00:00",
+  "researcher_count": 54,
   "researchers": [
     {
       "id": "ames_a",
@@ -9963,6 +9963,248 @@
             "cs.CL"
           ],
           "primary_category": "cs.CV"
+        }
+      ]
+    },
+    {
+      "id": "kaelbling_l",
+      "name": "Leslie Pack Kaelbling",
+      "field": "Robot planning, learning under uncertainty, embodied AI",
+      "institution": "Massachusetts Institute of Technology",
+      "website": "https://people.csail.mit.edu/lpk/",
+      "paper_count": 5,
+      "papers": [
+        {
+          "id": "2603.09971v1",
+          "title": "TiPToP: A Modular Open-Vocabulary Planning System for Robotic Manipulation",
+          "authors": [
+            "William Shen",
+            "Nishanth Kumar",
+            "Sahit Chintalapudi",
+            "Jie Wang",
+            "Christopher Watson",
+            "Edward Hu",
+            "Jing Cao",
+            "Dinesh Jayaraman",
+            "Leslie Pack Kaelbling",
+            "Tom\u00e1s Lozano-P\u00e9rez"
+          ],
+          "abstract": "We present TiPToP, an extensible modular system that combines pretrained vision foundation models with an existing Task and Motion Planner (TAMP) to solve multi-step manipulation tasks directly from input RGB images and natural-language instructions. Our system aims to be simple and easy-to-use: it can be installed and run on a standard DROID setup in under one hour and adapted to new embodiments with minimal effort. We evaluate TiPToP -- which requires zero robot data -- over 28 tabletop manipulation tasks in simulation and the real world and find it matches or outperforms $\u03c0_{0.5}\\text{-DROID}$, a vision-language-action (VLA) model fine-tuned on 350 hours of embodiment-specific demonstrations. TiPToP's modular architecture enables us to analyze the system's failure modes at the component level. We analyze results from an evaluation of 173 trials and identify directions for improvement. We release TiPToP open-source to further research on modular manipulation systems and tighter integration between learning and planning. Project website and code: https://tiptop-robot.github.io",
+          "url": "https://arxiv.org/abs/2603.09971v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.09971v1",
+          "published": "2026-03-10T17:59:00Z",
+          "updated": "2026-03-10T17:59:00Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2508.08983v1",
+          "title": "Rational Inverse Reasoning",
+          "authors": [
+            "Ben Zandonati",
+            "Tom\u00e1s Lozano-P\u00e9rez",
+            "Leslie Pack Kaelbling"
+          ],
+          "abstract": "Humans can observe a single, imperfect demonstration and immediately generalize to very different problem settings. Robots, in contrast, often require hundreds of examples and still struggle to generalize beyond the training conditions. We argue that this limitation arises from the inability to recover the latent explanations that underpin intelligent behavior, and that these explanations can take the form of structured programs consisting of high-level goals, sub-task decomposition, and execution constraints. In this work, we introduce Rational Inverse Reasoning (RIR), a framework for inferring these latent programs through a hierarchical generative model of behavior. RIR frames few-shot imitation as Bayesian program induction: a vision-language model iteratively proposes structured symbolic task hypotheses, while a planner-in-the-loop inference scheme scores each by the likelihood of the observed demonstration under that hypothesis. This loop yields a posterior over concise, executable programs. We evaluate RIR on a suite of continuous manipulation tasks designed to test one-shot and few-shot generalization across variations in object pose, count, geometry, and layout. With as little as one demonstration, RIR infers the intended task structure and generalizes to novel settings, outperforming state-of-the-art vision-language model baselines.",
+          "url": "https://arxiv.org/abs/2508.08983v1",
+          "pdf_url": "https://arxiv.org/pdf/2508.08983v1",
+          "published": "2025-08-12T14:49:44Z",
+          "updated": "2025-08-12T14:49:44Z",
+          "categories": [
+            "cs.RO",
+            "cs.AI"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2508.02068v2",
+          "title": "\"Set It Up\": Functional Object Arrangement with Compositional Generative Models (Journal Version)",
+          "authors": [
+            "Yiqing Xu",
+            "Jiayuan Mao",
+            "Linfeng Li",
+            "Yilun Du",
+            "Tomas Loz\u00e1no-P\u00e9rez",
+            "Leslie Pack Kaelbling",
+            "David Hsu"
+          ],
+          "abstract": "Functional object arrangement (FORM) is the task of arranging objects to fulfill a function, e.g., \"set up a dining table for two\". One key challenge here is that the instructions for FORM are often under-specified and do not explicitly specify the desired object goal poses. This paper presents SetItUp, a neuro-symbolic framework that learns to specify the goal poses of objects from a few training examples and a structured natural-language task specification. SetItUp uses a grounding graph, which is composed of abstract spatial relations among objects (e.g., left-of), as its intermediate representation. This decomposes the FORM problem into two stages: (i) predicting this graph among objects and (ii) predicting object poses given the grounding graph. For (i), SetItUp leverages large language models (LLMs) to induce Python programs from a task specification and a few training examples. This program can be executed to generate grounding graphs in novel scenarios. For (ii), SetItUp pre-trains a collection of diffusion models to capture primitive spatial relations and online composes these models to predict object poses based on the grounding graph. We evaluated SetItUp on a dataset spanning three distinct task families: arranging tableware on a dining table, organizing items on a bookshelf, and laying out furniture in a bedroom. Experiments show that SetItUp outperforms existing models in generating functional, physically feasible, and aesthetically pleasing object arrangements. This article extends our conference paper published at Robotics: Science and Systems (RSS) 2024.",
+          "url": "https://arxiv.org/abs/2508.02068v2",
+          "pdf_url": "https://arxiv.org/pdf/2508.02068v2",
+          "published": "2025-08-04T05:16:09Z",
+          "updated": "2025-08-07T09:18:55Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2505.21851v2",
+          "title": "Streaming Flow Policy: Simplifying diffusion/flow-matching policies by treating action trajectories as flow trajectories",
+          "authors": [
+            "Sunshine Jiang",
+            "Xiaolin Fang",
+            "Nicholas Roy",
+            "Tom\u00e1s Lozano-P\u00e9rez",
+            "Leslie Pack Kaelbling",
+            "Siddharth Ancha"
+          ],
+          "abstract": "Recent advances in diffusion$/$flow-matching policies have enabled imitation learning of complex, multi-modal action trajectories. However, they are computationally expensive because they sample a trajectory of trajectories: a diffusion$/$flow trajectory of action trajectories. They discard intermediate action trajectories, and must wait for the sampling process to complete before any actions can be executed on the robot. We simplify diffusion$/$flow policies by treating action trajectories as flow trajectories. Instead of starting from pure noise, our algorithm samples from a narrow Gaussian around the last action. Then, it incrementally integrates a velocity field learned via flow matching to produce a sequence of actions that constitute a single trajectory. This enables actions to be streamed to the robot on-the-fly during the flow sampling process, and is well-suited for receding horizon policy execution. Despite streaming, our method retains the ability to model multi-modal behavior. We train flows that stabilize around demonstration trajectories to reduce distribution shift and improve imitation learning performance. Streaming flow policy outperforms prior methods while enabling faster policy execution and tighter sensorimotor loops for learning-based robot control. Project website: https://streaming-flow-policy.github.io/",
+          "url": "https://arxiv.org/abs/2505.21851v2",
+          "pdf_url": "https://arxiv.org/pdf/2505.21851v2",
+          "published": "2025-05-28T00:48:19Z",
+          "updated": "2025-09-24T23:51:56Z",
+          "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.LG"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2505.02216v2",
+          "title": "LLM-Guided Probabilistic Program Induction for POMDP Model Estimation",
+          "authors": [
+            "Aidan Curtis",
+            "Hao Tang",
+            "Thiago Veloso",
+            "Kevin Ellis",
+            "Joshua Tenenbaum",
+            "Tom\u00e1s Lozano-P\u00e9rez",
+            "Leslie Pack Kaelbling"
+          ],
+          "abstract": "Partially Observable Markov Decision Processes (POMDPs) model decision making under uncertainty. While there are many approaches to approximately solving POMDPs, we aim to address the problem of learning such models. In particular, we are interested in a subclass of POMDPs wherein the components of the model, including the observation function, reward function, transition function, and initial state distribution function, can be modeled as low-complexity probabilistic graphical models in the form of a short probabilistic program. Our strategy to learn these programs uses an LLM as a prior, generating candidate probabilistic programs that are then tested against the empirical distribution and adjusted through feedback. We experiment on a number of classical toy POMDP problems, simulated MiniGrid domains, and two real mobile-base robotics search domains involving partial observability. Our results show that using an LLM to guide in the construction of a low-complexity POMDP model can be more effective than tabular POMDP learning, behavior cloning, or direct LLM planning.",
+          "url": "https://arxiv.org/abs/2505.02216v2",
+          "pdf_url": "https://arxiv.org/pdf/2505.02216v2",
+          "published": "2025-05-04T18:59:07Z",
+          "updated": "2025-05-12T03:34:54Z",
+          "categories": [
+            "cs.AI"
+          ],
+          "primary_category": "cs.AI"
+        }
+      ]
+    },
+    {
+      "id": "lozano-perez_t",
+      "name": "Tomas Lozano-Perez",
+      "field": "Robot manipulation, task and motion planning, spatial reasoning",
+      "institution": "Massachusetts Institute of Technology",
+      "website": "https://people.csail.mit.edu/tlp/",
+      "paper_count": 5,
+      "papers": [
+        {
+          "id": "2603.09971v1",
+          "title": "TiPToP: A Modular Open-Vocabulary Planning System for Robotic Manipulation",
+          "authors": [
+            "William Shen",
+            "Nishanth Kumar",
+            "Sahit Chintalapudi",
+            "Jie Wang",
+            "Christopher Watson",
+            "Edward Hu",
+            "Jing Cao",
+            "Dinesh Jayaraman",
+            "Leslie Pack Kaelbling",
+            "Tom\u00e1s Lozano-P\u00e9rez"
+          ],
+          "abstract": "We present TiPToP, an extensible modular system that combines pretrained vision foundation models with an existing Task and Motion Planner (TAMP) to solve multi-step manipulation tasks directly from input RGB images and natural-language instructions. Our system aims to be simple and easy-to-use: it can be installed and run on a standard DROID setup in under one hour and adapted to new embodiments with minimal effort. We evaluate TiPToP -- which requires zero robot data -- over 28 tabletop manipulation tasks in simulation and the real world and find it matches or outperforms $\u03c0_{0.5}\\text{-DROID}$, a vision-language-action (VLA) model fine-tuned on 350 hours of embodiment-specific demonstrations. TiPToP's modular architecture enables us to analyze the system's failure modes at the component level. We analyze results from an evaluation of 173 trials and identify directions for improvement. We release TiPToP open-source to further research on modular manipulation systems and tighter integration between learning and planning. Project website and code: https://tiptop-robot.github.io",
+          "url": "https://arxiv.org/abs/2603.09971v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.09971v1",
+          "published": "2026-03-10T17:59:00Z",
+          "updated": "2026-03-10T17:59:00Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2508.08983v1",
+          "title": "Rational Inverse Reasoning",
+          "authors": [
+            "Ben Zandonati",
+            "Tom\u00e1s Lozano-P\u00e9rez",
+            "Leslie Pack Kaelbling"
+          ],
+          "abstract": "Humans can observe a single, imperfect demonstration and immediately generalize to very different problem settings. Robots, in contrast, often require hundreds of examples and still struggle to generalize beyond the training conditions. We argue that this limitation arises from the inability to recover the latent explanations that underpin intelligent behavior, and that these explanations can take the form of structured programs consisting of high-level goals, sub-task decomposition, and execution constraints. In this work, we introduce Rational Inverse Reasoning (RIR), a framework for inferring these latent programs through a hierarchical generative model of behavior. RIR frames few-shot imitation as Bayesian program induction: a vision-language model iteratively proposes structured symbolic task hypotheses, while a planner-in-the-loop inference scheme scores each by the likelihood of the observed demonstration under that hypothesis. This loop yields a posterior over concise, executable programs. We evaluate RIR on a suite of continuous manipulation tasks designed to test one-shot and few-shot generalization across variations in object pose, count, geometry, and layout. With as little as one demonstration, RIR infers the intended task structure and generalizes to novel settings, outperforming state-of-the-art vision-language model baselines.",
+          "url": "https://arxiv.org/abs/2508.08983v1",
+          "pdf_url": "https://arxiv.org/pdf/2508.08983v1",
+          "published": "2025-08-12T14:49:44Z",
+          "updated": "2025-08-12T14:49:44Z",
+          "categories": [
+            "cs.RO",
+            "cs.AI"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2508.02068v2",
+          "title": "\"Set It Up\": Functional Object Arrangement with Compositional Generative Models (Journal Version)",
+          "authors": [
+            "Yiqing Xu",
+            "Jiayuan Mao",
+            "Linfeng Li",
+            "Yilun Du",
+            "Tomas Loz\u00e1no-P\u00e9rez",
+            "Leslie Pack Kaelbling",
+            "David Hsu"
+          ],
+          "abstract": "Functional object arrangement (FORM) is the task of arranging objects to fulfill a function, e.g., \"set up a dining table for two\". One key challenge here is that the instructions for FORM are often under-specified and do not explicitly specify the desired object goal poses. This paper presents SetItUp, a neuro-symbolic framework that learns to specify the goal poses of objects from a few training examples and a structured natural-language task specification. SetItUp uses a grounding graph, which is composed of abstract spatial relations among objects (e.g., left-of), as its intermediate representation. This decomposes the FORM problem into two stages: (i) predicting this graph among objects and (ii) predicting object poses given the grounding graph. For (i), SetItUp leverages large language models (LLMs) to induce Python programs from a task specification and a few training examples. This program can be executed to generate grounding graphs in novel scenarios. For (ii), SetItUp pre-trains a collection of diffusion models to capture primitive spatial relations and online composes these models to predict object poses based on the grounding graph. We evaluated SetItUp on a dataset spanning three distinct task families: arranging tableware on a dining table, organizing items on a bookshelf, and laying out furniture in a bedroom. Experiments show that SetItUp outperforms existing models in generating functional, physically feasible, and aesthetically pleasing object arrangements. This article extends our conference paper published at Robotics: Science and Systems (RSS) 2024.",
+          "url": "https://arxiv.org/abs/2508.02068v2",
+          "pdf_url": "https://arxiv.org/pdf/2508.02068v2",
+          "published": "2025-08-04T05:16:09Z",
+          "updated": "2025-08-07T09:18:55Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2505.21851v2",
+          "title": "Streaming Flow Policy: Simplifying diffusion/flow-matching policies by treating action trajectories as flow trajectories",
+          "authors": [
+            "Sunshine Jiang",
+            "Xiaolin Fang",
+            "Nicholas Roy",
+            "Tom\u00e1s Lozano-P\u00e9rez",
+            "Leslie Pack Kaelbling",
+            "Siddharth Ancha"
+          ],
+          "abstract": "Recent advances in diffusion$/$flow-matching policies have enabled imitation learning of complex, multi-modal action trajectories. However, they are computationally expensive because they sample a trajectory of trajectories: a diffusion$/$flow trajectory of action trajectories. They discard intermediate action trajectories, and must wait for the sampling process to complete before any actions can be executed on the robot. We simplify diffusion$/$flow policies by treating action trajectories as flow trajectories. Instead of starting from pure noise, our algorithm samples from a narrow Gaussian around the last action. Then, it incrementally integrates a velocity field learned via flow matching to produce a sequence of actions that constitute a single trajectory. This enables actions to be streamed to the robot on-the-fly during the flow sampling process, and is well-suited for receding horizon policy execution. Despite streaming, our method retains the ability to model multi-modal behavior. We train flows that stabilize around demonstration trajectories to reduce distribution shift and improve imitation learning performance. Streaming flow policy outperforms prior methods while enabling faster policy execution and tighter sensorimotor loops for learning-based robot control. Project website: https://streaming-flow-policy.github.io/",
+          "url": "https://arxiv.org/abs/2505.21851v2",
+          "pdf_url": "https://arxiv.org/pdf/2505.21851v2",
+          "published": "2025-05-28T00:48:19Z",
+          "updated": "2025-09-24T23:51:56Z",
+          "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.LG"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2505.02216v2",
+          "title": "LLM-Guided Probabilistic Program Induction for POMDP Model Estimation",
+          "authors": [
+            "Aidan Curtis",
+            "Hao Tang",
+            "Thiago Veloso",
+            "Kevin Ellis",
+            "Joshua Tenenbaum",
+            "Tom\u00e1s Lozano-P\u00e9rez",
+            "Leslie Pack Kaelbling"
+          ],
+          "abstract": "Partially Observable Markov Decision Processes (POMDPs) model decision making under uncertainty. While there are many approaches to approximately solving POMDPs, we aim to address the problem of learning such models. In particular, we are interested in a subclass of POMDPs wherein the components of the model, including the observation function, reward function, transition function, and initial state distribution function, can be modeled as low-complexity probabilistic graphical models in the form of a short probabilistic program. Our strategy to learn these programs uses an LLM as a prior, generating candidate probabilistic programs that are then tested against the empirical distribution and adjusted through feedback. We experiment on a number of classical toy POMDP problems, simulated MiniGrid domains, and two real mobile-base robotics search domains involving partial observability. Our results show that using an LLM to guide in the construction of a low-complexity POMDP model can be more effective than tabular POMDP learning, behavior cloning, or direct LLM planning.",
+          "url": "https://arxiv.org/abs/2505.02216v2",
+          "pdf_url": "https://arxiv.org/pdf/2505.02216v2",
+          "published": "2025-05-04T18:59:07Z",
+          "updated": "2025-05-12T03:34:54Z",
+          "categories": [
+            "cs.AI"
+          ],
+          "primary_category": "cs.AI"
         }
       ]
     }
