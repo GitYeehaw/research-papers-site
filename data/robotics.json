@@ -2,7 +2,230 @@
   "category": "robotics",
   "name": "Robotics Research",
   "description": "Robotics \u2014 Motion Planning, Control Systems, Human-Robot Interaction, Autonomous Systems",
-  "scraped_at": "2026-03-14T03:35:13.640411+00:00",
-  "paper_count": 0,
-  "papers": []
+  "scraped_at": "2026-03-14T07:23:40.455211+00:00",
+  "paper_count": 10,
+  "papers": [
+    {
+      "id": "2603.12263v1",
+      "title": "$\u03a8_0$: An Open Foundation Model Towards Universal Humanoid Loco-Manipulation",
+      "authors": [
+        "Songlin Wei",
+        "Hongyi Jing",
+        "Boqian Li",
+        "Zhenyu Zhao",
+        "Jiageng Mao",
+        "Zhenhao Ni",
+        "Sicheng He",
+        "Jie Liu",
+        "Xiawei Liu",
+        "Kaidi Kang",
+        "Sheng Zang",
+        "Weiduo Yuan",
+        "Marco Pavone",
+        "Di Huang",
+        "Yue Wang"
+      ],
+      "abstract": "We introduce $\u03a8_0$ (Psi-Zero), an open foundation model to address challenging humanoid loco-manipulation tasks. While existing approaches often attempt to address this fundamental problem by co-training on large and diverse human and humanoid data, we argue that this strategy is suboptimal due to the fundamental kinematic and motion disparities between humans and humanoid robots. Therefore, data efficiency and model performance remain unsatisfactory despite the considerable data volume. To address this challenge, \\ours\\;decouples the learning process to maximize the utility of heterogeneous data sources. Specifically, we propose a staged training paradigm with different learning objectives: First, we autoregressively pre-train a VLM backbone on large-scale egocentric human videos to acquire generalizable visual-action representations. Then, we post-train a flow-based action expert on high-quality humanoid robot data to learn precise robot joint control. Our research further identifies a critical yet often overlooked data recipe: in contrast to approaches that scale with noisy Internet clips or heterogeneous cross-embodiment robot datasets, we demonstrate that pre-training on high-quality egocentric human manipulation data followed by post-training on domain-specific real-world humanoid trajectories yields superior performance. Extensive real-world experiments demonstrate that \\ours\\ achieves the best performance using only about 800 hours of human video data and 30 hours of real-world robot data, outperforming baselines pre-trained on more than 10$\\times$ as much data by over 40\\% in overall success rate across multiple tasks. We will open-source the entire ecosystem to the community, including a data processing and training pipeline, a humanoid foundation model, and a real-time action inference engine.",
+      "url": "https://arxiv.org/abs/2603.12263v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.12263v1",
+      "published": "2026-03-12T17:59:51Z",
+      "updated": "2026-03-12T17:59:51Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2603.12260v1",
+      "title": "HumDex:Humanoid Dexterous Manipulation Made Easy",
+      "authors": [
+        "Liang Heng",
+        "Yihe Tang",
+        "Jiajun Xu",
+        "Henghui Bao",
+        "Di Huang",
+        "Yue Wang"
+      ],
+      "abstract": "This paper investigates humanoid whole-body dexterous manipulation, where the efficient collection of high-quality demonstration data remains a central bottleneck.   Existing teleoperation systems often suffer from limited portability, occlusion, or insufficient precision, which hinders their applicability to complex whole-body tasks. To address these challenges, we introduce HumDex, a portable teleoperation system designed for humanoid whole-body dexterous manipulation. Our system leverages IMU-based motion tracking to address the portability-precision trade-off, enabling accurate full-body tracking while remaining easy to deploy. For dexterous hand control, we further introduce a learning-based retargeting method that generates smooth and natural hand motions without manual parameter tuning. Beyond teleoperation, HumDex enables efficient collection of human motion data. Building on this capability, we propose a two-stage imitation learning framework that first pre-trains on diverse human motion data to learn generalizable priors, and then fine-tunes on robot data to bridge the embodiment gap for precise execution. We demonstrate that this approach significantly improves generalization to new configurations, objects, and backgrounds with minimal data acquisition costs. The entire system is fully reproducible and open-sourced at https://github.com/physical-superintelligence-lab/HumDex.",
+      "url": "https://arxiv.org/abs/2603.12260v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.12260v1",
+      "published": "2026-03-12T17:59:39Z",
+      "updated": "2026-03-12T17:59:39Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2603.12243v1",
+      "title": "HandelBot: Real-World Piano Playing via Fast Adaptation of Dexterous Robot Policies",
+      "authors": [
+        "Amber Xie",
+        "Haozhi Qi",
+        "Dorsa Sadigh"
+      ],
+      "abstract": "Mastering dexterous manipulation with multi-fingered hands has been a grand challenge in robotics for decades. Despite its potential, the difficulty of collecting high-quality data remains a primary bottleneck for high-precision tasks. While reinforcement learning and simulation-to-real-world transfer offer a promising alternative, the transferred policies often fail for tasks demanding millimeter-scale precision, such as bimanual piano playing. In this work, we introduce HandelBot, a framework that combines a simulation policy and rapid adaptation through a two-stage pipeline. Starting from a simulation-trained policy, we first apply a structured refinement stage to correct spatial alignments by adjusting lateral finger joints based on physical rollouts. Next, we use residual reinforcement learning to autonomously learn fine-grained corrective actions. Through extensive hardware experiments across five recognized songs, we demonstrate that HandelBot can successfully perform precise bimanual piano playing. Our system outperforms direct simulation deployment by a factor of 1.8x and requires only 30 minutes of physical interaction data.",
+      "url": "https://arxiv.org/abs/2603.12243v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.12243v1",
+      "published": "2026-03-12T17:56:29Z",
+      "updated": "2026-03-12T17:56:29Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2603.12220v1",
+      "title": "Conformalized Data-Driven Reachability Analysis with PAC Guarantees",
+      "authors": [
+        "Yanliang Huang",
+        "Zhen Zhang",
+        "Peng Xie",
+        "Zhuoqi Zeng",
+        "Amr Alanwar"
+      ],
+      "abstract": "Data-driven reachability analysis computes over-approximations of reachable sets directly from noisy data. Existing deterministic methods require either known noise bounds or system-specific structural parameters such as Lipschitz constants. We propose Conformalized Data-Driven Reachability (CDDR), a framework that provides Probably Approximately Correct (PAC) coverage guarantees through the Learn Then Test (LTT) calibration procedure, requiring only that calibration trajectories be independently and identically distributed. CDDR is developed for three settings: linear time-invariant (LTI) systems with unknown process noise distributions, LTI systems with bounded measurement noise, and general nonlinear systems including non-Lipschitz dynamics. Experiments on a 5-dimensional LTI system under Gaussian and heavy-tailed Student-t noise and on a 2-dimensional non-Lipschitz system with fractional damping demonstrate that CDDR achieves valid coverage where deterministic methods do not provide formal guarantees. Under anisotropic noise, a normalized score function reduces the reachable set volume while preserving the PAC guarantee.",
+      "url": "https://arxiv.org/abs/2603.12220v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.12220v1",
+      "published": "2026-03-12T17:45:10Z",
+      "updated": "2026-03-12T17:45:10Z",
+      "categories": [
+        "eess.SY"
+      ],
+      "primary_category": "eess.SY"
+    },
+    {
+      "id": "2603.12202v1",
+      "title": "Technology configurations for decarbonizing residential heat supply through district heating and implications for the electricity network",
+      "authors": [
+        "Christian Doh Dinga",
+        "Francesco Lombardi",
+        "Roald Arkesteijn",
+        "Arjan van Voorden",
+        "Sander van Rijn",
+        "Laurens James de Vries",
+        "Milos Cvetkovic"
+      ],
+      "abstract": "District heating networks (DHNs) have significant potential to decarbonize residential heating and accelerate the energy transition. However, designing carbon-neutral DHNs requires balancing several objectives, including economic costs, social acceptance, long-term uncertainties, and grid-integration challenges from electrification. By combining modeling-to-generate-alternatives with power flow simulation techniques, we develop a decision-support method for designing carbon-neutral DHNs that are cost-effective, socially acceptable, robust to future risks, and impose minimal impacts on the electricity grid. Applying our method to a Dutch case, we find substantial diversity in how carbon-neutral DHNs can be designed. The flexibility in technology choice, sizing, and location enables accommodating different real-world needs and achieving high electrification levels without increasing grid loading. For instance, intelligently located heat pumps and thermal storage can limit grid stress even when renewable baseload heat sources and green-fuel boilers are scarce. Using our method, planners can explore diverse carbon-neutral DHN designs and identify the design that best balances stakeholders' preferences.",
+      "url": "https://arxiv.org/abs/2603.12202v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.12202v1",
+      "published": "2026-03-12T17:27:21Z",
+      "updated": "2026-03-12T17:27:21Z",
+      "categories": [
+        "eess.SY"
+      ],
+      "primary_category": "eess.SY"
+    },
+    {
+      "id": "2603.12193v1",
+      "title": "SaPaVe: Towards Active Perception and Manipulation in Vision-Language-Action Models for Robotics",
+      "authors": [
+        "Mengzhen Liu",
+        "Enshen Zhou",
+        "Cheng Chi",
+        "Yi Han",
+        "Shanyu Rong",
+        "Liming Chen",
+        "Pengwei Wang",
+        "Zhongyuan Wang",
+        "Shanghang Zhang"
+      ],
+      "abstract": "Active perception and manipulation are crucial for robots to interact with complex scenes. Existing methods struggle to unify semantic-driven active perception with robust, viewpoint-invariant execution. We propose SaPaVe, an end-to-end framework that jointly learns these capabilities in a data-efficient manner. Our approach decouples camera and manipulation actions rather than placing them in a shared action space, and follows a bottom-up training strategy: we first train semantic camera control on a large-scale dataset, then jointly optimize both action types using hybrid data. To support this framework, we introduce ActiveViewPose-200K, a dataset of 200k image-language-camera movement pairs for semantic camera movement learning, and a 3D geometry-aware module that improves execution robustness under dynamic viewpoints. We also present ActiveManip-Bench, the first benchmark for evaluating active manipulation beyond fixed-view settings. Extensive experiments in both simulation and real-world environments show that SaPaVe outperforms recent vision-language-action models such as GR00T N1 and \\(\u03c0_0\\), achieving up to 31.25\\% higher success rates in real-world tasks. These results show that tightly coupled perception and execution, when trained with decoupled yet coordinated strategies, enable efficient and generalizable active manipulation. Project page: https://lmzpai.github.io/SaPaVe",
+      "url": "https://arxiv.org/abs/2603.12193v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.12193v1",
+      "published": "2026-03-12T17:23:46Z",
+      "updated": "2026-03-12T17:23:46Z",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2603.12187v1",
+      "title": "Integrated Online Monitoring and Adaption of Process Model Predictive Controllers",
+      "authors": [
+        "Samuel Mallick",
+        "Laura Boca de de Giuli",
+        "Alessio La Bella",
+        "Azita Dabiri",
+        "Bart De Schutter",
+        "Riccardo Scattolini"
+      ],
+      "abstract": "This paper addresses the design of an event-triggered, data-based, and performance-oriented adaption method for model predictive control (MPC). The performance of such a strategy strongly depends on the accuracy of the prediction model, which may require online adaption to prevent performance degradation under changing operating conditions. Unlike existing methods that continuously update model and control parameters from data, potentially leading to catastrophic forgetting and unnecessary control modifications, we propose a novel approach based on statistical monitoring of closed-loop performance indicators. This framework enables the detection of performance degradation, and, when required, controller adaption is performed via reinforcement learning and identification techniques. The proposed strategy is validated on a high-fidelity simulation of a district heating system benchmark.",
+      "url": "https://arxiv.org/abs/2603.12187v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.12187v1",
+      "published": "2026-03-12T17:18:26Z",
+      "updated": "2026-03-12T17:18:26Z",
+      "categories": [
+        "eess.SY"
+      ],
+      "primary_category": "eess.SY"
+    },
+    {
+      "id": "2603.12185v1",
+      "title": "ComFree-Sim: A GPU-Parallelized Analytical Contact Physics Engine for Scalable Contact-Rich Robotics Simulation and Control",
+      "authors": [
+        "Chetan Borse",
+        "Zhixian Xie",
+        "Wei-Cheng Huang",
+        "Wanxin Jin"
+      ],
+      "abstract": "Physics simulation for contact-rich robotics is often bottlenecked by contact resolution: mainstream engines enforce non-penetration and Coulomb friction via complementarity constraints or constrained optimization, requiring per-step iterative solves whose cost grows superlinearly with contact density. We present ComFree-Sim, a GPU-parallelized analytical contact physics engine built on complementarity-free contact modeling. ComFree-Sim computes contact impulses in closed form via an impedance-style prediction--correction update in the dual cone of Coulomb friction. Contact computation decouples across contact pairs and becomes separable across cone facets, mapping naturally to GPU kernels and yielding near-linear runtime scaling with the number of contacts. We further extend the formulation to a unified 6D contact model capturing tangential, torsional, and rolling friction, and introduce a practical dual-cone impedance heuristic. ComFree-Sim is implemented in Warp and exposed through a MuJoCo-compatible interface as a drop-in backend alternative to MuJoCo Warp (MJWarp). Experiments benchmark penetration, friction behaviors, stability, and simulation runtime scaling against MJWarp, demonstrating near-linear scaling and 2--3 times higher throughput in dense contact scenes with comparable physical fidelity. We deploy ComFree-Sim in real-time MPC for in-hand dexterous manipulation on a real-world multi-fingered LEAP hand and in dynamics-aware motion retargeting, demonstrating that low-latency simulation yields higher closed-loop success rates and enables practical high-frequency control in contact-rich tasks.",
+      "url": "https://arxiv.org/abs/2603.12185v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.12185v1",
+      "published": "2026-03-12T17:14:45Z",
+      "updated": "2026-03-12T17:14:45Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2603.12144v1",
+      "title": "O3N: Omnidirectional Open-Vocabulary Occupancy Prediction",
+      "authors": [
+        "Mengfei Duan",
+        "Hao Shi",
+        "Fei Teng",
+        "Guoqiang Zhao",
+        "Yuheng Zhang",
+        "Zhiyong Li",
+        "Kailun Yang"
+      ],
+      "abstract": "Understanding and reconstructing the 3D world through omnidirectional perception is an inevitable trend in the development of autonomous agents and embodied intelligence. However, existing 3D occupancy prediction methods are constrained by limited perspective inputs and predefined training distribution, making them difficult to apply to embodied agents that require comprehensive and safe perception of scenes in open world exploration. To address this, we present O3N, the first purely visual, end-to-end Omnidirectional Open-vocabulary Occupancy predictioN framework. O3N embeds omnidirectional voxels in a polar-spiral topology via the Polar-spiral Mamba (PsM) module, enabling continuous spatial representation and long-range context modeling across 360\u00b0. The Occupancy Cost Aggregation (OCA) module introduces a principled mechanism for unifying geometric and semantic supervision within the voxel space, ensuring consistency between the reconstructed geometry and the underlying semantic structure. Moreover, Natural Modality Alignment (NMA) establishes a gradient-free alignment pathway that harmonizes visual features, voxel embeddings, and text semantics, forming a consistent \"pixel-voxel-text\" representation triad. Extensive experiments on multiple models demonstrate that our method not only achieves state-of-the-art performance on QuadOcc and Human360Occ benchmarks but also exhibits remarkable cross-scene generalization and semantic scalability, paving the way toward universal 3D world modeling. The source code will be made publicly available at https://github.com/MengfeiD/O3N.",
+      "url": "https://arxiv.org/abs/2603.12144v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.12144v1",
+      "published": "2026-03-12T16:45:42Z",
+      "updated": "2026-03-12T16:45:42Z",
+      "categories": [
+        "cs.CV",
+        "cs.RO",
+        "eess.IV"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2603.12120v1",
+      "title": "CRAFT: A Tendon-Driven Hand with Hybrid Hard-Soft Compliance",
+      "authors": [
+        "Leo Lin",
+        "Shivansh Patel",
+        "Jay Moon",
+        "Svetlana Lazebnik",
+        "Unnat Jain"
+      ],
+      "abstract": "We introduce CRAFT hand, a tendon-driven anthropomorphic hand with hybrid hard-soft compliance for contact-rich manipulation. The design is based on a simple idea: contact is not uniform across the hand. Impacts concentrate at joints, while links carry most of the load. CRAFT places soft material at joints and keeps links rigid, and uses rollingcontact joint surfaces to keep flexion on repeatable motion paths. Fifteen motors mounted on the fingers drive the hand through tendons, keeping the form factor compact and the fingers light. In structural tests, CRAFT improves strength and endurance while maintaining comparable repeatability. In teleoperation, CRAFT improves handling of fragile and low-friction items, and the hand covers 33/33 grasps in the Feix taxonomy. The full design costs under $600 and will be released open-source with visionbased teleoperation and simulation integration. Project page: http://craft-hand.github.io/",
+      "url": "https://arxiv.org/abs/2603.12120v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.12120v1",
+      "published": "2026-03-12T16:23:19Z",
+      "updated": "2026-03-12T16:23:19Z",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "primary_category": "cs.RO"
+    }
+  ]
 }
