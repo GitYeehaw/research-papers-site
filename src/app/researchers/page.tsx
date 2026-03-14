@@ -2,6 +2,7 @@ import { getResearchersData } from "@/lib/data";
 import { Researcher } from "@/types";
 import ResearcherCard from "@/components/ResearcherCard";
 import ScrollFadeIn from "@/components/ScrollFadeIn";
+import HashScroller from "@/components/HashScroller";
 
 export const metadata = {
   title: "Researchers — Research Papers",
@@ -40,6 +41,7 @@ export default function ResearchersPage() {
 
   return (
     <div>
+      <HashScroller />
       <ScrollFadeIn>
         <div className="pt-6 mb-10">
           <h1
