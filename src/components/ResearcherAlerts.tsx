@@ -56,7 +56,7 @@ export default function ResearcherAlerts({ alerts }: ResearcherAlertsProps) {
             }}
           >
             <Link
-              href="/researchers"
+              href={`/researchers#researcher-${researcher.id}`}
               className="researcher-name-link"
               style={{ fontSize: "0.95rem" }}
             >

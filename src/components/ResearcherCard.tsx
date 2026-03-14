@@ -20,7 +20,7 @@ export default function ResearcherCard({ researcher }: { researcher: Researcher 
   );
 
   return (
-    <div className="card" style={{ display: "flex", flexDirection: "column", gap: "12px", minWidth: 0 }}>
+    <div id={`researcher-${researcher.id}`} className="card" style={{ display: "flex", flexDirection: "column", gap: "12px", minWidth: 0, scrollMarginTop: "2rem" }}>
       {/* Name + website + New tag */}
       <div>
         <h3
