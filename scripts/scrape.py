@@ -45,12 +45,31 @@ def fetch_arxiv_papers(query: str, max_results: int = 10) -> list[dict]:
     url = f"{ARXIV_API_URL}?{params}"
     print(f"  Fetching: {url}")
 
-    try:
-        req = urllib.request.Request(url, headers={"User-Agent": "ResearchPapersSite/1.0"})
-        with urllib.request.urlopen(req, timeout=30) as response:
-            xml_data = response.read().decode("utf-8")
-    except Exception as e:
-        print(f"  ERROR fetching from arXiv: {e}")
+    xml_data = None
+    for attempt in range(3):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "ResearchPapersSite/1.0"})
+            with urllib.request.urlopen(req, timeout=30) as response:
+                xml_data = response.read().decode("utf-8")
+            break
+        except urllib.error.HTTPError as e:
+            if e.code == 429 and attempt < 2:
+                wait = 10 * (attempt + 1)
+                print(f"  Rate limited (429), retrying in {wait}s...")
+                time.sleep(wait)
+            else:
+                print(f"  ERROR fetching from arXiv: {e}")
+                return []
+        except Exception as e:
+            if attempt < 2:
+                wait = 10 * (attempt + 1)
+                print(f"  Request failed ({e}), retrying in {wait}s...")
+                time.sleep(wait)
+            else:
+                print(f"  ERROR fetching from arXiv: {e}")
+                return []
+
+    if xml_data is None:
         return []
 
     # Parse XML
@@ -179,7 +198,7 @@ def scrape_researchers():
             "papers": papers,
         })
 
-        time.sleep(3)
+        time.sleep(5)
 
     output = {
         "scraped_at": datetime.now(timezone.utc).isoformat(),
@@ -229,7 +248,7 @@ def main():
         print(f"  Saved to {output_path}")
 
         # Be polite to the arXiv API — wait between requests
-        time.sleep(3)
+        time.sleep(5)
 
     print(f"\n[Researchers]")
     scrape_researchers()
