@@ -200,16 +200,21 @@ def scrape_researchers():
 
         time.sleep(5)
 
-    output = {
-        "scraped_at": datetime.now(timezone.utc).isoformat(),
-        "researcher_count": len(results),
-        "researchers": results,
-    }
-
+    total_papers = sum(r["paper_count"] for r in results)
     output_path = os.path.join(DATA_DIR, "researchers.json")
-    with open(output_path, "w") as f:
-        json.dump(output, f, indent=2)
-    print(f"  Saved to {output_path}")
+
+    if total_papers == 0 and os.path.exists(output_path):
+        print(f"  Skipping write — keeping existing data (all fetches returned 0 papers)")
+    else:
+        output = {
+            "scraped_at": datetime.now(timezone.utc).isoformat(),
+            "researcher_count": len(results),
+            "researchers": results,
+        }
+
+        with open(output_path, "w") as f:
+            json.dump(output, f, indent=2)
+        print(f"  Saved to {output_path}")
 
 
 def main():
@@ -233,19 +238,23 @@ def main():
 
         print(f"  Found {len(papers)} papers")
 
-        output = {
-            "category": key,
-            "name": cat_config["name"],
-            "description": cat_config["description"],
-            "scraped_at": datetime.now(timezone.utc).isoformat(),
-            "paper_count": len(papers),
-            "papers": papers,
-        }
-
         output_path = os.path.join(DATA_DIR, f"{key}.json")
-        with open(output_path, "w") as f:
-            json.dump(output, f, indent=2)
-        print(f"  Saved to {output_path}")
+
+        if len(papers) == 0 and os.path.exists(output_path):
+            print(f"  Skipping write — keeping existing data (fetch returned 0 papers)")
+        else:
+            output = {
+                "category": key,
+                "name": cat_config["name"],
+                "description": cat_config["description"],
+                "scraped_at": datetime.now(timezone.utc).isoformat(),
+                "paper_count": len(papers),
+                "papers": papers,
+            }
+
+            with open(output_path, "w") as f:
+                json.dump(output, f, indent=2)
+            print(f"  Saved to {output_path}")
 
         # Be polite to the arXiv API — wait between requests
         time.sleep(5)
