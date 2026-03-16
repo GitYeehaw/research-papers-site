@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-03-15T08:54:15.303517+00:00",
+  "scraped_at": "2026-03-16T09:12:56.744995+00:00",
   "researcher_count": 54,
   "researchers": [
     {
@@ -4452,11 +4452,12 @@
           "primary_category": "cs.RO"
         },
         {
-          "id": "2510.23571v1",
+          "id": "2510.23571v2",
           "title": "RobotArena $\\infty$: Scalable Robot Benchmarking via Real-to-Sim Translation",
           "authors": [
             "Yash Jangir",
             "Yidi Zhang",
+            "Pang-Chi Lo",
             "Kashu Yamazaki",
             "Chenyu Zhang",
             "Kuan-Hsun Tu",
@@ -4465,11 +4466,11 @@
             "Yonatan Bisk",
             "Katerina Fragkiadaki"
           ],
-          "abstract": "The pursuit of robot generalists - instructable agents capable of performing diverse tasks across diverse environments - demands rigorous and scalable evaluation. Yet real-world testing of robot policies remains fundamentally constrained: it is labor-intensive, slow, unsafe at scale, and difficult to reproduce. Existing simulation benchmarks are similarly limited, as they train and test policies within the same synthetic domains and cannot assess models trained from real-world demonstrations or alternative simulation environments. As policies expand in scope and complexity, these barriers only intensify, since defining \"success\" in robotics often hinges on nuanced human judgments of execution quality. In this paper, we introduce a new benchmarking framework that overcomes these challenges by shifting VLA evaluation into large-scale simulated environments augmented with online human feedback. Leveraging advances in vision-language models, 2D-to-3D generative modeling, and differentiable rendering, our approach automatically converts video demonstrations from widely used robot datasets into simulated counterparts. Within these digital twins, we assess VLA policies using both automated VLM-guided scoring and scalable human preference judgments collected from crowdworkers, transforming human involvement from tedious scene setup, resetting, and safety supervision into lightweight preference comparisons. To measure robustness, we systematically perturb simulated environments along multiple axes, such as textures and object placements, stress-testing policy generalization under controlled variation. The result is a continuously evolving, reproducible, and scalable benchmark for real-world trained robot manipulation policies, addressing a critical missing capability in today's robotics landscape.",
-          "url": "https://arxiv.org/abs/2510.23571v1",
-          "pdf_url": "https://arxiv.org/pdf/2510.23571v1",
+          "abstract": "The pursuit of robot generalists, agents capable of performing diverse tasks across diverse environments, demands rigorous and scalable evaluation. Yet real-world testing of robot policies remains fundamentally constrained: it is labor-intensive, slow, unsafe at scale, and difficult to reproduce. As policies expand in scope and complexity, these barriers only intensify, since defining \"success\" in robotics often hinges on nuanced human judgments of execution quality. We introduce RobotArena Infinity, a new benchmarking framework that overcomes these challenges by shifting vision-language-action (VLA) evaluation into large-scale simulated environments augmented with online human feedback. Leveraging advances in vision-language models, 2D-to-3D generative modeling, and differentiable rendering, our approach automatically converts video demonstrations from widely used robot datasets into simulated counterparts. Within these digital twins, we assess VLA policies using both automated vision-language-model-guided scoring and scalable human preference judgments collected from crowdworkers, transforming human involvement from tedious scene setup, resetting, and safety supervision into lightweight preference comparisons. To measure robustness, we systematically perturb simulated environments along multiple axes, including textures and object placements, stress-testing policy generalization under controlled variation. The result is a continuously evolving, reproducible, and scalable benchmark for real-world-trained robot manipulation policies, addressing a critical missing capability in today's robotics landscape.",
+          "url": "https://arxiv.org/abs/2510.23571v2",
+          "pdf_url": "https://arxiv.org/pdf/2510.23571v2",
           "published": "2025-10-27T17:41:38Z",
-          "updated": "2025-10-27T17:41:38Z",
+          "updated": "2026-03-13T16:29:34Z",
           "categories": [
             "cs.RO",
             "cs.AI",
@@ -5093,19 +5094,20 @@
       "paper_count": 5,
       "papers": [
         {
-          "id": "2603.11139v1",
+          "id": "2603.11139v2",
           "title": "H2LooP Spark Preview: Continual Pretraining of Large Language Models for Low-Level Embedded Systems Code",
           "authors": [
             "Amit Singh",
             "Vedant Nipane",
             "Pulkit Agrawal",
-            "Jatin Kishnani"
+            "Jatin Kishnani",
+            "Sairanjan Mishra"
           ],
           "abstract": "Large language models (LLMs) demonstrate strong code generation abilities in general-purpose programming languages but remain limited in specialized domains such as low-level embedded systems programming. This domain involves hardware register manipulation, vendor-specific SDKs, real-time operating system APIs, and hardware abstraction layers that are underrepresented in standard pretraining corpora. We introduce H2LooP Spark Preview, a continual pretraining (CPT) pipeline that adapts the OLMo-3-7B-a fully open language model to the embedded systems domain using BF16 LoRA with rank-stabilized scaling on 8 NVIDIA H100 GPUs. Our training corpus is constructed from repository-datasheet pairs covering 100B tokens of raw embedded systems data across 117 manufacturers, processed using the hierarchical datasheet-to-code mapping approach proposed in SpecMap (Nipane et al., 2026). The resulting curated dataset split contains 23.5B tokens across 13 embedded domains. Continual pretraining with high-rank LoRA (r=512) yields substantial gains, reducing in-domain perplexity by 70.4% and held-out repository perplexity by 66.1%. On generative code completion benchmarks spanning 13 embedded domains, our 7B model outperforms Claude Opus 4.6 and Qwen3-Coder-30B on 8 categories in token accuracy, showing that targeted continual pretraining enables smaller open-weight models to rival frontier systems on specialized technical tasks. We release the production training checkpoint on Huggingface as an open-source artifact.",
-          "url": "https://arxiv.org/abs/2603.11139v1",
-          "pdf_url": "https://arxiv.org/pdf/2603.11139v1",
+          "url": "https://arxiv.org/abs/2603.11139v2",
+          "pdf_url": "https://arxiv.org/pdf/2603.11139v2",
           "published": "2026-03-11T16:32:14Z",
-          "updated": "2026-03-11T16:32:14Z",
+          "updated": "2026-03-13T15:09:55Z",
           "categories": [
             "cs.LG"
           ],
@@ -8100,6 +8102,35 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2603.12510v1",
+          "title": "Red-Teaming Vision-Language-Action Models via Quality Diversity Prompt Generation for Robust Robot Policies",
+          "authors": [
+            "Siddharth Srikanth",
+            "Freddie Liang",
+            "Sophie Hsu",
+            "Varun Bhatt",
+            "Shihan Zhao",
+            "Henry Chen",
+            "Bryon Tjanaka",
+            "Minjune Hwang",
+            "Akanksha Saran",
+            "Daniel Seita",
+            "Aaquib Tabrez",
+            "Stefanos Nikolaidis"
+          ],
+          "abstract": "Vision-Language-Action (VLA) models have significant potential to enable general-purpose robotic systems for a range of vision-language tasks. However, the performance of VLA-based robots is highly sensitive to the precise wording of language instructions, and it remains difficult to predict when such robots will fail. To improve the robustness of VLAs to different wordings, we present Q-DIG (Quality Diversity for Diverse Instruction Generation), which performs red-teaming by scalably identifying diverse natural language task descriptions that induce failures while remaining task-relevant. Q-DIG integrates Quality Diversity (QD) techniques with Vision-Language Models (VLMs) to generate a broad spectrum of adversarial instructions that expose meaningful vulnerabilities in VLA behavior. Our results across multiple simulation benchmarks show that Q-DIG finds more diverse and meaningful failure modes compared to baseline methods, and that fine-tuning VLAs on the generated instructions improves task success rates. Furthermore, results from a user study highlight that Q-DIG generates prompts judged to be more natural and human-like than those from baselines. Finally, real-world evaluations of Q-DIG prompts show results consistent with simulation, and fine-tuning VLAs on the generated prompts further success rates on unseen instructions. Together, these findings suggest that Q-DIG is a promising approach for identifying vulnerabilities and improving the robustness of VLA-based robots. Our anonymous project website is at qdigvla.github.io.",
+          "url": "https://arxiv.org/abs/2603.12510v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.12510v1",
+          "published": "2026-03-12T22:58:42Z",
+          "updated": "2026-03-12T22:58:42Z",
+          "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CL"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2603.11655v1",
           "title": "Concurrent Prehensile and Nonprehensile Manipulation: A Practical Approach to Multi-Stage Dexterous Tasks",
           "authors": [
@@ -8181,35 +8212,6 @@
             "cs.RO"
           ],
           "primary_category": "cs.AI"
-        },
-        {
-          "id": "2603.01151v1",
-          "title": "D-REX: Differentiable Real-to-Sim-to-Real Engine for Learning Dexterous Grasping",
-          "authors": [
-            "Haozhe Lou",
-            "Mingtong Zhang",
-            "Haoran Geng",
-            "Hanyang Zhou",
-            "Sicheng He",
-            "Zhiyuan Gao",
-            "Siheng Zhao",
-            "Jiageng Mao",
-            "Pieter Abbeel",
-            "Jitendra Malik",
-            "Daniel Seita",
-            "Yue Wang"
-          ],
-          "abstract": "Simulation provides a cost-effective and flexible platform for data generation and policy learning to develop robotic systems. However, bridging the gap between simulation and real-world dynamics remains a significant challenge, especially in physical parameter identification. In this work, we introduce a real-to-sim-to-real engine that leverages the Gaussian Splat representations to build a differentiable engine, enabling object mass identification from real-world visual observations and robot control signals, while enabling grasping policy learning simultaneously. Through optimizing the mass of the manipulated object, our method automatically builds high-fidelity and physically plausible digital twins. Additionally, we propose a novel approach to train force-aware grasping policies from limited data by transferring feasible human demonstrations into simulated robot demonstrations. Through comprehensive experiments, we demonstrate that our engine achieves accurate and robust performance in mass identification across various object geometries and mass values. Those optimized mass values facilitate force-aware policy learning, achieving superior and high performance in object grasping, effectively reducing the sim-to-real gap.",
-          "url": "https://arxiv.org/abs/2603.01151v1",
-          "pdf_url": "https://arxiv.org/pdf/2603.01151v1",
-          "published": "2026-03-01T15:32:04Z",
-          "updated": "2026-03-01T15:32:04Z",
-          "categories": [
-            "cs.RO",
-            "cs.CV",
-            "cs.GR"
-          ],
-          "primary_category": "cs.RO"
         }
       ]
     },
@@ -8944,6 +8946,35 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2603.12510v1",
+          "title": "Red-Teaming Vision-Language-Action Models via Quality Diversity Prompt Generation for Robust Robot Policies",
+          "authors": [
+            "Siddharth Srikanth",
+            "Freddie Liang",
+            "Sophie Hsu",
+            "Varun Bhatt",
+            "Shihan Zhao",
+            "Henry Chen",
+            "Bryon Tjanaka",
+            "Minjune Hwang",
+            "Akanksha Saran",
+            "Daniel Seita",
+            "Aaquib Tabrez",
+            "Stefanos Nikolaidis"
+          ],
+          "abstract": "Vision-Language-Action (VLA) models have significant potential to enable general-purpose robotic systems for a range of vision-language tasks. However, the performance of VLA-based robots is highly sensitive to the precise wording of language instructions, and it remains difficult to predict when such robots will fail. To improve the robustness of VLAs to different wordings, we present Q-DIG (Quality Diversity for Diverse Instruction Generation), which performs red-teaming by scalably identifying diverse natural language task descriptions that induce failures while remaining task-relevant. Q-DIG integrates Quality Diversity (QD) techniques with Vision-Language Models (VLMs) to generate a broad spectrum of adversarial instructions that expose meaningful vulnerabilities in VLA behavior. Our results across multiple simulation benchmarks show that Q-DIG finds more diverse and meaningful failure modes compared to baseline methods, and that fine-tuning VLAs on the generated instructions improves task success rates. Furthermore, results from a user study highlight that Q-DIG generates prompts judged to be more natural and human-like than those from baselines. Finally, real-world evaluations of Q-DIG prompts show results consistent with simulation, and fine-tuning VLAs on the generated prompts further success rates on unseen instructions. Together, these findings suggest that Q-DIG is a promising approach for identifying vulnerabilities and improving the robustness of VLA-based robots. Our anonymous project website is at qdigvla.github.io.",
+          "url": "https://arxiv.org/abs/2603.12510v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.12510v1",
+          "published": "2026-03-12T22:58:42Z",
+          "updated": "2026-03-12T22:58:42Z",
+          "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CL"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2603.09011v1",
           "title": "Improving through Interaction: Searching Behavioral Representation Spaces with CMA-ES-IG",
           "authors": [
@@ -9025,33 +9056,6 @@
             "cs.NE"
           ],
           "primary_category": "cs.LG"
-        },
-        {
-          "id": "2511.12754v1",
-          "title": "Adaptively Coordinating with Novel Partners via Learned Latent Strategies",
-          "authors": [
-            "Benjamin Li",
-            "Shuyang Shi",
-            "Lucia Romero",
-            "Huao Li",
-            "Yaqi Xie",
-            "Woojun Kim",
-            "Stefanos Nikolaidis",
-            "Michael Lewis",
-            "Katia Sycara",
-            "Simon Stepputtis"
-          ],
-          "abstract": "Adaptation is the cornerstone of effective collaboration among heterogeneous team members. In human-agent teams, artificial agents need to adapt to their human partners in real time, as individuals often have unique preferences and policies that may change dynamically throughout interactions. This becomes particularly challenging in tasks with time pressure and complex strategic spaces, where identifying partner behaviors and selecting suitable responses is difficult. In this work, we introduce a strategy-conditioned cooperator framework that learns to represent, categorize, and adapt to a broad range of potential partner strategies in real-time. Our approach encodes strategies with a variational autoencoder to learn a latent strategy space from agent trajectory data, identifies distinct strategy types through clustering, and trains a cooperator agent conditioned on these clusters by generating partners of each strategy type. For online adaptation to novel partners, we leverage a fixed-share regret minimization algorithm that dynamically infers and adjusts the partner's strategy estimation during interaction. We evaluate our method in a modified version of the Overcooked domain, a complex collaborative cooking environment that requires effective coordination among two players with a diverse potential strategy space. Through these experiments and an online user study, we demonstrate that our proposed agent achieves state of the art performance compared to existing baselines when paired with novel human, and agent teammates.",
-          "url": "https://arxiv.org/abs/2511.12754v1",
-          "pdf_url": "https://arxiv.org/pdf/2511.12754v1",
-          "published": "2025-11-16T19:45:35Z",
-          "updated": "2025-11-16T19:45:35Z",
-          "categories": [
-            "cs.AI",
-            "cs.LG",
-            "cs.MA"
-          ],
-          "primary_category": "cs.AI"
         }
       ]
     },
@@ -9094,8 +9098,8 @@
           "primary_category": "cs.RO"
         },
         {
-          "id": "2603.12260v1",
-          "title": "HumDex:Humanoid Dexterous Manipulation Made Easy",
+          "id": "2603.12260v2",
+          "title": "HumDex: Humanoid Dexterous Manipulation Made Easy",
           "authors": [
             "Liang Heng",
             "Yihe Tang",
@@ -9104,11 +9108,11 @@
             "Di Huang",
             "Yue Wang"
           ],
-          "abstract": "This paper investigates humanoid whole-body dexterous manipulation, where the efficient collection of high-quality demonstration data remains a central bottleneck.   Existing teleoperation systems often suffer from limited portability, occlusion, or insufficient precision, which hinders their applicability to complex whole-body tasks. To address these challenges, we introduce HumDex, a portable teleoperation system designed for humanoid whole-body dexterous manipulation. Our system leverages IMU-based motion tracking to address the portability-precision trade-off, enabling accurate full-body tracking while remaining easy to deploy. For dexterous hand control, we further introduce a learning-based retargeting method that generates smooth and natural hand motions without manual parameter tuning. Beyond teleoperation, HumDex enables efficient collection of human motion data. Building on this capability, we propose a two-stage imitation learning framework that first pre-trains on diverse human motion data to learn generalizable priors, and then fine-tunes on robot data to bridge the embodiment gap for precise execution. We demonstrate that this approach significantly improves generalization to new configurations, objects, and backgrounds with minimal data acquisition costs. The entire system is fully reproducible and open-sourced at https://github.com/physical-superintelligence-lab/HumDex.",
-          "url": "https://arxiv.org/abs/2603.12260v1",
-          "pdf_url": "https://arxiv.org/pdf/2603.12260v1",
+          "abstract": "This paper investigates humanoid whole-body dexterous manipulation, where the efficient collection of high-quality demonstration data remains a central bottleneck. Existing teleoperation systems often suffer from limited portability, occlusion, or insufficient precision, which hinders their applicability to complex whole-body tasks. To address these challenges, we introduce HumDex, a portable teleoperation system designed for humanoid whole-body dexterous manipulation. Our system leverages IMU-based motion tracking to address the portability-precision trade-off, enabling accurate full-body tracking while remaining easy to deploy. For dexterous hand control, we further introduce a learning-based retargeting method that generates smooth and natural hand motions without manual parameter tuning. Beyond teleoperation, HumDex enables efficient collection of human motion data. Building on this capability, we propose a two-stage imitation learning framework that first pre-trains on diverse human motion data to learn generalizable priors, and then fine-tunes on robot data to bridge the embodiment gap for precise execution. We demonstrate that this approach significantly improves generalization to new configurations, objects, and backgrounds with minimal data acquisition costs. The entire system is fully reproducible and open-sourced at https://github.com/physical-superintelligence-lab/humdex.",
+          "url": "https://arxiv.org/abs/2603.12260v2",
+          "pdf_url": "https://arxiv.org/pdf/2603.12260v2",
           "published": "2026-03-12T17:59:39Z",
-          "updated": "2026-03-12T17:59:39Z",
+          "updated": "2026-03-13T04:40:44Z",
           "categories": [
             "cs.RO"
           ],
