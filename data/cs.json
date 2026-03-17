@@ -2,220 +2,242 @@
   "category": "cs",
   "name": "CS Research",
   "description": "Computer Science \u2014 AI, Machine Learning, NLP, Computer Vision",
-  "scraped_at": "2026-03-16T09:07:49.402579+00:00",
+  "scraped_at": "2026-03-17T09:01:42.163449+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2603.13228v1",
-      "title": "PhysMoDPO: Physically-Plausible Humanoid Motion with Preference Optimization",
+      "id": "2603.15620v1",
+      "title": "Towards Generalizable Robotic Manipulation in Dynamic Environments",
       "authors": [
-        "Yangsong Zhang",
-        "Anujith Muraleedharan",
-        "Rikhat Akizhanov",
-        "Abdul Ahad Butt",
-        "G\u00fcl Varol",
-        "Pascal Fua",
-        "Fabio Pizzati",
-        "Ivan Laptev"
+        "Heng Fang",
+        "Shangru Li",
+        "Shuhan Wang",
+        "Xuanyang Xi",
+        "Dingkang Liang",
+        "Xiang Bai"
       ],
-      "abstract": "Recent progress in text-conditioned human motion generation has been largely driven by diffusion models trained on large-scale human motion data. Building on this progress, recent methods attempt to transfer such models for character animation and real robot control by applying a Whole-Body Controller (WBC) that converts diffusion-generated motions into executable trajectories. While WBC trajectories become compliant with physics, they may expose substantial deviations from original motion. To address this issue, we here propose PhysMoDPO, a Direct Preference Optimization framework. Unlike prior work that relies on hand-crafted physics-aware heuristics such as foot-sliding penalties, we integrate WBC into our training pipeline and optimize diffusion model such that the output of WBC becomes compliant both with physics and original text instructions. To train PhysMoDPO we deploy physics-based and task-specific rewards and use them to assign preference to synthesized trajectories. Our extensive experiments on text-to-motion and spatial control tasks demonstrate consistent improvements of PhysMoDPO in both physical realism and task-related metrics on simulated robots. Moreover, we demonstrate that PhysMoDPO results in significant improvements when applied to zero-shot motion transfer in simulation and for real-world deployment on a G1 humanoid robot.",
-      "url": "https://arxiv.org/abs/2603.13228v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.13228v1",
-      "published": "2026-03-13T17:59:59Z",
-      "updated": "2026-03-13T17:59:59Z",
+      "abstract": "Vision-Language-Action (VLA) models excel in static manipulation but struggle in dynamic environments with moving targets. This performance gap primarily stems from a scarcity of dynamic manipulation datasets and the reliance of mainstream VLAs on single-frame observations, restricting their spatiotemporal reasoning capabilities. To address this, we introduce DOMINO, a large-scale dataset and benchmark for generalizable dynamic manipulation, featuring 35 tasks with hierarchical complexities, over 110K expert trajectories, and a multi-dimensional evaluation suite. Through comprehensive experiments, we systematically evaluate existing VLAs on dynamic tasks, explore effective training strategies for dynamic awareness, and validate the generalizability of dynamic data. Furthermore, we propose PUMA, a dynamics-aware VLA architecture. By integrating scene-centric historical optical flow and specialized world queries to implicitly forecast object-centric future states, PUMA couples history-aware perception with short-horizon prediction. Results demonstrate that PUMA achieves state-of-the-art performance, yielding a 6.3% absolute improvement in success rate over baselines. Moreover, we show that training on dynamic data fosters robust spatiotemporal representations that transfer to static tasks. All code and data are available at https://github.com/H-EmbodVis/DOMINO.",
+      "url": "https://arxiv.org/abs/2603.15620v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.15620v1",
+      "published": "2026-03-16T17:59:57Z",
+      "updated": "2026-03-16T17:59:57Z",
       "categories": [
-        "cs.LG",
-        "cs.AI",
         "cs.CV",
         "cs.RO"
       ],
-      "primary_category": "cs.LG"
+      "primary_category": "cs.CV"
     },
     {
-      "id": "2603.13227v1",
-      "title": "Representation Learning for Spatiotemporal Physical Systems",
+      "id": "2603.15619v1",
+      "title": "Mixture-of-Depths Attention",
       "authors": [
-        "Helen Qu",
-        "Rudy Morel",
-        "Michael McCabe",
-        "Alberto Bietti",
-        "Fran\u00e7ois Lanusse",
-        "Shirley Ho",
-        "Yann LeCun"
+        "Lianghui Zhu",
+        "Yuxin Fang",
+        "Bencheng Liao",
+        "Shijie Wang",
+        "Tianheng Cheng",
+        "Zilong Huang",
+        "Chen Chen",
+        "Lai Wei",
+        "Yutao Zeng",
+        "Ya Wang",
+        "Yi Lin",
+        "Yu Li",
+        "Xinggang Wang"
       ],
-      "abstract": "Machine learning approaches to spatiotemporal physical systems have primarily focused on next-frame prediction, with the goal of learning an accurate emulator for the system's evolution in time. However, these emulators are computationally expensive to train and are subject to performance pitfalls, such as compounding errors during autoregressive rollout. In this work, we take a different perspective and look at scientific tasks further downstream of predicting the next frame, such as estimation of a system's governing physical parameters. Accuracy on these tasks offers a uniquely quantifiable glimpse into the physical relevance of the representations of these models. We evaluate the effectiveness of general-purpose self-supervised methods in learning physics-grounded representations that are useful for downstream scientific tasks. Surprisingly, we find that not all methods designed for physical modeling outperform generic self-supervised learning methods on these tasks, and methods that learn in the latent space (e.g., joint embedding predictive architectures, or JEPAs) outperform those optimizing pixel-level prediction objectives. Code is available at https://github.com/helenqu/physical-representation-learning.",
-      "url": "https://arxiv.org/abs/2603.13227v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.13227v1",
-      "published": "2026-03-13T17:59:51Z",
-      "updated": "2026-03-13T17:59:51Z",
+      "abstract": "Scaling depth is a key driver for large language models (LLMs). Yet, as LLMs become deeper, they often suffer from signal degradation: informative features formed in shallow layers are gradually diluted by repeated residual updates, making them harder to recover in deeper layers. We introduce mixture-of-depths attention (MoDA), a mechanism that allows each attention head to attend to sequence KV pairs at the current layer and depth KV pairs from preceding layers. We further describe a hardware-efficient algorithm for MoDA that resolves non-contiguous memory-access patterns, achieving 97.3% of FlashAttention-2's efficiency at a sequence length of 64K. Experiments on 1.5B-parameter models demonstrate that MoDA consistently outperforms strong baselines. Notably, it improves average perplexity by 0.2 across 10 validation benchmarks and increases average performance by 2.11% on 10 downstream tasks, with a negligible 3.7% FLOPs computational overhead. We also find that combining MoDA with post-norm yields better performance than using it with pre-norm. These results suggest that MoDA is a promising primitive for depth scaling. Code is released at https://github.com/hustvl/MoDA .",
+      "url": "https://arxiv.org/abs/2603.15619v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.15619v1",
+      "published": "2026-03-16T17:59:55Z",
+      "updated": "2026-03-16T17:59:55Z",
       "categories": [
-        "cs.LG",
-        "cs.CV"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2603.13224v1",
-      "title": "Visual-ERM: Reward Modeling for Visual Equivalence",
-      "authors": [
-        "Ziyu Liu",
-        "Shengyuan Ding",
-        "Xinyu Fang",
-        "Xuanlang Dai",
-        "Penghui Yang",
-        "Jianze Liang",
-        "Jiaqi Wang",
-        "Kai Chen",
-        "Dahua Lin",
-        "Yuhang Zang"
-      ],
-      "abstract": "Vision-to-code tasks require models to reconstruct structured visual inputs, such as charts, tables, and SVGs, into executable or structured representations with high visual fidelity. While recent Large Vision Language Models (LVLMs) achieve strong results via supervised fine-tuning, reinforcement learning remains challenging due to misaligned reward signals. Existing rewards either rely on textual rules or coarse visual embedding similarity, both of which fail to capture fine-grained visual discrepancies and are vulnerable to reward hacking. We propose Visual Equivalence Reward Model (Visual-ERM), a multimodal generative reward model that provides fine-grained, interpretable, and task-agnostic feedback to evaluate vision-to-code quality directly in the rendered visual space. Integrated into RL, Visual-ERM improves Qwen3-VL-8B-Instruct by +8.4 on chart-to-code and yields consistent gains on table and SVG parsing (+2.7, +4.1 on average), and further strengthens test-time scaling via reflection and revision. We also introduce VisualCritic-RewardBench (VC-RewardBench), a benchmark for judging fine-grained image-to-image discrepancies on structured visual data, where Visual-ERM at 8B decisively outperforms Qwen3-VL-235B-Instruct and approaches leading closed-source models. Our results suggest that fine-grained visual reward supervision is both necessary and sufficient for vision-to-code RL, regardless of task specificity.",
-      "url": "https://arxiv.org/abs/2603.13224v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.13224v1",
-      "published": "2026-03-13T17:58:14Z",
-      "updated": "2026-03-13T17:58:14Z",
-      "categories": [
-        "cs.CV",
+        "cs.CL",
         "cs.AI"
       ],
-      "primary_category": "cs.CV"
+      "primary_category": "cs.CL"
     },
     {
-      "id": "2603.13215v1",
-      "title": "Out of Sight, Out of Mind? Evaluating State Evolution in Video World Models",
+      "id": "2603.15618v1",
+      "title": "Look Before Acting: Enhancing Vision Foundation Representations for Vision-Language-Action Models",
       "authors": [
-        "Ziqi Ma",
-        "Mengzhan Liufu",
-        "Georgia Gkioxari"
+        "Yulin Luo",
+        "Hao Chen",
+        "Zhuangzhe Wu",
+        "Bowen Sui",
+        "Jiaming Liu",
+        "Chenyang Gu",
+        "Zhuoyang Liu",
+        "Qiuxuan Feng",
+        "Jiale Yu",
+        "Shuo Gu",
+        "Peng Jia",
+        "Pheng-Ann Heng",
+        "Shanghang Zhang"
       ],
-      "abstract": "Evolutions in the world, such as water pouring or ice melting, happen regardless of being observed. Video world models generate \"worlds\" via 2D frame observations. Can these generated \"worlds\" evolve regardless of observation? To probe this question, we design a benchmark to evaluate whether video world models can decouple state evolution from observation. Our benchmark, STEVO-Bench, applies observation control to evolving processes via instructions of occluder insertion, turning off the light, or specifying camera \"lookaway\" trajectories. By evaluating video models with and without camera control for a diverse set of naturally-occurring evolutions, we expose their limitations in decoupling state evolution from observation. STEVO-Bench proposes an evaluation protocol to automatically detect and disentangle failure modes of video world models across key aspects of natural state evolution. Analysis of STEVO-Bench results provide new insight into potential data and architecture bias of present-day video world models. Project website: https://glab-caltech.github.io/STEVOBench/. Blog: https://ziqi-ma.github.io/blog/2026/outofsight/",
-      "url": "https://arxiv.org/abs/2603.13215v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.13215v1",
-      "published": "2026-03-13T17:51:14Z",
-      "updated": "2026-03-13T17:51:14Z",
+      "abstract": "Vision-Language-Action (VLA) models have recently emerged as a promising paradigm for robotic manipulation, in which reliable action prediction critically depends on accurately interpreting and integrating visual observations conditioned on language instructions. Although recent works have sought to enhance the visual capabilities of VLA models, most approaches treat the LLM backbone as a black box, providing limited insight into how visual information is grounded into action generation. Therefore, we perform a systematic analysis of multiple VLA models across different action-generation paradigms and observe that sensitivity to visual tokens progressively decreases in deeper layers during action generation. Motivated by this observation, we propose \\textbf{DeepVision-VLA}, built on a \\textbf{Vision-Language Mixture-of-Transformers (VL-MoT)} framework. This framework enables shared attention between the vision foundation model and the VLA backbone, injecting multi-level visual features from the vision expert into deeper layers of the VLA backbone to enhance visual representations for precise and complex manipulation. In addition, we introduce \\textbf{Action-Guided Visual Pruning (AGVP)}, which leverages shallow-layer attention to prune irrelevant visual tokens while preserving task-relevant ones, reinforcing critical visual cues for manipulation with minimal computational overhead. DeepVision-VLA outperforms prior state-of-the-art methods by 9.0\\% and 7.5\\% on simulated and real-world tasks, respectively, providing new insights for the design of visually enhanced VLA models.",
+      "url": "https://arxiv.org/abs/2603.15618v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.15618v1",
+      "published": "2026-03-16T17:59:54Z",
+      "updated": "2026-03-16T17:59:54Z",
       "categories": [
         "cs.CV"
       ],
       "primary_category": "cs.CV"
     },
     {
-      "id": "2603.13213v1",
-      "title": "MoEKD: Mixture-of-Experts Knowledge Distillation for Robust and High-Performing Compressed Code Models",
+      "id": "2603.15617v1",
+      "title": "HorizonMath: Measuring AI Progress Toward Mathematical Discovery with Automatic Verification",
       "authors": [
-        "Md. Abdul Awal",
-        "Mrigank Rochan",
-        "Chanchal K. Roy"
+        "Erik Y. Wang",
+        "Sumeet Motwani",
+        "James V. Roggeveen",
+        "Eliot Hodges",
+        "Dulhan Jayalath",
+        "Charles London",
+        "Kalyan Ramakrishnan",
+        "Flaviu Cipcigan",
+        "Philip Torr",
+        "Alessandro Abate"
       ],
-      "abstract": "Large language models for code have achieved strong performance across diverse software analytics tasks, yet their real-world adoption remains limited by high computational demands, slow inference speeds, significant energy consumption, and environmental impact. Knowledge distillation (KD) offers a practical solution by transferring knowledge from a large model to a smaller and more efficient model. Despite its effectiveness, recent studies show that models distilled from a single source often exhibit degraded adversarial robustness, even when robustness-aware distillation techniques are employed. These observations suggest a fundamental limitation of single-source distillation in simultaneously transferring high-quality and robust knowledge. To overcome this limitation, we propose Mixture of Experts Knowledge Distillation (MoEKD), a KD framework that leverages a Mixture of Experts (MoE) architecture to enable more effective and robust knowledge transfer from multiple specialized experts into a compact model. MoEKD decomposes the distillation process into expert and router training, aggregation of expert knowledge through a learned routing mechanism, and distillation from the aggregated knowledge. We evaluate MoEKD on the vulnerability detection task using CodeBERT and GraphCodeBERT models. Experimental results show that MoEKD not only improves adversarial robustness by up to 35.8%, but also enhances predictive performance by up to 13%, compared to state-of-the-art KD baselines, including Compressor and AVATAR. Furthermore, an ablation study demonstrates that aggregating expert knowledge enables ultra-compact models to maintain competitive performance even when their size is reduced by approximately half. Overall, these results highlight the effectiveness of multi-expert knowledge aggregation in addressing key limitations of existing single-source KD approaches.",
-      "url": "https://arxiv.org/abs/2603.13213v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.13213v1",
-      "published": "2026-03-13T17:49:01Z",
-      "updated": "2026-03-13T17:49:01Z",
+      "abstract": "Can AI make progress on important, unsolved mathematical problems? Large language models are now capable of sophisticated mathematical and scientific reasoning, but whether they can perform novel research is still widely debated and underexplored. We introduce HorizonMath, a benchmark of over 100 predominantly unsolved problems spanning 8 domains in computational and applied mathematics, paired with an open-source evaluation framework for automated verification. Our benchmark targets a class of problems where discovery is hard, requiring meaningful mathematical insight, but verification is computationally efficient and simple. Because these solutions are unknown, HorizonMath is immune to data contamination, and most state-of-the-art models score near 0%. Existing research-level benchmarks instead rely on formal proof verification or manual review, both of which are expensive to scale. Using this platform, we find two problems for which GPT 5.4 Pro proposes solutions that improve on the best-known published results, representing potential novel contributions (pending expert review). We release HorizonMath as an open challenge and a growing community resource, where correct solutions to problems in the unsolved problem classes could constitute novel results in the mathematical literature.",
+      "url": "https://arxiv.org/abs/2603.15617v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.15617v1",
+      "published": "2026-03-16T17:59:53Z",
+      "updated": "2026-03-16T17:59:53Z",
       "categories": [
-        "cs.SE"
+        "cs.LG"
       ],
-      "primary_category": "cs.SE"
+      "primary_category": "cs.LG"
     },
     {
-      "id": "2603.13201v1",
-      "title": "Neuron-Aware Data Selection In Instruction Tuning For Large Language Models",
+      "id": "2603.15616v1",
+      "title": "GlyphPrinter: Region-Grouped Direct Preference Optimization for Glyph-Accurate Visual Text Rendering",
       "authors": [
-        "Xin Chen",
-        "Junchao Wu",
-        "Shu Yang",
-        "Runzhe Zhan",
-        "Zeyu Wu",
-        "Min Yang",
-        "Shujian Huang",
-        "Lidia S. Chao",
-        "Derek F. Wong"
+        "Xincheng Shuai",
+        "Ziye Li",
+        "Henghui Ding",
+        "Dacheng Tao"
       ],
-      "abstract": "Instruction Tuning (IT) has been proven to be an effective approach to unlock the powerful capabilities of large language models (LLMs). Recent studies indicate that excessive IT data can degrade LLMs performance, while carefully selecting a small subset of high-quality IT data can significantly enhance their capabilities. Therefore, identifying the most efficient subset data from the IT dataset to effectively develop either specific or general abilities in LLMs has become a critical challenge. To address this, we propose a novel and efficient framework called NAIT. NAIT evaluates the impact of IT data on LLMs performance by analyzing the similarity of neuron activation patterns between the IT dataset and the target domain capability. Specifically, NAIT captures neuron activation patterns from in-domain datasets of target domain capabilities to construct reusable and transferable neuron activation features. It then evaluates and selects optimal samples based on the similarity between candidate samples and the expected activation features of the target capabilities. Experimental results show that training on the 10\\% Alpaca-GPT4 IT data subset selected by NAIT consistently outperforms methods that rely on external advanced models or uncertainty-based features across various tasks. Our findings also reveal the transferability of neuron activation features across different capabilities of LLMs. In particular, IT data with more logical reasoning and programmatic features possesses strong general transferability, enabling models to develop stronger capabilities across multiple tasks, while a stable core subset of data is sufficient to consistently activate fundamental model capabilities and universally improve performance across diverse tasks.",
-      "url": "https://arxiv.org/abs/2603.13201v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.13201v1",
-      "published": "2026-03-13T17:39:03Z",
-      "updated": "2026-03-13T17:39:03Z",
+      "abstract": "Generating accurate glyphs for visual text rendering is essential yet challenging. Existing methods typically enhance text rendering by training on a large amount of high-quality scene text images, but the limited coverage of glyph variations and excessive stylization often compromise glyph accuracy, especially for complex or out-of-domain characters. Some methods leverage reinforcement learning to alleviate this issue, yet their reward models usually depend on text recognition systems that are insensitive to fine-grained glyph errors, so images with incorrect glyphs may still receive high rewards. Inspired by Direct Preference Optimization (DPO), we propose GlyphPrinter, a preference-based text rendering method that eliminates reliance on explicit reward models. However, the standard DPO objective only models overall preference between two samples, which is insufficient for visual text rendering where glyph errors typically occur in localized regions. To address this issue, we construct the GlyphCorrector dataset with region-level glyph preference annotations and propose Region-Grouped DPO (R-GDPO), a region-based objective that optimizes inter- and intra-sample preferences over annotated regions, substantially enhancing glyph accuracy. Furthermore, we introduce Regional Reward Guidance, an inference strategy that samples from an optimal distribution with controllable glyph accuracy. Extensive experiments demonstrate that the proposed GlyphPrinter outperforms existing methods in glyph accuracy while maintaining a favorable balance between stylization and precision.",
+      "url": "https://arxiv.org/abs/2603.15616v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.15616v1",
+      "published": "2026-03-16T17:59:31Z",
+      "updated": "2026-03-16T17:59:31Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2603.15615v1",
+      "title": "Mechanistic Origin of Moral Indifference in Language Models",
+      "authors": [
+        "Lingyu Li",
+        "Yan Teng",
+        "Yingchun Wang"
+      ],
+      "abstract": "Existing behavioral alignment techniques for Large Language Models (LLMs) often neglect the discrepancy between surface compliance and internal unaligned representations, leaving LLMs vulnerable to long-tail risks. More crucially, we posit that LLMs possess an inherent state of moral indifference due to compressing distinct moral concepts into uniform probability distributions. We verify and remedy this indifference in LLMs' latent representations, utilizing 251k moral vectors constructed upon Prototype Theory and the Social-Chemistry-101 dataset. Firstly, our analysis across 23 models reveals that current LLMs fail to represent the distinction between opposed moral categories and fine-grained typicality gradients within these categories; notably, neither model scaling, architecture, nor explicit alignment reshapes this indifference. We then employ Sparse Autoencoders on Qwen3-8B, isolate mono-semantic moral features, and targetedly reconstruct their topological relationships to align with ground-truth moral vectors. This representational alignment naturally improves moral reasoning and granularity, achieving a 75% pairwise win-rate on the independent adversarial Flames benchmark. Finally, we elaborate on the remedial nature of current intervention methods from an experientialist philosophy, arguing that endogenously aligned AI might require a transformation from post-hoc corrections to proactive cultivation.",
+      "url": "https://arxiv.org/abs/2603.15615v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.15615v1",
+      "published": "2026-03-16T17:59:17Z",
+      "updated": "2026-03-16T17:59:17Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CL"
+    },
+    {
+      "id": "2603.15614v1",
+      "title": "Tri-Prompting: Video Diffusion with Unified Control over Scene, Subject, and Motion",
+      "authors": [
+        "Zhenghong Zhou",
+        "Xiaohang Zhan",
+        "Zhiqin Chen",
+        "Soo Ye Kim",
+        "Nanxuan Zhao",
+        "Haitian Zheng",
+        "Qing Liu",
+        "He Zhang",
+        "Zhe Lin",
+        "Yuqian Zhou",
+        "Jiebo Luo"
+      ],
+      "abstract": "Recent video diffusion models have made remarkable strides in visual quality, yet precise, fine-grained control remains a key bottleneck that limits practical customizability for content creation. For AI video creators, three forms of control are crucial: (i) scene composition, (ii) multi-view consistent subject customization, and (iii) camera-pose or object-motion adjustment. Existing methods typically handle these dimensions in isolation, with limited support for multi-view subject synthesis and identity preservation under arbitrary pose changes. This lack of a unified architecture makes it difficult to support versatile, jointly controllable video. We introduce Tri-Prompting, a unified framework and two-stage training paradigm that integrates scene composition, multi-view subject consistency, and motion control. Our approach leverages a dual-condition motion module driven by 3D tracking points for background scenes and downsampled RGB cues for foreground subjects. To ensure a balance between controllability and visual realism, we further propose an inference ControlNet scale schedule. Tri-Prompting supports novel workflows, including 3D-aware subject insertion into any scenes and manipulation of existing subjects in an image. Experimental results demonstrate that Tri-Prompting significantly outperforms specialized baselines such as Phantom and DaS in multi-view subject identity, 3D consistency, and motion accuracy.",
+      "url": "https://arxiv.org/abs/2603.15614v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.15614v1",
+      "published": "2026-03-16T17:59:05Z",
+      "updated": "2026-03-16T17:59:05Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2603.15612v1",
+      "title": "HSImul3R: Physics-in-the-Loop Reconstruction of Simulation-Ready Human-Scene Interactions",
+      "authors": [
+        "Yukang Cao",
+        "Haozhe Xie",
+        "Fangzhou Hong",
+        "Long Zhuo",
+        "Zhaoxi Chen",
+        "Liang Pan",
+        "Ziwei Liu"
+      ],
+      "abstract": "We present HSImul3R, a unified framework for simulation-ready 3D reconstruction of human-scene interactions (HSI) from casual captures, including sparse-view images and monocular videos. Existing methods suffer from a perception-simulation gap: visually plausible reconstructions often violate physical constraints, leading to instability in physics engines and failure in embodied AI applications. To bridge this gap, we introduce a physically-grounded bi-directional optimization pipeline that treats the physics simulator as an active supervisor to jointly refine human dynamics and scene geometry. In the forward direction, we employ Scene-targeted Reinforcement Learning to optimize human motion under dual supervision of motion fidelity and contact stability. In the reverse direction, we propose Direct Simulation Reward Optimization, which leverages simulation feedback on gravitational stability and interaction success to refine scene geometry. We further present HSIBench, a new benchmark with diverse objects and interaction scenarios. Extensive experiments demonstrate that HSImul3R produces the first stable, simulation-ready HSI reconstructions and can be directly deployed to real-world humanoid robots.",
+      "url": "https://arxiv.org/abs/2603.15612v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.15612v1",
+      "published": "2026-03-16T17:58:33Z",
+      "updated": "2026-03-16T17:58:33Z",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2603.15611v1",
+      "title": "Code-A1: Adversarial Evolving of Code LLM and Test LLM via Reinforcement Learning",
+      "authors": [
+        "Aozhe Wang",
+        "Yuchen Yan",
+        "Nan Zhou",
+        "Zhengxi Lu",
+        "Weiming Lu",
+        "Jun Xiao",
+        "Yueting Zhuang",
+        "Yongliang Shen"
+      ],
+      "abstract": "Reinforcement learning for code generation relies on verifiable rewards from unit test pass rates. Yet high-quality test suites are scarce, existing datasets offer limited coverage, and static rewards fail to adapt as models improve. Recent self-play methods unify code and test generation in a single model, but face a inherent dilemma: white-box access leads to self-collusion where the model produces trivial tests for easy rewards, yet black-box restriction yields generic tests that miss implementation-specific bugs. We introduce Code-A1, an adversarial co-evolution framework that jointly optimizes a Code LLM and a Test LLM with opposing objectives. The Code LLM is rewarded for passing more tests, while the Test LLM is rewarded for exposing more defects. This architectural separation eliminates self-collusion risks and safely enables white-box test generation, where the Test LLM can inspect candidate code to craft targeted adversarial tests. We further introduce a Mistake Book mechanism for experience replay and a composite reward balancing test validity with adversarial difficulty. Experiments on Qwen2.5-Coder models demonstrate that Code-A1 achieves code generation performance matching or exceeding models trained on human-annotated tests, while significantly improving test generation capability.",
+      "url": "https://arxiv.org/abs/2603.15611v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.15611v1",
+      "published": "2026-03-16T17:58:13Z",
+      "updated": "2026-03-16T17:58:13Z",
       "categories": [
         "cs.CL"
       ],
       "primary_category": "cs.CL"
     },
     {
-      "id": "2603.13191v1",
-      "title": "From Experiments to Expertise: Scientific Knowledge Consolidation for AI-Driven Computational Research",
+      "id": "2603.15607v1",
+      "title": "Do Metrics for Counterfactual Explanations Align with User Perception?",
       "authors": [
-        "Haonan Huang"
+        "Felix Liedeker",
+        "Basil Ell",
+        "Philipp Cimiano",
+        "Christoph D\u00fcsing"
       ],
-      "abstract": "While large language models (LLMs) have transformed AI agents into proficient executors of computational materials science, performing a hundred simulations does not make a researcher. What distinguishes research from routine execution is the progressive accumulation of knowledge -- learning which approaches fail, recognizing patterns across systems, and applying understanding to new problems. However, the prevailing paradigm in AI-driven computational science treats each execution in isolation, largely discarding hard-won insights between runs. Here we present QMatSuite, an open-source platform closing this gap. Agents record findings with full provenance, retrieve knowledge before new calculations, and in dedicated reflection sessions correct erroneous findings and synthesize observations into cross-compound patterns. In benchmarks on a six-step quantum-mechanical simulation workflow, accumulated knowledge reduces reasoning overhead by 67% and improves accuracy from 47% to 3% deviation from literature -- and when transferred to an unfamiliar material, achieves 1% deviation with zero pipeline failures.",
-      "url": "https://arxiv.org/abs/2603.13191v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.13191v1",
-      "published": "2026-03-13T17:25:47Z",
-      "updated": "2026-03-13T17:25:47Z",
+      "abstract": "Explainability is widely regarded as essential for trustworthy artificial intelligence systems. However, the metrics commonly used to evaluate counterfactual explanations are algorithmic evaluation metrics that are rarely validated against human judgments of explanation quality. This raises the question of whether such metrics meaningfully reflect user perceptions. We address this question through an empirical study that directly compares algorithmic evaluation metrics with human judgments across three datasets. Participants rated counterfactual explanations along multiple dimensions of perceived quality, which we relate to a comprehensive set of standard counterfactual metrics. We analyze both individual relationships and the extent to which combinations of metrics can predict human assessments. Our results show that correlations between algorithmic metrics and human ratings are generally weak and strongly dataset-dependent. Moreover, increasing the number of metrics used in predictive models does not lead to reliable improvements, indicating structural limitations in how current metrics capture criteria relevant for humans. Overall, our findings suggest that widely used counterfactual evaluation metrics fail to reflect key aspects of explanation quality as perceived by users, underscoring the need for more human-centered approaches to evaluating explainable artificial intelligence.",
+      "url": "https://arxiv.org/abs/2603.15607v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.15607v1",
+      "published": "2026-03-16T17:56:54Z",
+      "updated": "2026-03-16T17:56:54Z",
       "categories": [
-        "physics.comp-ph",
-        "cond-mat.mtrl-sci",
-        "cs.AI"
-      ],
-      "primary_category": "physics.comp-ph"
-    },
-    {
-      "id": "2603.13189v1",
-      "title": "LLM Constitutional Multi-Agent Governance",
-      "authors": [
-        "J. de Curt\u00f2",
-        "I. de Zarz\u00e0"
-      ],
-      "abstract": "Large Language Models (LLMs) can generate persuasive influence strategies that shift cooperative behavior in multi-agent populations, but a critical question remains: does the resulting cooperation reflect genuine prosocial alignment, or does it mask erosion of agent autonomy, epistemic integrity, and distributional fairness? We introduce Constitutional Multi-Agent Governance (CMAG), a two-stage framework that interposes between an LLM policy compiler and a networked agent population, combining hard constraint filtering with soft penalized-utility optimization that balances cooperation potential against manipulation risk and autonomy pressure. We propose the Ethical Cooperation Score (ECS), a multiplicative composite of cooperation, autonomy, integrity, and fairness that penalizes cooperation achieved through manipulative means. In experiments on scale-free networks of 80 agents under adversarial conditions (70% violating candidates), we benchmark three regimes: full CMAG, naive filtering, and unconstrained optimization. While unconstrained optimization achieves the highest raw cooperation (0.873), it yields the lowest ECS (0.645) due to severe autonomy erosion (0.867) and fairness degradation (0.888). CMAG attains an ECS of 0.741, a 14.9% improvement, while preserving autonomy at 0.985 and integrity at 0.995, with only modest cooperation reduction to 0.770. The naive ablation (ECS = 0.733) confirms that hard constraints alone are insufficient. Pareto analysis shows CMAG dominates the cooperation-autonomy trade-off space, and governance reduces hub-periphery exposure disparities by over 60%. These findings establish that cooperation is not inherently desirable without governance: constitutional constraints are necessary to ensure that LLM-mediated influence produces ethically stable outcomes rather than manipulative equilibria.",
-      "url": "https://arxiv.org/abs/2603.13189v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.13189v1",
-      "published": "2026-03-13T17:21:26Z",
-      "updated": "2026-03-13T17:21:26Z",
-      "categories": [
-        "cs.MA",
-        "cs.AI"
-      ],
-      "primary_category": "cs.MA"
-    },
-    {
-      "id": "2603.13186v1",
-      "title": "Learnability and Privacy Vulnerability are Entangled in a Few Critical Weights",
-      "authors": [
-        "Xingli Fang",
-        "Jung-Eun Kim"
-      ],
-      "abstract": "Prior approaches for membership privacy preservation usually update or retrain all weights in neural networks, which is costly and can lead to unnecessary utility loss or even more serious misalignment in predictions between training data and non-training data. In this work, we observed three insights: i) privacy vulnerability exists in a very small fraction of weights; ii) however, most of those weights also critically impact utility performance; iii) the importance of weights stems from their locations rather than their values. According to these insights, to preserve privacy, we score critical weights, and instead of discarding those neurons, we rewind only the weights for fine-tuning. We show that, through extensive experiments, this mechanism exhibits outperforming resilience in most cases against Membership Inference Attacks while maintaining utility.",
-      "url": "https://arxiv.org/abs/2603.13186v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.13186v1",
-      "published": "2026-03-13T17:20:12Z",
-      "updated": "2026-03-13T17:20:12Z",
-      "categories": [
-        "cs.LG",
         "cs.AI",
-        "cs.CR"
+        "cs.HC"
       ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2603.13185v1",
-      "title": "Towards Spatio-Temporal World Scene Graph Generation from Monocular Videos",
-      "authors": [
-        "Rohith Peddi",
-        "Saurabh",
-        "Shravan Shanmugam",
-        "Likhitha Pallapothula",
-        "Yu Xiang",
-        "Parag Singla",
-        "Vibhav Gogate"
-      ],
-      "abstract": "Spatio-temporal scene graphs provide a principled representation for modeling evolving object interactions, yet existing methods remain fundamentally frame-centric: they reason only about currently visible objects, discard entities upon occlusion, and operate in 2D. To address this, we first introduce ActionGenome4D, a dataset that upgrades Action Genome videos into 4D scenes via feed-forward 3D reconstruction, world-frame oriented bounding boxes for every object involved in actions, and dense relationship annotations including for objects that are temporarily unobserved due to occlusion or camera motion. Building on this data, we formalize World Scene Graph Generation (WSGG), the task of constructing a world scene graph at each timestamp that encompasses all interacting objects in the scene, both observed and unobserved. We then propose three complementary methods, each exploring a different inductive bias for reasoning about unobserved objects: PWG (Persistent World Graph), which implements object permanence via a zero-order feature buffer; MWAE (Masked World Auto-Encoder), which reframes unobserved-object reasoning as masked completion with cross-view associative retrieval; and 4DST (4D Scene Transformer), which replaces the static buffer with differentiable per-object temporal attention enriched by 3D motion and camera-pose features. We further design and evaluate the performance of strong open-source Vision-Language Models on the WSGG task via a suite of Graph RAG-based approaches, establishing baselines for unlocalized relationship prediction. WSGG thus advances video scene understanding toward world-centric, temporally persistent, and interpretable scene reasoning.",
-      "url": "https://arxiv.org/abs/2603.13185v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.13185v1",
-      "published": "2026-03-13T17:18:03Z",
-      "updated": "2026-03-13T17:18:03Z",
-      "categories": [
-        "cs.CV"
-      ],
-      "primary_category": "cs.CV"
+      "primary_category": "cs.AI"
     }
   ]
 }

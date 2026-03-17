@@ -2,230 +2,221 @@
   "category": "robotics",
   "name": "Robotics Research",
   "description": "Robotics \u2014 Motion Planning, Control Systems, Human-Robot Interaction, Autonomous Systems",
-  "scraped_at": "2026-03-16T09:08:10.487548+00:00",
+  "scraped_at": "2026-03-17T09:02:03.350134+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2603.13228v1",
-      "title": "PhysMoDPO: Physically-Plausible Humanoid Motion with Preference Optimization",
+      "id": "2603.15620v1",
+      "title": "Towards Generalizable Robotic Manipulation in Dynamic Environments",
       "authors": [
-        "Yangsong Zhang",
-        "Anujith Muraleedharan",
-        "Rikhat Akizhanov",
-        "Abdul Ahad Butt",
-        "G\u00fcl Varol",
-        "Pascal Fua",
-        "Fabio Pizzati",
-        "Ivan Laptev"
+        "Heng Fang",
+        "Shangru Li",
+        "Shuhan Wang",
+        "Xuanyang Xi",
+        "Dingkang Liang",
+        "Xiang Bai"
       ],
-      "abstract": "Recent progress in text-conditioned human motion generation has been largely driven by diffusion models trained on large-scale human motion data. Building on this progress, recent methods attempt to transfer such models for character animation and real robot control by applying a Whole-Body Controller (WBC) that converts diffusion-generated motions into executable trajectories. While WBC trajectories become compliant with physics, they may expose substantial deviations from original motion. To address this issue, we here propose PhysMoDPO, a Direct Preference Optimization framework. Unlike prior work that relies on hand-crafted physics-aware heuristics such as foot-sliding penalties, we integrate WBC into our training pipeline and optimize diffusion model such that the output of WBC becomes compliant both with physics and original text instructions. To train PhysMoDPO we deploy physics-based and task-specific rewards and use them to assign preference to synthesized trajectories. Our extensive experiments on text-to-motion and spatial control tasks demonstrate consistent improvements of PhysMoDPO in both physical realism and task-related metrics on simulated robots. Moreover, we demonstrate that PhysMoDPO results in significant improvements when applied to zero-shot motion transfer in simulation and for real-world deployment on a G1 humanoid robot.",
-      "url": "https://arxiv.org/abs/2603.13228v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.13228v1",
-      "published": "2026-03-13T17:59:59Z",
-      "updated": "2026-03-13T17:59:59Z",
+      "abstract": "Vision-Language-Action (VLA) models excel in static manipulation but struggle in dynamic environments with moving targets. This performance gap primarily stems from a scarcity of dynamic manipulation datasets and the reliance of mainstream VLAs on single-frame observations, restricting their spatiotemporal reasoning capabilities. To address this, we introduce DOMINO, a large-scale dataset and benchmark for generalizable dynamic manipulation, featuring 35 tasks with hierarchical complexities, over 110K expert trajectories, and a multi-dimensional evaluation suite. Through comprehensive experiments, we systematically evaluate existing VLAs on dynamic tasks, explore effective training strategies for dynamic awareness, and validate the generalizability of dynamic data. Furthermore, we propose PUMA, a dynamics-aware VLA architecture. By integrating scene-centric historical optical flow and specialized world queries to implicitly forecast object-centric future states, PUMA couples history-aware perception with short-horizon prediction. Results demonstrate that PUMA achieves state-of-the-art performance, yielding a 6.3% absolute improvement in success rate over baselines. Moreover, we show that training on dynamic data fosters robust spatiotemporal representations that transfer to static tasks. All code and data are available at https://github.com/H-EmbodVis/DOMINO.",
+      "url": "https://arxiv.org/abs/2603.15620v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.15620v1",
+      "published": "2026-03-16T17:59:57Z",
+      "updated": "2026-03-16T17:59:57Z",
       "categories": [
-        "cs.LG",
+        "cs.CV",
+        "cs.RO"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2603.15612v1",
+      "title": "HSImul3R: Physics-in-the-Loop Reconstruction of Simulation-Ready Human-Scene Interactions",
+      "authors": [
+        "Yukang Cao",
+        "Haozhe Xie",
+        "Fangzhou Hong",
+        "Long Zhuo",
+        "Zhaoxi Chen",
+        "Liang Pan",
+        "Ziwei Liu"
+      ],
+      "abstract": "We present HSImul3R, a unified framework for simulation-ready 3D reconstruction of human-scene interactions (HSI) from casual captures, including sparse-view images and monocular videos. Existing methods suffer from a perception-simulation gap: visually plausible reconstructions often violate physical constraints, leading to instability in physics engines and failure in embodied AI applications. To bridge this gap, we introduce a physically-grounded bi-directional optimization pipeline that treats the physics simulator as an active supervisor to jointly refine human dynamics and scene geometry. In the forward direction, we employ Scene-targeted Reinforcement Learning to optimize human motion under dual supervision of motion fidelity and contact stability. In the reverse direction, we propose Direct Simulation Reward Optimization, which leverages simulation feedback on gravitational stability and interaction success to refine scene geometry. We further present HSIBench, a new benchmark with diverse objects and interaction scenarios. Extensive experiments demonstrate that HSImul3R produces the first stable, simulation-ready HSI reconstructions and can be directly deployed to real-world humanoid robots.",
+      "url": "https://arxiv.org/abs/2603.15612v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.15612v1",
+      "published": "2026-03-16T17:58:33Z",
+      "updated": "2026-03-16T17:58:33Z",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2603.15606v1",
+      "title": "Saddle Point Evasion via Curvature-Regularized Gradient Dynamics",
+      "authors": [
+        "Liraz Mudrik",
+        "Isaac Kaminer",
+        "Sean Kragelund",
+        "Abram H. Clark"
+      ],
+      "abstract": "Nonconvex optimization underlies many modern machine learning and control tasks, where saddle points pose the dominant obstacle to reliable convergence in high-dimensional settings. Escaping these saddle points deterministically and at a controllable rate remains an open challenge: gradient descent is blind to curvature, stochastic perturbation methods lack deterministic guarantees, and Newton-type approaches suffer from Hessian singularity. We present Curvature-Regularized Gradient Dynamics (CRGD), which augments the objective with a smooth penalty on the most negative Hessian eigenvalue, yielding an augmented cost that serves as an optimization Lyapunov function with user-selectable convergence rates to second-order stationary points. Numerical experiments on a nonconvex matrix factorization example confirm that CRGD escapes saddle points across all tested configurations, with escape time that decreases with the eigenvalue gap, in contrast to gradient descent, whose escape time grows inversely with the gap.",
+      "url": "https://arxiv.org/abs/2603.15606v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.15606v1",
+      "published": "2026-03-16T17:56:38Z",
+      "updated": "2026-03-16T17:56:38Z",
+      "categories": [
+        "math.OC",
+        "eess.SY"
+      ],
+      "primary_category": "math.OC"
+    },
+    {
+      "id": "2603.15605v1",
+      "title": "Perception-Aware Autonomous Exploration in Feature-Limited Environments",
+      "authors": [
+        "Moji Shi",
+        "Rajitha de Silva",
+        "Hang Yu",
+        "Riccardo Polvara",
+        "Marija Popovi\u0107"
+      ],
+      "abstract": "Autonomous exploration in unknown environments typically relies on onboard state estimation for localisation and mapping. Existing exploration methods primarily maximise coverage efficiency, but often overlook that visual-inertial odometry (VIO) performance strongly depends on the availability of robust visual features. As a result, exploration policies can drive a robot into feature-sparse regions where tracking degrades, leading to odometry drift, corrupted maps, and mission failure. We propose a hierarchical perception-aware exploration framework for a stereo-equipped unmanned aerial vehicle (UAV) that explicitly couples exploration progress with feature observability. Our approach (i) associates each candidate frontier with an expected feature quality using a global feature map, and prioritises visually informative subgoals, and (ii) optimises a continuous yaw trajectory along the planned motion to maintain stable feature tracks. We evaluate our method in simulation across environments with varying texture levels and in real-world indoor experiments with largely textureless walls. Compared to baselines that ignore feature quality and/or do not optimise continuous yaw, our method maintains more reliable feature tracking, reduces odometry drift, and achieves on average 30\\% higher coverage before the odometry error exceeds specified thresholds.",
+      "url": "https://arxiv.org/abs/2603.15605v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.15605v1",
+      "published": "2026-03-16T17:55:56Z",
+      "updated": "2026-03-16T17:55:56Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2603.15604v1",
+      "title": "EAAE: Energy-Aware Autonomous Exploration for UAVs in Unknown 3D Environments",
+      "authors": [
+        "Jacob Elskamp",
+        "Moji Shi",
+        "Leonard Bauersfeld",
+        "Davide Scaramuzza",
+        "Marija Popovi\u0107"
+      ],
+      "abstract": "Battery-powered multirotor unmanned aerial vehicles (UAVs) can rapidly map unknown environments, but mission performance is often limited by energy rather than geometry alone. Standard exploration policies that optimise for coverage or time can therefore waste energy through manoeuvre-heavy trajectories. In this paper, we address energy-aware autonomous 3D exploration for multirotor UAVs in initially unknown environments. We propose Energy-Aware Autonomous Exploration (EAAE), a modular frontier-based framework that makes energy an explicit decision variable during frontier selection. EAAE clusters frontiers into view-consistent regions, plans dynamically feasible candidate trajectories to the most informative clusters, and predicts their execution energy using an offline power estimation loop. The next target is then selected by minimising predicted trajectory energy while preserving exploration progress through a dual-layer planning architecture for safe execution. We evaluate EAAE in a full exploration pipeline with a rotor-speed-based power model across simulated 3D environments of increasing complexity. Compared to representative distance-based and information gain-based frontier baselines, EAAE consistently reduces total energy consumption while maintaining competitive exploration time and comparable map quality, providing a practical drop-in energy-aware layer for frontier exploration.",
+      "url": "https://arxiv.org/abs/2603.15604v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.15604v1",
+      "published": "2026-03-16T17:55:37Z",
+      "updated": "2026-03-16T17:55:37Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2603.15600v1",
+      "title": "From Passive Observer to Active Critic: Reinforcement Learning Elicits Process Reasoning for Robotic Manipulation",
+      "authors": [
+        "Yibin Liu",
+        "Yaxing Lyu",
+        "Daqi Gao",
+        "Zhixuan Liang",
+        "Weiliang Tang",
+        "Shilong Mu",
+        "Xiaokang Yang",
+        "Yao Mu"
+      ],
+      "abstract": "Accurate process supervision remains a critical challenge for long-horizon robotic manipulation. A primary bottleneck is that current video MLLMs, trained primarily under a Supervised Fine-Tuning (SFT) paradigm, function as passive \"Observers\" that recognize ongoing events rather than evaluating the current state relative to the final task goal. In this paper, we introduce PRIMO R1 (Process Reasoning Induced Monitoring), a 7B framework that transforms video MLLMs into active \"Critics\". We leverage outcome-based Reinforcement Learning to incentivize explicit Chain-of-Thought generation for progress estimation. Furthermore, our architecture constructs a structured temporal input by explicitly anchoring the video sequence between initial and current state images. Supported by the proposed PRIMO Dataset and Benchmark, extensive experiments across diverse in-domain environments and out-of-domain real-world humanoid scenarios demonstrate that PRIMO R1 achieves state-of-the-art performance. Quantitatively, our 7B model achieves a 50% reduction in the mean absolute error of specialized reasoning baselines, demonstrating significant relative accuracy improvements over 72B-scale general MLLMs. Furthermore, PRIMO R1 exhibits strong zero-shot generalization on difficult failure detection tasks. We establish state-of-the-art performance on RoboFail benchmark with 67.0% accuracy, surpassing closed-source models like OpenAI o1 by 6.0%.",
+      "url": "https://arxiv.org/abs/2603.15600v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.15600v1",
+      "published": "2026-03-16T17:53:28Z",
+      "updated": "2026-03-16T17:53:28Z",
+      "categories": [
+        "cs.RO",
         "cs.AI",
-        "cs.CV",
-        "cs.RO"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2603.13136v1",
-      "title": "Unifying Decision Making and Trajectory Planning in Automated Driving through Time-Varying Potential Fields",
-      "authors": [
-        "David Costa",
-        "Francesco Cerrito",
-        "Massimo Canale",
-        "Carlo Novara"
-      ],
-      "abstract": "This paper proposes a unified decision making and local trajectory planning framework based on Time-Varying Artificial Potential Fields (TVAPFs). The TVAPF explicitly models the predicted motion via bounded uncertainty of dynamic obstacles over the planning horizon, using information from perception and V2X sources when available. TVAPFs are embedded into a finite horizon optimal control problem that jointly selects the driving maneuver and computes a feasible, collision free trajectory. The effectiveness and real-time suitability of the approach are demonstrated through a simulation test in a multi-actor scenario with real road topology, highlighting the advantages of the unified TVAPF-based formulation.",
-      "url": "https://arxiv.org/abs/2603.13136v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.13136v1",
-      "published": "2026-03-13T16:26:58Z",
-      "updated": "2026-03-13T16:26:58Z",
-      "categories": [
-        "eess.SY",
-        "math.OC"
-      ],
-      "primary_category": "eess.SY"
-    },
-    {
-      "id": "2603.13133v1",
-      "title": "DecoVLN: Decoupling Observation, Reasoning, and Correction for Vision-and-Language Navigation",
-      "authors": [
-        "Zihao Xin",
-        "Wentong Li",
-        "Yixuan Jiang",
-        "Bin Wang",
-        "Runming Cong",
-        "Jie Qin",
-        "Shengjun Huang"
-      ],
-      "abstract": "Vision-and-Language Navigation (VLN) requires agents to follow long-horizon instructions and navigate complex 3D environments. However, existing approaches face two major challenges: constructing an effective long-term memory bank and overcoming the compounding errors problem. To address these issues, we propose DecoVLN, an effective framework designed for robust streaming perception and closed-loop control in long-horizon navigation. First, we formulate long-term memory construction as an optimization problem and introduce adaptive refinement mechanism that selects frames from a historical candidate pool by iteratively optimizing a unified scoring function. This function jointly balances three key criteria: semantic relevance to the instruction, visual diversity from the selected memory, and temporal coverage of the historical trajectory. Second, to alleviate compounding errors, we introduce a state-action pair-level corrective finetuning strategy. By leveraging geodesic distance between states to precisely quantify deviation from the expert trajectory, the agent collects high-quality state-action pairs in the trusted region while filtering out the polluted data with low relevance. This improves both the efficiency and stability of error correction. Extensive experiments demonstrate the effectiveness of DecoVLN, and we have deployed it in real-world environments.",
-      "url": "https://arxiv.org/abs/2603.13133v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.13133v1",
-      "published": "2026-03-13T16:24:37Z",
-      "updated": "2026-03-13T16:24:37Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2603.13108v1",
-      "title": "Panoramic Multimodal Semantic Occupancy Prediction for Quadruped Robots",
-      "authors": [
-        "Guoqiang Zhao",
-        "Zhe Yang",
-        "Sheng Wu",
-        "Fei Teng",
-        "Mengfei Duan",
-        "Yuanfan Zheng",
-        "Kai Luo",
-        "Kailun Yang"
-      ],
-      "abstract": "Panoramic imagery provides holistic 360\u00b0 visual coverage for perception in quadruped robots. However, existing occupancy prediction methods are mainly designed for wheeled autonomous driving and rely heavily on RGB cues, limiting their robustness in complex environments. To bridge this gap, (1) we present PanoMMOcc, the first real-world panoramic multimodal occupancy dataset for quadruped robots, featuring four sensing modalities across diverse scenes. (2) We propose a panoramic multimodal occupancy perception framework, VoxelHound, tailored for legged mobility and spherical imaging. Specifically, we design (i) a Vertical Jitter Compensation (VJC) module to mitigate severe viewpoint perturbations caused by body pitch and roll during mobility, enabling more consistent spatial reasoning, and (ii) an effective Multimodal Information Prompt Fusion (MIPF) module that jointly leverages panoramic visual cues and auxiliary modalities to enhance volumetric occupancy prediction. (3) We establish a benchmark based on PanoMMOcc and provide detailed data analysis to enable systematic evaluation of perception methods under challenging embodied scenarios. Extensive experiments demonstrate that VoxelHound achieves state-of-the-art performance on PanoMMOcc (+4.16%} in mIoU). The dataset and code will be publicly released to facilitate future research on panoramic multimodal 3D perception for embodied robotic systems at https://github.com/SXDR/PanoMMOcc, along with the calibration tools released at https://github.com/losehu/CameraLiDAR-Calib.",
-      "url": "https://arxiv.org/abs/2603.13108v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.13108v1",
-      "published": "2026-03-13T16:04:33Z",
-      "updated": "2026-03-13T16:04:33Z",
-      "categories": [
-        "cs.RO",
-        "cs.CV",
-        "eess.IV"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2603.13103v1",
-      "title": "A Feasibility-Enhanced Control Barrier Function Method for Multi-UAV Collision Avoidance",
-      "authors": [
-        "Qishen Zhong",
-        "Junlong Wu",
-        "Jian Yang",
-        "Guanwei Xiao",
-        "Junqi Wu",
-        "Zimeng Jiang",
-        "Pingan Fang"
-      ],
-      "abstract": "This paper presents a feasibility-enhanced control barrier function (FECBF) framework for multi-UAV collision avoidance. In dense multi-UAV scenarios, the feasibility of the CBF quadratic program (CBF-QP) can be compromised due to internal incompatibility among multiple CBF constraints. To address this issue, we analyze the internal compatibility of CBF constraints and derive a sufficient condition for internal compatibility. Based on this condition, a sign-consistency constraint is introduced to mitigate internal incompatibility. The proposed constraint is incorporated into a decentralized CBF-QP formulation using worst-case estimates and slack variables. Simulation results demonstrate that the proposed method significantly reduces infeasibility and improves collision avoidance performance compared with existing baselines in dense scenarios. Additional simulations under varying time delays demonstrate the robustness of the proposed method. Real-world experiments validate the practical applicability of the proposed method.",
-      "url": "https://arxiv.org/abs/2603.13103v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.13103v1",
-      "published": "2026-03-13T15:58:40Z",
-      "updated": "2026-03-13T15:58:40Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2603.13100v1",
-      "title": "Evaluating VLMs' Spatial Reasoning Over Robot Motion: A Step Towards Robot Planning with Motion Preferences",
-      "authors": [
-        "Wenxi Wu",
-        "Jingjing Zhang",
-        "Martim Brand\u00e3o"
-      ],
-      "abstract": "Understanding user instructions and object spatial relations in surrounding environments is crucial for intelligent robot systems to assist humans in various tasks. The natural language and spatial reasoning capabilities of Vision-Language Models (VLMs) have the potential to enhance the generalization of robot planners on new tasks, objects, and motion specifications. While foundation models have been applied to task planning, it is still unclear the degree to which they have the capability of spatial reasoning required to enforce user preferences or constraints on motion, such as desired distances from objects, topological properties, or motion style preferences. In this paper, we evaluate the capability of four state-of-the-art VLMs at spatial reasoning over robot motion, using four different querying methods. Our results show that, with the highest-performing querying method, Qwen2.5-VL achieves 71.4% accuracy zero-shot and 75% on a smaller model after fine-tuning, and GPT-4o leads to lower performance. We evaluate two types of motion preferences (object-proximity and path-style), and we also analyze the trade-off between accuracy and computation cost in number of tokens. This work shows some promise in the potential of VLM integration with robot motion planning pipelines.",
-      "url": "https://arxiv.org/abs/2603.13100v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.13100v1",
-      "published": "2026-03-13T15:53:42Z",
-      "updated": "2026-03-13T15:53:42Z",
-      "categories": [
-        "cs.RO",
-        "cs.AI"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2603.13098v1",
-      "title": "SldprtNet: A Large-Scale Multimodal Dataset for CAD Generation in Language-Driven 3D Design",
-      "authors": [
-        "Ruogu Li",
-        "Sikai Li",
-        "Yao Mu",
-        "Mingyu Ding"
-      ],
-      "abstract": "We introduce SldprtNet, a large-scale dataset comprising over 242,000 industrial parts, designed for semantic-driven CAD modeling, geometric deep learning, and the training and fine-tuning of multimodal models for 3D design. The dataset provides 3D models in both .step and .sldprt formats to support diverse training and testing. To enable parametric modeling and facilitate dataset scalability, we developed supporting tools, an encoder and a decoder, which support 13 types of CAD commands and enable lossless transformation between 3D models and a structured text representation. Additionally, each sample is paired with a composite image created by merging seven rendered views from different viewpoints of the 3D model, effectively reducing input token length and accelerating inference. By combining this image with the parameterized text output from the encoder, we employ the lightweight multimodal language model Qwen2.5-VL-7B to generate a natural language description of each part's appearance and functionality. To ensure accuracy, we manually verified and aligned the generated descriptions, rendered images, and 3D models. These descriptions, along with the parameterized modeling scripts, rendered images, and 3D model files, are fully aligned to construct SldprtNet. To assess its effectiveness, we fine-tuned baseline models on a dataset subset, comparing image-plus-text inputs with text-only inputs. Results confirm the necessity and value of multimodal datasets for CAD generation. It features carefully selected real-world industrial parts, supporting tools for scalable dataset expansion, diverse modalities, and ensured diversity in model complexity and geometric features, making it a comprehensive multimodal dataset built for semantic-driven CAD modeling and cross-modal learning.",
-      "url": "https://arxiv.org/abs/2603.13098v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.13098v1",
-      "published": "2026-03-13T15:47:08Z",
-      "updated": "2026-03-13T15:47:08Z",
-      "categories": [
-        "cs.RO",
+        "cs.CL",
         "cs.CV"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2603.13082v1",
-      "title": "InterEdit: Navigating Text-Guided Multi-Human 3D Motion Editing",
+      "id": "2603.15588v1",
+      "title": "Switching-Reference Voltage Control for Distribution Systems with AI-Training Data Centers",
       "authors": [
-        "Yebin Yang",
-        "Di Wen",
-        "Lei Qi",
-        "Weitong Kong",
-        "Junwei Zheng",
-        "Ruiping Liu",
-        "Yufan Chen",
-        "Chengzhi Wu",
-        "Kailun Yang",
-        "Yuqian Fu",
-        "Danda Pani Paudel",
-        "Luc Van Gool",
-        "Kunyu Peng"
+        "Mingyuan Yan",
+        "Trager Joswig-Jones",
+        "Baosen Zhang",
+        "Yize Chen",
+        "Wenqi Cu"
       ],
-      "abstract": "Text-guided 3D motion editing has seen success in single-person scenarios, but its extension to multi-person settings is less explored due to limited paired data and the complexity of inter-person interactions. We introduce the task of multi-person 3D motion editing, where a target motion is generated from a source and a text instruction. To support this, we propose InterEdit3D, a new dataset with manual two-person motion change annotations, and a Text-guided Multi-human Motion Editing (TMME) benchmark. We present InterEdit, a synchronized classifier-free conditional diffusion model for TMME. It introduces Semantic-Aware Plan Token Alignment with learnable tokens to capture high-level interaction cues and an Interaction-Aware Frequency Token Alignment strategy using DCT and energy pooling to model periodic motion dynamics. Experiments show that InterEdit improves text-to-motion consistency and edit fidelity, achieving state-of-the-art TMME performance. The dataset and code will be released at https://github.com/YNG916/InterEdit.",
-      "url": "https://arxiv.org/abs/2603.13082v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.13082v1",
-      "published": "2026-03-13T15:30:51Z",
-      "updated": "2026-03-13T15:30:51Z",
-      "categories": [
-        "cs.CV",
-        "cs.RO",
-        "eess.IV"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2603.13050v1",
-      "title": "EMT and RMS Modeling of Thyristor Rectifiers for Stability Analysis of Converter-Based Systems",
-      "authors": [
-        "Ognjen Stanojev",
-        "Pol Jane Soneira",
-        "G\u00f6sta Stomberg",
-        "Mario Schweizer"
-      ],
-      "abstract": "Thyristor rectifiers are a well-established and cost-effective solution for controlled high-power rectification, commonly used for hydrogen electrolysis and HVDC transmission. However, small-signal modeling and analysis of thyristor rectifiers remain challenging due to their line-commutated operation and nonlinear switching dynamics. This paper first revisits conventional RMS-based modeling of thyristor rectifiers and subsequently proposes a novel nonlinear state-space EMT model in the dq domain that can be linearized for small-signal analysis. The proposed model accurately captures all the relevant dynamic phenomena, including PLL dynamics, the commutation process, and switching delays. It is derived in polar coordinates, offering novel insights into the impact of the PLL and commutation angle on the thyristor rectifier dynamics. We verify the RMS and EMT models against a detailed switching model and demonstrate their applicability through small-signal stability analysis of a modified IEEE 39-bus test system that incorporates thyristor rectifier-interfaced hydrogen electrolyzers, synchronous generators, and grid-forming converters.",
-      "url": "https://arxiv.org/abs/2603.13050v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.13050v1",
-      "published": "2026-03-13T15:02:07Z",
-      "updated": "2026-03-13T15:02:07Z",
+      "abstract": "Large-scale AI training workloads in modern data centers exhibit rapid and periodic power fluctuations, which may induce significant voltage deviations in power distribution systems. Existing voltage regulation methods, such as droop control, are primarily designed for slowly varying loads and may therefore be ineffective in mitigating these fast fluctuations. In addition, repeated control actions can incur substantial cost. To address this challenge, this paper proposes a decentralized switching-reference voltage control framework that exploits the structured behavior of AI training workloads. We establish conditions for voltage convergence and characterize an effective reference design that aligns with the two dominant operating levels of the AI training workload. The switching rule for voltage references is implemented solely using local voltage measurements, enabling simple local implementation while significantly reducing control effort. Simulation studies demonstrate that the proposed method substantially reduces both voltage deviations and reactive control effort, while remaining compatible with internal data center control strategies without requiring extensive coordination.",
+      "url": "https://arxiv.org/abs/2603.15588v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.15588v1",
+      "published": "2026-03-16T17:48:27Z",
+      "updated": "2026-03-16T17:48:27Z",
       "categories": [
         "eess.SY"
       ],
       "primary_category": "eess.SY"
     },
     {
-      "id": "2603.13033v1",
-      "title": "ESPIRE: A Diagnostic Benchmark for Embodied Spatial Reasoning of Vision-Language Models",
+      "id": "2603.15586v1",
+      "title": "Computational Concept of the Psyche",
       "authors": [
-        "Yanpeng Zhao",
-        "Wentao Ding",
-        "Hongtao Li",
-        "Baoxiong Jia",
-        "Zilong Zheng"
+        "Anton Kolonin",
+        "Vladimir Krykov"
       ],
-      "abstract": "A recent trend in vision-language models (VLMs) has been to enhance their spatial cognition for embodied domains. Despite progress, existing evaluations have been limited both in paradigm and in coverage, hindering rapid, iterative model development. To address these limitations, we propose ESPIRE, a diagnostic benchmark for embodied spatial reasoning. ESPIRE offers a simulated world that physically grounds VLMs and evaluates them on spatial-reasoning-centric robotic tasks, thus narrowing the gap between evaluation and real-world deployment. To adapt VLMs to robotic tasks, we decompose each task into localization and execution, and frame both as generative problems, in stark contrast to predominant discriminative evaluations (e.g., via visual-question answering) that rely on distractors and discard execution. This decomposition further enables a fine-grained analysis beyond passive spatial reasoning toward reasoning to act. We systematically design ESPIRE both at the instruction level and at the environment level, ensuring broad coverage of spatial reasoning scenarios. We use ESPIRE to diagnose a range of frontier VLMs and provide in-depth analysis of their spatial reasoning behaviors.",
-      "url": "https://arxiv.org/abs/2603.13033v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.13033v1",
-      "published": "2026-03-13T14:43:00Z",
-      "updated": "2026-03-13T14:43:00Z",
+      "abstract": "This article presents an overview of approaches to modeling the human psyche in the context of constructing an artificial one. Based on this overview, a concept of cognitive architecture is proposed, in which the psyche is viewed as the operating system of a living or artificial subject, comprising a space of states, including the state of needs that determine the meaning of a subject's being in relation to stimuli from the external world, and intelligence as a decision-making system regarding actions in this world to satisfy these needs. Based on this concept, a computational formalization is proposed for creating artificial general intelligence systems for an agent through experiential learning in a state space that includes agent's needs, taking into account their biological or existential significance for the intelligent agent, along with agent's sensations and actions. Thus, the problem of constructing artificial general intelligence is formalized as a system for making optimal decisions in the space of specific agent needs under conditions of uncertainty, maximizing success in achieving goals, minimizing existential risks, and maximizing energy efficiency. A minimal experimental implementation of the model is presented.",
+      "url": "https://arxiv.org/abs/2603.15586v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.15586v1",
+      "published": "2026-03-16T17:46:58Z",
+      "updated": "2026-03-16T17:46:58Z",
+      "categories": [
+        "cs.AI",
+        "eess.SY"
+      ],
+      "primary_category": "cs.AI"
+    },
+    {
+      "id": "2603.15566v1",
+      "title": "Lore: Repurposing Git Commit Messages as a Structured Knowledge Protocol for AI Coding Agents",
+      "authors": [
+        "Ivan Stetsenko"
+      ],
+      "abstract": "As AI coding agents become both primary producers and consumers of source code, the software industry faces an accelerating loss of institutional knowledge. Each commit captures a code diff but discards the reasoning behind it - the constraints, rejected alternatives, and forward-looking context that shaped the decision. I term this discarded reasoning the Decision Shadow. This paper proposes Lore, a lightweight protocol that restructures commit messages - using native git trailers - into self-contained decision records carrying constraints, rejected alternatives, agent directives, and verification metadata. Lore requires no infrastructure beyond git, is queryable via a standalone CLI tool, and is discoverable by any agent capable of running shell commands. The paper formalizes the protocol, compares it against five competing approaches, stress-tests it against its strongest objections, and outlines an empirical validation path.",
+      "url": "https://arxiv.org/abs/2603.15566v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.15566v1",
+      "published": "2026-03-16T17:27:30Z",
+      "updated": "2026-03-16T17:27:30Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "eess.SY"
+      ],
+      "primary_category": "cs.SE"
+    },
+    {
+      "id": "2603.15558v1",
+      "title": "Panoramic Affordance Prediction",
+      "authors": [
+        "Zixin Zhang",
+        "Chenfei Liao",
+        "Hongfei Zhang",
+        "Harold Haodong Chen",
+        "Kanghao Chen",
+        "Zichen Wen",
+        "Litao Guo",
+        "Bin Ren",
+        "Xu Zheng",
+        "Yinchuan Li",
+        "Xuming Hu",
+        "Nicu Sebe",
+        "Ying-Cong Chen"
+      ],
+      "abstract": "Affordance prediction serves as a critical bridge between perception and action in embodied AI. However, existing research is confined to pinhole camera models, which suffer from narrow Fields of View (FoV) and fragmented observations, often missing critical holistic environmental context. In this paper, we present the first exploration into Panoramic Affordance Prediction, utilizing 360-degree imagery to capture global spatial relationships and holistic scene understanding. To facilitate this novel task, we first introduce PAP-12K, a large-scale benchmark dataset containing over 1,000 ultra-high-resolution (12k, 11904 x 5952) panoramic images with over 12k carefully annotated QA pairs and affordance masks. Furthermore, we propose PAP, a training-free, coarse-to-fine pipeline inspired by the human foveal visual system to tackle the ultra-high resolution and severe distortion inherent in panoramic images. PAP employs recursive visual routing via grid prompting to progressively locate targets, applies an adaptive gaze mechanism to rectify local geometric distortions, and utilizes a cascaded grounding pipeline to extract precise instance-level masks. Experimental results on PAP-12K reveal that existing affordance prediction methods designed for standard perspective images suffer severe performance degradation and fail due to the unique challenges of panoramic vision. In contrast, PAP framework effectively overcomes these obstacles, significantly outperforming state-of-the-art baselines and highlighting the immense potential of panoramic perception for robust embodied intelligence.",
+      "url": "https://arxiv.org/abs/2603.15558v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.15558v1",
+      "published": "2026-03-16T17:21:49Z",
+      "updated": "2026-03-16T17:21:49Z",
       "categories": [
         "cs.CV",
-        "cs.LG",
         "cs.RO"
       ],
       "primary_category": "cs.CV"
