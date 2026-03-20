@@ -2,23 +2,27 @@
   "category": "robotics",
   "name": "Robotics Research",
   "description": "Robotics \u2014 Motion Planning, Control Systems, Human-Robot Interaction, Autonomous Systems",
-  "scraped_at": "2026-03-19T08:55:21.882568+00:00",
+  "scraped_at": "2026-03-20T08:53:39.228738+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2603.17993v1",
-      "title": "GMT: Goal-Conditioned Multimodal Transformer for 6-DOF Object Trajectory Synthesis in 3D Scenes",
+      "id": "2603.19235v1",
+      "title": "Generation Models Know Space: Unleashing Implicit 3D Priors for Scene Understanding",
       "authors": [
-        "Huajian Zeng",
-        "Abhishek Saroha",
-        "Daniel Cremers",
-        "Xi Wang"
+        "Xianjin Wu",
+        "Dingkang Liang",
+        "Tianrui Feng",
+        "Kui Xia",
+        "Yumeng Zhang",
+        "Xiaofan Li",
+        "Xiao Tan",
+        "Xiang Bai"
       ],
-      "abstract": "Synthesizing controllable 6-DOF object manipulation trajectories in 3D environments is essential for enabling robots to interact with complex scenes, yet remains challenging due to the need for accurate spatial reasoning, physical feasibility, and multimodal scene understanding. Existing approaches often rely on 2D or partial 3D representations, limiting their ability to capture full scene geometry and constraining trajectory precision. We present GMT, a multimodal transformer framework that generates realistic and goal-directed object trajectories by jointly leveraging 3D bounding box geometry, point cloud context, semantic object categories, and target end poses. The model represents trajectories as continuous 6-DOF pose sequences and employs a tailored conditioning strategy that fuses geometric, semantic, contextual, and goaloriented information. Extensive experiments on synthetic and real-world benchmarks demonstrate that GMT outperforms state-of-the-art human motion and human-object interaction baselines, such as CHOIS and GIMO, achieving substantial gains in spatial accuracy and orientation control. Our method establishes a new benchmark for learningbased manipulation planning and shows strong generalization to diverse objects and cluttered 3D environments. Project page: https://huajian- zeng.github. io/projects/gmt/.",
-      "url": "https://arxiv.org/abs/2603.17993v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.17993v1",
-      "published": "2026-03-18T17:54:35Z",
-      "updated": "2026-03-18T17:54:35Z",
+      "abstract": "While Multimodal Large Language Models demonstrate impressive semantic capabilities, they often suffer from spatial blindness, struggling with fine-grained geometric reasoning and physical dynamics. Existing solutions typically rely on explicit 3D modalities or complex geometric scaffolding, which are limited by data scarcity and generalization challenges. In this work, we propose a paradigm shift by leveraging the implicit spatial prior within large-scale video generation models. We posit that to synthesize temporally coherent videos, these models inherently learn robust 3D structural priors and physical laws. We introduce VEGA-3D (Video Extracted Generative Awareness), a plug-and-play framework that repurposes a pre-trained video diffusion model as a Latent World Simulator. By extracting spatiotemporal features from intermediate noise levels and integrating them with semantic representations via a token-level adaptive gated fusion mechanism, we enrich MLLMs with dense geometric cues without explicit 3D supervision. Extensive experiments across 3D scene understanding, spatial reasoning, and embodied manipulation benchmarks demonstrate that our method outperforms state-of-the-art baselines, validating that generative priors provide a scalable foundation for physical-world understanding. Code is publicly available at https://github.com/H-EmbodVis/VEGA-3D.",
+      "url": "https://arxiv.org/abs/2603.19235v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.19235v1",
+      "published": "2026-03-19T17:59:58Z",
+      "updated": "2026-03-19T17:59:58Z",
       "categories": [
         "cs.CV",
         "cs.RO"
@@ -26,179 +30,212 @@
       "primary_category": "cs.CV"
     },
     {
-      "id": "2603.17990v1",
-      "title": "A Single-Fiber Optical Frequency Domain Reflectometry (OFDR)-Based Shape Sensing of Concentric Tube Steerable Drilling Robots",
+      "id": "2603.19233v1",
+      "title": "Not All Features Are Created Equal: A Mechanistic Study of Vision-Language-Action Models",
       "authors": [
-        "Yash Kulkarni",
-        "Mobina Tavangarifard",
-        "Daniyal Maroufi",
-        "Mohsen Khadem",
-        "Justin E. Bird",
-        "Jeffrey H. Siewerdsen",
-        "Farshid Alambeigi"
+        "Bryce Grant",
+        "Xijia Zhao",
+        "Peng Wang"
       ],
-      "abstract": "This paper introduces a novel shape-sensing approach for Concentric Tube Steerable Drilling Robots (CT-SDRs) based on Optical Frequency Domain Reflectometry (OFDR). Unlike traditional FBG-based methods, OFDR enables continuous strain measurement along the entire fiber length with enhanced spatial resolution. In the proposed method, a Shape Sensing Assembly (SSA) is first fabricated by integrating a single OFDR fiber with a flat NiTi wire. The calibrated SSA is then routed through and housed within the internal channel of a flexible drilling instrument, which is guided by the pre-shaped NiTi tube of the CT-SDR. In this configuration, the drilling instrument serves as a protective sheath for the SSA during drilling, eliminating the need for integration or adhesion to the instrument surface that is typical of conventional optical sensor approaches. The performance of the proposed SSA, integrated within the cannulated CT-SDR, was thoroughly evaluated under free-bending conditions and during drilling along multiple J-shaped trajectories in synthetic Sawbones phantoms. Results demonstrate accurate and reliable shape-sensing capability, confirming the feasibility and robustness of this integration strategy.",
-      "url": "https://arxiv.org/abs/2603.17990v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.17990v1",
-      "published": "2026-03-18T17:51:07Z",
-      "updated": "2026-03-18T17:51:07Z",
+      "abstract": "Vision-Language-Action (VLA) models combine perception, language, and motor control in a single architecture, yet how they translate multimodal inputs into actions remains poorly understood. We apply activation injection, sparse autoencoders (SAEs), and linear probes to six models spanning 80M--7B parameters across 394,000+ rollout episodes on four benchmarks. The visual pathway dominates action generation across all architectures: injecting baseline activations into null-prompt episodes recovers near-identical behavior, while cross-task injection steers robots toward source-task positions (99.8\\% of X-VLA episodes align with the source trajectory), exposing spatially bound motor programs tied to scene coordinates rather than abstract task representations. Language sensitivity depends on task structure, not model design: when visual context uniquely specifies the task, language is ignored; when multiple goals share a scene, language becomes essential (X-VLA \\texttt{libero\\_goal}: 94\\%$\\to$10\\% under wrong prompts vs.\\ \\texttt{libero\\_object}: 60--100\\% regardless). In all three multi-pathway architectures (\\pizhalf{}, SmolVLA, GR00T), expert pathways encode motor programs while VLM pathways encode goal semantics ($2\\times$ greater behavioral displacement from expert injection), and subspace injection confirms these occupy separable activation subspaces. Per-token SAE processing is essential for action fidelity on most architectures, though mean-pooling improves fidelity on X-VLA. Contrastive identification recovers 82+ manipulation concepts, and causal ablation reveals sensitivity spanning 28--92\\% zero-effect rates independent of representation width. We release \\textbf{Action Atlas} (https://action-atlas.com) for interactive exploration of VLA representations across all six models.",
+      "url": "https://arxiv.org/abs/2603.19233v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.19233v1",
+      "published": "2026-03-19T17:59:55Z",
+      "updated": "2026-03-19T17:59:55Z",
       "categories": [
         "cs.RO"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2603.17969v1",
-      "title": "Specification-Aware Distribution Shaping for Robotics Foundation Models",
+      "id": "2603.19229v1",
+      "title": "NavTrust: Benchmarking Trustworthiness for Embodied Navigation",
       "authors": [
-        "Sad\u0131k Bera Y\u00fcksel",
-        "Derya Aksaray"
+        "Huaide Jiang",
+        "Yash Chaudhary",
+        "Yuping Wang",
+        "Zehao Wang",
+        "Raghav Sharma",
+        "Manan Mehta",
+        "Yang Zhou",
+        "Lichao Sun",
+        "Zhiwen Fan",
+        "Zhengzhong Tu",
+        "Jiachen Li"
       ],
-      "abstract": "Robotics foundation models have demonstrated strong capabilities in executing natural language instructions across diverse tasks and environments. However, they remain largely data-driven and lack formal guarantees on safety and satisfaction of time-dependent specifications during deployment. In practice, robots often need to comply with operational constraints involving rich spatio-temporal requirements such as time-bounded goal visits, sequential objectives, and persistent safety conditions. In this work, we propose a specification-aware action distribution optimization framework that enforces a broad class of Signal Temporal Logic (STL) constraints during execution of a pretrained robotics foundation model without modifying its parameters. At each decision step, the method computes a minimally modified action distribution that satisfies a hard STL feasibility constraint by reasoning over the remaining horizon using forward dynamics propagation. We validate the proposed framework in simulation using a state-of-the-art robotics foundation model across multiple environments and complex specifications.",
-      "url": "https://arxiv.org/abs/2603.17969v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.17969v1",
-      "published": "2026-03-18T17:36:46Z",
-      "updated": "2026-03-18T17:36:46Z",
+      "abstract": "There are two major categories of embodied navigation: Vision-Language Navigation (VLN), where agents navigate by following natural language instructions; and Object-Goal Navigation (OGN), where agents navigate to a specified target object. However, existing work primarily evaluates model performance under nominal conditions, overlooking the potential corruptions that arise in real-world settings. To address this gap, we present NavTrust, a unified benchmark that systematically corrupts input modalities, including RGB, depth, and instructions, in realistic scenarios and evaluates their impact on navigation performance. To our best knowledge, NavTrust is the first benchmark that exposes embodied navigation agents to diverse RGB-Depth corruptions and instruction variations in a unified framework. Our extensive evaluation of seven state-of-the-art approaches reveals substantial performance degradation under realistic corruptions, which highlights critical robustness gaps and provides a roadmap toward more trustworthy embodied navigation systems. Furthermore, we systematically evaluate four distinct mitigation strategies to enhance robustness against RGB-Depth and instructions corruptions. Our base models include Uni-NaVid and ETPNav. We deployed them on a real mobile robot and observed improved robustness to corruptions. The project website is: https://navtrust.github.io.",
+      "url": "https://arxiv.org/abs/2603.19229v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.19229v1",
+      "published": "2026-03-19T17:59:51Z",
+      "updated": "2026-03-19T17:59:51Z",
       "categories": [
         "cs.RO",
-        "cs.AI"
+        "cs.AI",
+        "cs.CV",
+        "cs.LG",
+        "eess.SY"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2603.17931v1",
-      "title": "Real-time Coordination of Cascaded Hydroelectric Generation under Decision-Dependent Uncertainties",
+      "id": "2603.19201v1",
+      "title": "OmniVTA: Visuo-Tactile World Modeling for Contact-Rich Robotic Manipulation",
       "authors": [
-        "Eliza Cohn",
-        "Ning Qi",
-        "Upmanu Lall",
-        "Bolun Xu"
+        "Yuhang Zheng",
+        "Songen Gu",
+        "Weize Li",
+        "Yupeng Zheng",
+        "Yujie Zang",
+        "Shuai Tian",
+        "Xiang Li",
+        "Ruihai Wu",
+        "Ce Hao",
+        "Chen Gao",
+        "Si Liu",
+        "Haoran Li",
+        "Yilun Chen",
+        "Shuicheng Yan",
+        "Wenchao Ding"
       ],
-      "abstract": "This paper proposes a real-time control policy for cascaded hydropower systems that incorporates decision-dependent uncertainty (DDU) to capture the coupling of streamflow uncertainties across the network. The framework jointly models exogenous forecast errors and endogenous uncertainty propagation, explicitly characterizing the dependence between upstream releases and downstream inflow variability through a heteroskedastic variance model conditioned on past errors, variance, and control actions. We formulate a joint chance-constrained optimization problem to ensure reliable system operation under uncertainty, and develop a tractable supporting hyperplane algorithm that enables explicit and adaptive risk allocation under DDU. We establish convergence of the proposed method and show that it recovers the Bonferroni approximation under steady-state conditions. A randomized case study based on Columbia River data demonstrates that the proposed framework improves both energy generation and reservoir reliability by accounting for DDU. Sensitivity analyses on drought severity and model parameters further highlight the value of adaptive risk allocation for resilient hydropower operations.",
-      "url": "https://arxiv.org/abs/2603.17931v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.17931v1",
-      "published": "2026-03-18T17:05:44Z",
-      "updated": "2026-03-18T17:05:44Z",
-      "categories": [
-        "eess.SY"
-      ],
-      "primary_category": "eess.SY"
-    },
-    {
-      "id": "2603.17927v1",
-      "title": "RoboForge: Physically Optimized Text-guided Whole-Body Locomotion for Humanoids",
-      "authors": [
-        "Xichen Yuan",
-        "Zhe Li",
-        "Bofan Lyu",
-        "Kuangji Zuo",
-        "Yanshuo Lu",
-        "Gen Li",
-        "Jianfei Yang"
-      ],
-      "abstract": "While generative models have become effective at producing human-like motions from text, transferring these motions to humanoid robots for physical execution remains challenging. Existing pipelines are often limited by retargeting, where kinematic quality is undermined by physical infeasibility, contact-transition errors, and the high cost of real-world dynamical data. We present a unified latent-driven framework that bridges natural language and whole-body humanoid locomotion through a retarget-free, physics-optimized pipeline. Rather than treating generation and control as separate stages, our key insight is to couple them bidirectionally under physical constraints.We introduce a Physical Plausibility Optimization (PP-Opt) module as the coupling interface. In the forward direction, PP-Opt refines a teacher-student distillation policy with a plausibility-centric reward to suppress artifacts such as floating, skating, and penetration. In the backward direction, it converts reward-optimized simulation rollouts into high-quality explicit motion data, which is used to fine-tune the motion generator toward a more physically plausible latent distribution. This bidirectional design forms a self-improving cycle: the generator learns a physically grounded latent space, while the controller learns to execute latent-conditioned behaviors with dynamical integrity.Extensive experiments on the Unitree G1 humanoid show that our bidirectional optimization improves tracking accuracy and success rates. Across IsaacLab and MuJoCo, the implicit latent-driven pipeline consistently outperforms conventional explicit retargeting baselines in both precision and stability. By coupling diffusion-based motion generation with physical plausibility optimization, our framework provides a practical path toward deployable text-guided humanoid intelligence.",
-      "url": "https://arxiv.org/abs/2603.17927v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.17927v1",
-      "published": "2026-03-18T17:02:56Z",
-      "updated": "2026-03-18T17:02:56Z",
+      "abstract": "Contact-rich manipulation tasks, such as wiping and assembly, require accurate perception of contact forces, friction changes, and state transitions that cannot be reliably inferred from vision alone. Despite growing interest in visuo-tactile manipulation, progress is constrained by two persistent limitations: existing datasets are small in scale and narrow in task coverage, and current methods treat tactile signals as passive observations rather than using them to model contact dynamics or enable closed-loop control explicitly. In this paper, we present \\textbf{OmniViTac}, a large-scale visuo-tactile-action dataset comprising $21{,}000+$ trajectories across $86$ tasks and $100+$ objects, organized into six physics-grounded interaction patterns. Building on this dataset, we propose \\textbf{OmniVTA}, a world-model-based visuo-tactile manipulation framework that integrates four tightly coupled modules: a self-supervised tactile encoder, a two-stream visuo-tactile world model for predicting short-horizon contact evolution, a contact-aware fusion policy for action generation, and a 60Hz reflexive controller that corrects deviations between predicted and observed tactile signals in a closed loop. Real-robot experiments across all six interaction categories show that OmniVTA outperforms existing methods and generalizes well to unseen objects and geometric configurations, confirming the value of combining predictive contact modeling with high-frequency tactile feedback for contact-rich manipulation. All data, models, and code will be made publicly available on the project website at https://mrsecant.github.io/OmniVTA.",
+      "url": "https://arxiv.org/abs/2603.19201v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.19201v1",
+      "published": "2026-03-19T17:52:42Z",
+      "updated": "2026-03-19T17:52:42Z",
       "categories": [
         "cs.RO"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2603.17867v1",
-      "title": "RHYME-XT: A Neural Operator for Spatiotemporal Control Systems",
+      "id": "2603.19199v1",
+      "title": "FASTER: Rethinking Real-Time Flow VLAs",
       "authors": [
-        "Marijn Ruiter",
-        "Miguel Aguiar",
-        "Jake Rap",
-        "Karl H. Johansson",
-        "Amritam Das"
+        "Yuxiang Lu",
+        "Zhe Liu",
+        "Xianzhe Fan",
+        "Zhenya Yang",
+        "Jinghua Hou",
+        "Junyi Li",
+        "Kaixin Ding",
+        "Hengshuang Zhao"
       ],
-      "abstract": "We propose RHYME-XT, an operator-learning framework for surrogate modeling of spatiotemporal control systems governed by input-affine nonlinear partial integro-differential equations (PIDEs) with localized rhythmic behavior. RHYME-XT uses a Galerkin projection to approximate the infinite-dimensional PIDE on a learned finite-dimensional subspace with spatial basis functions parameterized by a neural network. This yields a projected system of ODEs driven by projected inputs. Instead of integrating this non-autonomous system, we directly learn its flow map using an architecture for learning flow functions, avoiding costly computations while obtaining a continuous-time and discretization-invariant representation. Experiments on a neural field PIDE show that RHYME-XT outperforms a state-of-the-art neural operator and is able to transfer knowledge effectively across models trained on different datasets, through a fine-tuning process.",
-      "url": "https://arxiv.org/abs/2603.17867v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.17867v1",
-      "published": "2026-03-18T15:55:26Z",
-      "updated": "2026-03-18T15:55:26Z",
+      "abstract": "Real-time execution is crucial for deploying Vision-Language-Action (VLA) models in the physical world. Existing asynchronous inference methods primarily optimize trajectory smoothness, but neglect the critical latency in reacting to environmental changes. By rethinking the notion of reaction in action chunking policies, this paper presents a systematic analysis of the factors governing reaction time. We show that reaction time follows a uniform distribution determined jointly by the Time to First Action (TTFA) and the execution horizon. Moreover, we reveal that the standard practice of applying a constant schedule in flow-based VLAs can be inefficient and forces the system to complete all sampling steps before any movement can start, forming the bottleneck in reaction latency. To overcome this issue, we propose Fast Action Sampling for ImmediaTE Reaction (FASTER). By introducing a Horizon-Aware Schedule, FASTER adaptively prioritizes near-term actions during flow sampling, compressing the denoising of the immediate reaction by tenfold (e.g., in $\u03c0_{0.5}$ and X-VLA) into a single step, while preserving the quality of long-horizon trajectory. Coupled with a streaming client-server pipeline, FASTER substantially reduces the effective reaction latency on real robots, especially when deployed on consumer-grade GPUs. Real-world experiments, including a highly dynamic table tennis task, prove that FASTER unlocks unprecedented real-time responsiveness for generalist policies, enabling rapid generation of accurate and smooth trajectories.",
+      "url": "https://arxiv.org/abs/2603.19199v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.19199v1",
+      "published": "2026-03-19T17:51:37Z",
+      "updated": "2026-03-19T17:51:37Z",
       "categories": [
-        "cs.LG",
-        "eess.SY",
+        "cs.RO",
+        "cs.CV"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2603.19188v1",
+      "title": "Markov Potential Game and Multi-Agent Reinforcement Learning for Autonomous Driving",
+      "authors": [
+        "Huiwen Yan",
+        "Mushuang Liu"
+      ],
+      "abstract": "Autonomous driving (AD) requires safe and reliable decision-making among interacting agents, e.g., vehicles, bicycles, and pedestrians. Multi-agent reinforcement learning (MARL) modeled by Markov games (MGs) provides a suitable framework to characterize such agents' interactions during decision-making. Nash equilibria (NEs) are often the desired solution in an MG. However, it is typically challenging to compute an NE in general-sum games, unless the game is a Markov potential game (MPG), which ensures the NE attainability under a few learning algorithms such as gradient play. However, it has been an open question how to construct an MPG and whether these construction rules are suitable for AD applications. In this paper, we provide sufficient conditions under which an MG is an MPG and show that these conditions can accommodate general driving objectives for autonomous vehicles (AVs) using highway forced merge scenarios as illustrative examples. A parameter-sharing neural network (NN) structure is designed to enable decentralized policy execution. The trained driving policy from MPGs is evaluated in both simulated and naturalistic traffic datasets. Comparative studies with single-agent RL and with human drivers whose behaviors are recorded in the traffic datasets are reported, respectively.",
+      "url": "https://arxiv.org/abs/2603.19188v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.19188v1",
+      "published": "2026-03-19T17:43:19Z",
+      "updated": "2026-03-19T17:43:19Z",
+      "categories": [
+        "eess.SY"
+      ],
+      "primary_category": "eess.SY"
+    },
+    {
+      "id": "2603.19183v1",
+      "title": "Sparse Autoencoders Reveal Interpretable and Steerable Features in VLA Models",
+      "authors": [
+        "Aiden Swann",
+        "Lachlain McGranahan",
+        "Hugo Buurmeijer",
+        "Monroe Kennedy",
+        "Mac Schwager"
+      ],
+      "abstract": "Vision-Language-Action (VLA) models have emerged as a promising approach for general-purpose robot manipulation. However, their generalization is inconsistent: while these models can perform impressively in some settings, fine-tuned variants often fail on novel objects, scenes, and instructions. We apply mechanistic interpretability techniques to better understand the inner workings of VLA models. To probe internal representations, we train Sparse Autoencoders (SAEs) on hidden layer activations of the VLA. SAEs learn a sparse dictionary whose features act as a compact, interpretable basis for the model's computation. We find that the large majority of extracted SAE features correspond to memorized sequences from specific training demonstrations. However, some features correspond to interpretable, general, and steerable motion primitives and semantic properties, offering a promising glimpse toward VLA generalizability. We propose a metric to categorize features according to whether they represent generalizable transferable primitives or episode-specific memorization. We validate these findings through steering experiments on the LIBERO benchmark. We show that individual SAE features causally influence robot behavior. Steering general features induces behaviors consistent with their semantic meaning and can be applied across tasks and scenes. This work provides the first mechanistic evidence that VLAs can learn generalizable features across tasks and scenes. We observe that supervised fine-tuning on small robotics datasets disproportionately amplifies memorization. In contrast, training on larger, more diverse datasets (e.g., DROID) or using knowledge insulation promotes more general features. We provide an open-source codebase and user-friendly interface for activation collection, SAE training, and feature steering. Our project page is located at http://drvla.github.io",
+      "url": "https://arxiv.org/abs/2603.19183v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.19183v1",
+      "published": "2026-03-19T17:42:05Z",
+      "updated": "2026-03-19T17:42:05Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2603.19170v1",
+      "title": "ADMM-Based Distributed MPC with Control Barrier Functions for Safe Multi-Robot Quadrupedal Locomotion",
+      "authors": [
+        "Yicheng Zeng",
+        "Ruturaj S. Sambhus",
+        "Basit Muhammad Imran",
+        "Jeeseop Kim",
+        "Vittorio Pastore",
+        "Kaveh Akbari Hamed"
+      ],
+      "abstract": "This paper proposes a fully decentralized model predictive control (MPC) framework with control barrier function (CBF) constraints for safety-critical trajectory planning in multi-robot legged systems. The incorporation of CBF constraints introduces explicit inter-agent coupling, which prevents direct decomposition of the resulting optimal control problems. To address this challenge, we reformulate the centralized safety-critical MPC problem using a structured distributed optimization framework based on the alternating direction method of multipliers (ADMM). By introducing a novel node-edge splitting formulation with consensus constraints, the proposed approach decomposes the global problem into independent node-local and edge-local quadratic programs that can be solved in parallel using only neighbor-to-neighbor communication. This enables fully decentralized trajectory optimization with symmetric computational load across agents while preserving safety and dynamic feasibility. The proposed framework is integrated into a hierarchical locomotion control architecture for quadrupedal robots, combining high-level distributed trajectory planning, mid-level nonlinear MPC enforcing single rigid body dynamics, and low-level whole-body control enforcing full-order robot dynamics. The effectiveness of the proposed approach is demonstrated through hardware experiments on two Unitree Go2 quadrupedal robots and numerical simulations involving up to four robots navigating uncertain environments with rough terrain and external disturbances. The results show that the proposed distributed formulation achieves performance comparable to centralized MPC while reducing the average per-cycle planning time by up to 51% in the four-agent case, enabling efficient real-time decentralized implementation.",
+      "url": "https://arxiv.org/abs/2603.19170v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.19170v1",
+      "published": "2026-03-19T17:25:33Z",
+      "updated": "2026-03-19T17:25:33Z",
+      "categories": [
+        "cs.RO",
         "math.OC"
       ],
-      "primary_category": "cs.LG"
+      "primary_category": "cs.RO"
     },
     {
-      "id": "2603.17851v1",
-      "title": "DexViTac: Collecting Human Visuo-Tactile-Kinematic Demonstrations for Contact-Rich Dexterous Manipulation",
+      "id": "2603.19166v1",
+      "title": "Meanings and Measurements: Multi-Agent Probabilistic Grounding for Vision-Language Navigation",
       "authors": [
-        "Xitong Chen",
-        "Yifeng Pan",
-        "Min Li",
-        "Xiaotian Ding"
+        "Swagat Padhan",
+        "Lakshya Jain",
+        "Bhavya Minesh Shah",
+        "Omkar Patil",
+        "Thao Nguyen",
+        "Nakul Gopalan"
       ],
-      "abstract": "Large-scale, high-quality multimodal demonstrations are essential for robot learning of contact-rich dexterous manipulation. While human-centric data collection systems lower the barrier to scaling, they struggle to capture the tactile information during physical interactions. Motivated by this, we present DexViTac, a portable, human-centric data collection system tailored for contact-rich dexterous manipulation. The system enables the high-fidelity acquisition of first-person vision, high-density tactile sensing, end-effector poses, and hand kinematics within unstructured, in-the-wild environments. Building upon this hardware, we propose a kinematics-grounded tactile representation learning algorithm that effectively resolves semantic ambiguities within tactile signals. Leveraging the efficiency of DexViTac, we construct a multimodal dataset comprising over 2,400 visuo-tactile-kinematic demonstrations. Experiments demonstrate that DexViTac achieves a collection efficiency exceeding 248 demonstrations per hour and remains robust against complex visual occlusions. Real-world deployment confirms that policies trained with the proposed dataset and learning strategy achieve an average success rate exceeding 85% across four challenging tasks. This performance significantly outperforms baseline methods, thereby validating the substantial improvement the system provides for learning contact-rich dexterous manipulation. Project page: https://xitong-c.github.io/DexViTac/.",
-      "url": "https://arxiv.org/abs/2603.17851v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.17851v1",
-      "published": "2026-03-18T15:39:58Z",
-      "updated": "2026-03-18T15:39:58Z",
+      "abstract": "Robots collaborating with humans must convert natural language goals into actionable, physically grounded decisions. For example, executing a command such as \"go two meters to the right of the fridge\" requires grounding semantic references, spatial relations, and metric constraints within a 3D scene. While recent vision language models (VLMs) demonstrate strong semantic grounding capabilities, they are not explicitly designed to reason about metric constraints in physically defined spaces. In this work, we empirically demonstrate that state-of-the-art VLM-based grounding approaches struggle with complex metric-semantic language queries. To address this limitation, we propose MAPG (Multi-Agent Probabilistic Grounding), an agentic framework that decomposes language queries into structured subcomponents and queries a VLM to ground each component. MAPG then probabilistically composes these grounded outputs to produce metrically consistent, actionable decisions in 3D space. We evaluate MAPG on the HM-EQA benchmark and show consistent performance improvements over strong baselines. Furthermore, we introduce a new benchmark, MAPG-Bench, specifically designed to evaluate metric-semantic goal grounding, addressing a gap in existing language grounding evaluations. We also present a real-world robot demonstration showing that MAPG transfers beyond simulation when a structured scene representation is available.",
+      "url": "https://arxiv.org/abs/2603.19166v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.19166v1",
+      "published": "2026-03-19T17:20:56Z",
+      "updated": "2026-03-19T17:20:56Z",
       "categories": [
-        "cs.RO"
+        "cs.RO",
+        "cs.AI",
+        "cs.CL",
+        "cs.CV",
+        "cs.LG"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2603.17850v1",
-      "title": "ProbeFlow: Training-Free Adaptive Flow Matching for Vision-Language-Action Models",
+      "id": "2603.19137v1",
+      "title": "GSMem: 3D Gaussian Splatting as Persistent Spatial Memory for Zero-Shot Embodied Exploration and Reasoning",
       "authors": [
-        "Zhou Fang",
-        "Jiaqi Wang",
-        "Yi Zhou",
-        "Qiongfeng Shi"
+        "Yiren Lu",
+        "Yi Du",
+        "Disheng Liu",
+        "Yunlai Zhou",
+        "Chen Wang",
+        "Yu Yin"
       ],
-      "abstract": "Recent Vision-Language-Action (VLA) models equipped with Flow Matching (FM) action heads achieve state-of-the-art performance in complex robot manipulation. However, the multi-step iterative ODE solving required by FM introduces inference latency that precludes responsive physical control. While current acceleration efforts optimize the Vision-Language Model (VLM) backbone, the action head bottleneck remains overlooked. To address this, we propose ProbeFlow, a training-free adaptive inference framework tai- lored for continuous robotic control. By evaluating geometric trajectory complexity via the cosine similarity between initial and lookahead velocity vectors, ProbeFlow dynamically sched- ules integration steps to prune redundant network evaluations. On the MetaWorld benchmark, it accelerates action decoding by 14.8x (reducing average steps from N = 50 to 2.6) and cuts end-to-end system latency by 2.8x without compromising the manipulation success rate. On the long-horizon LIBERO benchmark, the probe automatically allocates a denser schedule to navigate semantic bottlenecks, effectively resolving the flow solver delay. Real-world physical deployments confirm that ProbeFlow successfully mitigates action decoding latency while ensuring execution stability, offering a highly practical solution for low-latency continuous generative policies.",
-      "url": "https://arxiv.org/abs/2603.17850v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.17850v1",
-      "published": "2026-03-18T15:38:29Z",
-      "updated": "2026-03-18T15:38:29Z",
+      "abstract": "Effective embodied exploration requires agents to accumulate and retain spatial knowledge over time. However, existing scene representations, such as discrete scene graphs or static view-based snapshots, lack \\textit{post-hoc re-observability}. If an initial observation misses a target, the resulting memory omission is often irrecoverable. To bridge this gap, we propose \\textbf{GSMem}, a zero-shot embodied exploration and reasoning framework built upon 3D Gaussian Splatting (3DGS). By explicitly parameterizing continuous geometry and dense appearance, 3DGS serves as a persistent spatial memory that endows the agent with \\textit{Spatial Recollection}: the ability to render photorealistic novel views from optimal, previously unoccupied viewpoints. To operationalize this, GSMem employs a retrieval mechanism that simultaneously leverages parallel object-level scene graphs and semantic-level language fields. This complementary design robustly localizes target regions, enabling the agent to ``hallucinate'' optimal views for high-fidelity Vision-Language Model (VLM) reasoning. Furthermore, we introduce a hybrid exploration strategy that combines VLM-driven semantic scoring with a 3DGS-based coverage objective, balancing task-aware exploration with geometric coverage. Extensive experiments on embodied question answering and lifelong navigation demonstrate the robustness and effectiveness of our framework",
+      "url": "https://arxiv.org/abs/2603.19137v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.19137v1",
+      "published": "2026-03-19T16:55:54Z",
+      "updated": "2026-03-19T16:55:54Z",
       "categories": [
+        "cs.CV",
         "cs.RO"
       ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2603.17849v1",
-      "title": "Koopman Generator Decomposition for Port-Hamiltonian System",
-      "authors": [
-        "Victor M. Preciado"
-      ],
-      "abstract": "We establish a canonical decomposition of the infinitesimal Koopman generator of any port-Hamiltonian (pH) system into skew-adjoint (energy-conserving), positive-semidefinite (dissipative), and input-port components, proving that the generator satisfies an energy-dissipation inequality on a dense subdomain of $L^2(\u03bc)$ for any invariant measure $\u03bc$ satisfying a mild joint-invariance condition stated in Theorem 1. This infinite-dimensional splitting carries over exactly to finite-dimensional Galerkin approximations, yielding structure-constrained surrogate models that provably inherit passivity with a quadratic storage function in the lifted observable space. Leveraging this structure, we design passivity-based controllers directly in the lifted space and establish asymptotic stability of the lifted closed-loop system via LaSalle's invariance principle under a mild detectability condition. For linear pH systems, the decomposition recovers the true pH matrices exactly, confirming that the structural constraints arise naturally from the operator theory rather than being imposed by hand. The framework unifies port-Hamiltonian systems theory and Koopman spectral methods, providing a rigorous operator-theoretic foundation for energy-consistent lifting of nonlinear pH dynamics.",
-      "url": "https://arxiv.org/abs/2603.17849v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.17849v1",
-      "published": "2026-03-18T15:37:01Z",
-      "updated": "2026-03-18T15:37:01Z",
-      "categories": [
-        "eess.SY",
-        "math.DS"
-      ],
-      "primary_category": "eess.SY"
-    },
-    {
-      "id": "2603.17843v1",
-      "title": "Certainty-equivalent adaptive MPC for uncertain nonlinear systems",
-      "authors": [
-        "Johannes K\u00f6hler"
-      ],
-      "abstract": "We provide a method to design adaptive controllers for nonlinear systems using model predictive control (MPC). By combining a certainty-equivalent MPC formulation with least-mean-square parameter adaptation, we obtain an adaptive controller with strong robust performance guarantees: The cumulative tracking error and violation of state constraints scale linearly with noise energy, disturbance energy, and path length of parameter variation. A key technical contribution is developing the underlying certainty-equivalent MPC that tracks output references, accounts for actuator limitations and desired state constraints, requires no system-specific offline design, and provides strong inherent robustness properties. This is achieved by leveraging finite-horizon rollouts, artificial references, recent analysis techniques for optimization-based controllers, and soft state constraints. For open-loop stable systems, we derive a semi-global result that applies to arbitrarily large measurement noise, disturbances, and parametric uncertainty. For stabilizable systems, we derive a regional result that is valid within a given region of attraction and for sufficiently small uncertainty. Applicability and benefits are demonstrated with numerical simulations involving systems with large parametric uncertainty: a linear stable chain of mass-spring-dampers and a nonlinear unstable quadrotor navigating obstacles.",
-      "url": "https://arxiv.org/abs/2603.17843v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.17843v1",
-      "published": "2026-03-18T15:33:46Z",
-      "updated": "2026-03-18T15:33:46Z",
-      "categories": [
-        "math.OC",
-        "eess.SY"
-      ],
-      "primary_category": "math.OC"
+      "primary_category": "cs.CV"
     }
   ]
 }
