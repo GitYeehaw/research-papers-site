@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-03-22T08:51:57.294149+00:00",
+  "scraped_at": "2026-03-23T09:13:33.984667+00:00",
   "researcher_count": 54,
   "researchers": [
     {
@@ -249,6 +249,27 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2603.19632v1",
+          "title": "ContractionPPO: Certified Reinforcement Learning via Differentiable Contraction Layers",
+          "authors": [
+            "Vrushabh Zinage",
+            "Narek Harutyunyan",
+            "Eric Verheyden",
+            "Fred Y. Hadaegh",
+            "Soon-Jo Chung"
+          ],
+          "abstract": "Legged locomotion in unstructured environments demands not only high-performance control policies but also formal guarantees to ensure robustness under perturbations. Control methods often require carefully designed reference trajectories, which are challenging to construct in high-dimensional, contact-rich systems such as quadruped robots. In contrast, Reinforcement Learning (RL) directly learns policies that implicitly generate motion, and uniquely benefits from access to privileged information, such as full state and dynamics during training, that is not available at deployment. We present ContractionPPO, a framework for certified robust planning and control of legged robots by augmenting Proximal Policy Optimization (PPO) RL with a state-dependent contraction metric layer. This approach enables the policy to maximize performance while simultaneously producing a contraction metric that certifies incremental exponential stability of the simulated closed-loop system. The metric is parameterized as a Lipschitz neural network and trained jointly with the policy, either in parallel or as an auxiliary head of the PPO backbone. While the contraction metric is not deployed during real-world execution, we derive upper bounds on the worst-case contraction rate and show that these bounds ensure the learned contraction metric generalizes from simulation to real-world deployment. Our hardware experiments on quadruped locomotion demonstrate that ContractionPPO enables robust, certifiably stable control even under strong external perturbations.",
+          "url": "https://arxiv.org/abs/2603.19632v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.19632v1",
+          "published": "2026-03-20T04:32:18Z",
+          "updated": "2026-03-20T04:32:18Z",
+          "categories": [
+            "cs.RO",
+            "eess.SY"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2602.21366v2",
           "title": "Environment-Aware Learning of Smooth GNSS Covariance Dynamics for Autonomous Racing",
           "authors": [
@@ -323,25 +344,6 @@
             "eess.SY"
           ],
           "primary_category": "cs.AI"
-        },
-        {
-          "id": "2508.03132v1",
-          "title": "COFFEE: A Shadow-Resilient Real-Time Pose Estimator for Unknown Tumbling Asteroids using Sparse Neural Networks",
-          "authors": [
-            "Arion Zimmermann",
-            "Soon-Jo Chung",
-            "Fred Hadaegh"
-          ],
-          "abstract": "The accurate state estimation of unknown bodies in space is a critical challenge with applications ranging from the tracking of space debris to the shape estimation of small bodies. A necessary enabler to this capability is to find and track features on a continuous stream of images. Existing methods, such as SIFT, ORB and AKAZE, achieve real-time but inaccurate pose estimates, whereas modern deep learning methods yield higher quality features at the cost of more demanding computational resources which might not be available on space-qualified hardware. Additionally, both classical and data-driven methods are not robust to the highly opaque self-cast shadows on the object of interest. We show that, as the target body rotates, these shadows may lead to large biases in the resulting pose estimates. For these objects, a bias in the real-time pose estimation algorithm may mislead the spacecraft's state estimator and cause a mission failure, especially if the body undergoes a chaotic tumbling motion. We present COFFEE, the Celestial Occlusion Fast FEature Extractor, a real-time pose estimation framework for asteroids designed to leverage prior information on the sun phase angle given by sun-tracking sensors commonly available onboard spacecraft. By associating salient contours to their projected shadows, a sparse set of features are detected, invariant to the motion of the shadows. A Sparse Neural Network followed by an attention-based Graph Neural Network feature matching model are then jointly trained to provide a set of correspondences between successive frames. The resulting pose estimation pipeline is found to be bias-free, more accurate than classical pose estimation pipelines and an order of magnitude faster than other state-of-the-art deep learning pipelines on synthetic data as well as on renderings of the tumbling asteroid Apophis.",
-          "url": "https://arxiv.org/abs/2508.03132v1",
-          "pdf_url": "https://arxiv.org/pdf/2508.03132v1",
-          "published": "2025-08-05T06:27:14Z",
-          "updated": "2025-08-05T06:27:14Z",
-          "categories": [
-            "cs.CV",
-            "cs.RO"
-          ],
-          "primary_category": "cs.CV"
         }
       ]
     },
@@ -4457,7 +4459,7 @@
           "primary_category": "cs.RO"
         },
         {
-          "id": "2510.23571v2",
+          "id": "2510.23571v3",
           "title": "RobotArena $\\infty$: Scalable Robot Benchmarking via Real-to-Sim Translation",
           "authors": [
             "Yash Jangir",
@@ -4472,10 +4474,10 @@
             "Katerina Fragkiadaki"
           ],
           "abstract": "The pursuit of robot generalists, agents capable of performing diverse tasks across diverse environments, demands rigorous and scalable evaluation. Yet real-world testing of robot policies remains fundamentally constrained: it is labor-intensive, slow, unsafe at scale, and difficult to reproduce. As policies expand in scope and complexity, these barriers only intensify, since defining \"success\" in robotics often hinges on nuanced human judgments of execution quality. We introduce RobotArena Infinity, a new benchmarking framework that overcomes these challenges by shifting vision-language-action (VLA) evaluation into large-scale simulated environments augmented with online human feedback. Leveraging advances in vision-language models, 2D-to-3D generative modeling, and differentiable rendering, our approach automatically converts video demonstrations from widely used robot datasets into simulated counterparts. Within these digital twins, we assess VLA policies using both automated vision-language-model-guided scoring and scalable human preference judgments collected from crowdworkers, transforming human involvement from tedious scene setup, resetting, and safety supervision into lightweight preference comparisons. To measure robustness, we systematically perturb simulated environments along multiple axes, including textures and object placements, stress-testing policy generalization under controlled variation. The result is a continuously evolving, reproducible, and scalable benchmark for real-world-trained robot manipulation policies, addressing a critical missing capability in today's robotics landscape.",
-          "url": "https://arxiv.org/abs/2510.23571v2",
-          "pdf_url": "https://arxiv.org/pdf/2510.23571v2",
+          "url": "https://arxiv.org/abs/2510.23571v3",
+          "pdf_url": "https://arxiv.org/pdf/2510.23571v3",
           "published": "2025-10-27T17:41:38Z",
-          "updated": "2026-03-13T16:29:34Z",
+          "updated": "2026-03-20T00:27:12Z",
           "categories": [
             "cs.RO",
             "cs.AI",
@@ -4871,6 +4873,25 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2603.19424v1",
+          "title": "A Closed-Form CLF-CBF Controller for Whole-Body Continuum Soft Robot Collision Avoidance",
+          "authors": [
+            "Kiwan Wong",
+            "Maximillian St\u00f6lzle",
+            "Wei Xiao",
+            "Daniela Rus"
+          ],
+          "abstract": "Safe operation is essential for deploying robots in human-centered 3D environments. Soft continuum manipulators provide passive safety through mechanical compliance, but still require active control to achieve reliable collision avoidance. Existing approaches, such as sampling-based planning, are often computationally expensive and lack formal safety guarantees, which limits their use for real-time whole-body avoidance.   This paper presents a closed-form Control Lyapunov Function--Control Barrier Function (CLF--CBF) controller for real-time 3D obstacle avoidance in soft continuum manipulators without online optimization. By analytically embedding safety constraints into the control input, the proposed method ensures stability and safety under the stated modeling assumptions, while avoiding feasibility issues commonly encountered in online optimization-based methods. The resulting controller is up to $10\\times$ faster than standard CLF--CBF quadratic-programming approaches and up to $100\\times$ faster than traditional sampling-based planners.   Simulation and hardware experiments on a tendon-driven soft manipulator demonstrate accurate 3D trajectory tracking and robust obstacle avoidance in cluttered environments. These results show that the proposed framework provides a scalable and provably safe control strategy for soft robots operating in dynamic, safety-critical settings.",
+          "url": "https://arxiv.org/abs/2603.19424v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.19424v1",
+          "published": "2026-03-19T19:34:49Z",
+          "updated": "2026-03-19T19:34:49Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2603.10402v1",
           "title": "Shape Control of a Planar Hyper-Redundant Robot via Hybrid Kinematics-Informed and Learning-based Approach",
           "authors": [
@@ -4956,31 +4977,6 @@
             "cs.RO"
           ],
           "primary_category": "cs.RO"
-        },
-        {
-          "id": "2603.18016v1",
-          "title": "MineDraft: A Framework for Batch Parallel Speculative Decoding",
-          "authors": [
-            "Zhenwei Tang",
-            "Arun Verma",
-            "Zijian Zhou",
-            "Zhaoxuan Wu",
-            "Alok Prakash",
-            "Daniela Rus",
-            "Bryan Kian Hsiang Low"
-          ],
-          "abstract": "Speculative decoding (SD) accelerates large language model inference by using a smaller draft model to propose draft tokens that are subsequently verified by a larger target model. However, the performance of standard SD is often limited by the strictly sequential execution of these drafting and verification stages. To address this, this paper proposes MineDraft, a batch parallel speculative decoding (PSD) framework designed to effectively hide drafting latency by overlapping it with verification. Our theoretical analysis shows that PSD is substantially more efficient than standard SD. MineDraft realizes the PSD through a novel batch-parallel design that maintains two batches of requests, overlapping drafting for one batch with verification for the other. Our experimental results show significant improvements of MineDraft in both throughput (up to 75%) and end-to-end latency (up to 39%) over standard SD. Furthermore, we have implemented MineDraft as a plugin for vLLM, demonstrating its practicality for production-ready inference systems.",
-          "url": "https://arxiv.org/abs/2603.18016v1",
-          "pdf_url": "https://arxiv.org/pdf/2603.18016v1",
-          "published": "2026-02-24T17:24:50Z",
-          "updated": "2026-02-24T17:24:50Z",
-          "categories": [
-            "cs.CL",
-            "cs.AI",
-            "cs.DC",
-            "cs.LG"
-          ],
-          "primary_category": "cs.CL"
         }
       ]
     },
@@ -6626,7 +6622,7 @@
       "paper_count": 5,
       "papers": [
         {
-          "id": "2603.06450v1",
+          "id": "2603.06450v2",
           "title": "Data Analogies Enable Efficient Cross-Embodiment Transfer",
           "authors": [
             "Jonathan Yang",
@@ -6634,10 +6630,10 @@
             "Dorsa Sadigh"
           ],
           "abstract": "Generalist robot policies are trained on demonstrations collected across a wide variety of robots, scenes, and viewpoints. Yet it remains unclear how to best organize and scale such heterogeneous data so that it genuinely improves performance in a given target setting. In this work, we ask: what form of demonstration data is most useful for enabling transfer across robot set-ups? We conduct controlled experiments that vary end-effector morphology, robot platform appearance, and camera perspective, and compare the effects of simply scaling the number of demonstrations against systematically broadening the diversity in different ways. Our simulated experiments show that while perceptual shifts such as viewpoint benefit most from broad diversity, morphology shifts benefit far less from unstructured diversity and instead see the largest gains from data analogies, i.e. paired demonstrations that align scenes, tasks, and/or trajectories across different embodiments. Informed by the simulation results, we improve real-world cross-embodiment transfer success by an average of $22.5\\%$ over large-scale, unpaired datasets by changing only the composition of the data.",
-          "url": "https://arxiv.org/abs/2603.06450v1",
-          "pdf_url": "https://arxiv.org/pdf/2603.06450v1",
+          "url": "https://arxiv.org/abs/2603.06450v2",
+          "pdf_url": "https://arxiv.org/pdf/2603.06450v2",
           "published": "2026-03-06T16:42:46Z",
-          "updated": "2026-03-06T16:42:46Z",
+          "updated": "2026-03-20T15:09:45Z",
           "categories": [
             "cs.RO"
           ],
@@ -7001,6 +6997,31 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2603.19607v1",
+          "title": "Physion-Eval: Evaluating Physical Realism in Generated Video via Human Reasoning",
+          "authors": [
+            "Qin Zhang",
+            "Peiyu Jing",
+            "Hong-Xing Yu",
+            "Fangqiang Ding",
+            "Fan Nie",
+            "Weimin Wang",
+            "Yilun Du",
+            "James Zou",
+            "Jiajun Wu",
+            "Bing Shuai"
+          ],
+          "abstract": "Video generation models are increasingly used as world simulators for storytelling, simulation, and embodied AI. As these models advance, a key question arises: do generated videos obey the physical laws of the real world? Existing evaluations largely rely on automated metrics or coarse human judgments such as preferences or rubric-based checks. While useful for assessing perceptual quality, these methods provide limited insight into when and why generated dynamics violate real-world physical constraints. We introduce Physion-Eval, a large-scale benchmark of expert human reasoning for diagnosing physical realism failures in videos generated by five state-of-the-art models across egocentric and exocentric views, containing 10,990 expert reasoning traces spanning 22 fine-grained physical categories. Each generated video is derived from a corresponding real-world reference video depicting a clear physical process, and annotated with temporally localized glitches, structured failure categories, and natural-language explanations of the violated physical behavior. Using this dataset, we reveal a striking limitation of current video generation models: in physics-critical scenarios, 83.3% of exocentric and 93.5% of egocentric generated videos exhibit at least one human-identifiable physical glitch. We hope Physion-Eval will set a new standard for physical realism evaluation and guide the development of physics-grounded video generation. The benchmark is publicly available at https://huggingface.co/datasets/PhysionLabs/Physion-Eval.",
+          "url": "https://arxiv.org/abs/2603.19607v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.19607v1",
+          "published": "2026-03-20T03:25:41Z",
+          "updated": "2026-03-20T03:25:41Z",
+          "categories": [
+            "cs.CV"
+          ],
+          "primary_category": "cs.CV"
+        },
+        {
           "id": "2603.16790v1",
           "title": "InCoder-32B: Code Foundation Model for Industrial Scenarios",
           "authors": [
@@ -7142,31 +7163,6 @@
             "cs.GR"
           ],
           "primary_category": "cs.CV"
-        },
-        {
-          "id": "2602.21198v1",
-          "title": "Learning from Trials and Errors: Reflective Test-Time Planning for Embodied LLMs",
-          "authors": [
-            "Yining Hong",
-            "Huang Huang",
-            "Manling Li",
-            "Li Fei-Fei",
-            "Jiajun Wu",
-            "Yejin Choi"
-          ],
-          "abstract": "Embodied LLMs endow robots with high-level task reasoning, but they cannot reflect on what went wrong or why, turning deployment into a sequence of independent trials where mistakes repeat rather than accumulate into experience. Drawing upon human reflective practitioners, we introduce Reflective Test-Time Planning, which integrates two modes of reflection: \\textit{reflection-in-action}, where the agent uses test-time scaling to generate and score multiple candidate actions using internal reflections before execution; and \\textit{reflection-on-action}, which uses test-time training to update both its internal reflection model and its action policy based on external reflections after execution. We also include retrospective reflection, allowing the agent to re-evaluate earlier decisions and perform model updates with hindsight for proper long-horizon credit assignment. Experiments on our newly-designed Long-Horizon Household benchmark and MuJoCo Cupboard Fitting benchmark show significant gains over baseline models, with ablative studies validating the complementary roles of reflection-in-action and reflection-on-action. Qualitative analyses, including real-robot trials, highlight behavioral correction through reflection.",
-          "url": "https://arxiv.org/abs/2602.21198v1",
-          "pdf_url": "https://arxiv.org/pdf/2602.21198v1",
-          "published": "2026-02-24T18:55:18Z",
-          "updated": "2026-02-24T18:55:18Z",
-          "categories": [
-            "cs.LG",
-            "cs.AI",
-            "cs.CL",
-            "cs.CV",
-            "cs.RO"
-          ],
-          "primary_category": "cs.LG"
         }
       ]
     },
@@ -8050,6 +8046,24 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2603.19794v1",
+          "title": "Generalized Task-Driven Design of Soft Robots via Reduced-Order FEM-based Surrogate Modeling",
+          "authors": [
+            "Yao Yao",
+            "David Howard",
+            "Perla Maiolino"
+          ],
+          "abstract": "Task-driven design of soft robots requires models that are physically accurate and computationally efficient, while remaining transferable across actuator designs and task scenarios. However, existing modeling approaches typically face a fundamental trade-off between physical fidelity and computational efficiency, which limits model reuse across design and task variations and constrains scalable task-driven optimization. This paper presents a unified reduced-order finite element method (FEM)-based surrogate modeling pipeline for generalized task-driven soft robot design. High-fidelity FEM simulations characterize actuator behavior at the modular level, from which compact surrogate joint models are constructed for evaluation within a pseudo-rigid body model (PRBM). A meta-model maps actuator design parameters to surrogate representations, enabling rapid instantiation across a parameterized actuator family. The resulting models are embedded into a PRBM-based simulation environment, supporting task-level simulation and optimization under realistic physical constraints. The proposed pipeline is validated through sim-to-real transfer across multiple actuator types, including bellow-type pneumatic actuators and a tendon-driven soft finger, as well as two task-driven design studies: soft gripper co-design via Reinforcement Learning (RL) and 3D actuator shape matching via evolutionary optimization. The results demonstrate high accuracy, efficiency, and reliable reuse, providing a scalable foundation for autonomous task-driven soft robot design.",
+          "url": "https://arxiv.org/abs/2603.19794v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.19794v1",
+          "published": "2026-03-20T09:33:09Z",
+          "updated": "2026-03-20T09:33:09Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2602.07209v1",
           "title": "Continuum Robot Localization using Distributed Time-of-Flight Sensors",
           "authors": [
@@ -8130,26 +8144,6 @@
             "cs.RO"
           ],
           "primary_category": "cs.RO"
-        },
-        {
-          "id": "2506.22472v1",
-          "title": "Optical Waveguide-based Spider Web Enables Resilient Impact Detection and Localization",
-          "authors": [
-            "Dylan Wilson",
-            "Marco Pontin",
-            "Peter Walters",
-            "Perla Maiolino"
-          ],
-          "abstract": "Spiders use their webs as multifunctional tools that enable capturing and localizing prey and more general environmental sensing through vibrations. Inspired by their biological function, we present a spider web-inspired optical waveguide system for resilient impulse detection and localization. The structure consists of six clear thermoplastic polyurethane (TPU) waveguides arranged radially and interconnected by a spiral TPU thread, mimicking orb spider webs. Light transmission losses, induced by vibrations, are measured via coupled LEDs and photo-diodes, allowing real-time detection. We systematically characterize individual waveguides, analyzing key parameters such as tension, impulse position, and break angle to optimize vibrational response. The complete system is validated through controlled experiments, revealing a 5 ms propagation delay in vibration transfer between adjacent radii, enhancing localization capabilities. We demonstrate a robust impulse detection and localization algorithm leveraging time delay analysis, achieving reliable event identification even in cases of sensor failure. This study highlights the potential of bioinspired optical waveguide structures for adaptive sensing, with applications in soft robotics, structural monitoring, and environmental sensing.",
-          "url": "https://arxiv.org/abs/2506.22472v1",
-          "pdf_url": "https://arxiv.org/pdf/2506.22472v1",
-          "published": "2025-06-20T12:36:26Z",
-          "updated": "2025-06-20T12:36:26Z",
-          "categories": [
-            "eess.SP",
-            "cs.RO"
-          ],
-          "primary_category": "eess.SP"
         }
       ]
     },
