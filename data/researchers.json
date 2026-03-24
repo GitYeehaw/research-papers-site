@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-03-23T09:13:33.984667+00:00",
+  "scraped_at": "2026-03-24T09:11:51.008606+00:00",
   "researcher_count": 54,
   "researchers": [
     {
@@ -118,127 +118,8 @@
       "field": "Robotics, kinematics, manipulation, motion planning",
       "institution": "California Institute of Technology",
       "website": "https://www.me.caltech.edu/people/joel-burdick",
-      "paper_count": 5,
-      "papers": [
-        {
-          "id": "2603.18450v1",
-          "title": "Generalizations of Backup Control Barrier Functions: Expansion and Adaptation for Input-Bounded Safety-Critical Control",
-          "authors": [
-            "David E. J. van Wijk",
-            "Dohyun Lee",
-            "Ersin Das",
-            "Tamas G. Molnar",
-            "Aaron D. Ames",
-            "Joel W. Burdick"
-          ],
-          "abstract": "Guaranteeing the safety of nonlinear systems with bounded inputs remains a key challenge in safe autonomy. Backup control barrier functions (bCBFs) provide a powerful mechanism for constructing controlled invariant sets by propagating trajectories under a pre-verified backup controller to a forward invariant backup set. While effective, the standard bCBF method utilizes the same backup controller for both set expansion and safety certification, which can restrict the expanded safe set and lead to conservative dynamic behavior. In this study, we generalize the bCBF framework by separating the set-expanding controller from the verified backup controller, thereby enabling a broader class of expansion strategies while preserving formal safety guarantees. We establish sufficient conditions for forward invariance of the resulting implicit safe set and show how the generalized construction recovers existing bCBF methods as special cases. Moreover, we extend the proposed framework to parameterized controller families, enabling online adaptation of the expansion controller while maintaining safety guarantees in the presence of input bounds.",
-          "url": "https://arxiv.org/abs/2603.18450v1",
-          "pdf_url": "https://arxiv.org/pdf/2603.18450v1",
-          "published": "2026-03-19T03:24:23Z",
-          "updated": "2026-03-19T03:24:23Z",
-          "categories": [
-            "eess.SY"
-          ],
-          "primary_category": "eess.SY"
-        },
-        {
-          "id": "2512.10118v1",
-          "title": "Explicit Control Barrier Function-based Safety Filters and their Resource-Aware Computation",
-          "authors": [
-            "Pol Mestres",
-            "Shima Sadat Mousavi",
-            "Pio Ong",
-            "Lizhi Yang",
-            "Ersin Das",
-            "Joel W. Burdick",
-            "Aaron D. Ames"
-          ],
-          "abstract": "This paper studies the efficient implementation of safety filters that are designed using control barrier functions (CBFs), which minimally modify a nominal controller to render it safe with respect to a prescribed set of states. Although CBF-based safety filters are often implemented by solving a quadratic program (QP) in real time, the use of off-the-shelf solvers for such optimization problems poses a challenge in applications where control actions need to be computed efficiently at very high frequencies. In this paper, we introduce a closed-form expression for controllers obtained through CBF-based safety filters. This expression is obtained by partitioning the state-space into different regions, with a different closed-form solution in each region. We leverage this formula to introduce a resource-aware implementation of CBF-based safety filters that detects changes in the partition region and uses the closed-form expression between changes. We showcase the applicability of our approach in examples ranging from aerospace control to safe reinforcement learning.",
-          "url": "https://arxiv.org/abs/2512.10118v1",
-          "pdf_url": "https://arxiv.org/pdf/2512.10118v1",
-          "published": "2025-12-10T22:09:53Z",
-          "updated": "2025-12-10T22:09:53Z",
-          "categories": [
-            "eess.SY",
-            "math.OC"
-          ],
-          "primary_category": "eess.SY"
-        },
-        {
-          "id": "2512.03256v1",
-          "title": "KALIKO: Kalman-Implicit Koopman Operator Learning For Prediction of Nonlinear Dynamical Systems",
-          "authors": [
-            "Albert H. Li",
-            "Ivan Dario Jimenez Rodriguez",
-            "Joel W. Burdick",
-            "Yisong Yue",
-            "Aaron D. Ames"
-          ],
-          "abstract": "Long-horizon dynamical prediction is fundamental in robotics and control, underpinning canonical methods like model predictive control. Yet, many systems and disturbance phenomena are difficult to model due to effects like nonlinearity, chaos, and high-dimensionality. Koopman theory addresses this by modeling the linear evolution of embeddings of the state under an infinite-dimensional linear operator that can be approximated with a suitable finite basis of embedding functions, effectively trading model nonlinearity for representational complexity. However, explicitly computing a good choice of basis is nontrivial, and poor choices may cause inaccurate forecasts or overfitting. To address this, we present Kalman-Implicit Koopman Operator (KALIKO) Learning, a method that leverages the Kalman filter to implicitly learn embeddings corresponding to latent dynamics without requiring an explicit encoder. KALIKO produces interpretable representations consistent with both theory and prior works, yielding high-quality reconstructions and inducing a globally linear latent dynamics. Evaluated on wave data generated by a high-dimensional PDE, KALIKO surpasses several baselines in open-loop prediction and in a demanding closed-loop simulated control task: stabilizing an underactuated manipulator's payload by predicting and compensating for strong wave disturbances.",
-          "url": "https://arxiv.org/abs/2512.03256v1",
-          "pdf_url": "https://arxiv.org/pdf/2512.03256v1",
-          "published": "2025-12-02T21:58:55Z",
-          "updated": "2025-12-02T21:58:55Z",
-          "categories": [
-            "cs.RO"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2511.00814v2",
-          "title": "Real-Time Learning of Predictive Dynamic Obstacle Models for Robotic Motion Planning",
-          "authors": [
-            "Stella Kombo",
-            "Masih Haseli",
-            "Skylar X. Wei",
-            "Joel W. Burdick"
-          ],
-          "abstract": "Autonomous systems often must predict the motions of nearby agents from partial and noisy data. This paper asks and answers the question: \"can we learn, in real-time, a nonlinear predictive model of another agent's motions?\" Our online framework denoises and forecasts such dynamics using a modified sliding-window Hankel Dynamic Mode Decomposition (Hankel-DMD). Partial noisy measurements are embedded into a Hankel matrix, while an associated Page matrix enables singular-value hard thresholding (SVHT) to estimate the effective rank. A Cadzow projection enforces structured low-rank consistency, yielding a denoised trajectory and local noise variance estimates. From this representation, a time-varying Hankel-DMD lifted linear predictor is constructed for multi-step forecasts. The residual analysis provides variance-tracking signals that can support downstream estimators and risk-aware planning. We validate the approach in simulation under Gaussian and heavy-tailed noise, and experimentally on a dynamic crane testbed. Results show that the method achieves stable variance-aware denoising and short-horizon prediction suitable for integration into real-time control frameworks.",
-          "url": "https://arxiv.org/abs/2511.00814v2",
-          "pdf_url": "https://arxiv.org/pdf/2511.00814v2",
-          "published": "2025-11-02T05:54:30Z",
-          "updated": "2026-03-06T00:37:58Z",
-          "categories": [
-            "cs.RO",
-            "cs.LG",
-            "eess.SY"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2510.16953v2",
-          "title": "Safe Payload Transfer with Ship-Mounted Cranes: A Robust Model Predictive Control Approach",
-          "authors": [
-            "Ersin Das",
-            "William A. Welch",
-            "Patrick Spieler",
-            "Keenan Albee",
-            "Aurelio Noca",
-            "Jeffrey Edlund",
-            "Jonathan Becktor",
-            "Thomas Touma",
-            "Jessica Todd",
-            "Sriramya Bhamidipati",
-            "Stella Kombo",
-            "Maira Saboia",
-            "Anna Sabel",
-            "Grace Lim",
-            "Rohan Thakker",
-            "Amir Rahmani",
-            "Joel W. Burdick"
-          ],
-          "abstract": "Ensuring safe real-time control of ship-mounted cranes in unstructured transportation environments requires handling multiple safety constraints while maintaining effective payload transfer performance. Unlike traditional crane systems, ship-mounted cranes are consistently subjected to significant external disturbances affecting underactuated crane dynamics due to the ship's dynamic motion response to harsh sea conditions, which can lead to robustness issues. To tackle these challenges, we propose a robust and safe model predictive control (MPC) framework and demonstrate it on a 5-DOF crane system, where a Stewart platform simulates the external disturbances that ocean surface motions would have on the supporting ship. The crane payload transfer operation must avoid obstacles and accurately place the payload within a designated target area. We use a robust zero-order control barrier function (R-ZOCBF)-based safety constraint in the nonlinear MPC to ensure safe payload positioning, while time-varying bounding boxes are utilized for collision avoidance. We introduce a new optimization-based online robustness parameter adaptation scheme to reduce the conservativeness of R-ZOCBFs. Experimental trials on a crane prototype demonstrate the overall performance of our safe control approach under significant perturbing motions of the crane base. While our focus is on crane-facilitated transfer, the methods more generally apply to safe robotically-assisted parts mating and parts insertion.",
-          "url": "https://arxiv.org/abs/2510.16953v2",
-          "pdf_url": "https://arxiv.org/pdf/2510.16953v2",
-          "published": "2025-10-19T18:13:33Z",
-          "updated": "2026-03-03T18:26:25Z",
-          "categories": [
-            "eess.SY",
-            "cs.RO"
-          ],
-          "primary_category": "eess.SY"
-        }
-      ]
+      "paper_count": 0,
+      "papers": []
     },
     {
       "id": "chung_s",
@@ -246,106 +127,8 @@
       "field": "Autonomous systems, controls, aerial and space robotics",
       "institution": "California Institute of Technology",
       "website": "https://www.galcit.caltech.edu/people/professor-soon-jo-chung",
-      "paper_count": 5,
-      "papers": [
-        {
-          "id": "2603.19632v1",
-          "title": "ContractionPPO: Certified Reinforcement Learning via Differentiable Contraction Layers",
-          "authors": [
-            "Vrushabh Zinage",
-            "Narek Harutyunyan",
-            "Eric Verheyden",
-            "Fred Y. Hadaegh",
-            "Soon-Jo Chung"
-          ],
-          "abstract": "Legged locomotion in unstructured environments demands not only high-performance control policies but also formal guarantees to ensure robustness under perturbations. Control methods often require carefully designed reference trajectories, which are challenging to construct in high-dimensional, contact-rich systems such as quadruped robots. In contrast, Reinforcement Learning (RL) directly learns policies that implicitly generate motion, and uniquely benefits from access to privileged information, such as full state and dynamics during training, that is not available at deployment. We present ContractionPPO, a framework for certified robust planning and control of legged robots by augmenting Proximal Policy Optimization (PPO) RL with a state-dependent contraction metric layer. This approach enables the policy to maximize performance while simultaneously producing a contraction metric that certifies incremental exponential stability of the simulated closed-loop system. The metric is parameterized as a Lipschitz neural network and trained jointly with the policy, either in parallel or as an auxiliary head of the PPO backbone. While the contraction metric is not deployed during real-world execution, we derive upper bounds on the worst-case contraction rate and show that these bounds ensure the learned contraction metric generalizes from simulation to real-world deployment. Our hardware experiments on quadruped locomotion demonstrate that ContractionPPO enables robust, certifiably stable control even under strong external perturbations.",
-          "url": "https://arxiv.org/abs/2603.19632v1",
-          "pdf_url": "https://arxiv.org/pdf/2603.19632v1",
-          "published": "2026-03-20T04:32:18Z",
-          "updated": "2026-03-20T04:32:18Z",
-          "categories": [
-            "cs.RO",
-            "eess.SY"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2602.21366v2",
-          "title": "Environment-Aware Learning of Smooth GNSS Covariance Dynamics for Autonomous Racing",
-          "authors": [
-            "Y. Deemo Chen",
-            "Arion Zimmermann",
-            "Thomas A. Berrueta",
-            "Soon-Jo Chung"
-          ],
-          "abstract": "Ensuring accurate and stable state estimation is a challenging task crucial to safety-critical domains such as high-speed autonomous racing, where measurement uncertainty must be both adaptive to the environment and temporally smooth for control. In this work, we develop a learning-based framework, LACE, capable of directly modeling the temporal dynamics of GNSS measurement covariance. We model the covariance evolution as an exponentially stable dynamical system where a deep neural network (DNN) learns to predict the system's process noise from environmental features through an attention mechanism. By using contraction-based stability and systematically imposing spectral constraints, we formally provide guarantees of exponential stability and smoothness for the resulting covariance dynamics. We validate our approach on an AV-24 autonomous racecar, demonstrating improved localization performance and smoother covariance estimates in challenging, GNSS-degraded environments. Our results highlight the promise of dynamically modeling the perceived uncertainty in state estimation problems that are tightly coupled with control sensitivity.",
-          "url": "https://arxiv.org/abs/2602.21366v2",
-          "pdf_url": "https://arxiv.org/pdf/2602.21366v2",
-          "published": "2026-02-24T20:59:09Z",
-          "updated": "2026-03-05T07:02:04Z",
-          "categories": [
-            "cs.RO"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2509.18460v1",
-          "title": "A Counterfactual Reasoning Framework for Fault Diagnosis in Robot Perception Systems",
-          "authors": [
-            "Haeyoon Han",
-            "Mahdi Taheri",
-            "Soon-Jo Chung",
-            "Fred Y. Hadaegh"
-          ],
-          "abstract": "Perception systems provide a rich understanding of the environment for autonomous systems, shaping decisions in all downstream modules. Hence, accurate detection and isolation of faults in perception systems is important. Faults in perception systems pose particular challenges: faults are often tied to the perceptual context of the environment, and errors in their multi-stage pipelines can propagate across modules. To address this, we adopt a counterfactual reasoning approach to propose a framework for fault detection and isolation (FDI) in perception systems. As opposed to relying on physical redundancy (i.e., having extra sensors), our approach utilizes analytical redundancy with counterfactual reasoning to construct perception reliability tests as causal outcomes influenced by system states and fault scenarios. Counterfactual reasoning generates reliability test results under hypothesized faults to update the belief over fault hypotheses. We derive both passive and active FDI methods. While the passive FDI can be achieved by belief updates, the active FDI approach is defined as a causal bandit problem, where we utilize Monte Carlo Tree Search (MCTS) with upper confidence bound (UCB) to find control inputs that maximize a detection and isolation metric, designated as Effective Information (EI). The mentioned metric quantifies the informativeness of control inputs for FDI. We demonstrate the approach in a robot exploration scenario, where a space robot performing vision-based navigation actively adjusts its attitude to increase EI and correctly isolate faults caused by sensor damage, dynamic scenes, and perceptual degradation.",
-          "url": "https://arxiv.org/abs/2509.18460v1",
-          "pdf_url": "https://arxiv.org/pdf/2509.18460v1",
-          "published": "2025-09-22T22:29:33Z",
-          "updated": "2025-09-22T22:29:33Z",
-          "categories": [
-            "cs.RO",
-            "eess.SY"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2509.16837v2",
-          "title": "Closing the Loop Inside Neural Networks: Causality-Guided Layer Adaptation for Fault Recovery Control",
-          "authors": [
-            "Mahdi Taheri",
-            "Soon-Jo Chung",
-            "Fred Y. Hadaegh"
-          ],
-          "abstract": "This paper studies the problem of real-time fault recovery control for nonlinear control-affine systems subject to actuator loss of effectiveness faults and external disturbances. We derive a two-stage framework that combines causal inference with selective online adaptation to achieve an effective learning-based recovery control method. In the offline phase, we develop a causal layer attribution technique based on the average causal effect (ACE) to evaluate the relative importance of each layer in a pretrained deep neural network (DNN) controller compensating for faults. This methodology identifies a subset of high-impact layers responsible for robust fault compensation. In the online phase, we deploy a Lyapunov-based gradient update to adapt only the ACE-selected layer to circumvent the need for full-network or last-layer only updates. The proposed adaptive controller guarantees uniform ultimate boundedness (UUB) with exponential convergence of the closed-loop system in the presence of actuator faults and external disturbances. Compared to conventional adaptive DNN controllers with full-network adaptation, our methodology has a reduced computational overhead. To demonstrate the effectiveness of our proposed methodology, a case study is provided on a 3-axis attitude control system of a spacecraft with four reaction wheels.",
-          "url": "https://arxiv.org/abs/2509.16837v2",
-          "pdf_url": "https://arxiv.org/pdf/2509.16837v2",
-          "published": "2025-09-20T23:26:39Z",
-          "updated": "2025-12-20T07:53:42Z",
-          "categories": [
-            "eess.SY"
-          ],
-          "primary_category": "eess.SY"
-        },
-        {
-          "id": "2508.20140v1",
-          "title": "Array-Based Monte Carlo Tree Search",
-          "authors": [
-            "James Ragan",
-            "Fred Y. Hadaegh",
-            "Soon-Jo Chung"
-          ],
-          "abstract": "Monte Carlo Tree Search is a popular method for solving decision making problems. Faster implementations allow for more simulations within the same wall clock time, directly improving search performance. To this end, we present an alternative array-based implementation of the classic Upper Confidence bounds applied to Trees algorithm. Our method preserves the logic of the original algorithm, but eliminates the need for branch prediction, enabling faster performance on pipelined processors, and up to a factor of 2.8 times better scaling with search depth in our numerical simulations.",
-          "url": "https://arxiv.org/abs/2508.20140v1",
-          "pdf_url": "https://arxiv.org/pdf/2508.20140v1",
-          "published": "2025-08-27T04:49:32Z",
-          "updated": "2025-08-27T04:49:32Z",
-          "categories": [
-            "cs.AI",
-            "eess.SY"
-          ],
-          "primary_category": "cs.AI"
-        }
-      ]
+      "paper_count": 0,
+      "papers": []
     },
     {
       "id": "yue_y",
@@ -5702,6 +5485,29 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2603.22275v1",
+          "title": "Repurposing Geometric Foundation Models for Multi-view Diffusion",
+          "authors": [
+            "Wooseok Jang",
+            "Seonghu Jeon",
+            "Jisang Han",
+            "Jinhyeok Choi",
+            "Minkyung Kwon",
+            "Seungryong Kim",
+            "Saining Xie",
+            "Sainan Liu"
+          ],
+          "abstract": "While recent advances in generative latent spaces have driven substantial progress in single-image generation, the optimal latent space for novel view synthesis (NVS) remains largely unexplored. In particular, NVS requires geometrically consistent generation across viewpoints, but existing approaches typically operate in a view-independent VAE latent space. In this paper, we propose Geometric Latent Diffusion (GLD), a framework that repurposes the geometrically consistent feature space of geometric foundation models as the latent space for multi-view diffusion. We show that these features not only support high-fidelity RGB reconstruction but also encode strong cross-view geometric correspondences, providing a well-suited latent space for NVS. Our experiments demonstrate that GLD outperforms both VAE and RAE on 2D image quality and 3D consistency metrics, while accelerating training by more than 4.4x compared to the VAE latent space. Notably, GLD remains competitive with state-of-the-art methods that leverage large-scale text-to-image pretraining, despite training its diffusion model from scratch without such generative pretraining.",
+          "url": "https://arxiv.org/abs/2603.22275v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.22275v1",
+          "published": "2026-03-23T17:57:05Z",
+          "updated": "2026-03-23T17:57:05Z",
+          "categories": [
+            "cs.CV"
+          ],
+          "primary_category": "cs.CV"
+        },
+        {
           "id": "2603.03276v1",
           "title": "Beyond Language Modeling: An Exploration of Multimodal Pretraining",
           "authors": [
@@ -5805,29 +5611,6 @@
           "updated": "2026-01-22T18:58:16Z",
           "categories": [
             "cs.CV"
-          ],
-          "primary_category": "cs.CV"
-        },
-        {
-          "id": "2601.09881v1",
-          "title": "Transition Matching Distillation for Fast Video Generation",
-          "authors": [
-            "Weili Nie",
-            "Julius Berner",
-            "Nanye Ma",
-            "Chao Liu",
-            "Saining Xie",
-            "Arash Vahdat"
-          ],
-          "abstract": "Large video diffusion and flow models have achieved remarkable success in high-quality video generation, but their use in real-time interactive applications remains limited due to their inefficient multi-step sampling process. In this work, we present Transition Matching Distillation (TMD), a novel framework for distilling video diffusion models into efficient few-step generators. The central idea of TMD is to match the multi-step denoising trajectory of a diffusion model with a few-step probability transition process, where each transition is modeled as a lightweight conditional flow. To enable efficient distillation, we decompose the original diffusion backbone into two components: (1) a main backbone, comprising the majority of early layers, that extracts semantic representations at each outer transition step; and (2) a flow head, consisting of the last few layers, that leverages these representations to perform multiple inner flow updates. Given a pretrained video diffusion model, we first introduce a flow head to the model, and adapt it into a conditional flow map. We then apply distribution matching distillation to the student model with flow head rollout in each transition step. Extensive experiments on distilling Wan2.1 1.3B and 14B text-to-video models demonstrate that TMD provides a flexible and strong trade-off between generation speed and visual quality. In particular, TMD outperforms existing distilled models under comparable inference costs in terms of visual fidelity and prompt adherence. Project page: https://research.nvidia.com/labs/genair/tmd",
-          "url": "https://arxiv.org/abs/2601.09881v1",
-          "pdf_url": "https://arxiv.org/pdf/2601.09881v1",
-          "published": "2026-01-14T21:30:03Z",
-          "updated": "2026-01-14T21:30:03Z",
-          "categories": [
-            "cs.CV",
-            "cs.AI",
-            "cs.LG"
           ],
           "primary_category": "cs.CV"
         }
@@ -6753,6 +6536,29 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2603.21687v1",
+          "title": "Mirage The Illusion of Visual Understanding",
+          "authors": [
+            "Mohammad Asadi",
+            "Jack W. O'Sullivan",
+            "Fang Cao",
+            "Tahoura Nedaee",
+            "Kamyar Fardi",
+            "Fei-Fei Li",
+            "Ehsan Adeli",
+            "Euan Ashley"
+          ],
+          "abstract": "Multimodal AI systems have achieved remarkable performance across a broad range of real-world tasks, yet the mechanisms underlying visual-language reasoning remain surprisingly poorly understood. We report three findings that challenge prevailing assumptions about how these systems process and integrate visual information. First, Frontier models readily generate detailed image descriptions and elaborate reasoning traces, including pathology-biased clinical findings, for images never provided; we term this phenomenon mirage reasoning. Second, without any image input, models also attain strikingly high scores across general and medical multimodal benchmarks, bringing into question their utility and design. In the most extreme case, our model achieved the top rank on a standard chest X-ray question-answering benchmark without access to any images. Third, when models were explicitly instructed to guess answers without image access, rather than being implicitly prompted to assume images were present, performance declined markedly. Explicit guessing appears to engage a more conservative response regime, in contrast to the mirage regime in which models behave as though images have been provided. These findings expose fundamental vulnerabilities in how visual-language models reason and are evaluated, pointing to an urgent need for private benchmarks that eliminate textual cues enabling non-visual inference, particularly in medical contexts where miscalibrated AI carries the greatest consequence. We introduce B-Clean as a principled solution for fair, vision-grounded evaluation of multimodal AI systems.",
+          "url": "https://arxiv.org/abs/2603.21687v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.21687v1",
+          "published": "2026-03-23T08:18:09Z",
+          "updated": "2026-03-23T08:18:09Z",
+          "categories": [
+            "cs.AI"
+          ],
+          "primary_category": "cs.AI"
+        },
+        {
           "id": "2603.18246v1",
           "title": "Rapid Adaptation of Particle Dynamics for Generalized Deformable Object Mobile Manipulation",
           "authors": [
@@ -6848,31 +6654,6 @@
             "cs.LG"
           ],
           "primary_category": "cs.AI"
-        },
-        {
-          "id": "2601.06309v1",
-          "title": "VideoWeave: A Data-Centric Approach for Efficient Video Understanding",
-          "authors": [
-            "Zane Durante",
-            "Silky Singh",
-            "Arpandeep Khatua",
-            "Shobhit Agarwal",
-            "Reuben Tan",
-            "Yong Jae Lee",
-            "Jianfeng Gao",
-            "Ehsan Adeli",
-            "Li Fei-Fei"
-          ],
-          "abstract": "Training video-language models is often prohibitively expensive due to the high cost of processing long frame sequences and the limited availability of annotated long videos. We present VideoWeave, a simple yet effective approach to improve data efficiency by constructing synthetic long-context training samples that splice together short, captioned videos from existing datasets. Rather than modifying model architectures or optimization objectives, VideoWeave reorganizes available video-text pairs to expand temporal diversity within fixed compute. We systematically study how different data composition strategies like random versus visually clustered splicing and caption enrichment affect downstream performance on downstream video question answering. Under identical compute constraints, models trained with VideoWeave achieve higher accuracy than conventional video finetuning. Our results highlight that reorganizing training data, rather than altering architectures, may offer a simple and scalable path for training video-language models. We link our code for all experiments here.",
-          "url": "https://arxiv.org/abs/2601.06309v1",
-          "pdf_url": "https://arxiv.org/pdf/2601.06309v1",
-          "published": "2026-01-09T20:55:26Z",
-          "updated": "2026-01-09T20:55:26Z",
-          "categories": [
-            "cs.CV",
-            "cs.AI"
-          ],
-          "primary_category": "cs.CV"
         }
       ]
     },
@@ -9164,7 +8945,7 @@
           "primary_category": "cs.CV"
         },
         {
-          "id": "2603.16065v1",
+          "id": "2603.16065v2",
           "title": "Large Reward Models: Generalizable Online Robot Reward Generation with Vision-Language Models",
           "authors": [
             "Yanru Wu",
@@ -9175,10 +8956,10 @@
             "Yue Wang"
           ],
           "abstract": "Reinforcement Learning (RL) has shown great potential in refining robotic manipulation policies, yet its efficacy remains strongly bottlenecked by the difficulty of designing generalizable reward functions. In this paper, we propose a framework for online policy refinement by adapting foundation VLMs into online reward generators. We develop a robust, scalable reward model based on a state-of-the-art VLM, trained on a large-scale, multi-source dataset encompassing real-world robot trajectories, human-object interactions, and diverse simulated environments. Unlike prior approaches that evaluate entire trajectories post-hoc, our method leverages the VLM to formulate a multifaceted reward signal comprising process, completion, and temporal contrastive rewards based on current visual observations. Initializing with a base policy trained via Imitation Learning (IL), we employ these VLM rewards to guide the model to correct sub-optimal behaviors in a closed-loop manner. We evaluate our framework on challenging long-horizon manipulation benchmarks requiring sequential execution and precise control. Crucially, our reward model operates in a purely zero-shot manner within these test environments. Experimental results demonstrate that our method significantly improves the success rate of the initial IL policy within just 30 RL iterations, demonstrating remarkable sample efficiency. This empirical evidence highlights that VLM-generated signals can provide reliable feedback to resolve execution errors, effectively eliminating the need for manual reward engineering and facilitating efficient online refinement for robot learning.",
-          "url": "https://arxiv.org/abs/2603.16065v1",
-          "pdf_url": "https://arxiv.org/pdf/2603.16065v1",
+          "url": "https://arxiv.org/abs/2603.16065v2",
+          "pdf_url": "https://arxiv.org/pdf/2603.16065v2",
           "published": "2026-03-17T02:22:16Z",
-          "updated": "2026-03-17T02:22:16Z",
+          "updated": "2026-03-22T05:43:21Z",
           "categories": [
             "cs.RO",
             "cs.AI"

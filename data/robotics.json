@@ -2,219 +2,249 @@
   "category": "robotics",
   "name": "Robotics Research",
   "description": "Robotics \u2014 Motion Planning, Control Systems, Human-Robot Interaction, Autonomous Systems",
-  "scraped_at": "2026-03-23T09:08:44.147870+00:00",
+  "scraped_at": "2026-03-24T09:02:10.462653+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2603.20189v1",
-      "title": "MeanFlow Meets Control: Scaling Sampled-Data Control for Swarms",
+      "id": "2603.22281v1",
+      "title": "ThinkJEPA: Empowering Latent World Models with Large Vision-Language Reasoning Model",
       "authors": [
-        "Anqi Dong",
-        "Yongxin Chen",
-        "Karl H. Johansson",
-        "Johan Karlsson"
+        "Haichao Zhang",
+        "Yijiang Li",
+        "Shwai He",
+        "Tushar Nagarajan",
+        "Mingfei Chen",
+        "Jianglin Lu",
+        "Ang Li",
+        "Yun Fu"
       ],
-      "abstract": "Steering large-scale swarms in only a few control updates is challenging because real systems operate in sampled-data form: control inputs are updated intermittently and applied over finite intervals. In this regime, the natural object is not an instantaneous velocity field, but a finite-window control quantity that captures the system response over each sampling interval. Inspired by MeanFlow, we introduce a control-space learning framework for swarm steering under linear time-invariant dynamics. The learned object is the coefficient that parameterizes the finite-horizon minimum-energy control over each interval. We show that this coefficient admits both an integral representation and a local differential identity along bridge trajectories, which leads to a simple stop-gradient training objective. At implementation time, the learned coefficient is used directly in sampled-data updates, so the prescribed dynamics and actuation map are respected by construction. The resulting framework provides a scalable approach to few-step swarm steering that is consistent with the sampled-data structure of real control systems.",
-      "url": "https://arxiv.org/abs/2603.20189v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.20189v1",
-      "published": "2026-03-20T17:59:18Z",
-      "updated": "2026-03-20T17:59:18Z",
+      "abstract": "Recent progress in latent world models (e.g., V-JEPA2) has shown promising capability in forecasting future world states from video observations. Nevertheless, dense prediction from a short observation window limits temporal context and can bias predictors toward local, low-level extrapolation, making it difficult to capture long-horizon semantics and reducing downstream utility. Vision--language models (VLMs), in contrast, provide strong semantic grounding and general knowledge by reasoning over uniformly sampled frames, but they are not ideal as standalone dense predictors due to compute-driven sparse sampling, a language-output bottleneck that compresses fine-grained interaction states into text-oriented representations, and a data-regime mismatch when adapting to small action-conditioned datasets. We propose a VLM-guided JEPA-style latent world modeling framework that combines dense-frame dynamics modeling with long-horizon semantic guidance via a dual-temporal pathway: a dense JEPA branch for fine-grained motion and interaction cues, and a uniformly sampled VLM \\emph{thinker} branch with a larger temporal stride for knowledge-rich guidance. To transfer the VLM's progressive reasoning signals effectively, we introduce a hierarchical pyramid representation extraction module that aggregates multi-layer VLM representations into guidance features compatible with latent prediction. Experiments on hand-manipulation trajectory prediction show that our method outperforms both a strong VLM-only baseline and a JEPA-predictor baseline, and yields more robust long-horizon rollout behavior.",
+      "url": "https://arxiv.org/abs/2603.22281v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.22281v1",
+      "published": "2026-03-23T17:59:42Z",
+      "updated": "2026-03-23T17:59:42Z",
       "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL",
         "cs.LG",
-        "cs.MA",
-        "cs.RO",
-        "eess.SY"
+        "cs.RO"
       ],
-      "primary_category": "cs.LG"
+      "primary_category": "cs.CV"
     },
     {
-      "id": "2603.20182v1",
-      "title": "IndoorR2X: Indoor Robot-to-Everything Coordination with LLM-Driven Planning",
+      "id": "2603.22280v1",
+      "title": "DualCoT-VLA: Visual-Linguistic Chain of Thought via Parallel Reasoning for Vision-Language-Action Models",
       "authors": [
-        "Fan Yang",
-        "Soumya Teotia",
-        "Shaunak A. Mehta",
-        "Prajit KrisshnaKumar",
-        "Quanting Xie",
-        "Jun Liu",
-        "Yueqi Song",
-        "Li Wenkai",
-        "Atsunori Moteki",
-        "Kanji Uchino",
-        "Yonatan Bisk"
+        "Zhide Zhong",
+        "Junfeng Li",
+        "Junjie He",
+        "Haodong Yan",
+        "Xin Gong",
+        "Guanyi Zhao",
+        "Yingjie Cai",
+        "Jiantao Gao",
+        "Xu Yan",
+        "Bingbing Liu",
+        "Yingcong Chen",
+        "Liuqing Yang",
+        "Haoang Li"
       ],
-      "abstract": "Although robot-to-robot (R2R) communication improves indoor scene understanding beyond what a single robot can achieve, R2R alone cannot overcome partial observability without substantial exploration overhead or scaling team size. In contrast, many indoor environments already include low-cost Internet of Things (IoT) sensors (e.g., cameras) that provide persistent, building-wide context beyond onboard perception. We therefore introduce IndoorR2X, the first benchmark and simulation framework for Large Language Model (LLM)-driven multi-robot task planning with Robot-to-Everything (R2X) perception and communication in indoor environments. IndoorR2X integrates observations from mobile robots and static IoT devices to construct a global semantic state that supports scalable scene understanding, reduces redundant exploration, and enables high-level coordination through LLM-based planning. IndoorR2X provides configurable simulation environments, sensor layouts, robot teams, and task suites to systematically evaluate high-level semantic coordination strategies. Extensive experiments across diverse settings demonstrate that IoT-augmented world modeling improves multi-robot efficiency and reliability, and we highlight key insights and failure modes for advancing LLM-based collaboration between robot teams and indoor IoT sensors.",
-      "url": "https://arxiv.org/abs/2603.20182v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.20182v1",
-      "published": "2026-03-20T17:57:26Z",
-      "updated": "2026-03-20T17:57:26Z",
+      "abstract": "Vision-Language-Action (VLA) models map visual observations and language instructions directly to robotic actions. While effective for simple tasks, standard VLA models often struggle with complex, multi-step tasks requiring logical planning, as well as precise manipulations demanding fine-grained spatial perception. Recent efforts have incorporated Chain-of-Thought (CoT) reasoning to endow VLA models with a ``thinking before acting'' capability. However, current CoT-based VLA models face two critical limitations: 1) an inability to simultaneously capture low-level visual details and high-level logical planning due to their reliance on isolated, single-modal CoT; 2) high inference latency with compounding errors caused by step-by-step autoregressive decoding. To address these limitations, we propose DualCoT-VLA, a visual-linguistic CoT method for VLA models with a parallel reasoning mechanism. To achieve comprehensive multi-modal reasoning, our method integrates a visual CoT for low-level spatial understanding and a linguistic CoT for high-level task planning. Furthermore, to overcome the latency bottleneck, we introduce a parallel CoT mechanism that incorporates two sets of learnable query tokens, shifting autoregressive reasoning to single-step forward reasoning. Extensive experiments demonstrate that our DualCoT-VLA achieves state-of-the-art performance on the LIBERO and RoboCasa GR1 benchmarks, as well as in real-world platforms.",
+      "url": "https://arxiv.org/abs/2603.22280v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.22280v1",
+      "published": "2026-03-23T17:59:25Z",
+      "updated": "2026-03-23T17:59:25Z",
       "categories": [
-        "cs.RO",
-        "cs.MA"
+        "cs.CV",
+        "cs.RO"
       ],
-      "primary_category": "cs.RO"
+      "primary_category": "cs.CV"
     },
     {
-      "id": "2603.20164v1",
-      "title": "The Robot's Inner Critic: Self-Refinement of Social Behaviors through VLM-based Replanning",
+      "id": "2603.22264v1",
+      "title": "UniDex: A Robot Foundation Suite for Universal Dexterous Hand Control from Egocentric Human Videos",
       "authors": [
-        "Jiyu Lim",
-        "Youngwoo Yoon",
-        "Kwanghyun Park"
+        "Gu Zhang",
+        "Qicheng Xu",
+        "Haozhe Zhang",
+        "Jianhan Ma",
+        "Long He",
+        "Yiming Bao",
+        "Zeyu Ping",
+        "Zhecheng Yuan",
+        "Chenhao Lu",
+        "Chengbo Yuan",
+        "Tianhai Liang",
+        "Xiaoyu Tian",
+        "Maanping Shao",
+        "Feihong Zhang",
+        "Mingyu Ding",
+        "Yang Gao",
+        "Hao Zhao",
+        "Hang Zhao",
+        "Huazhe Xu"
       ],
-      "abstract": "Conventional robot social behavior generation has been limited in flexibility and autonomy, relying on predefined motions or human feedback. This study proposes CRISP (Critique-and-Replan for Interactive Social Presence), an autonomous framework where a robot critiques and replans its own actions by leveraging a Vision-Language Model (VLM) as a `human-like social critic.' CRISP integrates (1) extraction of movable joints and constraints by analyzing the robot's description file (e.g., MJCF), (2) generation of step-by-step behavior plans based on situational context, (3) generation of low-level joint control code by referencing visual information (joint range-of-motion visualizations), (4) VLM-based evaluation of social appropriateness and naturalness, including pinpointing erroneous steps, and (5) iterative refinement of behaviors through reward-based search. This approach is not tied to a specific robot API; it can generate subtly different, human-like motions on various platforms using only the robot's structure file. In a user study involving five different robot types and 20 scenarios, including mobile manipulators and humanoids, our proposed method achieved significantly higher preference and situational appropriateness ratings compared to previous methods. This research presents a general framework that minimizes human intervention while expanding the robot's autonomous interaction capabilities and cross-platform applicability.   Detailed result videos and supplementary information regarding this work are available at: https://limjiyu99.github.io/inner-critic/",
-      "url": "https://arxiv.org/abs/2603.20164v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.20164v1",
-      "published": "2026-03-20T17:40:21Z",
-      "updated": "2026-03-20T17:40:21Z",
-      "categories": [
-        "cs.RO",
-        "cs.AI"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2603.20152v1",
-      "title": "Robust Linear Quadratic Optimal Control of Cementitious Material Extrusion",
-      "authors": [
-        "Mandana Mohammadi Looey",
-        "Amrita Basak",
-        "Satadru Dey"
-      ],
-      "abstract": "Extrusion-based 3D printing of cementitious materials enables fabrication of complex structures, however it is highly sensitive to disturbances, material property variations, and process uncertainties that decrease flow stability and dimensional fidelity. To address these challenges, this study proposes a robust linear quadratic optimal control framework for regulating material extrusion in cementitious direct ink writing systems. The printer is modeled using two coupled subsystems: an actuation system representing nozzle flow dynamics and a printing system describing the printed strand flow on the build plate. A hybrid control architecture combining sliding mode control for disturbance rejection with linear quadratic optimal feedback for energy-efficient tracking is developed to ensure robustness and optimality. In simulation case studies, the control architecture guarantees acceptable convergence of nozzle and strand flow tracking errors under bounded disturbances.",
-      "url": "https://arxiv.org/abs/2603.20152v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.20152v1",
-      "published": "2026-03-20T17:28:08Z",
-      "updated": "2026-03-20T17:28:08Z",
-      "categories": [
-        "eess.SY"
-      ],
-      "primary_category": "eess.SY"
-    },
-    {
-      "id": "2603.20151v1",
-      "title": "Design-OS: A Specification-Driven Framework for Engineering System Design with a Control-Systems Design Case",
-      "authors": [
-        "H. Sinan Bank",
-        "Daniel R. Herber",
-        "Thomas H. Bradley"
-      ],
-      "abstract": "Engineering system design -- whether mechatronic, control, or embedded -- often proceeds in an ad hoc manner, with requirements left implicit and traceability from intent to parameters largely absent. Existing specification-driven and systematic design methods mostly target software, and AI-assisted tools tend to enter the workflow at solution generation rather than at problem framing. Human--AI collaboration in the design of physical systems remains underexplored. This paper presents Design-OS, a lightweight, specification-driven workflow for engineering system design organized in five stages: concept definition, literature survey, conceptual design, requirements definition, and design definition. Specifications serve as the shared contract between human designers and AI agents; each stage produces structured artifacts that maintain traceability and support agent-augmented execution. We position Design-OS relative to requirements-driven design, systematic design frameworks, and AI-assisted design pipelines, and demonstrate it on a control systems design case using two rotary inverted pendulum platforms -- an open-source SimpleFOC reaction wheel and a commercial Quanser Furuta pendulum -- showing how the same specification-driven workflow accommodates fundamentally different implementations. A blank template and the full design-case artifacts are shared in a public repository to support reproducibility and reuse. The workflow makes the design process visible and auditable, and extends specification-driven orchestration of AI from software to physical engineering system design.",
-      "url": "https://arxiv.org/abs/2603.20151v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.20151v1",
-      "published": "2026-03-20T17:26:44Z",
-      "updated": "2026-03-20T17:26:44Z",
-      "categories": [
-        "cs.CE",
-        "cs.AI",
-        "eess.SY"
-      ],
-      "primary_category": "cs.CE"
-    },
-    {
-      "id": "2603.20150v1",
-      "title": "HortiMulti: A Multi-Sensor Dataset for Localisation and Mapping in Horticultural Polytunnels",
-      "authors": [
-        "Shuoyuan Xu",
-        "Zhipeng Zhong",
-        "Tiago Barros",
-        "Matthew Coombes",
-        "Cristiano Premebida",
-        "Hao Wu",
-        "Cunjia Liu"
-      ],
-      "abstract": "Agricultural robotics is gaining increasing relevance in both research and real-world deployment. As these systems are expected to operate autonomously in more complex tasks, the availability of representative real-world datasets becomes essential. While domains such as urban and forestry robotics benefit from large and established benchmarks, horticultural environments remain comparatively under-explored despite the economic significance of this sector. To address this gap, we present HortiMulti, a multimodal, cross-season dataset collected in commercial strawberry and raspberry polytunnels across an entire growing season, capturing substantial appearance variation, dynamic foliage, specular reflections from plastic covers, severe perceptual aliasing, and GNSS-unreliable conditions, all of which directly degrade existing localisation and perception algorithms. The sensor suite includes two 3D LiDARs, four RGB cameras, an IMU, GNSS, and wheel odometry. Ground truth trajectories are derived from a combination of Total Station surveying, AprilTag fiducial markers, and LiDAR-inertial odometry, spanning dense, sparse, and marker-free coverage to support evaluation under both controlled and realistic conditions. We release time-synchronised raw measurements, calibration files, reference trajectories, and baseline benchmarks for visual, LiDAR, and multi-sensor SLAM, with results confirming that current state-of-the-art methods remain inadequate for reliable polytunnel deployment, establishing HortiMulti as a one-stop resource for developing and testing robotic perception systems in horticulture environments.",
-      "url": "https://arxiv.org/abs/2603.20150v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.20150v1",
-      "published": "2026-03-20T17:26:19Z",
-      "updated": "2026-03-20T17:26:19Z",
+      "abstract": "Dexterous manipulation remains challenging due to the cost of collecting real-robot teleoperation data, the heterogeneity of hand embodiments, and the high dimensionality of control. We present UniDex, a robot foundation suite that couples a large-scale robot-centric dataset with a unified vision-language-action (VLA) policy and a practical human-data capture setup for universal dexterous hand control. First, we construct UniDex-Dataset, a robot-centric dataset over 50K trajectories across eight dexterous hands (6--24 DoFs), derived from egocentric human video datasets. To transform human data into robot-executable trajectories, we employ a human-in-the-loop retargeting procedure to align fingertip trajectories while preserving plausible hand-object contacts, and we operate on explicit 3D pointclouds with human hands masked to narrow kinematic and visual gaps. Second, we introduce the Function-Actuator-Aligned Space (FAAS), a unified action space that maps functionally similar actuators to shared coordinates, enabling cross-hand transfer. Leveraging FAAS as the action parameterization, we train UniDex-VLA, a 3D VLA policy pretrained on UniDex-Dataset and finetuned with task demonstrations. In addition, we build UniDex-Cap, a simple portable capture setup that records synchronized RGB-D streams and human hand poses and converts them into robot-executable trajectories to enable human-robot data co-training that reduces reliance on costly robot demonstrations. On challenging tool-use tasks across two different hands, UniDex-VLA achieves 81% average task progress and outperforms prior VLA baselines by a large margin, while exhibiting strong spatial, object, and zero-shot cross-hand generalization. Together, UniDex-Dataset, UniDex-VLA, and UniDex-Cap provide a scalable foundation suite for universal dexterous manipulation.",
+      "url": "https://arxiv.org/abs/2603.22264v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.22264v1",
+      "published": "2026-03-23T17:49:12Z",
+      "updated": "2026-03-23T17:49:12Z",
       "categories": [
         "cs.RO"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2603.20147v1",
-      "title": "AGILE: A Comprehensive Workflow for Humanoid Loco-Manipulation Learning",
+      "id": "2603.22263v1",
+      "title": "DexDrummer: In-Hand, Contact-Rich, and Long-Horizon Dexterous Robot Drumming",
       "authors": [
-        "Huihua Zhao",
-        "Rafael Cathomen",
-        "Lionel Gulich",
-        "Wei Liu",
-        "Efe Arda Ongan",
-        "Michael Lin",
-        "Shalin Jain",
-        "Soha Pouya",
-        "Yan Chang"
+        "Hung-Chieh Fang",
+        "Amber Xie",
+        "Jennifer Grannen",
+        "Kenneth Llontop",
+        "Dorsa Sadigh"
       ],
-      "abstract": "Recent advances in reinforcement learning (RL) have enabled impressive humanoid behaviors in simulation, yet transferring these results to new robots remains challenging. In many real deployments, the primary bottleneck is no longer simulation throughput or algorithm design, but the absence of systematic infrastructure that links environment verification, training, evaluation, and deployment in a coherent loop.   To address this gap, we present AGILE, an end-to-end workflow for humanoid RL that standardizes the policy-development lifecycle to mitigate common sim-to-real failure modes. AGILE comprises four stages: (1) interactive environment verification, (2) reproducible training, (3) unified evaluation, and (4) descriptor-driven deployment via robot/task configuration descriptors. For evaluation stage, AGILE supports both scenario-based tests and randomized rollouts under a shared suite of motion-quality diagnostics, enabling automated regression testing and principled robustness assessment. AGILE also incorporates a set of training stabilizations and algorithmic enhancements in training stage to improve optimization stability and sim-to-real transfer.   With this pipeline in place, we validate AGILE across five representative humanoid skills spanning locomotion, recovery, motion imitation, and loco-manipulation on two hardware platforms (Unitree G1 and Booster T1), achieving consistent sim-to-real transfer. Overall, AGILE shows that a standardized, end-to-end workflow can substantially improve the reliability and reproducibility of humanoid RL development.",
-      "url": "https://arxiv.org/abs/2603.20147v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.20147v1",
-      "published": "2026-03-20T17:21:19Z",
-      "updated": "2026-03-20T17:21:19Z",
+      "abstract": "Performing in-hand, contact-rich, and long-horizon dexterous manipulation remains an unsolved challenge in robotics. Prior hand dexterity works have considered each of these three challenges in isolation, yet do not combine these skills into a single, complex task. To further test the capabilities of dexterity, we propose drumming as a testbed for dexterous manipulation. Drumming naturally integrates all three challenges: it involves in-hand control for stabilizing and adjusting the drumstick with the fingers, contact-rich interaction through repeated striking of the drum surface, and long-horizon coordination when switching between drums and sustaining rhythmic play. We present DexDrummer, a hierarchical object-centric bimanual drumming policy trained in simulation with sim-to-real transfer. The framework reduces the exploration difficulty of pure reinforcement learning by combining trajectory planning with residual RL corrections for fast transitions between drums. A dexterous manipulation policy handles contact-rich dynamics, guided by rewards that explicitly model both finger-stick and stick-drum interactions. In simulation, we show our policy can play two styles of music: multi-drum, bimanual songs and challenging, technical exercises that require increased dexterity. Across simulated bimanual tasks, our dexterous, reactive policy outperforms a fixed grasp policy by 1.87x across easy songs and 1.22x across hard songs F1 scores. In real-world tasks, we show song performance across a multi-drum setup. DexDrummer is able to play our training song and its extended version with an F1 score of 1.0.",
+      "url": "https://arxiv.org/abs/2603.22263v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.22263v1",
+      "published": "2026-03-23T17:49:06Z",
+      "updated": "2026-03-23T17:49:06Z",
       "categories": [
         "cs.RO"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2603.20146v1",
-      "title": "A Controller Synthesis Framework for Weakly-Hard Control Systems",
+      "id": "2603.22222v1",
+      "title": "A Portfolio-Level Optimization Framework for Coordinated Market Participation and Operational Scheduling of Hydrogen-Centric Companies",
       "authors": [
-        "Marc Seidel",
-        "Martina Maggio",
-        "Frank Allg\u00f6wer"
+        "Seyed Amir Mansouri",
+        "Kenneth Bruninx"
       ],
-      "abstract": "Deadline misses are more common in real-world systems than one may expect. The weakly-hard task model has become a standard abstraction to describe and analyze how often these misses occur, and has been especially used in control applications. Most existing control approaches check whether a controller manages to stabilize the system it controls when its implementation occasionally misses deadlines. However, they usually do not incorporate deadline-overrun knowledge during the controller synthesis process. In this paper, we present a framework that explicitly integrates weakly-hard constraints into the control design. Our method supports various overrun handling strategies and guarantees stability and performance under weakly-hard constraints. We validate the synthesized controllers on a Furuta pendulum, a representative control benchmark. The results show that constraint-aware controllers significantly outperform traditional designs, demonstrating the benefits of proactive and informed synthesis for overrun-aware real-time control.",
-      "url": "https://arxiv.org/abs/2603.20146v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.20146v1",
-      "published": "2026-03-20T17:21:00Z",
-      "updated": "2026-03-20T17:21:00Z",
+      "abstract": "The vision of electrolytic hydrogen as a clean energy vector prompts the emergence of hydrogen-centric companies that must simultaneously engage in electricity, hydrogen, and green certificate markets while operating complex, geographically distributed asset portfolios. This paper proposes a portfolio-level optimization framework tailored for the integrated operational scheduling and market participation of such companies. The model co-optimizes asset scheduling and market decisions across multiple sites, incorporating spatial distribution, technical constraints, and company-level policy requirements. It supports participation in the electricity market, physical and virtual Power Purchase Agreements (PPAs), bundled and unbundled hydrogen markets, and green certificate transactions. The model is applied to three operational scenarios to evaluate the economic and operational impacts of different compliance strategies. Results show that centralized, portfolio-level control unlocks the full flexibility of geographically distributed assets, enabling a 2.42-fold increase in hydrogen production and a 9.4% reduction in daily operational costs, while satisfying all company policy constraints.",
+      "url": "https://arxiv.org/abs/2603.22222v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.22222v1",
+      "published": "2026-03-23T17:18:17Z",
+      "updated": "2026-03-23T17:18:17Z",
       "categories": [
         "eess.SY"
       ],
       "primary_category": "eess.SY"
     },
     {
-      "id": "2603.20144v1",
-      "title": "Distributed State Estimation for Discrete-time LTI Systems: the Design Trilemma and a Novel Framework",
+      "id": "2603.22210v1",
+      "title": "Route-Phasing-Split-Encoded Genetic Algorithm for Multi-Satellite On-Orbit Servicing Mission Planning",
       "authors": [
-        "Ruixuan Zhao",
-        "Guitao Yang",
-        "James Fleming",
-        "Boli Chen"
+        "Shridhar Velhal",
+        "Avijit Banerjee",
+        "George Nikolakopoulos"
       ],
-      "abstract": "With the advancement of IoT technologies and the rapid expansion of cyber-physical systems, there is increasing interest in distributed state estimation, where multiple sensors collaboratively monitor large-scale dynamic systems. Compared with its continuous-time counterpart, a discrete-time distributed observer faces greater challenges, as it cannot exploit high-gain mechanisms or instantaneous communication. Existing approaches depend on three tightly coupled factors: (i) system observability, (ii) communication frequency and dimension of the exchanged information, and (iii) network connectivity. However, the interdependence among these factors remains underexplored. This paper identifies a fundamental trilemma among these factors and introduces a general design framework that balances them through an iterative semidefinite programming approach. As such, the proposed method mitigates the restrictive assumptions present in existing works. The effectiveness and generality of the proposed approach are demonstrated through a simulation example.",
-      "url": "https://arxiv.org/abs/2603.20144v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.20144v1",
-      "published": "2026-03-20T17:19:01Z",
-      "updated": "2026-03-20T17:19:01Z",
+      "abstract": "This article addresses multi-servicer on-orbit servicing mission planning in geosynchronous Earth orbit, where routing decisions are tightly coupled with time-dependent orbital phasing and strict propellant and mission-duration constraints. We propose a Route-Phasing-Split Genetic Algorithm (RPS-GA) that simultaneously optimizes target sequencing, discrete phasing rotation decisions (i.e., the number of phasing revolutions/waiting cycles), and route partitioning across multiple servicing spacecrafts (SSCs). An RPS triplet chromosome encodes route order, phasing rotations, and route splits in a unified structure, enabling split-aware recombination without disrupting feasible multi-servicer route blocks. Feasibility is enforced through a constraint-aware fitness function that ranks feasible solutions based on total $\u0394V$, while penalizing propellant and mission duration violations, using aggregate and imbalance penalties. This formulation discourages the concentration of violations on a single servicing spacecraft (SSC). Once a feasible best solution is identified, it is preserved as feasible in subsequent generations, thereby enhancing convergence stability. The framework incorporates split-aware crossover, mutation and a regret-based Large Neighborhood Search for local intensification. Experiments on representative GEO servicing scenarios demonstrate that RPS-GA produces feasible multi-servicer plans with substantially improved fuel efficiency, reducing total $\u0394V$ by $24.5\\%$, (from $1956.36 \\ m/s$ to $ 1476.32\\ m/s $) compared with a state-of-the-art LNS-AGA baseline.",
+      "url": "https://arxiv.org/abs/2603.22210v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.22210v1",
+      "published": "2026-03-23T17:08:19Z",
+      "updated": "2026-03-23T17:08:19Z",
       "categories": [
         "eess.SY"
       ],
       "primary_category": "eess.SY"
     },
     {
-      "id": "2603.20131v1",
-      "title": "An Agentic Multi-Agent Architecture for Cybersecurity Risk Management",
+      "id": "2603.22201v1",
+      "title": "Make Tracking Easy: Neural Motion Retargeting for Humanoid Whole-body Control",
       "authors": [
-        "Ravish Gupta",
-        "Saket Kumar",
-        "Shreeya Sharma",
-        "Maulik Dang",
-        "Abhishek Aggarwal"
+        "Qingrui Zhao",
+        "Kaiyue Yang",
+        "Xiyu Wang",
+        "Shiqi Zhao",
+        "Yi Lu",
+        "Xinfang Zhang",
+        "Wei Yin",
+        "Qiu Shen",
+        "Xiao-Xiao Long",
+        "Xun Cao"
       ],
-      "abstract": "Getting a real cybersecurity risk assessment for a small organization is expensive -- a NIST CSF-aligned engagement runs $15,000 on the low end, takes weeks, and depends on practitioners who are genuinely scarce. Most small companies skip it entirely. We built a six-agent AI system where each agent handles one analytical stage: profiling the organization, mapping assets, analyzing threats, evaluating controls, scoring risks, and generating recommendations. Agents share a persistent context that grows as the assessment proceeds, so later agents build on what earlier ones concluded -- the mechanism that distinguishes this from standard sequential agent pipelines. We tested it on a 15-person HIPAA-covered healthcare company and compared outputs to independent assessments by three CISSP practitioners -- the system agreed with them 85% of the time on severity classifications, covered 92% of identified risks, and finished in under 15 minutes. We then ran 30 repeated single-agent assessments across five synthetic but sector-realistic organizational profiles in healthcare, fintech, manufacturing, retail, and SaaS, comparing a general-purpose Mistral-7B against a domain fine-tuned model. Both completed every run. The fine-tuned model flagged threats the baseline could not see at all: PHI exposure in healthcare, OT/IIoT vulnerabilities in manufacturing, platform-specific risks in retail. The full multi-agent pipeline, however, failed every one of 30 attempts on a Tesla T4 with its 4,096-token default context window -- context capacity, not model quality, turned out to be the binding constraint.",
-      "url": "https://arxiv.org/abs/2603.20131v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.20131v1",
-      "published": "2026-03-20T17:00:05Z",
-      "updated": "2026-03-20T17:00:05Z",
+      "abstract": "Humanoid robots require diverse motor skills to integrate into complex environments, but bridging the kinematic and dynamic embodiment gap from human data remains a major bottleneck. We demonstrate through Hessian analysis that traditional optimization-based retargeting is inherently non-convex and prone to local optima, leading to physical artifacts like joint jumps and self-penetration. To address this, we reformulate the targeting problem as learning data distribution rather than optimizing optimal solutions, where we propose NMR, a Neural Motion Retargeting framework that transforms static geometric mapping into a dynamics-aware learned process. We first propose Clustered-Expert Physics Refinement (CEPR), a hierarchical data pipeline that leverages VAE-based motion clustering to group heterogeneous movements into latent motifs. This strategy significantly reduces the computational overhead of massively parallel reinforcement learning experts, which project and repair noisy human demonstrations onto the robot's feasible motion manifold. The resulting high-fidelity data supervises a non-autoregressive CNN-Transformer architecture that reasons over global temporal context to suppress reconstruction noise and bypass geometric traps. Experiments on the Unitree G1 humanoid across diverse dynamic tasks (e.g., martial arts, dancing) show that NMR eliminates joint jumps and significantly reduces self-collisions compared to state-of-the-art baselines. Furthermore, NMR-generated references accelerate the convergence of downstream whole-body control policies, establishing a scalable path for bridging the human-robot embodiment gap.",
+      "url": "https://arxiv.org/abs/2603.22201v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.22201v1",
+      "published": "2026-03-23T16:59:00Z",
+      "updated": "2026-03-23T16:59:00Z",
       "categories": [
-        "eess.SY",
-        "cs.AI",
-        "cs.CR"
+        "cs.RO"
       ],
-      "primary_category": "eess.SY"
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2603.22182v1",
+      "title": "Cross-Modal Reinforcement Learning for Navigation with Degraded Depth Measurements",
+      "authors": [
+        "Omkar Sawant",
+        "Luca Zanatta",
+        "Grzegorz Malczyk",
+        "Kostas Alexis"
+      ],
+      "abstract": "This paper presents a cross-modal learning framework that exploits complementary information from depth and grayscale images for robust navigation. We introduce a Cross-Modal Wasserstein Autoencoder that learns shared latent representations by enforcing cross-modal consistency, enabling the system to infer depth-relevant features from grayscale observations when depth measurements are corrupted. The learned representations are integrated with a Reinforcement Learning-based policy for collision-free navigation in unstructured environments when depth sensors experience degradation due to adverse conditions such as poor lighting or reflective surfaces. Simulation and real-world experiments demonstrate that our approach maintains robust performance under significant depth degradation and successfully transfers to real environments.",
+      "url": "https://arxiv.org/abs/2603.22182v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.22182v1",
+      "published": "2026-03-23T16:45:03Z",
+      "updated": "2026-03-23T16:45:03Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2603.22174v1",
+      "title": "Feasibility of Augmented Reality-Guided Robotic Ultrasound with Cone-Beam CT Integration for Spine Procedures",
+      "authors": [
+        "Tianyu Song",
+        "Felix Pabst",
+        "Feng Li",
+        "Yordanka Velikova",
+        "Miruna-Alexandra Gafencu",
+        "Yuan Bi",
+        "Ulrich Eck",
+        "Nassir Navab"
+      ],
+      "abstract": "Accurate needle placement in spine interventions is critical for effective pain management, yet it depends on reliable identification of anatomical landmarks and careful trajectory planning. Conventional imaging guidance often relies both on CT and X-ray fluoroscopy, exposing patients and staff to high dose of radiation while providing limited real-time 3D feedback. We present an optical see-through augmented reality (OST-AR)-guided robotic system for spine procedures that provides in situ visualization of spinal structures to support needle trajectory planning. We integrate a cone-beam CT (CBCT)-derived 3D spine model which is co-registered with live ultrasound, enabling users to combine global anatomical context with local, real-time imaging. We evaluated the system in a phantom user study involving two representative spine procedures: facet joint injection and lumbar puncture. Sixteen participants performed insertions under two visualization conditions: conventional screen vs. AR. Results show that AR significantly reduces execution time and across-task placement error, while also improving usability, trust, and spatial understanding and lowering cognitive workload. These findings demonstrate the feasibility of AR-guided robotic ultrasound for spine interventions, highlighting its potential to enhance accuracy, efficiency, and user experience in image-guided procedures.",
+      "url": "https://arxiv.org/abs/2603.22174v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.22174v1",
+      "published": "2026-03-23T16:35:17Z",
+      "updated": "2026-03-23T16:35:17Z",
+      "categories": [
+        "cs.HC",
+        "cs.RO"
+      ],
+      "primary_category": "cs.HC"
+    },
+    {
+      "id": "2603.22169v1",
+      "title": "Closed-Loop Verbal Reinforcement Learning for Task-Level Robotic Planning",
+      "authors": [
+        "Dmitrii Plotnikov",
+        "Iaroslav Kolomiets",
+        "Dmitrii Maliukov",
+        "Dmitrij Kosenkov",
+        "Daniia Zinniatullina",
+        "Artem Trandofilov",
+        "Georgii Gazaryan",
+        "Kirill Bogatikov",
+        "Timofei Kozlov",
+        "Igor Duchinskii",
+        "Mikhail Konenkov",
+        "Miguel Altamirano Cabrera",
+        "Dzmitry Tsetserukou"
+      ],
+      "abstract": "We propose a new Verbal Reinforcement Learning (VRL) framework for interpretable task-level planning in mobile robotic systems operating under execution uncertainty. The framework follows a closed-loop architecture that enables iterative policy improvement through interaction with the physical environment. In our framework, executable Behavior Trees are repeatedly refined by a Large Language Model actor using structured natural-language feedback produced by a Vision-Language Model critic that observes the physical robot and execution traces. Unlike conventional reinforcement learning, policy updates in VRL occur directly at the symbolic planning level, without gradient-based optimization. This enables transparent reasoning, explicit causal feedback, and human-interpretable policy evolution. We validate the proposed framework on a real mobile robot performing a multi-stage manipulation and navigation task under execution uncertainty. Experimental results show that the framework supports explainable policy improvements, closed-loop adaptation to execution failures, and reliable deployment on physical robotic systems.",
+      "url": "https://arxiv.org/abs/2603.22169v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.22169v1",
+      "published": "2026-03-23T16:28:36Z",
+      "updated": "2026-03-23T16:28:36Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
     }
   ]
 }
