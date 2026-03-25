@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-03-24T09:11:51.008606+00:00",
+  "scraped_at": "2026-03-25T09:06:18.130154+00:00",
   "researcher_count": 54,
   "researchers": [
     {
@@ -118,8 +118,127 @@
       "field": "Robotics, kinematics, manipulation, motion planning",
       "institution": "California Institute of Technology",
       "website": "https://www.me.caltech.edu/people/joel-burdick",
-      "paper_count": 0,
-      "papers": []
+      "paper_count": 5,
+      "papers": [
+        {
+          "id": "2603.18450v1",
+          "title": "Generalizations of Backup Control Barrier Functions: Expansion and Adaptation for Input-Bounded Safety-Critical Control",
+          "authors": [
+            "David E. J. van Wijk",
+            "Dohyun Lee",
+            "Ersin Das",
+            "Tamas G. Molnar",
+            "Aaron D. Ames",
+            "Joel W. Burdick"
+          ],
+          "abstract": "Guaranteeing the safety of nonlinear systems with bounded inputs remains a key challenge in safe autonomy. Backup control barrier functions (bCBFs) provide a powerful mechanism for constructing controlled invariant sets by propagating trajectories under a pre-verified backup controller to a forward invariant backup set. While effective, the standard bCBF method utilizes the same backup controller for both set expansion and safety certification, which can restrict the expanded safe set and lead to conservative dynamic behavior. In this study, we generalize the bCBF framework by separating the set-expanding controller from the verified backup controller, thereby enabling a broader class of expansion strategies while preserving formal safety guarantees. We establish sufficient conditions for forward invariance of the resulting implicit safe set and show how the generalized construction recovers existing bCBF methods as special cases. Moreover, we extend the proposed framework to parameterized controller families, enabling online adaptation of the expansion controller while maintaining safety guarantees in the presence of input bounds.",
+          "url": "https://arxiv.org/abs/2603.18450v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.18450v1",
+          "published": "2026-03-19T03:24:23Z",
+          "updated": "2026-03-19T03:24:23Z",
+          "categories": [
+            "eess.SY"
+          ],
+          "primary_category": "eess.SY"
+        },
+        {
+          "id": "2512.10118v1",
+          "title": "Explicit Control Barrier Function-based Safety Filters and their Resource-Aware Computation",
+          "authors": [
+            "Pol Mestres",
+            "Shima Sadat Mousavi",
+            "Pio Ong",
+            "Lizhi Yang",
+            "Ersin Das",
+            "Joel W. Burdick",
+            "Aaron D. Ames"
+          ],
+          "abstract": "This paper studies the efficient implementation of safety filters that are designed using control barrier functions (CBFs), which minimally modify a nominal controller to render it safe with respect to a prescribed set of states. Although CBF-based safety filters are often implemented by solving a quadratic program (QP) in real time, the use of off-the-shelf solvers for such optimization problems poses a challenge in applications where control actions need to be computed efficiently at very high frequencies. In this paper, we introduce a closed-form expression for controllers obtained through CBF-based safety filters. This expression is obtained by partitioning the state-space into different regions, with a different closed-form solution in each region. We leverage this formula to introduce a resource-aware implementation of CBF-based safety filters that detects changes in the partition region and uses the closed-form expression between changes. We showcase the applicability of our approach in examples ranging from aerospace control to safe reinforcement learning.",
+          "url": "https://arxiv.org/abs/2512.10118v1",
+          "pdf_url": "https://arxiv.org/pdf/2512.10118v1",
+          "published": "2025-12-10T22:09:53Z",
+          "updated": "2025-12-10T22:09:53Z",
+          "categories": [
+            "eess.SY",
+            "math.OC"
+          ],
+          "primary_category": "eess.SY"
+        },
+        {
+          "id": "2512.03256v1",
+          "title": "KALIKO: Kalman-Implicit Koopman Operator Learning For Prediction of Nonlinear Dynamical Systems",
+          "authors": [
+            "Albert H. Li",
+            "Ivan Dario Jimenez Rodriguez",
+            "Joel W. Burdick",
+            "Yisong Yue",
+            "Aaron D. Ames"
+          ],
+          "abstract": "Long-horizon dynamical prediction is fundamental in robotics and control, underpinning canonical methods like model predictive control. Yet, many systems and disturbance phenomena are difficult to model due to effects like nonlinearity, chaos, and high-dimensionality. Koopman theory addresses this by modeling the linear evolution of embeddings of the state under an infinite-dimensional linear operator that can be approximated with a suitable finite basis of embedding functions, effectively trading model nonlinearity for representational complexity. However, explicitly computing a good choice of basis is nontrivial, and poor choices may cause inaccurate forecasts or overfitting. To address this, we present Kalman-Implicit Koopman Operator (KALIKO) Learning, a method that leverages the Kalman filter to implicitly learn embeddings corresponding to latent dynamics without requiring an explicit encoder. KALIKO produces interpretable representations consistent with both theory and prior works, yielding high-quality reconstructions and inducing a globally linear latent dynamics. Evaluated on wave data generated by a high-dimensional PDE, KALIKO surpasses several baselines in open-loop prediction and in a demanding closed-loop simulated control task: stabilizing an underactuated manipulator's payload by predicting and compensating for strong wave disturbances.",
+          "url": "https://arxiv.org/abs/2512.03256v1",
+          "pdf_url": "https://arxiv.org/pdf/2512.03256v1",
+          "published": "2025-12-02T21:58:55Z",
+          "updated": "2025-12-02T21:58:55Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2511.00814v2",
+          "title": "Real-Time Learning of Predictive Dynamic Obstacle Models for Robotic Motion Planning",
+          "authors": [
+            "Stella Kombo",
+            "Masih Haseli",
+            "Skylar X. Wei",
+            "Joel W. Burdick"
+          ],
+          "abstract": "Autonomous systems often must predict the motions of nearby agents from partial and noisy data. This paper asks and answers the question: \"can we learn, in real-time, a nonlinear predictive model of another agent's motions?\" Our online framework denoises and forecasts such dynamics using a modified sliding-window Hankel Dynamic Mode Decomposition (Hankel-DMD). Partial noisy measurements are embedded into a Hankel matrix, while an associated Page matrix enables singular-value hard thresholding (SVHT) to estimate the effective rank. A Cadzow projection enforces structured low-rank consistency, yielding a denoised trajectory and local noise variance estimates. From this representation, a time-varying Hankel-DMD lifted linear predictor is constructed for multi-step forecasts. The residual analysis provides variance-tracking signals that can support downstream estimators and risk-aware planning. We validate the approach in simulation under Gaussian and heavy-tailed noise, and experimentally on a dynamic crane testbed. Results show that the method achieves stable variance-aware denoising and short-horizon prediction suitable for integration into real-time control frameworks.",
+          "url": "https://arxiv.org/abs/2511.00814v2",
+          "pdf_url": "https://arxiv.org/pdf/2511.00814v2",
+          "published": "2025-11-02T05:54:30Z",
+          "updated": "2026-03-06T00:37:58Z",
+          "categories": [
+            "cs.RO",
+            "cs.LG",
+            "eess.SY"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2510.16953v2",
+          "title": "Safe Payload Transfer with Ship-Mounted Cranes: A Robust Model Predictive Control Approach",
+          "authors": [
+            "Ersin Das",
+            "William A. Welch",
+            "Patrick Spieler",
+            "Keenan Albee",
+            "Aurelio Noca",
+            "Jeffrey Edlund",
+            "Jonathan Becktor",
+            "Thomas Touma",
+            "Jessica Todd",
+            "Sriramya Bhamidipati",
+            "Stella Kombo",
+            "Maira Saboia",
+            "Anna Sabel",
+            "Grace Lim",
+            "Rohan Thakker",
+            "Amir Rahmani",
+            "Joel W. Burdick"
+          ],
+          "abstract": "Ensuring safe real-time control of ship-mounted cranes in unstructured transportation environments requires handling multiple safety constraints while maintaining effective payload transfer performance. Unlike traditional crane systems, ship-mounted cranes are consistently subjected to significant external disturbances affecting underactuated crane dynamics due to the ship's dynamic motion response to harsh sea conditions, which can lead to robustness issues. To tackle these challenges, we propose a robust and safe model predictive control (MPC) framework and demonstrate it on a 5-DOF crane system, where a Stewart platform simulates the external disturbances that ocean surface motions would have on the supporting ship. The crane payload transfer operation must avoid obstacles and accurately place the payload within a designated target area. We use a robust zero-order control barrier function (R-ZOCBF)-based safety constraint in the nonlinear MPC to ensure safe payload positioning, while time-varying bounding boxes are utilized for collision avoidance. We introduce a new optimization-based online robustness parameter adaptation scheme to reduce the conservativeness of R-ZOCBFs. Experimental trials on a crane prototype demonstrate the overall performance of our safe control approach under significant perturbing motions of the crane base. While our focus is on crane-facilitated transfer, the methods more generally apply to safe robotically-assisted parts mating and parts insertion.",
+          "url": "https://arxiv.org/abs/2510.16953v2",
+          "pdf_url": "https://arxiv.org/pdf/2510.16953v2",
+          "published": "2025-10-19T18:13:33Z",
+          "updated": "2026-03-03T18:26:25Z",
+          "categories": [
+            "eess.SY",
+            "cs.RO"
+          ],
+          "primary_category": "eess.SY"
+        }
+      ]
     },
     {
       "id": "chung_s",
@@ -127,8 +246,106 @@
       "field": "Autonomous systems, controls, aerial and space robotics",
       "institution": "California Institute of Technology",
       "website": "https://www.galcit.caltech.edu/people/professor-soon-jo-chung",
-      "paper_count": 0,
-      "papers": []
+      "paper_count": 5,
+      "papers": [
+        {
+          "id": "2603.19632v1",
+          "title": "ContractionPPO: Certified Reinforcement Learning via Differentiable Contraction Layers",
+          "authors": [
+            "Vrushabh Zinage",
+            "Narek Harutyunyan",
+            "Eric Verheyden",
+            "Fred Y. Hadaegh",
+            "Soon-Jo Chung"
+          ],
+          "abstract": "Legged locomotion in unstructured environments demands not only high-performance control policies but also formal guarantees to ensure robustness under perturbations. Control methods often require carefully designed reference trajectories, which are challenging to construct in high-dimensional, contact-rich systems such as quadruped robots. In contrast, Reinforcement Learning (RL) directly learns policies that implicitly generate motion, and uniquely benefits from access to privileged information, such as full state and dynamics during training, that is not available at deployment. We present ContractionPPO, a framework for certified robust planning and control of legged robots by augmenting Proximal Policy Optimization (PPO) RL with a state-dependent contraction metric layer. This approach enables the policy to maximize performance while simultaneously producing a contraction metric that certifies incremental exponential stability of the simulated closed-loop system. The metric is parameterized as a Lipschitz neural network and trained jointly with the policy, either in parallel or as an auxiliary head of the PPO backbone. While the contraction metric is not deployed during real-world execution, we derive upper bounds on the worst-case contraction rate and show that these bounds ensure the learned contraction metric generalizes from simulation to real-world deployment. Our hardware experiments on quadruped locomotion demonstrate that ContractionPPO enables robust, certifiably stable control even under strong external perturbations.",
+          "url": "https://arxiv.org/abs/2603.19632v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.19632v1",
+          "published": "2026-03-20T04:32:18Z",
+          "updated": "2026-03-20T04:32:18Z",
+          "categories": [
+            "cs.RO",
+            "eess.SY"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2602.21366v2",
+          "title": "Environment-Aware Learning of Smooth GNSS Covariance Dynamics for Autonomous Racing",
+          "authors": [
+            "Y. Deemo Chen",
+            "Arion Zimmermann",
+            "Thomas A. Berrueta",
+            "Soon-Jo Chung"
+          ],
+          "abstract": "Ensuring accurate and stable state estimation is a challenging task crucial to safety-critical domains such as high-speed autonomous racing, where measurement uncertainty must be both adaptive to the environment and temporally smooth for control. In this work, we develop a learning-based framework, LACE, capable of directly modeling the temporal dynamics of GNSS measurement covariance. We model the covariance evolution as an exponentially stable dynamical system where a deep neural network (DNN) learns to predict the system's process noise from environmental features through an attention mechanism. By using contraction-based stability and systematically imposing spectral constraints, we formally provide guarantees of exponential stability and smoothness for the resulting covariance dynamics. We validate our approach on an AV-24 autonomous racecar, demonstrating improved localization performance and smoother covariance estimates in challenging, GNSS-degraded environments. Our results highlight the promise of dynamically modeling the perceived uncertainty in state estimation problems that are tightly coupled with control sensitivity.",
+          "url": "https://arxiv.org/abs/2602.21366v2",
+          "pdf_url": "https://arxiv.org/pdf/2602.21366v2",
+          "published": "2026-02-24T20:59:09Z",
+          "updated": "2026-03-05T07:02:04Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2509.18460v1",
+          "title": "A Counterfactual Reasoning Framework for Fault Diagnosis in Robot Perception Systems",
+          "authors": [
+            "Haeyoon Han",
+            "Mahdi Taheri",
+            "Soon-Jo Chung",
+            "Fred Y. Hadaegh"
+          ],
+          "abstract": "Perception systems provide a rich understanding of the environment for autonomous systems, shaping decisions in all downstream modules. Hence, accurate detection and isolation of faults in perception systems is important. Faults in perception systems pose particular challenges: faults are often tied to the perceptual context of the environment, and errors in their multi-stage pipelines can propagate across modules. To address this, we adopt a counterfactual reasoning approach to propose a framework for fault detection and isolation (FDI) in perception systems. As opposed to relying on physical redundancy (i.e., having extra sensors), our approach utilizes analytical redundancy with counterfactual reasoning to construct perception reliability tests as causal outcomes influenced by system states and fault scenarios. Counterfactual reasoning generates reliability test results under hypothesized faults to update the belief over fault hypotheses. We derive both passive and active FDI methods. While the passive FDI can be achieved by belief updates, the active FDI approach is defined as a causal bandit problem, where we utilize Monte Carlo Tree Search (MCTS) with upper confidence bound (UCB) to find control inputs that maximize a detection and isolation metric, designated as Effective Information (EI). The mentioned metric quantifies the informativeness of control inputs for FDI. We demonstrate the approach in a robot exploration scenario, where a space robot performing vision-based navigation actively adjusts its attitude to increase EI and correctly isolate faults caused by sensor damage, dynamic scenes, and perceptual degradation.",
+          "url": "https://arxiv.org/abs/2509.18460v1",
+          "pdf_url": "https://arxiv.org/pdf/2509.18460v1",
+          "published": "2025-09-22T22:29:33Z",
+          "updated": "2025-09-22T22:29:33Z",
+          "categories": [
+            "cs.RO",
+            "eess.SY"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2509.16837v2",
+          "title": "Closing the Loop Inside Neural Networks: Causality-Guided Layer Adaptation for Fault Recovery Control",
+          "authors": [
+            "Mahdi Taheri",
+            "Soon-Jo Chung",
+            "Fred Y. Hadaegh"
+          ],
+          "abstract": "This paper studies the problem of real-time fault recovery control for nonlinear control-affine systems subject to actuator loss of effectiveness faults and external disturbances. We derive a two-stage framework that combines causal inference with selective online adaptation to achieve an effective learning-based recovery control method. In the offline phase, we develop a causal layer attribution technique based on the average causal effect (ACE) to evaluate the relative importance of each layer in a pretrained deep neural network (DNN) controller compensating for faults. This methodology identifies a subset of high-impact layers responsible for robust fault compensation. In the online phase, we deploy a Lyapunov-based gradient update to adapt only the ACE-selected layer to circumvent the need for full-network or last-layer only updates. The proposed adaptive controller guarantees uniform ultimate boundedness (UUB) with exponential convergence of the closed-loop system in the presence of actuator faults and external disturbances. Compared to conventional adaptive DNN controllers with full-network adaptation, our methodology has a reduced computational overhead. To demonstrate the effectiveness of our proposed methodology, a case study is provided on a 3-axis attitude control system of a spacecraft with four reaction wheels.",
+          "url": "https://arxiv.org/abs/2509.16837v2",
+          "pdf_url": "https://arxiv.org/pdf/2509.16837v2",
+          "published": "2025-09-20T23:26:39Z",
+          "updated": "2025-12-20T07:53:42Z",
+          "categories": [
+            "eess.SY"
+          ],
+          "primary_category": "eess.SY"
+        },
+        {
+          "id": "2508.20140v1",
+          "title": "Array-Based Monte Carlo Tree Search",
+          "authors": [
+            "James Ragan",
+            "Fred Y. Hadaegh",
+            "Soon-Jo Chung"
+          ],
+          "abstract": "Monte Carlo Tree Search is a popular method for solving decision making problems. Faster implementations allow for more simulations within the same wall clock time, directly improving search performance. To this end, we present an alternative array-based implementation of the classic Upper Confidence bounds applied to Trees algorithm. Our method preserves the logic of the original algorithm, but eliminates the need for branch prediction, enabling faster performance on pipelined processors, and up to a factor of 2.8 times better scaling with search depth in our numerical simulations.",
+          "url": "https://arxiv.org/abs/2508.20140v1",
+          "pdf_url": "https://arxiv.org/pdf/2508.20140v1",
+          "published": "2025-08-27T04:49:32Z",
+          "updated": "2025-08-27T04:49:32Z",
+          "categories": [
+            "cs.AI",
+            "eess.SY"
+          ],
+          "primary_category": "cs.AI"
+        }
+      ]
     },
     {
       "id": "yue_y",
@@ -4502,6 +4719,26 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2603.23278v1",
+          "title": "Learning Multi-Agent Local Collision-Avoidance for Collaborative Carrying tasks with Coupled Quadrupedal Robots",
+          "authors": [
+            "Francesca Bray",
+            "Simone Tolomei",
+            "Andrei Cramariuc",
+            "Cesar Cadena",
+            "Marco Hutter"
+          ],
+          "abstract": "Robotic collaborative carrying could greatly benefit human activities like warehouse and construction site management. However, coordinating the simultaneous motion of multiple robots represents a significant challenge. Existing works primarily focus on obstacle-free environments, making them unsuitable for most real-world applications. Works that account for obstacles, either overfit to a specific terrain configuration or rely on pre-recorded maps combined with path planners to compute collision-free trajectories. This work focuses on two quadrupedal robots mechanically connected to a carried object. We propose a Reinforcement Learning (RL)-based policy that enables tracking a commanded velocity direction while avoiding collisions with nearby obstacles using only onboard sensing, eliminating the need for precomputed trajectories and complete map knowledge. Our work presents a hierarchical architecture, where a perceptive high-level object-centric policy commands two pretrained locomotion policies. Additionally, we employ a game-inspired curriculum to increase the complexity of obstacles in the terrain progressively. We validate our approach on two quadrupedal robots connected to a bar via spherical joints, benchmarking it against optimization-based and decentralized RL baselines. Our hardware experiments demonstrate the ability of our system to locomote in unknown environments without the need for a map or a path planner. The video of our work is available in the multimedia material.",
+          "url": "https://arxiv.org/abs/2603.23278v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.23278v1",
+          "published": "2026-03-24T14:42:20Z",
+          "updated": "2026-03-24T14:42:20Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2603.16772v1",
           "title": "Beyond Cybathlon: On-demand Quadrupedal Assistance for People with Limited Mobility",
           "authors": [
@@ -4619,31 +4856,6 @@
             "cs.RO"
           ],
           "primary_category": "cs.RO"
-        },
-        {
-          "id": "2602.19308v1",
-          "title": "WildOS: Open-Vocabulary Object Search in the Wild",
-          "authors": [
-            "Hardik Shah",
-            "Erica Tevere",
-            "Deegan Atha",
-            "Marcel Kaufmann",
-            "Shehryar Khattak",
-            "Manthan Patel",
-            "Marco Hutter",
-            "Jonas Frey",
-            "Patrick Spieler"
-          ],
-          "abstract": "Autonomous navigation in complex, unstructured outdoor environments requires robots to operate over long ranges without prior maps and limited depth sensing. In such settings, relying solely on geometric frontiers for exploration is often insufficient. In such settings, the ability to reason semantically about where to go and what is safe to traverse is crucial for robust, efficient exploration. This work presents WildOS, a unified system for long-range, open-vocabulary object search that combines safe geometric exploration with semantic visual reasoning. WildOS builds a sparse navigation graph to maintain spatial memory, while utilizing a foundation-model-based vision module, ExploRFM, to score frontier nodes of the graph. ExploRFM simultaneously predicts traversability, visual frontiers, and object similarity in image space, enabling real-time, onboard semantic navigation tasks. The resulting vision-scored graph enables the robot to explore semantically meaningful directions while ensuring geometric safety. Furthermore, we introduce a particle-filter-based method for coarse localization of the open-vocabulary target query, that estimates candidate goal positions beyond the robot's immediate depth horizon, enabling effective planning toward distant goals. Extensive closed-loop field experiments across diverse off-road and urban terrains demonstrate that WildOS enables robust navigation, significantly outperforming purely geometric and purely vision-based baselines in both efficiency and autonomy. Our results highlight the potential of vision foundation models to drive open-world robotic behaviors that are both semantically informed and geometrically grounded. Project Page: https://leggedrobotics.github.io/wildos/",
-          "url": "https://arxiv.org/abs/2602.19308v1",
-          "pdf_url": "https://arxiv.org/pdf/2602.19308v1",
-          "published": "2026-02-22T19:14:00Z",
-          "updated": "2026-02-22T19:14:00Z",
-          "categories": [
-            "cs.RO",
-            "cs.CV"
-          ],
-          "primary_category": "cs.RO"
         }
       ]
     },
@@ -4696,7 +4908,7 @@
           "primary_category": "cs.RO"
         },
         {
-          "id": "2603.04648v1",
+          "id": "2603.04648v2",
           "title": "When Sensors Fail: Temporal Sequence Models for Robust PPO under Sensor Drift",
           "authors": [
             "Kevin Vogt-Lowell",
@@ -4708,10 +4920,10 @@
             "Daniela Rus"
           ],
           "abstract": "Real-world reinforcement learning systems must operate under distributional drift in their observation streams, yet most policy architectures implicitly assume fully observed and noise-free states. We study robustness of Proximal Policy Optimization (PPO) under temporally persistent sensor failures that induce partial observability and representation shift. To respond to this drift, we augment PPO with temporal sequence models, including Transformers and State Space Models (SSMs), to enable policies to infer missing information from history and maintain performance. Under a stochastic sensor failure process, we prove a high-probability bound on infinite-horizon reward degradation that quantifies how robustness depends on policy smoothness and failure persistence. Empirically, on MuJoCo continuous-control benchmarks with severe sensor dropout, we show Transformer-based sequence policies substantially outperform MLP, RNN, and SSM baselines in robustness, maintaining high returns even when large fractions of sensors are unavailable. These results demonstrate that temporal sequence reasoning provides a principled and practical mechanism for reliable operation under observation drift caused by sensor unreliability.",
-          "url": "https://arxiv.org/abs/2603.04648v1",
-          "pdf_url": "https://arxiv.org/pdf/2603.04648v1",
+          "url": "https://arxiv.org/abs/2603.04648v2",
+          "pdf_url": "https://arxiv.org/pdf/2603.04648v2",
           "published": "2026-03-04T22:21:54Z",
-          "updated": "2026-03-04T22:21:54Z",
+          "updated": "2026-03-23T19:37:53Z",
           "categories": [
             "cs.LG",
             "cs.AI"
@@ -5924,6 +6136,27 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2603.22472v1",
+          "title": "Wake Up to the Past: Using Memory to Model Fluid Wake Effects on Robots",
+          "authors": [
+            "Luca Vendruscolo",
+            "Eduardo Sebasti\u00e1n",
+            "Amanda Prorok",
+            "Ajay Shankar"
+          ],
+          "abstract": "Autonomous aerial and aquatic robots that attain mobility by perturbing their medium, such as multicopters and torpedoes, produce wake effects that act as disturbances for adjacent robots. Wake effects are hard to model and predict due to the chaotic spatio-temporal dynamics of the fluid, entangled with the physical geometry of the robots and their complex motion patterns. Data-driven approaches using neural networks typically learn a memory-less function that maps the current states of the two robots to a force observed by the \"sufferer\" robot. Such models often perform poorly in agile scenarios: since the wake effect has a finite propagation time, the disturbance observed by a sufferer robot is some function of relative states in the past. In this work, we present an empirical study of the properties a wake-effect predictor must satisfy to accurately model the interactions between two robots mediated by a fluid. We explore seven data-driven models designed to capture the spatio-temporal evolution of fluid wake effects in four different media. This allows us to introspect the models and analyze the reasons why certain features enable improved accuracy in prediction across predictors and fluids. As experimental validation, we develop a planar rectilinear gantry for two spinning monocopters to test in real-world data with feedback control. The conclusion is that support of history of previous states as input and transport delay prediction substantially helps to learn an accurate wake-effect predictor.",
+          "url": "https://arxiv.org/abs/2603.22472v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.22472v1",
+          "published": "2026-03-23T18:40:00Z",
+          "updated": "2026-03-23T18:40:00Z",
+          "categories": [
+            "cs.RO",
+            "cs.LG",
+            "cs.MA"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2602.06733v1",
           "title": "Pairwise is Not Enough: Hypergraph Neural Networks for Multi-Agent Pathfinding",
           "authors": [
@@ -5987,7 +6220,7 @@
           "primary_category": "cs.RO"
         },
         {
-          "id": "2512.06796v2",
+          "id": "2512.06796v3",
           "title": "db-LaCAM: Fast and Scalable Multi-Robot Kinodynamic Motion Planning with Discontinuity-Bounded Search and Lightweight MAPF",
           "authors": [
             "Akmaral Moldagalieva",
@@ -5996,34 +6229,14 @@
             "Wolfgang H\u00f6nig"
           ],
           "abstract": "State-of-the-art multi-robot kinodynamic motion planners struggle to handle more than a few robots due to high computational burden, which limits their scalability and results in slow planning time. In this work, we combine the scalability and speed of modern multi-agent path finding (MAPF) algorithms with the dynamic-awareness of kinodynamic planners to address these limitations. To this end, we propose discontinuity-Bounded LaCAM (db-LaCAM), a planner that utilizes a precomputed set of motion primitives that respect robot dynamics to generate horizon-length motion sequences, while allowing a user-defined discontinuity between successive motions. The planner db-LaCAM is resolution-complete with respect to motion primitives and supports arbitrary robot dynamics. Extensive experiments demonstrate that db-LaCAM scales efficiently to scenarios with up to 50 robots, achieving up to ten times faster runtime compared to state-of-the-art planners, while maintaining comparable solution quality. The approach is validated in both 2D and 3D environments with dynamics such as the unicycle and 3D double integrator. We demonstrate the safe execution of trajectories planned with db-LaCAM in two distinct physical experiments involving teams of flying robots and car-with-trailer robots.",
-          "url": "https://arxiv.org/abs/2512.06796v2",
-          "pdf_url": "https://arxiv.org/pdf/2512.06796v2",
+          "url": "https://arxiv.org/abs/2512.06796v3",
+          "pdf_url": "https://arxiv.org/pdf/2512.06796v3",
           "published": "2025-12-07T11:17:10Z",
-          "updated": "2025-12-09T11:50:21Z",
+          "updated": "2026-03-24T04:59:36Z",
           "categories": [
             "cs.RO"
           ],
           "primary_category": "cs.RO"
-        },
-        {
-          "id": "2511.03100v1",
-          "title": "Scaling Multi-Agent Environment Co-Design with Diffusion Models",
-          "authors": [
-            "Hao Xiang Li",
-            "Michael Amir",
-            "Amanda Prorok"
-          ],
-          "abstract": "The agent-environment co-design paradigm jointly optimises agent policies and environment configurations in search of improved system performance. With application domains ranging from warehouse logistics to windfarm management, co-design promises to fundamentally change how we deploy multi-agent systems. However, current co-design methods struggle to scale. They collapse under high-dimensional environment design spaces and suffer from sample inefficiency when addressing moving targets inherent to joint optimisation. We address these challenges by developing Diffusion Co-Design (DiCoDe), a scalable and sample-efficient co-design framework pushing co-design towards practically relevant settings. DiCoDe incorporates two core innovations. First, we introduce Projected Universal Guidance (PUG), a sampling technique that enables DiCoDe to explore a distribution of reward-maximising environments while satisfying hard constraints such as spatial separation between obstacles. Second, we devise a critic distillation mechanism to share knowledge from the reinforcement learning critic, ensuring that the guided diffusion model adapts to evolving agent policies using a dense and up-to-date learning signal. Together, these improvements lead to superior environment-policy pairs when validated on challenging multi-agent environment co-design benchmarks including warehouse automation, multi-agent pathfinding and wind farm optimisation. Our method consistently exceeds the state-of-the-art, achieving, for example, 39% higher rewards in the warehouse setting with 66% fewer simulation samples. This sets a new standard in agent-environment co-design, and is a stepping stone towards reaping the rewards of co-design in real world domains.",
-          "url": "https://arxiv.org/abs/2511.03100v1",
-          "pdf_url": "https://arxiv.org/pdf/2511.03100v1",
-          "published": "2025-11-05T01:09:40Z",
-          "updated": "2025-11-05T01:09:40Z",
-          "categories": [
-            "cs.LG",
-            "cs.AI",
-            "cs.MA"
-          ],
-          "primary_category": "cs.LG"
         }
       ]
     },
@@ -6536,6 +6749,37 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2603.22435v1",
+          "title": "CaP-X: A Framework for Benchmarking and Improving Coding Agents for Robot Manipulation",
+          "authors": [
+            "Max Fu",
+            "Justin Yu",
+            "Karim El-Refai",
+            "Ethan Kou",
+            "Haoru Xue",
+            "Huang Huang",
+            "Wenli Xiao",
+            "Guanzhi Wang",
+            "Fei-Fei Li",
+            "Guanya Shi",
+            "Jiajun Wu",
+            "Shankar Sastry",
+            "Yuke Zhu",
+            "Ken Goldberg",
+            "Linxi \"Jim\" Fan"
+          ],
+          "abstract": "\"Code-as-Policy\" considers how executable code can complement data-intensive Vision-Language-Action (VLA) methods, yet their effectiveness as autonomous controllers for embodied manipulation remains underexplored. We present CaP-X, an open-access framework for systematically studying Code-as-Policy agents in robot manipulation. At its core is CaP-Gym, an interactive environment in which agents control robots by synthesizing and executing programs that compose perception and control primitives. Building on this foundation, CaP-Bench evaluates frontier language and vision-language models across varying levels of abstraction, interaction, and perceptual grounding. Across 12 models, CaP-Bench reveals a consistent trend: performance improves with human-crafted abstractions but degrades as these priors are removed, exposing a dependence on designer scaffolding. At the same time, we observe that this gap can be mitigated through scaling agentic test-time computation--through multi-turn interaction, structured execution feedback, visual differencing, automatic skill synthesis, and ensembled reasoning--substantially improves robustness even when agents operate over low-level primitives. These findings allow us to derive CaP-Agent0, a training-free framework that recovers human-level reliability on several manipulation tasks in simulation and on real embodiments. We further introduce CaP-RL, showing reinforcement learning with verifiable rewards improves success rates and transfers from sim2real with minimal gap. Together, CaP-X provides a principled, open-access platform for advancing embodied coding agents.",
+          "url": "https://arxiv.org/abs/2603.22435v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.22435v1",
+          "published": "2026-03-23T18:08:10Z",
+          "updated": "2026-03-23T18:08:10Z",
+          "categories": [
+            "cs.RO",
+            "cs.AI"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2603.21687v1",
           "title": "Mirage The Illusion of Visual Understanding",
           "authors": [
@@ -6623,37 +6867,6 @@
             "cs.LG"
           ],
           "primary_category": "cs.CV"
-        },
-        {
-          "id": "2602.07055v1",
-          "title": "Theory of Space: Can Foundation Models Construct Spatial Beliefs through Active Exploration?",
-          "authors": [
-            "Pingyue Zhang",
-            "Zihan Huang",
-            "Yue Wang",
-            "Jieyu Zhang",
-            "Letian Xue",
-            "Zihan Wang",
-            "Qineng Wang",
-            "Keshigeyan Chandrasegaran",
-            "Ruohan Zhang",
-            "Yejin Choi",
-            "Ranjay Krishna",
-            "Jiajun Wu",
-            "Li Fei-Fei",
-            "Manling Li"
-          ],
-          "abstract": "Spatial embodied intelligence requires agents to act to acquire information under partial observability. While multimodal foundation models excel at passive perception, their capacity for active, self-directed exploration remains understudied. We propose Theory of Space, defined as an agent's ability to actively acquire information through self-directed, active exploration and to construct, revise, and exploit a spatial belief from sequential, partial observations. We evaluate this through a benchmark where the goal is curiosity-driven exploration to build an accurate cognitive map. A key innovation is spatial belief probing, which prompts models to reveal their internal spatial representations at each step. Our evaluation of state-of-the-art models reveals several critical bottlenecks. First, we identify an Active-Passive Gap, where performance drops significantly when agents must autonomously gather information. Second, we find high inefficiency, as models explore unsystematically compared to program-based proxies. Through belief probing, we diagnose that while perception is an initial bottleneck, global beliefs suffer from instability that causes spatial knowledge to degrade over time. Finally, using a false belief paradigm, we uncover Belief Inertia, where agents fail to update obsolete priors with new evidence. This issue is present in text-based agents but is particularly severe in vision-based models. Our findings suggest that current foundation models struggle to maintain coherent, revisable spatial beliefs during active exploration.",
-          "url": "https://arxiv.org/abs/2602.07055v1",
-          "pdf_url": "https://arxiv.org/pdf/2602.07055v1",
-          "published": "2026-02-04T19:06:40Z",
-          "updated": "2026-02-04T19:06:40Z",
-          "categories": [
-            "cs.AI",
-            "cs.CL",
-            "cs.LG"
-          ],
-          "primary_category": "cs.AI"
         }
       ]
     },
@@ -6777,6 +6990,37 @@
       "website": "https://jiajunwu.com/",
       "paper_count": 5,
       "papers": [
+        {
+          "id": "2603.22435v1",
+          "title": "CaP-X: A Framework for Benchmarking and Improving Coding Agents for Robot Manipulation",
+          "authors": [
+            "Max Fu",
+            "Justin Yu",
+            "Karim El-Refai",
+            "Ethan Kou",
+            "Haoru Xue",
+            "Huang Huang",
+            "Wenli Xiao",
+            "Guanzhi Wang",
+            "Fei-Fei Li",
+            "Guanya Shi",
+            "Jiajun Wu",
+            "Shankar Sastry",
+            "Yuke Zhu",
+            "Ken Goldberg",
+            "Linxi \"Jim\" Fan"
+          ],
+          "abstract": "\"Code-as-Policy\" considers how executable code can complement data-intensive Vision-Language-Action (VLA) methods, yet their effectiveness as autonomous controllers for embodied manipulation remains underexplored. We present CaP-X, an open-access framework for systematically studying Code-as-Policy agents in robot manipulation. At its core is CaP-Gym, an interactive environment in which agents control robots by synthesizing and executing programs that compose perception and control primitives. Building on this foundation, CaP-Bench evaluates frontier language and vision-language models across varying levels of abstraction, interaction, and perceptual grounding. Across 12 models, CaP-Bench reveals a consistent trend: performance improves with human-crafted abstractions but degrades as these priors are removed, exposing a dependence on designer scaffolding. At the same time, we observe that this gap can be mitigated through scaling agentic test-time computation--through multi-turn interaction, structured execution feedback, visual differencing, automatic skill synthesis, and ensembled reasoning--substantially improves robustness even when agents operate over low-level primitives. These findings allow us to derive CaP-Agent0, a training-free framework that recovers human-level reliability on several manipulation tasks in simulation and on real embodiments. We further introduce CaP-RL, showing reinforcement learning with verifiable rewards improves success rates and transfers from sim2real with minimal gap. Together, CaP-X provides a principled, open-access platform for advancing embodied coding agents.",
+          "url": "https://arxiv.org/abs/2603.22435v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.22435v1",
+          "published": "2026-03-23T18:08:10Z",
+          "updated": "2026-03-23T18:08:10Z",
+          "categories": [
+            "cs.RO",
+            "cs.AI"
+          ],
+          "primary_category": "cs.RO"
+        },
         {
           "id": "2603.19607v1",
           "title": "Physion-Eval: Evaluating Physical Realism in Generated Video via Human Reasoning",
@@ -6919,29 +7163,6 @@
           "updated": "2026-03-05T19:00:02Z",
           "categories": [
             "cs.CV"
-          ],
-          "primary_category": "cs.CV"
-        },
-        {
-          "id": "2603.05449v1",
-          "title": "RealWonder: Real-Time Physical Action-Conditioned Video Generation",
-          "authors": [
-            "Wei Liu",
-            "Ziyu Chen",
-            "Zizhang Li",
-            "Yue Wang",
-            "Hong-Xing Yu",
-            "Jiajun Wu"
-          ],
-          "abstract": "Current video generation models cannot simulate physical consequences of 3D actions like forces and robotic manipulations, as they lack structural understanding of how actions affect 3D scenes. We present RealWonder, the first real-time system for action-conditioned video generation from a single image. Our key insight is using physics simulation as an intermediate bridge: instead of directly encoding continuous actions, we translate them through physics simulation into visual representations (optical flow and RGB) that video models can process. RealWonder integrates three components: 3D reconstruction from single images, physics simulation, and a distilled video generator requiring only 4 diffusion steps. Our system achieves 13.2 FPS at 480x832 resolution, enabling interactive exploration of forces, robot actions, and camera controls on rigid objects, deformable bodies, fluids, and granular materials. We envision RealWonder opens new opportunities to apply video models in immersive experiences, AR/VR, and robot learning. Our code and model weights are publicly available in our project website: https://liuwei283.github.io/RealWonder/",
-          "url": "https://arxiv.org/abs/2603.05449v1",
-          "pdf_url": "https://arxiv.org/pdf/2603.05449v1",
-          "published": "2026-03-05T18:22:54Z",
-          "updated": "2026-03-05T18:22:54Z",
-          "categories": [
-            "cs.CV",
-            "cs.AI",
-            "cs.GR"
           ],
           "primary_category": "cs.CV"
         }
@@ -7194,6 +7415,37 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2603.22435v1",
+          "title": "CaP-X: A Framework for Benchmarking and Improving Coding Agents for Robot Manipulation",
+          "authors": [
+            "Max Fu",
+            "Justin Yu",
+            "Karim El-Refai",
+            "Ethan Kou",
+            "Haoru Xue",
+            "Huang Huang",
+            "Wenli Xiao",
+            "Guanzhi Wang",
+            "Fei-Fei Li",
+            "Guanya Shi",
+            "Jiajun Wu",
+            "Shankar Sastry",
+            "Yuke Zhu",
+            "Ken Goldberg",
+            "Linxi \"Jim\" Fan"
+          ],
+          "abstract": "\"Code-as-Policy\" considers how executable code can complement data-intensive Vision-Language-Action (VLA) methods, yet their effectiveness as autonomous controllers for embodied manipulation remains underexplored. We present CaP-X, an open-access framework for systematically studying Code-as-Policy agents in robot manipulation. At its core is CaP-Gym, an interactive environment in which agents control robots by synthesizing and executing programs that compose perception and control primitives. Building on this foundation, CaP-Bench evaluates frontier language and vision-language models across varying levels of abstraction, interaction, and perceptual grounding. Across 12 models, CaP-Bench reveals a consistent trend: performance improves with human-crafted abstractions but degrades as these priors are removed, exposing a dependence on designer scaffolding. At the same time, we observe that this gap can be mitigated through scaling agentic test-time computation--through multi-turn interaction, structured execution feedback, visual differencing, automatic skill synthesis, and ensembled reasoning--substantially improves robustness even when agents operate over low-level primitives. These findings allow us to derive CaP-Agent0, a training-free framework that recovers human-level reliability on several manipulation tasks in simulation and on real embodiments. We further introduce CaP-RL, showing reinforcement learning with verifiable rewards improves success rates and transfers from sim2real with minimal gap. Together, CaP-X provides a principled, open-access platform for advancing embodied coding agents.",
+          "url": "https://arxiv.org/abs/2603.22435v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.22435v1",
+          "published": "2026-03-23T18:08:10Z",
+          "updated": "2026-03-23T18:08:10Z",
+          "categories": [
+            "cs.RO",
+            "cs.AI"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2603.04363v1",
           "title": "ManipulationNet: An Infrastructure for Benchmarking Real-World Robot Manipulation with Physical Skill Challenges and Embodied Multimodal Reasoning",
           "authors": [
@@ -7300,27 +7552,6 @@
           "pdf_url": "https://arxiv.org/pdf/2511.11840v1",
           "published": "2025-11-14T20:00:15Z",
           "updated": "2025-11-14T20:00:15Z",
-          "categories": [
-            "cs.RO"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2511.00153v2",
-          "title": "EgoMI: Learning Active Vision and Whole-Body Manipulation from Egocentric Human Demonstrations",
-          "authors": [
-            "Justin Yu",
-            "Yide Shentu",
-            "Di Wu",
-            "Pieter Abbeel",
-            "Ken Goldberg",
-            "Philipp Wu"
-          ],
-          "abstract": "Imitation learning from human demonstrations offers a promising approach for robot skill acquisition, but egocentric human data introduces fundamental challenges due to the embodiment gap. During manipulation, humans actively coordinate head and hand movements, continuously reposition their viewpoint and use pre-action visual fixation search strategies to locate relevant objects. These behaviors create dynamic, task-driven head motions that static robot sensing systems cannot replicate, leading to a significant distribution shift that degrades policy performance. We present EgoMI (Egocentric Manipulation Interface), a framework that captures synchronized end-effector and active head trajectories during manipulation tasks, resulting in data that can be retargeted to compatible semi-humanoid robot embodiments. To handle rapid and wide-spanning head viewpoint changes, we introduce a memory-augmented policy that selectively incorporates historical observations. We evaluate our approach on a bimanual robot equipped with an actuated camera head and find that policies with explicit head-motion modeling consistently outperform baseline methods. Results suggest that coordinated hand-eye learning with EgoMI effectively bridges the human-robot embodiment gap for robust imitation learning on semi-humanoid embodiments. Project page: https://egocentric-manipulation-interface.github.io",
-          "url": "https://arxiv.org/abs/2511.00153v2",
-          "pdf_url": "https://arxiv.org/pdf/2511.00153v2",
-          "published": "2025-10-31T18:00:35Z",
-          "updated": "2026-03-10T00:29:22Z",
           "categories": [
             "cs.RO"
           ],

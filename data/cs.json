@@ -2,238 +2,220 @@
   "category": "cs",
   "name": "CS Research",
   "description": "Computer Science \u2014 AI, Machine Learning, NLP, Computer Vision",
-  "scraped_at": "2026-03-24T09:01:49.054512+00:00",
+  "scraped_at": "2026-03-25T09:00:53.948331+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2603.22286v1",
-      "title": "WorldCache: Content-Aware Caching for Accelerated Video World Models",
+      "id": "2603.23502v1",
+      "title": "OccAny: Generalized Unconstrained Urban 3D Occupancy",
       "authors": [
-        "Umair Nawaz",
-        "Ahmed Heakl",
-        "Ufaq Khan",
-        "Abdelrahman Shaker",
-        "Salman Khan",
-        "Fahad Shahbaz Khan"
+        "Anh-Quan Cao",
+        "Tuan-Hung Vu"
       ],
-      "abstract": "Diffusion Transformers (DiTs) power high-fidelity video world models but remain computationally expensive due to sequential denoising and costly spatio-temporal attention. Training-free feature caching accelerates inference by reusing intermediate activations across denoising steps; however, existing methods largely rely on a Zero-Order Hold assumption i.e., reusing cached features as static snapshots when global drift is small. This often leads to ghosting artifacts, blur, and motion inconsistencies in dynamic scenes. We propose \\textbf{WorldCache}, a Perception-Constrained Dynamical Caching framework that improves both when and how to reuse features. WorldCache introduces motion-adaptive thresholds, saliency-weighted drift estimation, optimal approximation via blending and warping, and phase-aware threshold scheduling across diffusion steps. Our cohesive approach enables adaptive, motion-consistent feature reuse without retraining. On Cosmos-Predict2.5-2B evaluated on PAI-Bench, WorldCache achieves \\textbf{2.3$\\times$} inference speedup while preserving \\textbf{99.4\\%} of baseline quality, substantially outperforming prior training-free caching approaches. Our code can be accessed on \\href{https://umair1221.github.io/World-Cache/}{World-Cache}.",
-      "url": "https://arxiv.org/abs/2603.22286v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.22286v1",
-      "published": "2026-03-23T17:59:54Z",
-      "updated": "2026-03-23T17:59:54Z",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.CL",
-        "cs.LG"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2603.22285v1",
-      "title": "VideoDetective: Clue Hunting via both Extrinsic Query and Intrinsic Relevance for Long Video Understanding",
-      "authors": [
-        "Ruoliu Yang",
-        "Chu Wu",
-        "Caifeng Shan",
-        "Ran He",
-        "Chaoyou Fu"
-      ],
-      "abstract": "Long video understanding remains challenging for multimodal large language models (MLLMs) due to limited context windows, which necessitate identifying sparse query-relevant video segments. However, existing methods predominantly localize clues based solely on the query, overlooking the video's intrinsic structure and varying relevance across segments. To address this, we propose VideoDetective, a framework that integrates query-to-segment relevance and inter-segment affinity for effective clue hunting in long-video question answering. Specifically, we divide a video into various segments and represent them as a visual-temporal affinity graph built from visual similarity and temporal proximity. We then perform a Hypothesis-Verification-Refinement loop to estimate relevance scores of observed segments to the query and propagate them to unseen segments, yielding a global relevance distribution that guides the localization of the most critical segments for final answering with sparse observation. Experiments show our method consistently achieves substantial gains across a wide range of mainstream MLLMs on representative benchmarks, with accuracy improvements of up to 7.5% on VideoMME-long. Our code is available at https://videodetective.github.io/",
-      "url": "https://arxiv.org/abs/2603.22285v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.22285v1",
-      "published": "2026-03-23T17:59:51Z",
-      "updated": "2026-03-23T17:59:51Z",
+      "abstract": "Relying on in-domain annotations and precise sensor-rig priors, existing 3D occupancy prediction methods are limited in both scalability and out-of-domain generalization. While recent visual geometry foundation models exhibit strong generalization capabilities, they were mainly designed for general purposes and lack one or more key ingredients required for urban occupancy prediction, namely metric prediction, geometry completion in cluttered scenes and adaptation to urban scenarios. We address this gap and present OccAny, the first unconstrained urban 3D occupancy model capable of operating on out-of-domain uncalibrated scenes to predict and complete metric occupancy coupled with segmentation features. OccAny is versatile and can predict occupancy from sequential, monocular, or surround-view images. Our contributions are three-fold: (i) we propose the first generalized 3D occupancy framework with (ii) Segmentation Forcing that improves occupancy quality while enabling mask-level prediction, and (iii) a Novel View Rendering pipeline that infers novel-view geometry to enable test-time view augmentation for geometry completion. Extensive experiments demonstrate that OccAny outperforms all visual geometry baselines on 3D occupancy prediction task, while remaining competitive with in-domain self-supervised methods across three input settings on two established urban occupancy prediction datasets. Our code is available at https://github.com/valeoai/OccAny .",
+      "url": "https://arxiv.org/abs/2603.23502v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.23502v1",
+      "published": "2026-03-24T17:59:58Z",
+      "updated": "2026-03-24T17:59:58Z",
       "categories": [
         "cs.CV"
       ],
       "primary_category": "cs.CV"
     },
     {
-      "id": "2603.22283v1",
-      "title": "End-to-End Training for Unified Tokenization and Latent Denoising",
+      "id": "2603.23501v1",
+      "title": "MedObvious: Exposing the Medical Moravec's Paradox in VLMs via Clinical Triage",
       "authors": [
-        "Shivam Duggal",
-        "Xingjian Bai",
-        "Zongze Wu",
-        "Richard Zhang",
-        "Eli Shechtman",
-        "Antonio Torralba",
-        "Phillip Isola",
-        "William T. Freeman"
+        "Ufaq Khan",
+        "Umair Nawaz",
+        "L D M S S Teja",
+        "Numaan Saeed",
+        "Muhammad Bilal",
+        "Yutong Xie",
+        "Mohammad Yaqub",
+        "Muhammad Haris Khan"
       ],
-      "abstract": "Latent diffusion models (LDMs) enable high-fidelity synthesis by operating in learned latent spaces. However, training state-of-the-art LDMs requires complex staging: a tokenizer must be trained first, before the diffusion model can be trained in the frozen latent space. We propose UNITE - an autoencoder architecture for unified tokenization and latent diffusion. UNITE consists of a Generative Encoder that serves as both image tokenizer and latent generator via weight sharing. Our key insight is that tokenization and generation can be viewed as the same latent inference problem under different conditioning regimes: tokenization infers latents from fully observed images, whereas generation infers them from noise together with text or class conditioning. Motivated by this, we introduce a single-stage training procedure that jointly optimizes both tasks via two forward passes through the same Generative Encoder. The shared parameters enable gradients to jointly shape the latent space, encouraging a \"common latent language\". Across image and molecule modalities, UNITE achieves near state of the art performance without adversarial losses or pretrained encoders (e.g., DINO), reaching FID 2.12 and 1.73 for Base and Large models on ImageNet 256 x 256. We further analyze the Generative Encoder through the lenses of representation alignment and compression. These results show that single stage joint training of tokenization & generation from scratch is feasible.",
-      "url": "https://arxiv.org/abs/2603.22283v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.22283v1",
-      "published": "2026-03-23T17:59:49Z",
-      "updated": "2026-03-23T17:59:49Z",
+      "abstract": "Vision Language Models (VLMs) are increasingly used for tasks like medical report generation and visual question answering. However, fluent diagnostic text does not guarantee safe visual understanding. In clinical practice, interpretation begins with pre-diagnostic sanity checks: verifying that the input is valid to read (correct modality and anatomy, plausible viewpoint and orientation, and no obvious integrity violations). Existing benchmarks largely assume this step is solved, and therefore miss a critical failure mode: a model can produce plausible narratives even when the input is inconsistent or invalid. We introduce MedObvious, a 1,880-task benchmark that isolates input validation as a set-level consistency capability over small multi-panel image sets: the model must identify whether any panel violates expected coherence. MedObvious spans five progressive tiers, from basic orientation/modality mismatches to clinically motivated anatomy/viewpoint verification and triage-style cues, and includes five evaluation formats to test robustness across interfaces. Evaluating 17 different VLMs, we find that sanity checking remains unreliable: several models hallucinate anomalies on normal (negative-control) inputs, performance degrades when scaling to larger image sets, and measured accuracy varies substantially between multiple-choice and open-ended settings. These results show that pre-diagnostic verification remains unsolved for medical VLMs and should be treated as a distinct, safety-critical capability before deployment.",
+      "url": "https://arxiv.org/abs/2603.23501v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.23501v1",
+      "published": "2026-03-24T17:59:54Z",
+      "updated": "2026-03-24T17:59:54Z",
       "categories": [
         "cs.CV",
         "cs.AI",
-        "cs.GR",
+        "cs.CL"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2603.23500v1",
+      "title": "UniGRPO: Unified Policy Optimization for Reasoning-Driven Visual Generation",
+      "authors": [
+        "Jie Liu",
+        "Zilyu Ye",
+        "Linxiao Yuan",
+        "Shenhan Zhu",
+        "Yu Gao",
+        "Jie Wu",
+        "Kunchang Li",
+        "Xionghui Wang",
+        "Xiaonan Nie",
+        "Weilin Huang",
+        "Wanli Ouyang"
+      ],
+      "abstract": "Unified models capable of interleaved generation have emerged as a promising paradigm, with the community increasingly converging on autoregressive modeling for text and flow matching for image generation. To advance this direction, we propose a unified reinforcement learning framework tailored for interleaved generation. We validate our approach on its fundamental unit: a single round of reasoning-driven image generation, where the model first expands the user prompt through reasoning, followed by image synthesis. Formulating this multimodal generation process as a Markov Decision Process with sparse terminal rewards, we introduce UniGRPO to jointly optimize text and image generation policies using GRPO. Adopting a minimalist methodology to avoid over-design, we leverage established training recipes for both modalities by seamlessly integrating standard GRPO for reasoning and FlowGRPO for visual synthesis. To ensure scalability to multi-round interleaved generation, we introduce two critical modifications to the original FlowGRPO: (1) eliminating classifier-free guidance to maintain linear, unbranched rollouts, which is essential for scaling to complex scenarios involving multi-turn interactions and multi-condition generation (e.g., editing); and (2) replacing the standard latent KL penalty with an MSE penalty directly on the velocity fields, providing a more robust and direct regularization signal to mitigate reward hacking effectively. Our experiments demonstrate that this unified training recipe significantly enhances image generation quality through reasoning, providing a robust and scalable baseline for the future post-training of fully interleaved models.",
+      "url": "https://arxiv.org/abs/2603.23500v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.23500v1",
+      "published": "2026-03-24T17:59:17Z",
+      "updated": "2026-03-24T17:59:17Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2603.23499v1",
+      "title": "DA-Flow: Degradation-Aware Optical Flow Estimation with Diffusion Models",
+      "authors": [
+        "Jaewon Min",
+        "Jaeeun Lee",
+        "Yeji Choi",
+        "Paul Hyunbin Cho",
+        "Jin Hyeon Kim",
+        "Tae-Young Lee",
+        "Jongsik Ahn",
+        "Hwayeong Lee",
+        "Seonghyun Park",
+        "Seungryong Kim"
+      ],
+      "abstract": "Optical flow models trained on high-quality data often degrade severely when confronted with real-world corruptions such as blur, noise, and compression artifacts. To overcome this limitation, we formulate Degradation-Aware Optical Flow, a new task targeting accurate dense correspondence estimation from real-world corrupted videos. Our key insight is that the intermediate representations of image restoration diffusion models are inherently corruption-aware but lack temporal awareness. To address this limitation, we lift the model to attend across adjacent frames via full spatio-temporal attention, and empirically demonstrate that the resulting features exhibit zero-shot correspondence capabilities. Based on this finding, we present DA-Flow, a hybrid architecture that fuses these diffusion features with convolutional features within an iterative refinement framework. DA-Flow substantially outperforms existing optical flow methods under severe degradation across multiple benchmarks.",
+      "url": "https://arxiv.org/abs/2603.23499v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.23499v1",
+      "published": "2026-03-24T17:59:13Z",
+      "updated": "2026-03-24T17:59:13Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2603.23497v1",
+      "title": "WildWorld: A Large-Scale Dataset for Dynamic World Modeling with Actions and Explicit State toward Generative ARPG",
+      "authors": [
+        "Zhen Li",
+        "Zian Meng",
+        "Shuwei Shi",
+        "Wenshuo Peng",
+        "Yuwei Wu",
+        "Bo Zheng",
+        "Chuanhao Li",
+        "Kaipeng Zhang"
+      ],
+      "abstract": "Dynamical systems theory and reinforcement learning view world evolution as latent-state dynamics driven by actions, with visual observations providing partial information about the state. Recent video world models attempt to learn this action-conditioned dynamics from data. However, existing datasets rarely match the requirement: they typically lack diverse and semantically meaningful action spaces, and actions are directly tied to visual observations rather than mediated by underlying states. As a result, actions are often entangled with pixel-level changes, making it difficult for models to learn structured world dynamics and maintain consistent evolution over long horizons. In this paper, we propose WildWorld, a large-scale action-conditioned world modeling dataset with explicit state annotations, automatically collected from a photorealistic AAA action role-playing game (Monster Hunter: Wilds). WildWorld contains over 108 million frames and features more than 450 actions, including movement, attacks, and skill casting, together with synchronized per-frame annotations of character skeletons, world states, camera poses, and depth maps. We further derive WildBench to evaluate models through Action Following and State Alignment. Extensive experiments reveal persistent challenges in modeling semantically rich actions and maintaining long-horizon state consistency, highlighting the need for state-aware video generation. The project page is https://shandaai.github.io/wildworld-project/.",
+      "url": "https://arxiv.org/abs/2603.23497v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.23497v1",
+      "published": "2026-03-24T17:58:25Z",
+      "updated": "2026-03-24T17:58:25Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2603.23496v1",
+      "title": "Estimating Flow Velocity and Vehicle Angle-of-Attack from Non-invasive Piezoelectric Structural Measurements Using Deep Learning",
+      "authors": [
+        "Chandler B. Smith",
+        "S. Hales Swift",
+        "Andrew Steyer",
+        "Ihab El-Kady"
+      ],
+      "abstract": "Accurate estimation of aerodynamic state variables such as freestream velocity and angle of attack (AoA) is important for aerodynamic load prediction, flight control, and model validation. This work presents a non-intrusive method for estimating vehicle velocity and AoA from structural vibration measurements rather than direct flow instrumentation such as pitot tubes. A dense array of piezoelectric sensors mounted on the interior skin of an aeroshell capture vibrations induced by turbulent boundary layer pressure fluctuations, and a convolutional neural network (CNN) is trained to invert these structural responses to recover velocity and AoA.   Proof-of-concept is demonstrated through controlled experiments in Sandia's hypersonic wind tunnel spanning zero and nonzero AoA configurations, Mach~5 and Mach~8 conditions, and both constant and continuously varying tunnel operations. The CNN is trained and evaluated using data from 16 wind tunnel runs, with a temporally centered held-out interval within each run used to form training, validation, and test datasets and assess intra-run temporal generalization. Raw CNN predictions exhibit increased variance during continuously varying conditions; a short-window moving-median post-processing step suppresses this variance and improves robustness. After post-processing, the method achieves a mean velocity error relative to the low-pass filtered reference velocity below 2.27~m/s (0.21\\%) and a mean AoA error of $0.44^{\\circ} (8.25\\%)$ on held-out test data from the same experimental campaign, demonstrating feasibility of vibration-based velocity and AoA estimation in a controlled laboratory environment.",
+      "url": "https://arxiv.org/abs/2603.23496v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.23496v1",
+      "published": "2026-03-24T17:58:23Z",
+      "updated": "2026-03-24T17:58:23Z",
+      "categories": [
         "cs.LG"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2603.22282v1",
-      "title": "UniMotion: A Unified Framework for Motion-Text-Vision Understanding and Generation",
-      "authors": [
-        "Ziyi Wang",
-        "Xinshun Wang",
-        "Shuang Chen",
-        "Yang Cong",
-        "Mengyuan Liu"
-      ],
-      "abstract": "We present UniMotion, to our knowledge the first unified framework for simultaneous understanding and generation of human motion, natural language, and RGB images within a single architecture. Existing unified models handle only restricted modality subsets (e.g., Motion-Text or static Pose-Image) and predominantly rely on discrete tokenization, which introduces quantization errors and disrupts temporal continuity. UniMotion overcomes both limitations through a core principle: treating motion as a first-class continuous modality on equal footing with RGB. A novel Cross-Modal Aligned Motion VAE (CMA-VAE) and symmetric dual-path embedders construct parallel continuous pathways for Motion and RGB within a shared LLM backbone. To inject visual-semantic priors into motion representations without requiring images at inference, we propose Dual-Posterior KL Alignment (DPA), which distills a vision-fused encoder's richer posterior into the motion-only encoder. To address the cold-start problem -- where text supervision alone is too sparse to calibrate the newly introduced motion pathway -- we further propose Latent Reconstruction Alignment (LRA), a self-supervised pre-training strategy that uses dense motion latents as unambiguous conditions to co-calibrate the embedder, backbone, and flow head, establishing a stable motion-aware foundation for all downstream tasks. UniMotion achieves state-of-the-art performance across seven tasks spanning any-to-any understanding, generation, and editing among the three modalities, with especially strong advantages on cross-modal compositional tasks.",
-      "url": "https://arxiv.org/abs/2603.22282v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.22282v1",
-      "published": "2026-03-23T17:59:48Z",
-      "updated": "2026-03-23T17:59:48Z",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2603.22281v1",
-      "title": "ThinkJEPA: Empowering Latent World Models with Large Vision-Language Reasoning Model",
-      "authors": [
-        "Haichao Zhang",
-        "Yijiang Li",
-        "Shwai He",
-        "Tushar Nagarajan",
-        "Mingfei Chen",
-        "Jianglin Lu",
-        "Ang Li",
-        "Yun Fu"
-      ],
-      "abstract": "Recent progress in latent world models (e.g., V-JEPA2) has shown promising capability in forecasting future world states from video observations. Nevertheless, dense prediction from a short observation window limits temporal context and can bias predictors toward local, low-level extrapolation, making it difficult to capture long-horizon semantics and reducing downstream utility. Vision--language models (VLMs), in contrast, provide strong semantic grounding and general knowledge by reasoning over uniformly sampled frames, but they are not ideal as standalone dense predictors due to compute-driven sparse sampling, a language-output bottleneck that compresses fine-grained interaction states into text-oriented representations, and a data-regime mismatch when adapting to small action-conditioned datasets. We propose a VLM-guided JEPA-style latent world modeling framework that combines dense-frame dynamics modeling with long-horizon semantic guidance via a dual-temporal pathway: a dense JEPA branch for fine-grained motion and interaction cues, and a uniformly sampled VLM \\emph{thinker} branch with a larger temporal stride for knowledge-rich guidance. To transfer the VLM's progressive reasoning signals effectively, we introduce a hierarchical pyramid representation extraction module that aggregates multi-layer VLM representations into guidance features compatible with latent prediction. Experiments on hand-manipulation trajectory prediction show that our method outperforms both a strong VLM-only baseline and a JEPA-predictor baseline, and yields more robust long-horizon rollout behavior.",
-      "url": "https://arxiv.org/abs/2603.22281v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.22281v1",
-      "published": "2026-03-23T17:59:42Z",
-      "updated": "2026-03-23T17:59:42Z",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.CL",
-        "cs.LG",
-        "cs.RO"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2603.22280v1",
-      "title": "DualCoT-VLA: Visual-Linguistic Chain of Thought via Parallel Reasoning for Vision-Language-Action Models",
-      "authors": [
-        "Zhide Zhong",
-        "Junfeng Li",
-        "Junjie He",
-        "Haodong Yan",
-        "Xin Gong",
-        "Guanyi Zhao",
-        "Yingjie Cai",
-        "Jiantao Gao",
-        "Xu Yan",
-        "Bingbing Liu",
-        "Yingcong Chen",
-        "Liuqing Yang",
-        "Haoang Li"
-      ],
-      "abstract": "Vision-Language-Action (VLA) models map visual observations and language instructions directly to robotic actions. While effective for simple tasks, standard VLA models often struggle with complex, multi-step tasks requiring logical planning, as well as precise manipulations demanding fine-grained spatial perception. Recent efforts have incorporated Chain-of-Thought (CoT) reasoning to endow VLA models with a ``thinking before acting'' capability. However, current CoT-based VLA models face two critical limitations: 1) an inability to simultaneously capture low-level visual details and high-level logical planning due to their reliance on isolated, single-modal CoT; 2) high inference latency with compounding errors caused by step-by-step autoregressive decoding. To address these limitations, we propose DualCoT-VLA, a visual-linguistic CoT method for VLA models with a parallel reasoning mechanism. To achieve comprehensive multi-modal reasoning, our method integrates a visual CoT for low-level spatial understanding and a linguistic CoT for high-level task planning. Furthermore, to overcome the latency bottleneck, we introduce a parallel CoT mechanism that incorporates two sets of learnable query tokens, shifting autoregressive reasoning to single-step forward reasoning. Extensive experiments demonstrate that our DualCoT-VLA achieves state-of-the-art performance on the LIBERO and RoboCasa GR1 benchmarks, as well as in real-world platforms.",
-      "url": "https://arxiv.org/abs/2603.22280v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.22280v1",
-      "published": "2026-03-23T17:59:25Z",
-      "updated": "2026-03-23T17:59:25Z",
-      "categories": [
-        "cs.CV",
-        "cs.RO"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2603.22279v1",
-      "title": "3D-Layout-R1: Structured Reasoning for Language-Instructed Spatial Editing",
-      "authors": [
-        "Haoyu Zhen",
-        "Xiaolong Li",
-        "Yilin Zhao",
-        "Han Zhang",
-        "Sifei Liu",
-        "Kaichun Mo",
-        "Chuang Gan",
-        "Subhashree Radhakrishnan"
-      ],
-      "abstract": "Large Language Models (LLMs) and Vision Language Models (VLMs) have shown impressive reasoning abilities, yet they struggle with spatial understanding and layout consistency when performing fine-grained visual editing. We introduce a Structured Reasoning framework that performs text-conditioned spatial layout editing via scene-graph reasoning. Given an input scene graph and a natural-language instruction, the model reasons over the graph to generate an updated scene graph that satisfies the text condition while maintaining spatial coherence. By explicitly guiding the reasoning process through structured relational representations, our approach improves both interpretability and control over spatial relationships. We evaluate our method on a new text-guided layout editing benchmark encompassing sorting, spatial alignment, and room-editing tasks. Our training paradigm yields an average 15% improvement in IoU and 25% reduction in center-distance error compared to Chain of Thought Fine-tuning (CoT-SFT) and vanilla GRPO baselines. Compared to SOTA zero-shot LLMs, our best models achieve up to 20% higher mIoU, demonstrating markedly improved spatial precision.",
-      "url": "https://arxiv.org/abs/2603.22279v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.22279v1",
-      "published": "2026-03-23T17:59:14Z",
-      "updated": "2026-03-23T17:59:14Z",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2603.22278v1",
-      "title": "The Dual Mechanisms of Spatial Reasoning in Vision-Language Models",
-      "authors": [
-        "Kelly Cui",
-        "Nikhil Prakash",
-        "Ayush Raina",
-        "David Bau",
-        "Antonio Torralba",
-        "Tamar Rott Shaham"
-      ],
-      "abstract": "Many multimodal tasks, such as image captioning and visual question answering, require vision-language models (VLMs) to associate objects with their properties and spatial relations. Yet it remains unclear where and how such associations are computed within VLMs. In this work, we show that VLMs rely on two concurrent mechanisms to represent such associations. In the language model backbone, intermediate layers represent content-independent spatial relations on top of visual tokens corresponding to objects. However, this mechanism plays only a secondary role in shaping model predictions. Instead, the dominant source of spatial information originates in the vision encoder, whose representations encode the layout of objects and are directly exploited by the language model backbone. Notably, this spatial signal is distributed globally across visual tokens, extending beyond object regions into surrounding background areas. We show that enhancing these vision-derived spatial representations globally across all image tokens improves spatial reasoning performance on naturalistic images. Together, our results clarify how spatial association is computed within VLMs and highlight the central role of vision encoders in enabling spatial reasoning.",
-      "url": "https://arxiv.org/abs/2603.22278v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.22278v1",
-      "published": "2026-03-23T17:58:02Z",
-      "updated": "2026-03-23T17:58:02Z",
-      "categories": [
-        "cs.CV",
-        "cs.LG"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2603.22276v1",
-      "title": "Scaling DoRA: High-Rank Adaptation via Factored Norms and Fused Kernels",
-      "authors": [
-        "Alexandra Zelenin",
-        "Alexandra Zhuravlyova"
-      ],
-      "abstract": "Weight-Decomposed Low-Rank Adaptation (DoRA) extends LoRA by decoupling weight magnitude from direction, but its forward pass requires the row-wise norm of W + sBA, a computation that every major framework we surveyed implements by materializing the dense [d_out, d_in] product BA. At d_in = 8192 and rank r = 384, a single module's norm requires about 512 MB of transient working memory in bf16, making high-rank DoRA costly and often infeasible on common single-GPU setups once hundreds of adapted modules and checkpointing are involved.   We present two systems contributions. A factored norm decomposes the squared norm into base, cross, and Gram terms computable through O(d_out r + r^2) intermediates, eliminating the dense product. Fused Triton kernels collapse the four-kernel DoRA composition into a single pass, reducing memory traffic by about 4x and using a numerically stable form that avoids catastrophic cancellation in the near-unity rescaling regime where magnitude scales concentrate in practice.   Across six 8-32B vision-language models (VLMs) on three NVIDIA GPUs (RTX 6000 PRO, H200, B200) at r = 384 in bf16, the fused implementation is 1.5-2.0x faster than Hugging Face PEFT's DoRA implementation for inference and 1.5-1.9x faster for gradient computation (optimizer step excluded), with up to 7 GB lower peak VRAM. Microbenchmarks on six GPUs spanning four architecture generations (L40S, A100, RTX 6000 PRO, H200, B200, B300) confirm 1.5-2.7x compose-kernel speedup. Final-logit cosine similarity exceeds 0.9999 across all model/GPU pairs, and multi-seed training curves match within 7.1 x 10^-4 mean per-step loss delta over 2000 steps.",
-      "url": "https://arxiv.org/abs/2603.22276v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.22276v1",
-      "published": "2026-03-23T17:57:24Z",
-      "updated": "2026-03-23T17:57:24Z",
-      "categories": [
-        "cs.LG",
-        "stat.ML"
       ],
       "primary_category": "cs.LG"
     },
     {
-      "id": "2603.22275v1",
-      "title": "Repurposing Geometric Foundation Models for Multi-view Diffusion",
+      "id": "2603.23495v1",
+      "title": "VISion On Request: Enhanced VLLM efficiency with sparse, dynamically selected, vision-language interactions",
       "authors": [
-        "Wooseok Jang",
-        "Seonghu Jeon",
-        "Jisang Han",
-        "Jinhyeok Choi",
-        "Minkyung Kwon",
-        "Seungryong Kim",
-        "Saining Xie",
-        "Sainan Liu"
+        "Adrian Bulat",
+        "Alberto Baldrati",
+        "Ioannis Maniadis Metaxas",
+        "Yassine Ouali",
+        "Georgios Tzimiropoulos"
       ],
-      "abstract": "While recent advances in generative latent spaces have driven substantial progress in single-image generation, the optimal latent space for novel view synthesis (NVS) remains largely unexplored. In particular, NVS requires geometrically consistent generation across viewpoints, but existing approaches typically operate in a view-independent VAE latent space. In this paper, we propose Geometric Latent Diffusion (GLD), a framework that repurposes the geometrically consistent feature space of geometric foundation models as the latent space for multi-view diffusion. We show that these features not only support high-fidelity RGB reconstruction but also encode strong cross-view geometric correspondences, providing a well-suited latent space for NVS. Our experiments demonstrate that GLD outperforms both VAE and RAE on 2D image quality and 3D consistency metrics, while accelerating training by more than 4.4x compared to the VAE latent space. Notably, GLD remains competitive with state-of-the-art methods that leverage large-scale text-to-image pretraining, despite training its diffusion model from scratch without such generative pretraining.",
-      "url": "https://arxiv.org/abs/2603.22275v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.22275v1",
-      "published": "2026-03-23T17:57:05Z",
-      "updated": "2026-03-23T17:57:05Z",
+      "abstract": "Existing approaches for improving the efficiency of Large Vision-Language Models (LVLMs) are largely based on the concept of visual token reduction. This approach, however, creates an information bottleneck that impairs performance, especially on challenging tasks that require fine-grained understanding and reasoning. In this work, we challenge this paradigm by introducing VISion On Request (VISOR), a method that reduces inference cost without discarding visual information. Instead of compressing the image, VISOR improves efficiency by sparsifying the interaction between image and text tokens. Specifically, the language model attends to the full set of high-resolution visual tokens through a small, strategically placed set of attention layers: general visual context is provided by efficient cross-attention between text-image, while a few well-placed and dynamically selected self-attention layers refine the visual representations themselves, enabling complex, high-resolution reasoning when needed. Based on this principle, we first train a single universal network on a range of computational budgets by varying the number of self-attention layers, and then introduce a lightweight policy mechanism that dynamically allocates visual computation based on per-sample complexity. Extensive experiments show that VISOR drastically reduces computational cost while matching or exceeding state-of-the-art results across a diverse suite of benchmarks, and excels in challenging tasks that require detailed visual understanding.",
+      "url": "https://arxiv.org/abs/2603.23495v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.23495v1",
+      "published": "2026-03-24T17:58:17Z",
+      "updated": "2026-03-24T17:58:17Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2603.23491v1",
+      "title": "Foveated Diffusion: Efficient Spatially Adaptive Image and Video Generation",
+      "authors": [
+        "Brian Chao",
+        "Lior Yariv",
+        "Howard Xiao",
+        "Gordon Wetzstein"
+      ],
+      "abstract": "Diffusion and flow matching models have unlocked unprecedented capabilities for creative content creation, such as interactive image and streaming video generation. The growing demand for higher resolutions, frame rates, and context lengths, however, makes efficient generation increasingly challenging, as computational complexity grows quadratically with the number of generated tokens. Our work seeks to optimize the efficiency of the generation process in settings where the user's gaze location is known or can be estimated, for example, by using eye tracking. In these settings, we leverage the eccentricity-dependent acuity of human vision: while a user perceives very high-resolution visual information in a small region around their gaze location (the foveal region), the ability to resolve detail quickly degrades in the periphery of the visual field. Our approach starts with a mask modeling the foveated resolution to allocate tokens non-uniformly, assigning higher token density to foveal regions and lower density to peripheral regions. An image or video is generated in a mixed-resolution token setting, yielding results perceptually indistinguishable from full-resolution generation, while drastically reducing the token count and generation time. To this end, we develop a principled mechanism for constructing mixed-resolution tokens directly from high-resolution data, allowing a foveated diffusion model to be post-trained from an existing base model while maintaining content consistency across resolutions. We validate our approach through extensive analysis and a carefully designed user study, demonstrating the efficacy of foveation as a practical and scalable axis for efficient generation.",
+      "url": "https://arxiv.org/abs/2603.23491v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.23491v1",
+      "published": "2026-03-24T17:57:35Z",
+      "updated": "2026-03-24T17:57:35Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2603.23489v1",
+      "title": "AgentRVOS: Reasoning over Object Tracks for Zero-Shot Referring Video Object Segmentation",
+      "authors": [
+        "Woojeong Jin",
+        "Jaeho Lee",
+        "Heeseong Shin",
+        "Seungho Jang",
+        "Junhwan Heo",
+        "Seungryong Kim"
+      ],
+      "abstract": "Referring Video Object Segmentation (RVOS) aims to segment a target object throughout a video given a natural language query. Training-free methods for this task follow a common pipeline: a MLLM selects keyframes, grounds the referred object within those frames, and a video segmentation model propagates the results. While intuitive, this design asks the MLLM to make temporal decisions before any object-level evidence is available, limiting both reasoning quality and spatio-temporal coverage. To overcome this, we propose AgentRVOS, a training-free agentic pipeline built on the complementary strengths of SAM3 and a MLLM. Given a concept derived from the query, SAM3 provides reliable perception over the full spatio-temporal extent through generated mask tracks. The MLLM then identifies the target through query-grounded reasoning over this object-level evidence, iteratively pruning guided by SAM3's temporal existence information. Extensive experiments show that AgentRVOS achieves state-of-the-art performance among training-free methods across multiple benchmarks, with consistent results across diverse MLLM backbones. Our project page is available at: https://cvlab-kaist.github.io/AgentRVOS/.",
+      "url": "https://arxiv.org/abs/2603.23489v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.23489v1",
+      "published": "2026-03-24T17:55:17Z",
+      "updated": "2026-03-24T17:55:17Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2603.23488v1",
+      "title": "One View Is Enough! Monocular Training for In-the-Wild Novel View Generation",
+      "authors": [
+        "Adrien Ramanana Rahary",
+        "Nicolas Dufour",
+        "Patrick Perez",
+        "David Picard"
+      ],
+      "abstract": "Monocular novel-view synthesis has long required multi-view image pairs for supervision, limiting training data scale and diversity. We argue it is not necessary: one view is enough. We present OVIE, trained entirely on unpaired internet images. We leverage a monocular depth estimator as a geometric scaffold at training time: we lift a source image into 3D, apply a sampled camera transformation, and project to obtain a pseudo-target view. To handle disocclusions, we introduce a masked training formulation that restricts geometric, perceptual, and textural losses to valid regions, enabling training on 30 million uncurated images. At inference, OVIE is geometry-free, requiring no depth estimator or 3D representation. Trained exclusively on in-the-wild images, OVIE outperforms prior methods in a zero-shot setting, while being 600x faster than the second-best baseline. Code and models are publicly available at https://github.com/AdrienRR/ovie.",
+      "url": "https://arxiv.org/abs/2603.23488v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.23488v1",
+      "published": "2026-03-24T17:54:25Z",
+      "updated": "2026-03-24T17:54:25Z",
       "categories": [
         "cs.CV"
       ],
