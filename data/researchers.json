@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-03-25T09:06:18.130154+00:00",
+  "scraped_at": "2026-03-26T09:16:24.431341+00:00",
   "researcher_count": 54,
   "researchers": [
     {
@@ -10,6 +10,43 @@
       "website": "https://ames.caltech.edu/",
       "paper_count": 5,
       "papers": [
+        {
+          "id": "2603.24566v1",
+          "title": "Integral Control Barrier Functions with Input Delay: Prediction, Feasibility, and Robustness",
+          "authors": [
+            "Adam K. Kiss",
+            "Ersin Das",
+            "Tamas G. Molnar",
+            "Aaron D. Ames"
+          ],
+          "abstract": "Time delays in feedback control loops can cause controllers to respond too late, and with excessively large corrective actions, leading to unsafe behavior (violation of state constraints) and controller infeasibility (violation of input constraints). To address this problem, we develop a safety-critical control framework for nonlinear systems with input delay using dynamically defined (integral) controllers. Building on the concept of Integral Control Barrier Functions (ICBFs), we concurrently address two fundamental challenges: compensating the effect of delays, while ensuring feasibility when state and input constraints are imposed jointly. To this end, we embed predictor feedback into a dynamically defined control law to compensate for delays, with the predicted state evolving according to delay-free dynamics. Then, utilizing ICBFs, we formulate a quadratic program for safe control design. For systems subject to simultaneous state and input constraints, we derive a closed-form feasibility condition for the resulting controller, yielding a compatible ICBF pair that guarantees forward invariance under delay. We also address robustness to prediction errors (e.g., caused by delay uncertainty) using tunable robust ICBFs. Our approach is validated on an adaptive cruise control example with actuation delay.",
+          "url": "https://arxiv.org/abs/2603.24566v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.24566v1",
+          "published": "2026-03-25T17:44:20Z",
+          "updated": "2026-03-25T17:44:20Z",
+          "categories": [
+            "eess.SY"
+          ],
+          "primary_category": "eess.SY"
+        },
+        {
+          "id": "2603.23995v1",
+          "title": "MIRROR: Visual Motion Imitation via Real-time Retargeting and Teleoperation with Parallel Differential Inverse Kinematics",
+          "authors": [
+            "Junheng Li",
+            "Lizhi Yang",
+            "Aaron D. Ames"
+          ],
+          "abstract": "Real-time humanoid teleoperation requires inverse kinematics (IK) solvers that are both responsive and constraint-safe under kinematic redundancy and self-collision constraints. While differential IK enables efficient online retargeting, its locally linearized updates are inherently basin-dependent and often become trapped near joint limits, singularities, or active collision boundaries, leading to unsafe or stagnant behavior. We propose a GPU-parallelized, continuation-based differential IK that improves escape from such constraint-induced local minima while preserving real-time performance, promoting safety and stability. Multiple constrained IK quadratic programs are evaluated in parallel, together with a self-collision avoidance control barrier function (CBF), and a Lyapunov-based progression criterion selects updates that reduce the final global task-space error. The method is paired with a visual skeletal pose estimation pipeline that enables robust, real-time upper-body teleoperation on the THEMIS humanoid robot hardware in real-world tasks.",
+          "url": "https://arxiv.org/abs/2603.23995v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.23995v1",
+          "published": "2026-03-25T06:49:58Z",
+          "updated": "2026-03-25T06:49:58Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
         {
           "id": "2603.18450v1",
           "title": "Generalizations of Backup Control Barrier Functions: Expansion and Adaptation for Input-Bounded Safety-Critical Control",
@@ -70,45 +107,6 @@
             "cs.RO"
           ],
           "primary_category": "cs.RO"
-        },
-        {
-          "id": "2603.00338v1",
-          "title": "Layered Safety: Enhancing Autonomous Collision Avoidance via Multistage CBF Safety Filters",
-          "authors": [
-            "Erina Yamaguchi",
-            "Ryan M. Bena",
-            "Gilbert Bahati",
-            "Aaron D. Ames"
-          ],
-          "abstract": "This paper presents a general end-to-end framework for constructing robust and reliable layered safety filters that can be leveraged to perform dynamic collision avoidance over a broad range of applications using only local perception data. Given a robot-centric point cloud, we begin by constructing an occupancy map which is used to synthesize a Poisson safety function (PSF). The resultant PSF is employed as a control barrier function (CBF) within two distinct safety filtering stages. In the first stage, we propose a predictive safety filter to compute optimal safe trajectories based on nominal potentially-unsafe commands. The resultant short-term plans are constrained to satisfy the CBF condition along a finite prediction horizon. In the second stage, instantaneous velocity commands are further refined by a real-time CBF-based safety filter and tracked by the full-order low-level robot controller. Assuming accurate tracking of velocity commands, we obtain formal guarantees of safety for the full-order system. We validate the optimality and robustness of our multistage architecture, in comparison to traditional single-stage safety filters, via a detailed Pareto analysis. We further demonstrate the effectiveness and generality of our collision avoidance methodology on multiple legged robot platforms across a variety of real-world dynamic scenarios.",
-          "url": "https://arxiv.org/abs/2603.00338v1",
-          "pdf_url": "https://arxiv.org/pdf/2603.00338v1",
-          "published": "2026-02-27T22:19:45Z",
-          "updated": "2026-02-27T22:19:45Z",
-          "categories": [
-            "cs.RO"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2602.03691v1",
-          "title": "Input-to-State Safe Backstepping: Robust Safety-Critical Control with Unmatched Uncertainties",
-          "authors": [
-            "Max H. Cohen",
-            "Pio Ong",
-            "Aaron D. Ames"
-          ],
-          "abstract": "Guaranteeing safety in the presence of unmatched disturbances -- uncertainties that cannot be directly canceled by the control input -- remains a key challenge in nonlinear control. This paper presents a constructive approach to safety-critical control of nonlinear systems with unmatched disturbances. We first present a generalization of the input-to-state safety (ISSf) framework for systems with these uncertainties using the recently developed notion of an Optimal Decay CBF, which provides more flexibility for satisfying the associated Lyapunov-like conditions for safety. From there, we outline a procedure for constructing ISSf-CBFs for two relevant classes of systems with unmatched uncertainties: i) strict-feedback systems; ii) dual-relative-degree systems, which are similar to differentially flat systems. Our theoretical results are illustrated via numerical simulations of an inverted pendulum and planar quadrotor.",
-          "url": "https://arxiv.org/abs/2602.03691v1",
-          "pdf_url": "https://arxiv.org/pdf/2602.03691v1",
-          "published": "2026-02-03T16:09:36Z",
-          "updated": "2026-02-03T16:09:36Z",
-          "categories": [
-            "eess.SY",
-            "cs.RO",
-            "math.OC"
-          ],
-          "primary_category": "eess.SY"
         }
       ]
     },
@@ -5558,7 +5556,7 @@
           "primary_category": "cs.RO"
         },
         {
-          "id": "2601.16212v3",
+          "id": "2601.16212v4",
           "title": "Point Bridge: 3D Representations for Cross Domain Policy Learning",
           "authors": [
             "Siddhant Haldar",
@@ -5570,10 +5568,10 @@
             "Ajay Mandlekar"
           ],
           "abstract": "Robot foundation models are beginning to deliver on the promise of generalist robotic agents, yet progress remains constrained by the scarcity of large-scale real-world manipulation datasets. Simulation and synthetic data generation offer a scalable alternative, but their usefulness is limited by the visual domain gap between simulation and reality. In this work, we present Point Bridge, a framework that leverages unified, domain-agnostic point-based representations to unlock synthetic datasets for zero-shot sim-to-real policy transfer, without explicit visual or object-level alignment. Point Bridge combines automated point-based representation extraction via Vision-Language Models (VLMs), transformer-based policy learning, and efficient inference-time pipelines to train capable real-world manipulation agents using only synthetic data. With additional co-training on small sets of real demonstrations, Point Bridge further improves performance, substantially outperforming prior vision-based sim-and-real co-training methods. It achieves up to 44% gains in zero-shot sim-to-real transfer and up to 66% with limited real data across both single-task and multitask settings. Videos of the robot are best viewed at: https://pointbridge3d.github.io/",
-          "url": "https://arxiv.org/abs/2601.16212v3",
-          "pdf_url": "https://arxiv.org/pdf/2601.16212v3",
+          "url": "https://arxiv.org/abs/2601.16212v4",
+          "pdf_url": "https://arxiv.org/pdf/2601.16212v4",
           "published": "2026-01-22T18:59:24Z",
-          "updated": "2026-02-27T04:29:43Z",
+          "updated": "2026-03-25T12:24:59Z",
           "categories": [
             "cs.RO"
           ],
@@ -8193,12 +8191,12 @@
           "primary_category": "cs.RO"
         },
         {
-          "id": "2603.12510v1",
+          "id": "2603.12510v2",
           "title": "Red-Teaming Vision-Language-Action Models via Quality Diversity Prompt Generation for Robust Robot Policies",
           "authors": [
             "Siddharth Srikanth",
             "Freddie Liang",
-            "Sophie Hsu",
+            "Ya-Chuan Hsu",
             "Varun Bhatt",
             "Shihan Zhao",
             "Henry Chen",
@@ -8210,10 +8208,10 @@
             "Stefanos Nikolaidis"
           ],
           "abstract": "Vision-Language-Action (VLA) models have significant potential to enable general-purpose robotic systems for a range of vision-language tasks. However, the performance of VLA-based robots is highly sensitive to the precise wording of language instructions, and it remains difficult to predict when such robots will fail. To improve the robustness of VLAs to different wordings, we present Q-DIG (Quality Diversity for Diverse Instruction Generation), which performs red-teaming by scalably identifying diverse natural language task descriptions that induce failures while remaining task-relevant. Q-DIG integrates Quality Diversity (QD) techniques with Vision-Language Models (VLMs) to generate a broad spectrum of adversarial instructions that expose meaningful vulnerabilities in VLA behavior. Our results across multiple simulation benchmarks show that Q-DIG finds more diverse and meaningful failure modes compared to baseline methods, and that fine-tuning VLAs on the generated instructions improves task success rates. Furthermore, results from a user study highlight that Q-DIG generates prompts judged to be more natural and human-like than those from baselines. Finally, real-world evaluations of Q-DIG prompts show results consistent with simulation, and fine-tuning VLAs on the generated prompts further success rates on unseen instructions. Together, these findings suggest that Q-DIG is a promising approach for identifying vulnerabilities and improving the robustness of VLA-based robots. Our anonymous project website is at qdigvla.github.io.",
-          "url": "https://arxiv.org/abs/2603.12510v1",
-          "pdf_url": "https://arxiv.org/pdf/2603.12510v1",
+          "url": "https://arxiv.org/abs/2603.12510v2",
+          "pdf_url": "https://arxiv.org/pdf/2603.12510v2",
           "published": "2026-03-12T22:58:42Z",
-          "updated": "2026-03-12T22:58:42Z",
+          "updated": "2026-03-24T23:07:24Z",
           "categories": [
             "cs.RO",
             "cs.AI",
@@ -9016,12 +9014,12 @@
       "paper_count": 5,
       "papers": [
         {
-          "id": "2603.12510v1",
+          "id": "2603.12510v2",
           "title": "Red-Teaming Vision-Language-Action Models via Quality Diversity Prompt Generation for Robust Robot Policies",
           "authors": [
             "Siddharth Srikanth",
             "Freddie Liang",
-            "Sophie Hsu",
+            "Ya-Chuan Hsu",
             "Varun Bhatt",
             "Shihan Zhao",
             "Henry Chen",
@@ -9033,10 +9031,10 @@
             "Stefanos Nikolaidis"
           ],
           "abstract": "Vision-Language-Action (VLA) models have significant potential to enable general-purpose robotic systems for a range of vision-language tasks. However, the performance of VLA-based robots is highly sensitive to the precise wording of language instructions, and it remains difficult to predict when such robots will fail. To improve the robustness of VLAs to different wordings, we present Q-DIG (Quality Diversity for Diverse Instruction Generation), which performs red-teaming by scalably identifying diverse natural language task descriptions that induce failures while remaining task-relevant. Q-DIG integrates Quality Diversity (QD) techniques with Vision-Language Models (VLMs) to generate a broad spectrum of adversarial instructions that expose meaningful vulnerabilities in VLA behavior. Our results across multiple simulation benchmarks show that Q-DIG finds more diverse and meaningful failure modes compared to baseline methods, and that fine-tuning VLAs on the generated instructions improves task success rates. Furthermore, results from a user study highlight that Q-DIG generates prompts judged to be more natural and human-like than those from baselines. Finally, real-world evaluations of Q-DIG prompts show results consistent with simulation, and fine-tuning VLAs on the generated prompts further success rates on unseen instructions. Together, these findings suggest that Q-DIG is a promising approach for identifying vulnerabilities and improving the robustness of VLA-based robots. Our anonymous project website is at qdigvla.github.io.",
-          "url": "https://arxiv.org/abs/2603.12510v1",
-          "pdf_url": "https://arxiv.org/pdf/2603.12510v1",
+          "url": "https://arxiv.org/abs/2603.12510v2",
+          "pdf_url": "https://arxiv.org/pdf/2603.12510v2",
           "published": "2026-03-12T22:58:42Z",
-          "updated": "2026-03-12T22:58:42Z",
+          "updated": "2026-03-24T23:07:24Z",
           "categories": [
             "cs.RO",
             "cs.AI",
