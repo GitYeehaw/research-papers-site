@@ -2,224 +2,226 @@
   "category": "cs",
   "name": "CS Research",
   "description": "Computer Science \u2014 AI, Machine Learning, NLP, Computer Vision",
-  "scraped_at": "2026-03-25T09:00:53.948331+00:00",
+  "scraped_at": "2026-03-27T09:03:42.518162+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2603.23502v1",
-      "title": "OccAny: Generalized Unconstrained Urban 3D Occupancy",
+      "id": "2603.25746v1",
+      "title": "ShotStream: Streaming Multi-Shot Video Generation for Interactive Storytelling",
       "authors": [
-        "Anh-Quan Cao",
-        "Tuan-Hung Vu"
+        "Yawen Luo",
+        "Xiaoyu Shi",
+        "Junhao Zhuang",
+        "Yutian Chen",
+        "Quande Liu",
+        "Xintao Wang",
+        "Pengfei Wan",
+        "Tianfan Xue"
       ],
-      "abstract": "Relying on in-domain annotations and precise sensor-rig priors, existing 3D occupancy prediction methods are limited in both scalability and out-of-domain generalization. While recent visual geometry foundation models exhibit strong generalization capabilities, they were mainly designed for general purposes and lack one or more key ingredients required for urban occupancy prediction, namely metric prediction, geometry completion in cluttered scenes and adaptation to urban scenarios. We address this gap and present OccAny, the first unconstrained urban 3D occupancy model capable of operating on out-of-domain uncalibrated scenes to predict and complete metric occupancy coupled with segmentation features. OccAny is versatile and can predict occupancy from sequential, monocular, or surround-view images. Our contributions are three-fold: (i) we propose the first generalized 3D occupancy framework with (ii) Segmentation Forcing that improves occupancy quality while enabling mask-level prediction, and (iii) a Novel View Rendering pipeline that infers novel-view geometry to enable test-time view augmentation for geometry completion. Extensive experiments demonstrate that OccAny outperforms all visual geometry baselines on 3D occupancy prediction task, while remaining competitive with in-domain self-supervised methods across three input settings on two established urban occupancy prediction datasets. Our code is available at https://github.com/valeoai/OccAny .",
-      "url": "https://arxiv.org/abs/2603.23502v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.23502v1",
-      "published": "2026-03-24T17:59:58Z",
-      "updated": "2026-03-24T17:59:58Z",
+      "abstract": "Multi-shot video generation is crucial for long narrative storytelling, yet current bidirectional architectures suffer from limited interactivity and high latency. We propose ShotStream, a novel causal multi-shot architecture that enables interactive storytelling and efficient on-the-fly frame generation. By reformulating the task as next-shot generation conditioned on historical context, ShotStream allows users to dynamically instruct ongoing narratives via streaming prompts. We achieve this by first fine-tuning a text-to-video model into a bidirectional next-shot generator, which is then distilled into a causal student via Distribution Matching Distillation. To overcome the challenges of inter-shot consistency and error accumulation inherent in autoregressive generation, we introduce two key innovations. First, a dual-cache memory mechanism preserves visual coherence: a global context cache retains conditional frames for inter-shot consistency, while a local context cache holds generated frames within the current shot for intra-shot consistency. And a RoPE discontinuity indicator is employed to explicitly distinguish the two caches to eliminate ambiguity. Second, to mitigate error accumulation, we propose a two-stage distillation strategy. This begins with intra-shot self-forcing conditioned on ground-truth historical shots and progressively extends to inter-shot self-forcing using self-generated histories, effectively bridging the train-test gap. Extensive experiments demonstrate that ShotStream generates coherent multi-shot videos with sub-second latency, achieving 16 FPS on a single GPU. It matches or exceeds the quality of slower bidirectional models, paving the way for real-time interactive storytelling. Training and inference code, as well as the models, are available on our",
+      "url": "https://arxiv.org/abs/2603.25746v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.25746v1",
+      "published": "2026-03-26T17:59:59Z",
+      "updated": "2026-03-26T17:59:59Z",
       "categories": [
         "cs.CV"
       ],
       "primary_category": "cs.CV"
     },
     {
-      "id": "2603.23501v1",
-      "title": "MedObvious: Exposing the Medical Moravec's Paradox in VLMs via Clinical Triage",
+      "id": "2603.25745v1",
+      "title": "Less Gaussians, Texture More: 4K Feed-Forward Textured Splatting",
       "authors": [
-        "Ufaq Khan",
-        "Umair Nawaz",
-        "L D M S S Teja",
-        "Numaan Saeed",
-        "Muhammad Bilal",
-        "Yutong Xie",
-        "Mohammad Yaqub",
-        "Muhammad Haris Khan"
+        "Yixing Lao",
+        "Xuyang Bai",
+        "Xiaoyang Wu",
+        "Nuoyuan Yan",
+        "Zixin Luo",
+        "Tian Fang",
+        "Jean-Daniel Nahmias",
+        "Yanghai Tsin",
+        "Shiwei Li",
+        "Hengshuang Zhao"
       ],
-      "abstract": "Vision Language Models (VLMs) are increasingly used for tasks like medical report generation and visual question answering. However, fluent diagnostic text does not guarantee safe visual understanding. In clinical practice, interpretation begins with pre-diagnostic sanity checks: verifying that the input is valid to read (correct modality and anatomy, plausible viewpoint and orientation, and no obvious integrity violations). Existing benchmarks largely assume this step is solved, and therefore miss a critical failure mode: a model can produce plausible narratives even when the input is inconsistent or invalid. We introduce MedObvious, a 1,880-task benchmark that isolates input validation as a set-level consistency capability over small multi-panel image sets: the model must identify whether any panel violates expected coherence. MedObvious spans five progressive tiers, from basic orientation/modality mismatches to clinically motivated anatomy/viewpoint verification and triage-style cues, and includes five evaluation formats to test robustness across interfaces. Evaluating 17 different VLMs, we find that sanity checking remains unreliable: several models hallucinate anomalies on normal (negative-control) inputs, performance degrades when scaling to larger image sets, and measured accuracy varies substantially between multiple-choice and open-ended settings. These results show that pre-diagnostic verification remains unsolved for medical VLMs and should be treated as a distinct, safety-critical capability before deployment.",
-      "url": "https://arxiv.org/abs/2603.23501v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.23501v1",
-      "published": "2026-03-24T17:59:54Z",
-      "updated": "2026-03-24T17:59:54Z",
+      "abstract": "Existing feed-forward 3D Gaussian Splatting methods predict pixel-aligned primitives, leading to a quadratic growth in primitive count as resolution increases. This fundamentally limits their scalability, making high-resolution synthesis such as 4K intractable. We introduce LGTM (Less Gaussians, Texture More), a feed-forward framework that overcomes this resolution scaling barrier. By predicting compact Gaussian primitives coupled with per-primitive textures, LGTM decouples geometric complexity from rendering resolution. This approach enables high-fidelity 4K novel view synthesis without per-scene optimization, a capability previously out of reach for feed-forward methods, all while using significantly fewer Gaussian primitives. Project page: https://yxlao.github.io/lgtm/",
+      "url": "https://arxiv.org/abs/2603.25745v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.25745v1",
+      "published": "2026-03-26T17:59:59Z",
+      "updated": "2026-03-26T17:59:59Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2603.25744v1",
+      "title": "MuRF: Unlocking the Multi-Scale Potential of Vision Foundation Models",
+      "authors": [
+        "Bocheng Zou",
+        "Mu Cai",
+        "Mark Stanley",
+        "Dingfu Lu",
+        "Yong Jae Lee"
+      ],
+      "abstract": "Vision Foundation Models (VFMs) have become the cornerstone of modern computer vision, offering robust representations across a wide array of tasks. While recent advances allow these models to handle varying input sizes during training, inference typically remains restricted to a single, fixed scale. This prevalent single-scale paradigm overlooks a fundamental property of visual perception: varying resolutions offer complementary inductive biases, where low-resolution views excel at global semantic recognition and high-resolution views are essential for fine-grained refinement. In this work, we propose Multi-Resolution Fusion (MuRF), a simple yet universally effective strategy to harness this synergy at inference time. Instead of relying on a single view, MuRF constructs a unified representation by processing an image at multiple resolutions through a frozen VFM and fusing the resulting features. The universality of MuRF is its most compelling attribute. It is not tied to a specific architecture, serving instead as a fundamental, training-free enhancement to visual representation. We empirically validate this by applying MuRF to a broad spectrum of critical computer vision tasks across multiple distinct VFM families - primarily DINOv2, but also demonstrating successful generalization to contrastive models like SigLIP2.",
+      "url": "https://arxiv.org/abs/2603.25744v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.25744v1",
+      "published": "2026-03-26T17:59:58Z",
+      "updated": "2026-03-26T17:59:58Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2603.25743v1",
+      "title": "RefAlign: Representation Alignment for Reference-to-Video Generation",
+      "authors": [
+        "Lei Wang",
+        "YuXin Song",
+        "Ge Wu",
+        "Haocheng Feng",
+        "Hang Zhou",
+        "Jingdong Wang",
+        "Yaxing Wang",
+        "jian Yang"
+      ],
+      "abstract": "Reference-to-video (R2V) generation is a controllable video synthesis paradigm that constrains the generation process using both text prompts and reference images, enabling applications such as personalized advertising and virtual try-on. In practice, existing R2V methods typically introduce additional high-level semantic or cross-modal features alongside the VAE latent representation of the reference image and jointly feed them into the diffusion Transformer (DiT). These auxiliary representations provide semantic guidance and act as implicit alignment signals, which can partially alleviate pixel-level information leakage in the VAE latent space. However, they may still struggle to address copy--paste artifacts and multi-subject confusion caused by modality mismatch across heterogeneous encoder features. In this paper, we propose RefAlign, a representation alignment framework that explicitly aligns DiT reference-branch features to the semantic space of a visual foundation model (VFM). The core of RefAlign is a reference alignment loss that pulls the reference features and VFM features of the same subject closer to improve identity consistency, while pushing apart the corresponding features of different subjects to enhance semantic discriminability. This simple yet effective strategy is applied only during training, incurring no inference-time overhead, and achieves a better balance between text controllability and reference fidelity. Extensive experiments on the OpenS2V-Eval benchmark demonstrate that RefAlign outperforms current state-of-the-art methods in TotalScore, validating the effectiveness of explicit reference alignment for R2V tasks.",
+      "url": "https://arxiv.org/abs/2603.25743v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.25743v1",
+      "published": "2026-03-26T17:59:57Z",
+      "updated": "2026-03-26T17:59:57Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2603.25741v1",
+      "title": "Vega: Learning to Drive with Natural Language Instructions",
+      "authors": [
+        "Sicheng Zuo",
+        "Yuxuan Li",
+        "Wenzhao Zheng",
+        "Zheng Zhu",
+        "Jie Zhou",
+        "Jiwen Lu"
+      ],
+      "abstract": "Vision-language-action models have reshaped autonomous driving to incorporate languages into the decision-making process. However, most existing pipelines only utilize the language modality for scene descriptions or reasoning and lack the flexibility to follow diverse user instructions for personalized driving. To address this, we first construct a large-scale driving dataset (InstructScene) containing around 100,000 scenes annotated with diverse driving instructions with the corresponding trajectories. We then propose a unified Vision-Language-World-Action model, Vega, for instruction-based generation and planning. We employ the autoregressive paradigm to process visual inputs (vision) and language instructions (language) and the diffusion paradigm to generate future predictions (world modeling) and trajectories (action). We perform joint attention to enable interactions between the modalities and use individual projection layers for different modalities for more capabilities. Extensive experiments demonstrate that our method not only achieves superior planning performance but also exhibits strong instruction-following abilities, paving the way for more intelligent and personalized driving systems.",
+      "url": "https://arxiv.org/abs/2603.25741v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.25741v1",
+      "published": "2026-03-26T17:59:56Z",
+      "updated": "2026-03-26T17:59:56Z",
       "categories": [
         "cs.CV",
         "cs.AI",
-        "cs.CL"
+        "cs.RO"
       ],
       "primary_category": "cs.CV"
     },
     {
-      "id": "2603.23500v1",
-      "title": "UniGRPO: Unified Policy Optimization for Reasoning-Driven Visual Generation",
+      "id": "2603.25740v1",
+      "title": "Drive My Way: Preference Alignment of Vision-Language-Action Model for Personalized Driving",
       "authors": [
-        "Jie Liu",
-        "Zilyu Ye",
-        "Linxiao Yuan",
-        "Shenhan Zhu",
-        "Yu Gao",
-        "Jie Wu",
-        "Kunchang Li",
-        "Xionghui Wang",
-        "Xiaonan Nie",
-        "Weilin Huang",
-        "Wanli Ouyang"
+        "Zehao Wang",
+        "Huaide Jiang",
+        "Shuaiwu Dong",
+        "Yuping Wang",
+        "Hang Qiu",
+        "Jiachen Li"
       ],
-      "abstract": "Unified models capable of interleaved generation have emerged as a promising paradigm, with the community increasingly converging on autoregressive modeling for text and flow matching for image generation. To advance this direction, we propose a unified reinforcement learning framework tailored for interleaved generation. We validate our approach on its fundamental unit: a single round of reasoning-driven image generation, where the model first expands the user prompt through reasoning, followed by image synthesis. Formulating this multimodal generation process as a Markov Decision Process with sparse terminal rewards, we introduce UniGRPO to jointly optimize text and image generation policies using GRPO. Adopting a minimalist methodology to avoid over-design, we leverage established training recipes for both modalities by seamlessly integrating standard GRPO for reasoning and FlowGRPO for visual synthesis. To ensure scalability to multi-round interleaved generation, we introduce two critical modifications to the original FlowGRPO: (1) eliminating classifier-free guidance to maintain linear, unbranched rollouts, which is essential for scaling to complex scenarios involving multi-turn interactions and multi-condition generation (e.g., editing); and (2) replacing the standard latent KL penalty with an MSE penalty directly on the velocity fields, providing a more robust and direct regularization signal to mitigate reward hacking effectively. Our experiments demonstrate that this unified training recipe significantly enhances image generation quality through reasoning, providing a robust and scalable baseline for the future post-training of fully interleaved models.",
-      "url": "https://arxiv.org/abs/2603.23500v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.23500v1",
-      "published": "2026-03-24T17:59:17Z",
-      "updated": "2026-03-24T17:59:17Z",
+      "abstract": "Human driving behavior is inherently personal, which is shaped by long-term habits and influenced by short-term intentions. Individuals differ in how they accelerate, brake, merge, yield, and overtake across diverse situations. However, existing end-to-end autonomous driving systems either optimize for generic objectives or rely on fixed driving modes, lacking the ability to adapt to individual preferences or interpret natural language intent. To address this gap, we propose Drive My Way (DMW), a personalized Vision-Language-Action (VLA) driving framework that aligns with users' long-term driving habits and adapts to real-time user instructions. DMW learns a user embedding from our personalized driving dataset collected across multiple real drivers and conditions the policy on this embedding during planning, while natural language instructions provide additional short-term guidance. Closed-loop evaluation on the Bench2Drive benchmark demonstrates that DMW improves style instruction adaptation, and user studies show that its generated behaviors are recognizable as each driver's own style, highlighting personalization as a key capability for human-centered autonomous driving. Our data and code are available at https://dmw-cvpr.github.io/.",
+      "url": "https://arxiv.org/abs/2603.25740v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.25740v1",
+      "published": "2026-03-26T17:59:54Z",
+      "updated": "2026-03-26T17:59:54Z",
       "categories": [
-        "cs.CV"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2603.23499v1",
-      "title": "DA-Flow: Degradation-Aware Optical Flow Estimation with Diffusion Models",
-      "authors": [
-        "Jaewon Min",
-        "Jaeeun Lee",
-        "Yeji Choi",
-        "Paul Hyunbin Cho",
-        "Jin Hyeon Kim",
-        "Tae-Young Lee",
-        "Jongsik Ahn",
-        "Hwayeong Lee",
-        "Seonghyun Park",
-        "Seungryong Kim"
-      ],
-      "abstract": "Optical flow models trained on high-quality data often degrade severely when confronted with real-world corruptions such as blur, noise, and compression artifacts. To overcome this limitation, we formulate Degradation-Aware Optical Flow, a new task targeting accurate dense correspondence estimation from real-world corrupted videos. Our key insight is that the intermediate representations of image restoration diffusion models are inherently corruption-aware but lack temporal awareness. To address this limitation, we lift the model to attend across adjacent frames via full spatio-temporal attention, and empirically demonstrate that the resulting features exhibit zero-shot correspondence capabilities. Based on this finding, we present DA-Flow, a hybrid architecture that fuses these diffusion features with convolutional features within an iterative refinement framework. DA-Flow substantially outperforms existing optical flow methods under severe degradation across multiple benchmarks.",
-      "url": "https://arxiv.org/abs/2603.23499v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.23499v1",
-      "published": "2026-03-24T17:59:13Z",
-      "updated": "2026-03-24T17:59:13Z",
-      "categories": [
-        "cs.CV"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2603.23497v1",
-      "title": "WildWorld: A Large-Scale Dataset for Dynamic World Modeling with Actions and Explicit State toward Generative ARPG",
-      "authors": [
-        "Zhen Li",
-        "Zian Meng",
-        "Shuwei Shi",
-        "Wenshuo Peng",
-        "Yuwei Wu",
-        "Bo Zheng",
-        "Chuanhao Li",
-        "Kaipeng Zhang"
-      ],
-      "abstract": "Dynamical systems theory and reinforcement learning view world evolution as latent-state dynamics driven by actions, with visual observations providing partial information about the state. Recent video world models attempt to learn this action-conditioned dynamics from data. However, existing datasets rarely match the requirement: they typically lack diverse and semantically meaningful action spaces, and actions are directly tied to visual observations rather than mediated by underlying states. As a result, actions are often entangled with pixel-level changes, making it difficult for models to learn structured world dynamics and maintain consistent evolution over long horizons. In this paper, we propose WildWorld, a large-scale action-conditioned world modeling dataset with explicit state annotations, automatically collected from a photorealistic AAA action role-playing game (Monster Hunter: Wilds). WildWorld contains over 108 million frames and features more than 450 actions, including movement, attacks, and skill casting, together with synchronized per-frame annotations of character skeletons, world states, camera poses, and depth maps. We further derive WildBench to evaluate models through Action Following and State Alignment. Extensive experiments reveal persistent challenges in modeling semantically rich actions and maintaining long-horizon state consistency, highlighting the need for state-aware video generation. The project page is https://shandaai.github.io/wildworld-project/.",
-      "url": "https://arxiv.org/abs/2603.23497v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.23497v1",
-      "published": "2026-03-24T17:58:25Z",
-      "updated": "2026-03-24T17:58:25Z",
-      "categories": [
-        "cs.CV"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2603.23496v1",
-      "title": "Estimating Flow Velocity and Vehicle Angle-of-Attack from Non-invasive Piezoelectric Structural Measurements Using Deep Learning",
-      "authors": [
-        "Chandler B. Smith",
-        "S. Hales Swift",
-        "Andrew Steyer",
-        "Ihab El-Kady"
-      ],
-      "abstract": "Accurate estimation of aerodynamic state variables such as freestream velocity and angle of attack (AoA) is important for aerodynamic load prediction, flight control, and model validation. This work presents a non-intrusive method for estimating vehicle velocity and AoA from structural vibration measurements rather than direct flow instrumentation such as pitot tubes. A dense array of piezoelectric sensors mounted on the interior skin of an aeroshell capture vibrations induced by turbulent boundary layer pressure fluctuations, and a convolutional neural network (CNN) is trained to invert these structural responses to recover velocity and AoA.   Proof-of-concept is demonstrated through controlled experiments in Sandia's hypersonic wind tunnel spanning zero and nonzero AoA configurations, Mach~5 and Mach~8 conditions, and both constant and continuously varying tunnel operations. The CNN is trained and evaluated using data from 16 wind tunnel runs, with a temporally centered held-out interval within each run used to form training, validation, and test datasets and assess intra-run temporal generalization. Raw CNN predictions exhibit increased variance during continuously varying conditions; a short-window moving-median post-processing step suppresses this variance and improves robustness. After post-processing, the method achieves a mean velocity error relative to the low-pass filtered reference velocity below 2.27~m/s (0.21\\%) and a mean AoA error of $0.44^{\\circ} (8.25\\%)$ on held-out test data from the same experimental campaign, demonstrating feasibility of vibration-based velocity and AoA estimation in a controlled laboratory environment.",
-      "url": "https://arxiv.org/abs/2603.23496v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.23496v1",
-      "published": "2026-03-24T17:58:23Z",
-      "updated": "2026-03-24T17:58:23Z",
-      "categories": [
-        "cs.LG"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2603.23495v1",
-      "title": "VISion On Request: Enhanced VLLM efficiency with sparse, dynamically selected, vision-language interactions",
-      "authors": [
-        "Adrian Bulat",
-        "Alberto Baldrati",
-        "Ioannis Maniadis Metaxas",
-        "Yassine Ouali",
-        "Georgios Tzimiropoulos"
-      ],
-      "abstract": "Existing approaches for improving the efficiency of Large Vision-Language Models (LVLMs) are largely based on the concept of visual token reduction. This approach, however, creates an information bottleneck that impairs performance, especially on challenging tasks that require fine-grained understanding and reasoning. In this work, we challenge this paradigm by introducing VISion On Request (VISOR), a method that reduces inference cost without discarding visual information. Instead of compressing the image, VISOR improves efficiency by sparsifying the interaction between image and text tokens. Specifically, the language model attends to the full set of high-resolution visual tokens through a small, strategically placed set of attention layers: general visual context is provided by efficient cross-attention between text-image, while a few well-placed and dynamically selected self-attention layers refine the visual representations themselves, enabling complex, high-resolution reasoning when needed. Based on this principle, we first train a single universal network on a range of computational budgets by varying the number of self-attention layers, and then introduce a lightweight policy mechanism that dynamically allocates visual computation based on per-sample complexity. Extensive experiments show that VISOR drastically reduces computational cost while matching or exceeding state-of-the-art results across a diverse suite of benchmarks, and excels in challenging tasks that require detailed visual understanding.",
-      "url": "https://arxiv.org/abs/2603.23495v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.23495v1",
-      "published": "2026-03-24T17:58:17Z",
-      "updated": "2026-03-24T17:58:17Z",
-      "categories": [
-        "cs.CV",
+        "cs.RO",
         "cs.AI",
-        "cs.LG"
+        "cs.CV",
+        "cs.LG",
+        "cs.MA"
       ],
-      "primary_category": "cs.CV"
+      "primary_category": "cs.RO"
     },
     {
-      "id": "2603.23491v1",
-      "title": "Foveated Diffusion: Efficient Spatially Adaptive Image and Video Generation",
+      "id": "2603.25738v1",
+      "title": "PSDesigner: Automated Graphic Design with a Human-Like Creative Workflow",
       "authors": [
-        "Brian Chao",
-        "Lior Yariv",
-        "Howard Xiao",
-        "Gordon Wetzstein"
+        "Xincheng Shuai",
+        "Song Tang",
+        "Yutong Huang",
+        "Henghui Ding",
+        "Dacheng Tao"
       ],
-      "abstract": "Diffusion and flow matching models have unlocked unprecedented capabilities for creative content creation, such as interactive image and streaming video generation. The growing demand for higher resolutions, frame rates, and context lengths, however, makes efficient generation increasingly challenging, as computational complexity grows quadratically with the number of generated tokens. Our work seeks to optimize the efficiency of the generation process in settings where the user's gaze location is known or can be estimated, for example, by using eye tracking. In these settings, we leverage the eccentricity-dependent acuity of human vision: while a user perceives very high-resolution visual information in a small region around their gaze location (the foveal region), the ability to resolve detail quickly degrades in the periphery of the visual field. Our approach starts with a mask modeling the foveated resolution to allocate tokens non-uniformly, assigning higher token density to foveal regions and lower density to peripheral regions. An image or video is generated in a mixed-resolution token setting, yielding results perceptually indistinguishable from full-resolution generation, while drastically reducing the token count and generation time. To this end, we develop a principled mechanism for constructing mixed-resolution tokens directly from high-resolution data, allowing a foveated diffusion model to be post-trained from an existing base model while maintaining content consistency across resolutions. We validate our approach through extensive analysis and a carefully designed user study, demonstrating the efficacy of foveation as a practical and scalable axis for efficient generation.",
-      "url": "https://arxiv.org/abs/2603.23491v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.23491v1",
-      "published": "2026-03-24T17:57:35Z",
-      "updated": "2026-03-24T17:57:35Z",
+      "abstract": "Graphic design is a creative and innovative process that plays a crucial role in applications such as e-commerce and advertising. However, developing an automated design system that can faithfully translate user intentions into editable design files remains an open challenge. Although recent studies have leveraged powerful text-to-image models and MLLMs to assist graphic design, they typically simplify professional workflows, resulting in limited flexibility and intuitiveness. To address these limitations, we propose PSDesigner, an automated graphic design system that emulates the creative workflow of human designers. Building upon multiple specialized components, PSDesigner collects theme-related assets based on user instructions, and autonomously infers and executes tool calls to manipulate design files, such as integrating new assets or refining inferior elements. To endow the system with strong tool-use capabilities, we construct a design dataset, CreativePSD, which contains a large amount of high-quality PSD design files annotated with operation traces across a wide range of design scenarios and artistic styles, enabling models to learn expert design procedures. Extensive experiments demonstrate that PSDesigner outperforms existing methods across diverse graphic design tasks, empowering non-specialists to conveniently create production-quality designs.",
+      "url": "https://arxiv.org/abs/2603.25738v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.25738v1",
+      "published": "2026-03-26T17:59:51Z",
+      "updated": "2026-03-26T17:59:51Z",
       "categories": [
         "cs.CV"
       ],
       "primary_category": "cs.CV"
     },
     {
-      "id": "2603.23489v1",
-      "title": "AgentRVOS: Reasoning over Object Tracks for Zero-Shot Referring Video Object Segmentation",
+      "id": "2603.25739v1",
+      "title": "MegaFlow: Zero-Shot Large Displacement Optical Flow",
       "authors": [
-        "Woojeong Jin",
-        "Jaeho Lee",
-        "Heeseong Shin",
-        "Seungho Jang",
-        "Junhwan Heo",
-        "Seungryong Kim"
+        "Dingxi Zhang",
+        "Fangjinhua Wang",
+        "Marc Pollefeys",
+        "Haofei Xu"
       ],
-      "abstract": "Referring Video Object Segmentation (RVOS) aims to segment a target object throughout a video given a natural language query. Training-free methods for this task follow a common pipeline: a MLLM selects keyframes, grounds the referred object within those frames, and a video segmentation model propagates the results. While intuitive, this design asks the MLLM to make temporal decisions before any object-level evidence is available, limiting both reasoning quality and spatio-temporal coverage. To overcome this, we propose AgentRVOS, a training-free agentic pipeline built on the complementary strengths of SAM3 and a MLLM. Given a concept derived from the query, SAM3 provides reliable perception over the full spatio-temporal extent through generated mask tracks. The MLLM then identifies the target through query-grounded reasoning over this object-level evidence, iteratively pruning guided by SAM3's temporal existence information. Extensive experiments show that AgentRVOS achieves state-of-the-art performance among training-free methods across multiple benchmarks, with consistent results across diverse MLLM backbones. Our project page is available at: https://cvlab-kaist.github.io/AgentRVOS/.",
-      "url": "https://arxiv.org/abs/2603.23489v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.23489v1",
-      "published": "2026-03-24T17:55:17Z",
-      "updated": "2026-03-24T17:55:17Z",
+      "abstract": "Accurate estimation of large displacement optical flow remains a critical challenge. Existing methods typically rely on iterative local search or/and domain-specific fine-tuning, which severely limits their performance in large displacement and zero-shot generalization scenarios. To overcome this, we introduce MegaFlow, a simple yet powerful model for zero-shot large displacement optical flow. Rather than relying on highly complex, task-specific architectural designs, MegaFlow adapts powerful pre-trained vision priors to produce temporally consistent motion fields. In particular, we formulate flow estimation as a global matching problem by leveraging pre-trained global Vision Transformer features, which naturally capture large displacements. This is followed by a few lightweight iterative refinements to further improve the sub-pixel accuracy. Extensive experiments demonstrate that MegaFlow achieves state-of-the-art zero-shot performance across multiple optical flow benchmarks. Moreover, our model also delivers highly competitive zero-shot performance on long-range point tracking benchmarks, demonstrating its robust transferability and suggesting a unified paradigm for generalizable motion estimation. Our project page is at: https://kristen-z.github.io/projects/megaflow.",
+      "url": "https://arxiv.org/abs/2603.25739v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.25739v1",
+      "published": "2026-03-26T17:59:51Z",
+      "updated": "2026-03-26T17:59:51Z",
       "categories": [
         "cs.CV"
       ],
       "primary_category": "cs.CV"
     },
     {
-      "id": "2603.23488v1",
-      "title": "One View Is Enough! Monocular Training for In-the-Wild Novel View Generation",
+      "id": "2603.25736v1",
+      "title": "How good was my shot? Quantifying Player Skill Level in Table Tennis",
       "authors": [
-        "Adrien Ramanana Rahary",
-        "Nicolas Dufour",
-        "Patrick Perez",
-        "David Picard"
+        "Akihiro Kubota",
+        "Tomoya Hasegawa",
+        "Ryo Kawahara",
+        "Ko Nishino"
       ],
-      "abstract": "Monocular novel-view synthesis has long required multi-view image pairs for supervision, limiting training data scale and diversity. We argue it is not necessary: one view is enough. We present OVIE, trained entirely on unpaired internet images. We leverage a monocular depth estimator as a geometric scaffold at training time: we lift a source image into 3D, apply a sampled camera transformation, and project to obtain a pseudo-target view. To handle disocclusions, we introduce a masked training formulation that restricts geometric, perceptual, and textural losses to valid regions, enabling training on 30 million uncurated images. At inference, OVIE is geometry-free, requiring no depth estimator or 3D representation. Trained exclusively on in-the-wild images, OVIE outperforms prior methods in a zero-shot setting, while being 600x faster than the second-best baseline. Code and models are publicly available at https://github.com/AdrienRR/ovie.",
-      "url": "https://arxiv.org/abs/2603.23488v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.23488v1",
-      "published": "2026-03-24T17:54:25Z",
-      "updated": "2026-03-24T17:54:25Z",
+      "abstract": "Gauging an individual's skill level is crucial, as it inherently shapes their behavior. Quantifying skill, however, is challenging because it is latent to the observed actions. To explore skill understanding in human behavior, we focus on dyadic sports -- specifically table tennis -- where skill manifests not just in complex movements, but in the subtle nuances of execution conditioned on game context. Our key idea is to learn a generative model of each player's tactical racket strokes and jointly embed them in a common latent space that encodes individual characteristics, including those pertaining to skill levels. By training these player models on a large-scale dataset of 3D-reconstructed professional matches and conditioning them on comprehensive game context -- including player positioning and opponent behaviors -- the models capture individual tactical identities within their latent space. We probe this learned player space and find that it reflects distinct play styles and attributes that collectively represent skill. By training a simple relative ranking network on these embeddings, we demonstrate that both relative and absolute skill predictions can be achieved. These results demonstrate that the learned player space effectively quantifies skill levels, providing a foundation for automated skill assessment in complex, interactive behaviors.",
+      "url": "https://arxiv.org/abs/2603.25736v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.25736v1",
+      "published": "2026-03-26T17:59:49Z",
+      "updated": "2026-03-26T17:59:49Z",
       "categories": [
         "cs.CV"
       ],
       "primary_category": "cs.CV"
+    },
+    {
+      "id": "2603.25737v1",
+      "title": "Training the Knowledge Base through Evidence Distillation and Write-Back Enrichment",
+      "authors": [
+        "Yuxing Lu",
+        "Xukai Zhao",
+        "Wei Wu",
+        "Jinzhuo Wang"
+      ],
+      "abstract": "The knowledge base in a retrieval-augmented generation (RAG) system is typically assembled once and never revised, even though the facts a query requires are often fragmented across documents and buried in irrelevant content. We argue that the knowledge base should be treated as a trainable component and propose WriteBack-RAG, a framework that uses labeled examples to identify where retrieval succeeds, isolate the relevant documents, and distill them into compact knowledge units that are indexed alongside the original corpus. Because the method modifies only the corpus, it can be applied once as an offline preprocessing step and combined with any RAG pipeline. Across four RAG methods, six benchmarks, and two LLM backbones, WriteBack-RAG improves every evaluated setting, with gains averaging +2.14%. Cross-method transfer experiments further show that the distilled knowledge benefits RAG pipelines other than the one used to produce it, confirming that the improvement resides in the corpus itself.",
+      "url": "https://arxiv.org/abs/2603.25737v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.25737v1",
+      "published": "2026-03-26T17:59:49Z",
+      "updated": "2026-03-26T17:59:49Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.IR"
+      ],
+      "primary_category": "cs.AI"
     }
   ]
 }
