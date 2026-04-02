@@ -2,208 +2,221 @@
   "category": "cs",
   "name": "CS Research",
   "description": "Computer Science \u2014 AI, Machine Learning, NLP, Computer Vision",
-  "scraped_at": "2026-04-01T09:18:28.737239+00:00",
+  "scraped_at": "2026-04-02T09:10:36.706827+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2603.30045v1",
-      "title": "OmniRoam: World Wandering via Long-Horizon Panoramic Video Generation",
+      "id": "2604.01221v1",
+      "title": "HippoCamp: Benchmarking Contextual Agents on Personal Computers",
       "authors": [
-        "Yuheng Liu",
-        "Xin Lin",
-        "Xinke Li",
-        "Baihan Yang",
-        "Chen Wang",
-        "Kalyan Sunkavalli",
-        "Yannick Hold-Geoffroy",
-        "Hao Tan",
-        "Kai Zhang",
-        "Xiaohui Xie",
-        "Zifan Shi",
-        "Yiwei Hu"
+        "Zhe Yang",
+        "Shulin Tian",
+        "Kairui Hu",
+        "Shuai Liu",
+        "Hoang-Nhat Nguyen",
+        "Yichi Zhang",
+        "Zujin Guo",
+        "Mengying Yu",
+        "Zinan Zhang",
+        "Jingkang Yang",
+        "Chen Change Loy",
+        "Ziwei Liu"
       ],
-      "abstract": "Modeling scenes using video generation models has garnered growing research interest in recent years. However, most existing approaches rely on perspective video models that synthesize only limited observations of a scene, leading to issues of completeness and global consistency. We propose OmniRoam, a controllable panoramic video generation framework that exploits the rich per-frame scene coverage and inherent long-term spatial and temporal consistency of panoramic representation, enabling long-horizon scene wandering. Our framework begins with a preview stage, where a trajectory-controlled video generation model creates a quick overview of the scene from a given input image or video. Then, in the refine stage, this video is temporally extended and spatially upsampled to produce long-range, high-resolution videos, thus enabling high-fidelity world wandering. To train our model, we introduce two panoramic video datasets that incorporate both synthetic and real-world captured videos. Experiments show that our framework consistently outperforms state-of-the-art methods in terms of visual quality, controllability, and long-term scene consistency, both qualitatively and quantitatively. We further showcase several extensions of this framework, including real-time video generation and 3D reconstruction. Code is available at https://github.com/yuhengliu02/OmniRoam.",
-      "url": "https://arxiv.org/abs/2603.30045v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.30045v1",
-      "published": "2026-03-31T17:59:33Z",
-      "updated": "2026-03-31T17:59:33Z",
+      "abstract": "We present HippoCamp, a new benchmark designed to evaluate agents' capabilities on multimodal file management. Unlike existing agent benchmarks that focus on tasks like web interaction, tool use, or software automation in generic settings, HippoCamp evaluates agents in user-centric environments to model individual user profiles and search massive personal files for context-aware reasoning. Our benchmark instantiates device-scale file systems over real-world profiles spanning diverse modalities, comprising 42.4 GB of data across over 2K real-world files. Building upon the raw files, we construct 581 QA pairs to assess agents' capabilities in search, evidence perception, and multi-step reasoning. To facilitate fine-grained analysis, we provide 46.1K densely annotated structured trajectories for step-wise failure diagnosis. We evaluate a wide range of state-of-the-art multimodal large language models (MLLMs) and agentic methods on HippoCamp. Our comprehensive experiments reveal a significant performance gap: even the most advanced commercial models achieve only 48.3% accuracy in user profiling, struggling particularly with long-horizon retrieval and cross-modal reasoning within dense personal file systems. Furthermore, our step-wise failure diagnosis identifies multimodal perception and evidence grounding as the primary bottlenecks. Ultimately, HippoCamp exposes the critical limitations of current agents in realistic, user-centric environments and provides a robust foundation for developing next-generation personal AI assistants.",
+      "url": "https://arxiv.org/abs/2604.01221v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.01221v1",
+      "published": "2026-04-01T17:58:33Z",
+      "updated": "2026-04-01T17:58:33Z",
       "categories": [
+        "cs.AI",
         "cs.CV"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2603.30043v1",
-      "title": "Video Models Reason Early: Exploiting Plan Commitment for Maze Solving",
-      "authors": [
-        "Kaleb Newman",
-        "Tyler Zhu",
-        "Olga Russakovsky"
-      ],
-      "abstract": "Video diffusion models exhibit emergent reasoning capabilities like solving mazes and puzzles, yet little is understood about how they reason during generation. We take a first step towards understanding this and study the internal planning dynamics of video models using 2D maze solving as a controlled testbed. Our investigations reveal two findings. Our first finding is early plan commitment: video diffusion models commit to a high-level motion plan within the first few denoising steps, after which further denoising alters visual details but not the underlying trajectory. Our second finding is that path length, not obstacle density, is the dominant predictor of maze difficulty, with a sharp failure threshold at 12 steps. This means video models can only reason over long mazes by chaining together multiple sequential generations. To demonstrate the practical benefits of our findings, we introduce Chaining with Early Planning, or ChEaP, which only spends compute on seeds with promising early plans and chains them together to tackle complex mazes. This improves accuracy from 7% to 67% on long-horizon mazes and by 2.5x overall on hard tasks in Frozen Lake and VR-Bench across Wan2.2-14B and HunyuanVideo-1.5. Our analysis reveals that current video models possess deeper reasoning capabilities than previously recognized, which can be elicited more reliably with better inference-time scaling.",
-      "url": "https://arxiv.org/abs/2603.30043v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.30043v1",
-      "published": "2026-03-31T17:58:15Z",
-      "updated": "2026-03-31T17:58:15Z",
-      "categories": [
-        "cs.CV"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2603.30040v1",
-      "title": "Automatic Identification of Parallelizable Loops Using Transformer-Based Source Code Representations",
-      "authors": [
-        "Izavan dos S. Correia",
-        "Henrique C. T. Santos",
-        "Tiago A. E. Ferreira"
-      ],
-      "abstract": "Automatic parallelization remains a challenging problem in software engineering, particularly in identifying code regions where loops can be safely executed in parallel on modern multi-core architectures. Traditional static analysis techniques, such as dependence analysis and polyhedral models, often struggle with irregular or dynamically structured code. In this work, we propose a Transformer-based approach to classify the parallelization potential of source code, focusing on distinguishing independent (parallelizable) loops from undefined ones. We adopt DistilBERT to process source code sequences using subword tokenization, enabling the model to capture contextual syntactic and semantic patterns without handcrafted features. The approach is evaluated on a balanced dataset combining synthetically generated loops and manually annotated real-world code, using 10-fold cross-validation and multiple performance metrics. Results show consistently high performance, with mean accuracy above 99\\% and low false positive rates, demonstrating robustness and reliability. Compared to prior token-based methods, the proposed approach simplifies preprocessing while improving generalization and maintaining computational efficiency. These findings highlight the potential of lightweight Transformer models for practical identification of parallelization opportunities at the loop level.",
-      "url": "https://arxiv.org/abs/2603.30040v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.30040v1",
-      "published": "2026-03-31T17:54:27Z",
-      "updated": "2026-03-31T17:54:27Z",
-      "categories": [
-        "cs.SE",
-        "cs.AI"
-      ],
-      "primary_category": "cs.SE"
-    },
-    {
-      "id": "2603.30038v1",
-      "title": "Benchmarking PhD-Level Coding in 3D Geometric Computer Vision",
-      "authors": [
-        "Wenyi Li",
-        "Renkai Luo",
-        "Yue Yu",
-        "Huan-ang Gao",
-        "Mingju Gao",
-        "Li Yuan",
-        "Chaoyou Fu",
-        "Hao Zhao"
-      ],
-      "abstract": "AI-assisted coding has rapidly reshaped software practice and research workflows, yet today's models still struggle to produce correct code for complex 3D geometric vision. If models could reliably write such code, the research of our community would change substantially. To measure progress toward that goal, we introduce GeoCodeBench, a PhD-level benchmark that evaluates coding for 3D vision. Each problem is a fill-in-the-function implementation task curated from representative papers at recent venues: we first let a tool propose candidate functions from official repositories, then perform careful human screening to select core 3D geometric components. For every target, we generate diverse, edge-case unit tests, enabling fully automatic, reproducible scoring. We evaluate eight representative open- and closed-source models to reflect the current ecosystem. The best model, GPT-5, attains only 36.6% pass rate, revealing a large gap between current capabilities and dependable 3D scientific coding. GeoCodeBench organizes tasks into a two-level hierarchy: General 3D capability (geometric transformations and mechanics/optics formulation) and Research capability (novel algorithm implementation and geometric logic routing). Scores are positively correlated across these axes, but research-oriented tasks are markedly harder. Context ablations further show that \"more paper text\" is not always better: cutting off at the Method section statistically outperforms full-paper inputs, highlighting unresolved challenges in long-context scientific comprehension. Together, these findings position GeoCodeBench as a rigorous testbed for advancing from generic coding to trustworthy 3D geometric vision coding.",
-      "url": "https://arxiv.org/abs/2603.30038v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.30038v1",
-      "published": "2026-03-31T17:50:55Z",
-      "updated": "2026-03-31T17:50:55Z",
-      "categories": [
-        "cs.CV"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2603.30036v1",
-      "title": "Aligned, Orthogonal or In-conflict: When can we safely optimize Chain-of-Thought?",
-      "authors": [
-        "Max Kaufmann",
-        "David Lindner",
-        "Roland S. Zimmermann",
-        "and Rohin Shah"
-      ],
-      "abstract": "Chain-of-Thought (CoT) monitoring, in which automated systems monitor the CoT of an LLM, is a promising approach for effectively overseeing AI systems. However, the extent to which a model's CoT helps us oversee the model - the monitorability of the CoT - can be affected by training, for instance by the model learning to hide important features of its reasoning. We propose and empirically validate a conceptual framework for predicting when and why this occurs. We model LLM post-training as an RL environment where the reward decomposes into two terms: one term depending on final outputs and another term depending on the CoT. Our framework allows us to classify these two terms as \"aligned\", \"orthogonal\", or \"in-conflict\" before training. We predict that training with in-conflict terms will reduce monitorability, orthogonal terms will not affect it, and aligned terms will improve it. To validate our framework, we use it to classify a set of RL environments, train LLMs within those environments, and evaluate how training affects CoT monitorability. We find that (1) training with \"in-conflict\" reward terms reduces CoT monitorability and (2) optimizing in-conflict reward terms is difficult.",
-      "url": "https://arxiv.org/abs/2603.30036v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.30036v1",
-      "published": "2026-03-31T17:38:39Z",
-      "updated": "2026-03-31T17:38:39Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2603.30035v1",
-      "title": "Reward-Based Online LLM Routing via NeuralUCB",
-      "authors": [
-        "Ming-Hua Tsai",
-        "Phat Tran"
-      ],
-      "abstract": "This study investigates the use of NeuralUCB for cost-aware large language model (LLM) routing. Existing routing approaches can be broadly grouped into supervised routing methods and partial-feedback methods, each with different tradeoffs in efficiency and adaptivity. We implement a NeuralUCB-based routing policy and evaluate it on RouterBench under a simulated online setting. Experimental results show that the proposed method consistently outperforms random and min-cost baselines in utility reward. Compared with the max-quality reference, our method achieves substantially lower inference cost while maintaining competitive reward. These findings suggest that NeuralUCB is a promising approach for cost-aware LLM routing, while also highlighting remaining challenges in action discrimination and exploration.",
-      "url": "https://arxiv.org/abs/2603.30035v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.30035v1",
-      "published": "2026-03-31T17:35:34Z",
-      "updated": "2026-03-31T17:35:34Z",
-      "categories": [
-        "cs.LG",
-        "cs.CL"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2603.30033v1",
-      "title": "Tucker Attention: A generalization of approximate attention mechanisms",
-      "authors": [
-        "Timon Klein",
-        "Jonas Kusch",
-        "Sebastian Sager",
-        "Stefan Schnake",
-        "Steffen Schotth\u00f6fer"
-      ],
-      "abstract": "The pursuit of reducing the memory footprint of the self-attention mechanism in multi-headed self attention (MHA) spawned a rich portfolio of methods, e.g., group-query attention (GQA) and multi-head latent attention (MLA). The methods leverage specialized low-rank factorizations across embedding dimensions or attention heads. From the point of view of classical low-rank approximation, these methods are unconventional and raise questions of which objects they really approximate and how to interpret the low-rank behavior of the resulting representations. To answer these questions, this work proposes a generalized view on the weight objects in the self-attention layer and a factorization strategy, which allows us to construct a parameter efficient scheme, called Tucker Attention. Tucker Attention requires an order of magnitude fewer parameters for comparable validation metrics, compared to GQA and MLA, as evaluated in LLM and ViT test cases. Additionally, Tucker Attention~encompasses GQA, MLA, MHA as special cases and is fully compatible with flash-attention and rotary position embeddings (RoPE). This generalization strategy yields insights of the actual ranks achieved by MHA, GQA, and MLA, and further enables simplifications for MLA.",
-      "url": "https://arxiv.org/abs/2603.30033v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.30033v1",
-      "published": "2026-03-31T17:30:51Z",
-      "updated": "2026-03-31T17:30:51Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2603.30032v1",
-      "title": "Covertly improving intelligibility with data-driven adaptations of speech timing",
-      "authors": [
-        "Paige Tutt\u00f6s\u00ed",
-        "Angelica Lim",
-        "H. Henny Yeung",
-        "Yue Wang",
-        "Jean-Julien Aucouturier"
-      ],
-      "abstract": "Human talkers often address listeners with language-comprehension challenges, such as hard-of-hearing or non-native adults, by globally slowing down their speech. However, it remains unclear whether this strategy actually makes speech more intelligible. Here, we take advantage of recent advancements in machine-generated speech allowing more precise control of speech rate in order to systematically examine how targeted speech-rate adjustments may improve comprehension. We first use reverse-correlation experiments to show that the temporal influence of speech rate prior to a target vowel contrast (ex. the tense-lax distinction) in fact manifests in a scissor-like pattern, with opposite effects in early versus late context windows; this pattern is remarkably stable both within individuals and across native L1-English listeners and L2-English listeners with French, Mandarin, and Japanese L1s. Second, we show that this speech rate structure not only facilitates L2 listeners' comprehension of the target vowel contrast, but that native listeners also rely on this pattern in challenging acoustic conditions. Finally, we build a data-driven text-to-speech algorithm that replicates this temporal structure on novel speech sequences. Across a variety of sentences and vowel contrasts, listeners remained unaware that such targeted slowing improved word comprehension. Strikingly, participants instead judged the common strategy of global slowing as clearer, even though it actually increased comprehension errors. Together, these results show that targeted adjustments to speech rate significantly aid intelligibility under challenging conditions, while often going unnoticed. More generally, this paper provides a data-driven methodology to improve the accessibility of machine-generated speech which can be extended to other aspects of speech comprehension and a wide variety of listeners and environments.",
-      "url": "https://arxiv.org/abs/2603.30032v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.30032v1",
-      "published": "2026-03-31T17:30:47Z",
-      "updated": "2026-03-31T17:30:47Z",
-      "categories": [
-        "cs.CL",
-        "cs.SD"
-      ],
-      "primary_category": "cs.CL"
-    },
-    {
-      "id": "2603.30031v1",
-      "title": "The Triadic Cognitive Architecture: Bounding Autonomous Action via Spatio-Temporal and Epistemic Friction",
-      "authors": [
-        "Davide Di Gioia"
-      ],
-      "abstract": "Current autonomous AI agents, driven primarily by Large Language Models (LLMs), operate in a state of cognitive weightlessness: they process information without an intrinsic sense of network topology, temporal pacing, or epistemic limits. Consequently, heuristic agentic loops (e.g., ReAct) can exhibit failure modes in interactive environments, including excessive tool use under congestion, prolonged deliberation under time decay, and brittle behavior under ambiguous evidence. In this paper, we propose the Triadic Cognitive Architecture (TCA), a unified mathematical framework that grounds machine reasoning in continuous-time physics. By synthesizing nonlinear filtering theory, Riemannian routing geometry, and optimal control, we formally define the concept of Cognitive Friction. We map the agent's deliberation process to a coupled stochastic control problem where information acquisition is path-dependent and physically constrained. Rather than relying on arbitrary heuristic stop-tokens, the TCA uses an HJB-motivated stopping boundary and instantiates a rollout-based approximation of belief-dependent value-of-information with a net-utility halting condition. Through empirical validation in a simulated Emergency Medical Diagnostic Grid (EMDG), we demonstrate that while greedy baselines over-deliberate under latency and congestion costs, the triadic policy reduces time-to-action while improving patient viability without degrading diagnostic accuracy in this environment.",
-      "url": "https://arxiv.org/abs/2603.30031v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.30031v1",
-      "published": "2026-03-31T17:30:25Z",
-      "updated": "2026-03-31T17:30:25Z",
-      "categories": [
-        "cs.AI"
       ],
       "primary_category": "cs.AI"
     },
     {
-      "id": "2603.30030v1",
-      "title": "A Lightweight Hybrid Publish/Subscribe Event Fabric for IPC and Modular Distributed Systems",
+      "id": "2604.01220v1",
+      "title": "Universal YOCO for Efficient Depth Scaling",
       "authors": [
-        "Dimitris Gkoulis"
+        "Yutao Sun",
+        "Li Dong",
+        "Tianzhu Ye",
+        "Shaohan Huang",
+        "Jianyong Wang",
+        "Furu Wei"
       ],
-      "abstract": "Modular software deployed on mini compute units in controlled distributed environments often needs two messaging paths: low-overhead in-process coordination and selective cross-node distribution. In practice, event identity, serialization, and transport bridging are frequently implemented as ad hoc glue, which complicates inter-process communication (IPC), structured routing, and shutdown behavior. This paper presents CNS, a lightweight local-first hybrid event fabric centered on asynchronous fire-and-forget messaging. CNS combines a typed event key, per-family serialization and validation, a local publish/subscribe context for in-process coordination, and a NATS-backed distributed context for inter-node distribution. A bridge runtime moves events between the two contexts while preserving a common routing vocabulary. The primary operating model is fire-and-forget publication and subscription; bidirectional request-reply remains available as a secondary extension on the same subject space. A Python prototype and single-machine measurements are reported. Local-only delivery averaged about 30 $\u03bc$s. Distributed-only delivery averaged 1.26-1.37 ms, and the hybrid bridge averaged 1.64-1.89 ms. Validation introduced modest overhead relative to serialization choice. The resulting artifact is suited to structured IPC and practical message movement within modular services and across bounded sets of controlled nodes.",
-      "url": "https://arxiv.org/abs/2603.30030v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.30030v1",
-      "published": "2026-03-31T17:27:30Z",
-      "updated": "2026-03-31T17:27:30Z",
+      "abstract": "The rise of test-time scaling has remarkably boosted the reasoning and agentic proficiency of Large Language Models (LLMs). Yet, standard Transformers struggle to scale inference-time compute efficiently, as conventional looping strategies suffer from high computational overhead and a KV cache that inflates alongside model depth. We present Universal YOCO (YOCO-U), which combines the YOCO decoder-decoder architecture with recursive computation to achieve a synergistic effect greater than either alone. Built on the YOCO framework, YOCO-U implements a Universal Self-Decoder that performs multiple iterations via parameter sharing, while confining the iterative process to shallow, efficient-attention layers. This combination yields a favorable capability-efficiency tradeoff that neither YOCO nor recursion achieves independently. The YOCO architecture provides a constant global KV cache and linear pre-filling, while partial recursion enhances representational depth with limited overhead. Together, YOCO-U improves token utility and scaling behavior while maintaining efficient inference. Empirical results confirm that YOCO-U remains highly competitive in general and long-context benchmarks, demonstrating that the integration of efficient-attention architectures and recursive computation is a promising direction for scalable LLMs.",
+      "url": "https://arxiv.org/abs/2604.01220v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.01220v1",
+      "published": "2026-04-01T17:58:21Z",
+      "updated": "2026-04-01T17:58:21Z",
       "categories": [
-        "cs.DC",
-        "cs.SE"
+        "cs.CL"
       ],
-      "primary_category": "cs.DC"
+      "primary_category": "cs.CL"
+    },
+    {
+      "id": "2604.01216v1",
+      "title": "LAtent Phase Inference from Short time sequences using SHallow REcurrent Decoders (LAPIS-SHRED)",
+      "authors": [
+        "Yuxuan Bao",
+        "Xingyue Zhang",
+        "J. Nathan Kutz"
+      ],
+      "abstract": "Reconstructing full spatio-temporal dynamics from sparse observations in both space and time remains a central challenge in complex systems, as measurements can be spatially incomplete and can be also limited to narrow temporal windows. Yet approximating the complete spatio-temporal trajectory is essential for mechanistic insight and understanding, model calibration, and operational decision-making. We introduce LAPIS-SHRED (LAtent Phase Inference from Short time sequence using SHallow REcurrent Decoders), a modular architecture that reconstructs and/or forecasts complete spatiotemporal dynamics from sparse sensor observations confined to short temporal windows. LAPIS-SHRED operates through a three-stage pipeline: (i) a SHRED model is pre-trained entirely on simulation data to map sensor time-histories into a structured latent space, (ii) a temporal sequence model, trained on simulation-derived latent trajectories, learns to propagate latent states forward or backward in time to span unobserved temporal regions from short observational time windows, and (iii) at deployment, only a short observation window of hyper-sparse sensor measurements from the true system is provided, from which the frozen SHRED model and the temporal model jointly reconstruct or forecast the complete spatiotemporal trajectory. The framework supports bidirectional inference, inherits data assimilation and multiscale reconstruction capabilities from its modular structure, and accommodates extreme observational constraints including single-frame terminal inputs. We evaluate LAPIS-SHRED on six experiments spanning complex spatio-temporal physics: turbulent flows, multiscale propulsion physics, volatile combustion transients, and satellite-derived environmental fields, highlighting a lightweight, modular architecture suited for operational settings where observation is constrained by physical or logistical limitations.",
+      "url": "https://arxiv.org/abs/2604.01216v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.01216v1",
+      "published": "2026-04-01T17:55:10Z",
+      "updated": "2026-04-01T17:55:10Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "primary_category": "cs.LG"
+    },
+    {
+      "id": "2604.01215v1",
+      "title": "The Recipe Matters More Than the Kitchen:Mathematical Foundations of the AI Weather Prediction Pipeline",
+      "authors": [
+        "Piyush Garg",
+        "Diana R. Gergel",
+        "Andrew E. Shao",
+        "Galen J. Yacalis"
+      ],
+      "abstract": "AI weather prediction has advanced rapidly, yet no unified mathematical framework explains what determines forecast skill. Existing theory addresses specific architectural choices rather than the learning pipeline as a whole, while operational evidence from 2023-2026 demonstrates that training methodology, loss function design, and data diversity matter at least as much as architecture selection. This paper makes two interleaved contributions. Theoretically, we construct a framework rooted in approximation theory on the sphere, dynamical systems theory, information theory, and statistical learning theory that treats the complete learning pipeline (architecture, loss function, training strategy, data distribution) rather than architecture alone. We establish a Learning Pipeline Error Decomposition showing that estimation error (loss- and data-dependent) dominates approximation error (architecture-dependent) at current scales. We develop a Loss Function Spectral Theory formalizing MSE-induced spectral blurring in spherical harmonic coordinates, and derive Out-of-Distribution Extrapolation Bounds proving that data-driven models systematically underestimate record-breaking extremes with bias growing linearly in record exceedance. Empirically, we validate these predictions via inference across ten architecturally diverse AI weather models using NVIDIA Earth2Studio with ERA5 initial conditions, evaluating six metrics across 30 initialization dates spanning all seasons. Results confirm universal spectral energy loss at high wavenumbers for MSE-trained models, rising Error Consensus Ratios showing that the majority of forecast error is shared across architectures, and linear negative bias during extreme events. A Holistic Model Assessment Score provides unified multi-dimensional evaluation, and a prescriptive framework enables mathematical evaluation of proposed pipelines before training.",
+      "url": "https://arxiv.org/abs/2604.01215v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.01215v1",
+      "published": "2026-04-01T17:53:51Z",
+      "updated": "2026-04-01T17:53:51Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "physics.ao-ph"
+      ],
+      "primary_category": "cs.LG"
+    },
+    {
+      "id": "2604.01212v1",
+      "title": "$\\texttt{YC-Bench}$: Benchmarking AI Agents for Long-Term Planning and Consistent Execution",
+      "authors": [
+        "Muyu He",
+        "Adit Jain",
+        "Anand Kumar",
+        "Vincent Tu",
+        "Soumyadeep Bakshi",
+        "Sachin Patro",
+        "Nazneen Rajani"
+      ],
+      "abstract": "As LLM agents tackle increasingly complex tasks, a critical question is whether they can maintain strategic coherence over long horizons: planning under uncertainty, learning from delayed feedback, and adapting when early mistakes compound. We introduce $\\texttt{YC-Bench}$, a benchmark that evaluates these capabilities by tasking an agent with running a simulated startup over a one-year horizon spanning hundreds of turns. The agent must manage employees, select task contracts, and maintain profitability in a partially observable environment where adversarial clients and growing payroll create compounding consequences for poor decisions. We evaluate 12 models, both proprietary and open source, across 3 seeds each. Only three models consistently surpass the starting capital of \\$200K, with Claude Opus 4.6 achieving the highest average final funds at \\$1.27 M, followed by GLM-5 at \\$1.21 M at 11$\\times$ lower inference cost. Scratchpad usage, the sole mechanism for persisting information across context truncation, is the strongest predictor of success, and adversarial client detection is the primary failure mode, accounting for $47\\%$ of bankruptcies. Our analysis reveals that frontier models still fail through distinct failure modes such as over-parallelization, demonstrating the capability gaps for long-horizon performance. $\\texttt{YC-Bench}$ is open-source, reproducible, and configurable.",
+      "url": "https://arxiv.org/abs/2604.01212v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.01212v1",
+      "published": "2026-04-01T17:52:19Z",
+      "updated": "2026-04-01T17:52:19Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CL"
+    },
+    {
+      "id": "2604.01210v1",
+      "title": "CliffSearch: Structured Agentic Co-Evolution over Theory and Code for Scientific Algorithm Discovery",
+      "authors": [
+        "Youssef Mroueh",
+        "Carlos Fonseca",
+        "Brian Belgodere",
+        "David Cox"
+      ],
+      "abstract": "Scientific algorithm discovery is iterative: hypotheses are proposed, implemented, stress-tested, and revised. Current LLM-guided search systems accelerate proposal generation, but often under-represent scientific structure by optimizing code-only artifacts with weak correctness/originality gating. We present CliffSearch, an agentic evolutionary framework in which the core evolution operators (pair selection, crossover, mutation, and review) are implemented as LLM agents, and the loop is designed around three principles: (1) each node is a structured scientific artifact, instantiated in either theory+code or code_only mode, (2) reviewer judgments of correctness and originality are first-class selection gates alongside optimization of the benchmark metric of interest, and (3) mutation is split into exploration and correction pathways with distinct objectives. Exploration mutation imports ideas from adjacent scientific domains to increase novelty, while correction mutation performs targeted evidence-guided repair using reviewer signals over theory, code, benchmark results, and runtime errors. We illustrate the framework on three benchmark-grounded studies: transformer hyper-connection evolution, optimizer discovery on a fixed nanoGPT stack, and a smaller native-optimizer ablation. Across these settings, the same loop supports explicit metric direction, reproducible persistence, and reviewer-gated comparison of discoveries under controlled search conditions. The result is a discovery workflow that prioritizes scientific interpretability and correctness while optimizing task metrics under controlled novelty constraints, rather than maximizing candidate throughput alone. Full run artifacts, interactive visualizations, and exported best nodes for the reported studies are available at https://cliffsearch.ai .",
+      "url": "https://arxiv.org/abs/2604.01210v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.01210v1",
+      "published": "2026-04-01T17:51:26Z",
+      "updated": "2026-04-01T17:51:26Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "primary_category": "cs.LG"
+    },
+    {
+      "id": "2604.01207v1",
+      "title": "TRACE: High-Fidelity 3D Scene Editing via Tangible Reconstruction and Geometry-Aligned Contextual Video Masking",
+      "authors": [
+        "Jiyuan Hu",
+        "Zechuan Zhang",
+        "Zongxin Yang",
+        "Yi Yang"
+      ],
+      "abstract": "We present TRACE, a mesh-guided 3DGS editing framework that achieves automated, high-fidelity scene transformation. By anchoring video diffusion with explicit 3D geometry, TRACE uniquely enables fine-grained, part-level manipulatio--such as local pose shifting or component replacemen--while preserving the structural integrity of the central subject, a capability largely absent in existing editing methods. Our approach comprises three key stages: (1) Multi-view 3D-Anchor Synthesis, which leverages a sparse-view editor trained on our MV-TRACE datase--the first multi-view consistent dataset dedicated to scene-coherent object addition and modificatio--to generate spatially consistent 3D-anchors; (2) Tangible Geometry Anchoring (TGA), which ensures precise spatial synchronization between inserted meshes and the 3DGS scene via two-phase registration; and (3) Contextual Video Masking (CVM), which integrates 3D projections into an autoregressive video pipeline to achieve temporally stable, physically-grounded rendering. Extensive experiments demonstrate that TRACE consistently outperforms existing methods especially in editing versatility and structural integrity.",
+      "url": "https://arxiv.org/abs/2604.01207v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.01207v1",
+      "published": "2026-04-01T17:51:00Z",
+      "updated": "2026-04-01T17:51:00Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2604.01206v1",
+      "title": "LLM REgression with a Latent Iterative State Head",
+      "authors": [
+        "Yiheng Su",
+        "Matthew Lease"
+      ],
+      "abstract": "We present RELISH (REgression with a Latent Iterative State Head), a novel, lightweight architecture designed for text regression with large language models. Rather than decoding numeric targets as text or aggregating multiple generated outputs, RELISH predicts scalar values directly from frozen LLM representations by iteratively refining a learned latent state through cross-attention over token-level representations, and then mapping the final state to a point estimate with a linear regressor. Across five datasets, four LLM backbones, and two LLM training regimes, RELISH consistently outperforms prior baselines from all three major LLM regression families, including autoregressive decoding, regression-aware inference, and existing predictive head methods. Despite these gains, RELISH remains highly parameter-efficient, requiring only 3.4-3.7M trainable parameters across frozen LLM backbones (only 0.01-0.04% additional overhead), far less than LoRA-based alternatives that grow with model size (0.26-0.42%).",
+      "url": "https://arxiv.org/abs/2604.01206v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.01206v1",
+      "published": "2026-04-01T17:50:32Z",
+      "updated": "2026-04-01T17:50:32Z",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "primary_category": "cs.CL"
+    },
+    {
+      "id": "2604.01204v1",
+      "title": "Neural Harmonic Textures for High-Quality Primitive Based Neural Reconstruction",
+      "authors": [
+        "Jorge Condor",
+        "Nicolas Moenne-Loccoz",
+        "Merlin Nimier-David",
+        "Piotr Didyk",
+        "Zan Gojcic",
+        "Qi Wu"
+      ],
+      "abstract": "Primitive-based methods such as 3D Gaussian Splatting have recently become the state-of-the-art for novel-view synthesis and related reconstruction tasks. Compared to neural fields, these representations are more flexible, adaptive, and scale better to large scenes. However, the limited expressivity of individual primitives makes modeling high-frequency detail challenging. We introduce Neural Harmonic Textures, a neural representation approach that anchors latent feature vectors on a virtual scaffold surrounding each primitive. These features are interpolated within the primitive at ray intersection points. Inspired by Fourier analysis, we apply periodic activations to the interpolated features, turning alpha blending into a weighted sum of harmonic components. The resulting signal is then decoded in a single deferred pass using a small neural network, significantly reducing computational cost. Neural Harmonic Textures yield state-of-the-art results in real-time novel view synthesis while bridging the gap between primitive- and neural-field-based reconstruction. Our method integrates seamlessly into existing primitive-based pipelines such as 3DGUT, Triangle Splatting, and 2DGS. We further demonstrate its generality with applications to 2D image fitting and semantic reconstruction.",
+      "url": "https://arxiv.org/abs/2604.01204v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.01204v1",
+      "published": "2026-04-01T17:48:22Z",
+      "updated": "2026-04-01T17:48:22Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.GR",
+        "cs.LG"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2604.01202v1",
+      "title": "Therefore I am. I Think",
+      "authors": [
+        "Esakkivel Esakkiraja",
+        "Sai Rajeswar",
+        "Denis Akhiyarov",
+        "Rajagopal Venkatesaramani"
+      ],
+      "abstract": "We consider the question: when a large language reasoning model makes a choice, did it think first and then decide to, or decide first and then think? In this paper, we present evidence that detectable, early-encoded decisions shape chain-of-thought in reasoning models. Specifically, we show that a simple linear probe successfully decodes tool-calling decisions from pre-generation activations with very high confidence, and in some cases, even before a single reasoning token is produced. Activation steering supports this causally: perturbing the decision direction leads to inflated deliberation, and flips behavior in many examples (between 7 - 79% depending on model and benchmark). We also show through behavioral analysis that, when steering changes the decision, the chain-of-thought process often rationalizes the flip rather than resisting it. Together, these results suggest that reasoning models can encode action choices before they begin to deliberate in text.",
+      "url": "https://arxiv.org/abs/2604.01202v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.01202v1",
+      "published": "2026-04-01T17:46:23Z",
+      "updated": "2026-04-01T17:46:23Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI"
     }
   ]
 }
