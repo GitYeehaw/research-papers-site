@@ -2,211 +2,226 @@
   "category": "robotics",
   "name": "Robotics Research",
   "description": "Robotics \u2014 Motion Planning, Control Systems, Human-Robot Interaction, Autonomous Systems",
-  "scraped_at": "2026-04-08T09:14:08.184391+00:00",
+  "scraped_at": "2026-04-09T09:19:54.597172+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2604.06168v1",
-      "title": "Action Images: End-to-End Policy Learning via Multiview Video Generation",
+      "id": "2604.07348v1",
+      "title": "MoRight: Motion Control Done Right",
       "authors": [
-        "Haoyu Zhen",
-        "Zixian Gao",
-        "Qiao Sun",
-        "Yilin Zhao",
-        "Yuncong Yang",
-        "Yilun Du",
-        "Tsun-Hsuan Wang",
-        "Yi-Ling Qiao",
-        "Chuang Gan"
+        "Shaowei Liu",
+        "Xuanchi Ren",
+        "Tianchang Shen",
+        "Huan Ling",
+        "Saurabh Gupta",
+        "Shenlong Wang",
+        "Sanja Fidler",
+        "Jun Gao"
       ],
-      "abstract": "World action models (WAMs) have emerged as a promising direction for robot policy learning, as they can leverage powerful video backbones to model the future states. However, existing approaches often rely on separate action modules, or use action representations that are not pixel-grounded, making it difficult to fully exploit the pretrained knowledge of video models and limiting transfer across viewpoints and environments. In this work, we present Action Images, a unified world action model that formulates policy learning as multiview video generation. Instead of encoding control as low-dimensional tokens, we translate 7-DoF robot actions into interpretable action images: multi-view action videos that are grounded in 2D pixels and explicitly track robot-arm motion. This pixel-grounded action representation allows the video backbone itself to act as a zero-shot policy, without a separate policy head or action module. Beyond control, the same unified model supports video-action joint generation, action-conditioned video generation, and action labeling under a shared representation. On RLBench and real-world evaluations, our model achieves the strongest zero-shot success rates and improves video-action joint generation quality over prior video-space world models, suggesting that interpretable action images are a promising route to policy learning.",
-      "url": "https://arxiv.org/abs/2604.06168v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.06168v1",
-      "published": "2026-04-07T17:59:30Z",
-      "updated": "2026-04-07T17:59:30Z",
+      "abstract": "Generating motion-controlled videos--where user-specified actions drive physically plausible scene dynamics under freely chosen viewpoints--demands two capabilities: (1) disentangled motion control, allowing users to separately control the object motion and adjust camera viewpoint; and (2) motion causality, ensuring that user-driven actions trigger coherent reactions from other objects rather than merely displacing pixels. Existing methods fall short on both fronts: they entangle camera and object motion into a single tracking signal and treat motion as kinematic displacement without modeling causal relationships between object motion. We introduce MoRight, a unified framework that addresses both limitations through disentangled motion modeling. Object motion is specified in a canonical static-view and transferred to an arbitrary target camera viewpoint via temporal cross-view attention, enabling disentangled camera and object control. We further decompose motion into active (user-driven) and passive (consequence) components, training the model to learn motion causality from data. At inference, users can either supply active motion and MoRight predicts consequences (forward reasoning), or specify desired passive outcomes and MoRight recovers plausible driving actions (inverse reasoning), all while freely adjusting the camera viewpoint. Experiments on three benchmarks demonstrate state-of-the-art performance in generation quality, motion controllability, and interaction awareness.",
+      "url": "https://arxiv.org/abs/2604.07348v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.07348v1",
+      "published": "2026-04-08T17:59:22Z",
+      "updated": "2026-04-08T17:59:22Z",
       "categories": [
         "cs.CV",
+        "cs.AI",
+        "cs.GR",
+        "cs.LG",
         "cs.RO"
       ],
       "primary_category": "cs.CV"
     },
     {
-      "id": "2604.06158v1",
-      "title": "Distributionally Robust Regret Optimal LQR with Common Stage-Law Ambiguity",
+      "id": "2604.07345v1",
+      "title": "Measurement of Generative AI Workload Power Profiles for Whole-Facility Data Center Infrastructure Planning",
       "authors": [
-        "Lukas-Benedikt Fiechtner",
-        "Jose Blanchet"
+        "Roberto Vercellino",
+        "Jared Willard",
+        "Gustavo Campos",
+        "Weslley da Silva Pereira",
+        "Olivia Hull",
+        "Matthew Selensky",
+        "Juliane Mueller"
       ],
-      "abstract": "We study, to our knowledge, the first tractable multistage ex-ante distributionally robust regret optimization (DRRO) formulation for stochastic control. We consider finite-horizon LQR under common stage-law ambiguity: disturbances are independent across time but share an unknown stage law whose mean and covariance lie in a Gelbrich ball around nominal parameters. Unlike the single-stage quadratic case, the nominal certainty-equivalent (CE) controller is generally not regret-optimal, because reuse of the stage law makes past disturbances informative for future decisions. Despite the general NP-hardness of DRRO, we show that over linear disturbance-feedback policies the resulting multistage DRRO-LQR problem admits an exact semidefinite programming reformulation. The optimal controller is the nominal certainty-equivalent LQR law plus a strictly causal empirical-mean correction. We also characterize worst-case distributions and show that those for the DRRO-optimal policy are nonunique. Numerical results show that, relative to the corresponding DRO controller under the same ambiguity set, DRRO is often substantially less conservative while preserving the intended regret guarantee, and that its correction coefficients empirically approach the certainty-equivalent feedforward coefficient.",
-      "url": "https://arxiv.org/abs/2604.06158v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.06158v1",
-      "published": "2026-04-07T17:55:56Z",
-      "updated": "2026-04-07T17:55:56Z",
+      "abstract": "The rapid growth of generative artificial intelligence (AI) has introduced unprecedented computational demands, driving significant increases in the energy footprint of data centers. However, existing power consumption data is largely proprietary and reported at varying resolutions, creating challenges for estimating whole-facility energy use and planning infrastructure. In this work, we present a methodology that bridges this gap by linking high-resolution workload power measurements to whole-facility energy demand. Using NLR's high-performance computing data center equipped with NVIDIA H100 GPUs, we measure power consumption of AI workloads at 0.1-second resolution for AI training, fine-tuning and inference jobs. Workloads are characterized using MLCommons benchmarks for model training and fine-tuning, and vLLM benchmarks for inference, enabling reproducible and standardized workload profiling. The dataset of power consumption profiles is made publicly available. These power profiles are then scaled to the whole-facility-level using a bottom-up, event-driven, data center energy model. The resulting whole-facility energy profiles capture realistic temporal fluctuations driven by AI workloads and user-behavior, and can be used to inform infrastructure planning for grid connection, on-site energy generation, and distributed microgrids.",
+      "url": "https://arxiv.org/abs/2604.07345v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.07345v1",
+      "published": "2026-04-08T17:56:41Z",
+      "updated": "2026-04-08T17:56:41Z",
       "categories": [
-        "math.OC",
-        "eess.SY"
+        "eess.SY",
+        "cs.DC",
+        "cs.LG"
       ],
-      "primary_category": "math.OC"
+      "primary_category": "eess.SY"
     },
     {
-      "id": "2604.06150v1",
-      "title": "Delta6: A Low-Cost, 6-DOF Force-Sensing Flexible End-Effector",
+      "id": "2604.07342v1",
+      "title": "Dual-Envelope Constrained Nonlinear MPC for Distributed Drive Electric Vehicles Drifting Under Bounded Steering and Direct Yaw-Moment Control",
       "authors": [
-        "Yue Feng",
-        "Weicheng Huang",
-        "Chen Qiu",
-        "Huixu Dong",
-        "I-Ming Chen"
+        "Yurun Gan",
+        "Ziyu Song",
+        "Jing Yang",
+        "Zheng Lin",
+        "Jianuo Zhang",
+        "Tongtong Gu",
+        "Haitao Ding",
+        "Nan Xu",
+        "Por Lip Yee",
+        "Wei Ni",
+        "Jun Luo"
       ],
-      "abstract": "This paper presents Delta6, a low-cost, six-degree-of-freedom (6-DOF) force/torque end-effector that combines antagonistic springs with magnetic encoders to deliver accurate wrench sensing while remaining as simple to assemble as flat-pack furniture. A fully 3D-printed prototype, assembled entirely from off-the-shelf parts, withstands peak forces above +/-14.4 N and torques of +/-0.33 N.m per axis; these limits can be further extended by leveraging the proposed parametric analytical model. Without calibration, Delta6 attains a 99th-percentile error of 7% full scale (FS). With lightweight sequence models, the error is reduced to 3.8% FS by the best-performing network. Benchmarks on multiple computing platforms confirm that the device's bandwidth is adjustable, enabling balanced trade-offs among update rate, accuracy, and cost, while durability, thermal drift, and zero-calibration tests confirm its robustness. With Delta6 mounted on a robot arm governed by a force-impedance controller, the system successfully performs two contact-rich tasks: buffing curved surfaces and tight assemblies. Experiments validate the design, showing that Delta6 is a robust, low-cost alternative to existing 6-DOF force sensing solutions. Open-source site: https://wings-robotics.github.io/delta6 .",
-      "url": "https://arxiv.org/abs/2604.06150v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.06150v1",
-      "published": "2026-04-07T17:52:32Z",
-      "updated": "2026-04-07T17:52:32Z",
+      "abstract": "Distributed drive electric vehicles offer superior yaw moment control for autonomous drifting in extreme maneuvers. Conventional drift analysis constructs stability boundaries from open loop equilibria points and assumes a fixed envelope structure. However, coupling among control inputs reshapes the phase plane and shifts saddle point location, which can invalidate open loop envelopes when used for closed loop drifting. To address this issue, a saddle point coordinate model is established in this paper by combining a nonlinear tire model with the handling diagram and explicitly accounting for road adhesion coefficient, longitudinal velocity, front wheel steering angle, and additional yaw moment. Based on saddle point properties, an extended dual envelope framework is constructed in the phase plane of slip angle and yaw rate. Using the convergence tendency of state points toward saddle points under bounded control inputs, the outer envelope defines a recoverable set under constraints on front wheel steering angle and additional yaw moment. The inner envelope characterizes the non-drifting stability region associated with unsaturated tire forces. Finally, a nonlinear model predictive control (NMPC) controller is developed using the extended dual envelope constraint. Hardware-in-the-loop experiments show that, compared with NMPC without envelope constraints, the proposed method enables smoother convergence toward the drift saddle point, reduces the steady-state tracking errors of vehicle speed, sideslip angle, and yaw rate by 33.07%, 71.18%, and 31.27%, respectively, and decreases the peak tracking error by 63.66% under road-friction mismatch.",
+      "url": "https://arxiv.org/abs/2604.07342v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.07342v1",
+      "published": "2026-04-08T17:54:30Z",
+      "updated": "2026-04-08T17:54:30Z",
+      "categories": [
+        "eess.SY"
+      ],
+      "primary_category": "eess.SY"
+    },
+    {
+      "id": "2604.07335v1",
+      "title": "TAMEn: Tactile-Aware Manipulation Engine for Closed-Loop Data Collection in Contact-Rich Tasks",
+      "authors": [
+        "Longyan Wu",
+        "Jieji Ren",
+        "Chenghang Jiang",
+        "Junxi Zhou",
+        "Shijia Peng",
+        "Ran Huang",
+        "Guoying Gu",
+        "Li Chen",
+        "Hongyang Li"
+      ],
+      "abstract": "Handheld paradigms offer an efficient and intuitive way for collecting large-scale demonstration of robot manipulation. However, achieving contact-rich bimanual manipulation through these methods remains a pivotal challenge, which is substantially hindered by hardware adaptability and data efficacy. Prior hardware designs remain gripper-specific and often face a trade-off between tracking precision and portability. Furthermore, the lack of online feasibility checking during demonstration leads to poor replayability. More importantly, existing handheld setups struggle to collect interactive recovery data during robot execution, lacking the authentic tactile information necessary for robust policy refinement. To bridge these gaps, we present TAMEn, a tactile-aware manipulation engine for closed-loop data collection in contact-rich tasks. Our system features a cross-morphology wearable interface that enables rapid adaptation across heterogeneous grippers. To balance data quality and environmental diversity, we implement a dual-modal acquisition pipeline: a precision mode leveraging motion capture for high-fidelity demonstrations, and a portable mode utilizing VR-based tracking for in-the-wild acquisition and tactile-visualized recovery teleoperation. Building on this hardware, we unify large-scale tactile pretraining, task-specific bimanual demonstrations, and human-in-the-loop recovery data into a pyramid-structured data regime, enabling closed-loop policy refinement. Experiments show that our feasibility-aware pipeline significantly improves demonstration replayability, and that the proposed visuo-tactile learning framework increases task success rates from 34% to 75% across diverse bimanual manipulation tasks. We further open-source the hardware and dataset to facilitate reproducibility and support research in visuo-tactile manipulation.",
+      "url": "https://arxiv.org/abs/2604.07335v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.07335v1",
+      "published": "2026-04-08T17:49:35Z",
+      "updated": "2026-04-08T17:49:35Z",
       "categories": [
         "cs.RO"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2604.06140v1",
-      "title": "On the Convergence of an Opinion-Action Coevolution Model with Bounded Confidence",
+      "id": "2604.07331v1",
+      "title": "RoSHI: A Versatile Robot-oriented Suit for Human Data In-the-Wild",
       "authors": [
-        "Chen Song",
-        "Angela Fontan",
-        "Rong Su",
-        "Julien M. Hendrickx",
-        "Vladimir Cvetkovic",
-        "Karl H. Johansson"
+        "Wenjing Margaret Mao",
+        "Jefferson Ng",
+        "Luyang Hu",
+        "Daniel Gehrig",
+        "Antonio Loquercio"
       ],
-      "abstract": "This paper presents a theoretical convergence analysis for an opinion-action coevolution model that integrates the opinion updating rule of the Hegselmann-Krause model with a utility-based decision-making mechanism. The model is reformulated into an augmented state-space representation, where the state matrix induces a time-varying social interaction digraph. The convergence analysis is grounded on two existing theoretical findings that establish convergence for the Hegselmann-Krause type of models and containment control systems with multiple stationary leaders, respectively. Results indicate that, if the structure of the interaction digraph stabilizes within finite time, the model either converges to consensus, where all agents' opinions and actions reach an identical state, or exhibits clustering, where some opinion nodes act as stationary leaders while the remaining nodes approach the convex hull formed by the leaders. Numerical simulations are then provided to validate the theoretical results.",
-      "url": "https://arxiv.org/abs/2604.06140v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.06140v1",
-      "published": "2026-04-07T17:45:24Z",
-      "updated": "2026-04-07T17:45:24Z",
-      "categories": [
-        "eess.SY"
-      ],
-      "primary_category": "eess.SY"
-    },
-    {
-      "id": "2604.06133v1",
-      "title": "Learning-Guided Force-Feedback Model Predictive Control with Obstacle Avoidance for Robotic Deburring",
-      "authors": [
-        "Krzysztof Wojciechowski",
-        "Ege Gursoy",
-        "Arthur Haffemayer",
-        "Sebastien Kleff",
-        "Vincent Bonnet",
-        "Florent Lamiraux",
-        "Nicolas Mansard"
-      ],
-      "abstract": "Model Predictive Control (MPC) is widely used for torque-controlled robots, but classical formulations often neglect real-time force feedback and struggle with contact-rich industrial tasks under collision constraints. Deburring in particular requires precise tool insertion, stable force regulation, and collision-free circular motions in challenging configurations, which exceeds the capability of standard MPC pipelines. We propose a framework that integrates force-feedback MPC with diffusion-based motion priors to address these challenges. The diffusion model serves as a memory of motion strategies, providing robust initialization and adaptation across multiple task instances, while MPC ensures safe execution with explicit force tracking, torque feasibility, and collision avoidance. We validate our approach on a torque-controlled manipulator performing industrial deburring tasks. Experiments demonstrate reliable tool insertion, accurate normal force tracking, and circular deburring motions even in hard-to-reach configurations and under obstacle constraints. To our knowledge, this is the first integration of diffusion motion priors with force-feedback MPC for collision-aware, contact-rich industrial tasks.",
-      "url": "https://arxiv.org/abs/2604.06133v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.06133v1",
-      "published": "2026-04-07T17:43:32Z",
-      "updated": "2026-04-07T17:43:32Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2604.06117v1",
-      "title": "On Permanence of Conservative Replicator Dynamics with Four Strategies",
-      "authors": [
-        "Haoyu Yin",
-        "Xudong Chen",
-        "Bruno Sinopoli"
-      ],
-      "abstract": "In this paper, we study four-strategy conservative replicator dynamics induced by constant payoff matrices. We establish necessary and sufficient conditions for permanence to occur by associating the payoff matrix with its digraph, revealing exactly five distinct digraph classes governing the global behavior. We further show that, whenever the dynamics is permanent, every non-equilibrium trajectory in the relative interior of the simplex is a Lyapunov-stable periodic orbit. Together with the classification of the boundary phase portraits, these results provide a complete characterization of the global dynamics in the four-strategy case with permanence.",
-      "url": "https://arxiv.org/abs/2604.06117v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.06117v1",
-      "published": "2026-04-07T17:26:25Z",
-      "updated": "2026-04-07T17:26:25Z",
-      "categories": [
-        "math.DS",
-        "eess.SY"
-      ],
-      "primary_category": "math.DS"
-    },
-    {
-      "id": "2604.06093v1",
-      "title": "eVTOL Aircraft Energy Overhead Estimation under Conflict Resolution in High-Density Airspaces",
-      "authors": [
-        "Alex Zongo",
-        "Peng Wei"
-      ],
-      "abstract": "Electric vertical takeoff and landing (eVTOL) aircraft operating in high-density urban airspace must maintain safe separation through tactical conflict resolution, yet the energy cost of such maneuvers has not been systematically quantified. This paper investigates how conflict-resolution maneuvers under the Modified Voltage Potential (MVP) algorithm affect eVTOL energy consumption. Using a physics-based power model integrated within a traffic simulation, we analyze approximately 71,767 en route sections within a sector, across traffic densities of 10-60 simultaneous aircraft. The main finding is that MVP-based deconfliction is energy-efficient: median energy overhead remains below 1.5% across all density levels, and the majority of en route flights within the sector incur negligible penalty. However, the distribution exhibits pronounced right-skewness, with tail cases reaching 44% overhead at the highest densities due to sustained multi-aircraft conflicts. The 95th percentile ranges from 3.84% to 5.3%, suggesting that a 4-5% reserve margin accommodates the vast majority of tactical deconfliction scenarios. To support operational planning, we develop a machine learning model that estimates energy overhead at mission initiation. Because conflict outcomes depend on future traffic interactions that cannot be known in advance, the model provides both point estimates and uncertainty bounds. These bounds are conservative; actual outcomes fall within the predicted range more often than the stated confidence level, making them suitable for safety-critical reserve planning. Together, these results validate MVP's suitability for energy-constrained eVTOL operations and provide quantitative guidance for reserve energy determination in Advanced Air Mobility.",
-      "url": "https://arxiv.org/abs/2604.06093v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.06093v1",
-      "published": "2026-04-07T17:07:39Z",
-      "updated": "2026-04-07T17:07:39Z",
-      "categories": [
-        "eess.SY",
-        "cs.LG",
-        "cs.RO"
-      ],
-      "primary_category": "eess.SY"
-    },
-    {
-      "id": "2604.06089v1",
-      "title": "Coalitional Zero-Sum Games for ${H_{\\infty}}$ Leader-Following Consensus Control",
-      "authors": [
-        "Yunxiao Ren",
-        "Dingguo Liang",
-        "Yuezu Lv",
-        "Zhisheng Duan"
-      ],
-      "abstract": "This paper investigates the leader-following consensus problem for a class of multi-agent systems subject to adversarial attack-like external inputs. To address this, we formulate the robust leader-following control problem as a global coalitional min-max zero-sum game using differential game theory. Specifically, the agents' control inputs form a coalition to minimize a global cost function, while the attacks form an opposing coalition to maximize it. Notably, when these external adversarial attacks manifest as disturbances, the designed game-theoretic control policy systematically yields a robust $H_\\infty$ control law. Addressing this problem inherently requires solving a high-dimensional generalized algebraic Riccati equation (GARE), which poses significant challenges for distributed computation and controller implementation. To overcome these challenges, we propose a two-fold approach. First, a decentralized computational strategy is devised to decompose the high-dimensional GARE into multiple uniform, lower-dimensional GAREs. Second, a dynamic average consensus-based decoupling algorithm is developed to resolve the inherent coupling structure of the robust control law, thereby facilitating its distributed implementation. Finally, numerical simulations on the formation control of multi-vehicle systems with feedback-linearized dynamics are conducted to validate the effectiveness of the proposed algorithms.",
-      "url": "https://arxiv.org/abs/2604.06089v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.06089v1",
-      "published": "2026-04-07T17:03:06Z",
-      "updated": "2026-04-07T17:03:06Z",
-      "categories": [
-        "eess.SY",
-        "math.OC"
-      ],
-      "primary_category": "eess.SY"
-    },
-    {
-      "id": "2604.06078v1",
-      "title": "A proximal approach to the Schr\u00f6dinger bridge problem with incomplete information and application to contamination tracking in water networks",
-      "authors": [
-        "Michele Mascherpa",
-        "Victor Moln\u00f6",
-        "Carsten Skovmose Kalles\u00f8e",
-        "Johan Karlsson"
-      ],
-      "abstract": "In this work, we study a discrete Schr\u00f6dinger bridge problem with partial marginal observations. A main difficulty compared to the classical Schr\u00f6dinger bridge formulation is that our problem is not strictly convex and standard Sinkhorn-type methods cannot be directly applied. To address this issue, we propose a scalable computational method based on an entropic proximal scheme. Furthermore, we develop a framework for this problem that includes duality results, characterization of the optimal solutions, and an observability condition that determines when the optimal solution is unique. We validate the method on the problem of estimating contamination in a water distribution network, where the partial marginals correspond to measured pollutant concentrations at the sensor locations. The experiments were conducted on a laboratory-scale water distribution network.",
-      "url": "https://arxiv.org/abs/2604.06078v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.06078v1",
-      "published": "2026-04-07T16:57:45Z",
-      "updated": "2026-04-07T16:57:45Z",
-      "categories": [
-        "math.OC",
-        "eess.SY"
-      ],
-      "primary_category": "math.OC"
-    },
-    {
-      "id": "2604.06073v1",
-      "title": "Intuitive Human-Robot Interaction: Development and Evaluation of a Gesture-Based User Interface for Object Selection",
-      "authors": [
-        "Bijan Kavousian",
-        "Oliver Petrovic",
-        "Werner Herfs"
-      ],
-      "abstract": "Gestures are a natural form of communication between humans and can also be leveraged for human-robot interaction. This work presents a gesture-based user interface for object selection using pointing and click gestures. An experiment with 20 participants evaluates accuracy and selection time, demonstrating the potential for efficient collaboration.",
-      "url": "https://arxiv.org/abs/2604.06073v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.06073v1",
-      "published": "2026-04-07T16:52:59Z",
-      "updated": "2026-04-07T16:52:59Z",
+      "abstract": "Scaling up robot learning will likely require human data containing rich and long-horizon interactions in the wild. Existing approaches for collecting such data trade off portability, robustness to occlusion, and global consistency. We introduce RoSHI, a hybrid wearable that fuses low-cost sparse IMUs with the Project Aria glasses to estimate the full 3D pose and body shape of the wearer in a metric global coordinate frame from egocentric perception. This system is motivated by the complementarity of the two sensors: IMUs provide robustness to occlusions and high-speed motions, while egocentric SLAM anchors long-horizon motion and stabilizes upper body pose. We collect a dataset of agile activities to evaluate RoSHI. On this dataset, we generally outperform other egocentric baselines and perform comparably to a state-of-the-art exocentric baseline (SAM3D). Finally, we demonstrate that the motion data recorded from our system are suitable for real-world humanoid policy learning. For videos, data and more, visit the project webpage: https://roshi-mocap.github.io/",
+      "url": "https://arxiv.org/abs/2604.07331v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.07331v1",
+      "published": "2026-04-08T17:48:46Z",
+      "updated": "2026-04-08T17:48:46Z",
       "categories": [
         "cs.RO",
-        "cs.HC"
+        "cs.AI",
+        "cs.CV"
       ],
       "primary_category": "cs.RO"
+    },
+    {
+      "id": "2604.07303v1",
+      "title": "Robots that learn to evaluate models of collective behavior",
+      "authors": [
+        "Mathis Hocke",
+        "Andreas Gerken",
+        "David Bierbach",
+        "Jens Krause",
+        "Tim Landgraf"
+      ],
+      "abstract": "Understanding and modeling animal behavior is essential for studying collective motion, decision-making, and bio-inspired robotics. Yet, evaluating the accuracy of behavioral models still often relies on offline comparisons to static trajectory statistics. Here we introduce a reinforcement-learning-based framework that uses a biomimetic robotic fish (RoboFish) to evaluate computational models of live fish behavior through closed-loop interaction. We trained policies in simulation using four distinct fish models-a simple constant-follow baseline, two rule-based models, and a biologically grounded convolutional neural network model-and transferred these policies to the real RoboFish setup, where they interacted with live fish. Policies were trained to guide a simulated fish to goal locations, enabling us to quantify how the response of real fish differs from the simulated fish's response. We evaluate the fish models by quantifying the sim-to-real gaps, defined as the Wasserstein distance between simulated and real distributions of behavioral metrics such as goal-reaching performance, inter-individual distances, wall interactions, and alignment. The neural network-based fish model exhibited the smallest gap across goal-reaching performance and most other metrics, indicating higher behavioral fidelity than conventional rule-based models under this benchmark. More importantly, this separation shows that the proposed evaluation can quantitatively distinguish candidate models under matched closed-loop conditions. Our work demonstrates how learning-based robotic experiments can uncover deficiencies in behavioral models and provides a general framework for evaluating animal behavior models through embodied interaction.",
+      "url": "https://arxiv.org/abs/2604.07303v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.07303v1",
+      "published": "2026-04-08T17:11:29Z",
+      "updated": "2026-04-08T17:11:29Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2604.07286v1",
+      "title": "CADENCE: Context-Adaptive Depth Estimation for Navigation and Computational Efficiency",
+      "authors": [
+        "Timothy K Johnsen",
+        "Marco Levorato"
+      ],
+      "abstract": "Autonomous vehicles deployed in remote environments typically rely on embedded processors, compact batteries, and lightweight sensors. These hardware limitations conflict with the need to derive robust representations of the environment, which often requires executing computationally intensive deep neural networks for perception. To address this challenge, we present CADENCE, an adaptive system that dynamically scales the computational complexity of a slimmable monocular depth estimation network in response to navigation needs and environmental context. By closing the loop between perception fidelity and actuation requirements, CADENCE ensures high-precision computing is only used when mission-critical. We conduct evaluations on our released open-source testbed that integrates Microsoft AirSim with an NVIDIA Jetson Orin Nano. As compared to a state-of-the-art static approach, CADENCE decreases sensor acquisitions, power consumption, and inference latency by 9.67%, 16.1%, and 74.8%, respectively. The results demonstrate an overall reduction in energy expenditure by 75.0%, along with an increase in navigation accuracy by 7.43%.",
+      "url": "https://arxiv.org/abs/2604.07286v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.07286v1",
+      "published": "2026-04-08T16:49:30Z",
+      "updated": "2026-04-08T16:49:30Z",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2604.07281v1",
+      "title": "Active Propeller Fault Detection and Isolation in Multirotors Via Vibration Model",
+      "authors": [
+        "Alessandro Baldini",
+        "Riccardo Felicetti",
+        "Alessandro Freddi",
+        "Andrea Monteri\u00f9"
+      ],
+      "abstract": "In rotary-wing aircraft, rotating blades are exposed to collisions and subsequent damage. The detection and isolation of blade damage constitute the first step in fault mitigation; however, they are particularly challenging when considerable input redundancy is available, as in the case of multirotors. In this article, we propose an active model-based approach that deliberately perturbs the control inputs to isolate blade faults in multirotor vehicles. By exploiting a model that captures the vibrations caused by blade damage, the isolation method relies solely on vibration data from the onboard inertial measurement unit. The strategy is tested in simulation using an octarotor platform, and both time-domain and frequency-domain features are analyzed. Several accuracy-related metrics of the technique are evaluated on a set of 9600 simulations and compared with the most relevant variables.",
+      "url": "https://arxiv.org/abs/2604.07281v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.07281v1",
+      "published": "2026-04-08T16:44:24Z",
+      "updated": "2026-04-08T16:44:24Z",
+      "categories": [
+        "eess.SY"
+      ],
+      "primary_category": "eess.SY"
+    },
+    {
+      "id": "2604.07249v1",
+      "title": "Complex-Valued Kuramoto Networks: A Unified Control-Theoretic Framework",
+      "authors": [
+        "Lorenzo Giordano",
+        "Josep M. Olm",
+        "Mario di Bernardo"
+      ],
+      "abstract": "Synchronization in networks of coupled oscillators is classically studied via the Kuramoto model, whose intrinsic nonlinearity limits analytical tractability and complicates control design. Complex-valued extensions circumvent this by embedding phase dynamics into a higher-dimensional linear state space, where regulating complex-state moduli to a common value recovers Kuramoto phase behavior. Existing approaches to address this problem correspond, within a unified control framework, to state-feedback and hybrid reset-based strategies, each with performance constraints. We propose two switched control designs that overcome these limitations: a switched feedforward law ensuring exact phase correspondence at all times, and a feedforward plus sliding-mode law achieving finite-time convergence without spectral gain tuning. Additionally, we present a non-autonomous complex-valued MIMO sliding-mode controller that enforces phase locking at a prescribed frequency in finite time, independent of natural frequencies and coupling strengths. Simulations confirm improved transient response, steady-state accuracy, and robustness, including synchronization of heterogeneous networks where the classical real-valued Kuramoto model fails.",
+      "url": "https://arxiv.org/abs/2604.07249v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.07249v1",
+      "published": "2026-04-08T16:12:42Z",
+      "updated": "2026-04-08T16:12:42Z",
+      "categories": [
+        "eess.SY"
+      ],
+      "primary_category": "eess.SY"
+    },
+    {
+      "id": "2604.07246v1",
+      "title": "Flexible Electric Vehicle Charging with Karma",
+      "authors": [
+        "Ezzat Elokda",
+        "Ruiting Wang",
+        "Karl H. Johansson",
+        "Angela Fontan"
+      ],
+      "abstract": "Motivated by the need to develop fair and efficient schemes to facilitate the electrification of transport, this paper proposes a non-monetary karma economy for flexible Electric Vehicle (EV) charging, managing the intertemporal allocation of limited power capacity. We consider a charging facility with limited capacity that must schedule arriving EVs to charge in real-time. For this purpose, the facility adopts online karma auctions, in which each EV user is endowed with non-tradable karma tokens, places a karma bid in each time interval it is present in the facility, and capacity is allocated to the highest bidders, who must pay their bids. These payments are subsequently redistributed to the users to form a closed, indefinitely sustainable economy. The main contribution is to extend previous karma Dynamic Population Game (DPG) formulations to this setting which features novel State of Charge (SOC) dynamics and private trip deadlines in addition to urgency. A Stationary Nash Equilibrium (SNE) of the EV charging karma economy is guaranteed to exist, and it is demonstrated to provide pronounced benefits with respect to benchmark scheduling schemes as it balances between meeting deadlines and prioritizing high urgency.",
+      "url": "https://arxiv.org/abs/2604.07246v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.07246v1",
+      "published": "2026-04-08T16:10:30Z",
+      "updated": "2026-04-08T16:10:30Z",
+      "categories": [
+        "eess.SY"
+      ],
+      "primary_category": "eess.SY"
     }
   ]
 }

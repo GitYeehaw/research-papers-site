@@ -2,235 +2,231 @@
   "category": "cs",
   "name": "CS Research",
   "description": "Computer Science \u2014 AI, Machine Learning, NLP, Computer Vision",
-  "scraped_at": "2026-04-08T09:13:47.378770+00:00",
+  "scraped_at": "2026-04-09T09:19:32.948693+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2604.06170v1",
-      "title": "Paper Circle: An Open-source Multi-agent Research Discovery and Analysis Framework",
+      "id": "2604.07350v1",
+      "title": "Fast Spatial Memory with Elastic Test-Time Training",
       "authors": [
-        "Komal Kumar",
-        "Aman Chadha",
-        "Salman Khan",
-        "Fahad Shahbaz Khan",
-        "Hisham Cholakkal"
-      ],
-      "abstract": "The rapid growth of scientific literature has made it increasingly difficult for researchers to efficiently discover, evaluate, and synthesize relevant work. Recent advances in multi-agent large language models (LLMs) have demonstrated strong potential for understanding user intent and are being trained to utilize various tools. In this paper, we introduce Paper Circle, a multi-agent research discovery and analysis system designed to reduce the effort required to find, assess, organize, and understand academic literature. The system comprises two complementary pipelines: (1) a Discovery Pipeline that integrates offline and online retrieval from multiple sources, multi-criteria scoring, diversity-aware ranking, and structured outputs; and (2) an Analysis Pipeline that transforms individual papers into structured knowledge graphs with typed nodes such as concepts, methods, experiments, and figures, enabling graph-aware question answering and coverage verification. Both pipelines are implemented within a coder LLM-based multi-agent orchestration framework and produce fully reproducible, synchronized outputs including JSON, CSV, BibTeX, Markdown, and HTML at each agent step. This paper describes the system architecture, agent roles, retrieval and scoring methods, knowledge graph schema, and evaluation interfaces that together form the Paper Circle research workflow. We benchmark Paper Circle on both paper retrieval and paper review generation, reporting hit rate, MRR, and Recall at K. Results show consistent improvements with stronger agent models. We have publicly released the website at https://papercircle.vercel.app/ and the code at https://github.com/MAXNORM8650/papercircle.",
-      "url": "https://arxiv.org/abs/2604.06170v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.06170v1",
-      "published": "2026-04-07T17:59:58Z",
-      "updated": "2026-04-07T17:59:58Z",
-      "categories": [
-        "cs.CL"
-      ],
-      "primary_category": "cs.CL"
-    },
-    {
-      "id": "2604.06169v1",
-      "title": "In-Place Test-Time Training",
-      "authors": [
-        "Guhao Feng",
-        "Shengjie Luo",
-        "Kai Hua",
-        "Ge Zhang",
-        "Di He",
-        "Wenhao Huang",
-        "Tianle Cai"
-      ],
-      "abstract": "The static ``train then deploy\" paradigm fundamentally limits Large Language Models (LLMs) from dynamically adapting their weights in response to continuous streams of new information inherent in real-world tasks. Test-Time Training (TTT) offers a compelling alternative by updating a subset of model parameters (fast weights) at inference time, yet its potential in the current LLM ecosystem is hindered by critical barriers including architectural incompatibility, computational inefficiency and misaligned fast weight objectives for language modeling. In this work, we introduce In-Place Test-Time Training (In-Place TTT), a framework that seamlessly endows LLMs with Test-Time Training ability. In-Place TTT treats the final projection matrix of the ubiquitous MLP blocks as its adaptable fast weights, enabling a ``drop-in\" enhancement for LLMs without costly retraining from scratch. Furthermore, we replace TTT's generic reconstruction objective with a tailored, theoretically-grounded objective explicitly aligned with the Next-Token-Prediction task governing autoregressive language modeling. This principled objective, combined with an efficient chunk-wise update mechanism, results in a highly scalable algorithm compatible with context parallelism. Extensive experiments validate our framework's effectiveness: as an in-place enhancement, it enables a 4B-parameter model to achieve superior performance on tasks with contexts up to 128k, and when pretrained from scratch, it consistently outperforms competitive TTT-related approaches. Ablation study results further provide deeper insights on our design choices. Collectively, our results establish In-Place TTT as a promising step towards a paradigm of continual learning in LLMs.",
-      "url": "https://arxiv.org/abs/2604.06169v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.06169v1",
-      "published": "2026-04-07T17:59:44Z",
-      "updated": "2026-04-07T17:59:44Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL",
-        "stat.ML"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2604.06168v1",
-      "title": "Action Images: End-to-End Policy Learning via Multiview Video Generation",
-      "authors": [
+        "Ziqiao Ma",
+        "Xueyang Yu",
         "Haoyu Zhen",
-        "Zixian Gao",
-        "Qiao Sun",
-        "Yilin Zhao",
         "Yuncong Yang",
-        "Yilun Du",
-        "Tsun-Hsuan Wang",
-        "Yi-Ling Qiao",
+        "Joyce Chai",
         "Chuang Gan"
       ],
-      "abstract": "World action models (WAMs) have emerged as a promising direction for robot policy learning, as they can leverage powerful video backbones to model the future states. However, existing approaches often rely on separate action modules, or use action representations that are not pixel-grounded, making it difficult to fully exploit the pretrained knowledge of video models and limiting transfer across viewpoints and environments. In this work, we present Action Images, a unified world action model that formulates policy learning as multiview video generation. Instead of encoding control as low-dimensional tokens, we translate 7-DoF robot actions into interpretable action images: multi-view action videos that are grounded in 2D pixels and explicitly track robot-arm motion. This pixel-grounded action representation allows the video backbone itself to act as a zero-shot policy, without a separate policy head or action module. Beyond control, the same unified model supports video-action joint generation, action-conditioned video generation, and action labeling under a shared representation. On RLBench and real-world evaluations, our model achieves the strongest zero-shot success rates and improves video-action joint generation quality over prior video-space world models, suggesting that interpretable action images are a promising route to policy learning.",
-      "url": "https://arxiv.org/abs/2604.06168v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.06168v1",
-      "published": "2026-04-07T17:59:30Z",
-      "updated": "2026-04-07T17:59:30Z",
+      "abstract": "Large Chunk Test-Time Training (LaCT) has shown strong performance on long-context 3D reconstruction, but its fully plastic inference-time updates remain vulnerable to catastrophic forgetting and overfitting. As a result, LaCT is typically instantiated with a single large chunk spanning the full input sequence, falling short of the broader goal of handling arbitrarily long sequences in a single pass. We propose Elastic Test-Time Training inspired by elastic weight consolidation, that stabilizes LaCT fast-weight updates with a Fisher-weighted elastic prior around a maintained anchor state. The anchor evolves as an exponential moving average of past fast weights to balance stability and plasticity. Based on this updated architecture, we introduce Fast Spatial Memory (FSM), an efficient and scalable model for 4D reconstruction that learns spatiotemporal representations from long observation sequences and renders novel view-time combinations. We pre-trained FSM on large-scale curated 3D/4D data to capture the dynamics and semantics of complex spatial environments. Extensive experiments show that FSM supports fast adaptation over long sequences and delivers high-quality 3D/4D reconstruction with smaller chunks and mitigating the camera-interpolation shortcut. Overall, we hope to advance LaCT beyond the bounded single-chunk setting toward robust multi-chunk adaptation, a necessary step for generalization to genuinely longer sequences, while substantially alleviating the activation-memory bottleneck.",
+      "url": "https://arxiv.org/abs/2604.07350v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.07350v1",
+      "published": "2026-04-08T17:59:48Z",
+      "updated": "2026-04-08T17:59:48Z",
       "categories": [
         "cs.CV",
+        "cs.GR",
+        "cs.LG"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2604.07349v1",
+      "title": "Toward a Tractability Frontier for Exact Relevance Certification",
+      "authors": [
+        "Tristan Simas"
+      ],
+      "abstract": "Exact relevance certification asks which coordinates are necessary to determine the optimal action in a coordinate-structured decision problem. The tractable families treated here admit a finite primitive basis, but optimizer-quotient realizability is maximal, so quotient shape alone cannot characterize the frontier.   We prove a meta-impossibility theorem for efficiently checkable structural predicates invariant under the theorem-forced closure laws of exact certification. Structural convergence with zero-distortion summaries, quotient entropy bounds, and support-counting arguments explains why those closure laws are canonical. We establish the theorem by constructing same-orbit disagreements for four obstruction families, namely dominant-pair concentration, margin masking, ghost-action concentration, and additive/statewise offset concentration, using action-independent, pair-targeted affine witnesses. Consequently no correct tractability classifier on a closure-closed domain yields an exact characterization over these families. Here closure-orbit agreement is forced by correctness rather than assumed as an invariance axiom. The result therefore applies to correct classifiers on closure-closed domains, not only to classifiers presented through a designated admissibility package.",
+      "url": "https://arxiv.org/abs/2604.07349v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.07349v1",
+      "published": "2026-04-08T17:59:47Z",
+      "updated": "2026-04-08T17:59:47Z",
+      "categories": [
+        "cs.CC",
+        "cs.AI",
+        "cs.LO"
+      ],
+      "primary_category": "cs.CC"
+    },
+    {
+      "id": "2604.07348v1",
+      "title": "MoRight: Motion Control Done Right",
+      "authors": [
+        "Shaowei Liu",
+        "Xuanchi Ren",
+        "Tianchang Shen",
+        "Huan Ling",
+        "Saurabh Gupta",
+        "Shenlong Wang",
+        "Sanja Fidler",
+        "Jun Gao"
+      ],
+      "abstract": "Generating motion-controlled videos--where user-specified actions drive physically plausible scene dynamics under freely chosen viewpoints--demands two capabilities: (1) disentangled motion control, allowing users to separately control the object motion and adjust camera viewpoint; and (2) motion causality, ensuring that user-driven actions trigger coherent reactions from other objects rather than merely displacing pixels. Existing methods fall short on both fronts: they entangle camera and object motion into a single tracking signal and treat motion as kinematic displacement without modeling causal relationships between object motion. We introduce MoRight, a unified framework that addresses both limitations through disentangled motion modeling. Object motion is specified in a canonical static-view and transferred to an arbitrary target camera viewpoint via temporal cross-view attention, enabling disentangled camera and object control. We further decompose motion into active (user-driven) and passive (consequence) components, training the model to learn motion causality from data. At inference, users can either supply active motion and MoRight predicts consequences (forward reasoning), or specify desired passive outcomes and MoRight recovers plausible driving actions (inverse reasoning), all while freely adjusting the camera viewpoint. Experiments on three benchmarks demonstrate state-of-the-art performance in generation quality, motion controllability, and interaction awareness.",
+      "url": "https://arxiv.org/abs/2604.07348v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.07348v1",
+      "published": "2026-04-08T17:59:22Z",
+      "updated": "2026-04-08T17:59:22Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.GR",
+        "cs.LG",
         "cs.RO"
       ],
       "primary_category": "cs.CV"
     },
     {
-      "id": "2604.06167v1",
-      "title": "Topological Characterization of Churn Flow and Unsupervised Correction to the Wu Flow-Regime Map in Small-Diameter Vertical Pipes",
+      "id": "2604.07345v1",
+      "title": "Measurement of Generative AI Workload Power Profiles for Whole-Facility Data Center Infrastructure Planning",
       "authors": [
-        "Brady Koenig",
-        "Sushovan Majhi",
-        "Atish Mitra",
-        "Abigail Stein",
-        "Burt Todd"
+        "Roberto Vercellino",
+        "Jared Willard",
+        "Gustavo Campos",
+        "Weslley da Silva Pereira",
+        "Olivia Hull",
+        "Matthew Selensky",
+        "Juliane Mueller"
       ],
-      "abstract": "Churn flow-the chaotic, oscillatory regime in vertical two-phase flow-has lacked a quantitative mathematical definition for over $40$ years. We introduce the first topology-based characterization using Euler Characteristic Surfaces (ECS). We formulate unsupervised regime discovery as Multiple Kernel Learning (MKL), blending two complementary ECS-derived kernels-temporal alignment ($L^1$ distance on the $\u03c7(s,t)$ surface) and amplitude statistics (scale-wise mean, standard deviation, max, min)-with gas velocity. Applied to $37$ unlabeled air-water trials from Montana Tech, the self-calibrating framework learns weights $\u03b2_{ECS}=0.14$, $\u03b2_{amp}=0.50$, $\u03b2_{ugs}=0.36$, placing $64\\%$ of total weight on topology-derived features ($\u03b2_{ECS} + \u03b2_{amp}$). The ECS-inferred slug/churn transition lies $+3.81$ m/s above Wu et al.'s (2017) prediction in $2$-in. tubing, quantifying reports that existing models under-predict slug persistence in small-diameter pipes where interfacial tension and wall-to-wall interactions dominate flow. Cross-facility validation on $947$ Texas A&M University images confirms $1.9\\times$ higher topological complexity in churn vs. slug ($p < 10^{-5}$). Applied to $45$ TAMU pseudo-trials, the same unsupervised framework achieves $95.6\\%$ $4$-class accuracy and $100\\%$ churn recall-without any labeled training data-matching or exceeding supervised baselines that require thousands of annotated examples. This work provides the first mathematical definition of churn flow and demonstrates that unsupervised topological descriptors can challenge and correct widely adopted mechanistic models.",
-      "url": "https://arxiv.org/abs/2604.06167v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.06167v1",
-      "published": "2026-04-07T17:59:15Z",
-      "updated": "2026-04-07T17:59:15Z",
+      "abstract": "The rapid growth of generative artificial intelligence (AI) has introduced unprecedented computational demands, driving significant increases in the energy footprint of data centers. However, existing power consumption data is largely proprietary and reported at varying resolutions, creating challenges for estimating whole-facility energy use and planning infrastructure. In this work, we present a methodology that bridges this gap by linking high-resolution workload power measurements to whole-facility energy demand. Using NLR's high-performance computing data center equipped with NVIDIA H100 GPUs, we measure power consumption of AI workloads at 0.1-second resolution for AI training, fine-tuning and inference jobs. Workloads are characterized using MLCommons benchmarks for model training and fine-tuning, and vLLM benchmarks for inference, enabling reproducible and standardized workload profiling. The dataset of power consumption profiles is made publicly available. These power profiles are then scaled to the whole-facility-level using a bottom-up, event-driven, data center energy model. The resulting whole-facility energy profiles capture realistic temporal fluctuations driven by AI workloads and user-behavior, and can be used to inform infrastructure planning for grid connection, on-site energy generation, and distributed microgrids.",
+      "url": "https://arxiv.org/abs/2604.07345v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.07345v1",
+      "published": "2026-04-08T17:56:41Z",
+      "updated": "2026-04-08T17:56:41Z",
       "categories": [
-        "cs.LG",
-        "math.AT"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2604.06165v1",
-      "title": "HaloProbe: Bayesian Detection and Mitigation of Object Hallucinations in Vision-Language Models",
-      "authors": [
-        "Reihaneh Zohrabi",
-        "Hosein Hasani",
-        "Akshita Gupta",
-        "Mahdieh Soleymani Baghshah",
-        "Anna Rohrbach",
-        "Marcus Rohrbach"
-      ],
-      "abstract": "Large vision-language models can produce object hallucinations in image descriptions, highlighting the need for effective detection and mitigation strategies. Prior work commonly relies on the model's attention weights on visual tokens as a detection signal. We reveal that coarse-grained attention-based analysis is unreliable due to hidden confounders, specifically token position and object repetition in a description. This leads to Simpson's paradox: the attention trends reverse or disappear when statistics are aggregated. Based on this observation, we introduce HaloProbe, a Bayesian framework that factorizes external description statistics and internal decoding signals to estimate token-level hallucination probabilities. HaloProbe uses balanced training to isolate internal evidence and combines it with learned prior over external features to recover the true posterior. While intervention-based mitigation methods often degrade utility or fluency by modifying models' internals, we use HaloProbe as an external scoring signal for non-invasive mitigation. Our experiments show that HaloProbe-guided decoding reduces hallucinations more effectively than state-of-the-art intervention-based methods while preserving utility.",
-      "url": "https://arxiv.org/abs/2604.06165v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.06165v1",
-      "published": "2026-04-07T17:58:04Z",
-      "updated": "2026-04-07T17:58:04Z",
-      "categories": [
-        "cs.CV",
+        "eess.SY",
+        "cs.DC",
         "cs.LG"
       ],
-      "primary_category": "cs.CV"
+      "primary_category": "eess.SY"
     },
     {
-      "id": "2604.06161v1",
-      "title": "DiffHDR: Re-Exposing LDR Videos with Video Diffusion Models",
+      "id": "2604.07343v1",
+      "title": "Personalized RewardBench: Evaluating Reward Models with Human Aligned Personalization",
       "authors": [
-        "Zhengming Yu",
-        "Li Ma",
-        "Mingming He",
-        "Leo Isikdogan",
-        "Yuancheng Xu",
-        "Dmitriy Smirnov",
-        "Pablo Salamanca",
-        "Dao Mi",
-        "Pablo Delgado",
-        "Ning Yu",
-        "Julien Philip",
-        "Xin Li",
-        "Wenping Wang",
-        "Paul Debevec"
+        "Qiyao Ma",
+        "Dechen Gao",
+        "Rui Cai",
+        "Boqi Zhao",
+        "Hanchu Zhou",
+        "Junshan Zhang",
+        "Zhe Zhao"
       ],
-      "abstract": "Most digital videos are stored in 8-bit low dynamic range (LDR) formats, where much of the original high dynamic range (HDR) scene radiance is lost due to saturation and quantization. This loss of highlight and shadow detail precludes mapping accurate luminance to HDR displays and limits meaningful re-exposure in post-production workflows. Although techniques have been proposed to convert LDR images to HDR through dynamic range expansion, they struggle to restore realistic detail in the over- and underexposed regions. To address this, we present DiffHDR, a framework that formulates LDR-to-HDR conversion as a generative radiance inpainting task within the latent space of a video diffusion model. By operating in Log-Gamma color space, DiffHDR leverages spatio-temporal generative priors from a pretrained video diffusion model to synthesize plausible HDR radiance in over- and underexposed regions while recovering the continuous scene radiance of the quantized pixels. Our framework further enables controllable LDR-to-HDR video conversion guided by text prompts or reference images. To address the scarcity of paired HDR video data, we develop a pipeline that synthesizes high-quality HDR video training data from static HDRI maps. Extensive experiments demonstrate that DiffHDR significantly outperforms state-of-the-art approaches in radiance fidelity and temporal stability, producing realistic HDR videos with considerable latitude for re-exposure.",
-      "url": "https://arxiv.org/abs/2604.06161v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.06161v1",
-      "published": "2026-04-07T17:56:18Z",
-      "updated": "2026-04-07T17:56:18Z",
+      "abstract": "Pluralistic alignment has emerged as a critical frontier in the development of Large Language Models (LLMs), with reward models (RMs) serving as a central mechanism for capturing diverse human values. While benchmarks for general response quality are prevalent, evaluating how well reward models account for individual user preferences remains an open challenge. To bridge this gap, we introduce Personalized RewardBench, a novel benchmark designed to rigorously assess reward models' capacity to model personalized preferences. We construct chosen and rejected response pairs based on strict adherence to (or violation of) user-specific rubrics, ensuring that preference distinctions are uniquely tailored to the individual. In particular, human evaluations confirm that the primary discriminative factor between pairs is strictly personal preference, with both responses maintaining high general quality (e.g., correctness, relevance and helpfulness). Extensive testing reveals that existing state-of-the-art reward models struggle significantly with personalization, peaking at an accuracy of just 75.94%. Crucially, because an effective reward model benchmark should predict a reward model's performance on downstream tasks, we conduct experiments demonstrating that our benchmark exhibits a significantly higher correlation with downstream performance in both Best-of-N (BoN) sampling and Proximal Policy Optimization (PPO) compared to existing baselines. These findings establish Personalized RewardBench as a robust and accurate proxy for evaluating reward models' performance in downstream applications.",
+      "url": "https://arxiv.org/abs/2604.07343v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.07343v1",
+      "published": "2026-04-08T17:55:00Z",
+      "updated": "2026-04-08T17:55:00Z",
       "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.GR"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2604.06160v1",
-      "title": "The Character Error Vector: Decomposable errors for page-level OCR evaluation",
-      "authors": [
-        "Jonathan Bourne",
-        "Mwiza Simbeye",
-        "Joseph Nockels"
-      ],
-      "abstract": "The Character Error Rate (CER) is a key metric for evaluating the quality of Optical Character Recognition (OCR). However, this metric assumes that text has been perfectly parsed, which is often not the case. Under page-parsing errors, CER becomes undefined, limiting its use as a metric and making evaluating page-level OCR challenging, particularly when using data that do not share a labelling schema. We introduce the Character Error Vector (CEV), a bag-of-characters evaluator for OCR. The CEV can be decomposed into parsing and OCR, and interaction error components. This decomposability allows practitioners to focus on the part of the Document Understanding pipeline that will have the greatest impact on overall text extraction quality. The CEV can be implemented using a variety of methods, of which we demonstrate SpACER (Spatially Aware Character Error Rate) and a Character distribution method using the Jensen-Shannon Distance. We validate the CEV's performance against other metrics: first, the relationship with CER; then, parse quality; and finally, as a direct measure of page-level OCR quality. The validation process shows that the CEV is a valuable bridge between parsing metrics and local metrics like CER. We analyse a dataset of archival newspapers made of degraded images with complex layouts and find that state-of-the-art end-to-end models are outperformed by more traditional pipeline approaches. Whilst the CEV requires character-level positioning for optimal triage, thresholding on easily available values can predict the main error source with an F1 of 0.91. We provide the CEV as part of a Python library to support Document understanding research.",
-      "url": "https://arxiv.org/abs/2604.06160v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.06160v1",
-      "published": "2026-04-07T17:56:06Z",
-      "updated": "2026-04-07T17:56:06Z",
-      "categories": [
-        "cs.CV",
+        "cs.CL",
         "cs.LG"
       ],
+      "primary_category": "cs.CL"
+    },
+    {
+      "id": "2604.07341v1",
+      "title": "ReCodeAgent: A Multi-Agent Workflow for Language-agnostic Translation and Validation of Large-scale Repositories",
+      "authors": [
+        "Ali Reza Ibrahimzada",
+        "Brandon Paulsen",
+        "Daniel Kroening",
+        "Reyhaneh Jabbarvand"
+      ],
+      "abstract": "Most repository-level code translation and validation techniques have been evaluated on a single source-target programming language (PL) pair, owing to the complex engineering effort required to adapt new PL pairs. Programming agents can enable PL-agnosticism in repository-level code translation and validation: they can synthesize code across many PLs and autonomously use existing tools specific to each PL's analysis. However, state-of-the-art has yet to offer a fully autonomous agentic approach for repository-level code translation and validation of large-scale programs. This paper proposes ReCodeAgent, an autonomous multi-agent approach for language-agnostic repository-level code translation and validation. Users only need to provide the project in the source PL and specify the target PL for ReCodeAgent to automatically translate and validate the entire repository. ReCodeAgent is the first technique to achieve high translation success rates across many PLs.   We compare the effectiveness of ReCodeAgent with four alternative neuro-symbolic and agentic approaches to translate 118 real-world projects, with 1,975 LoC and 43 translation units for each project, on average. The projects cover 6 PLs (C, Go, Java, JavaScript, Python, and Rust) and 4 PL pairs (C-Rust, Go-Rust, Java-Python, Python-JavaScript). Our results demonstrate that ReCodeAgent consistently outperforms prior techniques on translation correctness, improving test pass rate by 60.8% on ground-truth tests, with an average cost of $15.3. We also perform process-centric analysis of ReCodeAgent trajectories to confirm its procedural efficiency. Finally, we investigate how the design choices (a multi-agent vs. single-agent architecture) influence ReCodeAgent performance: on average, the test pass rate drops by 40.4%, and trajectories become 28% longer and persistently inefficient.",
+      "url": "https://arxiv.org/abs/2604.07341v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.07341v1",
+      "published": "2026-04-08T17:54:08Z",
+      "updated": "2026-04-08T17:54:08Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "primary_category": "cs.SE"
+    },
+    {
+      "id": "2604.07340v1",
+      "title": "TC-AE: Unlocking Token Capacity for Deep Compression Autoencoders",
+      "authors": [
+        "Teng Li",
+        "Ziyuan Huang",
+        "Cong Chen",
+        "Yangfu Li",
+        "Yuanhuiyi Lyu",
+        "Dandan Zheng",
+        "Chunhua Shen",
+        "Jun Zhang"
+      ],
+      "abstract": "We propose TC-AE, a ViT-based architecture for deep compression autoencoders. Existing methods commonly increase the channel number of latent representations to maintain reconstruction quality under high compression ratios. However, this strategy often leads to latent representation collapse, which degrades generative performance. Instead of relying on increasingly complex architectures or multi-stage training schemes, TC-AE addresses this challenge from the perspective of the token space, the key bridge between pixels and image latents, through two complementary innovations: Firstly, we study token number scaling by adjusting the patch size in ViT under a fixed latent budget, and identify aggressive token-to-latent compression as the key factor that limits effective scaling. To address this issue, we decompose token-to-latent compression into two stages, reducing structural information loss and enabling effective token number scaling for generation. Secondly, to further mitigate latent representation collapse, we enhance the semantic structure of image tokens via joint self-supervised training, leading to more generative-friendly latents. With these designs, TC-AE achieves substantially improved reconstruction and generative performance under deep compression. We hope our research will advance ViT-based tokenizer for visual generation.",
+      "url": "https://arxiv.org/abs/2604.07340v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.07340v1",
+      "published": "2026-04-08T17:53:52Z",
+      "updated": "2026-04-08T17:53:52Z",
+      "categories": [
+        "cs.CV"
+      ],
       "primary_category": "cs.CV"
     },
     {
-      "id": "2604.06159v1",
-      "title": "Target Policy Optimization",
+      "id": "2604.07338v1",
+      "title": "Appear2Meaning: A Cross-Cultural Benchmark for Structured Cultural Metadata Inference from Images",
       "authors": [
-        "Jean Kaddour"
+        "Yuechen Jiang",
+        "Enze Zhang",
+        "Md Mohsinul Kabir",
+        "Qianqian Xie",
+        "Stavroula Golfomitsou",
+        "Konstantinos Arvanitis",
+        "Sophia Ananiadou"
       ],
-      "abstract": "In RL, given a prompt, we sample a group of completions from a model and score them. Two questions follow: which completions should gain probability mass, and how should the parameters move to realize that change? Standard policy-gradient methods answer both at once, so the update can overshoot or undershoot depending on the learning rate, clipping, and other optimizer choices. We introduce \\emph{Target Policy Optimization} (TPO), which separates the two questions. Given scored completions, TPO constructs a target distribution $q_i \\propto p_i^{\\,\\mathrm{old}} \\exp(u_i)$ and fits the policy to it by cross-entropy. The loss gradient on sampled-completion logits is $p^\u03b8- q$, which vanishes once the policy matches the target. On tabular bandits, transformer sequence tasks, and billion-parameter LLM RLVR, TPO matches PG, PPO, GRPO, and DG on easy tasks and substantially outperforms them under sparse reward. Code is available at https://github.com/JeanKaddour/tpo.",
-      "url": "https://arxiv.org/abs/2604.06159v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.06159v1",
-      "published": "2026-04-07T17:55:59Z",
-      "updated": "2026-04-07T17:55:59Z",
-      "categories": [
-        "cs.LG"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2604.06156v1",
-      "title": "MMEmb-R1: Reasoning-Enhanced Multimodal Embedding with Pair-Aware Selection and Adaptive Control",
-      "authors": [
-        "Yuchi Wang",
-        "Haiyang Yu",
-        "Weikang Bian",
-        "Jiefeng Long",
-        "Xiao Liang",
-        "Chao Feng",
-        "Hongsheng Li"
-      ],
-      "abstract": "MLLMs have been successfully applied to multimodal embedding tasks, yet their generative reasoning capabilities remain underutilized. Directly incorporating chain-of-thought reasoning into embedding learning introduces two fundamental challenges. First, structural misalignment between instance-level reasoning and pairwise contrastive supervision may lead to shortcut behavior, where the model merely learns the superficial format of reasoning. Second, reasoning is not universally beneficial for embedding tasks. Enforcing reasoning for all inputs may introduce unnecessary computation and latency, and can even obscure salient semantic signals for simple cases. To address these issues, we propose MMEmb-R1, an adaptive reasoning-based multimodal embedding framework. We formulate reasoning as a latent variable and introduce pair-aware reasoning selection that employs counterfactual intervention to identify reasoning paths beneficial for query-target alignment. Furthermore, we adopt reinforcement learning to selectively invoke reasoning only when necessary. Experiments on the MMEB-V2 benchmark demonstrate that our model achieves a score of 71.2 with only 4B parameters, establishing a new state-of-the-art while significantly reducing reasoning overhead and inference latency.",
-      "url": "https://arxiv.org/abs/2604.06156v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.06156v1",
-      "published": "2026-04-07T17:55:17Z",
-      "updated": "2026-04-07T17:55:17Z",
+      "abstract": "Recent advances in vision-language models (VLMs) have improved image captioning for cultural heritage. However, inferring structured cultural metadata (e.g., creator, origin, period) from visual input remains underexplored. We introduce a multi-category, cross-cultural benchmark for this task and evaluate VLMs using an LLM-as-Judge framework that measures semantic alignment with reference annotations. To assess cultural reasoning, we report exact-match, partial-match, and attribute-level accuracy across cultural regions. Results show that models capture fragmented signals and exhibit substantial performance variation across cultures and metadata types, leading to inconsistent and weakly grounded predictions. These findings highlight the limitations of current VLMs in structured cultural metadata inference beyond visual perception.",
+      "url": "https://arxiv.org/abs/2604.07338v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.07338v1",
+      "published": "2026-04-08T17:53:26Z",
+      "updated": "2026-04-08T17:53:26Z",
       "categories": [
         "cs.CV",
-        "cs.AI",
-        "cs.CL"
+        "cs.CL",
+        "cs.MM"
       ],
       "primary_category": "cs.CV"
     },
     {
-      "id": "2604.06155v1",
-      "title": "Toward Consistent World Models with Multi-Token Prediction and Latent Semantic Enhancement",
+      "id": "2604.07337v1",
+      "title": "From Blobs to Spokes: High-Fidelity Surface Reconstruction via Oriented Gaussians",
       "authors": [
-        "Qimin Zhong",
-        "Hao Liao",
-        "Haiming Qin",
-        "Mingyang Zhou",
-        "Rui Mao",
-        "Wei Chen",
-        "Naipeng Chao"
+        "Diego Gomez",
+        "Antoine Gu\u00e9don",
+        "Nissim Maruani",
+        "Bingchen Gong",
+        "Maks Ovsjanikov"
       ],
-      "abstract": "Whether Large Language Models (LLMs) develop coherent internal world models remains a core debate. While conventional Next-Token Prediction (NTP) focuses on one-step-ahead supervision, Multi-Token Prediction (MTP) has shown promise in learning more structured representations. In this work, we provide a theoretical perspective analyzing the gradient inductive bias of MTP, supported by empirical evidence, showing that MTP promotes the convergence toward internal belief states by inducing representational contractivity via gradient coupling. However, we reveal that standard MTP often suffers from structural hallucinations, where discrete token supervision encourages illegal shortcuts in latent space that violate environmental constraints. To address this, we propose a novel method Latent Semantic Enhancement MTP (LSE-MTP), which anchors predictions to ground-truth hidden state trajectories. Experiments on synthetic graphs and real-world Manhattan Taxi Ride show that LSE-MTP effectively bridges the gap between discrete tokens and continuous state representations, enhancing representation alignment, reducing structural hallucinations, and improving robustness to perturbations.",
-      "url": "https://arxiv.org/abs/2604.06155v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.06155v1",
-      "published": "2026-04-07T17:54:22Z",
-      "updated": "2026-04-07T17:54:22Z",
+      "abstract": "3D Gaussian Splatting (3DGS) has revolutionized fast novel view synthesis, yet its opacity-based formulation makes surface extraction fundamentally difficult. Unlike implicit methods built on Signed Distance Fields or occupancy, 3DGS lacks a global geometric field, forcing existing approaches to resort to heuristics such as TSDF fusion of blended depth maps.   Inspired by the Objects as Volumes framework, we derive a principled occupancy field for Gaussian Splatting and show how it can be used to extract highly accurate watertight meshes of complex scenes. Our key contribution is to introduce a learnable oriented normal at each Gaussian element and to define an adapted attenuation formulation, which leads to closed-form expressions for both the normal and occupancy fields at arbitrary locations in space. We further introduce a novel consistency loss and a dedicated densification strategy to enforce Gaussians to wrap the entire surface by closing geometric holes, ensuring a complete shell of oriented primitives. We modify the differentiable rasterizer to output depth as an isosurface of our continuous model, and introduce Primal Adaptive Meshing for Region-of-Interest meshing at arbitrary resolution.   We additionally expose fundamental biases in standard surface evaluation protocols and propose two more rigorous alternatives. Overall, our method Gaussian Wrapping sets a new state-of-the-art on DTU and Tanks and Temples, producing complete, watertight meshes at a fraction of the size of concurrent work-recovering thin structures such as the notoriously elusive bicycle spokes.",
+      "url": "https://arxiv.org/abs/2604.07337v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.07337v1",
+      "published": "2026-04-08T17:52:39Z",
+      "updated": "2026-04-08T17:52:39Z",
       "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL"
+        "cs.CV"
       ],
-      "primary_category": "cs.LG"
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2604.07331v1",
+      "title": "RoSHI: A Versatile Robot-oriented Suit for Human Data In-the-Wild",
+      "authors": [
+        "Wenjing Margaret Mao",
+        "Jefferson Ng",
+        "Luyang Hu",
+        "Daniel Gehrig",
+        "Antonio Loquercio"
+      ],
+      "abstract": "Scaling up robot learning will likely require human data containing rich and long-horizon interactions in the wild. Existing approaches for collecting such data trade off portability, robustness to occlusion, and global consistency. We introduce RoSHI, a hybrid wearable that fuses low-cost sparse IMUs with the Project Aria glasses to estimate the full 3D pose and body shape of the wearer in a metric global coordinate frame from egocentric perception. This system is motivated by the complementarity of the two sensors: IMUs provide robustness to occlusions and high-speed motions, while egocentric SLAM anchors long-horizon motion and stabilizes upper body pose. We collect a dataset of agile activities to evaluate RoSHI. On this dataset, we generally outperform other egocentric baselines and perform comparably to a state-of-the-art exocentric baseline (SAM3D). Finally, we demonstrate that the motion data recorded from our system are suitable for real-world humanoid policy learning. For videos, data and more, visit the project webpage: https://roshi-mocap.github.io/",
+      "url": "https://arxiv.org/abs/2604.07331v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.07331v1",
+      "published": "2026-04-08T17:48:46Z",
+      "updated": "2026-04-08T17:48:46Z",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "primary_category": "cs.RO"
     }
   ]
 }
