@@ -2,139 +2,65 @@
   "category": "robotics",
   "name": "Robotics Research",
   "description": "Robotics \u2014 Motion Planning, Control Systems, Human-Robot Interaction, Autonomous Systems",
-  "scraped_at": "2026-04-12T09:00:24.916373+00:00",
+  "scraped_at": "2026-04-13T10:05:26.458634+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2604.08544v1",
-      "title": "SIM1: Physics-Aligned Simulator as Zero-Shot Data Scaler in Deformable Worlds",
+      "id": "2604.09499v1",
+      "title": "Physics-Informed Reinforcement Learning of Spatial Density Velocity Potentials for Map-Free Racing",
       "authors": [
-        "Yunsong Zhou",
-        "Hangxu Liu",
-        "Xuekun Jiang",
-        "Xing Shen",
-        "Yuanzhen Zhou",
-        "Hui Wang",
-        "Baole Fang",
-        "Yang Tian",
-        "Mulin Yu",
-        "Qiaojun Yu",
-        "Li Ma",
-        "Hengjie Li",
-        "Hanqing Wang",
-        "Jia Zeng",
-        "Jiangmiao Pang"
+        "Shathushan Sivashangaran",
+        "Apoorva Khairnar",
+        "Sepideh Gohari",
+        "Vihaan Dutta",
+        "Azim Eskandarian"
       ],
-      "abstract": "Robotic manipulation with deformable objects represents a data-intensive regime in embodied learning, where shape, contact, and topology co-evolve in ways that far exceed the variability of rigids. Although simulation promises relief from the cost of real-world data acquisition, prevailing sim-to-real pipelines remain rooted in rigid-body abstractions, producing mismatched geometry, fragile soft dynamics, and motion primitives poorly suited for cloth interaction. We posit that simulation fails not for being synthetic, but for being ungrounded. To address this, we introduce SIM1, a physics-aligned real-to-sim-to-real data engine that grounds simulation in the physical world. Given limited demonstrations, the system digitizes scenes into metric-consistent twins, calibrates deformable dynamics through elastic modeling, and expands behaviors via diffusion-based trajectory generation with quality filtering. This pipeline transforms sparse observations into scaled synthetic supervision with near-demonstration fidelity. Experiments show that policies trained on purely synthetic data achieve parity with real-data baselines at a 1:15 equivalence ratio, while delivering 90% zero-shot success and 50% generalization gains in real-world deployment. These results validate physics-aligned simulation as scalable supervision for deformable manipulation and a practical pathway for data-efficient policy learning.",
-      "url": "https://arxiv.org/abs/2604.08544v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.08544v1",
-      "published": "2026-04-09T17:59:52Z",
-      "updated": "2026-04-09T17:59:52Z",
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.CV"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2604.08535v1",
-      "title": "Fail2Drive: Benchmarking Closed-Loop Driving Generalization",
-      "authors": [
-        "Simon Gerstenecker",
-        "Andreas Geiger",
-        "Katrin Renz"
-      ],
-      "abstract": "Generalization under distribution shift remains a central bottleneck for closed-loop autonomous driving. Although simulators like CARLA enable safe and scalable testing, existing benchmarks rarely measure true generalization: they typically reuse training scenarios at test time. Success can therefore reflect memorization rather than robust driving behavior. We introduce Fail2Drive, the first paired-route benchmark for closed-loop generalization in CARLA, with 200 routes and 17 new scenario classes spanning appearance, layout, behavioral, and robustness shifts. Each shifted route is matched with an in-distribution counterpart, isolating the effect of the shift and turning qualitative failures into quantitative diagnostics. Evaluating multiple state-of-the-art models reveals consistent degradation, with an average success-rate drop of 22.8\\%. Our analysis uncovers unexpected failure modes, such as ignoring objects clearly visible in the LiDAR and failing to learn the fundamental concepts of free and occupied space. To accelerate follow-up work, Fail2Drive includes an open-source toolbox for creating new scenarios and validating solvability via a privileged expert policy. Together, these components establish a reproducible foundation for benchmarking and improving closed-loop driving generalization. We open-source all code, data, and tools at https://github.com/autonomousvision/fail2drive .",
-      "url": "https://arxiv.org/abs/2604.08535v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.08535v1",
-      "published": "2026-04-09T17:59:18Z",
-      "updated": "2026-04-09T17:59:18Z",
-      "categories": [
-        "cs.RO",
-        "cs.CV"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2604.08534v1",
-      "title": "ActiveGlasses: Learning Manipulation with Active Vision from Ego-centric Human Demonstration",
-      "authors": [
-        "Yanwen Zou",
-        "Chenyang Shi",
-        "Wenye Yu",
-        "Han Xue",
-        "Jun Lv",
-        "Ye Pan",
-        "Chuan Wen",
-        "Cewu Lu"
-      ],
-      "abstract": "Large-scale real-world robot data collection is a prerequisite for bringing robots into everyday deployment. However, existing pipelines often rely on specialized handheld devices to bridge the embodiment gap, which not only increases operator burden and limits scalability, but also makes it difficult to capture the naturally coordinated perception-manipulation behaviors of human daily interaction. This challenge calls for a more natural system that can faithfully capture human manipulation and perception behaviors while enabling zero-shot transfer to robotic platforms. We introduce ActiveGlasses, a system for learning robot manipulation from ego-centric human demonstrations with active vision. A stereo camera mounted on smart glasses serves as the sole perception device for both data collection and policy inference: the operator wears it during bare-hand demonstrations, and the same camera is mounted on a 6-DoF perception arm during deployment to reproduce human active vision. To enable zero-transfer, we extract object trajectories from demonstrations and use an object-centric point-cloud policy to jointly predict manipulation and head movement. Across several challenging tasks involving occlusion and precise interaction, ActiveGlasses achieves zero-shot transfer with active vision, consistently outperforms strong baselines under the same hardware setup, and generalizes across two robot platforms.",
-      "url": "https://arxiv.org/abs/2604.08534v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.08534v1",
-      "published": "2026-04-09T17:59:08Z",
-      "updated": "2026-04-09T17:59:08Z",
+      "abstract": "Autonomous racing without prebuilt maps is a grand challenge for embedded robotics that requires kinodynamic planning from instantaneous sensor data at the acceleration and tire friction limits. Out-Of-Distribution (OOD) generalization to various racetrack configurations utilizes Machine Learning (ML) to encode the mathematical relation between sensor data and vehicle actuation for end-to-end control, with implicit localization. These comprise Behavioral Cloning (BC) that is capped to human reaction times and Deep Reinforcement Learning (DRL) which requires large-scale collisions for comprehensive training that can be infeasible without simulation but is arduous to transfer to reality, thus exhibiting greater performance than BC in simulation, but actuation instability on hardware. This paper presents a DRL method that parameterizes nonlinear vehicle dynamics from the spectral distribution of depth measurements with a non-geometric, physics-informed reward, to infer vehicle time-optimal and overtaking racing controls with an Artificial Neural Network (ANN) that utilizes less than 1% of the computation of BC and model-based DRL. Slaloming from simulation to reality transfer and variance-induced conservatism are eliminated with the combination of a physics engine exploit-aware reward and the replacement of an explicit collision penalty with an implicit truncation of the value horizon. The policy outperforms human demonstrations by 12% in OOD tracks on proportionally scaled hardware, by maximizing the friction circle with tire dynamics that resemble an empirical Pacejka tire model. System identification illuminates a functional bifurcation where the first layer compresses spatial observations to extract digitized track features with higher resolution in corner apexes, and the second encodes nonlinear dynamics.",
+      "url": "https://arxiv.org/abs/2604.09499v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.09499v1",
+      "published": "2026-04-10T17:12:07Z",
+      "updated": "2026-04-10T17:12:07Z",
       "categories": [
         "cs.RO"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2604.08528v1",
-      "title": "A-SLIP: Acoustic Sensing for Continuous In-hand Slip Estimation",
+      "id": "2604.09487v1",
+      "title": "Sim-to-Real Transfer for Muscle-Actuated Robots via Generalized Actuator Networks",
       "authors": [
-        "Uksang Yoo",
-        "Yuemin Mao",
-        "Jean Oh",
-        "Jeffrey Ichnowski"
+        "Jan Schneider",
+        "Mridul Mahajan",
+        "Le Chen",
+        "Simon Guist",
+        "Bernhard Sch\u00f6lkopf",
+        "Ingmar Posner",
+        "Dieter B\u00fcchler"
       ],
-      "abstract": "Reliable in-hand manipulation requires accurate real-time estimation of slip between a gripper and a grasped object. Existing tactile sensing approaches based on vision, capacitance, or force-torque measurements face fundamental trade-offs in form factor, durability, and their ability to jointly estimate slip direction and magnitude. We present A-SLIP, a multi-channel acoustic sensing system integrated into a parallel-jaw gripper for estimating continuous slip in the grasp plane. The A-SLIP sensor consists of piezoelectric microphones positioned behind a textured silicone contact pad to capture structured contact-induced vibrations. The A-SLIP model processes synchronized multi-channel audio as log-mel spectrograms using a lightweight convolutional network, jointly predicting the presence, direction, and magnitude of slip. Across experiments with robot- and externally induced slip conditions, the fine-tuned four-microphone configuration achieves a mean absolute directional error of 14.1 degrees, outperforms baselines by up to 12 percent in detection accuracy, and reduces directional error by 32 percent. Compared with single-microphone configurations, the multi-channel design reduces directional error by 64 percent and magnitude error by 68 percent, underscoring the importance of spatial acoustic sensing in resolving slip direction ambiguity. We further evaluate A-SLIP in closed-loop reactive control and find that it enables reliable, low-cost, real-time estimation of in-hand slip. Project videos and additional details are available at https://a-slip.github.io.",
-      "url": "https://arxiv.org/abs/2604.08528v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.08528v1",
-      "published": "2026-04-09T17:58:27Z",
-      "updated": "2026-04-09T17:58:27Z",
+      "abstract": "Tendon drives paired with soft muscle actuation enable faster and safer robots while potentially accelerating skill acquisition. Still, these systems are rarely used in practice due to inherent nonlinearities, friction, and hysteresis, which complicate modeling and control. So far, these challenges have hindered policy transfer from simulation to real systems. To bridge this gap, we propose a sim-to-real pipeline that learns a neural network model of this complex actuation and leverages established rigid body simulation for the arm dynamics and interactions with the environment. Our method, called Generalized Actuator Network (GeAN), enables actuation model identification across a wide range of robots by learning directly from joint position trajectories rather than requiring torque sensors. Using GeAN on PAMY2, a tendon-driven robot powered by pneumatic artificial muscles, we successfully deploy precise goal-reaching and dynamic ball-in-a-cup policies trained entirely in simulation. To the best of our knowledge, this result constitutes the first successful sim-to-real transfer for a four-degrees-of-freedom muscle-actuated robot arm.",
+      "url": "https://arxiv.org/abs/2604.09487v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.09487v1",
+      "published": "2026-04-10T16:52:54Z",
+      "updated": "2026-04-10T16:52:54Z",
       "categories": [
-        "cs.RO"
+        "cs.RO",
+        "cs.LG"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2604.08521v1",
-      "title": "Discounted MPC and infinite-horizon optimal control under plant-model mismatch: Stability and suboptimality",
+      "id": "2604.09478v1",
+      "title": "Incremental Semantics-Aided Meshing from LiDAR-Inertial Odometry and RGB Direct Label Transfer",
       "authors": [
-        "Robert H. Moldenhauer",
-        "Karl Worthmann",
-        "Romain Postoyan",
-        "Dragan Ne\u0161i\u0107",
-        "Mathieu Granzotto"
+        "Muhammad Affan",
+        "Ville Lehtola",
+        "George Vosselman"
       ],
-      "abstract": "We study closed-loop stability and suboptimality for MPC and infinite-horizon optimal control solved using a surrogate model that differs from the real plant. We employ a unified framework based on quadratic costs to analyze both finite- and infinite-horizon problems, encompassing discounted and undiscounted scenarios alike. Plant-model mismatch bounds proportional to states and controls are assumed, under which the origin remains an equilibrium. Under continuity of the model and cost-controllability, exponential stability of the closed loop can be guaranteed. Furthermore, we give a suboptimality bound for the closed-loop cost recovering the optimal cost of the surrogate. The results reveal a tradeoff between horizon length, discounting and plant-model mismatch. The robustness guarantees are uniform over the horizon length, meaning that larger horizons do not require successively smaller plant-model mismatch.",
-      "url": "https://arxiv.org/abs/2604.08521v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.08521v1",
-      "published": "2026-04-09T17:57:02Z",
-      "updated": "2026-04-09T17:57:02Z",
-      "categories": [
-        "math.OC",
-        "eess.SY"
-      ],
-      "primary_category": "math.OC"
-    },
-    {
-      "id": "2604.08509v1",
-      "title": "Visually-grounded Humanoid Agents",
-      "authors": [
-        "Hang Ye",
-        "Xiaoxuan Ma",
-        "Fan Lu",
-        "Wayne Wu",
-        "Kwan-Yee Lin",
-        "Yizhou Wang"
-      ],
-      "abstract": "Digital human generation has been studied for decades and supports a wide range of real-world applications. However, most existing systems are passively animated, relying on privileged state or scripted control, which limits scalability to novel environments. We instead ask: how can digital humans actively behave using only visual observations and specified goals in novel scenes? Achieving this would enable populating any 3D environments with digital humans at scale that exhibit spontaneous, natural, goal-directed behaviors. To this end, we introduce Visually-grounded Humanoid Agents, a coupled two-layer (world-agent) paradigm that replicates humans at multiple levels: they look, perceive, reason, and behave like real people in real-world 3D scenes. The World Layer reconstructs semantically rich 3D Gaussian scenes from real-world videos via an occlusion-aware pipeline and accommodates animatable Gaussian-based human avatars. The Agent Layer transforms these avatars into autonomous humanoid agents, equipping them with first-person RGB-D perception and enabling them to perform accurate, embodied planning with spatial awareness and iterative reasoning, which is then executed at the low level as full-body actions to drive their behaviors in the scene. We further introduce a benchmark to evaluate humanoid-scene interaction in diverse reconstructed environments. Experiments show our agents achieve robust autonomous behavior, yielding higher task success rates and fewer collisions than ablations and state-of-the-art planning methods. This work enables active digital human population and advances human-centric embodied AI. Data, code, and models will be open-sourced.",
-      "url": "https://arxiv.org/abs/2604.08509v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.08509v1",
-      "published": "2026-04-09T17:50:09Z",
-      "updated": "2026-04-09T17:50:09Z",
+      "abstract": "Geometric high-fidelity mesh reconstruction from LiDAR-inertial scans remains challenging in large, complex indoor environments -- such as cultural buildings -- where point cloud sparsity, geometric drift, and fixed fusion parameters produce holes, over-smoothing, and spurious surfaces at structural boundaries. We propose a modular, incremental RGB+LiDAR pipeline that generates incremental semantics-aided high-quality meshes from indoor scans through scan frame-based direct label transfer. A vision foundation model labels each incoming RGB frame; labels are incrementally projected and fused onto a LiDAR-inertial odometry map; and an incremental semantics-aware Truncated Signed Distance Function (TSDF) fusion step produces the final mesh via marching cubes. This frame-level fusion strategy preserves the geometric fidelity of LiDAR while leveraging rich visual semantics to resolve geometric ambiguities at reconstruction boundaries caused by LiDAR point-cloud sparsity and geometric drift. We demonstrate that semantic guidance improves geometric reconstruction quality; quantitative evaluation is therefore performed using geometric metrics on the Oxford Spires dataset, while results from the NTU VIRAL dataset are analyzed qualitatively. The proposed method outperforms state-of-the-art geometric baselines ImMesh and Voxblox, demonstrating the benefit of semantics-aided fusion for geometric mesh quality. The resulting semantically labelled meshes are of value when reconstructing Universal Scene Description (USD) assets, offering a path from indoor LiDAR scanning to XR and digital modeling.",
+      "url": "https://arxiv.org/abs/2604.09478v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.09478v1",
+      "published": "2026-04-10T16:41:47Z",
+      "updated": "2026-04-10T16:41:47Z",
       "categories": [
         "cs.CV",
         "cs.RO"
@@ -142,97 +68,193 @@
       "primary_category": "cs.CV"
     },
     {
-      "id": "2604.08508v1",
-      "title": "Sumo: Dynamic and Generalizable Whole-Body Loco-Manipulation",
+      "id": "2604.09474v1",
+      "title": "SafeMind: A Risk-Aware Differentiable Control Framework for Adaptive and Safe Quadruped Locomotion",
       "authors": [
-        "John Z. Zhang",
-        "Maks Sorokin",
-        "Jan Br\u00fcdigam",
-        "Brandon Hung",
-        "Stephen Phillips",
-        "Dmitry Yershov",
-        "Farzad Niroui",
-        "Tong Zhao",
-        "Leonor Fermoselle",
-        "Xinghao Zhu",
-        "Chao Cao",
-        "Duy Ta",
-        "Tao Pang",
-        "Jiuguang Wang",
-        "Preston Culbertson",
-        "Zachary Manchester",
-        "Simon Le Cl\u00e9ac'h"
+        "Zukun Zhang",
+        "Kai Shu",
+        "Mingqiao Mo"
       ],
-      "abstract": "This paper presents a sim-to-real approach that enables legged robots to dynamically manipulate large and heavy objects with whole-body dexterity. Our key insight is that by performing test-time steering of a pre-trained whole-body control policy with a sample-based planner, we can enable these robots to solve a variety of dynamic loco-manipulation tasks. Interestingly, we find our method generalizes to a diverse set of objects and tasks with no additional tuning or training, and can be further enhanced by flexibly adjusting the cost function at test time. We demonstrate the capabilities of our approach through a variety of challenging loco-manipulation tasks on a Spot quadruped robot in the real world, including uprighting a tire heavier than the robot's nominal lifting capacity and dragging a crowd-control barrier larger and taller than the robot itself. Additionally, we show that the same approach can be generalized to humanoid loco-manipulation tasks, such as opening a door and pushing a table, in simulation. Project code and videos are available at \\href{https://sumo.rai-inst.com/}{https://sumo.rai-inst.com/}.",
-      "url": "https://arxiv.org/abs/2604.08508v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.08508v1",
-      "published": "2026-04-09T17:49:40Z",
-      "updated": "2026-04-09T17:49:40Z",
+      "abstract": "Learning-based quadruped controllers achieve impressive agility but typically lack formal safety guarantees under model uncertainty, perception noise, and unstructured contact conditions. We introduce SafeMind, a differentiable stochastic safety-control framework that unifies probabilistic Control Barrier Functions with semantic context understanding and meta-adaptive risk calibration. SafeMind explicitly models epistemic and aleatoric uncertainty through a variance-aware barrier constraint embedded in a differentiable quadratic program, thereby preserving gradient flow for end-to-end training. A semantics-to-constraint encoder modulates safety margins using perceptual or language cues, while a meta-adaptive learner continuously adjusts risk sensitivity across environments. We provide theoretical conditions for probabilistic forward invariance, feasibility, and stability under stochastic dynamics. SafeMind is deployed on Unitree A1 and ANYmal C at 200~Hz and validated across 12 terrain types, dynamic obstacles, morphology perturbations, and semantically defined tasks. Experiments show that SafeMind reduces safety violations by 3--10x and energy consumption by 10--15% relative to state-of-the-art CBF, MPC, and hybrid RL baselines, while maintaining real-time control performance.",
+      "url": "https://arxiv.org/abs/2604.09474v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.09474v1",
+      "published": "2026-04-10T16:33:32Z",
+      "updated": "2026-04-10T16:33:32Z",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2604.09462v1",
+      "title": "Adaptor: Advancing Assistive Teleoperation with Few-Shot Learning and Cross-Operator Generalization",
+      "authors": [
+        "Yu Liu",
+        "Yihang Yin",
+        "Tianlv Huang",
+        "Fei Yan",
+        "Yuan Xu",
+        "Weinan Hong",
+        "Wei Han",
+        "Yue Cao",
+        "Xiangyu Chen",
+        "Zipei Fan",
+        "Xuan Song"
+      ],
+      "abstract": "Assistive teleoperation enhances efficiency via shared control, yet inter-operator variability, stemming from diverse habits and expertise, induces highly heterogeneous trajectory distributions that undermine intent recognition stability. We present Adaptor, a few-shot framework for robust cross-operator intent recognition. The Adaptor bridges the domain gap through two stages: (i) preprocessing, which models intent uncertainty by synthesizing trajectory perturbations via noise injection and performs geometry-aware keyframe extraction; and (ii) policy learning, which encodes the processed trajectories with an Intention Expert and fuses them with the pre-trained vision-language model context to condition an Action Expert for action generation. Experiments on real-world and simulated benchmarks demonstrate that Adaptor achieves state-of-the-art performance, improving success rates and efficiency over baselines. Moreover, the method exhibits low variance across operators with varying expertise, demonstrating robust cross-operator generalization.",
+      "url": "https://arxiv.org/abs/2604.09462v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.09462v1",
+      "published": "2026-04-10T16:19:43Z",
+      "updated": "2026-04-10T16:19:43Z",
       "categories": [
         "cs.RO"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2604.08495v1",
-      "title": "Density-Driven Optimal Control: Convergence Guarantees for Stochastic LTI Multi-Agent Systems",
+      "id": "2604.09431v1",
+      "title": "Musculoskeletal Motion Imitation for Learning Personalized Exoskeleton Control Policy in Impaired Gait",
       "authors": [
-        "Kooktae Lee"
+        "Itak Choi",
+        "Ilseung Park",
+        "Eni Halilaj",
+        "Inseung Kang"
       ],
-      "abstract": "This paper addresses the decentralized non-uniform area coverage problem for multi-agent systems, a critical task in missions with high spatial priority and resource constraints. While existing density-based methods often rely on computationally heavy Eulerian PDE solvers or heuristic planning, we propose Stochastic Density-Driven Optimal Control (D$^2$OC). This is a rigorous Lagrangian framework that bridges the gap between individual agent dynamics and collective distribution matching. By formulating a stochastic MPC-like problem that minimizes the Wasserstein distance as a running cost, our approach ensures that the time-averaged empirical distribution converges to a non-parametric target density under stochastic LTI dynamics. A key contribution is the formal convergence guarantee established via reachability analysis, providing a bounded tracking error even in the presence of process and measurement noise. Numerical results verify that Stochastic D$^2$OC achieves robust, decentralized coverage while outperforming previous heuristic methods in optimality and consistency.",
-      "url": "https://arxiv.org/abs/2604.08495v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.08495v1",
-      "published": "2026-04-09T17:39:25Z",
-      "updated": "2026-04-09T17:39:25Z",
+      "abstract": "Designing generalizable control policies for lower-limb exoskeletons remains fundamentally constrained by exhaustive data collection or iterative optimization procedures, which limit accessibility to clinical populations. To address this challenge, we introduce a device-agnostic framework that combines physiologically plausible musculoskeletal simulation with reinforcement learning to enable scalable personalized exoskeleton assistance for both able-bodied and clinical populations. Our control policies not only generate physiologically plausible locomotion dynamics but also capture clinically observed compensatory strategies under targeted muscular deficits, providing a unified computational model of both healthy and pathological gait. Without task-specific tuning, the resulting exoskeleton control policies produce assistive torque profiles at the hip and ankle that align with state-of-the-art profiles validated in human experiments, while consistently reducing metabolic cost across walking speeds. For simulated impaired-gait models, the learned control policies yield asymmetric, deficit-specific exoskeleton assistance that improves both energetic efficiency and bilateral kinematic symmetry without explicit prescription of the target gait pattern. These results demonstrate that physiologically plausible musculoskeletal simulation via reinforcement learning can serve as a scalable foundation for personalized exoskeleton control across both able-bodied and clinical populations, eliminating the need for extensive physical trials.",
+      "url": "https://arxiv.org/abs/2604.09431v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.09431v1",
+      "published": "2026-04-10T15:49:24Z",
+      "updated": "2026-04-10T15:49:24Z",
       "categories": [
-        "math.OC",
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2604.09415v1",
+      "title": "PhysInOne: Visual Physics Learning and Reasoning in One Suite",
+      "authors": [
+        "Siyuan Zhou",
+        "Hejun Wang",
+        "Hu Cheng",
+        "Jinxi Li",
+        "Dongsheng Wang",
+        "Junwei Jiang",
+        "Yixiao Jin",
+        "Jiayue Huang",
+        "Shiwei Mao",
+        "Shangjia Liu",
+        "Yafei Yang",
+        "Hongkang Song",
+        "Shenxing Wei",
+        "Zihui Zhang",
+        "Peng Huang",
+        "Shijie Liu",
+        "Zhengli Hao",
+        "Hao Li",
+        "Yitian Li",
+        "Wenqi Zhou",
+        "Zhihan Zhao",
+        "Zongqi He",
+        "Hongtao Wen",
+        "Shouwang Huang",
+        "Peng Yun",
+        "Bowen Cheng",
+        "Pok Kazaf Fu",
+        "Wai Kit Lai",
+        "Jiahao Chen",
+        "Kaiyuan Wang",
+        "Zhixuan Sun",
+        "Ziqi Li",
+        "Haochen Hu",
+        "Di Zhang",
+        "Chun Ho Yuen",
+        "Bing Wang",
+        "Zhihua Wang",
+        "Chuhang Zou",
+        "Bo Yang"
+      ],
+      "abstract": "We present PhysInOne, a large-scale synthetic dataset addressing the critical scarcity of physically-grounded training data for AI systems. Unlike existing datasets limited to merely hundreds or thousands of examples, PhysInOne provides 2 million videos across 153,810 dynamic 3D scenes, covering 71 basic physical phenomena in mechanics, optics, fluid dynamics, and magnetism. Distinct from previous works, our scenes feature multiobject interactions against complex backgrounds, with comprehensive ground-truth annotations including 3D geometry, semantics, dynamic motion, physical properties, and text descriptions. We demonstrate PhysInOne's efficacy across four emerging applications: physics-aware video generation, long-/short-term future frame prediction, physical property estimation, and motion transfer. Experiments show that fine-tuning foundation models on PhysInOne significantly enhances physical plausibility, while also exposing critical gaps in modeling complex physical dynamics and estimating intrinsic properties. As the largest dataset of its kind, orders of magnitude beyond prior works, PhysInOne establishes a new benchmark for advancing physics-grounded world models in generation, simulation, and embodied AI.",
+      "url": "https://arxiv.org/abs/2604.09415v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.09415v1",
+      "published": "2026-04-10T15:27:27Z",
+      "updated": "2026-04-10T15:27:27Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG",
+        "cs.RO"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2604.09351v1",
+      "title": "Decentralized Opinion-Integrated Decision making at Unsignalized Intersections via Signed Networks",
+      "authors": [
+        "Bhaskar Varma",
+        "Ying Shuai Quan",
+        "Karl D. von Ellenrieder",
+        "Paolo Falcone"
+      ],
+      "abstract": "In this letter, we consider the problem of decentralized decision making among connected autonomous vehicles at unsignalized intersections, where existing centralized approaches do not scale gracefully under mixed maneuver intentions and coordinator failure. We propose a closed-loop opinion-dynamic decision model for intersection coordination, where vehicles exchange intent through dual signed networks: a conflict topology based communication network and a commitment-driven belief network that enable cooperation without a centralized coordinator. Continuous opinion states modulate velocity optimizer weights prior to commitment; a closed-form predictive feasibility gate then freezes each vehicle's decision into a GO or YIELD commitment, which propagates back through the belief network to pre-condition neighbor behavior ahead of physical conflicts. Crossing order emerges from geometric feasibility and arrival priority without the use of joint optimization or a solver. The approach is validated across three scenarios spanning fully competitive, merge, and mixed conflict topologies. The results demonstrate collision-free coordination and lower last-vehicle exit times compared to first come first served (FCFS) in all conflict non-trivial configurations.",
+      "url": "https://arxiv.org/abs/2604.09351v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.09351v1",
+      "published": "2026-04-10T14:23:45Z",
+      "updated": "2026-04-10T14:23:45Z",
+      "categories": [
+        "eess.SY",
         "cs.MA",
-        "cs.RO",
-        "eess.SY"
-      ],
-      "primary_category": "math.OC"
-    },
-    {
-      "id": "2604.08457v1",
-      "title": "CrashSight: A Phase-Aware, Infrastructure-Centric Video Benchmark for Traffic Crash Scene Understanding and Reasoning",
-      "authors": [
-        "Rui Gan",
-        "Junyi Ma",
-        "Pei Li",
-        "Xingyou Yang",
-        "Kai Chen",
-        "Sikai Chen",
-        "Bin Ran"
-      ],
-      "abstract": "Cooperative autonomous driving requires traffic scene understanding from both vehicle and infrastructure perspectives. While vision-language models (VLMs) show strong general reasoning capabilities, their performance in safety-critical traffic scenarios remains insufficiently evaluated due to the ego-vehicle focus of existing benchmarks. To bridge this gap, we present \\textbf{CrashSight}, a large-scale vision-language benchmark for roadway crash understanding using real-world roadside camera data. The dataset comprises 250 crash videos, annotated with 13K multiple-choice question-answer pairs organized under a two-tier taxonomy. Tier 1 evaluates the visual grounding of scene context and involved parties, while Tier 2 probes higher-level reasoning, including crash mechanics, causal attribution, temporal progression, and post-crash outcomes. We benchmark 8 state-of-the-art VLMs and show that, despite strong scene description capabilities, current models struggle with temporal and causal reasoning in safety-critical scenarios. We provide a detailed analysis of failure scenarios and discuss directions for improving VLM crash understanding. The benchmark provides a standardized evaluation framework for infrastructure-assisted perception in cooperative autonomous driving. The CrashSight benchmark, including the full dataset and code, is accessible at https://mcgrche.github.io/crashsight.",
-      "url": "https://arxiv.org/abs/2604.08457v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.08457v1",
-      "published": "2026-04-09T16:52:04Z",
-      "updated": "2026-04-09T16:52:04Z",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
         "cs.RO"
       ],
-      "primary_category": "cs.CV"
+      "primary_category": "eess.SY"
     },
     {
-      "id": "2604.08443v1",
-      "title": "A Soft Robotic Interface for Chick-Robot Affective Interactions",
+      "id": "2604.09331v1",
+      "title": "Stability Enhanced Gaussian Process Variational Autoencoders",
       "authors": [
-        "Jue Chen",
-        "Alexander Mielke",
-        "Kaspar Althoefer",
-        "Elisabetta Versace"
+        "Carl R. Richardson",
+        "Jichen Zhang",
+        "Ethan King",
+        "J\u00e1n Drgo\u0148a"
       ],
-      "abstract": "The potential of Animal-Robot Interaction (ARI) in welfare applications depends on how much an animal perceives a robotic agent as socially relevant, non-threatening and potentially attractive (acceptance). Here, we present an animal-centered soft robotic affective interface for newly hatched chicks (Gallus gallus). The soft interface provides safe and controllable cues, including warmth, breathing-like rhythmic deformation, and face-like visual stimuli. We evaluated chick acceptance of the interface and chick-robot interactions by measuring spontaneous approach and touch responses during video tracking. Overall, chicks approached and spent increasing time on or near the interface, demonstrating acceptance of the device. Across different layouts, chicks showed strong preference for warm thermal stimulation, which increased over time. Face-like visual cues elicited a swift and stable preference, speeding up the initial approach to the tactile interface. Although the breathing cue did not elicit any preference, neither did it trigger avoidance, paving the way for further exploration. These findings translate affective interface concepts to ARI, demonstrating that appropriate soft, thermal and visual stimuli can sustain early chick-robot interactions. This work establishes a reliable evaluation protocol and a safe baseline for designing multimodal robotic devices for animal welfare and neuroscientific research.",
-      "url": "https://arxiv.org/abs/2604.08443v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.08443v1",
-      "published": "2026-04-09T16:39:48Z",
-      "updated": "2026-04-09T16:39:48Z",
+      "abstract": "A novel stability-enhanced Gaussian process variational autoencoder (SEGP-VAE) is proposed for indirectly training a low-dimensional linear time invariant (LTI) system, using high-dimensional video data. The mean and covariance function of the novel SEGP prior are derived from the definition of an LTI system, enabling the SEGP to capture the indirectly observed latent process using a combined probabilistic and interpretable physical model. The search space of LTI parameters is restricted to the set of semi-contracting systems via a complete and unconstrained parametrisation. As a result, the SEGP-VAE can be trained using unconstrained optimisation algorithms. Furthermore, this parametrisation prevents numerical issues caused by the presence of a non-Hurwitz state matrix. A case study applies SEGP-VAE to a dataset containing videos of spiralling particles. This highlights the benefits of the approach and the application-specific design choices that enabled accurate latent state predictions.",
+      "url": "https://arxiv.org/abs/2604.09331v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.09331v1",
+      "published": "2026-04-10T14:00:06Z",
+      "updated": "2026-04-10T14:00:06Z",
+      "categories": [
+        "cs.LG",
+        "eess.SY"
+      ],
+      "primary_category": "cs.LG"
+    },
+    {
+      "id": "2604.09330v1",
+      "title": "VAG: Dual-Stream Video-Action Generation for Embodied Data Synthesis",
+      "authors": [
+        "Xiaolei Lang",
+        "Yang Wang",
+        "Yukun Zhou",
+        "Chaojun Ni",
+        "Kerui Li",
+        "Jiagang Zhu",
+        "Tianze Liu",
+        "Jiajun Lv",
+        "Xingxing Zuo",
+        "Yun Ye",
+        "Guan Huang",
+        "Xiaofeng Wang",
+        "Zheng Zhu"
+      ],
+      "abstract": "Recent advances in robot foundation models trained on large-scale human teleoperation data have enabled robots to perform increasingly complex real-world tasks. However, scaling these systems remains difficult because collecting task-specific demonstrations is expensive and labor-intensive. Synthetic data, especially generated videos, offer a promising direction, but existing World Models (WMs) are not directly suitable for policy learning since they do not provide paired action trajectories. World-Action (WA) models partially address this by predicting actions with visual outputs, yet often lack strong video-action alignment, while two-stage pipelines that generate video first and then infer actions introduce inefficiency and error accumulation. To address these limitations, we propose VAG, a unified flow-matching-based dual-stream framework that jointly generates video and action under visual and language conditioning. By synchronizing denoising in both branches and using an adaptive 3D pooling mechanism to transfer compact global video context to the action branch, VAG improves cross-modal consistency during generation. Across both simulated and real-world settings, VAG produces aligned video-action pairs with competitive prediction quality, supports executable trajectory replay, and provides useful synthetic pretraining data that improves downstream policy generalization, indicating its potential as a practical world-action model for embodied data synthesis.",
+      "url": "https://arxiv.org/abs/2604.09330v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.09330v1",
+      "published": "2026-04-10T13:59:54Z",
+      "updated": "2026-04-10T13:59:54Z",
       "categories": [
         "cs.RO",
-        "cs.HC"
+        "cs.CV"
       ],
       "primary_category": "cs.RO"
     }
