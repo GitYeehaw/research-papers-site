@@ -2,222 +2,234 @@
   "category": "cs",
   "name": "CS Research",
   "description": "Computer Science \u2014 AI, Machine Learning, NLP, Computer Vision",
-  "scraped_at": "2026-04-14T09:42:55.618946+00:00",
+  "scraped_at": "2026-04-15T09:43:17.116319+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2604.11809v1",
-      "title": "Who Handles Orientation? Investigating Invariance in Feature Matching",
+      "id": "2604.13036v1",
+      "title": "Lyra 2.0: Explorable Generative 3D Worlds",
       "authors": [
-        "David Nordstr\u00f6m",
-        "Johan Edstedt",
-        "Fredrik Kahl",
-        "Georg B\u00f6kman"
+        "Tianchang Shen",
+        "Sherwin Bahmani",
+        "Kai He",
+        "Sangeetha Grama Srinivasan",
+        "Tianshi Cao",
+        "Jiawei Ren",
+        "Ruilong Li",
+        "Zian Wang",
+        "Nicholas Sharp",
+        "Zan Gojcic",
+        "Sanja Fidler",
+        "Jiahui Huang",
+        "Huan Ling",
+        "Jun Gao",
+        "Xuanchi Ren"
       ],
-      "abstract": "Finding matching keypoints between images is a core problem in 3D computer vision. However, modern matchers struggle with large in-plane rotations. A straightforward mitigation is to learn rotation invariance via data augmentation. However, it remains unclear at which stage rotation invariance should be incorporated. In this paper, we study this in the context of a modern sparse matching pipeline. We perform extensive experiments by training on a large collection of 3D vision datasets and evaluating on popular image matching benchmarks. Surprisingly, we find that incorporating rotation invariance already in the descriptor yields similar performance to handling it in the matcher. However, rotation invariance is achieved earlier in the matcher when it is learned in the descriptor, allowing for a faster rotation-invariant matcher. Further, we find that enforcing rotation invariance does not hurt upright performance when trained at scale. Finally, we study the emergence of rotation invariance through scale and find that increasing the training data size substantially improves generalization to rotated images. We release two matchers robust to in-plane rotations that achieve state-of-the-art performance on e.g. multi-modal (WxBS), extreme (HardMatch), and satellite image matching (SatAst). Code is available at https://github.com/davnords/loma.",
-      "url": "https://arxiv.org/abs/2604.11809v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.11809v1",
-      "published": "2026-04-13T17:59:58Z",
-      "updated": "2026-04-13T17:59:58Z",
+      "abstract": "Recent advances in video generation enable a new paradigm for 3D scene creation: generating camera-controlled videos that simulate scene walkthroughs, then lifting them to 3D via feed-forward reconstruction techniques. This generative reconstruction approach combines the visual fidelity and creative capacity of video models with 3D outputs ready for real-time rendering and simulation. Scaling to large, complex environments requires 3D-consistent video generation over long camera trajectories with large viewpoint changes and location revisits, a setting where current video models degrade quickly. Existing methods for long-horizon generation are fundamentally limited by two forms of degradation: spatial forgetting and temporal drifting. As exploration proceeds, previously observed regions fall outside the model's temporal context, forcing the model to hallucinate structures when revisited. Meanwhile, autoregressive generation accumulates small synthesis errors over time, gradually distorting scene appearance and geometry. We present Lyra 2.0, a framework for generating persistent, explorable 3D worlds at scale. To address spatial forgetting, we maintain per-frame 3D geometry and use it solely for information routing -- retrieving relevant past frames and establishing dense correspondences with the target viewpoints -- while relying on the generative prior for appearance synthesis. To address temporal drifting, we train with self-augmented histories that expose the model to its own degraded outputs, teaching it to correct drift rather than propagate it. Together, these enable substantially longer and 3D-consistent video trajectories, which we leverage to fine-tune feed-forward reconstruction models that reliably recover high-quality 3D scenes.",
+      "url": "https://arxiv.org/abs/2604.13036v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.13036v1",
+      "published": "2026-04-14T17:59:44Z",
+      "updated": "2026-04-14T17:59:44Z",
       "categories": [
         "cs.CV"
       ],
       "primary_category": "cs.CV"
     },
     {
-      "id": "2604.11808v1",
-      "title": "Pair2Scene: Learning Local Object Relations for Procedural Scene Generation",
+      "id": "2604.13035v1",
+      "title": "SceneCritic: A Symbolic Evaluator for 3D Indoor Scene Synthesis",
       "authors": [
-        "Xingjian Ran",
-        "Shujie Zhang",
-        "Weipeng Zhong",
-        "Li Luo",
-        "Bo Dai"
+        "Kathakoli Sengupta",
+        "Kai Ao",
+        "Paola Cascante-Bonilla"
       ],
-      "abstract": "Generating high-fidelity 3D indoor scenes remains a significant challenge due to data scarcity and the complexity of modeling intricate spatial relations. Current methods often struggle to scale beyond training distribution to dense scenes or rely on LLMs/VLMs that lack the ability for precise spatial reasoning. Building on top of the observation that object placement relies mainly on local dependencies instead of information-redundant global distributions, in this paper, we propose Pair2Scene, a novel procedural generation framework that integrates learned local rules with scene hierarchies and physics-based algorithms. These rules mainly capture two types of inter-object relations, namely support relations that follow physical hierarchies, and functional relations that reflect semantic links. We model these rules through a network, which estimates spatial position distributions of dependent objects conditioned on position and geometry of the anchor ones. Accordingly, we curate a dataset 3D-Pairs from existing scene data to train the model. During inference, our framework can generate scenes by recursively applying our model within a hierarchical structure, leveraging collision-aware rejection sampling to align local rules into coherent global layouts. Extensive experiments demonstrate that our framework outperforms existing methods in generating complex environments that go beyond training data while maintaining physical and semantic plausibility.",
-      "url": "https://arxiv.org/abs/2604.11808v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.11808v1",
-      "published": "2026-04-13T17:59:55Z",
-      "updated": "2026-04-13T17:59:55Z",
+      "abstract": "Large Language Models (LLMs) and Vision-Language Models (VLMs) increasingly generate indoor scenes through intermediate structures such as layouts and scene graphs, yet evaluation still relies on LLM or VLM judges that score rendered views, making judgments sensitive to viewpoint, prompt phrasing, and hallucination. When the evaluator is unstable, it becomes difficult to determine whether a model has produced a spatially plausible scene or whether the output score reflects the choice of viewpoint, rendering, or prompt. We introduce SceneCritic, a symbolic evaluator for floor-plan-level layouts. SceneCritic's constraints are grounded in SceneOnto, a structured spatial ontology we construct by aggregating indoor scene priors from 3D-FRONT, ScanNet, and Visual Genome. SceneOnto traverses this ontology to jointly verify semantic, orientation, and geometric coherence across object relationships, providing object-level and relationship-level assessments that identify specific violations and successful placements. Furthermore, we pair SceneCritic with an iterative refinement test bed that probes how models build and revise spatial structure under different critic modalities: a rule-based critic using collision constraints as feedback, an LLM critic operating on the layout as text, and a VLM critic operating on rendered observations. Through extensive experiments, we show that (a) SceneCritic aligns substantially better with human judgments than VLM-based evaluators, (b) text-only LLMs can outperform VLMs on semantic layout quality, and (c) image-based VLM refinement is the most effective critic modality for semantic and orientation correction.",
+      "url": "https://arxiv.org/abs/2604.13035v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.13035v1",
+      "published": "2026-04-14T17:59:26Z",
+      "updated": "2026-04-14T17:59:26Z",
       "categories": [
-        "cs.CV"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2604.11807v1",
-      "title": "Physics-Informed State Space Models for Reliable Solar Irradiance Forecasting in Off-Grid Systems",
-      "authors": [
-        "Mohammed Ezzaldin Babiker Abdullah"
-      ],
-      "abstract": "The stable operation of autonomous off-grid photovoltaic systems dictates reliance on solar forecasting algorithms that respect atmospheric thermodynamics. Contemporary deep learning models consistently exhibit critical anomalies, primarily severe temporal phase lags during cloud transients and physically impossible nocturnal power generation. To resolve this divergence between data-driven modeling and deterministic celestial mechanics, this research introduces the Thermodynamic Liquid Manifold Network. The proposed methodology projects 15 meteorological and geometric variables into a Koopman-linearized Riemannian manifold to systematically map complex climatic dynamics. The architecture integrates a Spectral Calibration unit and a multiplicative Thermodynamic Alpha-Gate. This system synthesizes real-time atmospheric opacity with theoretical clear-sky boundary models, structurally enforcing strict celestial geometry compliance. This completely neutralizes phantom nocturnal generation while maintaining zero-lag synchronization during rapid weather shifts. Validated against a rigorous five-year testing horizon in a severe semi-arid climate, the framework achieves an RMSE of 18.31 Wh/m2 and a Pearson correlation of 0.988. The model strictly maintains a zero-magnitude nocturnal error across all 1826 testing days and exhibits a sub-30-minute phase response during high-frequency transients. Comprising exactly 63,458 trainable parameters, this ultra-lightweight design establishes a robust, thermodynamically consistent standard for edge-deployable microgrid controllers.",
-      "url": "https://arxiv.org/abs/2604.11807v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.11807v1",
-      "published": "2026-04-13T17:59:49Z",
-      "updated": "2026-04-13T17:59:49Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "eess.SY"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2604.11806v1",
-      "title": "Detecting Safety Violations Across Many Agent Traces",
-      "authors": [
-        "Adam Stein",
-        "Davis Brown",
-        "Hamed Hassani",
-        "Mayur Naik",
-        "Eric Wong"
-      ],
-      "abstract": "To identify safety violations, auditors often search over large sets of agent traces. This search is difficult because failures are often rare, complex, and sometimes even adversarially hidden and only detectable when multiple traces are analyzed together. These challenges arise in diverse settings such as misuse campaigns, covert sabotage, reward hacking, and prompt injection. Existing approaches struggle here for several reasons. Per-trace judges miss failures that only become visible across traces, naive agentic auditing does not scale to large trace collections, and fixed monitors are brittle to unanticipated behaviors. We introduce Meerkat, which combines clustering with agentic search to uncover violations specified in natural language. Through structured search and adaptive investigation of promising regions, Meerkat finds sparse failures without relying on seed scenarios, fixed workflows, or exhaustive enumeration. Across misuse, misalignment, and task gaming settings, Meerkat significantly improves detection of safety violations over baseline monitors, discovers widespread developer cheating on a top agent benchmark, and finds nearly 4x more examples of reward hacking on CyBench than previous audits.",
-      "url": "https://arxiv.org/abs/2604.11806v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.11806v1",
-      "published": "2026-04-13T17:59:40Z",
-      "updated": "2026-04-13T17:59:40Z",
-      "categories": [
-        "cs.AI",
-        "cs.CL"
-      ],
-      "primary_category": "cs.AI"
-    },
-    {
-      "id": "2604.11805v1",
-      "title": "Solving Physics Olympiad via Reinforcement Learning on Physics Simulators",
-      "authors": [
-        "Mihir Prabhudesai",
-        "Aryan Satpathy",
-        "Yangmin Li",
-        "Zheyang Qin",
-        "Nikash Bhardwaj",
-        "Amir Zadeh",
-        "Chuan Li",
-        "Katerina Fragkiadaki",
-        "Deepak Pathak"
-      ],
-      "abstract": "We have witnessed remarkable advances in LLM reasoning capabilities with the advent of DeepSeek-R1. However, much of this progress has been fueled by the abundance of internet question-answer (QA) pairs, a major bottleneck going forward, since such data is limited in scale and concentrated mainly in domains like mathematics. In contrast, other sciences such as physics lack large-scale QA datasets to effectively train reasoning-capable models. In this work, we show that physics simulators can serve as a powerful alternative source of supervision for training LLMs for physical reasoning. We generate random scenes in physics engines, create synthetic question-answer pairs from simulated interactions, and train LLMs using reinforcement learning on this synthetic data. Our models exhibit zero-shot sim-to-real transfer to real-world physics benchmarks: for example, training solely on synthetic simulated data improves performance on IPhO (International Physics Olympiad) problems by 5-10 percentage points across model sizes. These results demonstrate that physics simulators can act as scalable data generators, enabling LLMs to acquire deep physical reasoning skills beyond the limitations of internet-scale QA data. Code available at: https://sim2reason.github.io/.",
-      "url": "https://arxiv.org/abs/2604.11805v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.11805v1",
-      "published": "2026-04-13T17:59:40Z",
-      "updated": "2026-04-13T17:59:40Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
         "cs.CV",
-        "cs.RO"
+        "cs.CL"
       ],
-      "primary_category": "cs.LG"
+      "primary_category": "cs.CV"
     },
     {
-      "id": "2604.11804v1",
-      "title": "OmniShow: Unifying Multimodal Conditions for Human-Object Interaction Video Generation",
+      "id": "2604.13030v1",
+      "title": "Generative Refinement Networks for Visual Synthesis",
       "authors": [
-        "Donghao Zhou",
-        "Guisheng Liu",
-        "Hao Yang",
-        "Jiatong Li",
-        "Jingyu Lin",
-        "Xiaohu Huang",
-        "Yichen Liu",
-        "Xin Gao",
-        "Cunjian Chen",
-        "Shilei Wen",
-        "Chi-Wing Fu",
-        "Pheng-Ann Heng"
+        "Jian Han",
+        "Jinlai Liu",
+        "Jiahuan Wang",
+        "Bingyue Peng",
+        "Zehuan Yuan"
       ],
-      "abstract": "In this work, we study Human-Object Interaction Video Generation (HOIVG), which aims to synthesize high-quality human-object interaction videos conditioned on text, reference images, audio, and pose. This task holds significant practical value for automating content creation in real-world applications, such as e-commerce demonstrations, short video production, and interactive entertainment. However, existing approaches fail to accommodate all these requisite conditions. We present OmniShow, an end-to-end framework tailored for this practical yet challenging task, capable of harmonizing multimodal conditions and delivering industry-grade performance. To overcome the trade-off between controllability and quality, we introduce Unified Channel-wise Conditioning for efficient image and pose injection, and Gated Local-Context Attention to ensure precise audio-visual synchronization. To effectively address data scarcity, we develop a Decoupled-Then-Joint Training strategy that leverages a multi-stage training process with model merging to efficiently harness heterogeneous sub-task datasets. Furthermore, to fill the evaluation gap in this field, we establish HOIVG-Bench, a dedicated and comprehensive benchmark for HOIVG. Extensive experiments demonstrate that OmniShow achieves overall state-of-the-art performance across various multimodal conditioning settings, setting a solid standard for the emerging HOIVG task.",
-      "url": "https://arxiv.org/abs/2604.11804v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.11804v1",
-      "published": "2026-04-13T17:59:12Z",
-      "updated": "2026-04-13T17:59:12Z",
+      "abstract": "While diffusion models dominate the field of visual generation, they are computationally inefficient, applying a uniform computational effort regardless of different complexity. In contrast, autoregressive (AR) models are inherently complexity-aware, as evidenced by their variable likelihoods, but are often hindered by lossy discrete tokenization and error accumulation. In this work, we introduce Generative Refinement Networks (GRN), a next-generation visual synthesis paradigm to address these issues. At its core, GRN addresses the discrete tokenization bottleneck through a theoretically near-lossless Hierarchical Binary Quantization (HBQ), achieving a reconstruction quality comparable to continuous counterparts. Built upon HBQ's latent space, GRN fundamentally upgrades AR generation with a global refinement mechanism that progressively perfects and corrects artworks -- like a human artist painting. Besides, GRN integrates an entropy-guided sampling strategy, enabling complexity-aware, adaptive-step generation without compromising visual quality. On the ImageNet benchmark, GRN establishes new records in image reconstruction (0.56 rFID) and class-conditional image generation (1.81 gFID). We also scale GRN to more challenging text-to-image and text-to-video generation, delivering superior performance on an equivalent scale. We release all models and code to foster further research on GRN.",
+      "url": "https://arxiv.org/abs/2604.13030v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.13030v1",
+      "published": "2026-04-14T17:59:03Z",
+      "updated": "2026-04-14T17:59:03Z",
       "categories": [
         "cs.CV"
       ],
       "primary_category": "cs.CV"
     },
     {
-      "id": "2604.11803v1",
-      "title": "Saar-Voice: A Multi-Speaker Saarbr\u00fccken Dialect Speech Corpus",
+      "id": "2604.13029v1",
+      "title": "Visual Preference Optimization with Rubric Rewards",
       "authors": [
-        "Lena S. Oberkircher",
-        "Jesujoba O. Alabi",
-        "Dietrich Klakow",
-        "J\u00fcrgen Trouvain"
+        "Ya-Qi Yu",
+        "Fangyu Hong",
+        "Xiangyang Qu",
+        "Hao Wang",
+        "Gaojie Wu",
+        "Qiaoyu Luo",
+        "Nuo Xu",
+        "Huixin Wang",
+        "Wuheng Xu",
+        "Yongxin Liao",
+        "Zihao Chen",
+        "Haonan Li",
+        "Ziming Li",
+        "Dezhi Peng",
+        "Minghui Liao",
+        "Jihao Wu",
+        "Haoyu Ren",
+        "Dandan Tu"
       ],
-      "abstract": "Natural language processing (NLP) and speech technologies have made significant progress in recent years; however, they remain largely focused on standardized language varieties. Dialects, despite their cultural significance and widespread use, are underrepresented in linguistic resources and computational models, resulting in performance disparities. To address this gap, we introduce Saar-Voice, a six-hour speech corpus for the Saarbr\u00fccken dialect of German. The dataset was created by first collecting text through digitized books and locally sourced materials. A subset of this text was recorded by nine speakers, and we conducted analyses on both the textual and speech components to assess the dataset's characteristics and quality. We discuss methodological challenges related to orthographic and speaker variation, and explore grapheme-to-phoneme (G2P) conversion. The resulting corpus provides aligned textual and audio representations. This serves as a foundation for future research on dialect-aware text-to-speech (TTS), particularly in low-resource scenarios, including zero-shot and few-shot model adaptation.",
-      "url": "https://arxiv.org/abs/2604.11803v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.11803v1",
-      "published": "2026-04-13T17:59:11Z",
-      "updated": "2026-04-13T17:59:11Z",
-      "categories": [
-        "cs.CL"
-      ],
-      "primary_category": "cs.CL"
-    },
-    {
-      "id": "2604.11802v1",
-      "title": "Psychological Concept Neurons: Can Neural Control Bias Probing and Shift Generation in LLMs?",
-      "authors": [
-        "Yuto Harada",
-        "Hiro Taiyo Hamada"
-      ],
-      "abstract": "Using psychological constructs such as the Big Five, large language models (LLMs) can imitate specific personality profiles and predict a user's personality. While LLMs can exhibit behaviors consistent with these constructs, it remains unclear where and how they are represented inside the model and how they relate to behavioral outputs. To address this gap, we focus on questionnaire-operationalized Big Five concepts, analyze the formation and localization of their internal representations, and use interventions to examine how these representations relate to behavioral outputs. In our experiment, we first use probing to examine where Big Five information emerges across model depth. We then identify neurons that respond selectively to each Big Five concept and test whether enhancing or suppressing their activations can bias latent representations and label generation in intended directions. We find that Big Five information becomes rapidly decodable in early layers and remains detectable through the final layers, while concept-selective neurons are most prevalent in mid layers and exhibit limited overlap across domains. Interventions on these neurons consistently shift probe readouts toward targeted concepts, with targeted success rates exceeding 0.8 for some concepts, indicating that the model's internal separation of Big Five personality traits can be causally steered. At the label-generation level, the same interventions often bias generated label distributions in the intended directions, but the effects are weaker, more concept-dependent, and often accompanied by cross-trait spillover, indicating that comparable control over generated labels is difficult even with interventions on a large fraction of concept-selective neurons. Overall, our findings reveal a gap between representational control and behavioral control in LLMs.",
-      "url": "https://arxiv.org/abs/2604.11802v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.11802v1",
-      "published": "2026-04-13T17:58:49Z",
-      "updated": "2026-04-13T17:58:49Z",
-      "categories": [
-        "cs.CL"
-      ],
-      "primary_category": "cs.CL"
-    },
-    {
-      "id": "2604.11801v1",
-      "title": "CLSGen: A Dual-Head Fine-Tuning Framework for Joint Probabilistic Classification and Verbalized Explanation",
-      "authors": [
-        "WonJin Yoon",
-        "Kangyu Zhu",
-        "Ian Bulovic",
-        "Autumn Sehy",
-        "Yanjun Gao",
-        "Dmitriy Dligach",
-        "Majid Afshar",
-        "Timothy A. Miller"
-      ],
-      "abstract": "With the recent progress of Large Language Models (LLMs), there is a growing interest in applying these models to solve complex and challenging problems. Modern LLMs, capable of processing long contexts and generating verbalized explanations, offer significant potential in addressing real-world applications. However, a critical hurdle in deploying LLMs for practical decision-making is their inability to provide reliable, quantitative probabilities. While task-specific fine-tuning of LLMs using traditional discriminative objectives (similar to encoder-only models) can yield probability estimates, this often leads to catastrophic forgetting and linguistic collapse. Consequently, the model loses its ability to generate explanations, severely undermining its interpretability and usability. To address this challenge, we propose CLSGen, a novel LLM fine-tuning framework designed for binary classification tasks. The CLSGen framework encompasses a new model architecture, training methodology, and data construction strategy to enable robust probability estimation without sacrificing the model's inherent explanation-generation capabilities. Experimental results across multiple benchmark datasets demonstrate that models fine-tuned with CLSGen outperform existing baselines in classification metrics (AUROC and F1-score). Regarding explanation, the results showed strong alignment between predicted labels and generated justifications, as well as high readability.",
-      "url": "https://arxiv.org/abs/2604.11801v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.11801v1",
-      "published": "2026-04-13T17:58:43Z",
-      "updated": "2026-04-13T17:58:43Z",
-      "categories": [
-        "cs.CL"
-      ],
-      "primary_category": "cs.CL"
-    },
-    {
-      "id": "2604.11798v1",
-      "title": "Budget-Aware Uncertainty for Radiotherapy Segmentation QA Using nnU-Net",
-      "authors": [
-        "Ricardo Coimbra Brioso",
-        "Lorenzo Mondo",
-        "Damiano Dei",
-        "Nicola Lambri",
-        "Pietro Mancosu",
-        "Marta Scorsetti",
-        "Daniele Loiacono"
-      ],
-      "abstract": "Accurate delineation of the Clinical Target Volume (CTV) is essential for radiotherapy planning, yet remains time-consuming and difficult to assess, especially for complex treatments such as Total Marrow and Lymph Node Irradiation (TMLI). While deep learning-based auto-segmentation can reduce workload, safe clinical deployment requires reliable cues indicating where models may be wrong. In this work, we propose a budget-aware uncertainty-driven quality assurance (QA) framework built on nnU-Net, combining uncertainty quantification and post-hoc calibration to produce voxel-wise uncertainty maps (based on predictive entropy) that can guide targeted manual review. We compare temperature scaling (TS), deep ensembles (DE), checkpoint ensembles (CE), and test-time augmentation (TTA), evaluated both individually and in combination on TMLI as a representative use case. Reliability is assessed through ROI-masked calibration metrics and uncertainty--error alignment under realistic revision constraints, summarized as AUC over the top 0-5% most uncertain voxels. Across configurations, segmentation accuracy remains stable, whereas TS substantially improves calibration. Uncertainty-error alignment improves most with calibrated checkpoint-based inference, leading to uncertainty maps that highlight more consistently regions requiring manual edits. Overall, integrating calibration with efficient ensembling seems a promising strategy to implement a budget-aware QA workflow for radiotherapy segmentation.",
-      "url": "https://arxiv.org/abs/2604.11798v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.11798v1",
-      "published": "2026-04-13T17:58:15Z",
-      "updated": "2026-04-13T17:58:15Z",
+      "abstract": "The effectiveness of Direct Preference Optimization (DPO) depends on preference data that reflect the quality differences that matter in multimodal tasks. Existing pipelines often rely on off-policy perturbations or coarse outcome-based signals, which are not well suited to fine-grained visual reasoning. We propose rDPO, a preference optimization framework based on instance-specific rubrics. For each image-instruction pair, we create a checklist-style rubric of essential and additional criteria to score responses from any possible policies. The instruction-rubric pool is built offline and reused during the construction of on-policy data. On public reward modeling benchmarks, rubric-based prompting massively improves a 30B-A3B judge and brings it close to GPT-5.4. On public downstream benchmarks, rubric-based filtering raises the macro average to 82.69, whereas outcome-based filtering drops it to 75.82 from 81.14. When evaluating scalability on a comprehensive benchmark, rDPO achieves 61.01, markedly outperforming the style-constrained baseline (52.36) and surpassing the 59.48 base model. Together, these results show that visual preference optimization benefits from combining on-policy data construction with instance-specific criterion-level feedback.",
+      "url": "https://arxiv.org/abs/2604.13029v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.13029v1",
+      "published": "2026-04-14T17:58:22Z",
+      "updated": "2026-04-14T17:58:22Z",
       "categories": [
         "cs.CV",
         "cs.AI"
       ],
       "primary_category": "cs.CV"
+    },
+    {
+      "id": "2604.13028v1",
+      "title": "Conflated Inverse Modeling to Generate Diverse and Temperature-Change Inducing Urban Vegetation Patterns",
+      "authors": [
+        "Baris Sarper Tezcan",
+        "Hrishikesh Viswanath",
+        "Rubab Saher",
+        "Daniel Aliaga"
+      ],
+      "abstract": "Urban areas are increasingly vulnerable to thermal extremes driven by rapid urbanization and climate change. Traditionally, thermal extremes have been monitored using Earth-observing satellites and numerical modeling frameworks. For example, land surface temperature derived from Landsat or Sentinel imagery is commonly used to characterize surface heating patterns. These approaches operate as forward models, translating radiative observations or modeled boundary conditions into estimates of surface thermal states. While forward models can predict land surface temperature from vegetation and urban form, the inverse problem of determining spatial vegetation configurations that achieve a desired regional temperature shift remains largely unexplored. This task is inherently underdetermined, as multiple spatial vegetation patterns can yield similar aggregated temperature responses. Conventional regression and deterministic neural networks fail to capture this ambiguity and often produce averaged solutions, particularly under data-scarce conditions. We propose a conflated inverse modeling framework that combines a predictive forward model with a diffusion-based generative inverse model to produce diverse, physically plausible image-based vegetation patterns conditioned on specific temperature goals. Our framework maintains control over thermal outcomes while enabling diverse spatial vegetation configurations, even when such combinations are absent from training data. Altogether, this work introduces a controllable inverse modeling approach for urban climate adaptation that accounts for the inherent diversity of the problem. Code is available at the GitHub repository.",
+      "url": "https://arxiv.org/abs/2604.13028v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.13028v1",
+      "published": "2026-04-14T17:58:07Z",
+      "updated": "2026-04-14T17:58:07Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2604.13024v1",
+      "title": "CLAD: Efficient Log Anomaly Detection Directly on Compressed Representations",
+      "authors": [
+        "Benzhao Tang",
+        "Shiyu Yang"
+      ],
+      "abstract": "The explosive growth of system logs makes streaming compression essential, yet existing log anomaly detection (LAD) methods incur severe pre-processing overhead by requiring full decompression and parsing. We introduce CLAD, the first deep learning framework to perform LAD directly on compressed byte streams. CLAD bypasses these bottlenecks by exploiting a key insight: normal logs compress into regular byte patterns, while anomalies systematically disrupt them. To extract these multi-scale deviations from opaque bytes, we propose a purpose-built architecture integrating a dilated convolutional byte encoder, a hybrid Transformer--mLSTM, and four-way aggregation pooling. This is coupled with a two-stage training strategy of masked pre-training and focal-contrastive fine-tuning to effectively handle severe class imbalance. Evaluated across five datasets, CLAD achieves a state-of-the-art average F1-score of 0.9909 and outperforms the best baseline by 2.72 percentage points. It delivers superior accuracy while completely eliminating decompression and parsing overheads, offering a robust solution that generalizes to structured streaming compressors.",
+      "url": "https://arxiv.org/abs/2604.13024v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.13024v1",
+      "published": "2026-04-14T17:57:01Z",
+      "updated": "2026-04-14T17:57:01Z",
+      "categories": [
+        "cs.LG",
+        "cs.DB"
+      ],
+      "primary_category": "cs.LG"
+    },
+    {
+      "id": "2604.13022v1",
+      "title": "Classical and Quantum Speedups for Non-Convex Optimization via Energy Conserving Descent",
+      "authors": [
+        "Yihang Sun",
+        "Huaijin Wang",
+        "Patrick Hayden",
+        "Jose Blanchet"
+      ],
+      "abstract": "The Energy Conserving Descent (ECD) algorithm was recently proposed (De Luca & Silverstein, 2022) as a global non-convex optimization method. Unlike gradient descent, appropriately configured ECD dynamics escape strict local minima and converge to a global minimum, making it appealing for machine learning optimization.   We present the first analytical study of ECD, focusing on the one-dimensional setting for this first installment. We formalize a stochastic ECD dynamics (sECD) with energy-preserving noise, as well as a quantum analog of the ECD Hamiltonian (qECD), providing the foundation for a quantum algorithm through Hamiltonian simulation.   For positive double-well objectives, we compute the expected hitting time from a local to the global minimum. We prove that both sECD and qECD yield exponential speedup over respective gradient descent baselines--stochastic gradient descent and its quantization. For objectives with tall barriers, qECD achieves a further speedup over sECD.",
+      "url": "https://arxiv.org/abs/2604.13022v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.13022v1",
+      "published": "2026-04-14T17:56:33Z",
+      "updated": "2026-04-14T17:56:33Z",
+      "categories": [
+        "quant-ph",
+        "cs.LG",
+        "math.OC",
+        "stat.ML"
+      ],
+      "primary_category": "quant-ph"
+    },
+    {
+      "id": "2604.13021v1",
+      "title": "Representation geometry shapes task performance in vision-language modeling for CT enterography",
+      "authors": [
+        "Cristian Minoccheri",
+        "Emily Wittrup",
+        "Kayvan Najarian",
+        "Ryan Stidham"
+      ],
+      "abstract": "Computed tomography (CT) enterography is a primary imaging modality for assessing inflammatory bowel disease (IBD), yet the representational choices that best support automated analysis of this modality are unknown. We present the first study of vision-language transfer learning on abdominal CT enterography and identify two main findings. First, mean pooling of slice embeddings gives better categorical disease assessment (59.2\\% three-class accuracy), whereas attention pooling gives better cross-modal retrieval (0.235 text-to-image MRR). This pattern holds across all LoRA configurations tested and suggests that the two aggregators emphasize different properties of the learned representation. Second, per-slice tissue contrast matters more than broader spatial coverage: multi-window RGB encoding, which maps complementary Hounsfield Unit windows to RGB channels, outperforms all strategies that increase spatial coverage through multiplanar sampling, and in this setting adding coronal and sagittal views reduces classification performance. For report generation, fine-tuning without retrieval context yields within-1 severity accuracy at the prevalence-matched chance level (70.4\\% vs.\\ 71\\% random), suggesting little learned ordering beyond the class distribution. Retrieval-augmented generation (RAG) improves this across all configurations, scoring 7--14 percentage points above the chance baseline and improving ordinal MAE from 0.98 to 0.80--0.89. A three-teacher pseudolabel framework enables all comparisons without expert annotations. Together, these findings provide the first baselines for this underexplored modality and offer practical guidance for building vision-language systems for volumetric medical imaging.",
+      "url": "https://arxiv.org/abs/2604.13021v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.13021v1",
+      "published": "2026-04-14T17:56:23Z",
+      "updated": "2026-04-14T17:56:23Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2604.13019v1",
+      "title": "See, Point, Refine: Multi-Turn Approach to GUI Grounding with Visual Feedback",
+      "authors": [
+        "Himangi Mittal",
+        "Gaurav Mittal",
+        "Nelson Daniel Troncoso",
+        "Yu Hu"
+      ],
+      "abstract": "Computer Use Agents (CUAs) fundamentally rely on graphical user interface (GUI) grounding to translate language instructions into executable screen actions, but editing-level grounding in dense coding interfaces, where sub-pixel accuracy is required to interact with dense IDE elements, remains underexplored. Existing approaches typically rely on single-shot coordinate prediction, which lacks a mechanism for error correction and often fails in high-density interfaces. In this technical report, we conduct an empirical study of pixel-precise cursor localization in coding environments. Instead of a single-step execution, our agent engages in an iterative refinement process, utilizing visual feedback from previous attempts to reach the target element. This closed-loop grounding mechanism allows the agent to self-correct displacement errors and adapt to dynamic UI changes. We evaluate our approach across GPT-5.4, Claude, and Qwen on a suite of complex coding benchmarks, demonstrating that multi-turn refinement significantly outperforms state-of-the-art single-shot models in both click precision and overall task success rate. Our results suggest that iterative visual reasoning is a critical component for the next generation of reliable software engineering agents. Code: https://github.com/microsoft/precision-cua-bench.",
+      "url": "https://arxiv.org/abs/2604.13019v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.13019v1",
+      "published": "2026-04-14T17:55:46Z",
+      "updated": "2026-04-14T17:55:46Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2604.13018v1",
+      "title": "Toward Autonomous Long-Horizon Engineering for ML Research",
+      "authors": [
+        "Guoxin Chen",
+        "Jie Chen",
+        "Lei Chen",
+        "Jiale Zhao",
+        "Fanzhe Meng",
+        "Wayne Xin Zhao",
+        "Ruihua Song",
+        "Cheng Chen",
+        "Ji-Rong Wen",
+        "Kai Jia"
+      ],
+      "abstract": "Autonomous AI research has advanced rapidly, but long-horizon ML research engineering remains difficult: agents must sustain coherent progress across task comprehension, environment setup, implementation, experimentation, and debugging over hours or days. We introduce AiScientist, a system for autonomous long-horizon engineering for ML research built on a simple principle: strong long-horizon performance requires both structured orchestration and durable state continuity. To this end, AiScientist combines hierarchical orchestration with a permission-scoped File-as-Bus workspace: a top-level Orchestrator maintains stage-level control through concise summaries and a workspace map, while specialized agents repeatedly re-ground on durable artifacts such as analyses, plans, code, and experimental evidence rather than relying primarily on conversational handoffs, yielding thin control over thick state. Across two complementary benchmarks, AiScientist improves PaperBench score by 10.54 points on average over the best matched baseline and achieves 81.82 Any Medal% on MLE-Bench Lite. Ablation studies further show that File-as-Bus protocol is a key driver of performance, reducing PaperBench by 6.41 points and MLE-Bench Lite by 31.82 points when removed. These results suggest that long-horizon ML research engineering is a systems problem of coordinating specialized work over durable project state, rather than a purely local reasoning problem.",
+      "url": "https://arxiv.org/abs/2604.13018v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.13018v1",
+      "published": "2026-04-14T17:55:16Z",
+      "updated": "2026-04-14T17:55:16Z",
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL"
     }
   ]
 }
