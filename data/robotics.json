@@ -2,172 +2,127 @@
   "category": "robotics",
   "name": "Robotics Research",
   "description": "Robotics \u2014 Motion Planning, Control Systems, Human-Robot Interaction, Autonomous Systems",
-  "scraped_at": "2026-04-15T09:43:38.514387+00:00",
+  "scraped_at": "2026-04-17T09:30:35.719550+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2604.13015v1",
-      "title": "Learning Versatile Humanoid Manipulation with Touch Dreaming",
+      "id": "2604.15289v1",
+      "title": "Abstract Sim2Real through Approximate Information States",
       "authors": [
-        "Yaru Niu",
-        "Zhenlong Fang",
-        "Binghong Chen",
-        "Shuai Zhou",
-        "Revanth Senthilkumaran",
-        "Hao Zhang",
-        "Bingqing Chen",
-        "Chen Qiu",
-        "H. Eric Tseng",
-        "Jonathan Francis",
-        "Ding Zhao"
+        "Yunfu Deng",
+        "Yuhao Li",
+        "Josiah P. Hanna"
       ],
-      "abstract": "Humanoid robots promise general-purpose assistance, yet real-world humanoid loco-manipulation remains challenging because it requires whole-body stability, dexterous hands, and contact-aware perception under frequent contact changes. In this work, we study dexterous, contact-rich humanoid loco-manipulation. We first develop an RL-based whole-body controller that provides stable lower-body and torso execution during complex manipulation. Built on this controller, we develop a whole-body humanoid data collection system that combines VR-based teleoperation with human-to-humanoid motion mapping, enabling efficient collection of real-world demonstrations. We then propose Humanoid Transformer with Touch Dreaming (HTD), a multimodal encoder--decoder Transformer that models touch as a core modality alongside multi-view vision and proprioception. HTD is trained in a single stage with behavioral cloning augmented by touch dreaming: in addition to predicting action chunks, the policy predicts future hand-joint forces and future tactile latents, encouraging the shared Transformer trunk to learn contact-aware representations for dexterous interaction. Across five contact-rich tasks, Insert-T, Book Organization, Towel Folding, Cat Litter Scooping, and Tea Serving, HTD achieves a 90.9% relative improvement in average success rate over the stronger baseline. Ablation results further show that latent-space tactile prediction is more effective than raw tactile prediction, yielding a 30% relative gain in success rate. These results demonstrate that combining robust whole-body execution, scalable humanoid data collection, and predictive touch-centered learning enables versatile, high-dexterity humanoid manipulation in the real world. Project webpage: humanoid-touch-dream.github.io.",
-      "url": "https://arxiv.org/abs/2604.13015v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.13015v1",
-      "published": "2026-04-14T17:54:17Z",
-      "updated": "2026-04-14T17:54:17Z",
+      "abstract": "In recent years, reinforcement learning (RL) has shown remarkable success in robotics when a fast and accurate simulator is available for a given task. When using RL and simulation, more simulator realism is generally beneficial but becomes harder to obtain as robots are deployed in increasingly complex and widescale domains. In such settings, simulators will likely fail to model all relevant details of a given target task and this observation motivates the study of sim2real with simulators that leave out key task details. In this paper, we formalize and study the abstract sim2real problem: given an abstract simulator that models a target task at a coarse level of abstraction, how can we train a policy with RL in the abstract simulator and successfully transfer it to the real-world? Our first contribution is to formalize this problem using the language of state abstraction from the RL literature. This framing shows that an abstract simulator can be grounded to match the target task if the grounded abstract dynamics take the history of states into account. Based on the formalism, we then introduce a method that uses real-world task data to correct the dynamics of the abstract simulator. We then show that this method enables successful policy transfer both in sim2sim and sim2real evaluation.",
+      "url": "https://arxiv.org/abs/2604.15289v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.15289v1",
+      "published": "2026-04-16T17:53:16Z",
+      "updated": "2026-04-16T17:53:16Z",
       "categories": [
         "cs.RO"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2604.13007v1",
-      "title": "Closed-Form Characterization of Constrained Double-Integrator Optimal Control",
+      "id": "2604.15281v1",
+      "title": "R3D: Revisiting 3D Policy Learning",
       "authors": [
-        "Filippos N. Tzortzoglou",
-        "Logan E. Beaver",
-        "Andreas A. Malikopoulos"
+        "Zhengdong Hong",
+        "Shenrui Wu",
+        "Haozhe Cui",
+        "Boyi Zhao",
+        "Ran Ji",
+        "Yiyang He",
+        "Hangxing Zhang",
+        "Zundong Ke",
+        "Jun Wang",
+        "Guofeng Zhang",
+        "Jiayuan Gu"
       ],
-      "abstract": "We present a framework for predicting human driving behavior in mixed traffic where connected and automated vehicles (CAVs) coexist with human-driven vehicles (HDVs), and validate it using an open-source virtual reality (VR) testbed. We estimate the time-shift parameter of Newell's car-following model for individual drivers using Bayesian linear regression and derive analytical expressions for the mean and variance of predicted trajectories. These predictions are integrated into an optimal control framework for CAV trajectory planning. To address the scarcity of mixed-traffic data, we develop a VR platform supporting realistic, multi-user driving scenarios and provide a reproducible experimental framework with a dedicated tutorial website requiring only MATLAB and Unreal Engine. Results show our approach enables efficient HDV predictions, while the VR platform offers an accessible environment for studying human behavior in mixed traffic.",
-      "url": "https://arxiv.org/abs/2604.13007v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.13007v1",
-      "published": "2026-04-14T17:40:02Z",
-      "updated": "2026-04-14T17:40:02Z",
+      "abstract": "3D policy learning promises superior generalization and cross-embodiment transfer, but progress has been hindered by training instabilities and severe overfitting, precluding the adoption of powerful 3D perception models. In this work, we systematically diagnose these failures, identifying the omission of 3D data augmentation and the adverse effects of Batch Normalization as primary causes. We propose a new architecture coupling a scalable transformer-based 3D encoder with a diffusion decoder, engineered specifically for stability at scale and designed to leverage large-scale pre-training. Our approach significantly outperforms state-of-the-art 3D baselines on challenging manipulation benchmarks, establishing a new and robust foundation for scalable 3D imitation learning. Project Page: https://r3d-policy.github.io/",
+      "url": "https://arxiv.org/abs/2604.15281v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.15281v1",
+      "published": "2026-04-16T17:50:37Z",
+      "updated": "2026-04-16T17:50:37Z",
       "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2604.15255v1",
+      "title": "Democratization of Real-time Multi-Spectral Photoacoustic Imaging: Open-Sourced System Architecture for OPOTEK Phocus & Verasonics Vantage Combination",
+      "authors": [
+        "Ryo Murakami",
+        "Yichuan Tang",
+        "Haichong K. Zhang"
+      ],
+      "abstract": "Real-time multi-spectral photoacoustic imaging (RT-mPAI) often suffers from synchronization instabilities when interfacing fast-tuning lasers with data acquisition platforms executing on non-real-time operating systems. To overcome this, we establish an open-source hardware-software architecture tailored for the widely adopted combination of the OPOTEK Phocus lasers and Verasonics Vantage systems. By employing an independent micro-controller for deterministic laser trigger counting alongside a decoupled client-server data streaming framework, the proposed system circumvents OS-induced timing deviations and local storage bottlenecks. By open-sourcing this pipeline and cultivating a collaborative environment to share both code and ideas, we aim to lower the technical and cost barriers for RT-mPAI, thereby democratizing access to stable RT-mPAI research and, more ambitiously, fostering a vibrant open-source community.",
+      "url": "https://arxiv.org/abs/2604.15255v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.15255v1",
+      "published": "2026-04-16T17:34:18Z",
+      "updated": "2026-04-16T17:34:18Z",
+      "categories": [
+        "cs.AR",
         "eess.SY"
       ],
-      "primary_category": "eess.SY"
+      "primary_category": "cs.AR"
     },
     {
-      "id": "2604.13001v1",
-      "title": "XRZero-G0: Pushing the Frontier of Dexterous Robotic Manipulation with Interfaces, Quality and Ratios",
+      "id": "2604.15252v1",
+      "title": "Tube-Based Robust Data-Driven Predictive Control",
       "authors": [
-        "Junming Wang",
-        "Teng Pu",
-        "Wingmun Fung",
-        "Jindong Wang",
-        "Shanchang Wang",
-        "Yuan Deng",
-        "Shuyuan Wang",
-        "Ziwei Liu",
-        "Kunhao Pan",
-        "Ping Yang",
-        "Peng Zhai",
-        "Yuxin Liang",
-        "Xiaofan Li",
-        "Jiabi Sun",
-        "Renchao Xu",
-        "Xiaotian Tian",
-        "Pengfei Yan",
-        "Guoqiang Ye",
-        "Liang Li",
-        "Qian Wang",
-        "Ruyi Gan",
-        "Hao Wang"
+        "Chi Wang",
+        "David Angeli"
       ],
-      "abstract": "The acquisition of high-quality, action-aligned demonstration data remains a fundamental bottleneck in scaling foundation models for dexterous robot manipulation. Although robot-free human demonstrations (e.g., the UMI paradigm) offer a scalable alternative to traditional teleoperation, current systems are constrained by sub-optimal hardware ergonomics, open-loop workflows, and a lack of systematic data-mixing strategies. To address these limitations, we present XRZero-G0, a hardware-software co-designed system for embodied data collection and policy learning. The system features an ergonomic, virtual reality interface equipped with a top-view camera and dual specialized grippers to directly improve collection efficiency. To ensure dataset reliability, we propose a closed-loop collection, inspection, training, and evaluation pipeline for non-proprioceptive data. This workflow achieves an 85% data validity rate and establishes a transparent mechanism for quality control. Furthermore, we investigate the empirical scaling behaviors and optimal mixing ratios of robot-free data. Extensive experiments indicate that combining a minimal volume of real-robot data with large-scale robot-free data (e.g., a 10:1 ratio) achieves performance comparable to exclusively real-robot datasets, while reducing acquisition costs by a factor of twenty. Utilizing XRZero-G0, we construct a 2,000-hour robot-free dataset that enables zero-shot cross-embodiment transfer to a target physical robot, demonstrating a highly scalable methodology for generalized real-world manipulation.Our project repository: https://github.com/X-Square-Robot/XRZero-G0",
-      "url": "https://arxiv.org/abs/2604.13001v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.13001v1",
-      "published": "2026-04-14T17:34:21Z",
-      "updated": "2026-04-14T17:34:21Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2604.12960v1",
-      "title": "Symmetry Is Almost All You Need: Robust Stability with Uncertainty Induced by Symmetric SRG Regions",
-      "authors": [
-        "Ding Zhang",
-        "Di Zhao",
-        "Philipp Braun",
-        "Jianqi Chen"
-      ],
-      "abstract": "This paper investigates the robust stability problem of a feedback system in the presence of uncertainties induced by graphical regions in the plane where the scaled relative graphs (SRGs) reside. Our main results are developed using a novel and intuitive concept, the Davis-Wielandt shell, together with its connection to SRGs and related variants. We first study a matrix robust nonsingularity (MRN) problem for two types of graphically induced uncertainty sets: one with prior information on $\u03b8$ and one without. In the former case, we show that, whenever the uncertainty-inducing region is mirror symmetric about the $\u03b8$-axis, the separation between a specific variant of the SRG and the region provides a necessary and sufficient condition for MRN. When the region is asymmetric, the necessity generally fails. This recovers the necessity of the small gain condition, and reveals the necessity of small angle conditions and sectored-disc conditions at the matrix level. In the latter case, we show that an additional $\u03b8$-circular connectivity property is required to obtain necessary and sufficient conditions. Building on these MRN results, we then derive sufficient conditions for robust stability of multi-input multi-output (MIMO) linear time-invariant (LTI) systems under frequencywise symmetric uncertainties. In addition, connections with existing system characteristics such as disc-boundedness are discussed and exploited to obtain state-space characterisations for angle-bounded and mixed gain-angle-bounded systems. Based on these results, we construct a $\u03b8$-angle-gain profile of a system that provides an intuitive visualisation of its feedback robustness against conic and sectorial uncertainties.",
-      "url": "https://arxiv.org/abs/2604.12960v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.12960v1",
-      "published": "2026-04-14T16:55:24Z",
-      "updated": "2026-04-14T16:55:24Z",
+      "abstract": "This paper presents a tractable tube-based robust data-driven predictive control scheme that uses only a single finite noisy input-state trajectory of an unknown discrete-time linear time-invariant (LTI) system. A simplex constraint is imposed on the Hankel coefficient vector, yielding explicit polyhedral bounds on the prediction mismatch induced by bounded measurement noise. Using certified initial and terminal robust positively invariant (RPI) sets, we derive a tube-tightened formulation whose online optimization problem is a strictly convex quadratic program (QP). The resulting controller guarantees recursive feasibility, robust satisfaction of input and state constraints, and practical input-to-state stability of the closed loop with respect to measurement noise. Numerical examples illustrate the effectiveness, robustness, and closed-loop performance of the proposed method.",
+      "url": "https://arxiv.org/abs/2604.15252v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.15252v1",
+      "published": "2026-04-16T17:29:26Z",
+      "updated": "2026-04-16T17:29:26Z",
       "categories": [
         "eess.SY",
-        "math.OC",
-        "math.RA"
+        "math.OC"
       ],
       "primary_category": "eess.SY"
     },
     {
-      "id": "2604.12956v1",
-      "title": "Output-Feedback Safe Control of Discrete-Time Stochastic Systems with Chance Constraints",
+      "id": "2604.15238v1",
+      "title": "A Nonlinear Separation Principle: Applications to Neural Networks, Control and Learning",
       "authors": [
-        "Jianing Zhao",
-        "Zhuoting Cai",
-        "Xiang Yin"
+        "Anand Gokhale",
+        "Anton V. Proskurnikov",
+        "Yu Kawano",
+        "Francesco Bullo"
       ],
-      "abstract": "In this paper, we investigate safety-critical control problem of discrete-time stochastic systems with incomplete information, where safety constraints must be enforced using state estimates obtained from noisy measurements. We develop an output-feedback control barrier function (CBF) framework based on an expectation-based discrete-time barrier condition that explicitly incorporates estimation uncertainty through the evolving belief over the state. To enable real-time implementation, we derive deterministic sufficient conditions that conservatively enforce the expectation-based CBF by bounding the expectation with computable functions of the belief statistics using Jensen inequalities. The resulting safety filter is formulated as a tractable optimization problem compatible with standard online controllers. Numerical simulations demonstrate that the proposed output-feedback approach achieves fast online computation while providing reliable safety performance in the presence of process noise and measurement uncertainty.",
-      "url": "https://arxiv.org/abs/2604.12956v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.12956v1",
-      "published": "2026-04-14T16:53:22Z",
-      "updated": "2026-04-14T16:53:22Z",
+      "abstract": "This paper investigates continuous-time and discrete-time firing-rate and Hopfield recurrent neural networks (RNNs), with applications in nonlinear control design and implicit deep learning. First, we introduce a nonlinear separation principle that guarantees global exponential stability for the interconnection of a contracting state-feedback controller and a contracting observer, alongside parametric extensions for robustness and equilibrium tracking. Second, we derive sharp linear matrix inequality (LMI) conditions that guarantee the contractivity of both firing rate and Hopfield neural network architectures. We establish structural relationships among these certificates-demonstrating that continuous-time models with monotone non-decreasing activations maximize the admissible weight space, and extend these stability guarantees to interconnected systems and Graph RNNs. Third, we combine our separation principle and LMI framework to solve the output reference tracking problem for RNN-modeled plants. We provide LMI synthesis methods for feedback controllers and observers, and rigorously design a low-gain integral controller to eliminate steady-state error. Finally, we derive an exact, unconstrained algebraic parameterization of our contraction LMIs to design highly expressive implicit neural networks, achieving competitive accuracy and parameter efficiency on standard image classification benchmarks.",
+      "url": "https://arxiv.org/abs/2604.15238v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.15238v1",
+      "published": "2026-04-16T17:12:32Z",
+      "updated": "2026-04-16T17:12:32Z",
       "categories": [
-        "eess.SY"
+        "eess.SY",
+        "cs.LG",
+        "math.OC"
       ],
       "primary_category": "eess.SY"
     },
     {
-      "id": "2604.12942v1",
-      "title": "RMGS-SLAM: Real-time Multi-sensor Gaussian Splatting SLAM",
+      "id": "2604.15221v1",
+      "title": "Vision-Based Safe Human-Robot Collaboration with Uncertainty Guarantees",
       "authors": [
-        "Dongen Li",
-        "Yi Liu",
-        "Junqi Liu",
-        "Zewen Sun",
-        "Zefan Huang",
-        "Shuo Sun",
-        "Jiahui Liu",
-        "Chengran Yuan",
-        "Hongliang Guo",
-        "Francis E. H. Tay",
-        "Marcelo H. Ang"
+        "Jakob Thumm",
+        "Marian Frei",
+        "Tianle Ni",
+        "Matthias Althoff",
+        "Marco Pavone"
       ],
-      "abstract": "Real-time 3D Gaussian splatting (3DGS)-based Simultaneous Localization and Mapping (SLAM) in large-scale real-world environments remains challenging, as existing methods often struggle to jointly achieve low-latency pose estimation, 3D Gaussian reconstruction in step with incoming sensor streams, and long-term global consistency. In this paper, we present a tightly coupled LiDAR-Inertial-Visual (LIV) 3DGS-based SLAM framework for real-time pose estimation and photorealistic mapping in large-scale real-world scenes. The system executes state estimation and 3D Gaussian primitive initialization in parallel with global Gaussian optimization, thereby enabling continuous dense mapping. To improve Gaussian initialization quality and accelerate optimization convergence, we introduce a cascaded strategy that combines feed-forward predictions with voxel-based principal component analysis (voxel-PCA) geometric priors. To enhance global consistency in large scenes, we further perform loop closure directly on the optimized global Gaussian map by estimating loop constraints through Gaussian-based Generalized Iterative Closest Point (GICP) registration, followed by pose-graph optimization. In addition, we collected challenging large-scale looped outdoor SLAM sequences with hardware-synchronized LiDAR-camera-IMU and ground-truth trajectories to support realistic and comprehensive evaluation. Extensive experiments on both public datasets and our dataset demonstrate that the proposed method achieves a strong balance among real-time efficiency, localization accuracy, and rendering quality across diverse and challenging real-world scenes.",
-      "url": "https://arxiv.org/abs/2604.12942v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.12942v1",
-      "published": "2026-04-14T16:36:11Z",
-      "updated": "2026-04-14T16:36:11Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2604.12933v1",
-      "title": "DINO-Explorer: Active Underwater Discovery via Ego-Motion Compensated Semantic Predictive Coding",
-      "authors": [
-        "Yuhan Jin",
-        "Nayari Marie Lessa",
-        "Mariela De Lucas Alvarez",
-        "Melvin Laux",
-        "Lucas Amparo Barbosa",
-        "Frank Kirchner",
-        "Rebecca Adam"
-      ],
-      "abstract": "Marine ecosystem degradation necessitates continuous, scientifically selective underwater monitoring. However, most autonomous underwater vehicles (AUVs) operate as passive data loggers, capturing exhaustive video for offline review and frequently missing transient events of high scientific value. Transitioning to active perception requires a causal, online signal that highlights significant phenomena while suppressing maneuver-induced visual changes. We propose DINO-Explorer, a novelty-aware perception framework driven by a continuous semantic surprise signal. Operating within the latent space of a frozen DINOv3 foundation model, it leverages a lightweight, action-conditioned recurrent predictor to anticipate short-horizon semantic evolution. An efference-copy-inspired module utilizes globally pooled optical flow to discount self-induced visual changes without suppressing genuine environmental novelty. We evaluate this signal on the downstream task of asynchronous event triage under variant telemetry constraints. Results demonstrate that DINO-Explorer provides a robust, bandwidth-efficient attention mechanism. At a fixed operating point, the system retains 78.8% of post-discovery human-reviewer consensus events with a 56.8% trigger confirmation rate, effectively surfacing mission-relevant phenomena. Crucially, ego-motion conditioning suppresses 45.5% of false positives relative to an uncompensated surprise signal baseline. In a replay-side Pareto ablation study, DINO-Explorer robustly dominates the validated peak F1 versus telemetry bandwidth frontier, reducing telemetry bandwidth by 48.2% at the selected operating point while maintaining a 62.2% peak F1 score, successfully concentrating data transmission around human-verified novelty events.",
-      "url": "https://arxiv.org/abs/2604.12933v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.12933v1",
-      "published": "2026-04-14T16:20:54Z",
-      "updated": "2026-04-14T16:20:54Z",
+      "abstract": "We propose a framework for vision-based human pose estimation and motion prediction that gives conformal prediction guarantees for certifiably safe human-robot collaboration. Our framework combines aleatoric uncertainty estimation with OOD detection for high probabilistic confidence. To integrate our pipeline in certifiable safety frameworks, we propose conformal prediction sets for human motion predictions with high, valid confidence. We evaluate our pipeline on recorded human motion data and a real-world human-robot collaboration setting.",
+      "url": "https://arxiv.org/abs/2604.15221v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.15221v1",
+      "published": "2026-04-16T16:53:26Z",
+      "updated": "2026-04-16T16:53:26Z",
       "categories": [
         "cs.RO",
         "cs.CV"
@@ -175,62 +130,82 @@
       "primary_category": "cs.RO"
     },
     {
-      "id": "2604.12916v1",
-      "title": "E2E-Fly: An Integrated Training-to-Deployment System for End-to-End Quadrotor Autonomy",
+      "id": "2604.15215v1",
+      "title": "A Hierarchical Spatiotemporal Action Tokenizer for In-Context Imitation Learning in Robotics",
       "authors": [
-        "Fangyu Sun",
-        "Fanxing Li",
-        "Linzuo Zhang",
-        "Yu Hu",
-        "Renbiao Jin",
-        "Shuyu Wu",
-        "Wenxian Yu",
-        "Danping Zou"
+        "Fawad Javed Fateh",
+        "Ali Shah Ali",
+        "Murad Popattia",
+        "Usman Nizamani",
+        "Andrey Konin",
+        "M. Zeeshan Zia",
+        "Quoc-Huy Tran"
       ],
-      "abstract": "Training and transferring learning-based policies for quadrotors from simulation to reality remains challenging due to inefficient visual rendering, physical modeling inaccuracies, unmodeled sensor discrepancies, and the absence of a unified platform integrating differentiable physics learning into end-to-end training. While recent work has demonstrated various end-to-end quadrotor control tasks, few systems provide a systematic, zero-shot transfer pipeline, hindering reproducibility and real-world deployment. To bridge this gap, we introduce E2E-Fly, an integrated framework featuring an agile quadrotor platform coupled with a full-stack training, validation, and deployment workflow. The training framework incorporates a high-performance simulator with support for differentiable physics learning and reinforcement learning, alongside structured reward design tailored to common quadrotor tasks. We further introduce a two-stage validation strategy using sim-to-sim transfer and hardware-in-the-loop testing, and deploy policies onto two physical quadrotor platforms via a dedicated low-level control interface and a comprehensive sim-to-real alignment methodology, encompassing system identification, domain randomization, latency compensation, and noise modeling. To the best of our knowledge, this is the first work to systematically unify differentiable physical learning with training, validation, and real-world deployment for quadrotors. Finally, we demonstrate the effectiveness of our framework for training six end-to-end control tasks and deploy them in the real world.",
-      "url": "https://arxiv.org/abs/2604.12916v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.12916v1",
-      "published": "2026-04-14T16:00:22Z",
-      "updated": "2026-04-14T16:00:22Z",
+      "abstract": "We present a novel hierarchical spatiotemporal action tokenizer for in-context imitation learning. We first propose a hierarchical approach, which consists of two successive levels of vector quantization. In particular, the lower level assigns input actions to fine-grained subclusters, while the higher level further maps fine-grained subclusters to clusters. Our hierarchical approach outperforms the non-hierarchical counterpart, while mainly exploiting spatial information by reconstructing input actions. Furthermore, we extend our approach by utilizing both spatial and temporal cues, forming a hierarchical spatiotemporal action tokenizer, namely HiST-AT. Specifically, our hierarchical spatiotemporal approach conducts multi-level clustering, while simultaneously recovering input actions and their associated timestamps. Finally, extensive evaluations on multiple simulation and real robotic manipulation benchmarks show that our approach establishes a new state-of-the-art performance in in-context imitation learning.",
+      "url": "https://arxiv.org/abs/2604.15215v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.15215v1",
+      "published": "2026-04-16T16:47:08Z",
+      "updated": "2026-04-16T16:47:08Z",
       "categories": [
         "cs.RO"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2604.12912v1",
-      "title": "Nonlinear Stochastic Model Predictive Control with Generative Uncertainty in Homogeneous Charge Compression Ignition",
+      "id": "2604.15202v1",
+      "title": "Benchmarking Classical Coverage Path Planning Heuristics on Irregular Hexagonal Grids for Maritime Coverage Scenarios",
       "authors": [
-        "Xu Chen",
-        "Kevin Kluge",
-        "Maximilian Basler",
-        "Lorenz D\u00f6rschel",
-        "Heike Vallery"
+        "Carlos S. Sep\u00falveda",
+        "Gonzalo A. Ruz"
       ],
-      "abstract": "This work addresses the challenge of ignition timing and load control in homogeneous charge compression ignition engines operating subject to uncertainty from complex combustion dynamics and external disturbances. To handle this issue, we propose a nonlinear stochastic model predictive control approach explicitly incorporating distributional information of uncertainties. Specifically, we integrate an uncertainty model learned from empirical residual data to capture realistic probabilistic characteristics and handle the nonlinear additive uncertainty propagation within the prediction horizon based on polynomial chaos expansion. Additionally, we introduce a novel cost function based on maximum mean discrepancy, enabling direct penalization of the discrepancy between predicted and desired distributions of combustion indicators. The simulation results demonstrate that our proposed method achieves over a 28 \\% reduction on combustion phasing variation and more than a 26 \\% improvement in load tracking accuracy compared to traditional nonlinear and Gaussian-based predictive control strategies. These findings indicate the effectiveness of explicitly modeling uncertainty distributions and highlight the advantages of distribution-level performance index in robust combustion control.",
-      "url": "https://arxiv.org/abs/2604.12912v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.12912v1",
-      "published": "2026-04-14T15:58:23Z",
-      "updated": "2026-04-14T15:58:23Z",
+      "abstract": "Coverage path planning on irregular hexagonal grids is relevant to maritime surveillance, search and rescue and environmental monitoring, yet classical methods are often compared on small ad hoc examples or on rectangular grids. This paper presents a reproducible benchmark of deterministic single-vehicle coverage path planning heuristics on irregular hexagonal graphs derived from synthetic but maritime-motivated areas of interest. The benchmark contains 10,000 Hamiltonian-feasible instances spanning compact, elongated, and irregular morphologies, 17 heuristics from seven families, and a common evaluation protocol covering Hamiltonian success, complete-coverage success, revisits, path length, heading changes, and CPU latency. Across the released dataset, heuristics with explicit shortest-path reconnection solve the relaxed coverage task reliably but almost never produce zero-revisit tours. Exact Depth-First Search confirms that every released instance is Hamiltonian-feasible. The strongest classical Hamiltonian baseline is a Warnsdorff variant that uses an index-based tie-break together with a terminal-inclusive residual-degree policy, reaching 79.0% Hamiltonian success. The dominant design choice is not tie-breaking alone, but how the residual degree is defined when the endpoint is reserved until the final move. This shows that underreported implementation details can materially affect performance on sparse geometric graphs with bottlenecks. The benchmark is intended as a controlled testbed for heuristic analysis rather than as a claim of operational optimality at fleet scale.",
+      "url": "https://arxiv.org/abs/2604.15202v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.15202v1",
+      "published": "2026-04-16T16:28:03Z",
+      "updated": "2026-04-16T16:28:03Z",
       "categories": [
-        "eess.SY"
+        "cs.RO",
+        "cs.AI",
+        "math.OC"
       ],
-      "primary_category": "eess.SY"
+      "primary_category": "cs.RO"
     },
     {
-      "id": "2604.12909v1",
-      "title": "Tree Learning: A Multi-Skill Continual Learning Framework for Humanoid Robots",
+      "id": "2604.15168v1",
+      "title": "Dual Pose-Graph Semantic Localization for Vision-Based Autonomous Drone Racing",
       "authors": [
-        "Yifei Yan",
-        "Linqi Ye"
+        "David Perez-Saura",
+        "Miguel Fernandez-Cortizas",
+        "Alvaro J. Gaona",
+        "Pascual Campoy"
       ],
-      "abstract": "As reinforcement learning for humanoid robots evolves from single-task to multi-skill paradigms, efficiently expanding new skills while avoiding catastrophic forgetting has become a key challenge in embodied intelligence. Existing approaches either rely on complex topology adjustments in Mixture-of-Experts (MoE) models or require training extremely large-scale models, making lightweight deployment difficult. To address this, we propose Tree Learning, a multi-skill continual learning framework for humanoid robots. The framework adopts a root-branch hierarchical parameter inheritance mechanism, providing motion priors for branch skills through parameter reuse to fundamentally prevent catastrophic forgetting. A multi-modal feedforward adaptation mechanism combining phase modulation and interpolation is designed to support both periodic and aperiodic motions. A task-level reward shaping strategy is also proposed to accelerate skill convergence. Unity-based simulation experiments show that, in contrast to simultaneous multi-task training, Tree Learning achieves higher rewards across various representative locomotion skills while maintaining a 100% skill retention rate, enabling seamless multi-skill switching and real-time interactive control. We further validate the performance and generalization capability of Tree Learning on two distinct Unity-simulated tasks: a Super Mario-inspired interactive scenario and autonomous navigation in a classical Chinese garden environment.",
-      "url": "https://arxiv.org/abs/2604.12909v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.12909v1",
-      "published": "2026-04-14T15:57:27Z",
-      "updated": "2026-04-14T15:57:27Z",
+      "abstract": "Autonomous drone racing demands robust real-time localization under extreme conditions: high-speed flight, aggressive maneuvers, and payload-constrained platforms that often rely on a single camera for perception. Existing visual SLAM systems, while effective in general scenarios, struggle with motion blur and feature instability inherent to racing dynamics, and do not exploit the structured nature of racing environments. In this work, we present a dual pose-graph architecture that fuses odometry with semantic detections for robust localization. A temporary graph accumulates multiple gate observations between keyframes and optimizes them into a single refined constraint per landmark, which is then promoted to a persistent main graph. This design preserves the information richness of frequent detections while preventing graph growth from degrading real-time performance. The system is designed to be sensor-agnostic, although in this work we validate it using monocular visual-inertial odometry and visual gate detections. Experimental evaluation on the TII-RATM dataset shows a 56% to 74% reduction in ATE compared to standalone VIO, while an ablation study confirms that the dual-graph architecture achieves 10% to 12% higher accuracy than a single-graph baseline at identical computational cost. Deployment in the A2RL competition demonstrated that the system performs real-time onboard localization during flight, reducing the drift of the odometry baseline by up to 4.2 m per lap.",
+      "url": "https://arxiv.org/abs/2604.15168v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.15168v1",
+      "published": "2026-04-16T15:47:15Z",
+      "updated": "2026-04-16T15:47:15Z",
       "categories": [
         "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2604.15076v1",
+      "title": "NEAT-NC: NEAT guided Navigation Cells for Robot Path Planning",
+      "authors": [
+        "Hibatallah Meliani",
+        "Khadija Slimani",
+        "Samira Khoulji"
+      ],
+      "abstract": "To navigate a space, the brain makes an internal representation of the environment using different cells such as place cells, grid cells, head direction cells, border cells, and speed cells. All these cells, along with sensory inputs, enable an organism to explore the space around it. Inspired by these biological principles, we developed NEATNC, a Neuro-Evolution of Augmenting Topology guided Navigation Cells. The goal of the paper is to improve NEAT algorithm performance in path planning in dynamic environments using spatial cognitive cells. This approach uses navigation cells as inputs and evolves recurrent neural networks, representing the hippocampus part of the brain. The performance of the proposed algorithm is evaluated in different static and dynamic scenarios. This study highlights NEAT's adaptability to complex and different environments, showcasing the utility of biological theories. This suggests that our approach is well-suited for real-time dynamic path planning for robotics and games.",
+      "url": "https://arxiv.org/abs/2604.15076v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.15076v1",
+      "published": "2026-04-16T14:40:46Z",
+      "updated": "2026-04-16T14:40:46Z",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.NE"
       ],
       "primary_category": "cs.RO"
     }
