@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-04-19T09:07:39.346461+00:00",
+  "scraped_at": "2026-04-20T10:10:59.617186+00:00",
   "researcher_count": 54,
   "researchers": [
     {
@@ -10,6 +10,25 @@
       "website": "https://ames.caltech.edu/",
       "paper_count": 5,
       "papers": [
+        {
+          "id": "2604.15477v1",
+          "title": "Safety Filtering with an Infinite Number of Constraints",
+          "authors": [
+            "Max H. Cohen",
+            "Pio Ong",
+            "Pol Mestres",
+            "Aaron D. Ames"
+          ],
+          "abstract": "Control barrier functions (CBFs) provide a rigorous framework for designing controllers enforcing safety constraints. While CBF theory is well-developed for a finite number of safety constraints, certain applications, e.g., backup CBFs, require an infinite number of constraints. Despite the practical success of CBFs, several fundamental questions remain unanswered when safe sets are defined with an infinite numbers of constraints, including: necessary and sufficient conditions for forward set invariance, the actual definition of CBFs associated with these sets, the regularity properties of the resulting controllers, and the ability to reduce a collection of infinite constraints to a finite number. This paper addresses these questions by extending CBF theory to the infinite constraint setting. We identify regularity conditions under which Nagumo's Theorem reduces to barrier-like inequalities and when the associated CBF controllers are at least continuous. We further connect these results to optimal-decay CBFs, bridging theoretical conditions for invariance and practical instantiations of the resulting controller. Finally, we illustrate how the developed theory addresses limitations of backup CBFs.",
+          "url": "https://arxiv.org/abs/2604.15477v1",
+          "pdf_url": "https://arxiv.org/pdf/2604.15477v1",
+          "published": "2026-04-16T18:58:53Z",
+          "updated": "2026-04-16T18:58:53Z",
+          "categories": [
+            "eess.SY"
+          ],
+          "primary_category": "eess.SY"
+        },
         {
           "id": "2604.08831v1",
           "title": "Probabilistic Control Barrier Functions for Systems with State Estimation Uncertainty using Sub-Gaussian Concentration",
@@ -84,25 +103,6 @@
           "pdf_url": "https://arxiv.org/pdf/2604.04235v1",
           "published": "2026-04-05T19:36:15Z",
           "updated": "2026-04-05T19:36:15Z",
-          "categories": [
-            "eess.SY",
-            "math.OC"
-          ],
-          "primary_category": "eess.SY"
-        },
-        {
-          "id": "2604.04234v1",
-          "title": "Stability Margins of CBF-QP Safety Filters: Analysis and Synthesis",
-          "authors": [
-            "Shima Sadat Mousavi",
-            "Pol Mestres",
-            "Aaron D. Ames"
-          ],
-          "abstract": "Control barrier function (CBF)-QP safety filters enforce safety by minimally modifying a nominal controller. While prior work has mainly addressed robustness of safety under uncertainty, robustness of the resulting closed-loop \\emph{stability} is much less understood. This issue is important because once the safety filter becomes active, it modifies the nominal dynamics and can reduce stability margins or even destabilize the system, despite preserving safety. For linear systems with a single affine safety constraint, we show that the active-mode dynamics admit an exact scalar loop representation, leading to a classical robust-control interpretation in terms of gain, phase, and delay margins. This viewpoint yields exact stability-margin characterizations and tractable linear matrix inequality (LMI)-based certificates and synthesis conditions for controllers with certified robustness guarantees. Numerical examples illustrate the proposed analysis and the enlargement of certified stability margins for safety-filtered systems.",
-          "url": "https://arxiv.org/abs/2604.04234v1",
-          "pdf_url": "https://arxiv.org/pdf/2604.04234v1",
-          "published": "2026-04-05T19:35:27Z",
-          "updated": "2026-04-05T19:35:27Z",
           "categories": [
             "eess.SY",
             "math.OC"
@@ -229,6 +229,26 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2604.15470v1",
+          "title": "Perron-Frobenius Contractive Operator Matching for Data-Driven Reachable Fault Identification and Recovery",
+          "authors": [
+            "Joshua D. Ibrahim",
+            "Mahdi Taheri",
+            "Soon-Jo Chung",
+            "Fred Y. Hadaegh"
+          ],
+          "abstract": "This paper focuses on data-driven fault detection, identification, and recovery (FDIR) for nonlinear control-affine systems under actuator faults. We create a unified framework in the space of probability densities, rather than on individual trajectories, using fault-indexed Perron--Frobenius (PF) operators to predict the evolution of state distributions under different fault profiles. By leveraging the probability-flow representation of the Fokker--Planck equation, we construct deterministic PF operators that reproduce exact stochastic marginals, define forward reachable density families, and establish certifiable 2-Wasserstein bounds on the divergence between fault-driven and nominal density evolutions. These provide quantitative conditions for the detectability and identifiability of various faults. The fault-indexed operators are learned from trajectory data via flow map matching (FMM), and we demonstrate that the observable FMM residual directly bounds the approximation error of the operator in the 2-Wasserstein metric. Additionally, we co-train a contraction certificate that bounds the gap between the learned operator family, the actual fault-driven density flow, and the nominal dynamics. The operator library is then used online for continuous fault parameter fitting over a continuous parameter space to generalize the learned operators to out-of-distribution (OOD) scenarios. To carry out the recovery control, we employ reachable density propagation and Gaussian mixture covariance steering. The proposed framework is validated on a 10-state spacecraft attitude-control system with four reaction wheels.",
+          "url": "https://arxiv.org/abs/2604.15470v1",
+          "pdf_url": "https://arxiv.org/pdf/2604.15470v1",
+          "published": "2026-04-16T18:44:02Z",
+          "updated": "2026-04-16T18:44:02Z",
+          "categories": [
+            "eess.SY",
+            "eess.SP"
+          ],
+          "primary_category": "eess.SY"
+        },
+        {
           "id": "2603.25982v1",
           "title": "Data-Driven Probabilistic Fault Detection and Identification via Density Flow Matching",
           "authors": [
@@ -307,24 +327,6 @@
             "eess.SY"
           ],
           "primary_category": "cs.RO"
-        },
-        {
-          "id": "2509.16837v2",
-          "title": "Closing the Loop Inside Neural Networks: Causality-Guided Layer Adaptation for Fault Recovery Control",
-          "authors": [
-            "Mahdi Taheri",
-            "Soon-Jo Chung",
-            "Fred Y. Hadaegh"
-          ],
-          "abstract": "This paper studies the problem of real-time fault recovery control for nonlinear control-affine systems subject to actuator loss of effectiveness faults and external disturbances. We derive a two-stage framework that combines causal inference with selective online adaptation to achieve an effective learning-based recovery control method. In the offline phase, we develop a causal layer attribution technique based on the average causal effect (ACE) to evaluate the relative importance of each layer in a pretrained deep neural network (DNN) controller compensating for faults. This methodology identifies a subset of high-impact layers responsible for robust fault compensation. In the online phase, we deploy a Lyapunov-based gradient update to adapt only the ACE-selected layer to circumvent the need for full-network or last-layer only updates. The proposed adaptive controller guarantees uniform ultimate boundedness (UUB) with exponential convergence of the closed-loop system in the presence of actuator faults and external disturbances. Compared to conventional adaptive DNN controllers with full-network adaptation, our methodology has a reduced computational overhead. To demonstrate the effectiveness of our proposed methodology, a case study is provided on a 3-axis attitude control system of a spacecraft with four reaction wheels.",
-          "url": "https://arxiv.org/abs/2509.16837v2",
-          "pdf_url": "https://arxiv.org/pdf/2509.16837v2",
-          "published": "2025-09-20T23:26:39Z",
-          "updated": "2025-12-20T07:53:42Z",
-          "categories": [
-            "eess.SY"
-          ],
-          "primary_category": "eess.SY"
         }
       ]
     },
@@ -6422,6 +6424,110 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2604.15483v1",
+          "title": "$\u03c0_{0.7}$: a Steerable Generalist Robotic Foundation Model with Emergent Capabilities",
+          "authors": [
+            "Physical Intelligence",
+            "Bo Ai",
+            "Ali Amin",
+            "Raichelle Aniceto",
+            "Ashwin Balakrishna",
+            "Greg Balke",
+            "Kevin Black",
+            "George Bokinsky",
+            "Shihao Cao",
+            "Thomas Charbonnier",
+            "Vedant Choudhary",
+            "Foster Collins",
+            "Ken Conley",
+            "Grace Connors",
+            "James Darpinian",
+            "Karan Dhabalia",
+            "Maitrayee Dhaka",
+            "Jared DiCarlo",
+            "Danny Driess",
+            "Michael Equi",
+            "Adnan Esmail",
+            "Yunhao Fang",
+            "Chelsea Finn",
+            "Catherine Glossop",
+            "Thomas Godden",
+            "Ivan Goryachev",
+            "Lachlan Groom",
+            "Haroun Habeeb",
+            "Hunter Hancock",
+            "Karol Hausman",
+            "Gashon Hussein",
+            "Victor Hwang",
+            "Brian Ichter",
+            "Connor Jacobsen",
+            "Szymon Jakubczak",
+            "Rowan Jen",
+            "Tim Jones",
+            "Gregg Kammerer",
+            "Ben Katz",
+            "Liyiming Ke",
+            "Mairbek Khadikov",
+            "Chandra Kuchi",
+            "Marinda Lamb",
+            "Devin LeBlanc",
+            "Brendon LeCount",
+            "Sergey Levine",
+            "Xinyu Li",
+            "Adrian Li-Bell",
+            "Vladislav Lialin",
+            "Zhonglin Liang",
+            "Wallace Lim",
+            "Yao Lu",
+            "Enyu Luo",
+            "Vishnu Mano",
+            "Nandan Marwaha",
+            "Aikys Mongush",
+            "Liam Murphy",
+            "Suraj Nair",
+            "Tyler Patterson",
+            "Karl Pertsch",
+            "Allen Z. Ren",
+            "Gavin Schelske",
+            "Charvi Sharma",
+            "Baifeng Shi",
+            "Lucy Xiaoyang Shi",
+            "Laura Smith",
+            "Jost Tobias Springenberg",
+            "Kyle Stachowicz",
+            "Will Stoeckle",
+            "Jiaming Tang",
+            "Jimmy Tanner",
+            "Shalom Tekeste",
+            "Marcel Torne",
+            "Kyle Vedder",
+            "Quan Vuong",
+            "Anna Walling",
+            "Haohuan Wang",
+            "Jason Wang",
+            "XuDong Wang",
+            "Chris Whalen",
+            "Samuel Whitmore",
+            "Blake Williams",
+            "Charles Xu",
+            "Sukwon Yoo",
+            "Lili Yu",
+            "Wuming Zhang",
+            "Zhuoyang Zhang",
+            "Ury Zhilinsky"
+          ],
+          "abstract": "We present a new robotic foundation model, called $\u03c0_{0.7}$, that can enable strong out-of-the-box performance in a wide range of scenarios. $\u03c0_{0.7}$ can follow diverse language instructions in unseen environments, including multi-stage tasks with various kitchen appliances, provide zero-shot cross-embodiment generalization, for example enabling a robot to fold laundry without seeing the task before, and perform challenging tasks such as operating an espresso machine out of the box at a level of performance that matches much more specialized RL-finetuned models. The main idea behind $\u03c0_{0.7}$ is to use diverse context conditioning during training. This conditioning information, contained in the prompt, makes it possible to steer the model precisely to perform many tasks with different strategies. It is conditioned not just on a language command that describes what it should do, but on additional multimodal information that also describes the manner or strategy in which it should do it, including metadata about task performance and subgoal images. This enables $\u03c0_{0.7}$ to use very diverse data, including demonstrations, potentially suboptimal (autonomous) data including failures, and data from non-robot sources. Our experiments evaluate $\u03c0_{0.7}$ across numerous tasks with multiple robot platforms, on tasks that require speed and dexterity, language following, and compositional task generalization.",
+          "url": "https://arxiv.org/abs/2604.15483v1",
+          "pdf_url": "https://arxiv.org/pdf/2604.15483v1",
+          "published": "2026-04-16T19:18:07Z",
+          "updated": "2026-04-16T19:18:07Z",
+          "categories": [
+            "cs.LG",
+            "cs.RO"
+          ],
+          "primary_category": "cs.LG"
+        },
+        {
           "id": "2604.09793v1",
           "title": "GIANTS: Generative Insight Anticipation from Scientific Literature",
           "authors": [
@@ -6507,31 +6613,6 @@
           "updated": "2026-03-20T15:09:45Z",
           "categories": [
             "cs.RO"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2603.04639v1",
-          "title": "RoboMME: Benchmarking and Understanding Memory for Robotic Generalist Policies",
-          "authors": [
-            "Yinpei Dai",
-            "Hongze Fu",
-            "Jayjun Lee",
-            "Yuejiang Liu",
-            "Haoran Zhang",
-            "Jianing Yang",
-            "Chelsea Finn",
-            "Nima Fazeli",
-            "Joyce Chai"
-          ],
-          "abstract": "Memory is critical for long-horizon and history-dependent robotic manipulation. Such tasks often involve counting repeated actions or manipulating objects that become temporarily occluded. Recent vision-language-action (VLA) models have begun to incorporate memory mechanisms; however, their evaluations remain confined to narrow, non-standardized settings. This limits their systematic understanding, comparison, and progress measurement. To address these challenges, we introduce RoboMME: a large-scale standardized benchmark for evaluating and advancing VLA models in long-horizon, history-dependent scenarios. Our benchmark comprises 16 manipulation tasks constructed under a carefully designed taxonomy that evaluates temporal, spatial, object, and procedural memory. We further develop a suite of 14 memory-augmented VLA variants built on the \u03c00.5 backbone to systematically explore different memory representations across multiple integration strategies. Experimental results show that the effectiveness of memory representations is highly task-dependent, with each design offering distinct advantages and limitations across different tasks. Videos and code can be found at our website https://robomme.github.io.",
-          "url": "https://arxiv.org/abs/2603.04639v1",
-          "pdf_url": "https://arxiv.org/pdf/2603.04639v1",
-          "published": "2026-03-04T21:59:32Z",
-          "updated": "2026-03-04T21:59:32Z",
-          "categories": [
-            "cs.RO",
-            "cs.AI"
           ],
           "primary_category": "cs.RO"
         }
@@ -7495,6 +7576,110 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2604.15483v1",
+          "title": "$\u03c0_{0.7}$: a Steerable Generalist Robotic Foundation Model with Emergent Capabilities",
+          "authors": [
+            "Physical Intelligence",
+            "Bo Ai",
+            "Ali Amin",
+            "Raichelle Aniceto",
+            "Ashwin Balakrishna",
+            "Greg Balke",
+            "Kevin Black",
+            "George Bokinsky",
+            "Shihao Cao",
+            "Thomas Charbonnier",
+            "Vedant Choudhary",
+            "Foster Collins",
+            "Ken Conley",
+            "Grace Connors",
+            "James Darpinian",
+            "Karan Dhabalia",
+            "Maitrayee Dhaka",
+            "Jared DiCarlo",
+            "Danny Driess",
+            "Michael Equi",
+            "Adnan Esmail",
+            "Yunhao Fang",
+            "Chelsea Finn",
+            "Catherine Glossop",
+            "Thomas Godden",
+            "Ivan Goryachev",
+            "Lachlan Groom",
+            "Haroun Habeeb",
+            "Hunter Hancock",
+            "Karol Hausman",
+            "Gashon Hussein",
+            "Victor Hwang",
+            "Brian Ichter",
+            "Connor Jacobsen",
+            "Szymon Jakubczak",
+            "Rowan Jen",
+            "Tim Jones",
+            "Gregg Kammerer",
+            "Ben Katz",
+            "Liyiming Ke",
+            "Mairbek Khadikov",
+            "Chandra Kuchi",
+            "Marinda Lamb",
+            "Devin LeBlanc",
+            "Brendon LeCount",
+            "Sergey Levine",
+            "Xinyu Li",
+            "Adrian Li-Bell",
+            "Vladislav Lialin",
+            "Zhonglin Liang",
+            "Wallace Lim",
+            "Yao Lu",
+            "Enyu Luo",
+            "Vishnu Mano",
+            "Nandan Marwaha",
+            "Aikys Mongush",
+            "Liam Murphy",
+            "Suraj Nair",
+            "Tyler Patterson",
+            "Karl Pertsch",
+            "Allen Z. Ren",
+            "Gavin Schelske",
+            "Charvi Sharma",
+            "Baifeng Shi",
+            "Lucy Xiaoyang Shi",
+            "Laura Smith",
+            "Jost Tobias Springenberg",
+            "Kyle Stachowicz",
+            "Will Stoeckle",
+            "Jiaming Tang",
+            "Jimmy Tanner",
+            "Shalom Tekeste",
+            "Marcel Torne",
+            "Kyle Vedder",
+            "Quan Vuong",
+            "Anna Walling",
+            "Haohuan Wang",
+            "Jason Wang",
+            "XuDong Wang",
+            "Chris Whalen",
+            "Samuel Whitmore",
+            "Blake Williams",
+            "Charles Xu",
+            "Sukwon Yoo",
+            "Lili Yu",
+            "Wuming Zhang",
+            "Zhuoyang Zhang",
+            "Ury Zhilinsky"
+          ],
+          "abstract": "We present a new robotic foundation model, called $\u03c0_{0.7}$, that can enable strong out-of-the-box performance in a wide range of scenarios. $\u03c0_{0.7}$ can follow diverse language instructions in unseen environments, including multi-stage tasks with various kitchen appliances, provide zero-shot cross-embodiment generalization, for example enabling a robot to fold laundry without seeing the task before, and perform challenging tasks such as operating an espresso machine out of the box at a level of performance that matches much more specialized RL-finetuned models. The main idea behind $\u03c0_{0.7}$ is to use diverse context conditioning during training. This conditioning information, contained in the prompt, makes it possible to steer the model precisely to perform many tasks with different strategies. It is conditioned not just on a language command that describes what it should do, but on additional multimodal information that also describes the manner or strategy in which it should do it, including metadata about task performance and subgoal images. This enables $\u03c0_{0.7}$ to use very diverse data, including demonstrations, potentially suboptimal (autonomous) data including failures, and data from non-robot sources. Our experiments evaluate $\u03c0_{0.7}$ across numerous tasks with multiple robot platforms, on tasks that require speed and dexterity, language following, and compositional task generalization.",
+          "url": "https://arxiv.org/abs/2604.15483v1",
+          "pdf_url": "https://arxiv.org/pdf/2604.15483v1",
+          "published": "2026-04-16T19:18:07Z",
+          "updated": "2026-04-16T19:18:07Z",
+          "categories": [
+            "cs.LG",
+            "cs.RO"
+          ],
+          "primary_category": "cs.LG"
+        },
+        {
           "id": "2604.01169v1",
           "title": "Bridging the Simulation-to-Experiment Gap with Generative Models using Adversarial Distribution Alignment",
           "authors": [
@@ -7585,30 +7770,6 @@
           "categories": [
             "cs.RO",
             "cs.LG"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2602.13193v3",
-          "title": "Steerable Vision-Language-Action Policies for Embodied Reasoning and Hierarchical Control",
-          "authors": [
-            "William Chen",
-            "Jagdeep Singh Bhatia",
-            "Catherine Glossop",
-            "Nikhil Mathihalli",
-            "Ria Doshi",
-            "Andy Tang",
-            "Danny Driess",
-            "Karl Pertsch",
-            "Sergey Levine"
-          ],
-          "abstract": "Pretrained vision-language models (VLMs) can make semantic and visual inferences across diverse settings, providing valuable common-sense priors for robotic control. However, effectively grounding this knowledge in robot behaviors remains an open challenge. Prior methods often employ a hierarchical approach where VLMs reason over high-level commands to be executed by separate low-level policies, e.g., vision-language-action models (VLAs). The interface between VLMs and VLAs is usually natural language task instructions, which fundamentally limits how much VLM reasoning can steer low-level behavior. We thus introduce Steerable Policies: VLAs trained on rich synthetic commands at various levels of abstraction, like subtasks, motions, and grounded pixel coordinates. By improving low-level controllability, Steerable Policies can unlock pretrained knowledge in VLMs, enabling improved task generalization. We demonstrate this benefit by controlling our Steerable Policies with both a learned high-level embodied reasoner and an off-the-shelf VLM prompted to reason over command abstractions via in-context learning. Across extensive real-world manipulation experiments, these two novel methods outperform prior embodied reasoning VLAs and VLM-based hierarchical baselines, including on challenging generalization and long-horizon tasks.   Website: steerable-policies.github.io",
-          "url": "https://arxiv.org/abs/2602.13193v3",
-          "pdf_url": "https://arxiv.org/pdf/2602.13193v3",
-          "published": "2026-02-13T18:57:56Z",
-          "updated": "2026-04-06T03:04:33Z",
-          "categories": [
-            "cs.RO"
           ],
           "primary_category": "cs.RO"
         }
@@ -8932,7 +9093,7 @@
       "paper_count": 5,
       "papers": [
         {
-          "id": "2604.14646v1",
+          "id": "2604.14646v2",
           "title": "Targeted Exploration via Unified Entropy Control for Reinforcement Learning",
           "authors": [
             "Chen Wang",
@@ -8945,10 +9106,10 @@
             "Yue Wang"
           ],
           "abstract": "Recent advances in reinforcement learning (RL) have improved the reasoning capabilities of large language models (LLMs) and vision-language models (VLMs). However, the widely used Group Relative Policy Optimization (GRPO) consistently suffers from entropy collapse, causing the policy to converge prematurely and lose diversity. Existing exploration methods introduce additional bias or variance during exploration, making it difficult to maintain optimization stability. We propose Unified Entropy Control for Reinforcement Learning (UEC-RL), a framework that provides targeted mechanisms for exploration and stabilization. UEC-RL activates more exploration on difficult prompts to search for potential and valuable reasoning trajectories. In parallel, a stabilizer prevents entropy from growing uncontrollably, thereby keeping training stable as the model consolidates reliable behaviors. Together, these components expand the search space when needed while maintaining robust optimization throughout training. Experiments on both LLM and VLM reasoning tasks show consistent gains over RL baselines on both Pass@1 and Pass@$k$. On Geometry3K, UEC-RL achieves a 37.9\\% relative improvement over GRPO, indicating that it sustains effective exploration without compromising convergence and underscoring UEC-RL as a key for scaling RL-based reasoning in large models. Our code is available at https://github.com/597358816/UEC-RL.",
-          "url": "https://arxiv.org/abs/2604.14646v1",
-          "pdf_url": "https://arxiv.org/pdf/2604.14646v1",
+          "url": "https://arxiv.org/abs/2604.14646v2",
+          "pdf_url": "https://arxiv.org/pdf/2604.14646v2",
           "published": "2026-04-16T05:52:18Z",
-          "updated": "2026-04-16T05:52:18Z",
+          "updated": "2026-04-17T11:31:53Z",
           "categories": [
             "cs.AI"
           ],

@@ -2,48 +2,26 @@
   "category": "robotics",
   "name": "Robotics Research",
   "description": "Robotics \u2014 Motion Planning, Control Systems, Human-Robot Interaction, Autonomous Systems",
-  "scraped_at": "2026-04-19T09:02:45.379879+00:00",
+  "scraped_at": "2026-04-20T10:06:13.160025+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2604.15289v1",
-      "title": "Abstract Sim2Real through Approximate Information States",
+      "id": "2604.16298v1",
+      "title": "FineCog-Nav: Integrating Fine-grained Cognitive Modules for Zero-shot Multimodal UAV Navigation",
       "authors": [
-        "Yunfu Deng",
-        "Yuhao Li",
-        "Josiah P. Hanna"
+        "Dian Shao",
+        "Zhengzheng Xu",
+        "Peiyang Wang",
+        "Like Liu",
+        "Yule Wang",
+        "Jieqi Shi",
+        "Jing Huo"
       ],
-      "abstract": "In recent years, reinforcement learning (RL) has shown remarkable success in robotics when a fast and accurate simulator is available for a given task. When using RL and simulation, more simulator realism is generally beneficial but becomes harder to obtain as robots are deployed in increasingly complex and widescale domains. In such settings, simulators will likely fail to model all relevant details of a given target task and this observation motivates the study of sim2real with simulators that leave out key task details. In this paper, we formalize and study the abstract sim2real problem: given an abstract simulator that models a target task at a coarse level of abstraction, how can we train a policy with RL in the abstract simulator and successfully transfer it to the real-world? Our first contribution is to formalize this problem using the language of state abstraction from the RL literature. This framing shows that an abstract simulator can be grounded to match the target task if the grounded abstract dynamics take the history of states into account. Based on the formalism, we then introduce a method that uses real-world task data to correct the dynamics of the abstract simulator. We then show that this method enables successful policy transfer both in sim2sim and sim2real evaluation.",
-      "url": "https://arxiv.org/abs/2604.15289v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.15289v1",
-      "published": "2026-04-16T17:53:16Z",
-      "updated": "2026-04-16T17:53:16Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2604.15281v1",
-      "title": "R3D: Revisiting 3D Policy Learning",
-      "authors": [
-        "Zhengdong Hong",
-        "Shenrui Wu",
-        "Haozhe Cui",
-        "Boyi Zhao",
-        "Ran Ji",
-        "Yiyang He",
-        "Hangxing Zhang",
-        "Zundong Ke",
-        "Jun Wang",
-        "Guofeng Zhang",
-        "Jiayuan Gu"
-      ],
-      "abstract": "3D policy learning promises superior generalization and cross-embodiment transfer, but progress has been hindered by training instabilities and severe overfitting, precluding the adoption of powerful 3D perception models. In this work, we systematically diagnose these failures, identifying the omission of 3D data augmentation and the adverse effects of Batch Normalization as primary causes. We propose a new architecture coupling a scalable transformer-based 3D encoder with a diffusion decoder, engineered specifically for stability at scale and designed to leverage large-scale pre-training. Our approach significantly outperforms state-of-the-art 3D baselines on challenging manipulation benchmarks, establishing a new and robust foundation for scalable 3D imitation learning. Project Page: https://r3d-policy.github.io/",
-      "url": "https://arxiv.org/abs/2604.15281v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.15281v1",
-      "published": "2026-04-16T17:50:37Z",
-      "updated": "2026-04-16T17:50:37Z",
+      "abstract": "UAV vision-language navigation (VLN) requires an agent to navigate complex 3D environments from an egocentric perspective while following ambiguous multi-step instructions over long horizons. Existing zero-shot methods remain limited, as they often rely on large base models, generic prompts, and loosely coordinated modules. In this work, we propose FineCog-Nav, a top-down framework inspired by human cognition that organizes navigation into fine-grained modules for language processing, perception, attention, memory, imagination, reasoning, and decision-making. Each module is driven by a moderate-sized foundation model with role-specific prompts and structured input-output protocols, enabling effective collaboration and improved interpretability. To support fine-grained evaluation, we construct AerialVLN-Fine, a curated benchmark of 300 trajectories derived from AerialVLN, with sentence-level instruction-trajectory alignment and refined instructions containing explicit visual endpoints and landmark references. Experiments show that FineCog-Nav consistently outperforms zero-shot baselines in instruction adherence, long-horizon planning, and generalization to unseen environments. These results suggest the effectiveness of fine-grained cognitive modularization for zero-shot aerial navigation. Project page: https://smartdianlab.github.io/projects-FineCogNav.",
+      "url": "https://arxiv.org/abs/2604.16298v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.16298v1",
+      "published": "2026-04-17T17:59:48Z",
+      "updated": "2026-04-17T17:59:48Z",
       "categories": [
         "cs.CV",
         "cs.RO"
@@ -51,78 +29,96 @@
       "primary_category": "cs.CV"
     },
     {
-      "id": "2604.15255v1",
-      "title": "Democratization of Real-time Multi-Spectral Photoacoustic Imaging: Open-Sourced System Architecture for OPOTEK Phocus & Verasonics Vantage Combination",
+      "id": "2604.16263v1",
+      "title": "Semantic Area Graph Reasoning for Multi-Robot Language-Guided Search",
       "authors": [
-        "Ryo Murakami",
-        "Yichuan Tang",
-        "Haichong K. Zhang"
+        "Ruiyang Wang",
+        "Hao-Lun Hsu",
+        "Jiwoo Kim",
+        "Miroslav Pajic"
       ],
-      "abstract": "Real-time multi-spectral photoacoustic imaging (RT-mPAI) often suffers from synchronization instabilities when interfacing fast-tuning lasers with data acquisition platforms executing on non-real-time operating systems. To overcome this, we establish an open-source hardware-software architecture tailored for the widely adopted combination of the OPOTEK Phocus lasers and Verasonics Vantage systems. By employing an independent micro-controller for deterministic laser trigger counting alongside a decoupled client-server data streaming framework, the proposed system circumvents OS-induced timing deviations and local storage bottlenecks. By open-sourcing this pipeline and cultivating a collaborative environment to share both code and ideas, we aim to lower the technical and cost barriers for RT-mPAI, thereby democratizing access to stable RT-mPAI research and, more ambitiously, fostering a vibrant open-source community.",
-      "url": "https://arxiv.org/abs/2604.15255v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.15255v1",
-      "published": "2026-04-16T17:34:18Z",
-      "updated": "2026-04-16T17:34:18Z",
+      "abstract": "Coordinating multi-robot systems (MRS) to search in unknown environments is particularly challenging for tasks that require semantic reasoning beyond geometric exploration. Classical coordination strategies rely on frontier coverage or information gain and cannot incorporate high-level task intent, such as searching for objects associated with specific room types. We propose \\textit{Semantic Area Graph Reasoning} (SAGR), a hierarchical framework that enables Large Language Models (LLMs) to coordinate multi-robot exploration and semantic search through a structured semantic-topological abstraction of the environment. SAGR incrementally constructs a semantic area graph from a semantic occupancy map, encoding room instances, connectivity, frontier availability, and robot states into a compact task-relevant representation for LLM reasoning. The LLM performs high-level semantic room assignment based on spatial structure and task context, while deterministic frontier planning and local navigation handle geometric execution within assigned rooms. Experiments on the Habitat-Matterport3D dataset across 100 scenarios show that SAGR remains competitive with state-of-the-art exploration methods while consistently improving semantic target search efficiency, with up to 18.8\\% in large environments. These results highlight the value of structured semantic abstractions as an effective interface between LLM-based reasoning and multi-robot coordination in complex indoor environments.",
+      "url": "https://arxiv.org/abs/2604.16263v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.16263v1",
+      "published": "2026-04-17T17:19:54Z",
+      "updated": "2026-04-17T17:19:54Z",
       "categories": [
-        "cs.AR",
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2604.16229v1",
+      "title": "Simulating Arbitrage Optimization for Market Monitoring in Gas and Electricity Transmission Networks",
+      "authors": [
+        "Noah Rhodes",
+        "Sachin Shivakumar",
+        "Luke S. Baker",
+        "Kaarthik Sundar",
+        "Anatoly Zlotnik"
+      ],
+      "abstract": "We examine market outcomes in energy transport networks with a focus on gas-fired generators, which are producers in a wholesale electricity market and consumers in the natural gas market. Market administrators monitor bids to determine whether a participant wields market power to manipulate the price of energy, reserves, or financial transmission rights. If economic or physical withholding of generation from the market is detected, mitigation is imposed by replacing excessive bids with reference level bids to prevent artificial supply shortages. We review market monitoring processes in the power grid, and present scenarios in small interpretable test networks to show how gas-fired generators can bid in the gas market to alter outcomes in a power market. We develop a framework based on DC optimal power flow (OPF) and steady-state optimal gas flow (OGF) formulations to represent two interacting markets with structured exchange of price and quantity bids. We formulate optimization-based methods to identify market power in a power grid, as well as to identify market conditions that indicate market power being exerted by a generator using gas market bids.",
+      "url": "https://arxiv.org/abs/2604.16229v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.16229v1",
+      "published": "2026-04-17T16:45:14Z",
+      "updated": "2026-04-17T16:45:14Z",
+      "categories": [
         "eess.SY"
       ],
-      "primary_category": "cs.AR"
+      "primary_category": "eess.SY"
     },
     {
-      "id": "2604.15252v1",
-      "title": "Tube-Based Robust Data-Driven Predictive Control",
+      "id": "2604.16222v1",
+      "title": "Consensus Clustering for the Identification of Coherent Regions with Varied Generation Mix",
       "authors": [
-        "Chi Wang",
-        "David Angeli"
+        "Kiran Kumar Challa",
+        "Alok Kumar Bharati",
+        "Venkataramana Ajjarapu"
       ],
-      "abstract": "This paper presents a tractable tube-based robust data-driven predictive control scheme that uses only a single finite noisy input-state trajectory of an unknown discrete-time linear time-invariant (LTI) system. A simplex constraint is imposed on the Hankel coefficient vector, yielding explicit polyhedral bounds on the prediction mismatch induced by bounded measurement noise. Using certified initial and terminal robust positively invariant (RPI) sets, we derive a tube-tightened formulation whose online optimization problem is a strictly convex quadratic program (QP). The resulting controller guarantees recursive feasibility, robust satisfaction of input and state constraints, and practical input-to-state stability of the closed loop with respect to measurement noise. Numerical examples illustrate the effectiveness, robustness, and closed-loop performance of the proposed method.",
-      "url": "https://arxiv.org/abs/2604.15252v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.15252v1",
-      "published": "2026-04-16T17:29:26Z",
-      "updated": "2026-04-16T17:29:26Z",
+      "abstract": "With a steady increase in the inverter technology integration to the grid, frequency response of the large inter-connection system becomes more unpredictable. This leads to a significant change in the boundaries of the coherent region, which highly depends on the changing disturbance locations and operating conditions. While most of the existing coherency identification is based on a single large generator outage, it is important to identify these boundaries in view of wide range of disturbances. With large amount of inverters in the system, there is increase in the dynamic interactions of the various grid components leading to a need for such boundary identification. This paper presents the multi-view consensus algorithm to identify coherency in the case of variable grid operating conditions and wide range of disturbances. The proposed approach is demonstrated by identifying the coherent regions in the miniWECC 240 bus test system.",
+      "url": "https://arxiv.org/abs/2604.16222v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.16222v1",
+      "published": "2026-04-17T16:34:45Z",
+      "updated": "2026-04-17T16:34:45Z",
       "categories": [
-        "eess.SY",
-        "math.OC"
+        "eess.SY"
       ],
       "primary_category": "eess.SY"
     },
     {
-      "id": "2604.15238v1",
-      "title": "A Nonlinear Separation Principle: Applications to Neural Networks, Control and Learning",
+      "id": "2604.16212v1",
+      "title": "Data-Driven Distributed Stability Certification for Power Systems via Input-State Trajectories",
       "authors": [
-        "Anand Gokhale",
-        "Anton V. Proskurnikov",
-        "Yu Kawano",
-        "Francesco Bullo"
+        "Xiaohui Zhang",
+        "Liaoyuan Yang",
+        "Peng Yang"
       ],
-      "abstract": "This paper investigates continuous-time and discrete-time firing-rate and Hopfield recurrent neural networks (RNNs), with applications in nonlinear control design and implicit deep learning. First, we introduce a nonlinear separation principle that guarantees global exponential stability for the interconnection of a contracting state-feedback controller and a contracting observer, alongside parametric extensions for robustness and equilibrium tracking. Second, we derive sharp linear matrix inequality (LMI) conditions that guarantee the contractivity of both firing rate and Hopfield neural network architectures. We establish structural relationships among these certificates-demonstrating that continuous-time models with monotone non-decreasing activations maximize the admissible weight space, and extend these stability guarantees to interconnected systems and Graph RNNs. Third, we combine our separation principle and LMI framework to solve the output reference tracking problem for RNN-modeled plants. We provide LMI synthesis methods for feedback controllers and observers, and rigorously design a low-gain integral controller to eliminate steady-state error. Finally, we derive an exact, unconstrained algebraic parameterization of our contraction LMIs to design highly expressive implicit neural networks, achieving competitive accuracy and parameter efficiency on standard image classification benchmarks.",
-      "url": "https://arxiv.org/abs/2604.15238v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.15238v1",
-      "published": "2026-04-16T17:12:32Z",
-      "updated": "2026-04-16T17:12:32Z",
+      "abstract": "This article proposes a data-driven framework to verify the distributed conditions that guarantee the system-wide stability for interconnected power systems. To guarantee system wide stability, the dynamics of each bus are required to satisfy an output differential passivity (ODP) condition with a sufficient index. These ODP indices uniformly quantify the impacts on the system-wide stability of individual bus dynamics and the coupling strength from the power network. To obtain these indices without explicit physical models, we derive a data-driven linear matrix inequality (LMI) criterion based exclusively on measured input-state trajectories. Furthermore, extracting the optimal ODP index is formulated as a convex semi-definite programming (SDP) problem. Simulations verify the effectiveness of the proposed method under both single-device offline evaluation and system-wide online certification scenarios.",
+      "url": "https://arxiv.org/abs/2604.16212v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.16212v1",
+      "published": "2026-04-17T16:21:23Z",
+      "updated": "2026-04-17T16:21:23Z",
       "categories": [
-        "eess.SY",
-        "cs.LG",
-        "math.OC"
+        "eess.SY"
       ],
       "primary_category": "eess.SY"
     },
     {
-      "id": "2604.15221v1",
-      "title": "Vision-Based Safe Human-Robot Collaboration with Uncertainty Guarantees",
+      "id": "2604.16201v1",
+      "title": "DENALI: A Dataset Enabling Non-Line-of-Sight Spatial Reasoning with Low-Cost LiDARs",
       "authors": [
-        "Jakob Thumm",
-        "Marian Frei",
-        "Tianle Ni",
-        "Matthias Althoff",
-        "Marco Pavone"
+        "Nikhil Behari",
+        "Diego Rivero",
+        "Luke Apostolides",
+        "Suman Ghosh",
+        "Paul Pu Liang",
+        "Ramesh Raskar"
       ],
-      "abstract": "We propose a framework for vision-based human pose estimation and motion prediction that gives conformal prediction guarantees for certifiably safe human-robot collaboration. Our framework combines aleatoric uncertainty estimation with OOD detection for high probabilistic confidence. To integrate our pipeline in certifiable safety frameworks, we propose conformal prediction sets for human motion predictions with high, valid confidence. We evaluate our pipeline on recorded human motion data and a real-world human-robot collaboration setting.",
-      "url": "https://arxiv.org/abs/2604.15221v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.15221v1",
-      "published": "2026-04-16T16:53:26Z",
-      "updated": "2026-04-16T16:53:26Z",
+      "abstract": "Consumer LiDARs in mobile devices and robots typically output a single depth value per pixel. Yet internally, they record full time-resolved histograms containing direct and multi-bounce light returns; these multi-bounce returns encode rich non-line-of-sight (NLOS) cues that can enable perception of hidden objects in a scene. However, severe hardware limitations of consumer LiDARs make NLOS reconstruction with conventional methods difficult. In this work, we motivate a complementary direction: enabling NLOS perception with low-cost LiDARs through data-driven inference. We present DENALI, the first large-scale real-world dataset of space-time histograms from low-cost LiDARs capturing hidden objects. We capture time-resolved LiDAR histograms for 72,000 hidden-object scenes across diverse object shapes, positions, lighting conditions, and spatial resolutions. Using our dataset, we show that consumer LiDARs can enable accurate, data-driven NLOS perception. We further identify key scene and modeling factors that limit performance, as well as simulation-fidelity gaps that hinder current sim-to-real transfer, motivating future work toward scalable NLOS vision with consumer LiDARs.",
+      "url": "https://arxiv.org/abs/2604.16201v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.16201v1",
+      "published": "2026-04-17T16:12:16Z",
+      "updated": "2026-04-17T16:12:16Z",
       "categories": [
         "cs.RO",
         "cs.CV"
@@ -130,84 +126,77 @@
       "primary_category": "cs.RO"
     },
     {
-      "id": "2604.15215v1",
-      "title": "A Hierarchical Spatiotemporal Action Tokenizer for In-Context Imitation Learning in Robotics",
+      "id": "2604.16199v1",
+      "title": "Optimization of Phase Change Material Integration for Active Cooling Control",
       "authors": [
-        "Fawad Javed Fateh",
-        "Ali Shah Ali",
-        "Murad Popattia",
-        "Usman Nizamani",
-        "Andrey Konin",
-        "M. Zeeshan Zia",
-        "Quoc-Huy Tran"
+        "Asmaou S. Ouedraogo",
+        "Donald J. Docimo"
       ],
-      "abstract": "We present a novel hierarchical spatiotemporal action tokenizer for in-context imitation learning. We first propose a hierarchical approach, which consists of two successive levels of vector quantization. In particular, the lower level assigns input actions to fine-grained subclusters, while the higher level further maps fine-grained subclusters to clusters. Our hierarchical approach outperforms the non-hierarchical counterpart, while mainly exploiting spatial information by reconstructing input actions. Furthermore, we extend our approach by utilizing both spatial and temporal cues, forming a hierarchical spatiotemporal action tokenizer, namely HiST-AT. Specifically, our hierarchical spatiotemporal approach conducts multi-level clustering, while simultaneously recovering input actions and their associated timestamps. Finally, extensive evaluations on multiple simulation and real robotic manipulation benchmarks show that our approach establishes a new state-of-the-art performance in in-context imitation learning.",
-      "url": "https://arxiv.org/abs/2604.15215v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.15215v1",
-      "published": "2026-04-16T16:47:08Z",
-      "updated": "2026-04-16T16:47:08Z",
+      "abstract": "This paper presents a unified optimization framework for phase change material (PCM) based cooling systems. Thermal management is critical in applications such as photovoltaic (PV) modules, battery packs, and power electronics, where excessive heat reduces performance and lifespan. Designing such systems is challenging because energy dynamics, capacity, heat rejection, and structural constraints must all be considered. Although prior studies have investigated PCM applications and heat transfer enhancement, there are limited efforts that unify such diverse performance objectives through formalized design methods. This paper develops a framework that formulates the PCM design problem using critical energy-based terms, with static and dynamic objectives capturing the PCM physical design and control aspects. Two case studies are used to validate the approach: the first explores passive cooling, and the second implements an active cooling configuration. The results compare the design and control of these systems, showing improvement in individual performance metrics between the two options.",
+      "url": "https://arxiv.org/abs/2604.16199v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.16199v1",
+      "published": "2026-04-17T16:08:17Z",
+      "updated": "2026-04-17T16:08:17Z",
       "categories": [
-        "cs.RO"
+        "eess.SY"
       ],
-      "primary_category": "cs.RO"
+      "primary_category": "eess.SY"
     },
     {
-      "id": "2604.15202v1",
-      "title": "Benchmarking Classical Coverage Path Planning Heuristics on Irregular Hexagonal Grids for Maritime Coverage Scenarios",
+      "id": "2604.16184v1",
+      "title": "Real-Time Solution-Seeking for Game-Theoretic Autonomous Driving via Time-Distributed Iterations",
       "authors": [
-        "Carlos S. Sep\u00falveda",
-        "Gonzalo A. Ruz"
+        "Shaoqing Liu",
+        "Mushuang Liu"
       ],
-      "abstract": "Coverage path planning on irregular hexagonal grids is relevant to maritime surveillance, search and rescue and environmental monitoring, yet classical methods are often compared on small ad hoc examples or on rectangular grids. This paper presents a reproducible benchmark of deterministic single-vehicle coverage path planning heuristics on irregular hexagonal graphs derived from synthetic but maritime-motivated areas of interest. The benchmark contains 10,000 Hamiltonian-feasible instances spanning compact, elongated, and irregular morphologies, 17 heuristics from seven families, and a common evaluation protocol covering Hamiltonian success, complete-coverage success, revisits, path length, heading changes, and CPU latency. Across the released dataset, heuristics with explicit shortest-path reconnection solve the relaxed coverage task reliably but almost never produce zero-revisit tours. Exact Depth-First Search confirms that every released instance is Hamiltonian-feasible. The strongest classical Hamiltonian baseline is a Warnsdorff variant that uses an index-based tie-break together with a terminal-inclusive residual-degree policy, reaching 79.0% Hamiltonian success. The dominant design choice is not tie-breaking alone, but how the residual degree is defined when the endpoint is reserved until the final move. This shows that underreported implementation details can materially affect performance on sparse geometric graphs with bottlenecks. The benchmark is intended as a controlled testbed for heuristic analysis rather than as a claim of operational optimality at fleet scale.",
-      "url": "https://arxiv.org/abs/2604.15202v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.15202v1",
-      "published": "2026-04-16T16:28:03Z",
-      "updated": "2026-04-16T16:28:03Z",
+      "abstract": "Computational complexity has been a major challenge in game-theoretic model predictive control (GT-MPC), as real-time solutions to a game (e.g., Nash equilibria (NEs)) have to be computed at each sampling instant of an MPC. This challenge is especially critical in autonomous driving, where interactions may involve many agents, and decisions must be made at fast sampling rates. We show that this challenge can be addressed through time-distributed solution-seeking iterations designed based on, e.g., Newton and Newton--Kantorovich methods. Specifically, the autonomous vehicle decision-making problem is first formulated as a GT-MPC problem. To ensure solution attainability, a potential game framework is adopted. Within this framework, both potential-function optimization and best-response dynamics are used to seek the NE. To enable real-time implementation, Newton and Newton--Kantorovich methods are employed to solve the optimization problems arising in the NE-seeking algorithms, with their iterations distributed over time. Numerical experiments on an intersection-crossing scenario demonstrate that the proposed methods achieve effective real-time performance.",
+      "url": "https://arxiv.org/abs/2604.16184v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.16184v1",
+      "published": "2026-04-17T15:54:56Z",
+      "updated": "2026-04-17T15:54:56Z",
       "categories": [
-        "cs.RO",
-        "cs.AI",
+        "eess.SY"
+      ],
+      "primary_category": "eess.SY"
+    },
+    {
+      "id": "2604.16124v1",
+      "title": "A numerical approach to the co-design of PID controllers and low-pass filters for time-delay systems",
+      "authors": [
+        "Diego Torres-Garc\u00eda",
+        "Wim Michiels"
+      ],
+      "abstract": "This paper addresses the numerical optimization of proportional-integral-derivative (PID) controllers for linear time-invariant systems with delays, where the derivative action is implemented using a low-pass filter. While performance assessment is often based on the spectral abscissa of the ideal PID-controlled system, the inclusion of a derivative filter fundamentally alters the closed-loop spectral properties and cannot be treated as a post-processing step. In particular, the spectral abscissa of the filtered closed-loop system may differ significantly from that of its unfiltered counterpart, potentially affecting both stability and performance. We propose a systematic numerical design framework in which the PID gains and the filter constant are optimized simultaneously by directly minimizing the spectral abscissa of the filtered closed-loop system. Treating the filter as an integral part of the control design allows us to reconcile robustness at high frequencies, in the sense of mitigating fragility issues due to approximate identities, with performance at low frequencies, in addition to counter measurement noise amplification. At the end of the presentation, numerical examples illustrate the proposed approach and highlight the benefits of controller-filter co-design. The results apply to general linear systems with input and/or state delays and are valid for both single-input single-output (SISO) and multi-input multi-output (MIMO) configurations.",
+      "url": "https://arxiv.org/abs/2604.16124v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.16124v1",
+      "published": "2026-04-17T14:59:20Z",
+      "updated": "2026-04-17T14:59:20Z",
+      "categories": [
+        "eess.SY",
         "math.OC"
       ],
-      "primary_category": "cs.RO"
+      "primary_category": "eess.SY"
     },
     {
-      "id": "2604.15168v1",
-      "title": "Dual Pose-Graph Semantic Localization for Vision-Based Autonomous Drone Racing",
+      "id": "2604.16069v1",
+      "title": "Convergence Time Distributions for Max-Consensus over Unreliable Networks",
       "authors": [
-        "David Perez-Saura",
-        "Miguel Fernandez-Cortizas",
-        "Alvaro J. Gaona",
-        "Pascual Campoy"
+        "Katharina Stich",
+        "Bastian Perner",
+        "Friedemann Laue",
+        "Torsten Reissland",
+        "Norman Franchi"
       ],
-      "abstract": "Autonomous drone racing demands robust real-time localization under extreme conditions: high-speed flight, aggressive maneuvers, and payload-constrained platforms that often rely on a single camera for perception. Existing visual SLAM systems, while effective in general scenarios, struggle with motion blur and feature instability inherent to racing dynamics, and do not exploit the structured nature of racing environments. In this work, we present a dual pose-graph architecture that fuses odometry with semantic detections for robust localization. A temporary graph accumulates multiple gate observations between keyframes and optimizes them into a single refined constraint per landmark, which is then promoted to a persistent main graph. This design preserves the information richness of frequent detections while preventing graph growth from degrading real-time performance. The system is designed to be sensor-agnostic, although in this work we validate it using monocular visual-inertial odometry and visual gate detections. Experimental evaluation on the TII-RATM dataset shows a 56% to 74% reduction in ATE compared to standalone VIO, while an ablation study confirms that the dual-graph architecture achieves 10% to 12% higher accuracy than a single-graph baseline at identical computational cost. Deployment in the A2RL competition demonstrated that the system performs real-time onboard localization during flight, reducing the drift of the odometry baseline by up to 4.2 m per lap.",
-      "url": "https://arxiv.org/abs/2604.15168v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.15168v1",
-      "published": "2026-04-16T15:47:15Z",
-      "updated": "2026-04-16T15:47:15Z",
+      "abstract": "This paper proposes the LiFE-CD algorithm for convergence time analysis of the max-consensus algorithm in multi-agent systems under Bernoulli-distributed link failures. Unlike existing approaches, which either assume ideal communication or provide asymptotic upper bounds on the expected convergence time, LiFE-CD deterministically computes the full probability distribution of the convergence time from network topology and individual link failure probabilities, without simulation. The full probability distribution enables deadline-aware protocol design with specified reliability guarantees. Based on geometrically distributed link delays, the proposed algorithm iteratively reduces the given network topology considering both unicast and broadcast transmissions. LiFE-CD yields exact results for acyclic networks and, for cyclic networks, tight upper bounds on the convergence time via shortest-path spanning tree construction. Numerical results confirm analytical exactness for acyclic networks, validate tightness for cyclic networks, and demonstrate improvement over existing approaches. Our complexity analysis shows reduced computational cost compared to Monte Carlo simulations, while eliminating stochastic variability and enhancing reproducibility. All results extend directly to min-consensus by structural equivalence.",
+      "url": "https://arxiv.org/abs/2604.16069v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.16069v1",
+      "published": "2026-04-17T13:54:33Z",
+      "updated": "2026-04-17T13:54:33Z",
       "categories": [
-        "cs.RO"
+        "eess.SP",
+        "eess.SY"
       ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2604.15076v1",
-      "title": "NEAT-NC: NEAT guided Navigation Cells for Robot Path Planning",
-      "authors": [
-        "Hibatallah Meliani",
-        "Khadija Slimani",
-        "Samira Khoulji"
-      ],
-      "abstract": "To navigate a space, the brain makes an internal representation of the environment using different cells such as place cells, grid cells, head direction cells, border cells, and speed cells. All these cells, along with sensory inputs, enable an organism to explore the space around it. Inspired by these biological principles, we developed NEATNC, a Neuro-Evolution of Augmenting Topology guided Navigation Cells. The goal of the paper is to improve NEAT algorithm performance in path planning in dynamic environments using spatial cognitive cells. This approach uses navigation cells as inputs and evolves recurrent neural networks, representing the hippocampus part of the brain. The performance of the proposed algorithm is evaluated in different static and dynamic scenarios. This study highlights NEAT's adaptability to complex and different environments, showcasing the utility of biological theories. This suggests that our approach is well-suited for real-time dynamic path planning for robotics and games.",
-      "url": "https://arxiv.org/abs/2604.15076v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.15076v1",
-      "published": "2026-04-16T14:40:46Z",
-      "updated": "2026-04-16T14:40:46Z",
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.NE"
-      ],
-      "primary_category": "cs.RO"
+      "primary_category": "eess.SP"
     }
   ]
 }
