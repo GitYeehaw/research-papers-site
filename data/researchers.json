@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-04-21T09:51:34.321081+00:00",
+  "scraped_at": "2026-04-22T09:49:30.937957+00:00",
   "researcher_count": 54,
   "researchers": [
     {
@@ -10,6 +10,27 @@
       "website": "https://ames.caltech.edu/",
       "paper_count": 5,
       "papers": [
+        {
+          "id": "2604.18887v1",
+          "title": "HALO: Hybrid Auto-encoded Locomotion with Learned Latent Dynamics, Poincar\u00e9 Maps, and Regions of Attraction",
+          "authors": [
+            "Blake Werner",
+            "Sergio A. Esteban",
+            "Massimiliano De Sa",
+            "Max H. Cohen",
+            "Aaron D. Ames"
+          ],
+          "abstract": "Reduced-order models are powerful for analyzing and controlling high-dimensional dynamical systems. Yet constructing these models for complex hybrid systems such as legged robots remains challenging. Classical approaches rely on hand-designed template models (e.g., LIP, SLIP), which, though insightful, only approximate the underlying dynamics. In contrast, data-driven methods can extract more accurate low-dimensional representations, but it remains unclear when stability and safety properties observed in the latent space meaningfully transfer back to the full-order system. To bridge this gap, we introduce HALO (Hybrid Auto-encoded Locomotion), a framework for learning latent reduced-order models of periodic hybrid dynamics directly from trajectory data. HALO employs an autoencoder to identify a low-dimensional latent state together with a learned latent Poincar\u00e9 map that captures step-to-step locomotion dynamics. This enables Lyapunov analysis and the construction of an associated region of attraction in the latent space, both of which can be lifted back to the full-order state space through the decoder. Experiments on a simulated hopping robot and full-body humanoid locomotion demonstrate that HALO yields low-dimensional models that retain meaningful stability structure and predict full-order region-of-attraction boundaries.",
+          "url": "https://arxiv.org/abs/2604.18887v1",
+          "pdf_url": "https://arxiv.org/pdf/2604.18887v1",
+          "published": "2026-04-20T22:09:27Z",
+          "updated": "2026-04-20T22:09:27Z",
+          "categories": [
+            "cs.RO",
+            "eess.SY"
+          ],
+          "primary_category": "cs.RO"
+        },
         {
           "id": "2604.15477v1",
           "title": "Safety Filtering with an Infinite Number of Constraints",
@@ -88,26 +109,6 @@
             "eess.SY"
           ],
           "primary_category": "math.OC"
-        },
-        {
-          "id": "2604.04235v1",
-          "title": "Structure, Feasibility, and Explicit Safety Filters for Linear Systems",
-          "authors": [
-            "Shima Sadat Mousavi",
-            "Max H. Cohen",
-            "Pol Mestres",
-            "Aaron D. Ames"
-          ],
-          "abstract": "Safety filters based on control barrier functions (CBFs) and high-order control barrier functions (HOCBFs) are often implemented through quadratic programs (QPs). In general, especially in the presence of multiple constraints, feasibility is difficult to certify before solving the QP and may be lost as the state evolves. This paper addresses this issue for linear time-invariant (LTI) systems with affine safety constraints. Exploiting the resulting geometry of the constraint normals, and considering both unbounded and bounded inputs, we characterize feasibility for several structured classes of constraints. For certain such cases, we also derive closed-form safety filters. These explicit filters avoid online optimization and provide a simple alternative to QP-based implementations. Numerical examples illustrate the results.",
-          "url": "https://arxiv.org/abs/2604.04235v1",
-          "pdf_url": "https://arxiv.org/pdf/2604.04235v1",
-          "published": "2026-04-05T19:36:15Z",
-          "updated": "2026-04-05T19:36:15Z",
-          "categories": [
-            "eess.SY",
-            "math.OC"
-          ],
-          "primary_category": "eess.SY"
         }
       ]
     },
@@ -1525,6 +1526,25 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2604.19670v1",
+          "title": "Multi-Cycle Spatio-Temporal Adaptation in Human-Robot Teaming",
+          "authors": [
+            "Alex Cuellar",
+            "Michael Hagenow",
+            "Julie Shah"
+          ],
+          "abstract": "Effective human-robot teaming is crucial for the practical deployment of robots in human workspaces. However, optimizing joint human-robot plans remains a challenge due to the difficulty of modeling individualized human capabilities and preferences. While prior research has leveraged the multi-cycle structure of domains like manufacturing to learn an individual's tendencies and adapt plans over repeated interactions, these techniques typically consider task-level and motion-level adaptation in isolation. Task-level methods optimize allocation and scheduling but often ignore spatial interference in close-proximity scenarios; conversely, motion-level methods focus on collision avoidance while ignoring the broader task context. This paper introduces RAPIDDS, a framework that unifies these approaches by modeling an individual's spatial behavior (motion paths) and temporal behavior (time required to complete tasks) over multiple cycles. RAPIDDS then jointly adapts task schedules and steers diffusion models of robot motions to maximize efficiency and minimize proximity accounting for these individualized models. We demonstrate the importance of this dual adaptation through an ablation study in simulation and a physical robot scenario using a 7-DOF robot arm. Finally, we present a user study (n=32) showing significant plan improvement compared to non-adaptive systems across both objective metrics, such as efficiency and proximity, and subjective measures, including fluency and user preference. See this paper's companion video at: https://youtu.be/55Q3lq1fINs.",
+          "url": "https://arxiv.org/abs/2604.19670v1",
+          "pdf_url": "https://arxiv.org/pdf/2604.19670v1",
+          "published": "2026-04-21T16:49:59Z",
+          "updated": "2026-04-21T16:49:59Z",
+          "categories": [
+            "cs.RO",
+            "cs.AI"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2511.14988v1",
           "title": "An Alignment-Based Approach to Learning Motions from Demonstrations",
           "authors": [
@@ -1601,24 +1621,6 @@
             "cs.RO",
             "cs.AI",
             "cs.HC"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2506.15012v3",
-          "title": "Learning Contextually-Adaptive Rewards via Calibrated Features",
-          "authors": [
-            "Alexandra Forsey-Smerek",
-            "Julie Shah",
-            "Andreea Bobu"
-          ],
-          "abstract": "A key challenge in reward learning from human input is that desired agent behavior often changes based on context. For example, a robot must adapt to avoid a stove once it becomes hot. We observe that while high-level preferences (e.g., prioritizing safety over efficiency) often remain constant, context alters the $\\textit{saliency}$--or importance--of reward features. For instance, stove heat changes the relevance of the robot's proximity, not the underlying preference for safety. Moreover, these contextual effects recur across tasks, motivating the need for transferable representations to encode them. Existing multi-task and meta-learning methods simultaneously learn representations and task preferences, at best $\\textit{implicitly}$ capturing contextual effects and requiring substantial data to separate them from task-specific preferences. Instead, we propose $\\textit{explicitly}$ modeling and learning context-dependent feature saliency separately from context-invariant preferences. We introduce $\\textit{calibrated features}$--modular representations that capture contextual effects on feature saliency--and present specialized paired comparison queries that isolate saliency from preference for efficient learning. Simulated experiments show our method improves sample efficiency, requiring 10x fewer preference queries than baselines to achieve equivalent reward accuracy, with up to 15% better performance in low-data regimes (5-10 queries). An in-person user study (N=12) demonstrates that participants can effectively teach their personal contextual preferences with our method, enabling adaptable and personalized reward learning.",
-          "url": "https://arxiv.org/abs/2506.15012v3",
-          "pdf_url": "https://arxiv.org/pdf/2506.15012v3",
-          "published": "2025-06-17T22:48:44Z",
-          "updated": "2026-01-13T05:51:29Z",
-          "categories": [
-            "cs.RO"
           ],
           "primary_category": "cs.RO"
         }
@@ -2993,6 +2995,26 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2604.19730v1",
+          "title": "FASTER: Value-Guided Sampling for Fast RL",
+          "authors": [
+            "Perry Dong",
+            "Alexander Swerdlow",
+            "Dorsa Sadigh",
+            "Chelsea Finn"
+          ],
+          "abstract": "Some of the most performant reinforcement learning algorithms today can be prohibitively expensive as they use test-time scaling methods such as sampling multiple action candidates and selecting the best one. In this work, we propose FASTER, a method for getting the benefits of sampling-based test-time scaling of diffusion-based policies without the computational cost by tracing the performance gain of action samples back to earlier in the denoising process. Our key insight is that we can model the denoising of multiple action candidates and selecting the best one as a Markov Decision Process (MDP) where the goal is to progressively filter action candidates before denoising is complete. With this MDP, we can learn a policy and value function in the denoising space that predicts the downstream value of action candidates in the denoising process and filters them while maximizing returns. The result is a method that is lightweight and can be plugged into existing generative RL algorithms. Across challenging long-horizon manipulation tasks in online and batch-online RL, FASTER consistently improves the underlying policies and achieves the best overall performance among the compared methods. Applied to a pretrained VLA, FASTER achieves the same performance while substantially reducing training and inference compute requirements. Code is available at https://github.com/alexanderswerdlow/faster .",
+          "url": "https://arxiv.org/abs/2604.19730v1",
+          "pdf_url": "https://arxiv.org/pdf/2604.19730v1",
+          "published": "2026-04-21T17:52:17Z",
+          "updated": "2026-04-21T17:52:17Z",
+          "categories": [
+            "cs.LG",
+            "cs.AI"
+          ],
+          "primary_category": "cs.LG"
+        },
+        {
           "id": "2604.17654v1",
           "title": "Poly-EPO: Training Exploratory Reasoning Models",
           "authors": [
@@ -3168,27 +3190,6 @@
             "cs.RO"
           ],
           "primary_category": "cs.LG"
-        },
-        {
-          "id": "2603.28052v1",
-          "title": "Meta-Harness: End-to-End Optimization of Model Harnesses",
-          "authors": [
-            "Yoonho Lee",
-            "Roshen Nair",
-            "Qizheng Zhang",
-            "Kangwook Lee",
-            "Omar Khattab",
-            "Chelsea Finn"
-          ],
-          "abstract": "The performance of large language model (LLM) systems depends not only on model weights, but also on their harness: the code that determines what information to store, retrieve, and present to the model. Yet harnesses are still designed largely by hand, and existing text optimizers are poorly matched to this setting because they compress feedback too aggressively. We introduce Meta-Harness, an outer-loop system that searches over harness code for LLM applications. It uses an agentic proposer that accesses the source code, scores, and execution traces of all prior candidates through a filesystem. On online text classification, Meta-Harness improves over a state-of-the-art context management system by 7.7 points while using 4x fewer context tokens. On retrieval-augmented math reasoning, a single discovered harness improves accuracy on 200 IMO-level problems by 4.7 points on average across five held-out models. On agentic coding, discovered harnesses surpass the best hand-engineered baselines on TerminalBench-2. Together, these results show that richer access to prior experience can enable automated harness engineering.",
-          "url": "https://arxiv.org/abs/2603.28052v1",
-          "pdf_url": "https://arxiv.org/pdf/2603.28052v1",
-          "published": "2026-03-30T05:33:50Z",
-          "updated": "2026-03-30T05:33:50Z",
-          "categories": [
-            "cs.AI"
-          ],
-          "primary_category": "cs.AI"
         }
       ]
     },
@@ -3724,6 +3725,26 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2604.18933v1",
+          "title": "Gated Memory Policy",
+          "authors": [
+            "Yihuai Gao",
+            "Jinyun Liu",
+            "Shuang Li",
+            "Shuran Song"
+          ],
+          "abstract": "Robotic manipulation tasks exhibit varying memory requirements, ranging from Markovian tasks that require no memory to non-Markovian tasks that depend on historical information spanning single or multiple interaction trials. Surprisingly, simply extending observation histories of a visuomotor policy often leads to a significant performance drop due to distribution shift and overfitting. To address these issues, we propose Gated Memory Policy (GMP), a visuomotor policy that learns both when to recall memory and what to recall. To learn when to recall memory, GMP employs a learned memory gate mechanism that selectively activates history context only when necessary, improving robustness and reactivity. To learn what to recall efficiently, GMP introduces a lightweight cross-attention module that constructs effective latent memory representations. To further enhance robustness, GMP injects diffusion noise into historical actions, mitigating sensitivity to noisy or inaccurate histories during both training and inference. On our proposed non-Markovian benchmark MemMimic, GMP achieves a 30.1% average success rate improvement over long-history baselines, while maintaining competitive performance on Markovian tasks in RoboMimic. All code, data and in-the-wild deployment instructions are available on our project website https://gated-memory-policy.github.io/.",
+          "url": "https://arxiv.org/abs/2604.18933v1",
+          "pdf_url": "https://arxiv.org/pdf/2604.18933v1",
+          "published": "2026-04-21T00:14:50Z",
+          "updated": "2026-04-21T00:14:50Z",
+          "categories": [
+            "cs.RO",
+            "cs.AI"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2604.18331v1",
           "title": "Will People Enjoy a Robot Trainer? A Case Study with Snoopie the Pacerbot",
           "authors": [
@@ -3836,29 +3857,6 @@
           "categories": [
             "cs.RO",
             "cs.LG"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2603.03243v1",
-          "title": "HoMMI: Learning Whole-Body Mobile Manipulation from Human Demonstrations",
-          "authors": [
-            "Xiaomeng Xu",
-            "Jisang Park",
-            "Han Zhang",
-            "Eric Cousineau",
-            "Aditya Bhat",
-            "Jose Barreiros",
-            "Dian Wang",
-            "Shuran Song"
-          ],
-          "abstract": "We present Whole-Body Mobile Manipulation Interface (HoMMI), a data collection and policy learning framework that learns whole-body mobile manipulation directly from robot-free human demonstrations. We augment UMI interfaces with egocentric sensing to capture the global context required for mobile manipulation, enabling portable, robot-free, and scalable data collection. However, naively incorporating egocentric sensing introduces a larger human-to-robot embodiment gap in both observation and action spaces, making policy transfer difficult. We explicitly bridge this gap with a cross-embodiment hand-eye policy design, including an embodiment agnostic visual representation; a relaxed head action representation; and a whole-body controller that realizes hand-eye trajectories through coordinated whole-body motion under robot-specific physical constraints. Together, these enable long-horizon mobile manipulation tasks requiring bimanual and whole-body coordination, navigation, and active perception. Results are best viewed on: https://hommi-robot.github.io",
-          "url": "https://arxiv.org/abs/2603.03243v1",
-          "pdf_url": "https://arxiv.org/pdf/2603.03243v1",
-          "published": "2026-03-03T18:36:49Z",
-          "updated": "2026-03-03T18:36:49Z",
-          "categories": [
-            "cs.RO"
           ],
           "primary_category": "cs.RO"
         }
