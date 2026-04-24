@@ -2,215 +2,216 @@
   "category": "robotics",
   "name": "Robotics Research",
   "description": "Robotics \u2014 Motion Planning, Control Systems, Human-Robot Interaction, Autonomous Systems",
-  "scraped_at": "2026-04-23T09:52:29.497747+00:00",
+  "scraped_at": "2026-04-24T09:51:44.219976+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2604.20834v1",
-      "title": "PokeVLA: Empowering Pocket-Sized Vision-Language-Action Model with Comprehensive World Knowledge Guidance",
+      "id": "2604.21924v1",
+      "title": "Long-Horizon Manipulation via Trace-Conditioned VLA Planning",
       "authors": [
-        "Yupeng Zheng",
-        "Xiang Li",
+        "Isabella Liu",
+        "An-Chieh Cheng",
+        "Rui Yan",
+        "Geng Chen",
+        "Ri-Zhao Qiu",
+        "Xueyan Zou",
+        "Sha Yi",
+        "Hongxu Yin",
+        "Xiaolong Wang",
+        "Sifei Liu"
+      ],
+      "abstract": "Long-horizon manipulation remains challenging for vision-language-action (VLA) policies: real tasks are multi-step, progress-dependent, and brittle to compounding execution errors. We present LoHo-Manip, a modular framework that scales short-horizon VLA execution to long-horizon instruction following via a dedicated task-management VLM. The manager is decoupled from the executor and is invoked in a receding-horizon manner: given the current observation, it predicts a progress-aware remaining plan that combines (i) a subtask sequence with an explicit done + remaining split as lightweight language memory, and (ii) a visual trace -- a compact 2D keypoint trajectory prompt specifying where to go and what to approach next. The executor VLA is adapted to condition on the rendered trace, thereby turning long-horizon decision-making into repeated local control by following the trace. Crucially, predicting the remaining plan at each step yields an implicit closed loop: failed steps persist in subsequent outputs, and traces update accordingly, enabling automatic continuation and replanning without hand-crafted recovery logic or brittle visual-history buffers. Extensive experiments spanning embodied planning, long-horizon reasoning, trajectory prediction, and end-to-end manipulation in simulation and on a real Franka robot demonstrate strong gains in long-horizon success, robustness, and out-of-distribution generalization. Project page: https://www.liuisabella.com/LoHoManip",
+      "url": "https://arxiv.org/abs/2604.21924v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.21924v1",
+      "published": "2026-04-23T17:59:04Z",
+      "updated": "2026-04-23T17:59:04Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2604.21914v1",
+      "title": "VistaBot: View-Robust Robot Manipulation via Spatiotemporal-Aware View Synthesis",
+      "authors": [
         "Songen Gu",
         "Yuhang Zheng",
-        "Shuai Tian",
         "Weize Li",
-        "Linbo Wang",
-        "Senyu Fei",
-        "Pengfei Li",
-        "Yinfeng Gao",
-        "Zebin Xing",
+        "Yupeng Zheng",
+        "Yating Feng",
+        "Xiang Li",
         "Yilun Chen",
-        "Qichao Zhang",
-        "Haoran Li",
+        "Pengfei Li",
         "Wenchao Ding"
       ],
-      "abstract": "Recent advances in Vision-Language-Action (VLA) models have opened new avenues for robot manipulation, yet existing methods exhibit limited efficiency and a lack of high-level knowledge and spatial awareness. To address these challenges, we propose PokeVLA, a lightweight yet powerful foundation model for embodied manipulation that effectively infuses vision-language understanding into action learning. Our framework introduces a two-stage training paradigm: first, we pre-train a compact vision-language model (PokeVLM) on a curated multimodal dataset of 2.4M samples encompassing spatial grounding, affordance, and embodied reasoning tasks; second, we inject manipulation-relevant representations into the action space through multi-view goal-aware semantics learning, geometry alignment, and a novel action expert. Extensive experiments demonstrate state-of-the-art performance on the LIBERO-Plus benchmark and in real-world deployment, outperforming comparable baselines in success rate and robustness under diverse perturbations. To foster reproducibility and community progress, we will open-source our code, model weights, and the scripts for the curated pre-training dataset. Project page: https://getterupper.github.io/PokeVLA",
-      "url": "https://arxiv.org/abs/2604.20834v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.20834v1",
-      "published": "2026-04-22T17:58:19Z",
-      "updated": "2026-04-22T17:58:19Z",
+      "abstract": "Recently, end-to-end robotic manipulation models have gained significant attention for their generalizability and scalability. However, they often suffer from limited robustness to camera viewpoint changes when training with a fixed camera. In this paper, we propose VistaBot, a novel framework that integrates feed-forward geometric models with video diffusion models to achieve view-robust closed-loop manipulation without requiring camera calibration at test time. Our approach consists of three key components: 4D geometry estimation, view synthesis latent extraction, and latent action learning. VistaBot is integrated into both action-chunking (ACT) and diffusion-based ($\u03c0_0$) policies and evaluated across simulation and real-world tasks. We further introduce the View Generalization Score (VGS) as a new metric for comprehensive evaluation of cross-view generalization. Results show that VistaBot improves VGS by 2.79$\\times$ and 2.63$\\times$ over ACT and $\u03c0_0$, respectively, while also achieving high-quality novel view synthesis. Our contributions include a geometry-aware synthesis model, a latent action planner, a new benchmark metric, and extensive validation across diverse environments. The code and models will be made publicly available.",
+      "url": "https://arxiv.org/abs/2604.21914v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.21914v1",
+      "published": "2026-04-23T17:57:13Z",
+      "updated": "2026-04-23T17:57:13Z",
       "categories": [
         "cs.RO"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2604.20799v1",
-      "title": "A Hough transform approach to safety-aware scalar field mapping using Gaussian Processes",
+      "id": "2604.21894v1",
+      "title": "Task-Driven Co-Design of Heterogeneous Multi-Robot Systems",
       "authors": [
-        "Muzaffar Qureshi",
-        "Trivikram Satharasi",
-        "Tochukwu E. Ogri",
-        "Kyle Volle",
-        "Rushikesh Kamalapurkar"
+        "Maximilian Stralz",
+        "Meshal Alharbi",
+        "Yujun Huang",
+        "Gioele Zardini"
       ],
-      "abstract": "This paper presents a framework for mapping unknown scalar fields using a sensor-equipped autonomous robot operating in unsafe environments. The unsafe regions are defined as regions of high-intensity, where the field value exceeds a predefined safety threshold. For safe and efficient mapping of the scalar field, the sensor-equipped robot must avoid high-intensity regions during the measurement process. In this paper, the scalar field is modeled as a sample from a Gaussian process (GP), which enables Bayesian inference and provides closed-form expressions for both the predictive mean and the uncertainty. Concurrently, the spatial structure of the high-intensity regions is estimated in real-time using the Hough transform (HT), leveraging the evolving GP posterior. A safe sampling strategy is then employed to guide the robot towards safe measurement locations, using probabilistic safety guarantees on the evolving GP posterior. The estimated high-intensity regions also facilitate the design of safe motion plans for the robot. The effectiveness of the approach is verified through two numerical simulation studies and an indoor experiment for mapping a light-intensity field using a wheeled mobile robot.",
-      "url": "https://arxiv.org/abs/2604.20799v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.20799v1",
-      "published": "2026-04-22T17:27:08Z",
-      "updated": "2026-04-22T17:27:08Z",
+      "abstract": "Designing multi-agent robotic systems requires reasoning across tightly coupled decisions spanning heterogeneous domains, including robot design, fleet composition, and planning. Much effort has been devoted to isolated improvements in these domains, whereas system-level co-design considering trade-offs and task requirements remains underexplored. In this work, we present a formal and compositional framework for the task-driven co-design of heterogeneous multi-robot systems. Building on a monotone co-design theory, we introduce general abstractions of robots, fleets, planners, executors, and evaluators as interconnected design problems with well-defined interfaces that are agnostic to both implementations and tasks. This structure enables efficient joint optimization of robot design, fleet composition, and planning under task-specific performance constraints. A series of case studies demonstrates the capabilities of the framework. Various component models can be seamlessly incorporated, including new robot types, task profiles, and probabilistic sensing objectives, while non-obvious design alternatives are systematically uncovered with optimality guarantees. The results highlight the flexibility, scalability, and interpretability of the proposed approach, and illustrate how formal co-design enables principled reasoning about complex heterogeneous multi-robot systems.",
+      "url": "https://arxiv.org/abs/2604.21894v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.21894v1",
+      "published": "2026-04-23T17:44:52Z",
+      "updated": "2026-04-23T17:44:52Z",
       "categories": [
-        "cs.RO"
+        "cs.RO",
+        "cs.MA"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2604.20773v1",
-      "title": "Accurate Frequency Response Modeling in Integrated T&D Co-Simulation via EWMA-RTTA-Based Quadratic Extrapolation",
+      "id": "2604.21891v1",
+      "title": "A Multi-Stage Warm-Start Deep Learning Framework for Unit Commitment",
       "authors": [
-        "Jong Ha Woo",
-        "Qi Xiao",
-        "Yu Ma",
-        "Zishuo Yang",
-        "Victor Daldegan Paduani",
-        "Ning Lu"
+        "Muhy Eddin Za'ter",
+        "Anna Van Boven",
+        "Bri-Mathias Hodge",
+        "Kyri Baker"
       ],
-      "abstract": "The large-scale integration of inverter-based resources (IBRs), particularly distributed photovoltaics (DPVs), into distribution networks increases the need for integrated transmission and distribution (T&D) co-simulation. A key challenge in such co-simulation lies in accurately modeling system frequency across two asynchronous simulation environments. For example, the transmission system, simulated in the phasor domain, can operate with a simulation timestep of 10 ms, while the distribution system, simulated in the electromagnetic transient domain (EMT) to include IBR models, uses a much finer timestep of 100 microseconds. To ensure accurate PLL-based frequency estimation in distribution systems, it is essential to predict voltage magnitude and phase angle variations within the 10 ms transmission intervals, rather than using constant values that cause inaccurate frequency calculations. This issue becomes particularly critical when modeling primary and secondary frequency response services provided by IBRs. To address this challenge, we propose an automated Exponentially Weighted Moving Average Real-Time Threshold Adaptation (EWMA-RTTA) method, which utilizes Quadratic Extrapolation to predict voltage magnitude and phase angle trends more precisely. The proposed method is validated using two Opal-RT simulators: one simulating an IEEE 118-bus transmission system and the other simulating an IEEE 123-bus distribution network. Simulation results demonstrate that our approach improves the normalized mean absolute error (nMAE) by a factor of 25.7 compared to methods that do not account for time mismatches, offering a scalable and accurate solution for modeling IBR-based frequency response in modern power systems.",
-      "url": "https://arxiv.org/abs/2604.20773v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.20773v1",
-      "published": "2026-04-22T17:01:30Z",
-      "updated": "2026-04-22T17:01:30Z",
+      "abstract": "Maintaining instantaneous balance between electricity supply and demand is critical for reliability and grid instability. System operators achieve this through solving the task of Unit Commitment (UC),ca high dimensional large-scale Mixed-integer Linear Programming (MILP) problem that is strictly and heavily governed by the grid physical constraints. As grid integrate variable renewable sources, and new technologies such as long duration storage in the grid, UC must be optimally solved for multi-day horizons and potentially with greater frequency. Therefore, traditional MILP solvers increasingly struggle to compute solutions within these tightening operational time limits. To bypass these computational bottlenecks, this paper proposes a novel framework utilizing a transformer-based architecture to predict generator commitment schedules over a 72-hour horizon. Also, because raw predictions in highly dimensional spaces often yield physically infeasible results, the pipeline integrates the self-attention network with deterministic post-processing heuristics that systematically enforce minimum up/down times and minimize excess capacity. Finally, these refined predictions are utilized as a warm start for a downstream MILP solver, while employing a confidence-based variable fixation strategy to drastically reduce the combinatorial search space. Validated on a single-bus test system, the complete multi-stage pipeline achieves 100\\% feasibility and significantly accelerates computation times. Notably, in approximately 20\\% of test instances, the proposed model reached a feasible operational schedule with a lower overall system cost than relying solely on the solver.",
+      "url": "https://arxiv.org/abs/2604.21891v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.21891v1",
+      "published": "2026-04-23T17:44:02Z",
+      "updated": "2026-04-23T17:44:02Z",
       "categories": [
-        "eess.SY"
+        "eess.SY",
+        "cs.AI"
       ],
       "primary_category": "eess.SY"
     },
     {
-      "id": "2604.20764v1",
-      "title": "Personalized electric vehicle energy consumption estimation framework that integrates driver behavior with map data",
+      "id": "2604.21741v1",
+      "title": "Hi-WM: Human-in-the-World-Model for Scalable Robot Post-Training",
       "authors": [
-        "Sreechakra Vasudeva Raju Rachavelpula",
-        "Sangwhan Cha"
+        "Yaxuan Li",
+        "Zhongyi Zhou",
+        "Yefei Chen",
+        "Yanjiang Guo",
+        "Jiaming Liu",
+        "Shanghang Zhang",
+        "Jianyu Chen",
+        "Yichen Zhu"
       ],
-      "abstract": "This paper presents a personalized Battery Electric Vehicle (BEV) energy consumption estimation framework that integrates map-based contextual features with driver-specific velocity prediction and physics-based energy consumption modeling. The system combines route selection, detailed road feature processing, a rule-based reference velocity generator, a PID controller-based vehicle dynamics simulator, and a Bidirectional LSTM model trained to reproduce individual driving behavior. The predicted individual-specific velocity profiles are coupled with a quasi-steady backward energy consumption model to compute tractive power, regenerative braking, and State-of-Charge (SOC) evolution. Evaluation across urban, freeway, and hilly routes demonstrates that the proposed approach captures key driver behavioral patterns such as deceleration at intersections, speed-limit tracking, and road grade-dependent responses, while producing accurate power and SOC trajectories. The results highlight the effectiveness of combining learned driver behavior with map-based context and physics-based energy consumption modeling to produce accurate, personalized BEV SOC depletion profiles.",
-      "url": "https://arxiv.org/abs/2604.20764v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.20764v1",
-      "published": "2026-04-22T16:49:52Z",
-      "updated": "2026-04-22T16:49:52Z",
-      "categories": [
-        "eess.SY",
-        "cs.LG"
-      ],
-      "primary_category": "eess.SY"
-    },
-    {
-      "id": "2604.20753v1",
-      "title": "RG-Based Local Hopf Reduction and Slow-Manifold Reconstruction for Nonlinear Aeroelastic Systems",
-      "authors": [
-        "Gelin Chen",
-        "Chen Song",
-        "Chao Yang"
-      ],
-      "abstract": "Self-excited limit-cycle oscillations (LCOs) from Hopf bifurcations are a key feature of nonlinear aeroelasticity and depend sensitively on structural and aerodynamic parameters. Classical center-manifold and normal-form theory describe this local behavior, but can be cumbersome to apply in large discretized models and standard reduced-order modeling (ROM) workflows. A renormalization-group (RG)-based reduction is developed that directly yields a Hopf-type amplitude equation on a local invariant manifold, specialized for polynomial nonlinearities in tensor-based discretizations and compatible with finite-element-type settings. The method provides explicit coefficients governing the Hopf threshold, criticality, and leading LCO amplitude/frequency trends, and admits a companion slow-manifold approximation with selected stable modes retained as static coordinates. Representative nonlinear-aeroelastic examples illustrate how the proposed framework supplies compact, parameter-aware Hopf/LCO descriptors suitable for local ROM construction near flutter.",
-      "url": "https://arxiv.org/abs/2604.20753v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.20753v1",
-      "published": "2026-04-22T16:44:19Z",
-      "updated": "2026-04-22T16:44:19Z",
-      "categories": [
-        "physics.flu-dyn",
-        "eess.SY"
-      ],
-      "primary_category": "physics.flu-dyn"
-    },
-    {
-      "id": "2604.20744v1",
-      "title": "AAC: Admissible-by-Architecture Differentiable Landmark Compression for ALT",
-      "authors": [
-        "An T. Le",
-        "Vien Ngo"
-      ],
-      "abstract": "We introduce \\textbf{AAC} (Architecturally Admissible Compressor), a differentiable landmark-selection module for ALT (A*, Landmarks, and Triangle inequality) shortest-path heuristics whose outputs are admissible by construction: each forward pass is a row-stochastic mixture of triangle-inequality lower bounds, so the heuristic is admissible for \\emph{every} parameter setting without requiring convergence, calibration, or projection. At deployment, the module reduces to classical ALT on a learned subset, composing end-to-end with neural encoders while preserving the classical toolchain. The construction is the first differentiable instance of the compress-while-preserving-admissibility tradition in classical heuristic search.   Under a matched per-vertex memory protocol, we establish that ALT with farthest-point-sampling landmarks (FPS-ALT) has provably near-optimal coverage on metric graphs, leaving at most a few percentage points of headroom for \\emph{any} selector. AAC operates near this ceiling: the gap is $0.9$--$3.9$ percentage points on 9 road networks and ${\\leq}1.3$ percentage points on synthetic graphs, with zero admissibility violations across $1{,}500+$ queries and all logged runs. At matched memory, AAC is also $1.2$--$1.5{\\times}$ faster than FPS-ALT at the median query on DIMACS road networks, amortizing its offline cost within $170$--$1{,}924$ queries. A controlled ablation isolates the binding constraint: training-objective drift under default initialization, not architectural capacity; identity-on-first-$m$ initialization closes the expansion-count gap entirely. We release the module, a reusable matched-memory benchmarking protocol with paired two-one-sided-test (TOST) equivalence and pre-registration, and a reference compressed-differential-heuristics baseline.",
-      "url": "https://arxiv.org/abs/2604.20744v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.20744v1",
-      "published": "2026-04-22T16:31:21Z",
-      "updated": "2026-04-22T16:31:21Z",
-      "categories": [
-        "cs.AI",
-        "cs.LG",
-        "cs.RO"
-      ],
-      "primary_category": "cs.AI"
-    },
-    {
-      "id": "2604.20737v1",
-      "title": "Decoupling Speculation from Merit: The Identity-Bound Asset Integrity Model (IBAIM) for Sustainable Web3 Gaming",
-      "authors": [
-        "Jinliang Xu"
-      ],
-      "abstract": "The rapid collapse of decentralized game economies, often characterized by the \\textit{death spiral,} remains the most formidable barrier to the mass adoption of Web3 gaming. This paper proposes that the sustainability of an open game economy is predicated on three necessary and sufficient conditions: Anti-Sybil Resilience, Anti-Capital Dominance, and Anti-Inflationary Saturation. The first section establishes a theoretical proof of these conditions, arguing that the absence of any single dimension leads to systemic failure. The second section explores the dialectical relationship between these dimensions, illustrating how unchecked automation and capital-driven monopolies accelerate asset hyperinflation. In the third section, we introduce the Identity-Bound Asset Integrity Model (IBAIM) as a comprehensive technical solution. IBAIM utilizes Zero-Knowledge (ZK) biometric hashing and Account Abstraction (AA) to anchor asset utility to unique human identities through a privacy-preserving and regulatory-compliant architecture. By exogenizing biometric verification to trusted local environments and utilizing Zero-Knowledge Proofs of Identity (zk-PoI), the model ensures absolute user privacy. Furthermore, by implementing an Asymmetric Utility Decay (AUD) engine-whereby assets suffer a vertical 50% utility cliff upon secondary transfer-and an entropy-driven thermodynamic degradation mechanism., the model successfully decouples financial speculation from in-game merit. Finally, we apply this framework to analyze prominent historical failures in the GameFi sector, demonstrating that their collapse was an inevitable consequence of violating these core economic constraints. Our findings suggest that trading a degree of asset liquidity for system integrity is the only viable path toward long-term economic viability in decentralized virtual worlds.",
-      "url": "https://arxiv.org/abs/2604.20737v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.20737v1",
-      "published": "2026-04-22T16:23:55Z",
-      "updated": "2026-04-22T16:23:55Z",
-      "categories": [
-        "cs.GT",
-        "cs.CE",
-        "cs.MA",
-        "eess.SY"
-      ],
-      "primary_category": "cs.GT"
-    },
-    {
-      "id": "2604.20735v1",
-      "title": "Fast Bayesian equipment condition monitoring via simulation based inference: applications to heat exchanger health",
-      "authors": [
-        "Peter Collett",
-        "Alexander Johannes Stasik",
-        "Simone Casolo",
-        "Signe Riemer-S\u00f8rensen"
-      ],
-      "abstract": "Accurate condition monitoring of industrial equipment requires inferring latent degradation parameters from indirect sensor measurements under uncertainty. While traditional Bayesian methods like Markov Chain Monte Carlo (MCMC) provide rigorous uncertainty quantification, their heavy computational bottlenecks render them impractical for real-time process control. To overcome this limitation, we propose an AI-driven framework utilizing Simulation-Based Inference (SBI) powered by amortized neural posterior estimation to diagnose complex failure modes in heat exchangers. By training neural density estimators on a simulated dataset, our approach learns a direct, likelihood-free mapping from thermal-fluid observations to the full posterior distribution of degradation parameters. We benchmark this framework against an MCMC baseline across various synthetic fouling and leakage scenarios, including challenging low-probability, sparse-event failures. The results show that SBI achieves comparable diagnostic accuracy and reliable uncertainty quantification, while accelerating inference time by a factor of82$\\times$ compared to traditional sampling. The amortized nature of the neural network enables near-instantaneous inference, establishing SBI as a highly scalable, real-time alternative for probabilistic fault diagnosis and digital twin realization in complex engineering systems.",
-      "url": "https://arxiv.org/abs/2604.20735v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.20735v1",
-      "published": "2026-04-22T16:21:25Z",
-      "updated": "2026-04-22T16:21:25Z",
-      "categories": [
-        "cs.LG",
-        "eess.SY",
-        "physics.comp-ph"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2604.20728v1",
-      "title": "Interval POMDP Shielding for Imperfect-Perception Agents",
-      "authors": [
-        "William Scarbro",
-        "Ravi Mangal"
-      ],
-      "abstract": "Autonomous systems that rely on learned perception can make unsafe decisions when sensor readings are misclassified. We study shielding for this setting: given a proposed action, a shield blocks actions that could violate safety. We consider the common case where system dynamics are known but perception uncertainty must be estimated from finite labeled data. From these data we build confidence intervals for the probabilities of perception outcomes and use them to model the system as a finite Interval Partially Observable Markov Decision Process with discrete states and actions. We then propose an algorithm to compute a conservative set of beliefs over the underlying state that is consistent with the observations seen so far.   This enables us to construct a runtime shield that comes with a finite-horizon guarantee: with high probability over the training data, if the true perception uncertainty rates lie within the learned intervals, then every action admitted by the shield satisfies a stated lower bound on safety. Experiments on four case studies show that our shielding approach (and variants derived from it) improves the safety of the system over state-of-the-art baselines.",
-      "url": "https://arxiv.org/abs/2604.20728v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.20728v1",
-      "published": "2026-04-22T16:12:37Z",
-      "updated": "2026-04-22T16:12:37Z",
-      "categories": [
-        "cs.AI",
-        "eess.SY"
-      ],
-      "primary_category": "cs.AI"
-    },
-    {
-      "id": "2604.20721v1",
-      "title": "ALAS: Adaptive Long-Horizon Action Synthesis via Async-pathway Stream Disentanglement",
-      "authors": [
-        "Yutong Shen",
-        "Hangxu Liu",
-        "Lei Zhang",
-        "Penghui Liu",
-        "Yinqi Liu",
-        "Liuxiang Yang",
-        "Tongtong Feng"
-      ],
-      "abstract": "Long-Horizon (LH) tasks in Human-Scene Interaction (HSI) are complex multi-step tasks that require continuous planning, sequential decision-making, and extended execution across domains to achieve the final goal. However, existing methods heavily rely on skill chaining by concatenating pre-trained subtasks, with environment observations and self-state tightly coupled, lacking the ability to generalize to new combinations of environments and skills, failing to complete various LH tasks across domains. To solve this problem, this paper presents ALAS, a cross-domain learning framework for LH tasks via biologically inspired dual-stream disentanglement. Inspired by the brain's \"where-what\" dual pathway mechanism, ALAS comprises two core modules: i) an environment learning module for spatial understanding, which captures object functions, spatial relationships, and scene semantics, achieving cross-domain transfer through complete environment-self disentanglement; ii) a skill learning module for task execution, which processes self-state information including joint degrees of freedom and motor patterns, enabling cross-skill transfer through independent motor pattern encoding. We conducted extensive experiments on various LH tasks in HSI scenes. Compared with existing methods, ALAS can achieve an average subtasks success rate improvement of 23\\% and average execution efficiency improvement of 29\\%.",
-      "url": "https://arxiv.org/abs/2604.20721v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.20721v1",
-      "published": "2026-04-22T16:07:24Z",
-      "updated": "2026-04-22T16:07:24Z",
+      "abstract": "Post-training is essential for turning pretrained generalist robot policies into reliable task-specific controllers, but existing human-in-the-loop pipelines remain tied to physical execution: each correction requires robot time, scene setup, resets, and operator supervision in the real world. Meanwhile, action-conditioned world models have been studied mainly for imagination, synthetic data generation, and policy evaluation. We propose \\textbf{Human-in-the-World-Model (Hi-WM)}, a post-training framework that uses a learned world model as a reusable corrective substrate for failure-targeted policy improvement. A policy is first rolled out in closed loop inside the world model; when the rollout becomes incorrect or failure-prone, a human intervenes directly in the model to provide short corrective actions. Hi-WM caches intermediate states and supports rollback and branching, allowing a single failure state to be reused for multiple corrective continuations and yielding dense supervision around behaviors that the base policy handles poorly. The resulting corrective trajectories are then added back to the training set for post-training. We evaluate Hi-WM on three real-world manipulation tasks spanning both rigid and deformable object interaction, and on two policy backbones. Hi-WM improves real-world success by 37.9 points on average over the base policy and by 19.0 points over a world-model closed-loop baseline, while world-model evaluation correlates strongly with real-world performance (r = 0.953). These results suggest that world models can serve not only as generators or evaluators, but also as effective corrective substrates for scalable robot post-training.",
+      "url": "https://arxiv.org/abs/2604.21741v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.21741v1",
+      "published": "2026-04-23T14:42:54Z",
+      "updated": "2026-04-23T14:42:54Z",
       "categories": [
         "cs.RO"
       ],
       "primary_category": "cs.RO"
+    },
+    {
+      "id": "2604.21740v1",
+      "title": "A Case Study in Recovery of Drones using Discrete-Event Systems",
+      "authors": [
+        "Liam P. Burns",
+        "Dayse M. Cavalcanti",
+        "Felipe G. Cabral",
+        "Max H. de Queiroz",
+        "Melissa Greeff",
+        "Publio M. M. Lima",
+        "Karen Rudie"
+      ],
+      "abstract": "Discrete-event systems and supervisory control theory provide a rigorous framework for specifying correct-by-construction behavior. However, their practical application to swarm robotics remains largely underexplored. In this paper, we investigate a topological recovery method based on discrete-event-systems within a swarm robotics context. We propose a hybrid architecture that combines a high-level discrete event systems supervisor with a low-level continuous controller, allowing lost drones to safely recover from fault or attack events and re-enter a controlled region. The method is demonstrated using ten simulated UAVs in the py-bullet-drones framework. We show recovery performance across four distinct scenarios, each with varying initial state estimates. Additionally, we introduce a secondary recovery supervisor that manages the regrouping process for a drone after it has re-entered the operational region.",
+      "url": "https://arxiv.org/abs/2604.21740v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.21740v1",
+      "published": "2026-04-23T14:42:53Z",
+      "updated": "2026-04-23T14:42:53Z",
+      "categories": [
+        "eess.SY",
+        "cs.RO"
+      ],
+      "primary_category": "eess.SY"
+    },
+    {
+      "id": "2604.21729v1",
+      "title": "A Compact Peristaltic Pump Based on Magneto-Elastic Hysteresis with Single Pneumatic Control",
+      "authors": [
+        "Minjo Park",
+        "Metin Sitti"
+      ],
+      "abstract": "Pumping fluids is fundamental to a wide range of industrial, environmental, and biomedical applications. Among various pumping mechanisms, peristaltic pumps enable efficient and safe fluid transport by deforming an elastic tube without direct contact with the working fluid. Although previous studies have introduced mechanical, pneumatic, or magnetic actuations to drive membrane deformation, these approaches often lead to complex pump architectures and control schemes. In this study, we present a soft membrane pump that achieves peristaltic motion through a single pneumatic input combined with an embedded passive magnet. The actuation mechanism and system dynamics were analyzed and simplified through modeling. Numerical simulations were conducted to predict the internal fluid flow, and the magneto-elastic hysteresis behavior observed in the simulations was successfully validated by experiments with a proof-of-concept prototype.",
+      "url": "https://arxiv.org/abs/2604.21729v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.21729v1",
+      "published": "2026-04-23T14:33:31Z",
+      "updated": "2026-04-23T14:33:31Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2604.21707v1",
+      "title": "Effects of Swarm Size Variability on Operator Workload",
+      "authors": [
+        "William Hunt",
+        "Aleksandra Landowska",
+        "Horia A. Maior",
+        "Sarvapali D. Ramchurn",
+        "Mohammad Soorati"
+      ],
+      "abstract": "Real-world deployments of human--swarm teams depend on balancing operator workload to leverage human strengths without inducing overload. A key challenge is that swarm size is often dynamic: robots may join or leave the mission due to failures or redeployment, causing abrupt workload fluctuations. Understanding how such changes affect human workload and performance is critical for robust human--swarm interaction design. This paper investigates how the magnitude and direction of changes in swarm size influence operator workload. Drawing on the concept of workload history, we test three hypotheses: (1) workload remains elevated following decreases in swarm size, (2) small increases are more manageable than large jumps, and (3) sufficiently large changes override these effects by inducing a cognitive reset. We conducted two studies (N = 34) using a monitoring task with simulated drone swarms of varying sizes. By varying the swarm size between episodes, we measured perceived workload relative to swarm size changes. Results show that objective performance is largely unaffected by small changes in swarm size, while subjective workload is sensitive to both change direction and magnitude. Small increases preserve lower workload, whereas small decreases leave workload elevated, indicating workload residue; large changes in either direction attenuate these effects, suggesting a reset response. These findings offer actionable guidance for managing swarm-size transitions to support operator workload in dynamic human--swarm systems.",
+      "url": "https://arxiv.org/abs/2604.21707v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.21707v1",
+      "published": "2026-04-23T14:14:11Z",
+      "updated": "2026-04-23T14:14:11Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2604.21693v1",
+      "title": "SLAM as a Stochastic Control Problem with Partial Information: Optimal Solutions and Rigorous Approximations",
+      "authors": [
+        "Ilir Gusija",
+        "Fady Alajaji",
+        "Serdar Y\u00fcksel"
+      ],
+      "abstract": "Simultaneous localization and mapping (SLAM) is a foundational state estimation problem in robotics in which a robot accurately constructs a map of its environment while also localizing itself within this construction. We study the active SLAM problem through the lens of optimal stochastic control, thereby recasting it as a decision-making problem under partial information. After reviewing several commonly studied models, we present a general stochastic control formulation of active SLAM together with a rigorous treatment of motion, sensing, and map representation. We introduce a new exploration stage cost that encodes the geometry of the state when evaluating information-gathering actions. This formulation, constructed as a nonstandard partially observable Markov decision process (POMDP), is then analyzed to derive rigorously justified approximate solutions that are near-optimal. To enable this analysis, the associated regularity conditions are studied under general assumptions that apply to a wide range of robotics applications. For a particular case, we conduct an extensive numerical study in which standard learning algorithms are used to learn near-optimal policies.",
+      "url": "https://arxiv.org/abs/2604.21693v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.21693v1",
+      "published": "2026-04-23T13:59:19Z",
+      "updated": "2026-04-23T13:59:19Z",
+      "categories": [
+        "cs.RO",
+        "math.OC"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2604.21685v1",
+      "title": "Resilience Revisited: A Multidimensional Framework Derived from Realistic Attack Scenarios",
+      "authors": [
+        "Isaac Ortega Romero",
+        "Ioannis Zografopoulos"
+      ],
+      "abstract": "Power systems are increasingly vulnerable to high-impact, low-probability (HILP) events, including coordinated cyberattacks targeting inverter-based resources. Existing resilience frameworks rely on single-dimensional metrics that fail to capture cross-dimensional coupling effects, underestimating real system degradation under multi-vector attack conditions. This study proposes a Multidimensional Resilience Index (MDRI) that decomposes power system degradation into five interacting dimensions: physical, operational, digital-cyber, climatic, and regulatory, explicitly separating independent and coupled contributions via a calibrated multiplicative interaction term. The framework is validated on the IEEE 39-bus system under two attack scenarios derived from the December 2025 cyberattack on the Polish energy infrastructure. MDRI results show that multi-vector attacks produce degradation exceeding linear expectations by a factor of 5.6, with simultaneous dimensional failures contributing an additional 60.6% through endogenous coupling, and exogenous factors amplifying it by an additional 84%.",
+      "url": "https://arxiv.org/abs/2604.21685v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.21685v1",
+      "published": "2026-04-23T13:50:12Z",
+      "updated": "2026-04-23T13:50:12Z",
+      "categories": [
+        "eess.SY"
+      ],
+      "primary_category": "eess.SY"
     }
   ]
 }
