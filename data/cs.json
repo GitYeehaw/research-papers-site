@@ -2,224 +2,226 @@
   "category": "cs",
   "name": "CS Research",
   "description": "Computer Science \u2014 AI, Machine Learning, NLP, Computer Vision",
-  "scraped_at": "2026-04-28T10:22:50.834609+00:00",
+  "scraped_at": "2026-04-29T10:13:57.120083+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2604.24764v1",
-      "title": "World-R1: Reinforcing 3D Constraints for Text-to-Video Generation",
+      "id": "2604.25917v1",
+      "title": "Recursive Multi-Agent Systems",
       "authors": [
-        "Weijie Wang",
-        "Xiaoxuan He",
-        "Youping Gu",
-        "Yifan Yang",
-        "Zeyu Zhang",
-        "Yefei He",
-        "Yanbo Ding",
-        "Xirui Hu",
-        "Donny Y. Chen",
-        "Zhiyuan He",
-        "Yuqing Yang",
-        "Bohan Zhuang"
+        "Xiyuan Yang",
+        "Jiaru Zou",
+        "Rui Pan",
+        "Ruizhong Qiu",
+        "Pan Lu",
+        "Shizhe Diao",
+        "Jindong Jiang",
+        "Hanghang Tong",
+        "Tong Zhang",
+        "Markus J. Buehler",
+        "Jingrui He",
+        "James Zou"
       ],
-      "abstract": "Recent video foundation models demonstrate impressive visual synthesis but frequently suffer from geometric inconsistencies. While existing methods attempt to inject 3D priors via architectural modifications, they often incur high computational costs and limit scalability. We propose World-R1, a framework that aligns video generation with 3D constraints through reinforcement learning. To facilitate this alignment, we introduce a specialized pure text dataset tailored for world simulation. Utilizing Flow-GRPO, we optimize the model using feedback from pre-trained 3D foundation models and vision-language models to enforce structural coherence without altering the underlying architecture. We further employ a periodic decoupled training strategy to balance rigid geometric consistency with dynamic scene fluidity. Extensive evaluations reveal that our approach significantly enhances 3D consistency while preserving the original visual quality of the foundation model, effectively bridging the gap between video generation and scalable world simulation.",
-      "url": "https://arxiv.org/abs/2604.24764v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.24764v1",
-      "published": "2026-04-27T17:59:56Z",
-      "updated": "2026-04-27T17:59:56Z",
+      "abstract": "Recursive or looped language models have recently emerged as a new scaling axis by iteratively refining the same model computation over latent states to deepen reasoning. We extend such scaling principle from a single model to multi-agent systems, and ask: Can agent collaboration itself be scaled through recursion? To this end, we introduce RecursiveMAS, a recursive multi-agent framework that casts the entire system as a unified latent-space recursive computation. RecursiveMAS connects heterogeneous agents as a collaboration loop through the lightweight RecursiveLink module, enabling in-distribution latent thoughts generation and cross-agent latent state transfer. To optimize our framework, we develop an inner-outer loop learning algorithm for iterative whole-system co-optimization through shared gradient-based credit assignment across recursion rounds. Theoretical analyses of runtime complexity and learning dynamics establish that RecursiveMAS is more efficient than standard text-based MAS and maintains stable gradients during recursive training. Empirically, we instantiate RecursiveMAS under 4 representative agent collaboration patterns and evaluate across 9 benchmarks spanning mathematics, science, medicine, search, and code generation. In comparison with advanced single/multi-agent and recursive computation baselines, RecursiveMAS consistently delivers an average accuracy improvement of 8.3%, together with 1.2$\\times$-2.4$\\times$ end-to-end inference speedup, and 34.6%-75.6% token usage reduction. Code and Data are provided in https://recursivemas.github.io.",
+      "url": "https://arxiv.org/abs/2604.25917v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.25917v1",
+      "published": "2026-04-28T17:59:34Z",
+      "updated": "2026-04-28T17:59:34Z",
       "categories": [
-        "cs.CV"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2604.24763v1",
-      "title": "Tuna-2: Pixel Embeddings Beat Vision Encoders for Multimodal Understanding and Generation",
-      "authors": [
-        "Zhiheng Liu",
-        "Weiming Ren",
-        "Xiaoke Huang",
-        "Shoufa Chen",
-        "Tianhong Li",
-        "Mengzhao Chen",
-        "Yatai Ji",
-        "Sen He",
-        "Jonas Schult",
-        "Belinda Zeng",
-        "Tao Xiang",
-        "Wenhu Chen",
-        "Ping Luo",
-        "Luke Zettlemoyer",
-        "Yuren Cong"
-      ],
-      "abstract": "Unified multimodal models typically rely on pretrained vision encoders and use separate visual representations for understanding and generation, creating misalignment between the two tasks and preventing fully end-to-end optimization from raw pixels. We introduce Tuna-2, a native unified multimodal model that performs visual understanding and generation directly based on pixel embeddings. Tuna-2 drastically simplifies the model architecture by employing simple patch embedding layers to encode visual input, completely discarding the modular vision encoder designs such as the VAE or the representation encoder. Experiments show that Tuna-2 achieves state-of-the-art performance in multimodal benchmarks, demonstrating that unified pixel-space modelling can fully compete with latent-space approaches for high-quality image generation. Moreover, while the encoder-based variant converges faster in early pretraining, Tuna-2's encoder-free design achieves stronger multimodal understanding at scale, particularly on tasks requiring fine-grained visual perception. These results show that pretrained vision encoders are not necessary for multimodal modelling, and end-to-end pixel-space learning offers a scalable path toward stronger visual representations for both generation and perception.",
-      "url": "https://arxiv.org/abs/2604.24763v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.24763v1",
-      "published": "2026-04-27T17:59:56Z",
-      "updated": "2026-04-27T17:59:56Z",
-      "categories": [
-        "cs.CV"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2604.24762v1",
-      "title": "OmniShotCut: Holistic Relational Shot Boundary Detection with Shot-Query Transformer",
-      "authors": [
-        "Boyang Wang",
-        "Guangyi Xu",
-        "Zhipeng Tang",
-        "Jiahui Zhang",
-        "Zezhou Cheng"
-      ],
-      "abstract": "Shot Boundary Detection (SBD) aims to automatically identify shot changes and divide a video into coherent shots. While SBD was widely studied in the literature, existing state-of-the-art methods often produce non-interpretable boundaries on transitions, miss subtle yet harmful discontinuities, and rely on noisy, low-diversity annotations and outdated benchmarks. To alleviate these limitations, we propose OmniShotCut to formulate SBD as structured relational prediction, jointly estimating shot ranges with intra-shot relations and inter-shot relations, by a shot query-based dense video Transformer. To avoid imprecise manual labeling, we adopt a fully synthetic transition synthesis pipeline that automatically reproduces major transition families with precise boundaries and parameterized variants. We also introduce OmniShotCutBench, a modern wide-domain benchmark enabling holistic and diagnostic evaluation.",
-      "url": "https://arxiv.org/abs/2604.24762v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.24762v1",
-      "published": "2026-04-27T17:59:19Z",
-      "updated": "2026-04-27T17:59:19Z",
-      "categories": [
-        "cs.CV"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2604.24758v1",
-      "title": "Personalized Worked Example Generation from Student Code Submissions using Pattern-based Knowledge Components",
-      "authors": [
-        "Griffin Pitts",
-        "Muntasir Hoq",
-        "Peter Brusilovsky",
-        "Narges Norouzi",
-        "Arto Hellas",
-        "Juho Leinonen",
-        "Bita Akram"
-      ],
-      "abstract": "Adaptive programming practice often relies on fixed libraries of worked examples and practice problems, which require substantial authoring effort and may not correspond well to the logical errors and partial solutions students produce while writing code. As a result, students may receive learning content that does not directly address the concepts they are working to understand, while instructors must either invest additional effort in expanding content libraries or accept a coarse level of personalization. We present an approach for knowledge-component (KC) guided educational content generation using pattern-based KCs extracted from student code. Given a problem statement and student submissions, our pipeline extracts recurring structural KC patterns from students' code through AST-based analysis and uses them to condition a generative model. In this study, we apply this approach to worked example generation, and compare baseline and KC-conditioned outputs through expert evaluation. Results suggest that KC-conditioned generation improves topical focus and relevance to learners' underlying logical errors, providing evidence that KC-based steering of generative models can support personalized learning at scale.",
-      "url": "https://arxiv.org/abs/2604.24758v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.24758v1",
-      "published": "2026-04-27T17:56:56Z",
-      "updated": "2026-04-27T17:56:56Z",
-      "categories": [
-        "cs.HC",
         "cs.AI",
-        "cs.CY",
-        "cs.ET",
+        "cs.CL",
         "cs.LG"
       ],
-      "primary_category": "cs.HC"
+      "primary_category": "cs.AI"
     },
     {
-      "id": "2604.24749v1",
-      "title": "The Optimal Sample Complexity of Multiclass and List Learning",
+      "id": "2604.25914v1",
+      "title": "DV-World: Benchmarking Data Visualization Agents in Real-World Scenarios",
       "authors": [
-        "Chirag Pabbaraju"
+        "Jinxiang Meng",
+        "Shaoping Huang",
+        "Fangyu Lei",
+        "Jingyu Guo",
+        "Haoxiang Liu",
+        "Jiahao Su",
+        "Sihan Wang",
+        "Yao Wang",
+        "Enrui Wang",
+        "Ye Yang",
+        "Hongze Chai",
+        "Jinming Lv",
+        "Anbang Yu",
+        "Huangjing Zhang",
+        "Yitong Zhang",
+        "Yiming Huang",
+        "Zeyao Ma",
+        "Shizhu He",
+        "Jun Zhao",
+        "Kang Liu"
       ],
-      "abstract": "While the optimal sample complexity of binary classification in terms of the VC dimension is well-established, determining the optimal sample complexity of multiclass classification has remained open. The appropriate complexity parameter for multiclass classification is the DS dimension, and despite significant efforts, a gap of $\\sqrt{\\text{DS}}$ has persisted between the upper and lower bounds on sample complexity.   Recent work by Hanneke et al. (2026) shows a novel algebraic characterization of multiclass hypothesis classes in terms of their DS dimension. Building up on this, we show that the maximum hypergraph density of any multiclass hypothesis class is upper-bounded by its DS dimension. This proves a longstanding conjecture of Daniely and Shalev-Shwartz (2014). As a consequence, we determine the optimal dependence of the sample complexity on the DS dimension for multiclass as well as list learning.",
-      "url": "https://arxiv.org/abs/2604.24749v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.24749v1",
-      "published": "2026-04-27T17:54:12Z",
-      "updated": "2026-04-27T17:54:12Z",
-      "categories": [
-        "cs.LG",
-        "stat.ML"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2604.24745v1",
-      "title": "Conflict-Aware Harmonized Rotational Gradient for Multiscale Kinetic Regimes",
-      "authors": [
-        "Zhangyong Liang"
-      ],
-      "abstract": "In this paper, we propose a harmonized rotational gradient method, termed HRGrad, for simultaneously tackling multiscale time-dependent kinetic problems with varying small parameters.   These parameters exhibit asymptotic transitions from microscopic to macroscopic physics, making it a challenging multi-task problem to solve over all ranges simultaneously.   Solving tasks in different asymptotic regions often encounter gradient conflicts, which can lead to the failure of multi-task learning.   To address this challenge, we explicitly encode a hidden representation of these parameters, ensuring that the corresponding solving tasks are serialized for simultaneous training.   Furthermore, to mitigate gradient conflicts, we segment the prediction results to construct task losses and introduce a novel gradient alignment metric to ensure a positive dot product between the final update and each loss-specific gradient.   This metric maintains consistent optimization rates for all task losses and dynamically adjusts gradient magnitudes based on conflict levels.   Moreover, we provide a mathematical proof demonstrating the convergence of the HRGrad method, which is evaluated across a range of challenging asymptotic-preserving neural networks (APNNs) scenarios.   We conduct an extensive set of experiments encompassing the Bhatnagar-Gross-Krook (BGK) equation and the linear transport equation in all ranges of Knudsen number.   Our results indicate that HRGrad effectively overcomes the `failure modes' of APNNs in these problems.",
-      "url": "https://arxiv.org/abs/2604.24745v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.24745v1",
-      "published": "2026-04-27T17:47:42Z",
-      "updated": "2026-04-27T17:47:42Z",
-      "categories": [
-        "cs.LG"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2604.24737v1",
-      "title": "Learning to Think from Multiple Thinkers",
-      "authors": [
-        "Nirmit Joshi",
-        "Roey Magen",
-        "Nathan Srebro",
-        "Nikolaos Tsilivis",
-        "Gal Vardi"
-      ],
-      "abstract": "We study learning with Chain-of-Thought (CoT) supervision from multiple thinkers, all of whom provide correct but possibly systematically different solutions, e.g., step-by-step solutions to math problems written by different thinkers, or step-by-step execution traces of different programs solving the same problem.   We consider classes that are computationally easy to learn using CoT supervision from a single thinker, but hard to learn with only end-result supervision, i.e., without CoT (Joshi et al. 2025). We establish that, under cryptographic assumptions, learning can be hard from CoT supervision provided by two or a few different thinkers, in passive data-collection settings.   On the other hand, we provide a generic computationally efficient active learning algorithm that learns with a small amount of CoT data per thinker that is completely independent of the target accuracy $\\varepsilon$, a moderate number of thinkers that scales as $\\log \\frac{1}{\\varepsilon}\\log \\log \\frac{1}{\\varepsilon}$, and sufficient passive end-result data that scales as $\\frac{1}{\\varepsilon}\\cdot poly\\log\\frac{1}{\\varepsilon}$.",
-      "url": "https://arxiv.org/abs/2604.24737v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.24737v1",
-      "published": "2026-04-27T17:43:44Z",
-      "updated": "2026-04-27T17:43:44Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CC",
-        "stat.ML"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2604.24729v1",
-      "title": "SpecRLBench: A Benchmark for Generalization in Specification-Guided Reinforcement Learning",
-      "authors": [
-        "Zijian Guo",
-        "\u0130lker I\u015f\u0131k",
-        "H. M. Sabbir Ahmad",
-        "Wenchao Li"
-      ],
-      "abstract": "Specification-guided reinforcement learning (RL) provides a principled framework for encoding complex, temporally extended tasks using formal specifications such as linear temporal logic (LTL). While recent methods have shown promising results, their ability to generalize across unseen specifications and diverse environments remains insufficiently understood. In this work, we introduce SpecRLBench, a benchmark designed to evaluate the generalization capabilities of LTL-based specification-guided RL methods. The benchmark spans multiple difficulty levels across navigation and manipulation domains, incorporating both static and dynamic environments, diverse robot dynamics, and varied observation modalities. Through extensive empirical evaluation, we characterize the strengths and limitations of existing approaches and reveal the challenges that emerge as specification and environment complexity increase. SpecRLBench provides a structured platform for systematic comparison and supports the development of more generalizable specification-guided RL methods. Code is available at https://github.com/BU-DEPEND-Lab/SpecRLBench.",
-      "url": "https://arxiv.org/abs/2604.24729v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.24729v1",
-      "published": "2026-04-27T17:40:18Z",
-      "updated": "2026-04-27T17:40:18Z",
-      "categories": [
-        "cs.LG"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2604.24720v1",
-      "title": "Sentiment and Emotion Classification of Indonesian E-Commerce Reviews via Multi-Task BiLSTM and AutoML Benchmarking",
-      "authors": [
-        "Hermawan Manurung",
-        "Ibrahim Al-Kahfi",
-        "Ahmad Rizqi",
-        "Martin Clinton Tosima Manullang"
-      ],
-      "abstract": "Indonesian marketplace reviews mix standard vocabulary with slang, regional loanwords, numeric shorthands, and emoji, making lexicon-based sentiment tools unreliable in practice. This paper describes a two-track classification pipeline applied to the PRDECT-ID dataset, which contains 5,400 product reviews from 29 Indonesian e-commerce categories, each labeled for binary sentiment (Positive/Negative) and five-class emotion (Happy, Sad, Fear, Love, Anger). The first track applies TF-IDF vectorization with a PyCaret AutoML sweep across standard classifiers. The second track is a PyTorch Bidirectional Long Short-Term Memory (BiLSTM) network with a shared encoder and two task-specific output heads. A preprocessing module applies 14 sequential cleaning steps, including a 140-entry slang dictionary assembled from marketplace corpora. Four configurations are benchmarked: BiLSTM Baseline, BiLSTM Improved, BiLSTM Large, and TextCNN. Training uses class-weighted cross-entropy loss, ReduceLROnPlateau scheduling, and early stopping. Both tracks are deployed as Gradio applications on Hugging Face Spaces. Source code is publicly available at https://github.com/ikii-sd/pba2026-crazyrichteam.",
-      "url": "https://arxiv.org/abs/2604.24720v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.24720v1",
-      "published": "2026-04-27T17:30:38Z",
-      "updated": "2026-04-27T17:30:38Z",
+      "abstract": "Real-world data visualization (DV) requires native environmental grounding, cross-platform evolution, and proactive intent alignment. Yet, existing benchmarks often suffer from code-sandbox confinement, single-language creation-only tasks, and assumption of perfect intent. To bridge these gaps, we introduce DV-World, a benchmark of 260 tasks designed to evaluate DV agents across real-world professional lifecycles. DV-World spans three domains: DV-Sheet for native spreadsheet manipulation including chart and dashboard creation as well as diagnostic repair; DV-Evolution for adapting and restructuring reference visual artifacts to fit new data across diverse programming paradigms and DV-Interact for proactive intent alignment with a user simulator that mimics real-world ambiguous requirements. Our hybrid evaluation framework integrates Table-value Alignment for numerical precision and MLLM-as-a-Judge with rubrics for semantic-visual assessment. Experiments reveal that state-of-the-art models achieve less than 50% overall performance, exposing critical deficits in handling the complex challenges of real-world data visualization. DV-World provides a realistic testbed to steer development toward the versatile expertise required in enterprise workflows. Our data and code are available at \\href{https://github.com/DA-Open/DV-World}{this project page}.",
+      "url": "https://arxiv.org/abs/2604.25914v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.25914v1",
+      "published": "2026-04-28T17:58:21Z",
+      "updated": "2026-04-28T17:58:21Z",
       "categories": [
         "cs.CL"
       ],
       "primary_category": "cs.CL"
     },
     {
-      "id": "2604.24719v1",
-      "title": "DiffuSAM: Diffusion-Based Prompt-Free SAM2 for Few-Shot and Source-Free Medical Image Segmentation",
+      "id": "2604.25907v1",
+      "title": "How Fast Should a Model Commit to Supervision? Training Reasoning Models on the Tsallis Loss Continuum",
       "authors": [
-        "Tal Grossman",
-        "Noa Cahan",
-        "Lev Ayzenberg",
-        "Hayit Greenspan"
+        "Chu-Cheng Lin",
+        "Eugene Ie"
       ],
-      "abstract": "Segmentation models such as Segment Anything Model (SAM) and SAM2 achieve strong prompt-driven zero-shot performance. However, their training on natural images limits domain transfer to medical data. Consequently, accurate segmentation typically requires extensive fine-tuning and expert-designed prompts. We propose DiffuSAM, a diffusion-based adaptation of SAM2 for prompt-free medical image segmentation. Our framework synthesizes SAM2-compatible segmentation mask-like embeddings via a lightweight diffusion-prior from off-the-shelf frozen SAM2 image features. The generated embeddings are integrated into SAM2's mask decoder to produce accurate segmentations, thereby eliminating the need for user prompts. The diffusion prior is further conditioned on previously segmented slices, enforcing spatial consistency across volumes. Evaluated on the BTCV and CHAOS datasets for CT and MRI under Source-Free Unsupervised Domain Adaptation (SF-UDA) and Few-Shot settings, DiffuSAM achieves competitive performance with efficient training and inference. Code is available upon request from the corresponding author.",
-      "url": "https://arxiv.org/abs/2604.24719v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.24719v1",
-      "published": "2026-04-27T17:29:53Z",
-      "updated": "2026-04-27T17:29:53Z",
+      "abstract": "Adapting reasoning models to new tasks during post-training with only output-level supervision stalls under reinforcement learning from verifiable rewards (RLVR) when the initial success probability $p_0$ is small. Using the Tsallis $q$-logarithm, we define a loss family $J_Q$ that interpolates between RLVR (at $q{=}0$, the exploitation pole) and the log-marginal-likelihood over latent trajectories (at $q{=}1$, the density-estimation pole). All members share the same per-example gradient direction, differing only by a scalar amplification $P_{\u03b8^{-q}}$ that reweights each instance independently of the learning rate. This amplification is the mechanism that addresses cold-start stalling: under gradient flow, the exploitation pole requires $\u03a9(\\frac{1}{p_0})$ time to escape cold start, while the density-estimation pole escapes in $\u0398\\big(\\log(\\frac{1}{p_0})\\big)$; intermediate $q$ trades escape speed against noise memorization. Because $P_\u03b8$ is intractable, we derive two Monte Carlo estimators from the two factorizations of the gradient: Gradient-Amplified RL (GARL) samples from the prior and amplifies the RL gradient, and Posterior-Attenuated Fine-Tuning (PAFT) importance-resamples from the posterior and runs standard SFT. Both have bias $O\\big(\\frac{q}{M P_\u03b8^{q+1}}\\big)$; GARL has lower variance, PAFT has semantically coherent gradients. On FinQA, HotPotQA, and MuSiQue, GARL at $q{=}0.75$ substantially mitigates cold-start stalling, escaping cold start where GRPO fails entirely. In warm start, GARL at low $q$ dominates FinQA where training is stable; on HotPotQA and MuSiQue, GARL destabilizes during training, and PAFT at $q{=}0.75$ provides stable gradients (best overall on HotPotQA at 47.9 maj@16, $+14.4$ over GRPO).",
+      "url": "https://arxiv.org/abs/2604.25907v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.25907v1",
+      "published": "2026-04-28T17:52:38Z",
+      "updated": "2026-04-28T17:52:38Z",
       "categories": [
-        "cs.CV"
+        "cs.LG",
+        "cs.AI"
       ],
-      "primary_category": "cs.CV"
+      "primary_category": "cs.LG"
+    },
+    {
+      "id": "2604.25905v1",
+      "title": "A paradox of AI fluency",
+      "authors": [
+        "Christopher Potts",
+        "Moritz Sudhof"
+      ],
+      "abstract": "How much does a user's skill with AI shape what AI actually delivers for them? This question is critical for users, AI product builders, and society at large, but it remains underexplored. Using a richly annotated sample of 27K transcripts from WildChat-4.8M, we show that fluent users take on more complex tasks than novices and adopt a fundamentally different interactional mode: they iterate collaboratively with the AI, refining goals and critically assessing outputs, whereas novices take a passive stance. These differences lead to a paradox of AI fluency: fluent users experience more failures than novices -- but their failures tend to be visible (a direct consequence of their engagement), they are more likely to lead to partial recovery, and they occur alongside greater success on complex tasks. Novices, by contrast, more often experience invisible failures: conversations that appear to end successfully but in fact miss the mark. Taken together, these results reframe what success with AI depends on. Individuals should adopt a stance of active engagement rather than passive acceptance. AI product builders should recognize that they are designing not just model behavior but user behavior; encouraging deep engagement, rather than friction-free experiences, will lead to more success overall. Our code and data are available at https://github.com/bigspinai/bigspin-fluency-outcomes",
+      "url": "https://arxiv.org/abs/2604.25905v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.25905v1",
+      "published": "2026-04-28T17:51:13Z",
+      "updated": "2026-04-28T17:51:13Z",
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL"
+    },
+    {
+      "id": "2604.25904v1",
+      "title": "Teacher Forcing as Generalized Bayes: Optimization Geometry Mismatch in Switching Surrogates for Chaotic Dynamics",
+      "authors": [
+        "Andre Herz",
+        "Daniel Durstewitz",
+        "Georgia Koppe"
+      ],
+      "abstract": "Identity teacher forcing (ITF) enables stable training of deterministic recurrent surrogates for chaotic dynamical systems and has been highly effective for dynamical systems reconstruction (DSR) with recurrent neural networks (RNNs), including interpretable almost-linear RNNs (AL-RNNs). However, as an intervention-based prediction loss (and thus a generalized Bayes update), teacher forcing need not match the free-running model's marginal likelihood geometry. We compare the objective-induced curvatures of ITF and marginal likelihood in a probabilistic switching augmentation of AL-RNNs, estimating ambiguity-aware observed information via Louis' identity. In the switching setting studied here, conditioning on a single forced regime path (as ITF does) inflates curvature, while marginal likelihood curvature is reduced by a missing-information correction when multiple switching explanations remain plausible. In Lorenz-63 experiments, windowed evidence fine-tuning improves held-out evidence but can degrade dynamical quantities of interest (QoIs) relative to ITF-pretrained models.",
+      "url": "https://arxiv.org/abs/2604.25904v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.25904v1",
+      "published": "2026-04-28T17:50:37Z",
+      "updated": "2026-04-28T17:50:37Z",
+      "categories": [
+        "cs.LG",
+        "math.DS",
+        "stat.ML"
+      ],
+      "primary_category": "cs.LG"
+    },
+    {
+      "id": "2604.25903v1",
+      "title": "Carbon-Taxed Transformers: A Green Compression Pipeline for Overgrown Language Models",
+      "authors": [
+        "Ajmain Inqiad Alam",
+        "Palash Roy",
+        "Chanchal K. Roy",
+        "Banani Roy",
+        "Kevin A. Schneider"
+      ],
+      "abstract": "The accelerating adoption of Large Language Models (LLMs) in software engineering (SE) has brought with it a silent crisis: unsustainable computational cost. While these models demonstrate remarkable capabilities in different SE tasks, they are unmanageably large, slow to deploy, memory-intensive, and carbon-heavy. This reality threatens not only the scalability and accessibility of AI-powered SE, but also its long-term environmental sustainability. The research challenge is clear: we must go beyond accuracy and address efficiency and environmental cost as first-class design constraints. To meet this challenge, we introduce Carbon-Taxed Transformers (CTT), a systematic multi-architectural compression principled pipeline ordering inspired by economic carbon taxation principles. Drawing from the economic concept of carbon pricing, CTT operationalizes a computational carbon tax that penalizes architectural inefficiencies and rewards deployment-ready compression. We evaluate CTT across three core SE tasks: code clone detection, code summarization, and code generation, with models spanning encoder-only, encoder-decoder, and decoder-only architecture. Our results show that CTT delivers on inference: (1) up to 49x memory reduction, (2) time reduction up to 8-10x for clone detection, up to 3x for summarization, and 4-7x for generation, (3) up to 81% reduction in CO2 emissions and (4) CTT retains around 98% accuracy on clone detection, around 89% on summarization, and up to 91% (textual metrics) and 68% (pass@1) for generation. Two ablation studies show that pipeline ordering and individual component contributions are both essential, providing empirical justification for CTT's design and effectiveness. This work establishes a viable path toward responsible AI in SE through aggressive yet performance-preserving compression.",
+      "url": "https://arxiv.org/abs/2604.25903v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.25903v1",
+      "published": "2026-04-28T17:48:16Z",
+      "updated": "2026-04-28T17:48:16Z",
+      "categories": [
+        "cs.SE",
+        "cs.LG"
+      ],
+      "primary_category": "cs.SE"
+    },
+    {
+      "id": "2604.25902v1",
+      "title": "Toward a Functional Geometric Algebra for Natural Language Semantics",
+      "authors": [
+        "James Pustejovsky"
+      ],
+      "abstract": "Distributional and neural approaches to natural language semantics have been built almost exclusively on conventional linear algebra: vectors, matrices, tensors, and the operations that accompany them. These methods have achieved remarkable empirical success, yet they face persistent structural limitations in compositional semantics, type sensitivity, and interpretability. I argue in this paper that geometric algebra (GA) -- specifically, Clifford algebras -- provides a mathematically superior foundation for semantic representation, and that a Functional Geometric Algebra (FGA) framework extends GA toward a typed, compositional semantics capable of supporting inference, transformation, and interpretability while retaining full compatibility with distributional learning and modern neural architectures. I develop the formal foundations, identify three core capabilities that GA provides and linear algebra does not, present a detailed worked example illustrating operator-level semantic contrasts, and show how GA-based operations already implicit in current transformer architectures can be made explicit and extended. The central claim is not merely increased dimensionality but increased structural organization: GA expands an $n$-dimensional embedding space into a $2^n$ multivector algebra where base semantic concepts and their higher-order interactions are represented within a single, principled algebraic framework.",
+      "url": "https://arxiv.org/abs/2604.25902v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.25902v1",
+      "published": "2026-04-28T17:47:46Z",
+      "updated": "2026-04-28T17:47:46Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "primary_category": "cs.CL"
+    },
+    {
+      "id": "2604.25898v1",
+      "title": "TSN-Affinity: Similarity-Driven Parameter Reuse for Continual Offline Reinforcement Learning",
+      "authors": [
+        "Dominik \u017burek",
+        "Kamil Faber",
+        "Marcin Pietron",
+        "Pawe\u0142 Gajewski",
+        "Roberto Corizzo"
+      ],
+      "abstract": "Continual offline reinforcement learning (CORL) aims to learn a sequence of tasks from datasets collected over time while preserving performance on previously learned tasks. This setting corresponds to domains where new tasks arise over time, but adapting the model in live environment interactions is expensive, risky, or impossible. However, CORL inherits the dual difficulty of offline reinforcement learning and adapting while preventing catastrophic forgetting. Replay-based continual learning approaches remain a strong baseline but incur memory overhead and suffer from a distribution mismatch between replayed samples and newly learned policies. At the same time, architectural continual learning methods have shown strong potential in supervised learning but remain underexplored in CORL. In this work, we propose TSN-Affinity, a novel CORL method based on TinySubNetworks and Decision Transformer. The method enables task-specific parameterization and controlled knowledge sharing through a RL-aware reuse strategy that routes tasks according to action compatibility and latent similarity. We evaluate the approach on benchmarks based on Atari games and simulations of manipulation tasks with the Franka Emika Panda robotic arm, covering both discrete and continuous control. Results show strong retention from sparse SubNetworks, with routing further improving multi-task performance. Our findings suggest that similarity-guided architectural reuse is a strong and viable alternative to replay-based strategies in a CORL setting. Our code is available at: https://github.com/anonymized-for-submission123/tsn-affinity.",
+      "url": "https://arxiv.org/abs/2604.25898v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.25898v1",
+      "published": "2026-04-28T17:41:04Z",
+      "updated": "2026-04-28T17:41:04Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "primary_category": "cs.LG"
+    },
+    {
+      "id": "2604.25897v1",
+      "title": "Variational Neural Belief Parameterizations for Robust Dexterous Grasping under Multimodal Uncertainty",
+      "authors": [
+        "Clinton Enwerem",
+        "Shreya Kalyanaraman",
+        "John S. Baras",
+        "Calin Belta"
+      ],
+      "abstract": "Contact variability, sensing uncertainty, and external disturbances make grasp execution stochastic. Expected-quality objectives ignore tail outcomes and often select grasps that fail under adverse contact realizations. Risk-sensitive POMDPs address this failure mode, but many use particle-filter beliefs that scale poorly, obstruct gradient-based optimization, and estimate Conditional Value-at-Risk (CVaR) with high-variance approximations. We instead formulate grasp acquisition as variational inference over latent contact parameters and object pose, representing the belief with a differentiable Gaussian mixture. We use Gumbel-Softmax component selection and location-scale reparameterization to express samples as smooth functions of the belief parameters, enabling pathwise gradients through a differentiable CVaR surrogate for direct optimization of tail robustness. In simulation, our variational neural belief improves robust grasp success under contact-parameter uncertainty and exogenous force perturbations while reducing planning time by roughly an order of magnitude relative to particle-filter model-predictive control. On a serial-chain robot arm with a multifingered hand, we validate grasp-and-lift success under object-pose uncertainty against a Gaussian baseline. Both methods succeed on the tested perturbations, but our controller terminates in fewer steps and less wall-clock time while achieving a higher tactile grasp-quality proxy. Our learned belief also calibrates risk more accurately, keeping mean absolute calibration error below 0.14 across tested simulation regimes, compared with 0.58 for a Cross-Entropy Method planner.",
+      "url": "https://arxiv.org/abs/2604.25897v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.25897v1",
+      "published": "2026-04-28T17:40:49Z",
+      "updated": "2026-04-28T17:40:49Z",
+      "categories": [
+        "cs.RO",
+        "cs.LG",
+        "eess.SY"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2604.25895v1",
+      "title": "Three Models of RLHF Annotation: Extension, Evidence, and Authority",
+      "authors": [
+        "Steve Coyne"
+      ],
+      "abstract": "Preference-based alignment methods, most prominently Reinforcement Learning with Human Feedback (RLHF), use the judgments of human annotators to shape large language model behaviour. However, the normative role of these judgments is rarely made explicit. I distinguish three conceptual models of that role. The first is extension: annotators extend the system designers' own judgments about what outputs should be. The second is evidence: annotators provide independent evidence about some facts, whether moral, social or otherwise. The third is authority: annotators have some independent authority (as representatives of the broader population) to determine system outputs. I argue that these models have implications for how RLHF pipelines should solicit, validate and aggregate annotations. I survey landmark papers in the literature on RLHF and related methods to illustrate how they implicitly draw on these models, describe failure modes that come from unintentionally or intentionally conflating them, and offer normative criteria for choosing among them. My central recommendation is that RLHF pipeline designers should decompose annotation into separable dimensions and tailor each pipeline to the model most appropriate for that dimension, rather than seeking a single unified pipeline.",
+      "url": "https://arxiv.org/abs/2604.25895v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.25895v1",
+      "published": "2026-04-28T17:39:14Z",
+      "updated": "2026-04-28T17:39:14Z",
+      "categories": [
+        "cs.CY",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "primary_category": "cs.CY"
     }
   ]
 }
