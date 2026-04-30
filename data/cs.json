@@ -2,226 +2,222 @@
   "category": "cs",
   "name": "CS Research",
   "description": "Computer Science \u2014 AI, Machine Learning, NLP, Computer Vision",
-  "scraped_at": "2026-04-29T10:13:57.120083+00:00",
+  "scraped_at": "2026-04-30T10:15:14.464369+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2604.25917v1",
-      "title": "Recursive Multi-Agent Systems",
+      "id": "2604.26951v1",
+      "title": "Turning the TIDE: Cross-Architecture Distillation for Diffusion Large Language Models",
       "authors": [
-        "Xiyuan Yang",
-        "Jiaru Zou",
-        "Rui Pan",
-        "Ruizhong Qiu",
-        "Pan Lu",
-        "Shizhe Diao",
-        "Jindong Jiang",
-        "Hanghang Tong",
-        "Tong Zhang",
-        "Markus J. Buehler",
-        "Jingrui He",
-        "James Zou"
+        "Gongbo Zhang",
+        "Wen Wang",
+        "Ye Tian",
+        "Li Yuan"
       ],
-      "abstract": "Recursive or looped language models have recently emerged as a new scaling axis by iteratively refining the same model computation over latent states to deepen reasoning. We extend such scaling principle from a single model to multi-agent systems, and ask: Can agent collaboration itself be scaled through recursion? To this end, we introduce RecursiveMAS, a recursive multi-agent framework that casts the entire system as a unified latent-space recursive computation. RecursiveMAS connects heterogeneous agents as a collaboration loop through the lightweight RecursiveLink module, enabling in-distribution latent thoughts generation and cross-agent latent state transfer. To optimize our framework, we develop an inner-outer loop learning algorithm for iterative whole-system co-optimization through shared gradient-based credit assignment across recursion rounds. Theoretical analyses of runtime complexity and learning dynamics establish that RecursiveMAS is more efficient than standard text-based MAS and maintains stable gradients during recursive training. Empirically, we instantiate RecursiveMAS under 4 representative agent collaboration patterns and evaluate across 9 benchmarks spanning mathematics, science, medicine, search, and code generation. In comparison with advanced single/multi-agent and recursive computation baselines, RecursiveMAS consistently delivers an average accuracy improvement of 8.3%, together with 1.2$\\times$-2.4$\\times$ end-to-end inference speedup, and 34.6%-75.6% token usage reduction. Code and Data are provided in https://recursivemas.github.io.",
-      "url": "https://arxiv.org/abs/2604.25917v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.25917v1",
-      "published": "2026-04-28T17:59:34Z",
-      "updated": "2026-04-28T17:59:34Z",
+      "abstract": "Diffusion large language models (dLLMs) offer parallel decoding and bidirectional context, but state-of-the-art dLLMs require billions of parameters for competitive performance. While existing distillation methods for dLLMs reduce inference steps within a single architecture, none address cross-architecture knowledge transfer, in which the teacher and student differ in architecture, attention mechanism, and tokenizer. We present TIDE, the first framework for cross-architecture dLLM distillation, comprising three modular components: (1) TIDAL, which jointly modulates distillation strength across training progress and diffusion timestep to account for the teacher's noise-dependent reliability; (2) CompDemo, which enriches the teacher's context via complementary mask splitting to improve predictions under heavy masking; and (3) Reverse CALM, a cross-tokenizer objective that inverts chunk-level likelihood matching, yielding bounded gradients and dual-end noise filtering. Distilling 8B dense and 16B MoE teachers into a 0.6B student via two heterogeneous pipelines outperforms the baseline by an average of 1.53 points across eight benchmarks, yielding notable gains in code generation, where HumanEval scores reach 48.78 compared to 32.3 for the AR baseline.",
+      "url": "https://arxiv.org/abs/2604.26951v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.26951v1",
+      "published": "2026-04-29T17:59:01Z",
+      "updated": "2026-04-29T17:59:01Z",
       "categories": [
-        "cs.AI",
         "cs.CL",
+        "cs.AI",
         "cs.LG"
       ],
-      "primary_category": "cs.AI"
-    },
-    {
-      "id": "2604.25914v1",
-      "title": "DV-World: Benchmarking Data Visualization Agents in Real-World Scenarios",
-      "authors": [
-        "Jinxiang Meng",
-        "Shaoping Huang",
-        "Fangyu Lei",
-        "Jingyu Guo",
-        "Haoxiang Liu",
-        "Jiahao Su",
-        "Sihan Wang",
-        "Yao Wang",
-        "Enrui Wang",
-        "Ye Yang",
-        "Hongze Chai",
-        "Jinming Lv",
-        "Anbang Yu",
-        "Huangjing Zhang",
-        "Yitong Zhang",
-        "Yiming Huang",
-        "Zeyao Ma",
-        "Shizhu He",
-        "Jun Zhao",
-        "Kang Liu"
-      ],
-      "abstract": "Real-world data visualization (DV) requires native environmental grounding, cross-platform evolution, and proactive intent alignment. Yet, existing benchmarks often suffer from code-sandbox confinement, single-language creation-only tasks, and assumption of perfect intent. To bridge these gaps, we introduce DV-World, a benchmark of 260 tasks designed to evaluate DV agents across real-world professional lifecycles. DV-World spans three domains: DV-Sheet for native spreadsheet manipulation including chart and dashboard creation as well as diagnostic repair; DV-Evolution for adapting and restructuring reference visual artifacts to fit new data across diverse programming paradigms and DV-Interact for proactive intent alignment with a user simulator that mimics real-world ambiguous requirements. Our hybrid evaluation framework integrates Table-value Alignment for numerical precision and MLLM-as-a-Judge with rubrics for semantic-visual assessment. Experiments reveal that state-of-the-art models achieve less than 50% overall performance, exposing critical deficits in handling the complex challenges of real-world data visualization. DV-World provides a realistic testbed to steer development toward the versatile expertise required in enterprise workflows. Our data and code are available at \\href{https://github.com/DA-Open/DV-World}{this project page}.",
-      "url": "https://arxiv.org/abs/2604.25914v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.25914v1",
-      "published": "2026-04-28T17:58:21Z",
-      "updated": "2026-04-28T17:58:21Z",
-      "categories": [
-        "cs.CL"
-      ],
       "primary_category": "cs.CL"
     },
     {
-      "id": "2604.25907v1",
-      "title": "How Fast Should a Model Commit to Supervision? Training Reasoning Models on the Tsallis Loss Continuum",
+      "id": "2604.26946v1",
+      "title": "Three-Step Nav: A Hierarchical Global-Local Planner for Zero-Shot Vision-and-Language Navigation",
       "authors": [
-        "Chu-Cheng Lin",
-        "Eugene Ie"
+        "Wanrong Zheng",
+        "Yunhao Ge",
+        "Laurent Itti"
       ],
-      "abstract": "Adapting reasoning models to new tasks during post-training with only output-level supervision stalls under reinforcement learning from verifiable rewards (RLVR) when the initial success probability $p_0$ is small. Using the Tsallis $q$-logarithm, we define a loss family $J_Q$ that interpolates between RLVR (at $q{=}0$, the exploitation pole) and the log-marginal-likelihood over latent trajectories (at $q{=}1$, the density-estimation pole). All members share the same per-example gradient direction, differing only by a scalar amplification $P_{\u03b8^{-q}}$ that reweights each instance independently of the learning rate. This amplification is the mechanism that addresses cold-start stalling: under gradient flow, the exploitation pole requires $\u03a9(\\frac{1}{p_0})$ time to escape cold start, while the density-estimation pole escapes in $\u0398\\big(\\log(\\frac{1}{p_0})\\big)$; intermediate $q$ trades escape speed against noise memorization. Because $P_\u03b8$ is intractable, we derive two Monte Carlo estimators from the two factorizations of the gradient: Gradient-Amplified RL (GARL) samples from the prior and amplifies the RL gradient, and Posterior-Attenuated Fine-Tuning (PAFT) importance-resamples from the posterior and runs standard SFT. Both have bias $O\\big(\\frac{q}{M P_\u03b8^{q+1}}\\big)$; GARL has lower variance, PAFT has semantically coherent gradients. On FinQA, HotPotQA, and MuSiQue, GARL at $q{=}0.75$ substantially mitigates cold-start stalling, escaping cold start where GRPO fails entirely. In warm start, GARL at low $q$ dominates FinQA where training is stable; on HotPotQA and MuSiQue, GARL destabilizes during training, and PAFT at $q{=}0.75$ provides stable gradients (best overall on HotPotQA at 47.9 maj@16, $+14.4$ over GRPO).",
-      "url": "https://arxiv.org/abs/2604.25907v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.25907v1",
-      "published": "2026-04-28T17:52:38Z",
-      "updated": "2026-04-28T17:52:38Z",
+      "abstract": "Breakthrough progress in vision-based navigation through unknown environments has been achieved by using multimodal large language models (MLLMs). These models can plan a sequence of motions by evaluating the current view at each time step against the task and goal given to the agent. However, current zero-shot Vision-and-Language Navigation (VLN) agents powered by MLLMs still tend to drift off course, halt prematurely, and achieve low overall success rates. We propose Three-Step Nav to counteract these failures with a three-view protocol: First, \"look forward\" to extract global landmarks and sketch a coarse plan. Then, \"look now\" to align the current visual observation with the next sub-goal for fine-grained guidance. Finally, \"look backward\" audits the entire trajectory to correct accumulated drift before stopping. Requiring no gradient updates or task-specific fine-tuning, our planner drops into existing VLN pipelines with minimal overhead. Three-Step Nav achieves state-of-the-art zero-shot performance on the R2R-CE and RxR-CE dataset. Our code is available at https://github.com/ZoeyZheng0/3-step-Nav.",
+      "url": "https://arxiv.org/abs/2604.26946v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.26946v1",
+      "published": "2026-04-29T17:55:05Z",
+      "updated": "2026-04-29T17:55:05Z",
       "categories": [
-        "cs.LG",
-        "cs.AI"
+        "cs.CV",
+        "cs.RO"
       ],
-      "primary_category": "cs.LG"
+      "primary_category": "cs.CV"
     },
     {
-      "id": "2604.25905v1",
-      "title": "A paradox of AI fluency",
+      "id": "2604.26943v1",
+      "title": "ProcFunc: Function-Oriented Abstractions for Procedural 3D Generation in Python",
       "authors": [
-        "Christopher Potts",
-        "Moritz Sudhof"
+        "Alexander Raistrick",
+        "Karhan Kayan",
+        "Jack Nugent",
+        "David Yan",
+        "Lingjie Mei",
+        "Meenal Parakh",
+        "Hongyu Wen",
+        "Dylan Li",
+        "Yiming Zuo",
+        "Erich Liang",
+        "Jia Deng"
       ],
-      "abstract": "How much does a user's skill with AI shape what AI actually delivers for them? This question is critical for users, AI product builders, and society at large, but it remains underexplored. Using a richly annotated sample of 27K transcripts from WildChat-4.8M, we show that fluent users take on more complex tasks than novices and adopt a fundamentally different interactional mode: they iterate collaboratively with the AI, refining goals and critically assessing outputs, whereas novices take a passive stance. These differences lead to a paradox of AI fluency: fluent users experience more failures than novices -- but their failures tend to be visible (a direct consequence of their engagement), they are more likely to lead to partial recovery, and they occur alongside greater success on complex tasks. Novices, by contrast, more often experience invisible failures: conversations that appear to end successfully but in fact miss the mark. Taken together, these results reframe what success with AI depends on. Individuals should adopt a stance of active engagement rather than passive acceptance. AI product builders should recognize that they are designing not just model behavior but user behavior; encouraging deep engagement, rather than friction-free experiences, will lead to more success overall. Our code and data are available at https://github.com/bigspinai/bigspin-fluency-outcomes",
-      "url": "https://arxiv.org/abs/2604.25905v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.25905v1",
-      "published": "2026-04-28T17:51:13Z",
-      "updated": "2026-04-28T17:51:13Z",
+      "abstract": "We introduce ProcFunc, a library for Blender-based procedural 3D generation in Python. ProcFunc provides a library of easy-to-use Python functions, which streamline creating, combining, analyzing, and executing procedural generation code. ProcFunc makes it easy to create large-scale diverse training data, by combinatorial compositions of semantic components. VLMs can use ProcFunc to edit procedural material and geometry code and can create new procedural code with significantly fewer coding errors. Finally, as an example use case, we use ProcFunc to develop a new procedural generator of indoor rooms, which includes a collection of new compositional procedural materials. We demonstrate the detail, runtime efficiency, and diversity of this room generator, as well as its use for 3D synthetic data generation. Please visit https://github.com/princeton-vl/procfunc for source code.",
+      "url": "https://arxiv.org/abs/2604.26943v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.26943v1",
+      "published": "2026-04-29T17:52:17Z",
+      "updated": "2026-04-29T17:52:17Z",
       "categories": [
-        "cs.CL"
+        "cs.CV"
       ],
-      "primary_category": "cs.CL"
+      "primary_category": "cs.CV"
     },
     {
-      "id": "2604.25904v1",
-      "title": "Teacher Forcing as Generalized Bayes: Optimization Geometry Mismatch in Switching Surrogates for Chaotic Dynamics",
+      "id": "2604.26942v1",
+      "title": "Hyper Input Convex Neural Networks for Shape Constrained Learning and Optimal Transport",
       "authors": [
-        "Andre Herz",
-        "Daniel Durstewitz",
-        "Georgia Koppe"
+        "Shayan Hundrieser",
+        "Insung Kong",
+        "Johannes Schmidt-Hieber"
       ],
-      "abstract": "Identity teacher forcing (ITF) enables stable training of deterministic recurrent surrogates for chaotic dynamical systems and has been highly effective for dynamical systems reconstruction (DSR) with recurrent neural networks (RNNs), including interpretable almost-linear RNNs (AL-RNNs). However, as an intervention-based prediction loss (and thus a generalized Bayes update), teacher forcing need not match the free-running model's marginal likelihood geometry. We compare the objective-induced curvatures of ITF and marginal likelihood in a probabilistic switching augmentation of AL-RNNs, estimating ambiguity-aware observed information via Louis' identity. In the switching setting studied here, conditioning on a single forced regime path (as ITF does) inflates curvature, while marginal likelihood curvature is reduced by a missing-information correction when multiple switching explanations remain plausible. In Lorenz-63 experiments, windowed evidence fine-tuning improves held-out evidence but can degrade dynamical quantities of interest (QoIs) relative to ITF-pretrained models.",
-      "url": "https://arxiv.org/abs/2604.25904v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.25904v1",
-      "published": "2026-04-28T17:50:37Z",
-      "updated": "2026-04-28T17:50:37Z",
+      "abstract": "We introduce Hyper Input Convex Neural Networks (HyCNNs), a novel neural network architecture designed for learning convex functions. HyCNNs combine the principles of Maxout networks with input convex neural networks (ICNNs) to create a neural network that is always convex in the input, theoretically capable of leveraging depth, and performs reliable when trained at scale compared to ICNNs. Concretely, we prove that HyCNNs require exponentially fewer parameters than ICNNs to approximate quadratic functions up to a given precision. Throughout a series of synthetic experiments, we demonstrate that HyCNNs outperform existing ICNNs and MLPs in terms of predictive performance for convex regression and interpolation tasks. We further apply HyCNNs to learn high-dimensional optimal transport maps for synthetic examples and for single-cell RNA sequencing data, where they oftentimes outperform ICNN-based neural optimal transport methods and other baselines across a wide range of settings.",
+      "url": "https://arxiv.org/abs/2604.26942v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.26942v1",
+      "published": "2026-04-29T17:52:05Z",
+      "updated": "2026-04-29T17:52:05Z",
       "categories": [
         "cs.LG",
-        "math.DS",
+        "math.ST",
+        "q-bio.GN",
+        "stat.ME",
         "stat.ML"
       ],
       "primary_category": "cs.LG"
     },
     {
-      "id": "2604.25903v1",
-      "title": "Carbon-Taxed Transformers: A Green Compression Pipeline for Overgrown Language Models",
+      "id": "2604.26940v1",
+      "title": "Select to Think: Unlocking SLM Potential with Local Sufficiency",
       "authors": [
-        "Ajmain Inqiad Alam",
-        "Palash Roy",
-        "Chanchal K. Roy",
-        "Banani Roy",
-        "Kevin A. Schneider"
+        "Wenxuan Ye",
+        "Yangyang Zhang",
+        "Xueli An",
+        "Georg Carle",
+        "Yunpu Ma"
       ],
-      "abstract": "The accelerating adoption of Large Language Models (LLMs) in software engineering (SE) has brought with it a silent crisis: unsustainable computational cost. While these models demonstrate remarkable capabilities in different SE tasks, they are unmanageably large, slow to deploy, memory-intensive, and carbon-heavy. This reality threatens not only the scalability and accessibility of AI-powered SE, but also its long-term environmental sustainability. The research challenge is clear: we must go beyond accuracy and address efficiency and environmental cost as first-class design constraints. To meet this challenge, we introduce Carbon-Taxed Transformers (CTT), a systematic multi-architectural compression principled pipeline ordering inspired by economic carbon taxation principles. Drawing from the economic concept of carbon pricing, CTT operationalizes a computational carbon tax that penalizes architectural inefficiencies and rewards deployment-ready compression. We evaluate CTT across three core SE tasks: code clone detection, code summarization, and code generation, with models spanning encoder-only, encoder-decoder, and decoder-only architecture. Our results show that CTT delivers on inference: (1) up to 49x memory reduction, (2) time reduction up to 8-10x for clone detection, up to 3x for summarization, and 4-7x for generation, (3) up to 81% reduction in CO2 emissions and (4) CTT retains around 98% accuracy on clone detection, around 89% on summarization, and up to 91% (textual metrics) and 68% (pass@1) for generation. Two ablation studies show that pipeline ordering and individual component contributions are both essential, providing empirical justification for CTT's design and effectiveness. This work establishes a viable path toward responsible AI in SE through aggressive yet performance-preserving compression.",
-      "url": "https://arxiv.org/abs/2604.25903v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.25903v1",
-      "published": "2026-04-28T17:48:16Z",
-      "updated": "2026-04-28T17:48:16Z",
+      "abstract": "Small language models (SLMs) offer computational efficiency for scalable deployment, yet they often fall short of the reasoning power exhibited by their larger counterparts (LLMs). To mitigate this gap, current approaches invoke an LLM to generate tokens at points of reasoning divergence, but these external calls introduce substantial latency and costs. Alternatively, standard distillation is often hindered by the capacity limitation, as SLMs struggle to accurately mimic the LLM's complex generative distribution. We address this dilemma by identifying local sufficiency: at divergence points, the LLM's preferred token consistently resides within the SLM's top-K next-token predictions, even when failing to emerge as the SLM top-1 choice. We therefore propose SELECT TO THINK (S2T), which reframes the LLM's role from open-ended generation to selection among the SLM's proposals, simplifying the supervision signal to discrete candidate rankings. Leveraging this, we introduce S2T-LOCAL, which distills the selection logic into the SLM, empowering it to perform autonomous re-ranking without inference-time LLM dependency. Empirically, we demonstrate that a 1.5B SLM's top-8 candidates capture the 32B LLM's choice with 95% hit rate. Translating this potential into performance, S2T-LOCAL improves greedy decoding by 24.1% on average across benchmarks, effectively matching the efficacy of 8-path self-consistency while operating with single-trajectory efficiency.",
+      "url": "https://arxiv.org/abs/2604.26940v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.26940v1",
+      "published": "2026-04-29T17:51:39Z",
+      "updated": "2026-04-29T17:51:39Z",
       "categories": [
-        "cs.SE",
-        "cs.LG"
-      ],
-      "primary_category": "cs.SE"
-    },
-    {
-      "id": "2604.25902v1",
-      "title": "Toward a Functional Geometric Algebra for Natural Language Semantics",
-      "authors": [
-        "James Pustejovsky"
-      ],
-      "abstract": "Distributional and neural approaches to natural language semantics have been built almost exclusively on conventional linear algebra: vectors, matrices, tensors, and the operations that accompany them. These methods have achieved remarkable empirical success, yet they face persistent structural limitations in compositional semantics, type sensitivity, and interpretability. I argue in this paper that geometric algebra (GA) -- specifically, Clifford algebras -- provides a mathematically superior foundation for semantic representation, and that a Functional Geometric Algebra (FGA) framework extends GA toward a typed, compositional semantics capable of supporting inference, transformation, and interpretability while retaining full compatibility with distributional learning and modern neural architectures. I develop the formal foundations, identify three core capabilities that GA provides and linear algebra does not, present a detailed worked example illustrating operator-level semantic contrasts, and show how GA-based operations already implicit in current transformer architectures can be made explicit and extended. The central claim is not merely increased dimensionality but increased structural organization: GA expands an $n$-dimensional embedding space into a $2^n$ multivector algebra where base semantic concepts and their higher-order interactions are represented within a single, principled algebraic framework.",
-      "url": "https://arxiv.org/abs/2604.25902v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.25902v1",
-      "published": "2026-04-28T17:47:46Z",
-      "updated": "2026-04-28T17:47:46Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.LG"
+        "cs.CL"
       ],
       "primary_category": "cs.CL"
     },
     {
-      "id": "2604.25898v1",
-      "title": "TSN-Affinity: Similarity-Driven Parameter Reuse for Continual Offline Reinforcement Learning",
+      "id": "2604.26934v1",
+      "title": "World2VLM: Distilling World Model Imagination into VLMs for Dynamic Spatial Reasoning",
       "authors": [
-        "Dominik \u017burek",
-        "Kamil Faber",
-        "Marcin Pietron",
-        "Pawe\u0142 Gajewski",
-        "Roberto Corizzo"
+        "Wanyue Zhang",
+        "Wenxiang Wu",
+        "Wang Xu",
+        "Jiaxin Luo",
+        "Helu Zhi",
+        "Yibin Huang",
+        "Shuo Ren",
+        "Zitao Liu",
+        "Jiajun Zhang"
       ],
-      "abstract": "Continual offline reinforcement learning (CORL) aims to learn a sequence of tasks from datasets collected over time while preserving performance on previously learned tasks. This setting corresponds to domains where new tasks arise over time, but adapting the model in live environment interactions is expensive, risky, or impossible. However, CORL inherits the dual difficulty of offline reinforcement learning and adapting while preventing catastrophic forgetting. Replay-based continual learning approaches remain a strong baseline but incur memory overhead and suffer from a distribution mismatch between replayed samples and newly learned policies. At the same time, architectural continual learning methods have shown strong potential in supervised learning but remain underexplored in CORL. In this work, we propose TSN-Affinity, a novel CORL method based on TinySubNetworks and Decision Transformer. The method enables task-specific parameterization and controlled knowledge sharing through a RL-aware reuse strategy that routes tasks according to action compatibility and latent similarity. We evaluate the approach on benchmarks based on Atari games and simulations of manipulation tasks with the Franka Emika Panda robotic arm, covering both discrete and continuous control. Results show strong retention from sparse SubNetworks, with routing further improving multi-task performance. Our findings suggest that similarity-guided architectural reuse is a strong and viable alternative to replay-based strategies in a CORL setting. Our code is available at: https://github.com/anonymized-for-submission123/tsn-affinity.",
-      "url": "https://arxiv.org/abs/2604.25898v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.25898v1",
-      "published": "2026-04-28T17:41:04Z",
-      "updated": "2026-04-28T17:41:04Z",
+      "abstract": "Vision-language models (VLMs) have shown strong performance on static visual understanding, yet they still struggle with dynamic spatial reasoning that requires imagining how scenes evolve under egocentric motion. Recent efforts address this limitation either by scaling spatial supervision with synthetic data or by coupling VLMs with world models at inference time. However, the former often lacks explicit modeling of motion-conditioned state transitions, while the latter incurs substantial computational overhead. In this work, we propose World2VLM, a training framework that distills spatial imagination from a generative world model into a vision-language model. Given an initial observation and a parameterized camera trajectory, we use a view-consistent world model to synthesize geometrically aligned future views and derive structured supervision for both forward (action-to-outcome) and inverse (outcome-to-action) spatial reasoning. We post-train the VLM with a two-stage recipe on a compact dataset generated by this pipeline and evaluate it on multiple spatial reasoning benchmarks. World2VLM delivers consistent improvements over the base model across diverse benchmarks, including SAT-Real, SAT-Synthesized, VSI-Bench, and MindCube. It also outperforms the test-time world-model-coupled methods while eliminating the need for expensive inference-time generation. Our results suggest that world models can serve not only as inference-time tools, but also as effective training-time teachers, enabling VLMs to internalize spatial imagination in a scalable and efficient manner.",
+      "url": "https://arxiv.org/abs/2604.26934v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.26934v1",
+      "published": "2026-04-29T17:48:01Z",
+      "updated": "2026-04-29T17:48:01Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2604.26932v1",
+      "title": "Learning Over-Relaxation Policies for ADMM with Convergence Guarantees",
+      "authors": [
+        "Junan Lin",
+        "Paul J. Goulart",
+        "Luca Furieri"
+      ],
+      "abstract": "The Alternating Direction Method of Multipliers (ADMM) is a widely used method for structured convex optimization, and its practical performance depends strongly on the choice of penalty and relaxation parameters. Motivated by settings such as Model Predictive Control (MPC), where one repeatedly solves related optimization problems with fixed structure and changing parameter values, we propose learning online updates of the relaxation parameter to improve performance on problem classes of interest. This choice is computationally attractive in OSQP-like architectures, since adapting relaxation does not trigger the matrix refactorizations associated with penalty updates. We establish convergence guarantees for ADMM with time-varying penalty and relaxation parameters under mild assumptions, and show on benchmark quadratic programs that the resulting learned policies improve both iteration count and wall-clock time over baseline OSQP.",
+      "url": "https://arxiv.org/abs/2604.26932v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.26932v1",
+      "published": "2026-04-29T17:45:52Z",
+      "updated": "2026-04-29T17:45:52Z",
+      "categories": [
+        "math.OC",
+        "cs.LG"
+      ],
+      "primary_category": "math.OC"
+    },
+    {
+      "id": "2604.26926v1",
+      "title": "A Note on How to Remove the $\\ln\\ln T$ Term from the Squint Bound",
+      "authors": [
+        "Francesco Orabona"
+      ],
+      "abstract": "In Orabona and P\u00e1l [2016], we introduced the shifted KT potentials, to remove the $\\ln \\ln T$ factor in the parameter-free learning with expert bound. In this short technical note, I show that this is equivalent to changing the prior in the Krichevsky--Trofimov algorithm. Then, I show how to use the same idea to remove the $\\ln \\ln T$ factor in the data-independent bound for the Squint algorithm.",
+      "url": "https://arxiv.org/abs/2604.26926v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.26926v1",
+      "published": "2026-04-29T17:40:25Z",
+      "updated": "2026-04-29T17:40:25Z",
       "categories": [
         "cs.LG",
-        "cs.AI"
+        "math.OC",
+        "stat.ML"
       ],
       "primary_category": "cs.LG"
     },
     {
-      "id": "2604.25897v1",
-      "title": "Variational Neural Belief Parameterizations for Robust Dexterous Grasping under Multimodal Uncertainty",
+      "id": "2604.26923v1",
+      "title": "ClassEval-Pro: A Cross-Domain Benchmark for Class-Level Code Generation",
       "authors": [
-        "Clinton Enwerem",
-        "Shreya Kalyanaraman",
-        "John S. Baras",
-        "Calin Belta"
+        "Yeheng Chen",
+        "Chaoxiang Xie",
+        "Yuling Shi",
+        "Wenhao Zeng",
+        "Yongpan Wang",
+        "Hongyu Zhang",
+        "Xiaodong Gu"
       ],
-      "abstract": "Contact variability, sensing uncertainty, and external disturbances make grasp execution stochastic. Expected-quality objectives ignore tail outcomes and often select grasps that fail under adverse contact realizations. Risk-sensitive POMDPs address this failure mode, but many use particle-filter beliefs that scale poorly, obstruct gradient-based optimization, and estimate Conditional Value-at-Risk (CVaR) with high-variance approximations. We instead formulate grasp acquisition as variational inference over latent contact parameters and object pose, representing the belief with a differentiable Gaussian mixture. We use Gumbel-Softmax component selection and location-scale reparameterization to express samples as smooth functions of the belief parameters, enabling pathwise gradients through a differentiable CVaR surrogate for direct optimization of tail robustness. In simulation, our variational neural belief improves robust grasp success under contact-parameter uncertainty and exogenous force perturbations while reducing planning time by roughly an order of magnitude relative to particle-filter model-predictive control. On a serial-chain robot arm with a multifingered hand, we validate grasp-and-lift success under object-pose uncertainty against a Gaussian baseline. Both methods succeed on the tested perturbations, but our controller terminates in fewer steps and less wall-clock time while achieving a higher tactile grasp-quality proxy. Our learned belief also calibrates risk more accurately, keeping mean absolute calibration error below 0.14 across tested simulation regimes, compared with 0.58 for a Cross-Entropy Method planner.",
-      "url": "https://arxiv.org/abs/2604.25897v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.25897v1",
-      "published": "2026-04-28T17:40:49Z",
-      "updated": "2026-04-28T17:40:49Z",
+      "abstract": "LLMs have achieved strong results on both function-level code synthesis and repository-level code modification, yet a capability that falls between these two extremes -- compositional code creation, i.e., building a complete, internally structured class from a specification -- remains underserved. Current evaluations are either confined to isolated functions or rely on manually curated class-level tasks that are expensive to scale and increasingly susceptible to data contamination. We introduce ClassEval-Pro, a benchmark of 300 class-level tasks spanning 11 domains, constructed through an automated three-stage pipeline that combines complexity enhancement, cross-domain class composition, and integration of real-world GitHub code contributed after January 2025. Every task is validated by an LLM Judge Ensemble and must pass test suites with over 90% line coverage. We evaluate five frontier LLMs under five generation strategies. The best model achieves only 45.6% class-level Pass@1, with a 17.7-point gap between the strongest and weakest models, confirming the benchmark's discriminative power. Strategy choice strongly interacts with model capability: structured approaches such as bottom-up improve weaker models by up to 9.4 percentage points, while compositional generation collapses to as low as 1.3%. Error analysis over 500 manually annotated failures reveals that logic errors (56.2%) and dependency errors (38.0%) dominate, identifying cross-method coordination as the core bottleneck.",
+      "url": "https://arxiv.org/abs/2604.26923v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.26923v1",
+      "published": "2026-04-29T17:38:37Z",
+      "updated": "2026-04-29T17:38:37Z",
       "categories": [
-        "cs.RO",
-        "cs.LG",
-        "eess.SY"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2604.25895v1",
-      "title": "Three Models of RLHF Annotation: Extension, Evidence, and Authority",
-      "authors": [
-        "Steve Coyne"
-      ],
-      "abstract": "Preference-based alignment methods, most prominently Reinforcement Learning with Human Feedback (RLHF), use the judgments of human annotators to shape large language model behaviour. However, the normative role of these judgments is rarely made explicit. I distinguish three conceptual models of that role. The first is extension: annotators extend the system designers' own judgments about what outputs should be. The second is evidence: annotators provide independent evidence about some facts, whether moral, social or otherwise. The third is authority: annotators have some independent authority (as representatives of the broader population) to determine system outputs. I argue that these models have implications for how RLHF pipelines should solicit, validate and aggregate annotations. I survey landmark papers in the literature on RLHF and related methods to illustrate how they implicitly draw on these models, describe failure modes that come from unintentionally or intentionally conflating them, and offer normative criteria for choosing among them. My central recommendation is that RLHF pipeline designers should decompose annotation into separable dimensions and tailor each pipeline to the model most appropriate for that dimension, rather than seeking a single unified pipeline.",
-      "url": "https://arxiv.org/abs/2604.25895v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.25895v1",
-      "published": "2026-04-28T17:39:14Z",
-      "updated": "2026-04-28T17:39:14Z",
-      "categories": [
-        "cs.CY",
-        "cs.AI",
+        "cs.SE",
         "cs.CL"
       ],
-      "primary_category": "cs.CY"
+      "primary_category": "cs.SE"
+    },
+    {
+      "id": "2604.26922v1",
+      "title": "On the Learning Curves of Revenue Maximization",
+      "authors": [
+        "Steve Hanneke",
+        "Alkis Kalavasis",
+        "Shay Moran",
+        "Grigoris Velegkas"
+      ],
+      "abstract": "Learning curves are a fundamental primitive in supervised learning, describing how an algorithm's performance improves with more data and providing a quantitative measure of its generalization ability. Formally, a learning curve plots the decay of an algorithm's error for a fixed underlying distribution as a function of the number of training samples. Prior work on revenue-maximizing learning algorithms, starting with the seminal work of Cole and Roughgarden [STOC, 2014], adopts a distribution-free perspective, which parallels the PAC learning framework in learning theory. This approach evaluates performance against the hardest possible sequence of valuation distributions, one for each sample size, effectively defining the upper envelope of learning curves over all possible distributions, thus leading to error bounds that do not capture the shape of the learning curves.   In this work we initiate the study of learning curves for revenue maximization and provide a near-complete characterization of their rate of decay in the basic setting of a single item and a single buyer. In the absence of any restriction on the valuation distribution, we show that there exists a Bayes-consistent algorithm, meaning that its learning curve converges to zero for any arbitrary valuation distribution as the number of samples $n \\to \\infty$. However, this convergence must be arbitrarily slow, even if the optimal revenue is finite. In contrast, if the optimal revenue is achieved by a finite price, then the optimal rate of decay is roughly $1/\\sqrt{n}$. Finally, for distributions supported on discrete sets of values, we show that learning curves decay almost exponentially fast, a rate unattainable under the PAC framework.",
+      "url": "https://arxiv.org/abs/2604.26922v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.26922v1",
+      "published": "2026-04-29T17:38:25Z",
+      "updated": "2026-04-29T17:38:25Z",
+      "categories": [
+        "cs.LG",
+        "cs.DS",
+        "cs.GT",
+        "stat.ML"
+      ],
+      "primary_category": "cs.LG"
     }
   ]
 }
