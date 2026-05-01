@@ -2,219 +2,223 @@
   "category": "robotics",
   "name": "Robotics Research",
   "description": "Robotics \u2014 Motion Planning, Control Systems, Human-Robot Interaction, Autonomous Systems",
-  "scraped_at": "2026-04-30T10:18:16.761565+00:00",
+  "scraped_at": "2026-05-01T09:54:33.695294+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2604.26946v1",
-      "title": "Three-Step Nav: A Hierarchical Global-Local Planner for Zero-Shot Vision-and-Language Navigation",
+      "id": "2604.28197v1",
+      "title": "OmniRobotHome: A Multi-Camera Platform for Real-Time Multiadic Human-Robot Interaction",
       "authors": [
-        "Wanrong Zheng",
-        "Yunhao Ge",
-        "Laurent Itti"
+        "Junyoung Lee",
+        "Sookwan Han",
+        "Jeonghwan Kim",
+        "Inhee Lee",
+        "Mingi Choi",
+        "Jisoo Kim",
+        "Wonjung Woo",
+        "Hanbyul Joo"
       ],
-      "abstract": "Breakthrough progress in vision-based navigation through unknown environments has been achieved by using multimodal large language models (MLLMs). These models can plan a sequence of motions by evaluating the current view at each time step against the task and goal given to the agent. However, current zero-shot Vision-and-Language Navigation (VLN) agents powered by MLLMs still tend to drift off course, halt prematurely, and achieve low overall success rates. We propose Three-Step Nav to counteract these failures with a three-view protocol: First, \"look forward\" to extract global landmarks and sketch a coarse plan. Then, \"look now\" to align the current visual observation with the next sub-goal for fine-grained guidance. Finally, \"look backward\" audits the entire trajectory to correct accumulated drift before stopping. Requiring no gradient updates or task-specific fine-tuning, our planner drops into existing VLN pipelines with minimal overhead. Three-Step Nav achieves state-of-the-art zero-shot performance on the R2R-CE and RxR-CE dataset. Our code is available at https://github.com/ZoeyZheng0/3-step-Nav.",
-      "url": "https://arxiv.org/abs/2604.26946v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.26946v1",
-      "published": "2026-04-29T17:55:05Z",
-      "updated": "2026-04-29T17:55:05Z",
+      "abstract": "Human-robot collaboration has been studied primarily in dyadic or sequential settings. However, real homes require multiadic collaboration, where multiple humans and robots share a workspace, acting concurrently on interleaved subtasks with tight spatial and temporal coupling. This regime remains underexplored because close-proximity interaction between humans, robots, and objects creates persistent occlusion and rapid state changes, making reliable real-time 3D tracking the central bottleneck. No existing platform provides the real-time, occlusion-robust, room-scale perception needed to make this regime experimentally tractable. We present OmniRobotHome, the first room-scale residential platform that unifies wide-area real-time 3D human and object perception with coordinated multi-robot actuation in a shared world frame. The system instruments a natural home environment with 48 hardware-synchronized RGB cameras for markerless, occlusion-robust tracking of multiple humans and objects, temporally aligned with two Franka arms that act on live scene state. Continuous capture within this consistent frame further supports long-horizon human behavior modeling from accumulated trajectories. The platform makes the multiadic collaboration regime experimentally tractable. We focus on two central problems: safety in shared human-robot environments and human-anticipatory robotic assistance, and show that real-time perception and accumulated behavior memory each yield measurable gains in both.",
+      "url": "https://arxiv.org/abs/2604.28197v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.28197v1",
+      "published": "2026-04-30T17:59:58Z",
+      "updated": "2026-04-30T17:59:58Z",
       "categories": [
-        "cs.CV",
-        "cs.RO"
+        "cs.RO",
+        "cs.CV"
       ],
-      "primary_category": "cs.CV"
+      "primary_category": "cs.RO"
     },
     {
-      "id": "2604.26910v1",
-      "title": "Bi-Level Optimization for Contact and Motion Planning in Rope-Assisted Legged Robots",
+      "id": "2604.28192v1",
+      "title": "LaST-R1: Reinforcing Action via Adaptive Physical Latent Reasoning for VLA Models",
       "authors": [
-        "Ruben Malacarne",
-        "Ioannis Tsikelis",
-        "Enrico Mingo Hoffman",
-        "Michele Focchi"
+        "Hao Chen",
+        "Jiaming Liu",
+        "Zhonghao Yan",
+        "Nuowei Han",
+        "Renrui Zhang",
+        "Chenyang Gu",
+        "Jialin Gao",
+        "Ziyu Guo",
+        "Siyuan Qian",
+        "Yinxi Wang",
+        "Peng Jia",
+        "Chi-Wing Fu",
+        "Shanghang Zhang",
+        "Pheng-Ann Heng"
       ],
-      "abstract": "This paper presents a planning pipeline framework for locomotion in rope-assisted robots climbing vertical surfaces. The proposed framework is formulated as a bi-level optimization scheme that addresses a mixed-integer problem: selecting feasible terrain regions for landing while simultaneously optimizing the control inputs, namely rope tensions and leg forces, and landing location. The outer level of the optimization is solved using the Cross-Entropy Method, while the inner level relies on gradient-based nonlinear optimization to compute dynamically feasible motions. The approach is validated on a novel climbing robot platform, ALPINE, across a variety of challenging terrain configurations.",
-      "url": "https://arxiv.org/abs/2604.26910v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.26910v1",
-      "published": "2026-04-29T17:18:29Z",
-      "updated": "2026-04-29T17:18:29Z",
+      "abstract": "Vision-Language-Action (VLA) models have increasingly incorporated reasoning mechanisms for complex robotic manipulation. However, existing approaches share a critical limitation: whether employing explicit linguistic reasoning that suffers from latency and discretization, or utilizing more expressive continuous latent reasoning, they are predominantly confined to static imitation learning that limits adaptability and generalization. While online reinforcement learning (RL) has been introduced to VLAs to enable trial-and-error exploration, current methods exclusively optimize the vanilla action space, bypassing the underlying physical reasoning process. In this paper, we present \\textbf{LaST-R1}, a unified VLA framework that integrates latent Chain-of-Thought (CoT) reasoning over physical dynamics prior to action execution, along with a tailored RL post-training paradigm. Specifically, we propose \\textbf{Latent-to-Action Policy Optimization (LAPO)}, a novel RL algorithm that jointly optimizes the latent reasoning process and the action generation. By bridging reasoning and control, LAPO improves the representation of physical world modeling and enhances robustness in interactive environments. Furthermore, an \\textbf{adaptive latent CoT mechanism} is introduced to allow the policy to dynamically adjust its reasoning horizon based on environment complexity. Extensive experiments show that LaST-R1 achieves a near-perfect 99.8\\% average success rate on the LIBERO benchmark with only one-shot supervised warm-up, significantly improving convergence speed and performance over prior state-of-the-art methods. In real-world deployments, LAPO post-training yields up to a 44\\% improvement over the initial warm-up policy across four complex tasks, including both single-arm and dual-arm settings. Finally, LaST-R1 demonstrates strong generalization across simulated and real-world environments.",
+      "url": "https://arxiv.org/abs/2604.28192v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.28192v1",
+      "published": "2026-04-30T17:59:52Z",
+      "updated": "2026-04-30T17:59:52Z",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2604.28161v1",
+      "title": "RopeDreamer: A Kinematic Recurrent State Space Model for Dynamics of Flexible Deformable Linear Objects",
+      "authors": [
+        "Tim Missal",
+        "Lucas Domingues",
+        "Berk Guler",
+        "Simon Manschitz",
+        "Jan Peters",
+        "Paula Dornhofer Paro Costa"
+      ],
+      "abstract": "The robotic manipulation of Deformable Linear Objects (DLOs) is a fundamental challenge due to the high-dimensional, non-linear dynamics of flexible structures and the complexity of maintaining topological integrity during contact-rich tasks. While recent data-driven methods have utilized Recurrent and Graph Neural Networks for dynamics modeling, they often struggle with self-intersections and non-physical deformations, such as tangling and link stretching. In this paper, we propose a latent dynamics framework that combines a Recurrent State Space Model with a Quaternionic Kinematic Chain representation to enable robust, long-term forecasting of DLO states. By encoding the DLO as a sequence of relative rotations (quaternions) rather than independent Cartesian positions, we inherently constrain the model to a physically valid manifold that preserves link-length constancy. Furthermore, we introduce a dual-decoder architecture that decouples state reconstruction from future-state prediction, forcing the latent space to capture the underlying physics of deformation. We evaluate our approach on a large-scale simulated dataset of complex pick-and-place trajectories involving self-intersections. Our results demonstrate that the proposed model achieves a 40.52% reduction in open-loop prediction error over 50-step horizons compared to the state-of-the-art baseline, while reducing inference time by 31.17%. Our model further maintains superior topological consistency in scenarios with multiple crossings, proving its efficacy as a compositional primitive for long-horizon manipulation planning.",
+      "url": "https://arxiv.org/abs/2604.28161v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.28161v1",
+      "published": "2026-04-30T17:47:44Z",
+      "updated": "2026-04-30T17:47:44Z",
       "categories": [
         "cs.RO"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2604.26903v1",
-      "title": "Recent Advances in mm-Wave and Sub-THz/THz Oscillators for FutureG Technologies",
+      "id": "2604.28156v1",
+      "title": "FlexiTac: A Low-Cost, Open-Source, Scalable Tactile Sensing Solution for Robotic Systems",
       "authors": [
-        "Baktash Behmanesh",
-        "Ahmad Rezvanitabar"
+        "Binghao Huang",
+        "Yunzhu Li"
       ],
-      "abstract": "This paper provides a concise yet comprehensive review of recent advancements in millimeter-wave (mm-wave) oscillators below 100 GHz and sub-terahertz (sub-THz/THz) oscillators above 100 GHz for next-generation computing and communication systems, including 5G, 6G, and beyond. Various design approaches, including CMOS, SiGe, and III-V semiconductor technologies, are explored in terms of performance metrics such as phase noise, output power, efficiency, frequency tunability, and stability. The review highlights key challenges in achieving high-performance and reliable oscillator designs while discussing emerging techniques for performance enhancement. By evaluating recent design trends, this work aims to offer valuable insights and design guidelines that facilitate the development of robust mm-wave and sub-THz/THz oscillators for future communication, computing, and sensing applications.",
-      "url": "https://arxiv.org/abs/2604.26903v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.26903v1",
-      "published": "2026-04-29T17:12:18Z",
-      "updated": "2026-04-29T17:12:18Z",
+      "abstract": "We present FlexiTac, a low-cost, open-source, and scalable piezoresistive tactile sensing solution designed for robotic end-effectors. FlexiTac is a practical \"plug-in\" module consisting of (i) thin, flexible tactile sensor pads that provide dense tactile signals and (ii) a compact multi-channel readout board that streams synchronized measurements for real-time control and large-scale data collection. FlexiTac pads adopt a sealed three-layer laminate stack (FPC-Velostat-FPC) with electrode patterns directly integrated into flexible printed circuits, substantially improving fabrication throughput and repeatability while maintaining mechanical compliance for deployment on both rigid and soft grippers. The readout electronics use widely available, low-cost components and stream tactile signals to a host computer at 100 Hz via serial communication. Across multiple configurations, including fingertip pads and larger tactile mats, FlexiTac can be mounted on diverse platforms without major mechanical redesign. We further show that FlexiTac supports modern tactile learning pipelines, including 3D visuo-tactile fusion for contact-aware decision making, cross-embodiment skill transfer, and real-to-sim-to-real fine-tuning with GPU-parallel tactile simulation. Our project page is available at https://flexitac.github.io/.",
+      "url": "https://arxiv.org/abs/2604.28156v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.28156v1",
+      "published": "2026-04-30T17:43:07Z",
+      "updated": "2026-04-30T17:43:07Z",
       "categories": [
-        "eess.SP",
+        "cs.RO",
         "cs.AI",
-        "cs.AR",
-        "cs.ET",
-        "eess.SY"
+        "cs.LG"
       ],
-      "primary_category": "eess.SP"
+      "primary_category": "cs.RO"
     },
     {
-      "id": "2604.26899v1",
-      "title": "Safe Navigation using Neural Radiance Fields via Reachable Sets",
+      "id": "2604.28148v1",
+      "title": "Design and Characteristics of a Thin-Film ThermoMesh for the Efficient Embedded Sensing of a Spatio-Temporally Sparse Heat Source",
       "authors": [
-        "Omanshu Thapliyal",
-        "Malarvizhi Sankaranarayanasamy",
-        "Ravigopal Vennelakanti"
+        "Sajjad Boorghan Farahan",
+        "Ahmed Alajlouni",
+        "Jingzhou Zhao"
       ],
-      "abstract": "Safe navigation in cluttered environments is an important challenge for autonomous systems. Robots navigating through obstacle ridden scenarios need to be able to navigate safely in the presence of obstacles, goals, and ego objects of varying geometries. In this work, reachable set representations of the robot's real-time capabilities in the state space can be utilized to capture safe navigation requirements. While neural radiance fields (NeRFs) are utilized to compute, store, and manipulate the volumetric representations of the obstacles, or ego vehicle, as needed. Constrained optimal control is employed to represent the resulting path planning problem, involving linear matrix inequality constraints. We present simulation results for path planning in the presence of numerous obstacles in two different scenarios. Safe navigation is demonstrated through using reachable sets in the corresponding constrained optimal control problems.",
-      "url": "https://arxiv.org/abs/2604.26899v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.26899v1",
-      "published": "2026-04-29T17:09:19Z",
-      "updated": "2026-04-29T17:09:19Z",
+      "abstract": "This work presents ThermoMesh, a passive thin-film thermoelectric mesh sensor designed to detect and characterize spatio-temporally sparse heat sources through conduction-based thermal imaging. The device integrates thermoelectric junctions with linear or nonlinear interlayer resistive elements to perform simultaneous sensing and in-sensor compression. We focus on the single-event (1-sparse) operation and define four performance metrics: range, efficiency, sensitivity, and accuracy. Numerical modeling shows that a linear resistive interlayer flattens the sensitivity distribution and improves minimum sensitivity by approximately tenfold for a $16\\times16$ mesh. Nonlinear temperature-dependent interlayers further enhance minimum sensitivity at scale: a ceramic negative-temperature-coefficient (NTC) layer over 973--1273~K yields a $\\sim14{,}500\\times$ higher minimum sensitivity than the linear design at a $200\\times200$ mesh, while a VO$_2$ interlayer modeled across its metal--insulator transition (MIT) over 298--373~K yields a $\\sim24\\times$ improvement. Using synthetic 1-sparse datasets with white boundary-channel noise at a signal-to-noise ratio of 40~dB, the VO$_2$ case achieved $98\\%$ localization accuracy, a mean absolute temperature error of $0.23$~K, and a noise-equivalent temperature (NET) of $0.07$~K. For the ceramic-NTC case no localization errors were observed under the tested conditions, with a mean absolute temperature error of $1.83$~K and a NET of $1.49$~K. These results indicate that ThermoMesh could enable energy-efficient embedded thermal sensing in scenarios where conventional infrared imaging is limited, such as molten-droplet detection or hot-spot monitoring in harsh environments.",
+      "url": "https://arxiv.org/abs/2604.28148v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.28148v1",
+      "published": "2026-04-30T17:35:40Z",
+      "updated": "2026-04-30T17:35:40Z",
       "categories": [
-        "eess.SY",
+        "cs.RO",
+        "eess.IV",
+        "physics.ins-det"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2604.28115v1",
+      "title": "FreeOcc: Training-Free Embodied Open-Vocabulary Occupancy Prediction",
+      "authors": [
+        "Zeyu Jiang",
+        "Changqing Zhou",
+        "Xingxing Zuo",
+        "Changhao Chen"
+      ],
+      "abstract": "Existing learning-based occupancy prediction methods rely on large-scale 3D annotations and generalize poorly across environments. We present FreeOcc, a training-free framework for open-vocabulary occupancy prediction from monocular or RGB-D sequences. Unlike prior approaches that require voxel-level supervision and ground-truth camera poses, FreeOcc operates without 3D annotations, pose ground truth, or any learning stage. FreeOcc incrementally builds a globally consistent occupancy map via a four-layer pipeline: a SLAM backbone estimates poses and sparse geometry; a geometrically consistent Gaussian update constructs dense 3D Gaussian maps; open-vocabulary semantics from off-the-shelf vision-language models are associated with Gaussian primitives; and a probabilistic Gaussian-to-occupancy projection produces dense voxel occupancy. Despite being entirely training-free and pose-agnostic, FreeOcc achieves over $2\\times$ improvements in IoU and mIoU on EmbodiedOcc-ScanNet compared to prior self-supervised methods. We further introduce ReplicaOcc, a benchmark for indoor open-vocabulary occupancy prediction, and show that FreeOcc transfers zero-shot to novel environments, substantially outperforming both supervised and self-supervised baselines. Project page: https://the-masses.github.io/freeocc-web/.",
+      "url": "https://arxiv.org/abs/2604.28115v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.28115v1",
+      "published": "2026-04-30T17:05:56Z",
+      "updated": "2026-04-30T17:05:56Z",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2604.28111v1",
+      "title": "GSDrive: Reinforcing Driving Policies by Multi-mode Trajectory Probing with 3D Gaussian Splatting Environment",
+      "authors": [
+        "Ziang Guo",
+        "Min Chen",
+        "Xuefeng Zhang",
+        "Yixiao Zhou",
+        "Zufeng Zhang",
+        "Dzmitry Tsetserukou"
+      ],
+      "abstract": "End-to-end (E2E) autonomous driving presents a promising approach for translating perceptual inputs directly into driving actions. However, prohibitive annotation costs and temporal data quality degradation hinder long-term real-world deployment. While combining imitation learning (IL) and reinforcement learning (RL) is a common strategy for policy improvement, conventional RL training relies on delayed, event-based rewards-policies learn only from catastrophic outcomes such as collisions, leading to premature convergence to suboptimal behaviors. To address these limitations, we introduce GSDrive, a framework that exploits 3D Gaussian Splatting (3DGS) for differentiable, physics-based reward shaping in E2E driving policy improvement. Our method incorporates a flow matching-based trajectory predictor within the 3DGS simulator, enabling multi-mode trajectory probing where candidate trajectories are rolled out to assess prospective rewards. This establishes a bidirectional knowledge exchange between IL and RL by grounding reward functions in physically simulated interaction signals, offering immediate dense feedback instead of sparse catastrophic events. Evaluated on the reconstructed nuScenes dataset, our method surpasses existing simulation-based RL driving approaches in closed-loop experiments. Code is available at https://github.com/ZionGo6/GSDrive.",
+      "url": "https://arxiv.org/abs/2604.28111v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.28111v1",
+      "published": "2026-04-30T16:59:07Z",
+      "updated": "2026-04-30T16:59:07Z",
+      "categories": [
         "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2604.28108v1",
+      "title": "Hierarchical Control for Continuous-time Systems via General Approximate Alternating Simulation Relations",
+      "authors": [
+        "Zhiyuan Huang",
+        "Shuo Li",
+        "Murat Arcak",
+        "Majid Zamani",
+        "Bingzhuo Zhong"
+      ],
+      "abstract": "This paper introduces a general approximate alternating simulation relation (\\emph{$\\varepsilon$-gAAS relation}) for continuous-time systems, which relaxes existing simulation relations to tolerate larger mismatches between abstract and concrete models. The definition of gAAS for continuous-time systems is first proposed, and its properties are investigated. Then, a control refinement method is developed to enable hierarchical control for the gAAS relation. Finally, case studies demonstrate the effectiveness of the proposed approach, highlighting its advantages over existing methods.",
+      "url": "https://arxiv.org/abs/2604.28108v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.28108v1",
+      "published": "2026-04-30T16:58:00Z",
+      "updated": "2026-04-30T16:58:00Z",
+      "categories": [
+        "eess.SY"
       ],
       "primary_category": "eess.SY"
     },
     {
-      "id": "2604.26897v1",
-      "title": "Stochastic Entanglement of Deterministic Origami Tentacles For Universal Robotic Gripping",
+      "id": "2604.28084v1",
+      "title": "Intelligent Self-tuning Active EMI Filtering for Electrified Automotive Power Systems Using Reinforcement Learning",
       "authors": [
-        "Alec Boron",
-        "Bokun Zheng",
-        "Ziyang Zhou",
-        "Noel Naughton",
-        "Suyi Li"
+        "Mahuizi Lu",
+        "Kelin Jia",
+        "Rajib Goswami",
+        "Yukun Hu"
       ],
-      "abstract": "Origami-inspired robotic grippers have shown promising potential for object manipulation tasks due to their compact volume and mechanical flexibility. However, robust capture of objects with random shapes in dynamic working environments often comes at the cost of additional actuation channels and control complexity. Here, we introduce a tendon-driven origami tentacle gripper capable of universal object gripping by exploiting a synergy between local, deterministic deformation programming and global, stochastic entanglements. Each origami tentacle is made by cutting thin Mylar sheets; It features carefully placed holes for routing an actuation tendon, origami creases for controlling the deformation, and a tapered shape. By tailoring these design features, one can prescribe the shrinking, bending, and twisting deformation, eventually creating deterministic coiling with a simple tendon pull. Then, when multiple coiling tentacles are placed in proximity, stochastic entanglement emerges, allowing the tentacles to braid, knot, and grip objects with random shapes. We derived a simulation model by integrating origami mechanics with Cosserat rods to correlate origami design, tendon deformation, and their collective gripping performance. Then, we experimentally tested how these coiling and entangling origami tentacles can grasp objects under gravity and in water. A stow-and-release deployment mechanism was also tested to simulate in-orbit grasping. Overall, the entertaining origami tentacle gripper presents a new strategy for robust object grasping with simple design and actuation.",
-      "url": "https://arxiv.org/abs/2604.26897v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.26897v1",
-      "published": "2026-04-29T17:08:21Z",
-      "updated": "2026-04-29T17:08:21Z",
+      "abstract": "The rapid electrification and intelligence of modern transportation systems place stringent demands on the electromagnetic compatibility, reliability, and adaptability of automotive power electronics. In electric and autonomous vehicles, electromagnetic interference (EMI) generated by high-frequency switching power converters can compromise safety-critical functions, in-vehicle communications, and system efficiency under dynamic operating conditions. Conventional passive EMI filters, while robust, are often oversized and lack adaptability, leading to increased weight, volume, and energy losses. This paper proposes an intelligent self-tuning active EMI filtering approach for electrified automotive power systems based on reinforcement learning (RL). The EMI mitigation problem is formulated as a Markov decision process, enabling an RL agent to continuously adapt filter parameters in response to time-varying interference characteristics. To improve robustness and generalisation under complex and non-stationary conditions, a variational autoencoder is employed for compact state representation, while a noise-based exploration mechanism enhances learning efficiency and prevents suboptimal convergence. The proposed method is evaluated using experimentally measured EMI spectra from an automotive electric drive unit within a MATLAB/Simulink co-simulation framework. Results demonstrate consistent EMI attenuation improvements of 25-30 dB across a wide frequency range compared with conventional control strategies and passive filtering solutions. By reducing reliance on oversized passive components and enabling adaptive EMI suppression, the proposed framework supports lightweight, energy-efficient, and reliable power-electronic systems for intelligent and green transportation applications.",
+      "url": "https://arxiv.org/abs/2604.28084v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.28084v1",
+      "published": "2026-04-30T16:30:29Z",
+      "updated": "2026-04-30T16:30:29Z",
       "categories": [
-        "cs.RO",
         "eess.SY"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2604.26863v1",
-      "title": "Spectral Boundary Observer for Counter-Flow Heat Exchangers",
-      "authors": [
-        "Mohamed Camil Belhadjoudja",
-        "Mohamed Maghenem",
-        "Emmanuel Witrant"
-      ],
-      "abstract": "We consider a system of two coupled first-order linear hyperbolic partial differential equations modeling heat transport in a counter-flow heat exchanger: one equation describes the transport of a hot fluid, and the other the transport of a cold fluid in the opposite direction. For this system, we design a boundary observer that uses only the temperature of the cold fluid measured at one boundary. Our approach is spectral: by assigning the spectrum of the operator governing the observation error dynamics to a prescribed region within the open left-half complex plane, we can freely tune the convergence rate of the observation error to zero in the $L^2$ norm. The main technical contribution is the proof that spectral stability, that is, the location of the spectrum in the open left-half plane, is equivalent to $L^2$ exponential stability of the origin for the observation error dynamics. This equivalence is established by showing that the operator governing the observation error dynamics satisfies the so-called spectral mapping property.",
-      "url": "https://arxiv.org/abs/2604.26863v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.26863v1",
-      "published": "2026-04-29T16:31:32Z",
-      "updated": "2026-04-29T16:31:32Z",
-      "categories": [
-        "eess.SY",
-        "math.AP"
       ],
       "primary_category": "eess.SY"
     },
     {
-      "id": "2604.26857v1",
-      "title": "Edge AI for Automotive Vulnerable Road User Safety: Deployable Detection via Knowledge Distillation",
+      "id": "2604.28069v1",
+      "title": "A MEC-Based Optimization Framework for Dynamic Inductive Charging",
       "authors": [
-        "Akshay Karjol",
-        "Darrin M. Hanna"
+        "Emre Ak\u0131skal\u0131o\u011flu",
+        "Mustafa Atmaca",
+        "Lorenzo Ghiro",
+        "Giovanni Perin",
+        "Renato Lo Cigno"
       ],
-      "abstract": "Deploying accurate object detection for Vulnerable Road User (VRU) safety on edge hardware requires balancing model capacity against computational constraints. Large models achieve high accuracy but fail under INT8 quantization required for edge deployment, while small models sacrifice detection performance. This paper presents a knowledge distillation (KD) framework that trains a compact YOLOv8-S student (11.2M parameters) to mimic a YOLOv8-L teacher (43.7M parameters), achieving 3.9x compression while preserving quantization robustness. We evaluate on full-scale BDD100K (70K training images) with Post-Training Quantization to INT8. The teacher suffers catastrophic degradation under INT8 (-23% mAP), while the KD student retains accuracy (-5.6% mAP). Analysis reveals that KD transfers precision calibration rather than raw detection capacity: the KD student achieves 0.748 precision versus 0.653 for direct training at INT8, a 14.5% gain at equivalent recall, reducing false alarms by 44% versus the collapsed teacher. At INT8, the KD student exceeds the teacher's FP32 precision (0.748 vs. 0.718) in a model 3.9x smaller. These findings establish knowledge distillation as a requirement for deploying accurate, safety-critical VRU detection on edge hardware.",
-      "url": "https://arxiv.org/abs/2604.26857v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.26857v1",
-      "published": "2026-04-29T16:24:45Z",
-      "updated": "2026-04-29T16:24:45Z",
+      "abstract": "Range anxiety and long recharging times remain critical barriers to electric vehicle adoption. Dynamic Inductive Charging (DIC) offers a compelling solution by enabling wireless power transfer while driving, potentially reducing battery size requirements and thus vehicle costs. However, DIC infrastructures are expensive and power-constrained, requiring intelligent resource allocation to maximize user satisfaction and economic viability. We propose a Model Predictive Control framework for optimal power allocation in DIC systems, using edge computing and vehicular communications to prioritize vehicles with critical battery states. The framework is implemented and evaluated through SUMO-based simulations on a realistic 10 km urban scenario in Istanbul, Turkey, under varying traffic intensities. Results demonstrate two critical limitations of uncoordinated allocation. First, resource utilization remains suboptimal despite available power when demand saturates system capacity. Second, when demand exceeds capacity, uniform distribution of power leaves a heavy tail of critically unsatisfied vehicles that may require emergency stops. Our MPC-based strategy addresses both regimes -- maximizing power utilization during saturation through dynamic stripe rebalancing, and improving satisfaction fairness under scarcity by aggressively prioritizing depleted batteries at the expense of well-charged vehicles. The framework and simulation tools are released as open-source to support further research in this emerging domain.",
+      "url": "https://arxiv.org/abs/2604.28069v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.28069v1",
+      "published": "2026-04-30T16:17:51Z",
+      "updated": "2026-04-30T16:17:51Z",
       "categories": [
-        "cs.CV",
-        "cs.LG",
-        "cs.RO",
-        "eess.IV"
+        "eess.SY",
+        "cs.NI"
       ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2604.26848v1",
-      "title": "STARRY: Spatial-Temporal Action-Centric World Modeling for Robotic Manipulation",
-      "authors": [
-        "Yuxuan Tian",
-        "Yurun Jin",
-        "Bin Yu",
-        "Yukun Shi",
-        "Hao Wu",
-        "Chi Harold Liu",
-        "Kai Chen",
-        "Cong Huang"
-      ],
-      "abstract": "Robotic manipulation critically requires reasoning about future spatial-temporal interactions, yet existing VLA policies and world-model-enhanced policies do not fully model action-relevant spatial-temporal interaction structure. We propose STARRY, a world-model-enhanced action-generation policy that aligns spatial-temporal prediction with action generation. STARRY jointly denoises future spatial-temporal latents and action sequences, and introduces Geometry-Aware Selective Attention Modulation to convert predicted depth and end-effector geometry into token-aligned weights for selective action-attention modulation. On RoboTwin 2.0, STARRY achieves 93.82% / 93.30% average success under Clean and Randomized settings. Real-world experiments further improve average success from 42.5% to 70.8% over $\u03c0_{0.5}$, demonstrating the effectiveness of action-centric spatial-temporal world modeling for spatial-temporally demanding robotic action generation.",
-      "url": "https://arxiv.org/abs/2604.26848v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.26848v1",
-      "published": "2026-04-29T16:13:39Z",
-      "updated": "2026-04-29T16:13:39Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2604.26839v1",
-      "title": "Walk With Me: Long-Horizon Social Navigation for Human-Centric Outdoor Assistance",
-      "authors": [
-        "Lingfeng Zhang",
-        "Xiaoshuai Hao",
-        "Xizhou Bu",
-        "Yingbo Tang",
-        "Hongsheng Li",
-        "Jinghui Lu",
-        "Xiu-shen Wei",
-        "Jiayi Ma",
-        "Yu Liu",
-        "Jing Zhang",
-        "Hangjun Ye",
-        "Xiaojun Liang",
-        "Long Chen",
-        "Wenbo Ding"
-      ],
-      "abstract": "Assisting humans in open-world outdoor environments requires robots to translate high-level natural-language intentions into safe, long-horizon, and socially compliant navigation behavior. Existing map-based methods rely on costly pre-built HD maps, while learning-based policies are mostly limited to indoor and short-horizon settings. To bridge this gap, we propose Walk with Me, a map-free framework for long-horizon social navigation from high-level human instructions. Walk with Me leverages GPS context and lightweight candidate points-of-interest from a public map API for semantic destination grounding and waypoint proposal. A High-Level Vision-Language Model grounds abstract instructions into concrete destinations and plans coarse waypoint sequences. During execution, an observation-aware routing mechanism determines whether the Low-Level Vision-Language-Action policy can handle the current situation or whether explicit safety reasoning from the High-Level VLM is needed. Routine segments are executed by the Low-Level VLA, while complex situations such as crowded crossings trigger high-level reasoning and stop-and-wait behavior when unsafe. By combining semantic intent grounding, map-free long-horizon planning, safety-aware reasoning, and low-level action generation, Walk with Me enables practical outdoor social navigation for human-centric assistance.",
-      "url": "https://arxiv.org/abs/2604.26839v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.26839v1",
-      "published": "2026-04-29T16:02:13Z",
-      "updated": "2026-04-29T16:02:13Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2604.26836v1",
-      "title": "Uncertainty-Aware Predictive Safety Filters for Probabilistic Neural Network Dynamics",
-      "authors": [
-        "Bernd Frauenknecht",
-        "Lukas Kesper",
-        "Daniel Mayfrank",
-        "Henrik Hose",
-        "Sebastian Trimpe"
-      ],
-      "abstract": "Predictive safety filters (PSFs) leverage model predictive control to enforce constraint satisfaction during deep reinforcement learning (RL) exploration, yet their reliance on first-principles models or Gaussian processes limits scalability and broader applicability. Meanwhile, model-based RL (MBRL) methods routinely employ probabilistic ensemble (PE) neural networks to capture complex, high-dimensional dynamics from data with minimal prior knowledge. However, existing attempts to integrate PEs into PSFs lack rigorous uncertainty quantification. We introduce the Uncertainty-Aware Predictive Safety Filter (UPSi), a PSF that provides rigorous safety predictions using PE dynamics models by formulating future outcomes as reachable sets. UPSi introduces an explicit certainty constraint that prevents model exploitation and integrates seamlessly into common MBRL frameworks. We evaluate UPSi within Dyna-style MBRL on standard safe RL benchmarks and report substantial improvements in exploration safety over prior neural network PSFs while maintaining performance on par with standard MBRL. UPSi bridges the gap between the scalability and generality of modern MBRL and the safety guarantees of predictive safety filters.",
-      "url": "https://arxiv.org/abs/2604.26836v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.26836v1",
-      "published": "2026-04-29T16:01:59Z",
-      "updated": "2026-04-29T16:01:59Z",
-      "categories": [
-        "cs.LG",
-        "eess.SY"
-      ],
-      "primary_category": "cs.LG"
+      "primary_category": "eess.SY"
     }
   ]
 }
