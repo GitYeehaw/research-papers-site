@@ -2,94 +2,78 @@
   "category": "cs",
   "name": "CS Research",
   "description": "Computer Science \u2014 AI, Machine Learning, NLP, Computer Vision",
-  "scraped_at": "2026-05-04T10:20:54.185320+00:00",
+  "scraped_at": "2026-05-10T09:44:42.339727+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2605.00825v1",
-      "title": "Posterior Augmented Flow Matching",
+      "id": "2605.06667v1",
+      "title": "ActCam: Zero-Shot Joint Camera and 3D Motion Control for Video Generation",
       "authors": [
-        "George Stoica",
-        "Sayak Paul",
-        "Matthew Wallingford",
-        "Vivek Ramanujan",
-        "Abhay Nori",
-        "Winson Han",
-        "Ali Farhadi",
-        "Ranjay Krishna",
-        "Judy Hoffman"
+        "Omar El Khalifi",
+        "Thomas Rossi",
+        "Oscar Fossey",
+        "Thibault Fouque",
+        "Ulysse Mizrahi",
+        "Philip Torr",
+        "Ivan Laptev",
+        "Fabio Pizzati",
+        "Baptiste Bellot-Gurlet"
       ],
-      "abstract": "Flow matching (FM) trains a time-dependent vector field that transports samples from a simple prior to a complex data distribution. However, for high-dimensional images, each training sample supervises only a single trajectory and intermediate point, yielding an extremely sparse and high-variance training signal. This under-constrained supervision can cause flow collapse, where the learned dynamics memorize specific source-target pairings, mapping diverse inputs to overly similar outputs, failing to generalize. We introduce Posterior-Augmented Flow Matching (PAFM), a theoretically grounded generalization of FM that replaces single-target supervision with an expectation over an approximate posterior of valid target completions for a given intermediate state and condition. PAFM factorizes this intractable posterior into (i) the likelihood of the intermediate under a hypothesized endpoint and (ii) the prior probability of that endpoint under the condition, and uses an importance sampling scheme to construct a mixture over multiple candidate targets. We prove that PAFM yields an unbiased estimator of the original FM objective while substantially reducing gradient variance during training by aggregating information from many plausible continuation trajectories per intermediate. Finally, we show that PAFM improves over FM by up to 3.4 FID50K across different model scales (SiT-B/2 and SiT-XL/2), different architectures (SiT and MMDiT), and in both class and text conditioned benchmarks (ImageNet and CC12M), with a negligible increase in the compute overhead. Code: https://github.com/gstoica27/PAFM.git.",
-      "url": "https://arxiv.org/abs/2605.00825v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.00825v1",
-      "published": "2026-05-01T17:59:59Z",
-      "updated": "2026-05-01T17:59:59Z",
+      "abstract": "For artistic applications, video generation requires fine-grained control over both performance and cinematography, i.e., the actor's motion and the camera trajectory. We present ActCam, a zero-shot method for video generation that jointly transfers character motion from a driving video into a new scene and enables per-frame control of intrinsic and extrinsic camera parameters. ActCam builds on any pretrained image-to-video diffusion model that accepts conditioning in terms of scene depth and character pose. Given a source video with a moving character and a target camera motion, ActCam generates pose and depth conditions that remain geometrically consistent across frames. We then run a single sampling process with a two-phase conditioning schedule: early denoising steps condition on both pose and sparse depth to enforce scene structure, after which depth is dropped and pose-only guidance refines high-frequency details without over-constraining the generation. We evaluate ActCam on multiple benchmarks spanning diverse character motions and challenging viewpoint changes. We find that, compared to pose-only control and other pose and camera methods, ActCam improves camera adherence and motion fidelity, and is preferred in human evaluations, especially under large viewpoint changes. Our results highlight that careful camera-consistent conditioning and staged guidance can enable strong joint camera and motion control without training. Project page: https://elkhomar.github.io/actcam/.",
+      "url": "https://arxiv.org/abs/2605.06667v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.06667v1",
+      "published": "2026-05-07T17:59:58Z",
+      "updated": "2026-05-07T17:59:58Z",
       "categories": [
-        "cs.CV"
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
       ],
       "primary_category": "cs.CV"
     },
     {
-      "id": "2605.00820v1",
-      "title": "HyCOP: Hybrid Composition Operators for Interpretable Learning of PDEs",
+      "id": "2605.06665v1",
+      "title": "UniPool: A Globally Shared Expert Pool for Mixture-of-Experts",
       "authors": [
-        "Jinpai Zhao",
-        "Nishant Panda",
-        "Yen Ting Lin",
-        "Eirik Valseth",
-        "Diane Oyen",
-        "Clint Dawson"
+        "Minbin Huang",
+        "Han Shi",
+        "Chuanyang Zheng",
+        "Yimeng Wu",
+        "Guoxuan Chen",
+        "Xintong Yu",
+        "Yichun Yin",
+        "Hong Cheng"
       ],
-      "abstract": "We introduce HyCOP, a modular framework that learns parametric PDE solution operators by composing simple modules (advection, diffusion, learned closures, boundary handling) in a query-conditioned way. Rather than learning a monolithic map, HyCOP learns a policy over short programs - which module to apply and for how long - conditioned on regime features and state statistics. Modules may be numerical sub-solvers or learned components, enabling hybrid surrogates evaluated at arbitrary query times without autoregressive rollout. Across diverse PDE benchmarks, HyCOP produces interpretable programs, delivers order-of-magnitude OOD improvements over monolithic neural operators, and supports modular transfer through dictionary updates (e.g., boundary swaps, residual enrichment). Our theory characterizes expressivity and gives an error decomposition that separates composition error from module error and doubles as a process-level diagnostic.",
-      "url": "https://arxiv.org/abs/2605.00820v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.00820v1",
-      "published": "2026-05-01T17:57:48Z",
-      "updated": "2026-05-01T17:57:48Z",
+      "abstract": "Modern Mixture-of-Experts (MoE) architectures allocate expert capacity through a rigid per-layer rule: each transformer layer owns a separate expert set. This convention couples depth scaling with linear expert-parameter growth and assumes that every layer needs isolated expert capacity. However, recent analyses and our routing probe challenge this allocation rule: replacing a deeper layer's learned top-k router with uniform random routing drops downstream accuracy by only 1.0-1.6 points across multiple production MoE models. Motivated by this redundancy, we propose UniPool, an MoE architecture that treats expert capacity as a global architectural budget by replacing per-layer expert ownership with a single shared pool accessed by independent per-layer routers. To enable stable and balanced training under sharing, we introduce a pool-level auxiliary loss that balances expert utilization across the entire pool, and adopt NormRouter to provide sparse and scale-stable routing into the shared expert pool. Across five LLaMA-architecture model scales (182M, 469M, 650M, 830M, and 978M parameters) trained on 30B tokens from the Pile, UniPool consistently improves validation loss and perplexity over the matched vanilla MoE baselines. Across these scales, UniPool reduces validation loss by up to 0.0386 relative to vanilla MoE. Beyond raw loss improvement, our results identify pool size as an explicit depth-scaling hyperparameter: reduced-pool UniPool variants using only 41.6%-66.7% of the vanilla expert-parameter budget match or outperform layer-wise MoE at the tested scales. This shows that, under a shared-pool design, expert parameters need not grow linearly with depth; they can grow sublinearly while remaining more efficient and effective than vanilla MoE. Further analysis shows that UniPool's benefits compose with finer-grained expert decomposition.",
+      "url": "https://arxiv.org/abs/2605.06665v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.06665v1",
+      "published": "2026-05-07T17:59:44Z",
+      "updated": "2026-05-07T17:59:44Z",
       "categories": [
-        "cs.CE",
         "cs.LG",
-        "math.NA"
+        "cs.AI"
       ],
-      "primary_category": "cs.CE"
+      "primary_category": "cs.LG"
     },
     {
-      "id": "2605.00817v1",
-      "title": "When LLMs Stop Following Steps: A Diagnostic Study of Procedural Execution in Language Models",
+      "id": "2605.06664v1",
+      "title": "BAMI: Training-Free Bias Mitigation in GUI Grounding",
       "authors": [
-        "Sailesh Panda",
-        "Pritam Kadasi",
-        "Abhishek Upperwal",
-        "Mayank Singh"
+        "Borui Zhang",
+        "Bo Zhang",
+        "Bo Wang",
+        "Wenzhao Zheng",
+        "Yuhao Cheng",
+        "Liang Tang",
+        "Yiqiang Yan",
+        "Jie Zhou",
+        "Jiwen Lu"
       ],
-      "abstract": "Large language models (LLMs) often achieve strong performance on reasoning benchmarks, but final-answer accuracy alone does not show whether they faithfully execute the procedure specified in a prompt. We study this question through a controlled diagnostic benchmark for procedural execution, where models are given a step-wise arithmetic algorithm and two numeric inputs, and must return the final computed value. The benchmark uses simple arithmetic operations but increases complexity through algorithm length and look-back dependencies over intermediate variables. Across 14 models and 55 datasets, average first-answer accuracy drops from 61% on 5-step procedures to 20% on 95-step procedures. Generation-level analysis shows that failures often involve missing answers, premature answers, self-correction after an initial error, under-executed traces, and hallucinated extra steps. These findings suggest that apparent reasoning ability can mask substantial weaknesses in faithful instruction execution.",
-      "url": "https://arxiv.org/abs/2605.00817v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.00817v1",
-      "published": "2026-05-01T17:55:47Z",
-      "updated": "2026-05-01T17:55:47Z",
-      "categories": [
-        "cs.CL"
-      ],
-      "primary_category": "cs.CL"
-    },
-    {
-      "id": "2605.00814v1",
-      "title": "Persistent Visual Memory: Sustaining Perception for Deep Generation in LVLMs",
-      "authors": [
-        "Siyuan Huang",
-        "Xiaoye Qu",
-        "Yafu Li",
-        "Tong Zhu",
-        "Zefeng He",
-        "Muxin Fu",
-        "Daizong Liu",
-        "Wei-Long Zheng",
-        "Yu Cheng"
-      ],
-      "abstract": "While autoregressive Large Vision-Language Models (LVLMs) demonstrate remarkable proficiency in multimodal tasks, they face a \"Visual Signal Dilution\" phenomenon, where the accumulation of textual history expands the attention partition function, causing visual attention to decay inversely with generated sequence length. To counteract this, we propose Persistent Visual Memory (PVM), a lightweight learnable module designed to ensure sustained, on-demand visual perception. Integrated as a parallel branch alongside the Feed-Forward Network (FFN) in LVLMs, PVM establishes a distance-agnostic retrieval pathway that directly provides visual embeddings for precise visual perception, thereby structurally mitigating the signal suppression inherent to deep generation. Extensive experiments on Qwen3-VL models demonstrate that PVM brings notable improvements with negligible parameter overhead, delivering consistent average accuracy gains across both 4B and 8B scales, particularly in complex reasoning tasks that demand persistent visual perception. Furthermore, in-depth analysis reveals that PVM can resist length-induced signal decay and accelerate internal prediction convergence.",
-      "url": "https://arxiv.org/abs/2605.00814v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.00814v1",
-      "published": "2026-05-01T17:54:37Z",
-      "updated": "2026-05-01T17:54:37Z",
+      "abstract": "GUI grounding is a critical capability for enabling GUI agents to execute tasks such as clicking and dragging. However, in complex scenarios like the ScreenSpot-Pro benchmark, existing models often suffer from suboptimal performance. Utilizing the proposed \\textbf{Masked Prediction Distribution (MPD)} attribution method, we identify that the primary sources of errors are twofold: high image resolution (leading to precision bias) and intricate interface elements (resulting in ambiguity bias). To address these challenges, we introduce \\textbf{Bias-Aware Manipulation Inference (BAMI)}, which incorporates two key manipulations, coarse-to-fine focus and candidate selection, to effectively mitigate these biases. Our extensive experimental results demonstrate that BAMI significantly enhances the accuracy of various GUI grounding models in a training-free setting. For instance, applying our method to the TianXi-Action-7B model boosts its accuracy on the ScreenSpot-Pro benchmark from 51.9\\% to 57.8\\%. Furthermore, ablation studies confirm the robustness of the BAMI approach across diverse parameter configurations, highlighting its stability and effectiveness. Code is available at https://github.com/Neur-IO/BAMI.",
+      "url": "https://arxiv.org/abs/2605.06664v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.06664v1",
+      "published": "2026-05-07T17:59:31Z",
+      "updated": "2026-05-07T17:59:31Z",
       "categories": [
         "cs.CV",
         "cs.AI"
@@ -97,143 +81,169 @@
       "primary_category": "cs.CV"
     },
     {
-      "id": "2605.00809v1",
-      "title": "Let ViT Speak: Generative Language-Image Pre-training",
+      "id": "2605.06663v1",
+      "title": "EMO: Pretraining Mixture of Experts for Emergent Modularity",
       "authors": [
-        "Yan Fang",
-        "Mengcheng Lan",
-        "Zilong Huang",
-        "Weixian Lei",
-        "Yunqing Zhao",
-        "Yujie Zhong",
-        "Yingchen Yu",
-        "Qi She",
-        "Yao Zhao",
-        "Yunchao Wei"
+        "Ryan Wang",
+        "Akshita Bhagia",
+        "Sewon Min"
       ],
-      "abstract": "In this paper, we present \\textbf{Gen}erative \\textbf{L}anguage-\\textbf{I}mage \\textbf{P}re-training (GenLIP), a minimalist generative pretraining framework for Vision Transformers (ViTs) designed for multimodal large language models (MLLMs). To better align vision encoders with the autoregressive nature of LLMs, GenLIP trains a ViT to predict language tokens directly from visual tokens using a standard language modeling objective, without contrastive batch construction or an additional text decoder. This design offers three key advantages: (1) \\textbf{Simplicity}: a single transformer jointly models visual and textual tokens; (2) \\textbf{Scalability}: it scales effectively with both data and model size; and (3) \\textbf{Performance}: it achieves competitive or superior results across diverse multimodal benchmarks. Trained on 8B samples from Recap-DataComp-1B, GenLIP matches or surpasses strong baselines despite using substantially less pretraining data. After continued pretraining on multi-resolution images at native aspect ratios, GenLIP further improves on detail-sensitive tasks such as OCR and chart understanding, making it a strong foundation for vision encoders in MLLMs.",
-      "url": "https://arxiv.org/abs/2605.00809v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.00809v1",
-      "published": "2026-05-01T17:51:38Z",
-      "updated": "2026-05-01T17:51:38Z",
+      "abstract": "Large language models are typically deployed as monolithic systems, requiring the full model even when applications need only a narrow subset of capabilities, e.g., code, math, or domain-specific knowledge. Mixture-of-Experts (MoEs) seemingly offer a potential alternative by activating only a subset of experts per input, but in practice, restricting inference to a subset of experts for a given domain leads to severe performance degradation. This limits their practicality in memory-constrained settings, especially as models grow larger and sparser. We introduce EMO, an MoE designed for modularity-the independent use and composition of expert subsets-without requiring human-defined priors. Our key idea is to encourage tokens from similar domains to rely on similar experts. Since tokens within a document often share a domain, EMO restricts them to select experts from a shared pool, while allowing different documents to use different pools. This simple constraint enables coherent expert groupings to emerge during pretraining using document boundaries alone. We pretrain a 1B-active, 14B-total EMO on 1T tokens. As a full model, it matches standard MoE performance. Crucially, it enables selective expert use: retaining only 25% (12.5%) of experts incurs just a 1% (3%) absolute drop, whereas standard MoEs break under the same setting. We further find that expert subsets in EMO specialize at semantic levels (e.g., domains such as math or code), in contrast to the low-level syntactic specialization observed in standard MoEs. Altogether, our results demonstrate a path toward modular, memory-efficient deployment of large, sparse models and open new opportunities for composable architectures.",
+      "url": "https://arxiv.org/abs/2605.06663v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.06663v1",
+      "published": "2026-05-07T17:59:20Z",
+      "updated": "2026-05-07T17:59:20Z",
       "categories": [
-        "cs.CV"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2605.00803v1",
-      "title": "Can Coding Agents Reproduce Findings in Computational Materials Science?",
-      "authors": [
-        "Ziyang Huang",
-        "Yi Cao",
-        "Ali K. Shargh",
-        "Jing Luo",
-        "Ruidong Mei",
-        "Mohd Zaki",
-        "Zhan Liu",
-        "Wyatt Bunstine",
-        "William Jurayj",
-        "Somdatta Goswami",
-        "Tyrel McQueen",
-        "Michael Shields",
-        "Jaafar El-Awady",
-        "Paulette Clancy",
-        "Benjamin Van Durme",
-        "Nicholas Andrews",
-        "William Walden",
-        "Daniel Khashabi"
-      ],
-      "abstract": "Large language models are increasingly deployed as autonomous coding agents and have achieved remarkably strong performance on software engineering benchmarks. However, it is unclear whether such success transfers to computational scientific workflows, where tasks require not only strong coding ability, but also the ability to navigate complex, domain-specific procedures and to interpret results in the context of scientific claims. To address this question, we present AutoMat, a benchmark for evaluating LLM-based agents' ability to reproduce claims from computational materials science. AutoMat poses three interrelated challenges: recovering underspecified computational procedures, navigating specialized toolchains, and determining whether the resulting evidence supports a claim. By working closely with subject matter experts, we curate a set of claims from real materials science papers to test whether coding agents can recover and execute the end-to-end workflow needed to support (or undermine) such claims. We then evaluate multiple representative coding agent settings across several foundation models. Our results show that current LLM-based agents obtain low overall success rates on AutoMat, with the best-performing setting achieving a success rate of only 54.1%. Error analysis further reveals that agents perform worst when workflows must be reconstructed from paper text alone and that they fail primarily due to incomplete procedures, methodological deviations, and execution fragility. Taken together, these findings position AutoMat as both a benchmark for computational scientific reproducibility and a tool for diagnosing the current limitations of agentic systems in AI-for-science settings.",
-      "url": "https://arxiv.org/abs/2605.00803v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.00803v1",
-      "published": "2026-05-01T17:42:12Z",
-      "updated": "2026-05-01T17:42:12Z",
-      "categories": [
-        "cs.SE",
-        "cs.AI",
         "cs.CL"
       ],
-      "primary_category": "cs.SE"
+      "primary_category": "cs.CL"
     },
     {
-      "id": "2605.00800v1",
-      "title": "Generating Statistical Charts with Validation-Driven LLM Workflows",
+      "id": "2605.06660v1",
+      "title": "Verifier-Backed Hard Problem Generation for Mathematical Reasoning",
       "authors": [
-        "Pavlin G. Poli\u010dar",
-        "Andra\u017e Pevcin",
-        "Bla\u017e Zupan"
+        "Yuhang Lai",
+        "Jiazhan Feng",
+        "Yee Whye Teh",
+        "Ning Miao"
       ],
-      "abstract": "Generating diverse, readable statistical charts from tabular data remains challenging for LLMs, as many failures become apparent after rendering and are not detectable from data or code alone. Existing chart datasets also rarely provide fully aligned artifacts, such as executable code, dataset context, and question-answer pairs. We present a structured LLM-based workflow that decomposes chart generation into dataset screening, plot proposal, code synthesis, rendering, validation-driven refinement, description generation, and question-answer generation. By incorporating rendered-output validation, the workflow addresses visualization-specific failure modes such as readability and semantic mismatch. It treats chart generation as an inspectable process rather than a one-shot prompt-to-code task, retaining each chart with its code, dataset context, description, and question-answer pairs. Applied to UCI datasets, the workflow produces 1,500 charts from 74 datasets, spanning 24 chart families and paired with 30,003 question-answer pairs. We evaluate 16 multimodal LLMs (MLLMs) on these chart-question pairs. The results show that chart-syntax questions are nearly saturated, while value extraction, comparison, and reasoning remain more challenging, illustrating the workflow's utility for diagnostic studies of chart-grounded multimodal reasoning.",
-      "url": "https://arxiv.org/abs/2605.00800v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.00800v1",
-      "published": "2026-05-01T17:39:00Z",
-      "updated": "2026-05-01T17:39:00Z",
-      "categories": [
-        "cs.LG"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2605.00799v1",
-      "title": "GMGaze: MoE-Based Context-Aware Gaze Estimation with CLIP and Multiscale Transformer",
-      "authors": [
-        "Xinyuan Zhao",
-        "Yihang Wu",
-        "Ahmad Chaddad",
-        "Sarah A. Alkhodair",
-        "Reem Kateb"
-      ],
-      "abstract": "Gaze estimation methods commonly use facial appearances to predict the direction of a person gaze. However, previous studies show three major challenges with convolutional neural network (CNN)-based, transformer-based, and contrastive language-image pre-training (CLIP)-based methods, including late fusion of image features, lack of factor-aware conditioning, and impractical capacity scaling. To address these challenges, we propose Globally-conditioned Multi-scale Gaze estimation (GMGaze), which leverages a multi-scale transformer architecture. Specifically, the model first introduces semantic prototype conditioning, which modulates the CLIP global image embedding using four learned prototype banks (i.e., illumination, background, head pose and appearance) to generate two complementary context-biased global tokens. These tokens, along with the CLIP patch and CNN tokens, are fused at the first layer. This early unified fusion prevents information loss common in late-stage merging. Finally, each token passes through sparse Mixture-of-Experts modules, providing conditional computational capacity without uniformly increasing dense parameters. For cross-domain adaptation, we incorporate an adversarial domain adaptation technique with a feature separation loss that encourages the two global tokens to remain de-correlated. Experiments using four public benchmarks (MPIIFaceGaze, EYEDIAP, Gaze360, and ETH-XGaze) show that GMGaze achieves mean angular errors of 2.49$^\\circ$, 3.22$^\\circ$, 10.16$^\\circ$, and 1.44$^\\circ$, respectively, outperforming previous baselines in all within-domain settings. In cross-domain evaluations, it provides state-of-the-art (SOTA) results on two standard transfer routes.",
-      "url": "https://arxiv.org/abs/2605.00799v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.00799v1",
-      "published": "2026-05-01T17:35:17Z",
-      "updated": "2026-05-01T17:35:17Z",
-      "categories": [
-        "cs.CV"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2605.00798v1",
-      "title": "RunAgent: Interpreting Natural-Language Plans with Constraint-Guided Execution",
-      "authors": [
-        "Arunabh Srivastava",
-        "Mohammad A.",
-        "Khojastepour",
-        "Srimat Chakradhar",
-        "Sennur Ulukus"
-      ],
-      "abstract": "Humans solve problems by executing targeted plans, yet large language models (LLMs) remain unreliable for structured workflow execution. We propose RunAgent, a multi-agent plan execution platform that interprets natural-language plans while enforcing stepwise execution through constraints and rubrics. RunAgent bridges the expressiveness of natural language with the determinism of programming via an agentic language with explicit control constructs (e.g., \\texttt{IF}, \\texttt{GOTO}, \\texttt{FORALL}). Beyond verifying syntactic and semantic verification of the step output, which is performed based on the specific instruction of each step, RunAgent autonomously derives and validates constraints based on the description of the task and its instance at each step. RunAgent also dynamically selects among LLM-based reasoning, tool usage, and code generation and execution (e.g., in Python), and incorporates error correction mechanisms to ensure correctness. Finally, RunAgent filters the context history by retaining only relevant information during the execution of each step. Evaluations on Natural-plan and SciBench Datasets demonstrate that RunAgent outperforms baseline LLMs and state-of-the-art PlanGEN methods.",
-      "url": "https://arxiv.org/abs/2605.00798v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.00798v1",
-      "published": "2026-05-01T17:29:45Z",
-      "updated": "2026-05-01T17:29:45Z",
+      "abstract": "Large Language Models (LLMs) demonstrate strong capabilities for solving scientific and mathematical problems, yet they struggle to produce valid, challenging, and novel problems - an essential component for advancing LLM training and enabling autonomous scientific research. Existing problem generation approaches either depend on expensive human expert involvement or adopt naive self-play paradigms, which frequently yield invalid problems due to reward hacking. This work introduces VHG, a verifier-enhanced hard problem generation framework built upon three-party self-play. By integrating an independent verifier into the conventional setter-solver duality, our design constrains the setter's reward to be jointly determined by problem validity (evaluated by the verifier) and difficulty (assessed by the solver). We instantiate two verifier variants: a Hard symbolic verifier and a Soft LLM-based verifier, with evaluations conducted on indefinite integral tasks and general mathematical reasoning tasks. Experimental results show that VHG substantially outperforms all baseline methods by a clear margin.",
+      "url": "https://arxiv.org/abs/2605.06660v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.06660v1",
+      "published": "2026-05-07T17:58:32Z",
+      "updated": "2026-05-07T17:58:32Z",
       "categories": [
         "cs.LG",
-        "cs.CL",
-        "cs.MA"
+        "cs.AI",
+        "cs.CL"
       ],
       "primary_category": "cs.LG"
     },
     {
-      "id": "2605.00796v1",
-      "title": "When RAG Chatbots Expose Their Backend: An Anonymized Case Study of Privacy and Security Risks in Patient-Facing Medical AI",
+      "id": "2605.06658v1",
+      "title": "Relit-LiVE: Relight Video by Jointly Learning Environment Video",
       "authors": [
-        "Alfredo Madrid-Garc\u00eda",
-        "Miguel Rujas"
+        "Weiqing Xiao",
+        "Hong Li",
+        "Xiuyu Yang",
+        "Houyuan Chen",
+        "Wenyi Li",
+        "Tianqi Liu",
+        "Shaocong Xu",
+        "Chongjie Ye",
+        "Hao Zhao",
+        "Beibei Wang"
       ],
-      "abstract": "Background: Patient-facing medical chatbots based on retrieval-augmented generation (RAG) are increasingly promoted to deliver accessible, grounded health information. AI-assisted development lowers the barrier to building them, but they still demand rigorous security, privacy, and governance controls. Objective: To report an anonymized, non-destructive security assessment of a publicly accessible patient-facing medical RAG chatbot and identify governance lessons for safe deployment of generative AI in health. Methods: We used a two-stage strategy. First, Claude Opus 4.6 supported exploratory prompt-based testing and structured vulnerability hypotheses. Second, candidate findings were manually verified using Chrome Developer Tools, inspecting browser-visible network traffic, payloads, API schemas, configuration objects, and stored interaction data. Results: The LLM-assisted phase identified a critical vulnerability: sensitive system and RAG configuration appeared exposed through client-server communication rather than restricted server-side. Manual verification confirmed that ordinary browser inspection allowed collection of the system prompt, model and embedding configuration, retrieval parameters, backend endpoints, API schema, document and chunk metadata, knowledge-base content, and the 1,000 most recent patient-chatbot conversations. The deployment also contradicted its privacy assurances: full conversation records, including health-related queries, were retrievable without authentication. Conclusions: Serious privacy and security failures in patient-facing RAG chatbots can be identified with standard browser tools, without specialist skills or authentication; independent review should be a prerequisite for deployment. Commercial LLMs accelerated this assessment, including under a false developer persona; assistance available to auditors is equally available to adversaries.",
-      "url": "https://arxiv.org/abs/2605.00796v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.00796v1",
-      "published": "2026-05-01T17:29:09Z",
-      "updated": "2026-05-01T17:29:09Z",
+      "abstract": "Recent advances have shown that large-scale video diffusion models can be repurposed as neural renderers by first decomposing videos into intrinsic scene representations and then performing forward rendering under novel illumination. While promising, this paradigm fundamentally relies on accurate intrinsic decomposition, which remains highly unreliable for real-world videos and often leads to distorted appearances, broken materials, and accumulated temporal artifacts during relighting. In this work, we present Relit-LiVE, a novel video relighting framework that produces physically consistent, temporally stable results without requiring prior knowledge of camera pose. Our key insight is to explicitly introduce raw reference images into the rendering process, enabling the model to recover critical scene cues that are inevitably lost or corrupted in intrinsic representations. Furthermore, we propose a novel environment video prediction formulation that simultaneously generates relit videos and per-frame environment maps aligned with each camera viewpoint in a single diffusion process. This joint prediction enforces strong geometric-illumination alignment and naturally supports dynamic lighting and camera motion, significantly improving physical consistency in video relighting while easing the requirement of known per-frame camera pose. Extensive experiments demonstrate that Relit-LiVE consistently outperforms state-of-the-art video relighting and neural rendering methods across synthetic and real-world benchmarks. Beyond relighting, our framework naturally supports a wide range of downstream applications, including scene-level rendering, material editing, object insertion, and streaming video relighting. The Project is available at https://github.com/zhuxing0/Relit-LiVE.",
+      "url": "https://arxiv.org/abs/2605.06658v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.06658v1",
+      "published": "2026-05-07T17:58:15Z",
+      "updated": "2026-05-07T17:58:15Z",
       "categories": [
-        "cs.CR",
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2605.06656v1",
+      "title": "Why Global LLM Leaderboards Are Misleading: Small Portfolios for Heterogeneous Supervised ML",
+      "authors": [
+        "Jai Moondra",
+        "Ayela Chughtai",
+        "Bhargavi Lanka",
+        "Swati Gupta"
+      ],
+      "abstract": "Ranking LLMs via pairwise human feedback underpins current leaderboards for open-ended tasks, such as creative writing and problem-solving. We analyze ~89K comparisons in 116 languages from 52 LLMs from Arena, and show that the best-fit global Bradley-Terry (BT) ranking is misleading. Nearly 2/3 of the decisive votes cancel out, and even the top 50 models according to the global BT ranking are statistically indistinguishable (pairwise win probabilities are at most 0.53 within the top 50 models). We trace this failure to strong, structured heterogeneity of opinions across language, task, and time. Moreover, we find an important characteristic - *language* plays a key role. Grouping by language (and families) increases the agreement of votes massively, resulting in two orders of magnitude higher spread in the ELO scores (i.e., very consistent rankings). What appears as global noise is in fact a mixture of coherent but conflicting subpopulations.   To address such heterogeneity in supervised machine learning, we introduce the framework of $(\u03bb, \u03bd)$-portfolios, which are small sets of models that achieve a prediction error at most $\u03bb$, \"covering\" at least a $\u03bd$ fraction of users. We formulate this as a variant of the set cover problem and provide guarantees using the VC dimension of the underlying set system. On the Arena data, our algorithms recover just 5 distinct BT rankings that cover over 96% of votes at a modest $\u03bb$, compared to the 21% coverage by the global ranking. We also provide a portfolio of 6 LLMs that cover twice as many votes as the top-6 LLMs from a global ranking. We further construct portfolios for a classification problem on the COMPAS dataset using an ensemble of fairness-regularized classification models and show that these portfolios can be used to detect blind spots in the data, which might be of independent interest to policymakers.",
+      "url": "https://arxiv.org/abs/2605.06656v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.06656v1",
+      "published": "2026-05-07T17:57:58Z",
+      "updated": "2026-05-07T17:57:58Z",
+      "categories": [
+        "cs.LG",
+        "cs.DM",
+        "cs.ET",
+        "math.OC"
+      ],
+      "primary_category": "cs.LG"
+    },
+    {
+      "id": "2605.06654v1",
+      "title": "Optimizer-Model Consistency: Full Finetuning with the Same Optimizer as Pretraining Forgets Less",
+      "authors": [
+        "Yuxing Liu",
+        "Jianyu Wang",
+        "Tong Zhang"
+      ],
+      "abstract": "Optimizers play an important role in both pretraining and finetuning stages when training large language models (LLMs). In this paper, we present an observation that full finetuning with the same optimizer as in pretraining achieves a better learning-forgetting tradeoff, i.e., forgetting less while achieving the same or better performance on the new task, than other optimizers and, possibly surprisingly, LoRA, during the supervised finetuning (SFT) stage. We term this phenomenon optimizer-model consistency. To better understand it, through controlled experiments and theoretical analysis, we show that: 1) optimizers can shape the models by having regularization effects on the activations, leading to different landscapes around the pretrained checkpoints; 2) in response to this regularization effect, the weight update in SFT should follow some specific structures to lower forgetting of the knowledge learned in pretraining, which can be obtained by using the same optimizer. Moreover, we specifically compare Muon and AdamW when they are employed throughout the pretraining and SFT stages and find that Muon performs worse when finetuned for reasoning tasks. With a synthetic language modeling experiment, we demonstrate that this can come from Muon's strong tendency towards rote memorization, which may hurt pattern acquisition with a small amount of data, as for SFT.",
+      "url": "https://arxiv.org/abs/2605.06654v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.06654v1",
+      "published": "2026-05-07T17:57:02Z",
+      "updated": "2026-05-07T17:57:02Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "math.OC"
+      ],
+      "primary_category": "cs.LG"
+    },
+    {
+      "id": "2605.06652v1",
+      "title": "When No Benchmark Exists: Validating Comparative LLM Safety Scoring Without Ground-Truth Labels",
+      "authors": [
+        "Sushant Gautam",
+        "Finn Schwall",
+        "Annika Willoch Olstad",
+        "Fernando Vallecillos Ruiz",
+        "Birk Torpmann-Hagen",
+        "Sunniva Maria Stordal Bj\u00f8rklund",
+        "Leon Moonen",
+        "Klas Pettersen",
+        "Michael A. Riegler"
+      ],
+      "abstract": "Many deployments must compare candidate language models for safety before a labeled benchmark exists for the relevant language, sector, or regulatory regime. We formalize this setting as benchmarkless comparative safety scoring and specify the contract under which a scenario-based audit can be interpreted as deployment evidence. Scores are valid only under a fixed scenario pack, rubric, auditor, judge, sampling configuration, and rerun budget. Because no labels are available, we replace ground-truth agreement with an instrumental-validity chain: responsiveness to a controlled safe-versus-abliterated contrast, dominance of target-driven variance over auditor and judge artifacts, and stability across reruns.   We instantiate the chain in SimpleAudit, a local-first scoring instrument, and validate it on a Norwegian safety pack. Safe and abliterated targets separate with AUROC values between 0.89 and 1.00, target identity is the dominant variance component ($\u03b7^2 \\approx 0.52$), and severity profiles stabilize by ten reruns. Applying the same chain to Petri shows that it admits both tools. The substantial differences arise upstream of the chain, in claim-contract enforcement and deployment fit. A Norwegian public-sector procurement case comparing Borealis and Gemma 3 demonstrates the resulting evidence in practice: the safer model depends on scenario category and risk measure. Consequently, scores, matched deltas, critical rates, uncertainty, and the auditor and judge used must be reported together rather than collapsed into a single ranking.",
+      "url": "https://arxiv.org/abs/2605.06652v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.06652v1",
+      "published": "2026-05-07T17:56:41Z",
+      "updated": "2026-05-07T17:56:41Z",
+      "categories": [
+        "cs.LG",
         "cs.AI",
         "cs.CL"
       ],
-      "primary_category": "cs.CR"
+      "primary_category": "cs.LG"
+    },
+    {
+      "id": "2605.06651v1",
+      "title": "AI Co-Mathematician: Accelerating Mathematicians with Agentic AI",
+      "authors": [
+        "Daniel Zheng",
+        "Ingrid von Glehn",
+        "Yori Zwols",
+        "Iuliya Beloshapka",
+        "Lars Buesing",
+        "Daniel M. Roy",
+        "Martin Wattenberg",
+        "Bogdan Georgiev",
+        "Tatiana Schmidt",
+        "Andrew Cowie",
+        "Fernanda Viegas",
+        "Dimitri Kanevsky",
+        "Vineet Kahlon",
+        "Hartmut Maennel",
+        "Sophia Alj",
+        "George Holland",
+        "Alex Davies",
+        "Pushmeet Kohli"
+      ],
+      "abstract": "We introduce the AI co-mathematician, a workbench for mathematicians to interactively leverage AI agents to pursue open-ended research. The AI co-mathematician is optimized to provide holistic support for the exploratory and iterative reality of mathematical workflows, including ideation, literature search, computational exploration, theorem proving and theory building. By providing an asynchronous, stateful workspace that manages uncertainty, refines user intent, tracks failed hypotheses, and outputs native mathematical artifacts, the system mirrors human collaborative workflows. In early tests, the AI co-mathematician helped researchers solve open problems, identify new research directions, and uncover overlooked literature references. Besides demonstrating a highly interactive paradigm for AI-assisted mathematical discovery, the AI co-mathematician also achieves state of the art results on hard problem-solving benchmarks, including scoring 48% on FrontierMath Tier 4, a new high score among all AI systems evaluated.",
+      "url": "https://arxiv.org/abs/2605.06651v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.06651v1",
+      "published": "2026-05-07T17:56:32Z",
+      "updated": "2026-05-07T17:56:32Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI"
     }
   ]
 }
