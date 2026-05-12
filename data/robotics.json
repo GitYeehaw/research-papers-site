@@ -2,52 +2,175 @@
   "category": "robotics",
   "name": "Robotics Research",
   "description": "Robotics \u2014 Motion Planning, Control Systems, Human-Robot Interaction, Autonomous Systems",
-  "scraped_at": "2026-05-11T11:35:14.328782+00:00",
+  "scraped_at": "2026-05-12T10:46:47.087816+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2605.08084v1",
-      "title": "123D: Unifying Multi-Modal Autonomous Driving Data at Scale",
+      "id": "2605.10942v1",
+      "title": "HarmoWAM: Harmonizing Generalizable and Precise Manipulation via Adaptive World Action Models",
       "authors": [
-        "Daniel Dauner",
-        "Valentin Charraut",
-        "Bastian Berle",
-        "Tianyu Li",
-        "Long Nguyen",
-        "Jiabao Wang",
-        "Changhui Jing",
-        "Maximilian Igl",
-        "Holger Caesar",
-        "Boris Ivanovic",
-        "Yiyi Liao",
-        "Andreas Geiger",
-        "Kashyap Chitta"
+        "Qiuxuan Feng",
+        "Jiale Yu",
+        "Jiaming Liu",
+        "Yueru Jia",
+        "Zhuangzhe Wu",
+        "Hao Chen",
+        "Zezhong Qian",
+        "Shuo Gu",
+        "Peng Jia",
+        "Siwei Ma",
+        "Shanghang Zhang"
       ],
-      "abstract": "The pursuit of autonomous driving has produced one of the richest sensor data collections in all of robotics. However, its scale and diversity remain largely untapped. Each dataset adopts different 2D and 3D modalities, such as cameras, lidar, ego states, annotations, traffic lights, and HD maps, with different rates and synchronization schemes. They come in fragmented formats requiring complex dependencies that cannot natively coexist in the same development environment. Further, major inconsistencies in annotation conventions prevent training or measuring generalization across multiple datasets. We present 123D, an open-source framework that unifies such multi-modal driving data through a single API. To handle synchronization, we store each modality as an independent timestamped event stream with no prescribed rate, enabling synchronous or asynchronous access across arbitrary datasets. Using 123D, we consolidate eight real-world driving datasets spanning 3,300 hours and 90,000 kilometers, together with a synthetic dataset with configurable collection scripts, and provide tools for data analysis and visualization. We conduct a systematic study comparing annotation statistics and assessing each dataset's pose and calibration accuracy. Further, we showcase two applications 123D enables: cross-dataset 3D object detection transfer and reinforcement learning for planning, and offer recommendations for future directions. Code and documentation are available at https://github.com/kesai-labs/py123d.",
-      "url": "https://arxiv.org/abs/2605.08084v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.08084v1",
-      "published": "2026-05-08T17:59:53Z",
-      "updated": "2026-05-08T17:59:53Z",
+      "abstract": "World Action Models (WAMs) have emerged as a promising paradigm for robot control by modeling physical dynamics. Current WAMs generally follow two paradigms: the \"Imagine-then-Execute\" approach, which uses video prediction to infer actions via inverse dynamics, and the \"Joint Modeling\" approach, which jointly models actions and video representations. Based on systematic experiments, we observe a fundamental trade-off between these paradigms: the former explicitly leverages world models for generalizable transit but lacks interaction precision, whereas the latter enables fine-grained, temporally coherent action generation but is constrained by the exploration space of the training distribution. Motivated by these findings, we propose HarmoWAM, an end-to-end WAM that fully leverages a world model to unify predictive and reactive control, enabling both generalizable transit and precise manipulation. Specifically, the world model provides spatio-temporal physical priors that condition two complementary action experts: a predictive expert that leverages latent dynamics for iterative action generation, and a reactive expert that directly infers actions from predicted visual evolution. To enable adaptive coordination, a Process-Adaptive Gating Mechanism is proposed to automatically determine the timing and location of switching between them. This allows the world model to drive the reactive expert to expand the exploration space and the predictive expert to perform precise interactions across different stages of a task. For evaluation, we construct three training-unseen test environments across six real-world robotic tasks, covering variations in background, position, and object semantics. Notably, HarmoWAM achieves strong zero-shot generalization across these scenarios, significantly outperforming prior state-of-the-art VLA models and WAMs by margins of 33% and 29%, respectively.",
+      "url": "https://arxiv.org/abs/2605.10942v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.10942v1",
+      "published": "2026-05-11T17:59:56Z",
+      "updated": "2026-05-11T17:59:56Z",
       "categories": [
-        "cs.RO",
-        "cs.CV"
+        "cs.RO"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2605.08059v1",
-      "title": "6D Pose Estimation via Keypoint Heatmap Regression with RGB-D Residual Neural Networks",
+      "id": "2605.10934v1",
+      "title": "Variational Inference for L\u00e9vy Process-Driven SDEs via Neural Tilting",
       "authors": [
-        "Ismail Aljosevic",
-        "Amir Masoud Almasi",
-        "Ana Parovic",
-        "Ashkan Shafiei"
+        "Yaman Kindap",
+        "Manfred Opper",
+        "Benjamin Dupuis",
+        "Umut Simsekli",
+        "Tolga Birdal"
       ],
-      "abstract": "In this paper, we propose a modular framework for 6D pose estimation based on keypoint heatmap regression. Our approach combines YOLOv10m for object detection with a ResNet18-based network that predicts 2D heatmaps from RGB images. Keypoints extracted from these heatmaps are used to estimate the 6D object pose via the PnP RANSAC algorithm. We compare different keypoint selection strategies to assess their impact on pose accuracy. Additionally, we extend the baseline by incorporating depth data using a cross-fusion architecture, which enables interaction between RGB and depth features at multiple stages. We further explore general training improvements, such as experimenting with activation functions and learning rate scheduling strategies to improve model performance. Our best RGB-only model achieved a mean ADD-based accuracy of 84.50%, while the RGB-D fusion model reached 92.41% on the LINEMOD dataset. The code is available at https://github.com/ameermasood/HeatNet.",
-      "url": "https://arxiv.org/abs/2605.08059v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.08059v1",
-      "published": "2026-05-08T17:47:02Z",
-      "updated": "2026-05-08T17:47:02Z",
+      "abstract": "Modelling extreme events and heavy-tailed phenomena is central to building reliable predictive systems in domains such as finance, climate science, and safety-critical AI. While L\u00e9vy processes provide a natural mathematical framework for capturing jumps and heavy tails, Bayesian inference for L\u00e9vy-driven stochastic differential equations (SDEs) remains intractable with existing methods: Monte Carlo approaches are rigorous but lack scalability, whereas neural variational inference methods are efficient but rely on Gaussian assumptions that fail to capture discontinuities. We address this tension by introducing a neural exponential tilting framework for variational inference in L\u00e9vy-driven SDEs. Our approach constructs a flexible variational family by exponentially reweighting the L\u00e9vy measure using neural networks. This parametrization preserves the jump structure of the underlying process while remaining computationally tractable. To enable efficient inference, we develop a quadratic neural parametrization that yields closed-form normalization of the tilted measure, a conditional Gaussian representation for stable processes that facilitates simulation, and symmetry-aware Monte Carlo estimators for scalable optimization. Empirically, we demonstrate that the method accurately captures jump dynamics and yields reliable posterior inference in regimes where Gaussian-based variational approaches fail, on both synthetic and real-world datasets.",
+      "url": "https://arxiv.org/abs/2605.10934v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.10934v1",
+      "published": "2026-05-11T17:58:45Z",
+      "updated": "2026-05-11T17:58:45Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CV",
+        "cs.RO",
+        "stat.ML"
+      ],
+      "primary_category": "cs.LG"
+    },
+    {
+      "id": "2605.10925v1",
+      "title": "PriorVLA: Prior-Preserving Adaptation for Vision-Language-Action Models",
+      "authors": [
+        "Xinyu Guo",
+        "Bin Xie",
+        "Wei Chai",
+        "Xianchi Deng",
+        "Tiancai Wang",
+        "Zhengxing Wu",
+        "Xingyu Chen"
+      ],
+      "abstract": "Large-scale pretraining has made Vision-Language-Action (VLA) models promising foundations for generalist robot manipulation, yet adapting them to downstream tasks remains necessary. However, the common practice of full fine-tuning treats pretraining as initialization and can shift broad priors toward narrow training-distribution patterns. We propose PriorVLA, a novel framework that preserves pretrained priors and learns to leverage them for effective adaptation. PriorVLA keeps a frozen Prior Expert as a read-only prior source and trains an Adaptation Expert for downstream specialization. Expert Queries capture scene priors from the pretrained VLM and motor priors from the Prior Expert, integrating both into the Adaptation Expert to guide adaptation. Together, PriorVLA updates only 25% of the parameters updated by full fine-tuning. Across RoboTwin 2.0, LIBERO, and real-world tasks, PriorVLA achieves stronger overall performance than full fine-tuning and state-of-the-art VLA baselines, with the largest gains under out-of-distribution (OOD) and few-shot settings. PriorVLA improves over pi0.5 by 11 points on RoboTwin 2.0-Hard and achieves 99.1% average success on LIBERO. Across eight real-world tasks and two embodiments, PriorVLA reaches 81% in-distribution (ID) and 57% OOD success with standard data. With only 10 demonstrations per task, PriorVLA reaches 48% ID and 32% OOD success, surpassing pi0.5 by 24 and 22 points, respectively.",
+      "url": "https://arxiv.org/abs/2605.10925v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.10925v1",
+      "published": "2026-05-11T17:56:02Z",
+      "updated": "2026-05-11T17:56:02Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2605.10921v1",
+      "title": "RoboMemArena: A Comprehensive and Challenging Robotic Memory Benchmark",
+      "authors": [
+        "Huashuo Lei",
+        "Wenxuan Song",
+        "Huarui Zhang",
+        "Jieyuan Pei",
+        "Jiayi Chen",
+        "Haodong Yan",
+        "Han Zhao",
+        "Pengxiang Ding",
+        "Zhipeng Zhang",
+        "Lida Huang",
+        "Donglin Wang",
+        "Yan Wang",
+        "Haoang Li"
+      ],
+      "abstract": "Memory is a critical component of robotic intelligence, as robots must rely on past observations and actions to accomplish long-horizon tasks in partially observable environments. However, existing robotic memory benchmarks still lack multimodal annotations for memory formation, provide limited task coverage and structural complexity, and remain restricted to simulation without real-world evaluation. We address this gap with RoboMemArena, a large-scale benchmark of 26 tasks, with average trajectory lengths exceeding 1,000 steps per task and 68.9% of subtasks being memory-dependent. The generation pipeline leverages a vision-language model (VLM) to design and compose subtasks, generates full trajectories through atomic functions, and provides memory-related annotations, including subtask instructions and native keyframe annotations, while paired real-world memory tasks support physical evaluation. We further design PrediMem, a dual-system VLA in which a high-level VLM planner manages a memory bank with recent and keyframe buffers and uses a predictive coding head to improve sensitivity to task dynamics. Extensive experiments on RoboMemArena show that PrediMem outperforms all baselines and provides insights into memory management, model architecture, and scaling laws for complex memory systems.",
+      "url": "https://arxiv.org/abs/2605.10921v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.10921v1",
+      "published": "2026-05-11T17:54:49Z",
+      "updated": "2026-05-11T17:54:49Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2605.10917v1",
+      "title": "Optimal and Scalable MAPF via Multi-Marginal Optimal Transport and Schr\u00f6dinger Bridges",
+      "authors": [
+        "Usman A. Khan",
+        "Joseph W. Durham"
+      ],
+      "abstract": "We consider anonymous multi-agent path finding (MAPF) where a set of robots is tasked to travel to a set of targets on a finite, connected graph. We show that MAPF can be cast as a special class of multi-marginal optimal transport (MMOT) problems with an underlying Markovian structure, under which the exponentially large MMOT collapses to a linear program (LP) polynomial in size. Focusing on the anonymous setting, we establish conditions under which the corresponding LP is feasible, totally unimodular, and consequently, yields min-cost, integral $(\\{0,1\\})$ transports that do not overlap in both space and time. To adapt the approach to large-scale problems, we cast the MAPF-MMOT in a probabilistic framework via Schr\u00f6dinger bridges. Under standard assumptions, we show that the Schr\u00f6dinger bridge formulation reduces to an entropic regularization of the corresponding MMOT that admits an iterative Sinkhorn-type solution. The Schr\u00f6dinger bridge, being a probabilistic framework, provides a shadow (fractional) transport that we use as a template to solve a reduced LP and demonstrate that it results in near-optimal, integral transports at a significant reduction in complexity. Extensive experiments highlight the optimality and scalability of the proposed approaches.",
+      "url": "https://arxiv.org/abs/2605.10917v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.10917v1",
+      "published": "2026-05-11T17:52:15Z",
+      "updated": "2026-05-11T17:52:15Z",
+      "categories": [
+        "cs.LG",
+        "cs.MA",
+        "cs.RO"
+      ],
+      "primary_category": "cs.LG"
+    },
+    {
+      "id": "2605.10904v1",
+      "title": "MDrive: Benchmarking Closed-Loop Cooperative Driving for End-to-End Multi-agent Systems",
+      "authors": [
+        "Marco Coscoy",
+        "Zewei Zhou",
+        "Seth Z. Zhao",
+        "Henry Wei",
+        "Angela Magtoto",
+        "Johnson Liu",
+        "Rui Song",
+        "Walter Zimmer",
+        "Zhiyu Huang",
+        "Chen Tang",
+        "Bolei Zhou",
+        "Jiaqi Ma"
+      ],
+      "abstract": "Vehicle-to-Everything (V2X) communication has emerged as a promising paradigm for autonomous driving, enabling connected agents to share complementary perception information and negotiate with each other to benefit the final planning. Existing V2X benchmarks, however, fall short in two ways: (i) open-loop evaluations fail to capture the inherently closed-loop nature of driving, leading to evaluation gaps, and (ii) current closed-loop evaluations lack behavioral and interactive diversity to reflect real-world driving. Thus, it is still unclear the extent of benefits of multi-agent systems for closed-loop driving. In this paper, we introduce MDrive, a closed-loop cooperative driving benchmark comprising 225 scenarios grounded in both NHTSA pre-crash typologies and real-world V2X datasets. Our benchmark results demonstrate that multi-agent systems are generally better than single-agent counterparts. However, current multi-agent systems still face two important challenges: (i) perception sharing enhances perceptions, but doesn't always translate to better planning; (ii) negotiation improves planning performance but harms it in complex and dense traffic scenarios. MDrive further provides an open-source toolbox for scenario generation, Real2Sim conversion, and human-in-the-loop simulation. Together, MDrive establishes a reproducible foundation for evaluating and improving the generalization and robustness of cooperative driving systems.",
+      "url": "https://arxiv.org/abs/2605.10904v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.10904v1",
+      "published": "2026-05-11T17:44:34Z",
+      "updated": "2026-05-11T17:44:34Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2605.10903v1",
+      "title": "CapVector: Learning Transferable Capability Vectors in Parametric Space for Vision-Language-Action Models",
+      "authors": [
+        "Wenxuan Song",
+        "Han Zhao",
+        "Fuhao Li",
+        "Ziyang Zhou",
+        "Xi Wang",
+        "Jing Lyu",
+        "Pengxiang Ding",
+        "Yan Wang",
+        "Donglin Wang",
+        "Haoang Li"
+      ],
+      "abstract": "This paper proposes a novel approach to address the challenge that pretrained VLA models often fail to effectively improve performance and reduce adaptation costs during standard supervised finetuning (SFT). Some advanced finetuning methods with auxiliary training objectives can improve performance and reduce the number of convergence steps. However, they typically incur significant computational overhead due to the additional losses from auxiliary objectives. To simultaneously achieve the enhanced capabilities of auxiliary training with the simplicity of standard SFT, we decouple the two objectives of auxiliary-objective SFT within the parameter space, namely, enhancing general capabilities and fitting task-specific action distributions. To deliver the goal, we only need to train the model to converge on a small-scale task set using two distinct training strategies, resulting in two finetuned models. The parameters' difference between the two models can then be interpreted as capability vectors provided by auxiliary objectives. These vectors are then merged with pretrained parameters to form a capability-enhanced meta model. Moreover, when standard SFT is augmented with a lightweight orthogonal regularization loss, the merged model attains performance comparable to auxiliary finetuned baselines with reduced computational overhead. Internal and external experiments demonstrate that our capability vectors (1) are effective and versatile across diverse models, (2) can generalize to novel environments and embodiments out of the box.",
+      "url": "https://arxiv.org/abs/2605.10903v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.10903v1",
+      "published": "2026-05-11T17:41:54Z",
+      "updated": "2026-05-11T17:41:54Z",
       "categories": [
         "cs.CV",
         "cs.RO"
@@ -55,156 +178,84 @@
       "primary_category": "cs.CV"
     },
     {
-      "id": "2605.08028v1",
-      "title": "Adaptive Domain Decomposition Physics-Informed Neural Networks for Traffic State Estimation with Sparse Sensor Data",
+      "id": "2605.10880v1",
+      "title": "Safe Aerial 3D Path Planning for Autonomous UAVs using Magnetic Potential Fields",
       "authors": [
-        "Eunhan Ka",
-        "Ludovic Leclercq",
-        "Satish V. Ukkusuri"
+        "Haechan Mark Bong",
+        "Giovanni Beltrame"
       ],
-      "abstract": "Traffic state estimation from sparse fixed sensors is challenging because physics-informed neural networks (PINNs) tend to over-smooth the shockwaves admitted by the Lighthill-Whitham-Richards (LWR) model. This study proposes Adaptive Domain Decomposition Physics-Informed Neural Networks (ADD-PINN), a two-stage residual-guided framework for LWR-based offline speed-field reconstruction. A coarse global PINN is first trained; its spatial residual profile is then used to place subdomain boundaries and initialize child subnetworks in a decomposition-enabled mode, while a data-driven shock indicator can retain a single-domain fallback when localized evidence of transition is weak. The primary offline I-24 MOTION evaluation spans five days, five sensor configurations, and ten seeds per configuration, yielding 1,500 runs in total. Against neural and physics-informed baselines, ADD-PINN attains the lowest relative L2 error in 18 of 25 configurations and in 14 of 15 sparse-sensing cases, while training 2.4 times faster than the extended PINN (XPINN) baseline. An ablation study supports spatial-only decomposition as an effective default for fixed-sensor traffic reconstruction in the evaluated settings. Supplementary Next Generation Simulation (NGSIM) experiments serve as a negative control: the shock indicator suppresses decomposition in all 50 runs, and the default single-domain fallback ranks first across all sensor configurations. These results support residual-guided spatial decomposition as an effective PINN-family design for offline reconstruction when sparse fixed sensing coincides with localized transition regions.",
-      "url": "https://arxiv.org/abs/2605.08028v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.08028v1",
-      "published": "2026-05-08T17:13:53Z",
-      "updated": "2026-05-08T17:13:53Z",
-      "categories": [
-        "cs.LG",
-        "eess.SY"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2605.08020v1",
-      "title": "Active Embodiment Identification with Reinforcement Learning for Legged Robots",
-      "authors": [
-        "Nico Bohlinger",
-        "Jan Peters"
-      ],
-      "abstract": "We present an active embodiment identification method for legged robots that jointly learns information-seeking behavior and explicit embodiment prediction. Using a history-augmented URMA architecture, the method infers joint-level and global embodiment parameters through interaction with the environment in simulation across different morphologies.",
-      "url": "https://arxiv.org/abs/2605.08020v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.08020v1",
-      "published": "2026-05-08T17:07:58Z",
-      "updated": "2026-05-08T17:07:58Z",
+      "abstract": "Safe autonomous Uncrewed Aerial Vehicle (UAV) navigation in urban environments requires real-time path planning that avoids obstacles. MaxConvNet is a potential-field planner that leverages properties of Maxwell's equations to generate a path to the goal without local minima. We extend the 2D MaxConvNet magnetic field planner to 3D, using a convolutional autoencoder to predict obstacle-aware potential fields from LiDAR-derived 101^3 voxel grids. Evaluation across 100 randomized closed-loop trials in two distinct Cosys-AirSim urban environments, a dense night-time cityscape and a suburban district shows a 100% path planning success rate on both maps without retraining. In offline path planning, 3DMaxConvNet produces path lengths comparable to A* on unseen maps while reducing runtime from 0.155--0.17s to 0.087--0.089s, or about 1.7--1.95 times faster than A*. Against RRT*(3k), 3DMaxConvNet achieves similar path quality while reducing planning runtime from 17.2--17.5s to about 0.09s, which is roughly 193--201 times faster than RRT*(3k).",
+      "url": "https://arxiv.org/abs/2605.10880v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.10880v1",
+      "published": "2026-05-11T17:28:26Z",
+      "updated": "2026-05-11T17:28:26Z",
       "categories": [
         "cs.RO"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2605.08015v1",
-      "title": "Entropic Value-at-Risk for Inter-Vehicle Collision in Platoons: Network- and Delay-Induced Bounds on Risk Due to Extreme Events",
+      "id": "2605.10858v1",
+      "title": "Is Your Driving World Model an All-Around Player?",
       "authors": [
-        "Vivek Pandey",
-        "Nader Motee"
+        "Lingdong Kong",
+        "Ao Liang",
+        "Tianyi Yan",
+        "Hongsi Liu",
+        "Wesley Yang",
+        "Ziqi Huang",
+        "Xian Sun",
+        "Wei Yin",
+        "Jialong Zuo",
+        "Yixuan Hu",
+        "Dekai Zhu",
+        "Dongyue Lu",
+        "Youquan Liu",
+        "Guangfeng Jiang",
+        "Linfeng Li",
+        "Xiangtai Li",
+        "Long Zhuo",
+        "Lai Xing Ng",
+        "Benoit R. Cottereau",
+        "Changxin Gao",
+        "Liang Pan",
+        "Wei Tsang Ooi",
+        "Ziwei Liu"
       ],
-      "abstract": "Safe operation of connected vehicle platoons under stochastic disturbances and time-delayed dynamics requires accurate quantification of rare but dangerous events, such as inter-vehicle collisions. We propose a rigorous framework for quantifying the risk of inter-vehicle collisions in connected vehicle platoons subject to time-delayed stochastic dynamics. We adopt the \\emph{entropic value-at-risk} (EVaR) as a conservative metric to capture \\emph{risk due to extreme events}, highlighting its advantages over conventional Value-at-Risk (VaR) and Conditional Value-at-Risk (CVaR). By expressing the inter-vehicle distance covariance in terms of the Laplacian eigenvalues of the communication network, we derive \\emph{network-and time-delay-induced bounds} on both the minimum inherent risk and the worst-case risk. Specifically, the algebraic connectivity dictates the maximum EVaR, while the largest Laplacian eigenvalue determines the minimum risk inherently induced by the network structure. Numerical simulations illustrate how network topology and time delay shape collision risk, offering actionable insights for the safe design of vehicle platoons operating under stochastic disturbances.",
-      "url": "https://arxiv.org/abs/2605.08015v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.08015v1",
-      "published": "2026-05-08T17:05:46Z",
-      "updated": "2026-05-08T17:05:46Z",
+      "abstract": "Today's driving world models can generate remarkably realistic dash-cam videos, yet no single model excels universally. Some generate photorealistic textures but violate basic physics; others maintain geometric consistency but fail when subjected to closed-loop planning. This disconnect exposes a critical gap: the field evaluates how real generated worlds appear, but rarely whether they behave realistically. We introduce WorldLens, a unified benchmark that measures world-model fidelity across the full spectrum, from pixel quality and 4D geometry to closed-loop driving and human perceptual alignment, through five complementary aspects and 24 standardized dimensions. Our evaluation of six representative models reveals that no existing approach dominates across all axes: texture-rich models violate geometry, geometry-aware models lack behavioral fidelity, and even the strongest performers achieve only 2-3 out of 10 on human realism ratings. To bridge algorithmic metrics with human perception, we further contribute WorldLens-26K, a 26,808-entry human-annotated preference dataset pairing numerical scores with textual rationales, and WorldLens-Agent, a vision-language evaluator distilled from these judgments that enables scalable, explainable auto-assessment. Together, the benchmark, dataset, and agent form a unified ecosystem for assessing generated worlds not merely by visual appeal, but by physical and behavioral fidelity.",
+      "url": "https://arxiv.org/abs/2605.10858v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.10858v1",
+      "published": "2026-05-11T17:05:49Z",
+      "updated": "2026-05-11T17:05:49Z",
       "categories": [
-        "eess.SY"
-      ],
-      "primary_category": "eess.SY"
-    },
-    {
-      "id": "2605.07989v1",
-      "title": "Allocation of Dynamic Operating Envelopes in Radial Distribution Networks",
-      "authors": [
-        "Wilhiam de Carvalho",
-        "Florin Capitanescu",
-        "Cyril Rasic",
-        "Jean-Fran\u00e7ois Toubeau",
-        "Fran\u00e7ois Vall\u00e9e"
-      ],
-      "abstract": "This paper provides an in-depth analysis on how different aspects of the dynamic operating envelope (DOE) formulation impact the computation and allocation of network capacity. We show that the envelopes are significantly affected by the power flow model (non-linear or linear), binding network constraint (thermal or voltage) and by the calculation case (import or export envelope). We also propose a novel DOE algorithm (LACE) that presents transparent and scalable computation that is useful for larger networks or to act in tandem with other optimization engines. We run numerical simulations with different test feeders, including a realistic low-voltage feeder with real-world data from Belgium. This paper provides crucial insights and tools to distribution system operators (DSOs), stakeholders and academics alike to make sure DOE calculation achieves desirable and efficient outcome.",
-      "url": "https://arxiv.org/abs/2605.07989v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.07989v1",
-      "published": "2026-05-08T16:46:33Z",
-      "updated": "2026-05-08T16:46:33Z",
-      "categories": [
-        "eess.SY"
-      ],
-      "primary_category": "eess.SY"
-    },
-    {
-      "id": "2605.07988v1",
-      "title": "Evaluation of an Actuated Spine in Agile Quadruped Locomotion",
-      "authors": [
-        "Nico Bohlinger",
-        "Piotr Kicki",
-        "Davide Tateo",
-        "Krzysztof Walas",
-        "Jan Peters"
-      ],
-      "abstract": "The spine plays a crucial role in the dynamic locomotion of quadrupedal animals, improving the stability, speed, and efficiency of their gait, especially for fast-paced and highly agile movements. Therefore, the spine is also a promising and natural way to extend the capabilities of quadruped robots. This paper empirically investigates the benefits of an actuated spine for learning agile quadruped locomotion. We evaluate whether the use of the spine brings benefits in terms of high-speed running, climbing stairs, climbing high-angle slopes, hurdling, and crawling scenarios. We conducted an empirical study in MuJoCo simulation using the Silver Badger robot from MAB Robotics with an actuated 1-DOF spine in the sagittal plane. The obtained results show that the use of the spine provides the robot with increased agility and allows it to overcome higher stairs, steeper slopes, higher obstacles, and smaller passages.",
-      "url": "https://arxiv.org/abs/2605.07988v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.07988v1",
-      "published": "2026-05-08T16:45:28Z",
-      "updated": "2026-05-08T16:45:28Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2605.07943v1",
-      "title": "TAVIS: A Benchmark for Egocentric Active Vision and Anticipatory Gaze in Imitation Learning",
-      "authors": [
-        "Giacomo Spigler"
-      ],
-      "abstract": "Active vision -- where a policy controls its own gaze during manipulation -- has emerged as a key capability for imitation learning, with multiple independent systems demonstrating its benefits in the past year. Yet there is no shared benchmark to compare approaches or quantify what active vision contributes, on which task types, and under what conditions. We introduce TAVIS, evaluation infrastructure for active-vision imitation learning, with two complementary task suites -- TAVIS-Head (5 tasks, global search via pan/tilt necks) and TAVIS-Hands (3 tasks, local occlusion via wrist cameras) -- on two humanoid torso embodiments (GR1T2, Reachy2), built on IsaacLab. TAVIS provides three evaluation primitives: a paired headcam-vs-fixedcam protocol on identical demonstrations; GALT (Gaze-Action Lead Time), a novel metric grounded in cognitive science and HRI that quantifies anticipatory gaze in learned policies; and procedural ID/OOD splits. Baseline experiments with Diffusion Policy and $\u03c0_0$ reveal that (i) active-vision generally helps, but benefits are task-conditional rather than uniform; (ii) multi-task policies degrade sharply under controlled distribution shifts on both suites; and (iii) imitation alone yields anticipatory gaze, with median lead times comparable to the human teleoperator reference. Code, evaluation scripts, demonstrations (LeRobot v3.0; ~2200 episodes) and trained baselines are released at https://github.com/spiglerg/tavis and https://huggingface.co/tavis-benchmark.",
-      "url": "https://arxiv.org/abs/2605.07943v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.07943v1",
-      "published": "2026-05-08T16:11:13Z",
-      "updated": "2026-05-08T16:11:13Z",
-      "categories": [
-        "cs.RO",
-        "cs.AI",
         "cs.CV",
-        "cs.LG"
+        "cs.RO"
       ],
-      "primary_category": "cs.RO"
+      "primary_category": "cs.CV"
     },
     {
-      "id": "2605.07885v1",
-      "title": "AERO-VIS: Asynchronous Event-based Real-time Onboard Visual-Inertial SLAM",
+      "id": "2605.10821v1",
+      "title": "Unified Noise Steering for Efficient Human-Guided VLA Adaptation",
       "authors": [
-        "Yannick Burkhardt",
-        "Sebasti\u00e1n Barbas Laina",
-        "Simon Boche",
-        "Leonard Frei\u00dfmuth",
-        "Stefan Leutenegger"
+        "Junjie Lu",
+        "Xinyao Qin",
+        "Yuhua Jiang",
+        "Kaixin Wang",
+        "Chuheng Zhang",
+        "Bin Liang",
+        "Jun Yang",
+        "Min Xu",
+        "Li Zhao"
       ],
-      "abstract": "The robustness of event cameras to high dynamic range and motion blur holds the potential to improve visual odometry systems in challenging environments. Although their high temporal resolution does not require synchronous processing, most event-based odometry methods still run at fixed rates, which simplifies system design but restricts latency and throughput. In this work, we present AERO-VIS, a stereo event-inertial SLAM system with an integrated, data-driven, robust, and performance-optimized keypoint detector. By processing the event stream asynchronously, the system dynamically adapts to downstream runtime demands, ensuring low-latency and real-time performance. When deploying AERO-VIS on a UAV, we achieve unprecedented accuracy in onboard event-based SLAM. These unique characteristics enable us to present the first purely event-based inertial SLAM system that demonstrates closed-loop UAV control and large-scale state estimation while relying solely on onboard compute. A video of the experiments and the source code are available at ethz-mrl.github.io/AERO-VIS.",
-      "url": "https://arxiv.org/abs/2605.07885v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.07885v1",
-      "published": "2026-05-08T15:34:00Z",
-      "updated": "2026-05-08T15:34:00Z",
+      "abstract": "Diffusion-based vision-language-action (VLA) models have emerged as strong priors for robotic manipulation, yet adapting them to real-world distributions remains challenging. In particular, on-robot reinforcement learning (RL) is expensive and time-consuming, so effective adaptation depends on efficient policy improvement within a limited budget of real-world interactions. Noise-space RL lowers the cost by keeping the pretrained VLA fixed as a denoising generator while updating only a lightweight actor that predicts the noise. However, its performance is still limited due to inefficient autonomous exploration. Human corrective interventions can reduce this exploration burden, but they are naturally provided in action space, whereas noise-space finetuning requires supervision over noise variables. To address these challenges, we propose UniSteer, a Unified Noise Steering framework that combines human corrective guidance with noise-space RL through approximate action-to-noise inversion. Given a human corrective action, UniSteer inverts the frozen flow-matching decoder to recover a noise target, which provides supervised guidance for the same noise actor that is simultaneously optimized via reinforcement learning. Real-world experiments on diverse manipulation tasks show that UniSteer adapts more efficiently than strong noise-space RL and action-space human-in-the-loop baselines, improving the success rate from 20% to 90% in 66 minutes on average across four real-world adaptation tasks.",
+      "url": "https://arxiv.org/abs/2605.10821v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.10821v1",
+      "published": "2026-05-11T16:37:34Z",
+      "updated": "2026-05-11T16:37:34Z",
       "categories": [
         "cs.RO"
       ],
       "primary_category": "cs.RO"
-    },
-    {
-      "id": "2605.07880v1",
-      "title": "Robust Capacity Expansion under Wildfire Ignition Risk and High Renewable Penetration",
-      "authors": [
-        "Tom\u00e1s Tapia",
-        "Ryan Piansky",
-        "Yury Dvorkin",
-        "Jean-Paul Watson"
-      ],
-      "abstract": "In power systems, the risk of wildfire ignition has increased significantly in recent years. The impact and severity of these events on energy dispatch, as well as their societal ramifications, make wildfire prevention critical for power system planning and operation. A common intervention by system operators is to de-energize transmission lines to mitigate the risk of fire caused by equipment failures. With the growing integration of variable renewable generation, managing and preparing the system to de-energization under wildfire risk has become even more challenging. In this context, mitigation decisions such as installing battery energy storage systems and undergrounding transmission lines can reduce the risk and adverse effects associated with de-energization and renewable generation variability. This paper presents a robust optimization model to determine the optimal location of battery storage and undergrounding of transmission line investment, utilizing representative weeks and uncertainty sets to capture the temporal relationship of uncertain variables. Specifically, this paper addresses: (i) the worst-case realization of ignition risk leading to the de-energization of transmission lines, combined with the worst-case realization of renewable energy availability, and (ii) the optimal investment decisions for energy storage capacity and undergrounding of transmission lines that are exposed to ignition risk. The proposed model is formulated as a mixed-integer linear programming (MILP) problem, employing duality theory and binary decomposition to address nonlinearities, and is solved using a column-and-constraint generation algorithm. The proposed framework is evaluated on a model of the San Diego power system, demonstrating its practical effectiveness in improving the resilience to wildfire risk.",
-      "url": "https://arxiv.org/abs/2605.07880v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.07880v1",
-      "published": "2026-05-08T15:33:10Z",
-      "updated": "2026-05-08T15:33:10Z",
-      "categories": [
-        "math.OC",
-        "eess.SY"
-      ],
-      "primary_category": "math.OC"
     }
   ]
 }
