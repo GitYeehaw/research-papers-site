@@ -2,222 +2,236 @@
   "category": "robotics",
   "name": "Robotics Research",
   "description": "Robotics \u2014 Motion Planning, Control Systems, Human-Robot Interaction, Autonomous Systems",
-  "scraped_at": "2026-05-13T10:37:49.707846+00:00",
+  "scraped_at": "2026-05-14T10:27:46.275155+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2605.12467v1",
-      "title": "Towards Closed-loop Stability of Nonlinear Receding Horizon Games",
+      "id": "2605.13836v1",
+      "title": "Reachable-Set Decomposition for Real-Time Aggregation of Multi-Zone HVAC Fleets",
       "authors": [
-        "Sophie Hall",
-        "Florian D\u00f6rfler",
-        "Timm Faulwasser"
+        "Jingguan Liu",
+        "Xiaomeng Ai",
+        "Cong Chen",
+        "Shaoze Li",
+        "Shichang Cui",
+        "Jiakun Fang",
+        "Jinyu Wen"
       ],
-      "abstract": "We analyze Receding Horizon Games without any MPC-like terminal ingredients. We show that recursive feasibility can be inferred from the turnpike phenomenon under mild assumptions. Moreover, we prove sufficient conditions for practical asymptotic convergence of the closed-loop trajectories, and we discuss how the gap towards practical asymptotic stability may be closed. We use numerical examples to show that the closed-loop region of attraction around the steady-state GNE shrinks exponentially with the horizon length, a behavior previously known only for model predictive control. Further, we apply a linear end penalty and demonstrate in numerical simulations that it suppresses the leaving arc and ensures asymptotic convergence to the steady-state GNE.",
-      "url": "https://arxiv.org/abs/2605.12467v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.12467v1",
-      "published": "2026-05-12T17:51:44Z",
-      "updated": "2026-05-12T17:51:44Z",
+      "abstract": "Aggregating building heating, ventilation, and air-conditioning (HVAC) fleets provides substantial real-time flexibility to power system operations. However, real-time aggregation of multi-zone HVAC fleets faces two key challenges: (i) strong coupling across zones and time makes flexibility characterization high-dimensional and computationally demanding, and (ii) the sequential revelation of temperature states and exogenous conditions requires that decisions made at each period preserve feasibility over the remaining horizon using only currently realized information. To address these challenges, this paper proposes a reachable-set decomposition framework comprising an offline decomposition stage and a real-time policy. In the offline stage, backward reachable sets are formulated to encode remaining-horizon feasibility into per-period state constraints, so that any state within the current reachable set is guaranteed to sustain feasible operation over the entire remaining horizon. A tailored inner approximation is then developed for tractable calculation in multi-zone-coupled HVAC settings. In the real-time stage, aggregate flexibility is computed efficiently via building-level parallel linear programs followed by closed-form Minkowski summation of power intervals, and any regulation signal within the reported flexibility interval admits a recursively feasible disaggregation. Case studies demonstrate the effectiveness of the proposed framework in aggregate flexibility characterization, disaggregation feasibility, and scalable computation.",
+      "url": "https://arxiv.org/abs/2605.13836v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.13836v1",
+      "published": "2026-05-13T17:57:54Z",
+      "updated": "2026-05-13T17:57:54Z",
       "categories": [
         "eess.SY"
       ],
       "primary_category": "eess.SY"
     },
     {
-      "id": "2605.12443v1",
-      "title": "Basilisk and Docker for Reproducible GN&C Simulation: A Workflow Reference",
+      "id": "2605.13822v1",
+      "title": "Loiter UAV Reinsertion Guidance for Fixed-wing UAV Corridors",
       "authors": [
-        "Anubhav Gupta"
+        "Pradeep J",
+        "Kedarisetty Siddhardha",
+        "Ashwini Ratnoo"
       ],
-      "abstract": "Basilisk is an open-source astrodynamics simulation framework widely used for spacecraft guidance, navigation, and control (GN&C) research and development. Despite its flexibility and computational capabilities, configuring Basilisk consistently across heterogeneous development environments presents practical challenges due to dependency management, operating system compatibility, and software configuration requirements. This paper presents a Docker-based containerization workflow for Basilisk that encapsulates the complete build environment, dependencies, and simulation infrastructure within a portable container image. The workflow is demonstrated through a progression of simulation scenarios of increasing complexity, from standalone orbital dynamics scripts to BSKSim-based attitude dynamics and control simulations with Monte Carlo analysis. The BSKSim class hierarchy, dynamics model architecture, flight software implementation, and scenario execution patterns are described in detail. The presented workflow provides a self-contained implementation reference for GN&C engineers and researchers seeking reproducible and portable Basilisk simulation environments. This work expands upon a workshop presentation delivered at the 46th Rocky Mountain AAS GN&C Conference, February 2024, available at https://doi.org/10.5281/zenodo.15008785.",
-      "url": "https://arxiv.org/abs/2605.12443v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.12443v1",
-      "published": "2026-05-12T17:37:37Z",
-      "updated": "2026-05-12T17:37:37Z",
+      "abstract": "This paper considers fixed-wing unmanned aerial vehicle (UAV) corridors comprising a main lane, a circular loiter lane for managing traffic congestion, and transit lanes connecting the two. In particular, we address the problem of conflict-free reinsertion of UAVs from the loiter lane back into the main lane. The loiter lane contains a fixed number of equidistant virtual slots that UAVs can occupy. Reinsertion of loiter UAVs into the main lane becomes essential either due to reduced traffic in the main lane or due to a loiter UAV needing to reach its destination urgently. Given the total number of loiter slots, UAV speed limits, and the minimum safety distance, a guidance algorithm is developed to compute the required speed of a loiter UAV in the transit lane to ensure safe reinsertion. The proposed guidance and automation strategies are validated through numerical simulations.",
+      "url": "https://arxiv.org/abs/2605.13822v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.13822v1",
+      "published": "2026-05-13T17:46:08Z",
+      "updated": "2026-05-13T17:46:08Z",
       "categories": [
-        "eess.SY",
-        "astro-ph.IM",
-        "cs.MS",
-        "cs.SE"
-      ],
-      "primary_category": "eess.SY"
-    },
-    {
-      "id": "2605.12386v1",
-      "title": "SafeManip: A Property-Driven Benchmark for Temporal Safety Evaluation in Robotic Manipulation",
-      "authors": [
-        "Chengyue Huang",
-        "Khang Vo Huynh",
-        "Sebastian Elbaum",
-        "Zsolt Kira",
-        "Lu Feng"
-      ],
-      "abstract": "Robotic manipulation is typically evaluated by task success, but successful completion does not guarantee safe execution. Many safety failures are temporal: a robot may touch a clean surface after contamination or release an object before it is fully inside an enclosure. We introduce SafeManip, a property-driven benchmark to explicitly evaluate temporal safety properties in robotic manipulation, moving beyond prior evaluations that largely focus on task completion or per-state constraint violations. SafeManip defines reusable safety templates over finite executions using Linear Temporal Logic over finite traces (LTLf). It maps observed rollouts to symbolic predicate traces and evaluates them with LTLf-based monitors. Its property suite covers eight manipulation safety categories: collision and contact safety, grasp stability, release stability, cross-contamination, action onset, mechanism recovery, object containment, and enclosure access. Templates can be instantiated with task-specific objects, fixtures, regions, or skills, allowing the same safety specifications to generalize across tasks and environments. We evaluate SafeManip on six vision-language-action policies, including $\u03c0_0$, $\u03c0_{0.5}$, GR00T, and their training variants, across 50 RoboCasa365 household tasks. Results show that even strong models often behave unsafely. Task-success gains do not reliably translate into safer execution: many successful rollouts remain unsafe, while longer-horizon or more complex tasks expose more violations. SafeManip provides a reusable evaluation layer for diagnosing temporal safety failures and measuring safe success beyond task completion.",
-      "url": "https://arxiv.org/abs/2605.12386v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.12386v1",
-      "published": "2026-05-12T16:49:28Z",
-      "updated": "2026-05-12T16:49:28Z",
-      "categories": [
-        "cs.RO"
+        "cs.RO",
+        "eess.SY"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2605.12369v1",
-      "title": "GuidedVLA: Specifying Task-Relevant Factors via Plug-and-Play Action Attention Specialization",
+      "id": "2605.13815v1",
+      "title": "OmniLiDAR: A Unified Diffusion Framework for Multi-Domain 3D LiDAR Generation",
       "authors": [
-        "Xiaosong Jia",
-        "Bowen Yang",
-        "Zuhao Ge",
-        "Xian Nie",
-        "Yuchen Zhou",
-        "Cunxin Fan",
-        "Yufeng Li",
-        "Yilin Chai",
-        "Chao Jing",
-        "Zijian Liang",
-        "Qingwen Bu",
-        "Haidong Cao",
-        "Chao Wu",
-        "Qifeng Li",
-        "Zhenjie Yang",
-        "Chenhe Zhang",
-        "Hongyang Li",
-        "Zuxuan Wu",
-        "Junchi Yan",
-        "Yu-Gang Jiang"
+        "Youquan Liu",
+        "Weidong Yang",
+        "Ao Liang",
+        "Xiang Xu",
+        "Lingdong Kong",
+        "Yang Wu",
+        "Dekai Zhu",
+        "Xin Li",
+        "Runnan Chen",
+        "Ben Fei",
+        "Tongliang Liu",
+        "Wanli Ouyang"
       ],
-      "abstract": "Vision-Language-Action (VLA) models aim for general robot learning by aligning action as a modality within powerful Vision-Language Models (VLMs). Existing VLAs rely on end-to-end supervision to implicitly enable the action decoding process to learn task-relevant features. However, without explicit guidance, these models often overfit to spurious correlations, such as visual shortcuts or environmental noise, limiting their generalization. In this paper, we introduce GuidedVLA, a framework designed to manually guide the action generation to focus on task-relevant factors. Our core insight is to treat the action decoder not as a monolithic learner, but as an assembly of functional components. Individual attention heads are supervised by manually defined auxiliary signals to capture distinct factors. As an initial study, we instantiate this paradigm with three specialized heads: object grounding, spatial geometry, and temporal skill logic. Across simulation and real-robot experiments, GuidedVLA improves success rates in both in-domain and out-of-domain settings compared to strong VLA baselines. Finally, we show that the quality of these specialized factors correlates positively with task performance and that our mechanism yields decoupled, high-quality features. Our results suggest that explicitly guiding action-decoder learning is a promising direction for building more robust and general VLA models.",
-      "url": "https://arxiv.org/abs/2605.12369v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.12369v1",
-      "published": "2026-05-12T16:38:40Z",
-      "updated": "2026-05-12T16:38:40Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2605.12347v1",
-      "title": "Real-Time Whole-Body Teleoperation of a Humanoid Robot Using IMU-Based Motion Capture with Sim2Sim and Sim2Real Validation",
-      "authors": [
-        "Hamza Ahmed Durrani",
-        "Suleman Khan"
-      ],
-      "abstract": "Stable, low-latency whole-body teleoperation of humanoid robots is an open research challenge, complicated by kinematic mismatches between human and robot morphologies, accumulated inertial sensor noise, non-trivial control latency, and persistent sim-to-real transfer gaps. This paper presents a complete real-time whole-body teleoperation system that maps human motion, recorded with a Virdyn IMU-based full-body motion capture suit, directly onto a Unitree G1 humanoid robot. We introduce a custom motion-processing, kinematic retargeting, and control pipeline engineered for continuous, low-latency operation without any offline buffering or learning-based components. The system is first validated in simulation using the MuJoCo physics model of the Unitree G1 (sim2sim), and then deployed without modification on the physical platform (sim2real). Experimental results demonstrate stable, synchronized reproduction of a broad motion repertoire, including walking, standing, sitting, turning, bowing, and coordinated expressive full-body gestures. This work establishes a practical, scalable framework for whole-body humanoid teleoperation using commodity wearable motion capture hardware.",
-      "url": "https://arxiv.org/abs/2605.12347v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.12347v1",
-      "published": "2026-05-12T16:22:17Z",
-      "updated": "2026-05-12T16:22:17Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2605.12297v1",
-      "title": "EgoEV-HandPose: Egocentric 3D Hand Pose Estimation and Gesture Recognition with Stereo Event Cameras",
-      "authors": [
-        "Luming Wang",
-        "Hao Shi",
-        "Jiajun Zhai",
-        "Kailun Yang",
-        "Kaiwei Wang"
-      ],
-      "abstract": "Egocentric 3D hand pose estimation and gesture recognition are essential for immersive augmented/virtual reality, human-computer interaction, and robotics. However, conventional frame-based cameras suffer from motion blur and limited dynamic range, while existing event-based methods are hindered by ego-motion interference, monocular depth ambiguity, and the lack of large-scale real-world stereo datasets. To overcome these limitations, we propose EgoEV-HandPose, an end-to-end framework for joint 3D bimanual pose estimation and gesture recognition from stereo event streams. Central to our approach is KeypointBEV, a flexible stereo fusion module that lifts features into a canonical bird's-eye-view space and employs an iterative reprojection-guided refinement loop to progressively resolve depth uncertainty and enforce kinematic consistency. In addition, we introduce EgoEVHands, the first large-scale real-world stereo event-camera dataset for egocentric hand perception, containing 5,419 annotated sequences with dense 3D/2D keypoints across 38 gesture classes under varying illumination. Extensive experiments demonstrate that EgoEV-HandPose achieves state-of-the-art performance with an MPJPE of 30.54mm and 86.87% Top-1 gesture recognition accuracy, significantly outperforming RGB-based stereo and prior event-camera methods, particularly in low-light and bimanual occlusion scenarios, thereby setting a new benchmark for event-based egocentric perception. The established dataset and source code will be publicly released at https://github.com/ZJUWang01/EgoEV-HandPose.",
-      "url": "https://arxiv.org/abs/2605.12297v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.12297v1",
-      "published": "2026-05-12T15:51:04Z",
-      "updated": "2026-05-12T15:51:04Z",
+      "abstract": "LiDAR scene generation is increasingly important for scalable simulation and synthetic data creation, especially under diverse sensing conditions that are costly to capture at scale. Typically, diffusion-based LiDAR generators are developed under single-domain settings, requiring separate models for different datasets or sensing conditions and hindering unified, controllable synthesis under heterogeneous distribution shifts. To this end, we present OmniLiDAR, a unified text-conditioned diffusion framework that generates LiDAR scans in a shared range-image representation across eight representative domains spanning three shift types: adverse weather, sensor-configuration changes (e.g., reduced beams), and cross-platform acquisition (vehicle, drone, and quadruped). To enable training a single model over heterogeneous domains without isolating optimization by domain, we introduce a Cross-Domain Training Strategy (CDTS) that mixes domains within each mini-batch and leverages conditioning to steer generation. We further propose Cross-Domain Feature Modeling (CDFM), which captures directional dependencies along azimuth and elevation axes to reflect the anisotropic scanning structure of range images, and Domain-Adaptive Feature Scaling (DAFS) as a lightweight modulation to account for structured domain-dependent feature shifts during denoising. In the absence of a public consolidated benchmark, we construct an 8-domain dataset by combining real-world scans with physically based weather simulation and systematic beam reduction while following official splits. Extensive experiments demonstrate strong generation fidelity and consistent gains in downstream use cases, including generative data augmentation for LiDAR semantic segmentation and 3D object detection, as well as robustness evaluation under corruptions, with consistent benefits in limited-label regimes.",
+      "url": "https://arxiv.org/abs/2605.13815v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.13815v1",
+      "published": "2026-05-13T17:42:20Z",
+      "updated": "2026-05-13T17:42:20Z",
       "categories": [
         "cs.CV",
-        "cs.RO",
-        "eess.IV"
+        "cs.RO"
       ],
       "primary_category": "cs.CV"
     },
     {
-      "id": "2605.12247v1",
-      "title": "SI-Diff: A Framework for Learning Search and High-Precision Insertion with a Force-Domain Diffusion Policy",
+      "id": "2605.13782v1",
+      "title": "LMPath: Language-Mediated Priors and Path Generation for Aerial Exploration",
       "authors": [
-        "Yibo Liu",
-        "Stanko Oparnica",
-        "Simon Shewchun-Jakaitis",
-        "Guoyi Fu",
-        "Jie Wang",
-        "Jun Yang",
-        "Anand Jagannathan",
-        "Tony Hong-Yau Lo"
+        "Jonathan A. Diller",
+        "Fernando Cladera",
+        "Camillo J. Taylor",
+        "Vijay Kumar"
       ],
-      "abstract": "Contact-rich assembly is fundamental in robotics but poses significant challenges due to uncertainties in relative poses, such as misalignments and small clearances in peg-in-hole tasks. Existing approaches typically address search and high-precision insertion separately, because these tasks involve distinct action patterns. However, supporting both tasks within a single model, without switching models or weights, is desirable for intelligent assembly systems. In this work, we propose SI-Diff, a framework that learns both search and high-precision insertion through a force-domain diffusion policy. To this end, we introduce a new mode-conditioning mechanism that enables the policy to capture distinct action behaviors under a single framework. Moreover, we develop a new search teacher policy that can generate diverse trajectories. By training on successful and efficient demonstrations provided by the teacher policy, the model learns the mapping from tactile and end-effector velocity observations to effective action behaviors. We conduct thorough experiments to show that SI-Diff extends the tolerance to x-y misalignments from 2 mm to 5 mm compared to the state-of-the-art baseline, TacDiffusion, while also demonstrating strong zero-shot transferability to unseen shapes.",
-      "url": "https://arxiv.org/abs/2605.12247v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.12247v1",
-      "published": "2026-05-12T15:14:51Z",
-      "updated": "2026-05-12T15:14:51Z",
+      "abstract": "Traditional autonomous UAV search missions rely on geometric coverage patterns that ignore the semantic context of the target, leading to significant time waste in large-scale environments. In this paper we present LMPath, a pipeline for generating language-mediated exploration priors for Unmanned Aerial Vehicle (UAV) search missions that leverages semantics. Given a basic geofence and an object of interest prompt, LMPath uses generative language models to determine what regions of the environment should contain that object and a foundation vision model ran over satellite imagery to segment sub-regions that form the exploration prior. This prior can then be used to generate UAV paths with various objectives, such as minimizing the expected time to locate the object of interest, maximizing the probability that the object is found given a limited travel distance, or narrowing down the search space to sub-regions that are most likely to contain the object. To demonstrate it's capabilities, we used LMPath to generate various UAV paths and ran them using a real UAV over large-scale environments. We also ran simulations to demonstrate how paths generated using LMPath outperform traditional path planning approaches for search missions.",
+      "url": "https://arxiv.org/abs/2605.13782v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.13782v1",
+      "published": "2026-05-13T17:02:51Z",
+      "updated": "2026-05-13T17:02:51Z",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2605.13778v1",
+      "title": "Realtime-VLA FLASH: Speculative Inference Framework for Diffusion-based VLAs",
+      "authors": [
+        "Jiahui Niu",
+        "Kefan Gu",
+        "Yucheng Zhao",
+        "Shengwen Liang",
+        "Tiancai Wang",
+        "Xing Hu",
+        "Ying Wang",
+        "Huawei Li"
+      ],
+      "abstract": "Diffusion-based vision-language-action models (dVLAs) are promising for embodied intelligence but are fundamentally limited in real-time deployment by the high latency of full inference. We propose Realtime-VLA FLASH, a speculative inference framework that eliminates most full inference calls during replanning by introducing a lightweight draft model with parallel verification via the main model's Action Expert and a phase-aware fallback mechanism that reverts to the full inference pipeline when needed. This design enables low-latency, high-frequency replanning without sacrificing reliability. Experiments show that on LIBERO, FLASH largely preserves task performance by replacing many 58.0 ms full-inference rounds with speculative rounds as fast as 7.8 ms, lowering task-level average inference latency to 19.1 ms (3.04x speedup). We additionally demonstrate effectiveness on real-world conveyor-belt sorting, highlighting its practical impact for latency-critical embodied tasks.",
+      "url": "https://arxiv.org/abs/2605.13778v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.13778v1",
+      "published": "2026-05-13T16:57:51Z",
+      "updated": "2026-05-13T16:57:51Z",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2605.13775v1",
+      "title": "RoboEvolve: Co-Evolving Planner-Simulator for Robotic Manipulation with Limited Data",
+      "authors": [
+        "Harold Haodong Chen",
+        "Sirui Chen",
+        "Yingjie Xu",
+        "Wenhang Ge",
+        "Ying-Cong Chen"
+      ],
+      "abstract": "The scalability of robotic manipulation is fundamentally bottlenecked by the scarcity of task-aligned physical interaction data. While vision-language models (VLMs) and video generation models (VGMs) hold promise for autonomous data synthesis, they suffer from semantic-spatial misalignment and physical hallucinations, respectively. To bridge this gap, we introduce RoboEvolve, a novel framework that couples a VLM planner and a VGM simulator into a mutually reinforcing co-evolutionary loop. Operating purely on unlabeled seed images, RoboEvolve leverages a cognitive-inspired dual-phase mechanism: (i) daytime exploration fosters physically grounded behavioral discovery through a semantic-controlled multi-granular reward, and (ii) nighttime consolidation mines \"near-miss\" failures to stabilize policy optimization. Guided by an autonomous progressive curriculum, the system naturally scales from simple atomic actions to complex tasks. Extensive experiments demonstrate that RoboEvolve (I) achieves superior effectiveness, elevating base planners by 30 absolute points and amplifying simulator success by 48% on average; (II) exhibits extreme data efficiency, surpassing fully supervised baselines with merely 500 unlabeled seeds--a 50x reduction; and (III) demonstrates robust continual learning without catastrophic forgetting.",
+      "url": "https://arxiv.org/abs/2605.13775v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.13775v1",
+      "published": "2026-05-13T16:54:36Z",
+      "updated": "2026-05-13T16:54:36Z",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2605.13757v1",
+      "title": "FrameSkip: Learning from Fewer but More Informative Frames in VLA Training",
+      "authors": [
+        "Bin Yu",
+        "Shijie Lian",
+        "Xiaopeng Lin",
+        "Zhaolong Shen",
+        "Yuliang Wei",
+        "Changti Wu",
+        "Hang Yuan",
+        "Haishan Liu",
+        "Bailing Wang",
+        "Cong Huang",
+        "Kai Chen"
+      ],
+      "abstract": "Vision-Language-Action (VLA) policies are commonly trained from dense robot demonstration trajectories, often collected through teleoperation, by sampling every recorded frame as if it provided equally useful supervision. We argue that this convention creates a temporal supervision imbalance: long low-change segments dominate the training stream, while manipulation-critical transitions such as alignment, contact, grasping, and release appear only sparsely. We introduce FrameSkip, a data-layer frame selection framework that scores trajectory frames using action variation, visual-action coherence, task-progress priors, and gripper-transition preservation, then remaps training samples toward high-importance frames under a target retention ratio. Because FrameSkip operates only in the dataloader, it leaves the VLA architecture, action head, training objective, and inference procedure unchanged. Across RoboCasa-GR1, SimplerEnv, and LIBERO, FrameSkip improves the success-retention trade-off over full-frame training and simpler frame selection variants, achieving a macro-average success rate of 76.15% across the three benchmarks compared with 66.50% for full-frame training while using a compressed trajectory view that retains 20% of unique frames in the main setting.",
+      "url": "https://arxiv.org/abs/2605.13757v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.13757v1",
+      "published": "2026-05-13T16:38:05Z",
+      "updated": "2026-05-13T16:38:05Z",
       "categories": [
         "cs.RO"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2605.12244v1",
-      "title": "Estimation Problems and the Modulating Function Method: The Algebra of Modulating Functions",
+      "id": "2605.13754v1",
+      "title": "Manipulation Planning for Construction Activities with Repetitive Tasks",
       "authors": [
-        "Davi G. Accioli",
-        "Jerome Jouffroy"
+        "Wangyi Liu",
+        "Dasharadhan Mahalingam",
+        "Fanru Gao",
+        "Ci-Jyun Liang",
+        "Nilanjan Chakraborty"
       ],
-      "abstract": "State and parameter estimation, along with fault detection, are three crucial estimation problems within the control systems community. Although different approaches have been proposed for each type of problem, the modulating function method proposes a more unified approach to all three problem classes, being used for state and parameter estimation of lumped systems, fault detection, and estimation of distributed and fractional systems. At the core of the method is the modulating function: a function that evaluates to 0 at the left or right boundaries up to a certain order of derivatives. By selecting the modulating functions, one directly determines the filter characteristics, and, for that reason, different function families have been proposed over the years. Nevertheless, many families of modulating functions are given in a rather similar mathematical structure. In light of these structures, this paper formally discusses the algebraic properties of modulating functions, and, after formalizing the closedness and group properties of modulating functions, a simple algorithm to construct new modulating functions is proposed, discussed, and illustrated with the construction of the newly introduced logarithmic modulating function families and 3 non-analytic modulating function families. Moreover, the fact that total modulating functions form a vector space and an algebra is exploited to construct orthonormal modulating functions, which are then used for the parameter estimation of a boat's roll dynamics, effectively avoiding matrix inversion issues.",
-      "url": "https://arxiv.org/abs/2605.12244v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.12244v1",
-      "published": "2026-05-12T15:12:52Z",
-      "updated": "2026-05-12T15:12:52Z",
+      "abstract": "In this paper, we study the problem of manipulation skill acquisition for performing construction activities consisting of repetitive tasks (e.g., building a wall or installing ceiling tiles). Our approach involves setting up a simulated construction activity in a Virtual Reality (VR) environment, where the user can provide demonstrations of the object manipulation skills needed to perform the construction activity. We then exploit the screw geometry of motion to approximate the demonstrated motion as a sequence of constant screw motions. For performing the construction activity, we generate the sequence of manipulation task instances and then compute the joint space motion plan corresponding to each instance using Screw Linear Interpolation (ScLERP) and Resolved Motion Rate Control (RMRC). We evaluate our framework by executing two representative construction tasks: constructing brick walls and installing multiple ceiling tiles. Each task is performed using only a single demonstration, a pick-and-place action for the bricks, and a single ceiling tile installation. Our experiments with a 7-DoF robot in both simulation and hardware demonstrate that the approach generalizes robustly to arbitrarily long construction activities that involve repetitive motions and demand precision, even when provided with just one demonstration. For instance, we can construct walls of arbitrary layout and length by leveraging a single demonstration of placing one brick on top of another.",
+      "url": "https://arxiv.org/abs/2605.13754v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.13754v1",
+      "published": "2026-05-13T16:33:13Z",
+      "updated": "2026-05-13T16:33:13Z",
       "categories": [
-        "eess.SY",
-        "math.RA"
-      ],
-      "primary_category": "eess.SY"
-    },
-    {
-      "id": "2605.12236v1",
-      "title": "TMRL: Diffusion Timestep-Modulated Pretraining Enables Exploration for Efficient Policy Finetuning",
-      "authors": [
-        "Matthew M. Hong",
-        "Jesse Zhang",
-        "Anusha Nagabandi",
-        "Abhishek Gupta"
-      ],
-      "abstract": "Fine-tuning pre-trained robot policies with reinforcement learning (RL) often inherits the bottlenecks introduced by pre-training with behavioral cloning (BC), which produces narrow action distributions that lack the coverage necessary for downstream exploration. We present a unified framework that enables the exploration necessary to enable efficient robot policy finetuning by bridging BC pre-training and RL fine-tuning. Our pre-training method, Context-Smoothed Pre-training (CSP), injects forward-diffusion noise into policy inputs, creating a continuum between precise imitation and broad action coverage. We then fine-tune pre-trained policies via Timestep-Modulated Reinforcement Learning (TMRL), which trains the agent to dynamically adjust this conditioning during fine-tuning by modulating the diffusion timestep, granting explicit control over exploration. Integrating seamlessly with arbitrary policy inputs, e.g., states, 3D point clouds, or image-based VLA policies, we show that TMRL improves RL fine-tuning sample efficiency. Notably, TMRL enables successful real-world fine-tuning on complex manipulation tasks in under one hour. Videos and code available at https://weirdlabuw.github.io/tmrl/.",
-      "url": "https://arxiv.org/abs/2605.12236v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.12236v1",
-      "published": "2026-05-12T15:07:04Z",
-      "updated": "2026-05-12T15:07:04Z",
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.LG"
+        "cs.RO"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2605.12230v1",
-      "title": "Neural Network-Based Virtual Wheel-Speed Sensor for Enhanced Low-Velocity State Estimation",
+      "id": "2605.13751v1",
+      "title": "Learning Responsibility-Attributed Adversarial Scenarios for Testing Autonomous Vehicles",
       "authors": [
-        "Hendrik Sch\u00e4fke",
-        "Daniel O. M. Weber",
-        "Askar Vagapov",
-        "Christoph Schweers",
-        "Thomas Seel",
-        "Simon F. G. Ehlers"
+        "Yizhuo Xiao",
+        "Haotian Yan",
+        "Ying Wang",
+        "Zhongpan Zhu",
+        "Yuxin Zhang",
+        "Xintao Yan",
+        "Mustafa Suphi Erden",
+        "Cheng Wang"
       ],
-      "abstract": "Accurate wheel speed information is crucial for vehicle control and state estimation. Conventional sensors suffer from quantization and latency, especially at low velocities, while motor-speed signals in electric vehicles are distorted by drivetrain torsion. This work presents a neural-network-based virtual wheel-speed sensor that fuses wheel-speed and motor-speed signals to reduce errors from both sources. Validated on real-world Volkswagen ID.7 data, the real-time capable model achieves an error reduction of up to 85% compared to the production sensor and 47% compared to an optimized zero-phase filter, providing a smooth signal for driver-assistance functions. The results demonstrate robust generalization across diverse real-world maneuvers within the vehicle platform.",
-      "url": "https://arxiv.org/abs/2605.12230v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.12230v1",
-      "published": "2026-05-12T15:05:32Z",
-      "updated": "2026-05-12T15:05:32Z",
+      "abstract": "Establishing trustworthy safety assurance for autonomous driving systems (ADSs) requires evidence that failures arise from avoidable system deficiencies rather than unavoidable traffic conflicts. Current adversarial simulation methods can efficiently expose collisions, but generally lack mechanisms to distinguish these fundamentally different failure modes. Here we present CARS (Context-Aware, Responsibility-attributed Scenario generation), a framework that integrates responsibility attribution directly into adversarial scenario generation. CARS combines context-aware adversary selection with a generative adversarial policy optimized in closed-loop simulation to construct collision scenarios that are both physically feasible and diagnostically attributable. Across benchmark datasets spanning heterogeneous national traffic environments, CARS consistently discovers feasible collision scenarios with high attribution rates under multiple regulation-prescribed careful and competent driver models. By coupling adversarial generation with normative responsibility assessment, CARS moves simulation testing beyond collision discovery toward the construction of interpretable, regulation-aligned safety evidence for scalable ADS validation.",
+      "url": "https://arxiv.org/abs/2605.13751v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.13751v1",
+      "published": "2026-05-13T16:33:07Z",
+      "updated": "2026-05-13T16:33:07Z",
       "categories": [
+        "cs.RO",
+        "cs.SE",
         "eess.SY"
       ],
-      "primary_category": "eess.SY"
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2605.13748v1",
+      "title": "TinySDP: Real Time Semidefinite Optimization for Certifiable and Agile Edge Robotics",
+      "authors": [
+        "Ishaan Mahajan",
+        "Jon Arrizabalaga",
+        "Andrea Grillo",
+        "Fausto Vega",
+        "James Anderson",
+        "Zachary Manchester",
+        "Brian Plancher"
+      ],
+      "abstract": "Semidefinite programming (SDP) provides a principled framework for convex relaxations of nonconvex geometric constraints in motion planning, yet existing solvers are too computationally expensive for real-time control, particularly on resource-constrained embedded systems. To address this gap, we introduce TinySDP, the first semidefinite programming solver designed for embedded systems, enabling real-time model-predictive control (MPC) on microcontrollers for problems with nonconvex obstacle constraints. Our approach integrates positive-semidefinite cone projections into a cached-Riccati-based ADMM solver, leveraging computational structure for embedded tractability. We pair this solver with an a posteriori rank-1 certificate that converts relaxed solutions into explicit geometric guarantees at each timestep. On challenging benchmarks, e.g., cul-de-sac and dynamic obstacle avoidance scenarios that induce failures in local methods, TinySDP achieves collision-free navigation with up to 73% shorter paths than state-of-the-art baselines. We validate our approach on a Crazyflie quadrotor, demonstrating that semidefinite constraints can be enforced at real-time rates for agile embedded robotics.",
+      "url": "https://arxiv.org/abs/2605.13748v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.13748v1",
+      "published": "2026-05-13T16:30:32Z",
+      "updated": "2026-05-13T16:30:32Z",
+      "categories": [
+        "cs.RO",
+        "eess.SY"
+      ],
+      "primary_category": "cs.RO"
     }
   ]
 }
