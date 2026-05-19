@@ -2,217 +2,277 @@
   "category": "cs",
   "name": "CS Research",
   "description": "Computer Science \u2014 AI, Machine Learning, NLP, Computer Vision",
-  "scraped_at": "2026-05-18T11:52:59.148297+00:00",
+  "scraped_at": "2026-05-19T11:28:01.741089+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2605.16258v1",
-      "title": "IVGT: Implicit Visual Geometry Transformer for Neural Scene Representation",
+      "id": "2605.18754v1",
+      "title": "Can These Views Be One Scene? Evaluating Multiview 3D Consistency when 3D Foundation Models Hallucinate",
       "authors": [
-        "Yuqi Wu",
-        "Tianyu Hu",
-        "Wenzhao Zheng",
-        "Yuanhui Huang",
-        "Haowen Sun",
-        "Jie Zhou",
-        "Jiwen Lu"
+        "Soumava Paul",
+        "Prakhar Kaushik",
+        "Alan Yuille"
       ],
-      "abstract": "Reconstructing coherent 3D geometry and appearance from unposed multi-view images is a fundamental yet challenging problem in computer vision. Most existing visual geometry foundation models predict explicit geometry by regressing pixel-aligned pointmaps, often suffering from redundancy and limited geometric continuity. We propose IVGT, an Implicit Visual Geometry Transformer that implicitly models continuous and coherent geometry from pose-free multi-view images. This formulation learns a continuous neural scene representation in a canonical coordinate system and supports continuous spatial queries at any 3D positions, retrieving local features to predict signed distance (SDF) values and colors using lightweight decoders. It allows direct extraction of continuous and coherent surface geometry, enabling rendering of RGB images, depth maps, and surface normal maps from arbitrary viewpoints. We train IVGT via multi-dataset joint optimization with 2D supervision and 3D geometric regularization. IVGT demonstrates generalization across scenes and achieves strong performance on various tasks, including mesh and point cloud reconstruction, novel view synthesis, depth and surface normal estimation, and camera pose estimation.",
-      "url": "https://arxiv.org/abs/2605.16258v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.16258v1",
-      "published": "2026-05-15T17:59:57Z",
-      "updated": "2026-05-15T17:59:57Z",
+      "abstract": "Multiview 3D evaluation assumes that the images being scored are observations of one static 3D scene. This assumption can fail in NVS and sparse-view reconstruction: inputs or generated outputs may contain artifacts, outlier frames, repeated views, or noise, yet still receive high 3D consistency scores. Existing reference-based metrics require ground truth, while ground-truth-free metrics such as MEt3R depend on learned reconstruction backbones whose failure modes are poorly characterized. We study this reliability problem by comparing neural reconstruction priors with classical geometric verification. We introduce \\benchmark, a controlled robustness benchmark for multiview 3D consistency, and a parametric family that decomposes neural metrics into backbone, residual, and aggregation components. This family recovers MEt3R and yields variants up to $3\\times$ more robust. Our analysis shows that VGGT, MASt3R, DUSt3R, and Fast3R can hallucinate dense geometry and cross-view support for unrelated scenes, repeated images, and random noise. We introduce COLMAP-based metrics that use matches, registration, dense support, and reconstruction failure as failure-aware consistency signals. On real NVS outputs and a structured human study, these metrics achieve up to $4\\times$ higher correlation with human judgments than MEt3R.",
+      "url": "https://arxiv.org/abs/2605.18754v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.18754v1",
+      "published": "2026-05-18T17:59:58Z",
+      "updated": "2026-05-18T17:59:58Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2605.18753v1",
+      "title": "DashAttention: Differentiable and Adaptive Sparse Hierarchical Attention",
+      "authors": [
+        "Yuxiang Huang",
+        "Nuno M. T. Gon\u00e7alves",
+        "Federico Alvetreti",
+        "Lei Li",
+        "Xu Han",
+        "Edoardo M. Ponti",
+        "Andr\u00e9 F. T. Martins",
+        "Marcos V. Treviso"
+      ],
+      "abstract": "Current hierarchical attention methods, such as NSA and InfLLMv2, select the top-k relevant key-value (KV) blocks based on coarse attention scores and subsequently apply fine-grained softmax attention on the selected tokens. However, the top-k operation assumes the number of relevant tokens for any query is fixed and it precludes the gradient flow between the sparse and dense stages. In this work, we propose DashAttention (Differentiable and Adaptive Sparse Hierarchical Attention), which leverages the adaptively sparse $\u03b1$-entmax transformation to select a variable number of blocks according to the current query in the first stage. This in turn provides a prior for the second-stage softmax attention, keeping the entire hierarchy fully differentiable. Contrary to other hierarchical attention methods, we show that DashAttention is non-dispersive, translating to better long-context modeling ability. Experiments with large language models (LLMs) show that DashAttention achieves comparable accuracy as full attention with 75% sparsity and a better Pareto frontier than NSA and InfLLMv2, especially in high-sparsity regimes. We also provide an efficient, GPU-aware implementation of DashAttention in Triton, which achieves a speedup of up to over FlashAttention-3 at inference time. Overall, DashAttention offers a cost-effective strategy to model long contexts.",
+      "url": "https://arxiv.org/abs/2605.18753v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.18753v1",
+      "published": "2026-05-18T17:59:52Z",
+      "updated": "2026-05-18T17:59:52Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "primary_category": "cs.CL"
+    },
+    {
+      "id": "2605.18750v1",
+      "title": "A Readiness-Driven Runtime for Pipeline-Parallel Training under Runtime Variability",
+      "authors": [
+        "Ruitao Liu",
+        "Xinyang Tian",
+        "Shuo Chen",
+        "Tingrui Zhang",
+        "Guang Yang",
+        "Alan Zhao",
+        "Wei Xu"
+      ],
+      "abstract": "Pipeline parallelism is a key technique for scaling large-model training, but modern workloads exhibit runtime variability in computation and communication. Existing pipeline systems typically consume static, profiled, or adaptively generated schedules as pre-committed execution orders. When realized task readiness diverges from the pre-committed order, stages may wait for not-yet-ready work even though other executable work is available, creating stage misalignment, idle bubbles, and reduced utilization.   We present Runtime-Readiness-First Pipeline (RRFP), a readiness-driven runtime for pipeline-parallel training. RRFP changes how schedules are consumed at runtime: instead of treating a schedule as a sequence that stages must wait to follow, it treats the schedule as a non-binding hint order for ranking currently ready work. To support this model, RRFP combines message-driven asynchronous communication, lightweight tensor-parallel coordination for collective consistency, and ready-set arbitration for low-overhead dispatch.   We implement RRFP in a Megatron-based training framework and evaluate it on language-only and multimodal workloads at up to 128 GPUs. RRFP improves over fixed-order pipeline baselines across all settings. Using the BFW hint, RRFP achieves up to 1.77$\\times$ speedup on language-only workloads and up to 2.77$\\times$ on multimodal workloads. In cross-framework comparisons, RRFP with the default BF hint outperforms the faster available external system by up to 1.84$\\times$ while preserving training correctness.",
+      "url": "https://arxiv.org/abs/2605.18750v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.18750v1",
+      "published": "2026-05-18T17:59:18Z",
+      "updated": "2026-05-18T17:59:18Z",
+      "categories": [
+        "cs.DC",
+        "cs.LG"
+      ],
+      "primary_category": "cs.DC"
+    },
+    {
+      "id": "2605.18749v1",
+      "title": "WavFlow: Audio Generation in Waveform Space",
+      "authors": [
+        "Feiyan Zhou",
+        "Luyuan Wang",
+        "Shoufa Chen",
+        "Zhe Wang",
+        "Zhiheng Liu",
+        "Yuren Cong",
+        "Xiaohui Zhang",
+        "Fanny Yang",
+        "Belinda Zeng"
+      ],
+      "abstract": "Modern audio generation predominantly relies on latent-space compression, introducing additional complexity and potential information loss. In this work, we challenge this paradigm with WavFlow, a framework that generates high-fidelity audio directly in raw waveform space without intermediate representations. To overcome the inherent difficulties of modeling high-dimensional and low-energy signals, we reshape audio into 2D token grids through waveform patchify and introduce amplitude lifting to align signal scales, enabling stable optimization via direct x-prediction in flow matching. To capture complex semantic alignment and temporal synchronization, we leverage an automated data pipeline to curate 5 million high-quality video-text-audio triplets, allowing the model to learn fine-grained acoustic patterns from scratch. Experimental results show that WavFlow achieves competitive performance on the video-to-audio benchmark VGGSound (FD_PaSST: 59.98, IS_PANNs: 17.40, DeSync: 0.44) and the text-to-audio benchmark AudioCaps (FD_PANNs: 10.63, IS_PANNs: 12.62), matching or exceeding the performance of established latent-based methods. Our work demonstrates that intermediate compression is not a prerequisite for high-quality synthesis, offering a simpler and more scalable alternative for multimodal audio generation.",
+      "url": "https://arxiv.org/abs/2605.18749v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.18749v1",
+      "published": "2026-05-18T17:59:10Z",
+      "updated": "2026-05-18T17:59:10Z",
+      "categories": [
+        "cs.SD",
+        "cs.CV"
+      ],
+      "primary_category": "cs.SD"
+    },
+    {
+      "id": "2605.18748v1",
+      "title": "Aurora: Unified Video Editing with a Tool-Using Agent",
+      "authors": [
+        "Yongsheng Yu",
+        "Ziyun Zeng",
+        "Zhiyuan Xiao",
+        "Zhenghong Zhou",
+        "Hang Hua",
+        "Wei Xiong",
+        "Jiebo Luo"
+      ],
+      "abstract": "Recent video editing models have converged on a unified conditioning design: a single diffusion transformer jointly consumes text, source video, and reference images, and one set of weights covers replacement, removal, style transfer, and reference-driven insertion. The design is flexible, but it assumes that the user already provides model-ready text, reference images, and spatial grounding for local edits, which real requests often omit. We present Aurora, an agentic video editing framework that pairs a tool-augmented vision-language model (VLM) agent with a unified video diffusion transformer. The VLM agent maps a raw user request to a structured edit plan aligned with the transformer's conditioning channels, thereby resolving textual and visual underspecification before generation. We train the VLM agent with supervised data for complete edit planning and reference-image selection, together with preference pairs for robust tool use and instruction refinement. We introduce AgentEdit-Bench to evaluate agent-enhanced video editing under textual and visual underspecification. Experiments on AgentEdit-Bench and two existing video editing benchmarks show that Aurora improves over instruction-only baselines and that the VLM agent transfers to compatible frozen video editing models. Project page: https://yeates.github.io/Aurora-Page",
+      "url": "https://arxiv.org/abs/2605.18748v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.18748v1",
+      "published": "2026-05-18T17:59:03Z",
+      "updated": "2026-05-18T17:59:03Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2605.18747v1",
+      "title": "Code as Agent Harness",
+      "authors": [
+        "Xuying Ning",
+        "Katherine Tieu",
+        "Dongqi Fu",
+        "Tianxin Wei",
+        "Zihao Li",
+        "Yuanchen Bei",
+        "Jiaru Zou",
+        "Mengting Ai",
+        "Zhining Liu",
+        "Ting-Wei Li",
+        "Lingjie Chen",
+        "Yanjun Zhao",
+        "Ke Yang",
+        "Bingxuan Li",
+        "Cheng Qian",
+        "Gaotang Li",
+        "Xiao Lin",
+        "Zhichen Zeng",
+        "Ruizhong Qiu",
+        "Sirui Chen",
+        "Yifan Sun",
+        "Xiyuan Yang",
+        "Ruida Wang",
+        "Rui Pan",
+        "Chenyuan Yang",
+        "Dylan Zhang",
+        "Liri Fang",
+        "Zikun Cui",
+        "Yang Cao",
+        "Pan Chen",
+        "Dorothy Sun",
+        "Ren Chen",
+        "Mahesh Srinivasan",
+        "Nipun Mathur",
+        "Yinglong Xia",
+        "Hong Li",
+        "Hong Yan",
+        "Pan Lu",
+        "Lingming Zhang",
+        "Tong Zhang",
+        "Hanghang Tong",
+        "Jingrui He"
+      ],
+      "abstract": "Recent large language models (LLMs) have demonstrated strong capabilities in understanding and generating code, from competitive programming to repository-level software engineering. In emerging agentic systems, code is no longer only a target output. It increasingly serves as an operational substrate for agent reasoning, acting, environment modeling, and execution-based verification. We frame this shift through the lens of agent harnesses and introduce code as agent harness: a unified view that centers code as the basis for agent infrastructure. To systematically study this perspective, we organize the survey around three connected layers. First, we study the harness interface, where code connects agents to reasoning, action, and environment modeling. Second, we examine harness mechanisms: planning, memory, and tool use for long-horizon execution, together with feedback-driven control and optimization that make harness reliable and adaptive. Third, we discuss scaling the harness from single-agent systems to multi-agent settings, where shared code artifacts support multi-agent coordination, review, and verification. Across these layers, we summarize representative methods and practical applications of code as agent harness, spanning coding assistants, GUI/OS automation, embodied agents, scientific discovery, personalization and recommendation, DevOps, and enterprise workflows. We further outline open challenges for harness engineering, including evaluation beyond final task success, verification under incomplete feedback, regression-free harness improvement, consistent shared state across multiple agents, human oversight for safety-critical actions, and extensions to multimodal environments. By centering code as the harness of agentic AI, this survey provides a unified roadmap toward executable, verifiable, and stateful AI agent systems.",
+      "url": "https://arxiv.org/abs/2605.18747v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.18747v1",
+      "published": "2026-05-18T17:59:03Z",
+      "updated": "2026-05-18T17:59:03Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CL"
+    },
+    {
+      "id": "2605.18746v1",
+      "title": "ESI-Bench: Towards Embodied Spatial Intelligence that Closes the Perception-Action Loop",
+      "authors": [
+        "Yining Hong",
+        "Jiageng Liu",
+        "Han Yin",
+        "Manling Li",
+        "Leonidas Guibas",
+        "Li Fei-Fei",
+        "Jiajun Wu",
+        "Yejin Choi"
+      ],
+      "abstract": "Spatial intelligence unfolds through a perception-action loop: agents act to acquire observations, and reason about how observations vary as a function of action. Rather than passively processing what is seen, they actively uncover what is unseen - occluded structure, dynamics, containment, and functionality that cannot be resolved from passive sensing alone. We move beyond prior formulations of spatial intelligence that assume oracle observations by recasting the observer as an actor. We introduce ESI-BENCH, a comprehensive benchmark for embodied spatial intelligence spanning 10 task categories and 29 subcategories built on OmniGibson, grounded in Spelke's core knowledge systems. Agents must decide what abilities to deploy - perception, locomotion, and manipulation - and how to sequence them to actively accumulate task-relevant evidence. We conduct extensive experiments on state-of-the-art MLLMs and find that active exploration substantially outperforms passive counterparts, with agents spontaneously discovering emergent spatial strategies without explicit instructions, while random multi-view often adds noise rather than signal despite consuming far more images. Most failures stem not from weak perception but from action blindness: poor action choices lead to poor observations, which in turn drive cascading errors. While explicit 3D grounding stabilizes reasoning on depth-sensitive tasks, imperfect 3D representation proves more harmful than 2D baselines by distorting spatial relations. Human studies further reveal that unlike humans who seek falsifying viewpoints and revise beliefs under contradiction, models commit prematurely with high confidence regardless of evidence quality, exposing a metacognitive gap that neither better perception nor more embodied interaction alone can close.",
+      "url": "https://arxiv.org/abs/2605.18746v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.18746v1",
+      "published": "2026-05-18T17:59:02Z",
+      "updated": "2026-05-18T17:59:02Z",
       "categories": [
         "cs.CV",
         "cs.AI",
+        "cs.CL",
+        "cs.LG",
         "cs.RO"
       ],
       "primary_category": "cs.CV"
     },
     {
-      "id": "2605.16255v1",
-      "title": "Designing Datacenter Power Delivery Hierarchies for the AI Era",
+      "id": "2605.18745v1",
+      "title": "SURGE: Approximation-free Training Free Particle Filter for Diffusion Surrogate",
       "authors": [
-        "Grant Wilkins",
-        "Fiodar Kazhamiaka",
-        "Alok Gautam Kumbhare",
-        "Chaojie Zhang",
-        "Ricardo Bianchini"
+        "Lifu Wei",
+        "Yinuo Ren",
+        "Naichen Shi",
+        "Yiping Lu"
       ],
-      "abstract": "Demand for AI accelerators is rapidly increasing rack power density, with projections approaching 1MW per deployment by 2027. This poses a major challenge for datacenter power delivery designers. As power densities increase, a datacenter designed for a different target density may strand power, i.e., may be unable to use all the power that its delivery hierarchy has provisioned. Designs must remain efficient over long datacenter lifetimes and multiple hardware generations. Power utilization is particularly important as grid power capacity is a scarce resource in the AI era.   Designing an efficient power delivery hierarchy for the long run is difficult because rack placement feasibility, workload impact, and cost depend jointly on electrical topology, deployment granularity, placement policy, power oversubscription, and workload mix. Moreover, each of these factors evolve over time, have inter-dependencies across multiple resource dimensions, and generally do not lend themselves to closed-form analysis.   To address this challenge, we develop a framework for evaluating datacenter power delivery designs using throughput, power, and cost metrics over realistic arrival, oversubscription, and decommissioning sequences. The framework combines projection models for GPU, compute, and storage deployments with operational factors grounded in production data from Microsoft Azure. Our results show that multi-resource stranding materially changes deployable capacity, effective capital expenditure, and delivered performance, and quantify how rising density from rack- and pod-scale AI systems shapes these outcomes. For AI datacenter design, the relevant planning objective is not installed megawatts, but deployable capacity over time.",
-      "url": "https://arxiv.org/abs/2605.16255v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.16255v1",
-      "published": "2026-05-15T17:58:58Z",
-      "updated": "2026-05-15T17:58:58Z",
+      "abstract": "Diffusion-based generative models increasingly rely on inference-time guidance, adding a drift term or reweighting mixture of experts, to improve sample quality on task-specific objectives. However, most existing techniques require repeated score or gradient evaluations, introducing bias, high computational overhead, or both. We introduce \\texttt{URGE}, Unbiased Resampling via Girsanov Estimation, a derivative-free inference-time scaling algorithm that performs path-wise importance reweighting via a Girsanov change of measure. Instead of computing gradient-based particle weights in previous work, \\texttt{URGE} attaches a simple multiplicative weight to each simulated trajectory and periodically resamples. No score, no Hessian, and no PDE evaluation is required. We establish an equivalence between path-wise and particle-wise SMC: the Girsanov path weight admits a backward conditional expectation that recovers the previous particle-level weights, guaranteeing that both schemes produce the same unbiased terminal law. Empirically, \\texttt{URGE} outperforms existing inference-time guidance baselines on synthetic tests and diffusion-model benchmarks, achieving better generation quality, while being significantly simpler to implement and fully gradient-free.",
+      "url": "https://arxiv.org/abs/2605.18745v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.18745v1",
+      "published": "2026-05-18T17:59:00Z",
+      "updated": "2026-05-18T17:59:00Z",
       "categories": [
-        "cs.DC",
+        "stat.ML",
+        "cs.LG",
+        "math.NA",
+        "math.PR",
+        "q-fin.MF",
+        "stat.CO"
+      ],
+      "primary_category": "stat.ML"
+    },
+    {
+      "id": "2605.18743v1",
+      "title": "Actionable World Representation",
+      "authors": [
+        "Kunqi Xu",
+        "Jitao Li",
+        "Jianglong Ye",
+        "Tianshu Tang",
+        "Isabella Liu",
+        "Sifei Liu",
+        "Xueyan Zou"
+      ],
+      "abstract": "Inspired by the emergent behaviors in large language models that generalized human intelligence, the research community is pursuing similar emergent capabilities within world models, with a emphasis on modeling the physical world. Within the scope of physical world model, objects are the fundamental primitives that constitute physical reality. From humans to computers, nearly everything we interact with is an object. These objects are rarely static; they are actionable entities with varying states determined by their intrinsic properties. While current methods approach object action states either via video generation or dynamic scene reconstruction, none explicitly model this basic element in a unified, principled way to build an actionable object representation. We propose WorldString, a neural architecture capable of modeling the state manifold of real-world objects by learning directly from point clouds or RGB-D video streams. Serving as a versatile digital twin, it acts as a foundational building block for physical world models; thus, we name it WorldString. Sweetly, its fully differentiable structure seamlessly enables future integration with policy learning and neural dynamics.",
+      "url": "https://arxiv.org/abs/2605.18743v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.18743v1",
+      "published": "2026-05-18T17:58:51Z",
+      "updated": "2026-05-18T17:58:51Z",
+      "categories": [
         "cs.AI"
       ],
-      "primary_category": "cs.DC"
+      "primary_category": "cs.AI"
     },
     {
-      "id": "2605.16250v1",
-      "title": "A Generative AI Framework for Intelligent Utility Billing CO 2 Analytics and Sustainable Resource Optimisation",
+      "id": "2605.18740v1",
+      "title": "Vision-OPD: Learning to See Fine Details for Multimodal LLMs via On-Policy Self-Distillation",
       "authors": [
-        "Pavan Manjunath",
-        "Thomas Pruefer"
+        "Qianhao Yuan",
+        "Jie Lou",
+        "Xing Yu",
+        "Hongyu Lin",
+        "Le Sun",
+        "Xianpei Han",
+        "Yaojie Lu"
       ],
-      "abstract": "Distribution utilities are now expected to deliver bills that customers can actually read attach a defensible carbon number to every kWh sold and schedule load against grid stress and emissions constraints We propose an end-to-end framework that unifies four production-grade capabilities under one architectural roof a generative-AI agent that drafts each customers natural-language billing statement from structured numeric inputs under a constrained decoding policy a transformer-based forecaster that supplies the day-ahead consumption estimate with calibrated quantile bands",
-      "url": "https://arxiv.org/abs/2605.16250v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.16250v1",
-      "published": "2026-05-15T17:52:57Z",
-      "updated": "2026-05-15T17:52:57Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.DB",
-        "cs.LG"
-      ],
-      "primary_category": "cs.CL"
-    },
-    {
-      "id": "2605.16245v1",
-      "title": "AI-Mediated Communication Can Steer Collective Opinion",
-      "authors": [
-        "Stratis Tsirtsis",
-        "Kai Rawal",
-        "Chris Russell",
-        "Brent Mittelstadt",
-        "Sandra Wachter"
-      ],
-      "abstract": "Generative artificial intelligence (AI) is increasingly integrated into the online platforms where humans exchange opinions; large language models (LLMs) now polish users' posts on LinkedIn and provide context for content shared on X. While prior work has shown that AI can express biased opinions and shape individuals' opinions during human-AI interactions, less attention has been paid to its influence on collective opinion formation when mediating human-to-human communication. We address this gap via a combination of empirical and theoretical analyses. We show empirically that LLMs from multiple popular families introduce directional biases when instructed to edit human-written texts on contested topics, for example, nudging texts in favor of gun control and against atheism. Building on this observation, we introduce a mathematical model of opinion dynamics in which an AI system sits between users on a social network, transforming the opinions they express and perceive. By analytically characterizing the equilibrium of this model and performing simulations on real social network data, we show that biases introduced by AI in human-to-human communication can be amplified through the network and shift collective opinion in their direction. In light of these findings, we investigate whether such biases are controllable by online platforms. We audit the \"Explain this post\" feature on X and find evidence of pro-life bias in Grok's outputs on abortion-related content, which we trace back to specific design choices. We conclude with a discussion of the broader implications of our findings in relation to ongoing legislative efforts in the European Union.",
-      "url": "https://arxiv.org/abs/2605.16245v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.16245v1",
-      "published": "2026-05-15T17:49:24Z",
-      "updated": "2026-05-15T17:49:24Z",
-      "categories": [
-        "cs.CY",
-        "cs.AI",
-        "cs.CL",
-        "cs.LG",
-        "cs.SI"
-      ],
-      "primary_category": "cs.CY"
-    },
-    {
-      "id": "2605.16241v1",
-      "title": "Offline Semantic Guidance for Efficient Vision-Language-Action Policy Distillation",
-      "authors": [
-        "Jin Shi",
-        "Brady Zhang",
-        "Yishun Lu"
-      ],
-      "abstract": "Billion-parameter Vision-Language-Action (VLA) policies have recently shown impressive performance in robotic manipulation, yet their size and inference cost remain major obstacles for real-time closed-loop control. We introduce \\textbf{VLA-AD}, a distillation framework that uses a Vision-Language Model as an offline semantic supervisor to transfer large VLA teachers into lightweight student policies. Instead of relying only on low-level action imitation, VLA-AD augments teacher-provided 7-DoF action targets with high-level semantic guidance, including task phase anchors and multi-frame operating-direction descriptions. These auxiliary signals are used only during training: at test time, the student policy runs independently, with neither the VLA teacher nor the VLM required. We evaluate VLA-AD on three LIBERO benchmark suites. Using OpenVLA-7B as the teacher, our method produces a 158M-parameter student, yielding a $44\\times$ reduction in model size while matching the teacher with only a $0.27\\%$ average relative gap. The resulting policy runs at 12.5 Hz on an RTX 4090, achieving a $3.28\\times$ inference speedup over OpenVLA-7B. We further show that the same semantic distillation pipeline generalizes to a different $\u03c0_{0.5}$-4B teacher, where the student outperforms the teacher on two suites and remains within $0.53\\%$ on \\texttt{libero\\_goal}. Additional analysis indicates that phase-level supervision and multi-frame directional cues make the student less sensitive to noisy teacher actions, such as erroneous high-frequency gripper changes. Overall, VLA-AD demonstrates that offline semantic guidance from VLMs can substantially improve the efficiency, robustness, and deployability of VLA policy distillation.",
-      "url": "https://arxiv.org/abs/2605.16241v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.16241v1",
-      "published": "2026-05-15T17:48:25Z",
-      "updated": "2026-05-15T17:48:25Z",
+      "abstract": "Multimodal Large Language Models (MLLMs) still struggle with fine-grained visual understanding, where answers often depend on small but decisive evidence in the full image. We observe a regional-to-global perception gap: the same MLLM answers fine-grained questions more accurately when conditioned on evidence-centered crops than on the corresponding full images, suggesting that many failures stem from difficulty to focus on relevant evidence rather than insufficient local recognition ability. Motivated by this observation, we propose Vision-OPD (Vision On-Policy Distillation), a regional-to-global self-distillation framework that transfers the model's own privileged regional perception to its full-image policy. Vision-OPD instantiates two conditional policies from the same MLLM: a crop-conditioned teacher and a full-image-conditioned student. The student generates on-policy rollouts, and Vision-OPD minimizes token-level divergence between the teacher and student next-token distributions along these rollouts. This enables the model to internalize the benefit of visual zooming without external teacher models, ground-truth labels, reward verifiers, or inference-time tool use. Experiments on multiple fine-grained visual understanding benchmarks show that Vision-OPD models achieve competitive or superior performance against much larger open-source, closed-source, and \"Thinking-with-Images\" agentic models.",
+      "url": "https://arxiv.org/abs/2605.18740v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.18740v1",
+      "published": "2026-05-18T17:57:04Z",
+      "updated": "2026-05-18T17:57:04Z",
       "categories": [
         "cs.CV",
-        "cs.AI"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2605.16239v1",
-      "title": "Dynamics-Level Watermarking of Flow Matching Models with Random Codes",
-      "authors": [
-        "Shuchan Wang"
-      ],
-      "abstract": "We introduce a dynamics-level approach to watermarking generative models. Rather than embedding signals into model weights or outputs, we embed the watermark directly into the learned continuous dynamics -- the velocity field of a flow matching model. We formulate this as random coding over a continuous channel: a key-dependent perturbation is added during training, and the message is recovered at detection time from black-box queries. The perturbation is designed to leave the generated distribution unchanged. Experiments on MNIST and CIFAR-10 across different architectures confirm reliable message recovery, preserved generation quality, and chance-level decoding accuracy without the secret key.",
-      "url": "https://arxiv.org/abs/2605.16239v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.16239v1",
-      "published": "2026-05-15T17:48:22Z",
-      "updated": "2026-05-15T17:48:22Z",
-      "categories": [
+        "cs.AI",
+        "cs.CL",
         "cs.LG"
       ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2605.16238v1",
-      "title": "Prospective multi-pathogen disease forecasting using autonomous LLM-guided tree search",
-      "authors": [
-        "Sarah Martinson",
-        "Michael P. Brenner",
-        "Martyna Plomecka",
-        "Brian P. Williams",
-        "Nicholas G. Reich",
-        "Zahra Shamsi"
-      ],
-      "abstract": "Probabilistic forecasting of infectious diseases is crucial for public health but relies on labor-intensive manual model curation by expert modeling teams. This bespoke development bottlenecks scalability to granular geographic resolutions or emerging pathogens. Here, we present an autonomous system using Large Language Model (LLM)-guided tree search to iteratively generate, evaluate, and optimize executable forecasting software. In a fully prospective, real-time evaluation during the 2025-2026 US respiratory season, the system autonomously discovered methodologically diverse models for influenza, COVID-19, and respiratory syncytial virus (RSV). Aggregating these machine-generated models yielded an ensemble that consistently matched or outperformed the gold-standard, human-curated Centers for Disease Control and Prevention (CDC) hub ensembles out-of-sample. The system successfully navigated data-scarce \"cold start\" scenarios for RSV. Moreover, controlled retrospective ablations revealed that optimizing log-scale distance metrics prevents reward hacking, while an automated judge-in-the-loop ensures structural fidelity to complex scientific theories. By autonomously translating epidemiological theory into accurate, transparent code, this framework overcomes the modeling labor bottleneck, enabling rapid deployment of expert-level disease forecasting at unprecedented scales.",
-      "url": "https://arxiv.org/abs/2605.16238v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.16238v1",
-      "published": "2026-05-15T17:45:17Z",
-      "updated": "2026-05-15T17:45:17Z",
-      "categories": [
-        "cs.AI"
-      ],
-      "primary_category": "cs.AI"
-    },
-    {
-      "id": "2605.16234v1",
-      "title": "Layer Equivalence Is Not a Property of Layers Alone: How You Test Redundancy Changes What You Find",
-      "authors": [
-        "Gabriel Garcia"
-      ],
-      "abstract": "When researchers ask whether two transformer layers are \"equivalent\" for compression, they often conflate distinct tests. Replacement asks whether one layer's map can substitute for another's in place; interchange asks whether two layers approximately commute when their positions are swapped. Both are output-grounded swap-KL probes, but they need not agree: on pretrained transformers the protocol gap can change which layers look safe to prune by several-fold under the same evaluator, especially when replacement distances are high.   We measure both protocols across checkpoints and architectures. On a Pythia training trajectory (410M and 1.4B), the replacement-interchange gap grows from initialization to convergence. Under one matched WikiText-2 contract at 8B scale, Qwen3-8B enters a divergent regime: interchange-guided removal is several-fold safer than replacement-guided at the same layer budgets, while Llama-3.1-8B ties the two protocols for pruning cost even though interchange KL is lower, showing metric gaps need not map one-to-one to removal. Before layer removal or merging, score both swap-KLs on the target checkpoint; the diagnostic requires only unlabeled forward passes.",
-      "url": "https://arxiv.org/abs/2605.16234v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.16234v1",
-      "published": "2026-05-15T17:43:16Z",
-      "updated": "2026-05-15T17:43:16Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2605.16233v1",
-      "title": "FORGE: Self-Evolving Agent Memory With No Weight Updates via Population Broadcast",
-      "authors": [
-        "Igor Bogdanov",
-        "Chung-Horng Lung",
-        "Thomas Kunz",
-        "Jie Gao",
-        "Adrian Taylor",
-        "Marzia Zaman"
-      ],
-      "abstract": "Can LLM agents improve decision-making through self-generated memory without gradient updates? We propose FORGE (Failure-Optimized Reflective Graduation and Evolution), a staged, population-based protocol that evolves prompt-injected natural-language memory for hierarchical ReAct agents. FORGE wraps a Reflexion-style inner loop, where a dedicated reflection agent (using the same underlying LLM, no distillation from a stronger model) converts failed trajectories into reusable knowledge artifacts: textual heuristics (Rules), few-shot demonstrations (Examples), or both (Mixed), with an outer loop that propagates the best-performing instance's memory to the population between stages and freezes converged instances via a graduation criterion. We evaluate on CybORG CAGE-2, a stochastic network-defense POMDP at a 30-step horizon against the B-line attacker, where all four tested LLM families (Gemini-2.5-Flash-Lite, Grok-4-Fast, Llama-4-Maverick, Qwen3-235B) exhibit strongly negative, heavy-tailed zero-shot rewards. Compared against both a zero-shot baseline and a Reflexion baseline (isolated single-stream learning), FORGE improves average evaluation return by 1.7-7.7$\\times$ over zero-shot and by 29-72% over Reflexion in all 12 model-representation conditions, reducing major-failure rates (below $-100$) to as low as $\\sim$1%. We find that (1) population broadcast is critical mechanism, with a no-graduation ablation confirming that broadcast carries the performance gains while graduation primarily saves compute; (2) Examples achieves the strongest returns for three of four models, Rules offers the best cost-reliability profile with $\\sim$40% fewer tokens; and (3) weaker baseline models benefit disproportionately, suggesting FORGE may mitigate capability gaps rather than amplify strong models. All evidence is confined to CAGE-2 B-line; cross-family findings are directional evidence.",
-      "url": "https://arxiv.org/abs/2605.16233v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.16233v1",
-      "published": "2026-05-15T17:42:49Z",
-      "updated": "2026-05-15T17:42:49Z",
-      "categories": [
-        "cs.AI",
-        "cs.CL",
-        "cs.LG",
-        "cs.MA",
-        "eess.SY"
-      ],
-      "primary_category": "cs.AI"
-    },
-    {
-      "id": "2605.16232v1",
-      "title": "A Unified Generative-AI Framework for Smart Energy Infrastructure: Intelligent Gas Distribution, Utility Billing, Carbon Analytics, and Quantum-Inspired Optimisation",
-      "authors": [
-        "Pavan Manjunath",
-        "Thomas pruefer"
-      ],
-      "abstract": "The accelerating convergence of smart metering, generative artificial intelligence, and quantum-inspired combinatorial optimisation is reshaping how energy utilities manage physical infrastructure, customer engagement, and environmental accountability",
-      "url": "https://arxiv.org/abs/2605.16232v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.16232v1",
-      "published": "2026-05-15T17:42:11Z",
-      "updated": "2026-05-15T17:42:11Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.ET",
-        "cs.LG",
-        "eess.SY"
-      ],
-      "primary_category": "cs.CL"
+      "primary_category": "cs.CV"
     }
   ]
 }
