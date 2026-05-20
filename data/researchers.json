@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-05-19T11:39:29.035957+00:00",
+  "scraped_at": "2026-05-20T11:19:04.960283+00:00",
   "researcher_count": 54,
   "researchers": [
     {
@@ -2162,8 +2162,105 @@
       "field": "Legged locomotion, manipulation planning, optimal control, model predictive control",
       "institution": "New York University",
       "website": "https://righetti.github.io/",
-      "paper_count": 0,
-      "papers": []
+      "paper_count": 5,
+      "papers": [
+        {
+          "id": "2604.23863v1",
+          "title": "Cooptimizing Safety and Performance Using Safety Value-Constrained Model Predictive Control",
+          "authors": [
+            "Hao Wang",
+            "Nam Nguyen",
+            "Armand Jordana",
+            "Ludovic Righetti",
+            "Somil Bansal"
+          ],
+          "abstract": "Autonomous systems are increasingly deployed in real-world environments, where they must achieve high performance while maintaining safety under state and input constraints. Although Model Predictive Control (MPC) provides a principled framework for constrained optimal control, guaranteeing safety beyond its finite planning horizon remains a fundamental challenge. In this work, we augment MPC with a safety value function-based terminal constraint that enforces membership in a control-invariant safe set at the end of each planning horizon. This formulation enables real-time synthesis of trajectories that are both high-performing and provably safe. We show that, under an exact safety value function and a feasible initialization, the proposed MPC scheme is recursively feasible, thereby ensuring persistent safety. In contrast to traditional terminal set constructions that rely on local linearizations or conservative approximations, our approach incorporates a reachability-based safety value function for terminal constraints, yielding less conservative and more expressive safety guarantees. We validate the proposed framework through simulation and hardware experiments on a Flexiv Rizon 10s manipulator. Results demonstrate improved constraint satisfaction and robustness compared to standard state-constrained MPC and reactive safety filtering, while maintaining competitive task performance. The full implementation and experiments are available on the project website.",
+          "url": "https://arxiv.org/abs/2604.23863v1",
+          "pdf_url": "https://arxiv.org/pdf/2604.23863v1",
+          "published": "2026-04-26T20:10:03Z",
+          "updated": "2026-04-26T20:10:03Z",
+          "categories": [
+            "cs.RO",
+            "eess.SY"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2603.07797v1",
+          "title": "Toward Global Intent Inference for Human Motion by Inverse Reinforcement Learning",
+          "authors": [
+            "Sarmad Mehrdad",
+            "Maxime Sabbah",
+            "Vincent Bonnet",
+            "Ludovic Righetti"
+          ],
+          "abstract": "This paper investigates whether a single, unified cost function can explain and predict human reaching movements, in contrast with existing approaches that rely on subject- or posture-specific optimization criteria. Using the Minimal Observation Inverse Reinforcement Learning (MO-IRL) algorithm, together with a seven-dimensional set of candidate cost terms, we efficiently estimate time-varying cost weights for a standard planar reaching task. MO-IRL provides orders-of-magnitude faster convergence than bilevel formulations, while using only a fraction of the available data, enabling the practical exploration of time-varying cost structures. Three levels of generality are evaluated: Subject-Dependent Posture-Dependent, Subject-Dependent Posture-Independent, and Subject-Independent Posture-Independent. Across all cases, time-varying weights substantially improve trajectory reconstruction, yielding an average 27% reduction in RMSE compared to the baseline. The inferred costs consistently highlight a dominant role for joint-acceleration regulation, complemented by smaller contributions from torque-change smoothness. Overall, a single subject- and posture-agnostic time-varying cost function is shown to predict human reaching trajectories with high accuracy, supporting the existence of a unified optimality principle governing this class of movements.",
+          "url": "https://arxiv.org/abs/2603.07797v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.07797v1",
+          "published": "2026-03-08T20:37:19Z",
+          "updated": "2026-03-08T20:37:19Z",
+          "categories": [
+            "cs.RO",
+            "cs.LG"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2603.00871v1",
+          "title": "Hippo: High-performance Interior-Point and Projection-based Solver for Generic Constrained Trajectory Optimization",
+          "authors": [
+            "Haizhou Zhao",
+            "Ludovic Righetti",
+            "Majid Khadiv"
+          ],
+          "abstract": "Trajectory optimization is the core of modern model-based robotic control and motion planning. Existing trajectory optimizers, based on sequential quadratic programming (SQP) or differential dynamic programming (DDP), are often limited by their slow computation efficiency, low modeling flexibility, and poor convergence for complex tasks requiring hard constraints. In this paper, we introduce Hippo, a solver that can handle inequality constraints using the interior-point method (IPM) with an adaptive barrier update strategy and hard equality constraints via projection or IPM. Through extensive numerical benchmarks, we show that Hippo is a robust and efficient alternative to existing state-of-the-art solvers for difficult robotic trajectory optimization problems requiring high-quality solutions, such as locomotion and manipulation.",
+          "url": "https://arxiv.org/abs/2603.00871v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.00871v1",
+          "published": "2026-03-01T02:24:42Z",
+          "updated": "2026-03-01T02:24:42Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2602.06219v1",
+          "title": "Coupled Local and Global World Models for Efficient First Order RL",
+          "authors": [
+            "Joseph Amigo",
+            "Rooholla Khorrambakht",
+            "Nicolas Mansard",
+            "Ludovic Righetti"
+          ],
+          "abstract": "World models offer a promising avenue for more faithfully capturing complex dynamics, including contacts and non-rigidity, as well as complex sensory information, such as visual perception, in situations where standard simulators struggle. However, these models are computationally complex to evaluate, posing a challenge for popular RL approaches that have been successfully used with simulators to solve complex locomotion tasks but yet struggle with manipulation. This paper introduces a method that bypasses simulators entirely, training RL policies inside world models learned from robots' interactions with real environments. At its core, our approach enables policy training with large-scale diffusion models via a novel decoupled first-order gradient (FoG) method: a full-scale world model generates accurate forward trajectories, while a lightweight latent-space surrogate approximates its local dynamics for efficient gradient computation. This coupling of a local and global world model ensures high-fidelity unrolling alongside computationally tractable differentiation. We demonstrate the efficacy of our method on the Push-T manipulation task, where it significantly outperforms PPO in sample efficiency. We further evaluate our approach through an ego-centric object manipulation task with a quadruped. Together, these results demonstrate that learning inside data-driven world models is a promising pathway for solving hard-to-model RL tasks in image space without reliance on hand-crafted physics simulators.",
+          "url": "https://arxiv.org/abs/2602.06219v1",
+          "pdf_url": "https://arxiv.org/pdf/2602.06219v1",
+          "published": "2026-02-05T21:57:41Z",
+          "updated": "2026-02-05T21:57:41Z",
+          "categories": [
+            "cs.RO",
+            "cs.AI"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2601.10877v1",
+          "title": "Is open robotics innovation a threat to international peace and security?",
+          "authors": [
+            "Ludovic Righetti",
+            "Vincent Boulanin"
+          ],
+          "abstract": "Open access to publication, software and hardware is central to robotics: it lowers barriers to entry, supports reproducible science and accelerates reliable system development. However, openness also exacerbates the inherent dual-use risks associated with research and innovation in robotics. It lowers barriers for states and non-state actors to develop and deploy robotics systems for military use and harmful purposes. Compared to other fields of engineering where dual-use risks are present - e.g., those that underlie the development of weapons of mass destruction (chemical, biological, radiological, and nuclear weapons) and even the field of AI, robotics offers no specific regulation and little guidance as to how research and innovation may be conducted and disseminated responsibly. While other fields can be used for guidance, robotics has its own needs and specificities which have to be taken into account. The robotics community should therefore work toward its own set of sector-specific guidance and possibly regulation. To that end, we propose a roadmap focusing on four practices: a) education in responsible robotics; b) incentivizing risk assessment; c) moderating the diffusion of high-risk material; and d) developing red lines.",
+          "url": "https://arxiv.org/abs/2601.10877v1",
+          "pdf_url": "https://arxiv.org/pdf/2601.10877v1",
+          "published": "2026-01-15T22:07:28Z",
+          "updated": "2026-01-15T22:07:28Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        }
+      ]
     },
     {
       "id": "xie_s",
@@ -2171,8 +2268,158 @@
       "field": "Computer vision, deep learning architectures, multimodal models, spatial intelligence",
       "institution": "New York University",
       "website": "https://sainingxie.com/",
-      "paper_count": 0,
-      "papers": []
+      "paper_count": 5,
+      "papers": [
+        {
+          "id": "2605.18324v1",
+          "title": "Improved Baselines with Representation Autoencoders",
+          "authors": [
+            "Jaskirat Singh",
+            "Boyang Zheng",
+            "Zongze Wu",
+            "Richard Zhang",
+            "Eli Shechtman",
+            "Saining Xie"
+          ],
+          "abstract": "Representation Autoencoders (RAE) replace traditional VAE with pretrained vision encoders. In this paper, we systematically investigate several design choices and find three insights which simplify and improve RAE. First, we study a generalized formulation where the representation is defined as sum of the last k encoder layers rather than solely the final layer. This simple change greatly improves reconstruction without encoder finetuning or specialized data (e.g., text, faces). Second, we study the prevalent assumption that RAE (using pretrained representation as encoder) replaces representation alignment (REPA), which distills the same representation to intermediate layers instead. Through large-scale empirical analysis, we uncover a surprising finding: RAE and REPA exhibit complementary working mechanisms, allowing the same representation to be used as both encoder and target for intermediate diffusion layers. Finally, the original RAE struggles with classifier-free guidance (CFG) and requires training a second, weaker diffusion model for AutoGuidance (AG). We show that REPA itself can be viewed as x-prediction in RAE latent space. By simply re-parameterizing the output of the DiT model, it can provide guidance for \"free\". Overall, RAEv2 leads to more than 10x faster convergence over the original RAE, achieving a state-of-the-art gFID of 1.06 in just 80 epochs on ImageNet-256. On FDr^k, RAEv2 achieves a state-of-the-art 2.17 at just 80 epochs compared to the previous best 3.26 (800 epochs) without any post-training. This motivates EP_FID@k (epochs to reach unguided gFID <= k) as a measure of training efficiency. RAEv2 attains an EP_FID@2 of 35 epochs, versus 177 for the original RAE. We also validate our approach across diverse settings for text-to-image generation and navigation world models, showing consistent improvements. Code is available at https://raev2.github.io.",
+          "url": "https://arxiv.org/abs/2605.18324v1",
+          "pdf_url": "https://arxiv.org/pdf/2605.18324v1",
+          "published": "2026-05-18T12:42:34Z",
+          "updated": "2026-05-18T12:42:34Z",
+          "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.GR",
+            "cs.LG",
+            "stat.ML"
+          ],
+          "primary_category": "cs.CV"
+        },
+        {
+          "id": "2604.20329v2",
+          "title": "Image Generators are Generalist Vision Learners",
+          "authors": [
+            "Valentin Gabeur",
+            "Shangbang Long",
+            "Songyou Peng",
+            "Paul Voigtlaender",
+            "Shuyang Sun",
+            "Yanan Bao",
+            "Karen Truong",
+            "Zhicheng Wang",
+            "Wenlei Zhou",
+            "Jonathan T. Barron",
+            "Kyle Genova",
+            "Nithish Kannen",
+            "Sherry Ben",
+            "Yandong Li",
+            "Mandy Guo",
+            "Suhas Yogin",
+            "Yiming Gu",
+            "Huizhong Chen",
+            "Oliver Wang",
+            "Saining Xie",
+            "Howard Zhou",
+            "Kaiming He",
+            "Thomas Funkhouser",
+            "Jean-Baptiste Alayrac",
+            "Radu Soricut"
+          ],
+          "abstract": "Recent works show that image and video generators exhibit zero-shot visual understanding behaviors, in a way reminiscent of how LLMs develop emergent capabilities of language understanding and reasoning from generative pretraining. While it has long been conjectured that the ability to create visual content implies an ability to understand it, there has been limited evidence that generative vision models have developed strong understanding capabilities. In this work, we demonstrate that image generation training serves a role similar to LLM pretraining, and lets models learn powerful and general visual representations that enable SOTA performance on various vision tasks. We introduce Vision Banana, a generalist model built by instruction-tuning Nano Banana Pro (NBP) on a mixture of its original training data alongside a small amount of vision task data. By parameterizing the output space of vision tasks as RGB images, we seamlessly reframe perception as image generation. Our generalist model, Vision Banana, achieves SOTA results on a variety of vision tasks involving both 2D and 3D understanding, beating or rivaling zero-shot domain-specialists, including Segment Anything Model 3 on segmentation tasks, and the Depth Anything series on metric depth estimation. We show that these results can be achieved with lightweight instruction-tuning without sacrificing the base model's image generation capabilities. The superior results suggest that image generation pretraining is a generalist vision learner. It also shows that image generation serves as a unified and universal interface for vision tasks, similar to text generation's role in language understanding and reasoning. We could be witnessing a major paradigm shift for computer vision, where generative vision pretraining takes a central role in building Foundational Vision Models for both generation and understanding.",
+          "url": "https://arxiv.org/abs/2604.20329v2",
+          "pdf_url": "https://arxiv.org/pdf/2604.20329v2",
+          "published": "2026-04-22T08:23:48Z",
+          "updated": "2026-05-13T22:46:31Z",
+          "categories": [
+            "cs.CV",
+            "cs.AI"
+          ],
+          "primary_category": "cs.CV"
+        },
+        {
+          "id": "2603.22275v1",
+          "title": "Repurposing Geometric Foundation Models for Multi-view Diffusion",
+          "authors": [
+            "Wooseok Jang",
+            "Seonghu Jeon",
+            "Jisang Han",
+            "Jinhyeok Choi",
+            "Minkyung Kwon",
+            "Seungryong Kim",
+            "Saining Xie",
+            "Sainan Liu"
+          ],
+          "abstract": "While recent advances in generative latent spaces have driven substantial progress in single-image generation, the optimal latent space for novel view synthesis (NVS) remains largely unexplored. In particular, NVS requires geometrically consistent generation across viewpoints, but existing approaches typically operate in a view-independent VAE latent space. In this paper, we propose Geometric Latent Diffusion (GLD), a framework that repurposes the geometrically consistent feature space of geometric foundation models as the latent space for multi-view diffusion. We show that these features not only support high-fidelity RGB reconstruction but also encode strong cross-view geometric correspondences, providing a well-suited latent space for NVS. Our experiments demonstrate that GLD outperforms both VAE and RAE on 2D image quality and 3D consistency metrics, while accelerating training by more than 4.4x compared to the VAE latent space. Notably, GLD remains competitive with state-of-the-art methods that leverage large-scale text-to-image pretraining, despite training its diffusion model from scratch without such generative pretraining.",
+          "url": "https://arxiv.org/abs/2603.22275v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.22275v1",
+          "published": "2026-03-23T17:57:05Z",
+          "updated": "2026-03-23T17:57:05Z",
+          "categories": [
+            "cs.CV"
+          ],
+          "primary_category": "cs.CV"
+        },
+        {
+          "id": "2603.03276v1",
+          "title": "Beyond Language Modeling: An Exploration of Multimodal Pretraining",
+          "authors": [
+            "Shengbang Tong",
+            "David Fan",
+            "John Nguyen",
+            "Ellis Brown",
+            "Gaoyue Zhou",
+            "Shengyi Qian",
+            "Boyang Zheng",
+            "Th\u00e9ophane Vallaeys",
+            "Junlin Han",
+            "Rob Fergus",
+            "Naila Murray",
+            "Marjan Ghazvininejad",
+            "Mike Lewis",
+            "Nicolas Ballas",
+            "Amir Bar",
+            "Michael Rabbat",
+            "Jakob Verbeek",
+            "Luke Zettlemoyer",
+            "Koustuv Sinha",
+            "Yann LeCun",
+            "Saining Xie"
+          ],
+          "abstract": "The visual world offers a critical axis for advancing foundation models beyond language. Despite growing interest in this direction, the design space for native multimodal models remains opaque. We provide empirical clarity through controlled, from-scratch pretraining experiments, isolating the factors that govern multimodal pretraining without interference from language pretraining. We adopt the Transfusion framework, using next-token prediction for language and diffusion for vision, to train on diverse data including text, video, image-text pairs, and even action-conditioned video. Our experiments yield four key insights: (i) Representation Autoencoder (RAE) provides an optimal unified visual representation by excelling at both visual understanding and generation; (ii) visual and language data are complementary and yield synergy for downstream capabilities; (iii) unified multimodal pretraining leads naturally to world modeling, with capabilities emerging from general training; and (iv) Mixture-of-Experts (MoE) enables efficient and effective multimodal scaling while naturally inducing modality specialization. Through IsoFLOP analysis, we compute scaling laws for both modalities and uncover a scaling asymmetry: vision is significantly more data-hungry than language. We demonstrate that the MoE architecture harmonizes this scaling asymmetry by providing the high model capacity required by language while accommodating the data-intensive nature of vision, paving the way for truly unified multimodal models.",
+          "url": "https://arxiv.org/abs/2603.03276v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.03276v1",
+          "published": "2026-03-03T18:58:00Z",
+          "updated": "2026-03-03T18:58:00Z",
+          "categories": [
+            "cs.CV"
+          ],
+          "primary_category": "cs.CV"
+        },
+        {
+          "id": "2602.22208v2",
+          "title": "Solaris: Building a Multiplayer Video World Model in Minecraft",
+          "authors": [
+            "Georgy Savva",
+            "Oscar Michel",
+            "Daohan Lu",
+            "Suppakit Waiwitlikhit",
+            "Timothy Meehan",
+            "Dhairya Mishra",
+            "Srivats Poddar",
+            "Jack Lu",
+            "Saining Xie"
+          ],
+          "abstract": "Existing action-conditioned video generation models (video world models) are limited to single-agent perspectives, failing to capture the multi-agent interactions of real-world environments. We introduce Solaris, a multiplayer video world model that simulates consistent multi-view observations. To enable this, we develop a multiplayer data system designed for robust, continuous, and automated data collection on video games such as Minecraft. Unlike prior platforms built for single-player settings, our system supports coordinated multi-agent interaction and synchronized videos + actions capture. Using this system, we collect 12.64 million multiplayer frames and propose an evaluation framework for multiplayer movement, memory, grounding, building, and view consistency. We train Solaris using a staged pipeline that progressively transitions from single-player to multiplayer modeling, combining bidirectional, causal, and Self Forcing training. In the final stage, we introduce Checkpointed Self Forcing, a memory-efficient Self Forcing variant that enables a longer-horizon teacher. Results show our architecture and training design outperform existing baselines. Through open-sourcing our system and models, we hope to lay the groundwork for a new generation of multi-agent world models.",
+          "url": "https://arxiv.org/abs/2602.22208v2",
+          "pdf_url": "https://arxiv.org/pdf/2602.22208v2",
+          "published": "2026-02-25T18:59:01Z",
+          "updated": "2026-02-26T04:21:35Z",
+          "categories": [
+            "cs.CV"
+          ],
+          "primary_category": "cs.CV"
+        }
+      ]
     },
     {
       "id": "yang_s",
@@ -4333,7 +4580,7 @@
           "primary_category": "cs.AI"
         },
         {
-          "id": "2603.05066v2",
+          "id": "2603.05066v3",
           "title": "Reward-Conditioned Reinforcement Learning",
           "authors": [
             "Michal Nauman",
@@ -4341,10 +4588,10 @@
             "Pieter Abbeel"
           ],
           "abstract": "Single-task RL agents are typically trained under a fixed reward function, which limits their robustness to reward misspecification and their ability to adapt to changing preferences. We introduce Reward-Conditioned Reinforcement Learning (RCRL), an off-policy method that conditions agents on reward parameterizations while collecting experience under a single nominal objective. By recomputing counterfactual rewards from shared replay data, RCRL exposes the agent to multiple reward objectives without additional environment interaction, connecting single-task RL with ideas from multi-objective and multi-task learning. Across single-task, multi-task, and vision-based benchmarks, RCRL improves sample efficiency under the nominal reward parameterization, enables efficient adaptation to new parameterizations, and supports zero-shot behavioral adjustment at deployment. Our results show that RCRL provides a scalable mechanism for learning robust, steerable policies without sacrificing the simplicity of single-task training.",
-          "url": "https://arxiv.org/abs/2603.05066v2",
-          "pdf_url": "https://arxiv.org/pdf/2603.05066v2",
+          "url": "https://arxiv.org/abs/2603.05066v3",
+          "pdf_url": "https://arxiv.org/pdf/2603.05066v3",
           "published": "2026-03-05T11:29:17Z",
-          "updated": "2026-05-09T16:40:23Z",
+          "updated": "2026-05-19T13:19:11Z",
           "categories": [
             "cs.LG"
           ],
@@ -5882,6 +6129,25 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2605.19529v1",
+          "title": "Generative-Evaluative Agreement: A Necessary Validity Criterion for LLM-Enabled Adaptive Assessment",
+          "authors": [
+            "Grandee Lee",
+            "Yue Wang",
+            "Che Yee Lye",
+            "Luke Peh"
+          ],
+          "abstract": "When the same LLM generates assessment items, simulates student responses, and scores them, the validation loop is self-referential. We introduce Generative-Evaluative Agreement (GEA), a validity criterion measuring whether an LLM's scoring function recovers the skill levels its generative function was instructed to produce. In the first direct measurement of GEA on a two-stage adaptive assessment, the model recovers roughly half the intended variance r = 0.698 with systematic positive bias. GEA is strong r > 0.7 for syntactically verifiable skills but near zero for design-level skills, and low-skill overestimation inflates scores near the routing threshold. We argue that granular, skill-decomposed rubrics are the principal proposed mechanism for strengthening GEA and outline complementary mitigations.",
+          "url": "https://arxiv.org/abs/2605.19529v1",
+          "pdf_url": "https://arxiv.org/pdf/2605.19529v1",
+          "published": "2026-05-19T08:30:39Z",
+          "updated": "2026-05-19T08:30:39Z",
+          "categories": [
+            "cs.AI"
+          ],
+          "primary_category": "cs.AI"
+        },
+        {
           "id": "2605.18041v1",
           "title": "OmniSelect: Dynamic Modality-Aware Token Compression for Efficient Omni-modal Large Language Models",
           "authors": [
@@ -5968,25 +6234,6 @@
             "cs.CV"
           ],
           "primary_category": "cs.CV"
-        },
-        {
-          "id": "2605.11232v1",
-          "title": "Rethinking LLMOps for Fraud and AML: Building a Compliance-Grade LLM Serving Stack",
-          "authors": [
-            "Prathamesh Vasudeo Naik",
-            "Naresh Dintakurthi",
-            "Yue Wang"
-          ],
-          "abstract": "Fraud detection and anti-money-laundering (AML) compliance are high-value domains for large language models (LLMs), but their serving requirements differ sharply from generic chat workloads. Compliance prompts are often prefix-heavy, schema-constrained, and evidence-rich, combining reusable policy instructions, risk taxonomies, transaction or document context, and short structured outputs such as JSON labels or risk factors. These properties make prefix reuse, KV-cache efficiency, runtime tuning, model orchestration, and output validation first-order systems concerns. This paper introduces a workload-aware LLMOps stack for fraud and AML workloads using self-hosted open-weight models such as Meta Llama and Alibaba Qwen. The stack combines vLLM-style runtime tuning, PagedAttention, Automatic Prefix Caching, multi-adapter serving, adapter and prompt-length-aware batching, sleep/wake lifecycle management, speculative decoding, and optional prefill/decode disaggregation. To avoid exposing institution-specific data, the reproducibility track converts public synthetic AML datasets, including IBM AML and SAML-D, into prefix-heavy compliance prompts with reusable policy text, transaction evidence, typology definitions, and schema-constrained outputs. We also incorporate an LLM-as-judge quality gate using deterministic compliance checks, reference metrics, expert-adjudicated calibration data where available, and multi-judge rubric scoring. Across public-synthetic AML workloads and controlled serving benchmarks, workload-aware tuning improved throughput from 612-650 to 3,600 requests/hour, reduced P99 latency from 31-38 seconds to 6.4-8.7 seconds, and increased GPU utilization from 12% to 78%. These results show that regulated LLM performance is a workload-design, serving-optimization, and quality-gating problem, not only a model-selection problem.",
-          "url": "https://arxiv.org/abs/2605.11232v1",
-          "pdf_url": "https://arxiv.org/pdf/2605.11232v1",
-          "published": "2026-05-11T20:47:41Z",
-          "updated": "2026-05-11T20:47:41Z",
-          "categories": [
-            "cs.AI",
-            "cs.LG"
-          ],
-          "primary_category": "cs.AI"
         }
       ]
     },
@@ -6233,6 +6480,25 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2605.19940v1",
+          "title": "Robotics-Inspired Guardrails for Foundation Models in Socially Sensitive Domains",
+          "authors": [
+            "Rebecca Ramnauth",
+            "Drazen Brscic",
+            "Brian Scassellati"
+          ],
+          "abstract": "Foundation models are increasingly deployed in socially sensitive domains such as education, mental health, and caregiving, where failures are often cumulative and context-dependent. Existing guardrail approaches -- ranging from training-time alignment to prompting, decoding constraints, and post-hoc moderation -- primarily provide empirical risk reduction rather than enforceable behavioral guarantees, and largely treat safety as a property of individual outputs rather than interaction trajectories. We reframe guardrails as a problem of runtime behavioral control over interaction trajectories, drawing on robotics to introduce formal constructs for constraint enforcement in uncertain, closed-loop systems. We instantiate these ideas in the Grounded Observer framework and apply it across three real-world deployments: small talk, in-home autism therapy, and behavioral de-escalation in schools. Across settings, the framework enables runtime interventions that mitigate drift into undesirable interaction regimes while adapting to diverse social contexts. We discuss extensions to the framework and propose research directions toward stronger guarantees.",
+          "url": "https://arxiv.org/abs/2605.19940v1",
+          "pdf_url": "https://arxiv.org/pdf/2605.19940v1",
+          "published": "2026-05-19T15:00:06Z",
+          "updated": "2026-05-19T15:00:06Z",
+          "categories": [
+            "cs.AI",
+            "cs.RO"
+          ],
+          "primary_category": "cs.AI"
+        },
+        {
           "id": "2601.03398v1",
           "title": "Towards Zero-Knowledge Task Planning via a Language-based Approach",
           "authors": [
@@ -6307,26 +6573,6 @@
           "categories": [
             "cs.RO",
             "cs.AI"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2501.03515v1",
-          "title": "Effects of Robot Competency and Motion Legibility on Human Correction Feedback",
-          "authors": [
-            "Shuangge Wang",
-            "Anjiabei Wang",
-            "Sofiya Goncharova",
-            "Brian Scassellati",
-            "Tesca Fitzgerald"
-          ],
-          "abstract": "As robot deployments become more commonplace, people are likely to take on the role of supervising robots (i.e., correcting their mistakes) rather than directly teaching them. Prior works on Learning from Corrections (LfC) have relied on three key assumptions to interpret human feedback: (1) people correct the robot only when there is significant task objective divergence; (2) people can accurately predict if a correction is necessary; and (3) people trade off precision and physical effort when giving corrections. In this work, we study how two key factors (robot competency and motion legibility) affect how people provide correction feedback and their implications on these existing assumptions. We conduct a user study ($N=60$) under an LfC setting where participants supervise and correct a robot performing pick-and-place tasks. We find that people are more sensitive to suboptimal behavior by a highly competent robot compared to an incompetent robot when the motions are legible ($p=0.0015$) and predictable ($p=0.0055$). In addition, people also tend to withhold necessary corrections ($p < 0.0001$) when supervising an incompetent robot and are more prone to offering unnecessary ones ($p = 0.0171$) when supervising a highly competent robot. We also find that physical effort positively correlates with correction precision, providing empirical evidence to support this common assumption. We also find that this correlation is significantly weaker for an incompetent robot with legible motions than an incompetent robot with predictable motions ($p = 0.0075$). Our findings offer insights for accounting for competency and legibility when designing robot interaction behaviors and learning task objectives from corrections.",
-          "url": "https://arxiv.org/abs/2501.03515v1",
-          "pdf_url": "https://arxiv.org/pdf/2501.03515v1",
-          "published": "2025-01-07T04:17:15Z",
-          "updated": "2025-01-07T04:17:15Z",
-          "categories": [
-            "cs.RO"
           ],
           "primary_category": "cs.RO"
         }
