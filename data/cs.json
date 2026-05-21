@@ -2,236 +2,218 @@
   "category": "cs",
   "name": "CS Research",
   "description": "Computer Science \u2014 AI, Machine Learning, NLP, Computer Vision",
-  "scraped_at": "2026-05-20T11:13:55.346648+00:00",
+  "scraped_at": "2026-05-21T11:32:53.045223+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2605.20185v1",
-      "title": "PiG-Avatar: Hierarchical Neural-Field-Guided Gaussian Avatars",
+      "id": "2605.21489v1",
+      "title": "Variance Reduction for Expectations with Diffusion Teachers",
       "authors": [
-        "Julian Kaltheuner",
-        "Jan Spindler",
-        "Sina Kitz",
-        "Patrick Stotko",
-        "Reinhard Klein"
+        "Jesse Bettencourt",
+        "Xindi Wu",
+        "Matan Atzmon",
+        "James Lucas",
+        "Jonathan Lorraine"
       ],
-      "abstract": "Existing Gaussian avatar methods typically parameterize geometry on a body-template surface, which entangles the avatar's representation space with the template's deformation space and limits the capture of layered, off-body, and non-rigid clothing geometry. We present PiG-Avatar, which addresses this limitation by using the parametric body model solely for kinematic transport, while representing the avatar as Gaussians anchored in a volumetric canonical space governed by a continuous neural field. This decouples representation from template topology, avoiding the geometric constraints of surface-based parameterizations. Kinematic coherence is maintained through 3D barycentric anchor transport, which guides motion without constraining geometry and allows anchors to deviate freely from the template surface, yielding dense, stable temporal surface correspondences by construction. To make this unconstrained formulation tractable, we introduce dual-level spatially coherent optimization, combining Sobolev-preconditioned neural-field updates with a novel KNN-based preconditioning of canonical anchor geometry. Together, these mechanisms induce an emergent self-organization of anchor density: anchors migrate toward regions of high curvature, appearance variation, and non-coherent motion without explicit heuristics. As a result, complex clothing geometry and layered surfaces emerge as natural, high-fidelity outputs. This single representation further supports hierarchical reconstruction across multiple levels of detail, with coarse-level supervision propagating to finer levels through the shared field and coupled anchor graph. On established benchmarks featuring subjects with complex clothing and challenging non-rigid motion, PiG-Avatar achieves state-of-the-art rendering quality, generalizes robustly to imperfect body model initialization, and renders in real time across all detail levels.",
-      "url": "https://arxiv.org/abs/2605.20185v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.20185v1",
-      "published": "2026-05-19T17:59:54Z",
-      "updated": "2026-05-19T17:59:54Z",
-      "categories": [
-        "cs.GR",
-        "cs.CV"
-      ],
-      "primary_category": "cs.GR"
-    },
-    {
-      "id": "2605.20183v1",
-      "title": "MSAVBench: Towards Comprehensive and Reliable Evaluation of Multi-Shot Audio-Video Generation",
-      "authors": [
-        "Yujie Wei",
-        "Yujin Han",
-        "Zhekai Chen",
-        "Yongming Li",
-        "Kaixun Jiang",
-        "Zhihang Liu",
-        "Quanhao Li",
-        "Zhiwu Qing",
-        "Xiang Wang",
-        "Zhen Xing",
-        "Ruihang Chu",
-        "Lingyi Hong",
-        "Yefei He",
-        "Junjie Zhou",
-        "Junqiu Yu",
-        "Yang Shi",
-        "Difan Zou",
-        "Kai Zhu",
-        "Shiwei Zhang",
-        "Yingya Zhang",
-        "Yu Liu",
-        "Xihui Liu",
-        "Hongming Shan"
-      ],
-      "abstract": "Video generation is rapidly evolving from single-shot synthesis to complex multi-shot audio-video (MSAV) narratives to meet real-world demands. However, evaluating such frontier models remains a fundamental challenge. Existing benchmarks are limited in scope and data diversity, and rely on rigid evaluation pipelines, preventing systematic and reliable assessment of modern MSAV models. To bridge these gaps, we introduce MSAVBench, the first comprehensive benchmark and adaptive hybrid evaluation framework for multi-shot audio-video generation. Our benchmark spans four key dimensions, video, audio, shot, and reference, covering diverse task settings, varying shot counts of up to 15, and challenging non-realistic scenarios. Our evaluation framework improves robustness through an adaptive self-correction mechanism for shot segmentation, instance-wise rubrics for subjective metrics, and tool-grounded evidence extraction for complex judgments. Furthermore, MSAVBench achieves high alignment with human judgments, reaching a Spearman rank correlation of 91.5%. Our systematic evaluation of 19 state-of-the-art closed- and open-source models shows that current systems still struggle with director-level control and fine-grained audio-visual synchronization, while modular or agentic generation pipelines offer a promising path toward narrowing the gap between open- and closed-source models. We will release the benchmark data and evaluation code to facilitate future research.",
-      "url": "https://arxiv.org/abs/2605.20183v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.20183v1",
-      "published": "2026-05-19T17:59:33Z",
-      "updated": "2026-05-19T17:59:33Z",
-      "categories": [
-        "cs.CV"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2605.20182v1",
-      "title": "Atoms of Thought: Universal EEG Representation Learning with Microstates",
-      "authors": [
-        "Xinyang Tian",
-        "Ruitao Liu",
-        "Ziyi Ye",
-        "Siyang Xue",
-        "Xin Wang",
-        "Xuesong Chen"
-      ],
-      "abstract": "Learning universal representations from electroencephalogram (EEG) signals is a cutting-edge approach in the field of neuroinformatics and brain-computer interfaces (BCIs). Conventionally, EEG is treated as a multivariate temporal signal, where time- or frequency-domain features are extracted for representation learning. This paper investigates a simple yet effective EEG representation, i.e., microstates. Microstates represent the building blocks of brain activity patterns at a microscopic time scale. We build a universal microstate tokenizer from a large medical EEG dataset by clustering continuous EEG signals into sequences of discrete microstates. The microstate tokenizer is then adopted universally across a series of downstream tasks, including sleep staging, emotion recognition, and motor imagery classification. Experimental results show that EEG representation learning with microstates outperforms traditional time-domain and frequency-domain features under different models and across different tasks. Further analysis shows that microstates offer greater interpretability and scalability, thereby opening up applications in both cognitive neuroscience and clinical research.",
-      "url": "https://arxiv.org/abs/2605.20182v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.20182v1",
-      "published": "2026-05-19T17:59:31Z",
-      "updated": "2026-05-19T17:59:31Z",
+      "abstract": "Pretrained diffusion models serve as frozen teachers feeding downstream pipelines such as text-to-3D, single-step distillation, and data attribution. The teacher gradients these pipelines consume are Monte Carlo (MC) expectations over noise levels and Gaussian noise samples; their estimator variance dominates compute cost because each draw requires expensive upstream work (rendering, simulation, encoding). We introduce CARV, a compute-aware variance-accounting framework that motivates a hierarchical MC estimator: amortize the expensive upstream computation over cheap diffusion-noise resamples, sharpened by timestep importance sampling and a stratified-inverse-CDF construction. In our text-to-3D distillation and attribution experiments, CARV delivers 2-3x effective compute multipliers (most from amortized reuse; ~25% additional from IS+stratification) without changing the objective; in single-step distillation, the same techniques cut gradient variance by an order of magnitude but do not improve downstream FID, marking the regime where MC variance is no longer the bottleneck.",
+      "url": "https://arxiv.org/abs/2605.21489v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.21489v1",
+      "published": "2026-05-20T17:59:52Z",
+      "updated": "2026-05-20T17:59:52Z",
       "categories": [
         "cs.LG",
-        "cs.AI"
+        "cs.AI",
+        "cs.CV",
+        "stat.CO",
+        "stat.ML"
       ],
       "primary_category": "cs.LG"
     },
     {
-      "id": "2605.20179v1",
-      "title": "TIDE: Efficient and Lossless MoE Diffusion LLM Inference with I/O-aware Expert Offload",
+      "id": "2605.21488v1",
+      "title": "Equilibrium Reasoners: Learning Attractors Enables Scalable Reasoning",
       "authors": [
-        "Zhiben Chen",
-        "Youpeng Zhao",
-        "Yang Sui",
-        "Jun Wang",
-        "Yuzhang Shang"
+        "Benhao Huang",
+        "Zhengyang Geng",
+        "Zico Kolter"
       ],
-      "abstract": "Diffusion Large Language Models (dLLMs) have emerged as a competitive alternative to autoregressive (AR) models, offering better hardware utilization and bidirectional context through parallel block-level decoding. However, as dLLMs continue to scale up with mixture-of-experts (MoE) architectures, their deployment on resource-constrained devices remains an open challenge. Existing AR-based methods often incur either prohibitive I/O overhead or significant compute bottlenecks. In this work, we propose TIDE, a novel resource-efficient inference system that leverages the temporal stability of expert activations during the diffusion process within the block. Specifically, we leverage the temporal stability of expert activations during the diffusion process within the block and introduce an interval-based expert refresh strategy that updates the expert placement in an I/O-aware fashion. To ensure optimal performance, we formulate the inference scheduling as a mathematical programming problem, solving for the optimal interval that minimizes I/O traffic and CPU computation. Most importantly, TIDE is a lossless optimization that requires no model training, providing a \"free lunch\" acceleration for dLLM inference. In a single GPU-CPU system, we demonstrate that TIDE achieves up to 1.4$\\times$ and 1.5$\\times$ throughput improvements over prior baselines on LLaDA2.0-mini and LLaDA2.0-flash models, respectively.",
-      "url": "https://arxiv.org/abs/2605.20179v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.20179v1",
-      "published": "2026-05-19T17:59:08Z",
-      "updated": "2026-05-19T17:59:08Z",
+      "abstract": "Scaling test-time compute by iteratively updating a latent state has emerged as a powerful paradigm for reasoning. Yet the internal mechanisms that enable these iterative models to generalize beyond memorized patterns remain unclear. We hypothesize that generalizable reasoning arises from learning task-conditioned attractors: latent dynamical systems whose stable fixed points correspond to valid solutions.   We formalize this process through Equilibrium Reasoners (EqR), which enable test-time scaling without external verifiers or task-specific priors. EqR scales internal dynamics along two axes: depth, by running more iterations, and breadth, by aggregating stochastic trajectories from multiple initializations. Empirically, gains from test-time scaling are tightly coupled with stronger convergence toward solution-aligned attractors.   This attractor perspective allows neural networks to adaptively allocate test-time compute based on task difficulty. While simple cases converge within 1 to 5 iteration steps, harder cases benefit from massive test-time scaling. By unrolling up to the equivalent of 40,000 layers, scalable latent reasoning boosts accuracy from 2.6% for feedforward models to over 99% on Sudoku-Extreme. These results suggest that learned attractor landscapes provide a useful mechanistic lens for understanding scalable reasoning in iterative latent models.",
+      "url": "https://arxiv.org/abs/2605.21488v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.21488v1",
+      "published": "2026-05-20T17:59:48Z",
+      "updated": "2026-05-20T17:59:48Z",
       "categories": [
-        "cs.CL"
-      ],
-      "primary_category": "cs.CL"
-    },
-    {
-      "id": "2605.20177v1",
-      "title": "From Seeing to Thinking: Decoupling Perception and Reasoning Improves Post-Training of Vision-Language Models",
-      "authors": [
-        "Juncheng Wu",
-        "Hardy Chen",
-        "Haoqin Tu",
-        "Xianfeng Tang",
-        "Freda Shi",
-        "Hui Liu",
-        "Hanqing Lu",
-        "Cihang Xie",
-        "Yuyin Zhou"
-      ],
-      "abstract": "Recent advances in vision-language models (VLMs) emphasize long chain-of-thought reasoning; yet, we find that their performance on visual tasks is primarily limited by a lack of visual perception as opposed to reasoning itself. In this work, we systematically study the interplay between perception and reasoning in VLM post-training by decomposing their capabilities into three separate training stages: visual perception, visual reasoning, and textual reasoning, incorporating specialized training data. We demonstrate that visual perception (a) requires targeted optimization with specialized data; (b) serves as a fundamental scaffold that should be solidified through staged training before refining visual reasoning; and (c) is more effectively learned via RL than caption-based SFT. Our experiments across multiple VLMs demonstrate that staged training consistently improves both visual perception and reasoning performance over merged training. Notably, models trained with our approach achieve 1.5% higher reasoning accuracy with 20.8% shorter reasoning traces, suggesting that superior perception reduces the need for excessive reasoning. Furthermore, we show that this capability-based staging represents a new curriculum dimension orthogonal to traditional difficulty-based curricula, and combining both yields further additive gains. Our staged-training models achieve superior performance among open-weight VLMs, establishing advanced results on several visual math and perception (e.g., +5.2% on WeMath and +3.7% on RealWorldQA) tasks compared with the base counterpart.",
-      "url": "https://arxiv.org/abs/2605.20177v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.20177v1",
-      "published": "2026-05-19T17:58:40Z",
-      "updated": "2026-05-19T17:58:40Z",
-      "categories": [
-        "cs.CL",
-        "cs.CV"
-      ],
-      "primary_category": "cs.CL"
-    },
-    {
-      "id": "2605.20176v1",
-      "title": "ClinSeekAgent: Automating Multimodal Evidence Seeking for Agentic Clinical Reasoning",
-      "authors": [
-        "Juncheng Wu",
-        "Letian Zhang",
-        "Yuhan Wang",
-        "Haoqin Tu",
-        "Hardy Chen",
-        "Zijun Wang",
-        "Cihang Xie",
-        "Yuyin Zhou"
-      ],
-      "abstract": "Large language models (LLMs) and agentic systems have shown promise for clinical decision support, but existing works largely assume that evidence has already been curated and handed to the model. Real-world clinical workflows instead require agents to actively seek, iteratively plan, and synthesize multimodal evidence from heterogeneous sources. In this paper, we introduce ClinSeekAgent, an automated agentic framework for dynamic multimodal evidence seeking that shifts the paradigm from passive evidence consumption to active evidence acquisition. Given only a clinical query and access to raw data sources, ClinSeekAgent gathers evidence by querying medical knowledge bases, navigating raw EHRs, and invoking medical imaging tools; refines its hypotheses as new information emerges; and integrates the collected evidence into grounded clinical decisions. ClinSeekAgent serves both as an inference-time agent for frontier LLMs and as a training-time pipeline for distilling high-quality agent trajectories into compact open-source models. To validate its inference-time effectiveness, we construct ClinSeek-Bench, which pairs Curated Input reasoning from fixed pre-selected evidence with Automated Evidence-Seeking over raw clinical data. On text-only EHR tasks, ClinSeekAgent improves Claude Opus 4.6 from 60.0 to 63.2 overall F1 and MiniMax M2.5 from 43.1 to 47.3, with positive risk-prediction gains in 7 out of 9 evaluated host models. On multimodal tasks, ClinSeekAgent improves Claude Opus 4.6 from 47.5 to 62.6 (+15.1); all evaluated models improve across the three CXR-related task groups. We further validate ClinSeekAgent as a training pipeline by distilling agentic evidence-seeking trajectories into ClinSeek-35B-A3B, which achieves 34.0 average F1 on existing AgentEHR-Bench, improving over its Qwen3.5-35B-A3B baseline by +11.9 points and approaching Claude Opus 4.6.",
-      "url": "https://arxiv.org/abs/2605.20176v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.20176v1",
-      "published": "2026-05-19T17:58:37Z",
-      "updated": "2026-05-19T17:58:37Z",
-      "categories": [
-        "cs.CL"
-      ],
-      "primary_category": "cs.CL"
-    },
-    {
-      "id": "2605.20174v1",
-      "title": "Multi-axis Analysis of Image Manipulation Localization",
-      "authors": [
-        "Keanu Nichols",
-        "Divya Appapogu",
-        "Giscard Biamby",
-        "Dina Bashkirova",
-        "Anna Rohrbach",
-        "Bryan A. Plummer"
-      ],
-      "abstract": "Advanced image editing software enables easy creation of highly convincing image manipulations, which has been made even more accessible in recent years due to advances in generative AI. Manipulated images, while often harmless, could spread misinformation, create false narratives, and influence people's opinions on important issues. Despite this growing threat, there is limited research on detecting advanced manipulations across different visual domains. Thus, we introduce Analysis Under Domain-shifts, qualIty, Type, and Size (AUDITS), a comprehensive benchmark designed for studying axes of analysis in image manipulation detection. AUDITS comprises over 530K images from two distinct sources (user and news photos). We curate our dataset to support analysis across multiple axes using recent diffusion-based inpaintings, spanning a diverse range of manipulation types and sizes. We conduct experiments under different types of domain shift to evaluate robustness of existing image manipulation detection methods. Our goal is to drive further research in this area by offering new insights that would help develop more reliable and generalizable image manipulation detection methods.",
-      "url": "https://arxiv.org/abs/2605.20174v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.20174v1",
-      "published": "2026-05-19T17:54:33Z",
-      "updated": "2026-05-19T17:54:33Z",
-      "categories": [
-        "cs.CV",
         "cs.LG"
+      ],
+      "primary_category": "cs.LG"
+    },
+    {
+      "id": "2605.21487v1",
+      "title": "Uni-Edit: Intelligent Editing Is A General Task For Unified Model Tuning",
+      "authors": [
+        "Dian Zheng",
+        "Manyuan Zhang",
+        "Hongyu Li",
+        "Hongbo Liu",
+        "Kai Zou",
+        "Kaituo Feng",
+        "Hongsheng Li"
+      ],
+      "abstract": "Currently, enhancing Unified Multimodal Models (UMMs) with image understanding, generation, and editing capabilities mainly relies on mixed multi-task training. Due to inherent task conflicts, such strategy requires complex multi-stage pipelines, massive data mixing, and balancing tricks, merely resulting in a performance trade-off rather than true mutual reinforcement. To break this paradigm, we propose Uni-Edit, an intelligent image editing task that serves as the first general task for UMM tuning. Unlike complex mixed pipelines, Uni-Edit improves performance across all three abilities at once using only one task, one training stage, and one dataset. Specifically, we first identify image editing as an inherently ideal general task, as it naturally demands both visual understanding and generation. However, existing editing data relies on simplistic instructions that severely underutilize a model's understanding capacity. To address this, we introduce the first automated and scalable data synthesis pipeline for intelligent editing, transforming diverse VQA data into complex and effective editing instructions with embedded questions and nested logic. This yields Uni-Edit-148k, pairing diverse reasoning-intensive instructions with high-quality edited images. Extensive experiments on BAGEL and Janus-Pro demonstrate that tuning solely on Uni-Edit achieves comprehensive enhancements across all three capabilities without any auxiliary operations.",
+      "url": "https://arxiv.org/abs/2605.21487v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.21487v1",
+      "published": "2026-05-20T17:59:42Z",
+      "updated": "2026-05-20T17:59:42Z",
+      "categories": [
+        "cs.CV"
       ],
       "primary_category": "cs.CV"
     },
     {
-      "id": "2605.20173v1",
-      "title": "A Methodology for Selecting and Composing Runtime Architecture Patterns for Production LLM Agents",
+      "id": "2605.21486v1",
+      "title": "Quantifying Hyperparameter Transfer and the Importance of Embedding Layer Learning Rate",
       "authors": [
-        "Vasundra Srinivasan"
+        "Dayal Singh Kalra",
+        "Maissam Barkeshli"
       ],
-      "abstract": "Production LLM agents combine stochastic model outputs with deterministic software systems, yet the boundary between the two is rarely treated as a first-class architectural object. This paper names that boundary the stochastic-deterministic boundary (SDB): a four-part contract among a proposer, verifier, commit step, and reject signal that specifies how an LLM output becomes a system action. We argue that the SDB is the load-bearing primitive of production agent runtimes.   Around this primitive, we organize agent runtime design into three concerns: Coordination, State, and Control. We present a catalog of six runtime patterns that compose the SDB differently across conversational, autonomous, and long-horizon agents: hierarchical delegation, scatter-gather plus saga, event-driven sequencing, shared state machine, supervisor plus gate, and human in the loop. For each pattern, we trace its lineage to distributed-systems concepts and identify what changes when the worker is stochastic.   The paper contributes a five-step methodology for selecting runtime patterns, a diagnostic procedure that maps production failures to pattern weaknesses, and a failure mode called replay divergence, in which LLM-based consumers of a deterministic event log produce different downstream outputs under model-version or prompt changes. A stylized reliability decomposition separates per-call model variance from architectural momentum, motivating the claim that as model variance decreases, pattern choice and SDB strength become increasingly important levers for long-run reliability. We apply the methodology to five workloads and provide one runnable reference implementation for a 90-day contract-renewal agent.",
-      "url": "https://arxiv.org/abs/2605.20173v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.20173v1",
-      "published": "2026-05-19T17:54:21Z",
-      "updated": "2026-05-19T17:54:21Z",
+      "abstract": "Hyperparameter transfer allows extrapolating optimal optimization hyperparameters from small to large scales, making it critical for training large language models (LLMs). This is done either by fitting a scaling law to the hyperparameters or by a judicious choice of parameterization, such as Maximal Update ($\u03bc$P), that renders optimal hyperparameters approximately scale invariant. In this paper, we first develop a framework to quantify hyperparameter transfer through three metrics: (1) the quality of the scaling law fit, (2) the robustness to extrapolation errors, and (3) the asymptotic loss penalty due to choice of parameterization. Next, we investigate through a comprehensive series of ablations why $\u03bc$P appears to offer high-quality learning rate transfer relative to standard parameterization (SP), as existing theory is inadequate. We find that the overwhelming benefit of $\u03bc$P relative to SP when training with AdamW arises simply from maximizing the learning rate of the embedding layer. In SP, the embedding layer learning rate acts as a bottleneck that induces training instabilities; increasing it by a factor of width to match $\u03bc$P dramatically smooths out training while improving hyperparameter transfer. We also find that weight decay improves the scaling law fits, while, in the fixed token-per-parameter setting, it hurts the robustness of the extrapolation.",
+      "url": "https://arxiv.org/abs/2605.21486v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.21486v1",
+      "published": "2026-05-20T17:59:40Z",
+      "updated": "2026-05-20T17:59:40Z",
       "categories": [
+        "cs.LG",
+        "cond-mat.dis-nn",
         "cs.AI",
-        "cs.SE"
+        "stat.ML"
+      ],
+      "primary_category": "cs.LG"
+    },
+    {
+      "id": "2605.21485v1",
+      "title": "EvoStruct: Bridging Evolutionary and Structural Priors for Antibody CDR Design via Protein Language Model Adaptation",
+      "authors": [
+        "Mansoor Ahmed",
+        "Sujin Lee",
+        "Umar Khayaz",
+        "Murray Patterson"
+      ],
+      "abstract": "Equivariant graph neural network (GNN) methods for antibody complementarity-determining region (CDR) design achieve the highest sequence recovery but suffer from severe vocabulary collapse. The current best GNN methods over-predict very few amino acids, such as tyrosine and glycine, while ignoring functionally important residues. We trace this failure to GNN encoders learning amino acid distributions de novo from limited structural data, discarding substitution patterns encoded in evolutionary databases. To resolve this, we propose EvoStruct, which bridges a frozen protein language model (PLM) with 3D structural context from an E(3)-equivariant GNN via a cross-attention adapter. Unlike prior PLM-structure adapters for general protein design, EvoStruct targets the vocabulary collapse problem specific to CDR design through progressive PLM unfreezing and R-Drop consistency regularization. On the CHIMERA-Bench dataset, EvoStruct achieves the highest amino acid recovery and lowest perplexity among several antibody design methods, improving sequence recovery by 16% and reducing perplexity by 43% relative to the best GNN baselines, while recovering 2.3x greater amino acid diversity and the highest binding-pair correlation with ground truth.",
+      "url": "https://arxiv.org/abs/2605.21485v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.21485v1",
+      "published": "2026-05-20T17:59:16Z",
+      "updated": "2026-05-20T17:59:16Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG"
+    },
+    {
+      "id": "2605.21484v1",
+      "title": "One-Step Distillation of Discrete Diffusion Image Generators via Fixed-Point Iteration",
+      "authors": [
+        "Chaoyang Wang",
+        "Yunhai Tong"
+      ],
+      "abstract": "Discrete diffusion models excel at visual synthesis but rely on slow, iterative decoding. Existing single-step distillation methods attempt to bypass this bottleneck, either by training auxiliary score networks that effectively double compute, or by introducing specialized parameterizations and multi-stage pipelines that fragment optimization. In this paper, we introduce Fixed-Point Distillation (FPD), an end-to-end framework that constructs local correction targets by partially corrupting the student's one-step draft and refining it with a single teacher step. To compute the training objective in a semantically meaningful space, we lift discrete tokens into continuous features and apply a multi-bandwidth drift loss that iteratively accumulates these corrections. To backpropagate through the discrete bottleneck, we employ a straight-through estimator that feeds exact hard-sampled tokens to the teacher and decoder during the forward pass, ensuring that training and inference operate on the same codebook manifold, while routing continuous gradients back to the student logits. This fully differentiable pathway additionally accommodates an optional unconditional adversarial objective to enhance perceptual realism. Evaluations on both class- and text-conditional generation validate the effectiveness of our framework. FPD achieves competitive visual fidelity and structural alignment within a single inference step, narrowing the gap to multi-step teachers while outperforming existing discrete distillation baselines.",
+      "url": "https://arxiv.org/abs/2605.21484v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.21484v1",
+      "published": "2026-05-20T17:59:10Z",
+      "updated": "2026-05-20T17:59:10Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2605.21483v1",
+      "title": "Velocityformer: Broken-Symmetry-Matched Equivariant Graph Transformers for Cosmological Velocity Reconstruction",
+      "authors": [
+        "Tilman Tr\u00f6ster",
+        "David Mirkovic",
+        "Veronika Oehl",
+        "Arne Thomsen"
+      ],
+      "abstract": "Precise measurement of the kinematic Sunyaev-Zel'dovich (kSZ) effect - a probe of the large-scale distribution of baryonic matter, a key observable for cosmological inference - requires accurate reconstruction of galaxy velocities from spectroscopic surveys. The signal-to-noise ratio (SNR) of kSZ measurements scales directly with the correlation coefficient $r$ between reconstructed and true velocities. We introduce Velocityformer, an equivariant graph transformer architecture designed to match the specific symmetry of the observational data. While the underlying physics is equivariant with respect to translations and rotations, observational effects break this symmetry due to the preferred line-of-sight direction. Matching the model's inductive bias to the data's broken symmetry consistently improves performance across all model sizes and training volumes, with Velocityformer improving $r$ by 35% over the standard linear theory baseline and outperforming ML baselines at every data volume. By matching the model's inductive bias to the data and conditioning on the physics-based long-wavelength solution, Velocityformer is highly data-efficient, training to high accuracy on as few as 4 low-fidelity simulations, and generalises zero-shot across input geometry, cosmological parameters, and galaxy sample. On high-fidelity simulated galaxy catalogues, this yields a 30% improvement in $r$ over the physical baseline, directly translating to the same SNR gain on observational data.",
+      "url": "https://arxiv.org/abs/2605.21483v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.21483v1",
+      "published": "2026-05-20T17:59:05Z",
+      "updated": "2026-05-20T17:59:05Z",
+      "categories": [
+        "astro-ph.CO",
+        "cs.LG"
+      ],
+      "primary_category": "astro-ph.CO"
+    },
+    {
+      "id": "2605.21482v1",
+      "title": "DeepWeb-Bench: A Deep Research Benchmark Demanding Massive Cross-Source Evidence and Long-Horizon Derivation",
+      "authors": [
+        "Sixiong Xie",
+        "Zhuofan Shi",
+        "Haiyang Shen",
+        "Jiuzheng Wang",
+        "Siqi Zhong",
+        "Mugeng Liu",
+        "Chongyang Pan",
+        "Peilun Jia",
+        "Baoqing Sun",
+        "Xiang Jing",
+        "Yun Ma"
+      ],
+      "abstract": "Deep research, in which an agent searches the open web, collects evidence, and derives an answer through extended reasoning, is a prominent use case for frontier language models. Frontier deep research products score high on existing benchmarks, making it difficult to distinguish their capabilities from current evaluation data alone. We introduce DeepWeb-Bench, a deep research benchmark that is substantially harder than existing benchmarks for the current frontier. Difficulty comes from three properties of the data itself: each task requires massive evidence collection, cross-source reconciliation, and long-horizon multi-step derivation. We represent these three sources of difficulty as four capability families (Retrieval, Derivation, Reasoning, and Calibration) and report results sliced by family. Every reference answer is accompanied by a source-provenance record with four disclosure levels and cross-source checks where available, making scores easier to audit against the underlying evidence. We evaluate DeepWeb-Bench on nine frontier models and report three findings: (1) retrieval is not the bottleneck, as retrieval failures account for only 12-14% of errors while derivation and calibration failures account for over 70%; (2) strong and weak models fail in qualitatively different ways, with strong models' errors dominated by incomplete derivation and weak models' by hallucinated precision; and (3) models exhibit genuine specialization across domains, with cross-model agreement of only rho = 0.61 and per-case disagreement reaching 18.8 percentage points. The public benchmark release includes the data, rubrics, and evaluation code.",
+      "url": "https://arxiv.org/abs/2605.21482v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.21482v1",
+      "published": "2026-05-20T17:59:03Z",
+      "updated": "2026-05-20T17:59:03Z",
+      "categories": [
+        "cs.AI"
       ],
       "primary_category": "cs.AI"
     },
     {
-      "id": "2605.20172v1",
-      "title": "Long-term Power Grid Planning via Answer Set Programming",
+      "id": "2605.21481v1",
+      "title": "AiraXiv: An AI-Driven Open-Access Platform for Human and AI Scientists",
       "authors": [
-        "Antonio Ielo",
-        "Francesco Doria",
-        "Sandra Castellanos-Paez",
-        "Marco Maratea",
-        "Francesco Percassi",
-        "Mauro Vallati"
+        "Junshu Pan",
+        "Panzhong Lu",
+        "Yixuan Weng",
+        "Qiyao Sun",
+        "Fang Guo",
+        "Zijie Yang",
+        "Qiji Zhou",
+        "Yue Zhang"
       ],
-      "abstract": "The Power grid is a critical infrastructure underpinning all aspects of modern society and its services. Maintaining its effectiveness requires continuous adaptations. In particular, addressing sustainability targets, demand patterns, and urbanisation trends requires implementing changes to the network. Actual developments can potentially span over a decade, with supply continuity and service quality that must be preserved throughout by ensuring conformance to several topological and combinatorial invariants. Long-term power grid planning deals with the above process, and although planning languages could be a natural choice, the kind of properties and invariants needed are cumbersome to express in such languages; on the contrary, they can be elegantly and succinctly encoded in Answer Set Programming (ASP). In this paper, we propose the first approach to automate and optimise the long-term power grid planning process using ASP. Experimental evaluations conducted on synthetic and real-world grid data confirm the expressive power of the proposed ASP-based approach and demonstrate its effectiveness.",
-      "url": "https://arxiv.org/abs/2605.20172v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.20172v1",
-      "published": "2026-05-19T17:54:15Z",
-      "updated": "2026-05-19T17:54:15Z",
+      "abstract": "Recent advances in artificial intelligence (AI) have accelerated the growth of both human-authored and AI-generated research outputs, placing increasing strain on traditional academic publishing systems and challenging the scalability of conference- and journal-centered paradigms amid rising submission volumes, reviewer workload, and venue size. To address these challenges, we explore an AI-era publishing paradigm in which both human and AI scientists participate as authors and readers, and papers evolve through continuous, feedback-driven iteration. We propose AiraXiv, an AI-driven open-access platform built on open preprints, AI-augmented analysis and review, and reader feedback. AiraXiv supports human scientists through an interactive UI and AI scientists through Model Context Protocol (MCP)-based interactions. We validate AiraXiv through real-world deployments, including serving as the submission platform for ICAIS 2025, demonstrating its potential as a fast, inclusive, and scalable research infrastructure for the AI era. AiraXiv is publicly available at https://airaxiv.com.",
+      "url": "https://arxiv.org/abs/2605.21481v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.21481v1",
+      "published": "2026-05-20T17:59:03Z",
+      "updated": "2026-05-20T17:59:03Z",
       "categories": [
-        "cs.LO",
-        "cs.AI"
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
       ],
-      "primary_category": "cs.LO"
+      "primary_category": "cs.AI"
     },
     {
-      "id": "2605.20170v1",
-      "title": "KoRe: Compact Knowledge Representations for Large Language Models",
+      "id": "2605.21479v1",
+      "title": "WikiVQABench: A Knowledge-Grounded Visual Question Answering Benchmark from Wikipedia and Wikidata",
       "authors": [
-        "Davide Cavicchini",
-        "Fausto Giunchiglia",
-        "Jacopo Staiano"
+        "Basel Shbita",
+        "Pengyuan Li",
+        "Anna Lisa Gentile"
       ],
-      "abstract": "Modern Large Language Models (LLMs) have shown impressive performances in user-facing tasks such as question answering, as well as consistent improvements in reasoning capabilities. Still, the way these models encode knowledge seems inherently flawed: by design, LLMs encode world-knowledge within their parameters. This way of representing knowledge is inherently opaque, difficult to debug and update, and prone to hallucinations. On the other hand, Knowledge Graphs can provide human-readable and easily editable world knowledge representations, and their application in knowledge-intensive tasks has consistently proven beneficial to downstream performance. Nonetheless, current integration techniques require extensive retraining or finetuning. To overcome this issue, we introduce KoRe, a methodology to encode 1-hop sub-graphs into compact discrete knowledge tokens and inject them into a LLM backbone. We test the proposed approach on three established benchmarks, and report competitive performances coupled with a significant reduction (up to 10x) in token usage. Our results show that compact discrete KG representations can efficiently and effectively be used to ground modern LLMs.",
-      "url": "https://arxiv.org/abs/2605.20170v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.20170v1",
-      "published": "2026-05-19T17:53:29Z",
-      "updated": "2026-05-19T17:53:29Z",
+      "abstract": "Visual Question Answering (VQA) benchmarks have largely emphasized perception-based tasks that can be solved from visual content alone. In contrast, many real-world scenarios require external knowledge that is not directly observable in the image to answer correctly. We introduce WikiVQABench, a human-curated knowledge-grounded VQA benchmark constructed by systematically combining Wikipedia images, their associated article captions, and structured knowledge from Wikidata. Our pipeline uses large language models (LLMs) to generate candidate multiple-choice image-question-answer sets. All generated instances are subsequently reviewed and curated by human annotators to ensure factual correctness, visual-text consistency, and that each question requires external knowledge in addition to visual evidence for correct resolution. WikiVQABench comprises a substantial collection of Wikipedia images with curated multiple-choice questions designed to benchmark knowledge-aware vision-language models (VLMs). Evaluation of fifteen VLMs (256M-90B parameters) reveals a wide performance range (24.7%-75.6% accuracy), demonstrating that the benchmark effectively discriminates model capabilities on knowledge-intensive reasoning. The dataset and benchmarking code are publicly available.",
+      "url": "https://arxiv.org/abs/2605.21479v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.21479v1",
+      "published": "2026-05-20T17:58:24Z",
+      "updated": "2026-05-20T17:58:24Z",
       "categories": [
-        "cs.CL"
+        "cs.CV",
+        "cs.AI"
       ],
-      "primary_category": "cs.CL"
+      "primary_category": "cs.CV"
     }
   ]
 }
