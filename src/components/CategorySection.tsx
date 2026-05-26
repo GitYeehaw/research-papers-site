@@ -62,7 +62,7 @@ export default function CategorySection({
       />
 
       {papers.length > 0 ? (
-        <div className="grid gap-4">
+        <div className="grid grid-cols-1 gap-4">
           {papers.map((paper) => (
             <PaperCard key={paper.id} paper={paper} />
           ))}

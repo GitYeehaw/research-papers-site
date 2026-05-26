@@ -98,7 +98,7 @@ export default function PaperGrid({ papers, emptyMessage = "No papers found." }:
       )}
       <div
         ref={gridRef}
-        className={`grid gap-4 paper-grid-animated ${animating ? "filtering" : ""}`}
+        className={`grid grid-cols-1 gap-4 paper-grid-animated ${animating ? "filtering" : ""}`}
         style={{ minWidth: 0 }}
       >
         {filtered.map((paper, i) => (

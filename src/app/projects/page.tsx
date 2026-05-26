@@ -275,7 +275,7 @@ export default function ProjectsPage() {
       </ScrollFadeIn>
 
       {/* Ongoing */}
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         {ongoingProjects.map((project, i) => (
           <ScrollFadeIn key={project.title} delay={i * 80}>
             <OngoingCard project={project} />
@@ -300,7 +300,7 @@ export default function ProjectsPage() {
             <div className="divider" />
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             {completedProjects.map((project) => (
               <CompletedCard key={project.title} project={project} />
             ))}
