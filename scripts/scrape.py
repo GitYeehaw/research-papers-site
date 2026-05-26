@@ -28,8 +28,15 @@ ARXIV_NS = "{http://arxiv.org/schemas/atom}"
 
 
 def load_config():
-    with open(CONFIG_PATH, "r") as f:
-        return json.load(f)
+    try:
+        with open(CONFIG_PATH, "r") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        print(f"ERROR: Config file not found at {CONFIG_PATH}")
+        sys.exit(1)
+    except json.JSONDecodeError as e:
+        print(f"ERROR: Config file at {CONFIG_PATH} is not valid JSON: {e}")
+        sys.exit(1)
 
 
 def fetch_arxiv_papers(query: str, max_results: int = 10) -> list[dict]:
@@ -53,9 +60,9 @@ def fetch_arxiv_papers(query: str, max_results: int = 10) -> list[dict]:
                 xml_data = response.read().decode("utf-8")
             break
         except urllib.error.HTTPError as e:
-            if e.code == 429 and attempt < 2:
+            if (e.code == 429 or e.code >= 500) and attempt < 2:
                 wait = 10 * (attempt + 1)
-                print(f"  Rate limited (429), retrying in {wait}s...")
+                print(f"  HTTP {e.code}, retrying in {wait}s...")
                 time.sleep(wait)
             else:
                 print(f"  ERROR fetching from arXiv: {e}")
@@ -73,7 +80,11 @@ def fetch_arxiv_papers(query: str, max_results: int = 10) -> list[dict]:
         return []
 
     # Parse XML
-    root = ET.fromstring(xml_data)
+    try:
+        root = ET.fromstring(xml_data)
+    except ET.ParseError as e:
+        print(f"  ERROR parsing XML response: {e}")
+        return []
     papers = []
 
     for entry in root.findall(f"{ATOM_NS}entry"):
@@ -116,8 +127,8 @@ def fetch_arxiv_papers(query: str, max_results: int = 10) -> list[dict]:
         if id_el is not None and id_el.text:
             arxiv_id = id_el.text.strip().split("/abs/")[-1]
 
-        title = title_el.text.strip().replace("\n", " ") if title_el is not None and title_el.text else "Untitled"
-        abstract = summary_el.text.strip().replace("\n", " ") if summary_el is not None and summary_el.text else ""
+        title = " ".join(title_el.text.split()) if title_el is not None and title_el.text else "Untitled"
+        abstract = " ".join(summary_el.text.split()) if summary_el is not None and summary_el.text else ""
         published = published_el.text.strip() if published_el is not None and published_el.text else ""
         updated = updated_el.text.strip() if updated_el is not None and updated_el.text else ""
 
@@ -175,11 +186,22 @@ def scrape_researchers():
         print("  No researchers.json found, skipping.")
         return
 
-    with open(RESEARCHERS_PATH, "r") as f:
-        researchers = json.load(f)
+    try:
+        with open(RESEARCHERS_PATH, "r") as f:
+            researchers = json.load(f)
+    except json.JSONDecodeError as e:
+        print(f"  ERROR: researchers.json is not valid JSON ({e}) — skipping researcher scrape.")
+        return
+
+    if not isinstance(researchers, list):
+        print("  ERROR: researchers.json must be a list — skipping researcher scrape.")
+        return
 
     results = []
     for researcher in researchers:
+        if not isinstance(researcher, dict) or not researcher.get("name") or not researcher.get("arxiv_id"):
+            print(f"    Skipping malformed researcher entry (missing name/arxiv_id): {researcher!r}")
+            continue
         name = researcher["name"]
         arxiv_id = researcher["arxiv_id"]
         print(f"  [{name}]")
@@ -200,11 +222,11 @@ def scrape_researchers():
 
         time.sleep(5)
 
-    total_papers = sum(r["paper_count"] for r in results)
+    researchers_with_papers = sum(1 for r in results if r["paper_count"] > 0)
     output_path = os.path.join(DATA_DIR, "researchers.json")
 
-    if total_papers == 0 and os.path.exists(output_path):
-        print(f"  Skipping write — keeping existing data (all fetches returned 0 papers)")
+    if len(results) > 0 and researchers_with_papers < len(results) / 2 and os.path.exists(output_path):
+        print(f"  Skipping write — keeping existing data (only {researchers_with_papers}/{len(results)} researchers returned papers)")
     else:
         output = {
             "scraped_at": datetime.now(timezone.utc).isoformat(),
@@ -223,13 +245,21 @@ def main():
     print("=" * 60)
 
     config = load_config()
-    categories = config["categories"]
+    categories = config.get("categories")
+    if not isinstance(categories, dict) or not categories:
+        print("ERROR: Config has no 'categories' object — nothing to scrape.")
+        sys.exit(1)
 
     os.makedirs(DATA_DIR, exist_ok=True)
 
     for key, cat_config in categories.items():
-        print(f"\n[{cat_config['name']}]")
-        query = cat_config["arxiv_query"]
+        name = cat_config.get("name", key)
+        query = cat_config.get("arxiv_query")
+        if not query:
+            print(f"\n[{name}] Skipping — no 'arxiv_query' in config.")
+            continue
+        description = cat_config.get("description", "")
+        print(f"\n[{name}]")
         max_results = cat_config.get("max_results", 10)
         labs = cat_config.get("labs", [])
 
@@ -245,8 +275,8 @@ def main():
         else:
             output = {
                 "category": key,
-                "name": cat_config["name"],
-                "description": cat_config["description"],
+                "name": name,
+                "description": description,
                 "scraped_at": datetime.now(timezone.utc).isoformat(),
                 "paper_count": len(papers),
                 "papers": papers,
