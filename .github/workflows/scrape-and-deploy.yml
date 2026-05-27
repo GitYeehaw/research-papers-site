@@ -27,6 +27,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -43,8 +45,17 @@ jobs:
           git add data/
           # Only commit if there are changes
           git diff --staged --quiet || git commit -m "chore: update paper data $(date -u +%Y-%m-%d)"
-          git pull --rebase origin main
-          git push
+          # Retry push up to 3 times in case of concurrent updates
+          pushed=false
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push && pushed=true && break
+            echo "Push attempt $i failed, retrying in 10s..."
+            sleep 10
+          done
+          if [ "$pushed" = false ]; then
+            echo "ERROR: Failed to push after 3 attempts"
+            exit 1
+          fi
 
   build-and-deploy:
     needs: scrape
