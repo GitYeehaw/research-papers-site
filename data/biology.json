@@ -2,159 +2,162 @@
   "category": "biology",
   "name": "Biology Research",
   "description": "Quantitative Biology \u2014 Genomics, Biophysics, Neuroscience",
-  "scraped_at": "2026-06-02T12:12:24.227646+00:00",
+  "scraped_at": "2026-06-05T11:34:11.562108+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2606.02462v1",
-      "title": "APLSuite: An Integrated Suite for CD4+ T Cell Epitope Prediction via Antigen Processing Likelihood",
+      "id": "2606.06434v1",
+      "title": "rsx: A high-performance streaming toolkit for RAD-seq sex determination",
       "authors": [
-        "Jiarui Li",
-        "Marco K. Carbullido",
-        "Jai Bansal",
-        "Samuel J. Landry",
-        "Ramgopal R. Mettu"
+        "Rohit Goswami",
+        "Ruhila Goswami"
       ],
-      "abstract": "Computational epitope prediction is a critical tool for exploring and understanding CD4+ T cell-mediated immune responses, a key aspect of adaptive immunity. While existing computational methods primarily focus on supervised learning approaches, they often overlook the essential role of antigen processing in determining binding specificity. To address this limitation, our group developed Antigen Processing Likelihood (APL), an algorithm that integrates crystallographic B-factor, solvent accessible surface area (SASA), hydrogen exchange protection factors (COREX), and sequence entropy. In this paper we introduce APLSuite, a comprehensive and lightweight software suite designed to streamline APL-based epitope prediction. APLSuite integrates distributed RESTful API services, a Python client for data aggregation and processing, a data science tool for efficient epitope computation, and a user-friendly graphical user interface for non-coding users. It provides a seamless and efficient pipeline for APL calculation and epitope prediction that can be finished in minutes with GPU-acceleration, which has not been implemented by existed tools. This flexible and extensible software suite is deployable on desktop and cloud environments, offering both guided and customizable workflows to meet diverse research needs in immunology research and immunotherapy development.",
-      "url": "https://arxiv.org/abs/2606.02462v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.02462v1",
-      "published": "2026-06-01T16:35:12Z",
-      "updated": "2026-06-01T16:35:12Z",
+      "abstract": "Restriction site-associated DNA sequencing (RAD-seq) is widely used to discover sex-linked markers in non-model organisms, but large studies produce marker tables with millions of RAD tags. RADSex provides the reference workflow for building marker-by-individual depth tables and testing sex-biased marker distributions, but its depth, merge, and related table-building commands grow memory-hungry, and its standard output reports frequentist calls with no posterior evidence and no direct Python or C integration. We present rsx, a Rust implementation of the complete RADSex command set that preserves marker-table semantics and command-line compatibility. rsx combines 2-bit DNA keys, parallel ingestion, memory-mapped marker tables, external sorting, bitset group counts, and streamed Gram-matrix PCA so that memory stays bounded by the number of individuals or by explicit buffers. It adds conjugate Beta-Binomial Bayes factors and posterior probabilities under XY and ZW hypotheses, returning strict, posterior-supported, and Bayes-factor-only evidence grades. A portable, libm-independent minimax approximation of the error function keeps the chi-squared tail reproducible across platforms without changing the underlying Yates test. On four real RAD-seq datasets comprising 41.9 billion bases and 29 million markers, rsx reproduced published RADSex v1.2.0 calls, achieved an 8.38-fold geometric-mean speedup across 56 paired timings (2.77-fold for FASTQ processing), and recovered every Bonferroni-significant positive-control marker. In Danio albolineatus, treated as null in the source publication, the posterior layer surfaced 30 W-linked marker hypotheses; in Notothenia rossii it withheld 400 Bayes-factor-only rows compatible with a low-prevalence null. Python bindings, a C API, and a reproducibility archive provide the workflows used for all reported numbers. rsx is released under GPL-3.0-or-later.",
+      "url": "https://arxiv.org/abs/2606.06434v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.06434v1",
+      "published": "2026-06-04T17:36:36Z",
+      "updated": "2026-06-04T17:36:36Z",
       "categories": [
+        "q-bio.GN",
+        "cs.PF"
+      ],
+      "primary_category": "q-bio.GN"
+    },
+    {
+      "id": "2606.06424v1",
+      "title": "Intrinsic Computational Functionalism: From Observer-Relative Maps to Observer-Independent Structures",
+      "authors": [
+        "Shuqin Ma",
+        "Ryota Kanai"
+      ],
+      "abstract": "Anti-computational arguments show that externally imposed computational interpretations cannot ground consciousness, but they do not establish that all computational organisations are observer-relative. We develop intrinsic computational functionalism: the view that, if consciousness is computationally constituted, it depends on physically realised computational structures the system has in virtue of itself rather than on labels imposed by an external interpreter. Two criteria operationalise this view. (C1) System-intrinsic instantiation: the relevant property must be specifiable without an observer's labelling, and invariant under structure-preserving relabellings of the system's variables. (C2) Causal-dynamical organisation under intervention: the property must be grounded in a state-space structure whose variables mutually constrain one another, and whose organisation is exhibited in counterfactual response under intervention. Together these criteria specify what any candidate computational account must satisfy to remain observer-independent, without selecting which intrinsic structures bear on experience. The argumentative core is a three-tier decomposition of identification work: interpreter-relative label selection (tier i), theoretically constrained partition selection (tier ii), and dynamics-internal grain selection (tier iii). We argue that any computational property capable of avoiding the observer-relativity objection must be identified, if at all, through tier (iii) dynamics-internal grain selection, conditional on empirically disciplined tier (ii) choices. Syntax-is-not-semantics arguments, mapmaker arguments, and the observer-relativity component of biological-naturalist objections succeed against views that locate the consciousness-relevant property at tier (i); once the tiers are distinguished, intrinsic computational functionalism survives.",
+      "url": "https://arxiv.org/abs/2606.06424v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.06424v1",
+      "published": "2026-06-04T17:28:43Z",
+      "updated": "2026-06-04T17:28:43Z",
+      "categories": [
+        "q-bio.NC"
+      ],
+      "primary_category": "q-bio.NC"
+    },
+    {
+      "id": "2606.06345v1",
+      "title": "Boosting Brain-to-Image Decoding with TRIBE v2 Data Augmentation",
+      "authors": [
+        "Yohann Benchetrit",
+        "Marl\u00e8ne Careil",
+        "Simon Dahan",
+        "Hubert Banville",
+        "St\u00e9phane d'Ascoli",
+        "Jean-R\u00e9mi King"
+      ],
+      "abstract": "Brain decoding is limited by the availability of labeled neural data, and remains challenging in low-data regimes. To address this issue, we investigate whether and when brain decoding can be boosted by augmenting small fMRI datasets with synthetic data generated by a pretrained model of fMRI responses to stimuli. We use TRIBE v2, a large encoding model pretrained on more than 1000 hours of fMRI responses to video, audio and language. For each dataset, we evaluate systematic grids that show how the performance of image decoders varies with the amount of synthetic data used for training. Our results, based on two datasets (the 7T fMRI Natural Scenes Dataset and 3T fMRI BOLD5000), show up to 68% improvement in Top-10 image-retrieval accuracy compared to decoders trained only on real data. Importantly, the proportion of augmented data required to reach a given image decoding performance needs to be adjusted depending on the data source. Surprisingly, image decoders trained exclusively on synthetic fMRI can perform above chance in some settings, suggesting that TRIBE v2 can support zero-shot brain-to-image decoding. Together, these results show how large-scale models of the fMRI responses to sight, sound and language may provide a foundation to improve the data efficiency for image decoding.",
+      "url": "https://arxiv.org/abs/2606.06345v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.06345v1",
+      "published": "2026-06-04T16:18:08Z",
+      "updated": "2026-06-04T16:18:08Z",
+      "categories": [
+        "cs.AI",
+        "cs.LG",
+        "q-bio.NC"
+      ],
+      "primary_category": "cs.AI"
+    },
+    {
+      "id": "2606.06290v1",
+      "title": "Early psychosis shows deviations in scaling behaviour within a critical regime",
+      "authors": [
+        "Irem Topal",
+        "Paola Moreno Ancalmo",
+        "Guillermo Montana Valverde",
+        "Philipp Homan",
+        "Wolfram Hinzen"
+      ],
+      "abstract": "Accumulating evidence suggests that large-scale brain activity exhibits scale-invariant dynamics consistent with operation in a near-critical regime. Such dynamics have been associated with long-range correlations, efficient information processing, and the emergence of collective organization. While altered criticality-related measures have been reported in psychiatric disorders, previous findings remain fragmented across observables and modalities, making it unclear whether different scaling measures capture a common alteration of large-scale brain dynamics. Here, we investigated scaling properties in resting-state fMRI data from individuals with early psychosis and healthy controls. We combined a phenomenological renormalization group (PRG) framework with power spectral density (PSD) and detrended fluctuation analysis (DFA) to characterize collective dynamics across scales. In healthy controls, resting-state activity exhibited non-trivial scaling behavior consistent with critical-like organization. Early psychosis participants showed the same overall phenomenology of scale-invariant organization, but with systematic shifts in scaling exponents across multiple observables. These findings indicate that early psychosis is not characterized by a simple loss of critical-like dynamics, but rather by a reorganization of collective dynamics within a preserved scaling regime. More broadly, our results suggest that combining coarse-graining approaches with temporal scaling analyses provides a principled framework for studying large-scale brain dynamics in psychiatric disorders.",
+      "url": "https://arxiv.org/abs/2606.06290v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.06290v1",
+      "published": "2026-06-04T15:28:58Z",
+      "updated": "2026-06-04T15:28:58Z",
+      "categories": [
+        "q-bio.NC",
+        "cond-mat.stat-mech"
+      ],
+      "primary_category": "q-bio.NC"
+    },
+    {
+      "id": "2606.06117v1",
+      "title": "$p$-adic Bi-Filtrations for Topological Machine Learning on Genomic Sequences",
+      "authors": [
+        "Tirtharaj Dash",
+        "Gunja Sachdeva"
+      ],
+      "abstract": "We introduce pVR, a topological machine learning framework for alignment-free genomic sequence classification that combines $p$-adic numbers with topological data analysis. Each DNA sequence is encoded along two complementary axes: a $p$-adic distance on $k$-mer prefixes, which captures hierarchical positional structure, and a compositional $L_1$ distance on $k$-mer frequencies, which captures local sequence content. The two distances jointly parameterise a bi-filtered Vietoris--Rips complex, and per-sequence topological summaries from this bi-filtration serve as features for standard machine learning classifiers. We establish theoretical guarantees for the construction: stability under metric perturbations and invariance to the choice of prime, alongside a result that explains why a single $p$-adic axis is topologically uninformative and why the bi-filtration recovers nontrivial homology. On twelve genomic benchmarks ($28$ to $500$ sequences, $3$ to $7$ classes), pVR outperforms four established alignment-free baselines on three of six low-sample datasets, with gains of up to $21$ percentage points; it underperforms only on a SARS-CoV-2 variant benchmark whose point-mutation divergence violates the hierarchical assumption, and all methods saturate in the large-sample regime. pVR also outperforms zero-shot frozen embeddings from the 500M-parameter Nucleotide Transformer v2 by $6.7$ to $11.4$ percentage points on three low-sample benchmarks. The pVR codebase is publicly available at https://github.com/MAHI-Group/pVR.",
+      "url": "https://arxiv.org/abs/2606.06117v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.06117v1",
+      "published": "2026-06-04T13:05:36Z",
+      "updated": "2026-06-04T13:05:36Z",
+      "categories": [
+        "q-bio.QM",
+        "cs.LG",
+        "math.AT",
+        "q-bio.GN"
+      ],
+      "primary_category": "q-bio.QM"
+    },
+    {
+      "id": "2606.05870v1",
+      "title": "Cross-scale spatially-aware generative modeling of transcriptomic programs underlying neurodegenerative brain organization",
+      "authors": [
+        "Krishnakumar Vaithianathan"
+      ],
+      "abstract": "Neurodegenerative disorders such as Alzheimer's disease exhibit highly organized patterns of regional brain vulnerability, yet the biological mechanisms underlying this spatial selectivity remain incompletely understood. Existing imaging-transcriptomic studies have largely relied on correlation-based analyses between gene expression and neuroimaging phenotypes, limiting their ability to model how molecular organization gives rise to neurodegeneration. Here, we introduce a cross-scale spatially-aware generative framework for modeling transcriptomic programs underlying cortical neurodegeneration. Regional transcriptomic profiles were derived from the Allen Human Brain Atlas using 910 landmark genes across 68 cortical regions. Neurodegenerative vulnerability maps were constructed from ADNI FreeSurfer cortical thickness measurements by computing regional cortical thinning differences between cognitively normal controls (NC = 926) and Alzheimer's disease subjects (AD = 426). A variational generative architecture was used to learn latent biological programs linking regional gene-expression organization to cortical degeneration while incorporating graph-based spatial smoothness regularization to preserve cortical organization. The proposed framework achieved strong prediction of regional neurodegenerative vulnerability, yielding an explained variance of 0.8604 and a significant spatial correlation between predicted and observed cortical degeneration profiles (r = 0.9439, p < 0.001). The learned latent representations revealed structured transcriptomic organization associated with distributed disease susceptibility. These findings demonstrate that biologically constrained generative modeling can bridge microscale molecular organization with macroscale neurodegeneration, providing a foundation for spatially-aware generative neurobiology and computational neuroscience.",
+      "url": "https://arxiv.org/abs/2606.05870v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.05870v1",
+      "published": "2026-06-04T08:45:45Z",
+      "updated": "2026-06-04T08:45:45Z",
+      "categories": [
+        "q-bio.NC",
+        "cs.LG",
+        "q-bio.QM"
+      ],
+      "primary_category": "q-bio.NC"
+    },
+    {
+      "id": "2606.05541v1",
+      "title": "Methods for Inferring Interaction Potentials from Cross-Linking Mass Spectrometry Data",
+      "authors": [
+        "B\u00f6rries von Seggern",
+        "Mohsen Sadeghi"
+      ],
+      "abstract": "Cross-linking mass spectrometry (XL-MS) has emerged as a powerful quantitative technique for probing intra-protein structural information as well as protein-protein interactions at an unprecedented scale. XL-MS data yield information on the pairwise spatial proximity of proteins through inter-molecular linkers. However, systematic methods for adapting such data for coarse-grained interacting particle models remain limited. Predominant focus is put on directly fitting radial distribution functions (RDFs), while numerous observables, e.g. coordination numbers, which are functionals of the RDF, cannot be uniquely inverted. In this work, we develop a framework for parameterizing interaction potentials from such observables in potentially phase-separated mixtures, as encountered in XL-MS results. We establish a connection between this problem and the inverse Henderson problem and adapt algorithms such as Iterative Boltzmann Inversion and Iterative Monte Carlo to its numerical solution. We derive exact and low-density limit gradient approximations and propose two new algorithms based on an adaptation of the predictor-corrector~framework. In total, we evaluate several optimization algorithms on biologically realistic ten-component test systems. We demonstrate that for homogeneous fluids, all methods achieve exceptional efficiency and accuracy. Critically, we further demonstrate successful parametrization in a challenging three-phase system. Here, three algorithms, namely Adam and gradient descent employing the low-density derivative as well as Newton's method with the exact gradient, reliably recover the correct parameters. These results establish a clear pathway from XL-MS experiments to coarse-grained protein models for systems where phase separation governs biological function, potentially enabling new investigations of biomolecular condensates and protein aggregation.",
+      "url": "https://arxiv.org/abs/2606.05541v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.05541v1",
+      "published": "2026-06-04T00:52:12Z",
+      "updated": "2026-06-04T00:52:12Z",
+      "categories": [
+        "physics.chem-ph",
+        "cond-mat.soft",
         "q-bio.BM"
       ],
-      "primary_category": "q-bio.BM"
+      "primary_category": "physics.chem-ph"
     },
     {
-      "id": "2606.02392v1",
-      "title": "Topology as Logic: Structural Role Geometry Across Formal, Software, Biological, and Prebiotic Systems",
+      "id": "2606.05474v1",
+      "title": "AlloGen: Conformation-Selective Binder Generation with Differential State Scoring",
       "authors": [
-        "Vladi Ivanov"
+        "Hanqun Cao",
+        "Zachary Quinn",
+        "Aastha Pal",
+        "Sumi Kimura",
+        "Jingjie Zhang",
+        "Pheng Ann Heng",
+        "Pranam Chatterjee"
       ],
-      "abstract": "We ask whether dependency topology correlates with functional load-bearing organization as recoverable geometry -- not as a metaphor, but as a measurable structural property detectable by multilayer network analysis. Across seven independent substrates, we show that hub persistence and rank divergence under the Functional Proximity Law recover operational organization that domain experts describe as logic: axiomatic load-bearing structure in formal mathematics, control and contract structure in legacy software, conserved hub grammar across approx. 600 million years of neural evolution, catalytic role organization in a published prebiotic autocatalytic network, carry-path dominance in a 4-bit digital circuit, betweenness persistence in the ISCAS85 c432 standard benchmark (n=196), and a directional formal-systems replication in the Coq Corelib (n=17). A key methodological finding: degree-based hub persistence is weak between physical wiring and simulation state-correlation layers (r=0.21 in c432), while betweenness-based persistence is stronger (r=0.77 in the 4-bit ALU post-hoc; r=0.34 in c432). The ISCAS85 pre-registered primary hypothesis was CONFIRMED (degree r=0.426, p=0.002, Spearman r=0.551). The formal-systems claim is supported by two proof-assistant corpora: Lean 4 mathlib4 (CONFIRMED, r=0.777, p=0.004) and Coq Corelib (PARTIAL, direction confirmed, r=0.288, p=0.287, n=17, underpowered). All seven experiments were pre-registered before analysis.",
-      "url": "https://arxiv.org/abs/2606.02392v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.02392v1",
-      "published": "2026-06-01T15:42:49Z",
-      "updated": "2026-06-01T15:42:49Z",
-      "categories": [
-        "cs.SI",
-        "cs.LO",
-        "q-bio.NC"
-      ],
-      "primary_category": "cs.SI"
-    },
-    {
-      "id": "2606.02385v1",
-      "title": "How Optimality Structures Sparse Dictionaries: A Theory for Understanding SAE Representations",
-      "authors": [
-        "William Dorrell"
-      ],
-      "abstract": "Sparse Autoencoders (SAEs) have found success parsing neural representations into interpretable concepts, providing a basis for understanding and control. However, what exactly SAEs extract, and, correspondingly, the scientific conclusions we can draw from them, are not obvious. Empirically, the proof is in the pudding: SAEs learn interpretable features. Theoretically, we lack a clear account of what properties a 'concept' must satisfy for an SAE to extract it. There has been extensive identifiability work studying the conditions under which sparse coding recovers ground-truth features; however, these approaches tends to focus on simple data-generating models (e.g. sparse independent features) which poorly approximate the internet-swallowing language-model representations on which SAEs are trained. Here, avoiding data-generating models, we ask simply what properties any dictionary learning optimum must satisfy. Concretely, we extend local optimality analyses (Gribonval & Schnass, 2010) to the nonnegative joint-optimisation problem that vanilla SAEs approximate, and derive constraints relating optimal SAE features to their distributions. We use these constraints to explain a range of observed SAE behaviours - hierarchical splitting & absorption, the structure of residuals, and dense antipodal features - each reflecting how L1+nonnegativity interact with data to structure optimal dictionaries. Finally, we construct a novel large-dictionary convex problem and explore the wide atom-per-datapoint limit. In sum, we hope to tease model assumptions from unexpected observations, letting us learn more from SAEs' successes and provide principles for designing their successors.",
-      "url": "https://arxiv.org/abs/2606.02385v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.02385v1",
-      "published": "2026-06-01T15:34:34Z",
-      "updated": "2026-06-01T15:34:34Z",
-      "categories": [
-        "q-bio.NC",
-        "cs.LG"
-      ],
-      "primary_category": "q-bio.NC"
-    },
-    {
-      "id": "2606.02305v1",
-      "title": "Mapping Whisper Representations to Human ECoG Responses with Interpretable Time-Resolved Neural Encoding",
-      "authors": [
-        "Matteo Ciferri",
-        "Tommaso Boccato",
-        "Michal Olak",
-        "Matteo Ferrante",
-        "Nicola Toschi"
-      ],
-      "abstract": "Understanding how speech foundation models relate to human cortical activity is a key challenge for computational neuroscience. Here, we investigate how internal representations from Whisper predict intracranial ECoG responses during naturalistic speech perception. We introduce a time-resolved neural encoder that combines speech embeddings with a recurrent temporal model and soft attention, allowing us to examine layer-wise brain alignment. Intermediate Whisper layers provide the strongest correspondence with neural activity, supporting a hierarchical match between model representations and cortical speech processing. Comparisons with baselines show that high-resolution ECoG responses benefit from temporally structured modelling beyond linear mappings from the same speech representations. In addition, attention maps reveal temporally local alignment between speech embeddings and neural responses, while a phonemic interpretability analysis identifies anatomically coherent phoneme-category organization among encoding-informative electrodes. Together, these results suggest that speech foundation models offer a useful framework for studying time-resolved cortical speech representations.",
-      "url": "https://arxiv.org/abs/2606.02305v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.02305v1",
-      "published": "2026-06-01T14:25:36Z",
-      "updated": "2026-06-01T14:25:36Z",
-      "categories": [
-        "q-bio.NC",
-        "cs.HC"
-      ],
-      "primary_category": "q-bio.NC"
-    },
-    {
-      "id": "2606.02121v1",
-      "title": "What biology can, and cannot, tell us about conscious AI",
-      "authors": [
-        "Ulysse Klatzmann",
-        "Adrien Doerig"
-      ],
-      "abstract": "Progress in AI is turning machine consciousness from a philosophical curiosity into a societal issue, and has led to criticism of the widespread computational functionalism framework. Biological Naturalism (BN) claims that biology, not computation, is crucial for consciousness. We discuss which forms of BN are empirically testable. For Type-A-BN, biology intrinsically matters for consciousness, without affording unique information processing capabilities. We argue, similarly to the unfolding argument, that this dissociates consciousness from behaviour, making Type-A-BN untestable. For Type-B-BN, biology matters because it affords unique information processing capabilities. Type-B-BN is testable, and not incompatible with computational functionalism. Both face the same task: relating consciousness to information processing. Biology can act as a guide on this quest, but not as a solution.",
-      "url": "https://arxiv.org/abs/2606.02121v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.02121v1",
-      "published": "2026-06-01T11:51:42Z",
-      "updated": "2026-06-01T11:51:42Z",
-      "categories": [
-        "q-bio.NC"
-      ],
-      "primary_category": "q-bio.NC"
-    },
-    {
-      "id": "2606.02099v1",
-      "title": "Unveiling the shared grey matter signature between Alzheimer's and Parkinson's Disease",
-      "authors": [
-        "Vishaak Gangasandra",
-        "Finn Blain",
-        "Elise Delzant",
-        "Michelle Lupton",
-        "Miguel Renter\u00eda",
-        "Sarah Medland",
-        "Baptiste Couvy-duchesne"
-      ],
-      "abstract": "INTRODUCTION. This study presents the first quantification of vertex-level grey-matter associations between Alzheimer's disease (AD) and Parkinson's disease (PD) using highresolution brain maps aggregated from large MRI datasets. The aim is to identify shared neuroanatomical signatures between the two diseases. METHODS. Leveraging a novel statistical framework (SumR2 regression), adapted from genetic correlation analysis, we estimated the shared neuroanatomical signature (grey-matter correlation: rGM) between AD and PD. RESULTS. A significant positive brain-wide grey-matter correlation (rGM=0.24, 95%CI 0.20-0.28) was observed between AD and PD. This correlation was further observed across disease stages and replicated using UK Biobank data. We located 9 vertex-wise clusters (106 vertices) that contribute to the significant rGM, highlighting reduced thickness in the bilateral putamen and right accumbens as associated with both AD and PD. DISCUSSION. Our findings suggest that shared neuroanatomical features emerge early in neurodegeneration and have implications for early screening, disease monitoring, and targeted interventions. from the Parkinson's Progression Markers Initiative (PPMI) database (www.ppmi-info.org/access-",
-      "url": "https://arxiv.org/abs/2606.02099v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.02099v1",
-      "published": "2026-06-01T11:30:29Z",
-      "updated": "2026-06-01T11:30:29Z",
-      "categories": [
-        "q-bio.NC"
-      ],
-      "primary_category": "q-bio.NC"
-    },
-    {
-      "id": "2606.01841v1",
-      "title": "The Neuromorphic Supremacy",
-      "authors": [
-        "Yuliya Tsybina",
-        "Ivan Y. Tyukin",
-        "Alexander N. Gorban",
-        "Victor Kazantsev",
-        "Dianhui Wang",
-        "Susanna Gordleeva"
-      ],
-      "abstract": "Live neural systems demonstrate remarkable capabilities to learn new behavior and patterns from mere few examples and are known to operate robustly under severe sensory noise. These capabilities, however, remain largely out of reach for modern artificial neural networks, including deep learning models. We show that this gap can be bridged by embedding novel genuine neuromorphic circuits into conventional artificial neural network architectures. These circuits comprise astrocytic modulation and spiking dynamics inherent to biological neural structures. Tested across standard benchmarks representing tasks of varying complexity, the hybrid models achieve high accuracy from few training examples per class and sustain high performance under occlusion and impulse noise that cause performance collapse in standard models without neuromorphic adaptation. We term this phenomenon neuromorphic supremacy - a regime in which architectures grounded in neurobiology decisively outperform classical deep learning, pointing toward a principled foundation for perception in embodied AI systems operating in noisy, data-scarce environments.",
-      "url": "https://arxiv.org/abs/2606.01841v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.01841v1",
-      "published": "2026-06-01T07:52:40Z",
-      "updated": "2026-06-01T07:52:40Z",
-      "categories": [
-        "q-bio.NC"
-      ],
-      "primary_category": "q-bio.NC"
-    },
-    {
-      "id": "2606.01816v1",
-      "title": "Site4Drug: Predicting Drug-Binding Target Sites with an AI Agent",
-      "authors": [
-        "Taehan Kim",
-        "Sarrah Rose Mikhail Leung",
-        "Bharat Mekala",
-        "Jeongbin Park"
-      ],
-      "abstract": "Selecting where to intervene on a protein (i.e., choosing a targetable site) is often a more ambiguous and failure-prone bottleneck than selecting what binds, especially for membrane proteins where accessibility, topology, and post-translational modifications (PTMs) constrain actionable regions. We present Site4Drug, a modality-aware site-finding agent that outputs a ranked list of targetable regions with explicit constraints, evidence summaries, risk flags, and a traceable decision log. Rather than requiring users to specify the drug modality upfront, Site4Drug can recommend a binding modality (e.g., antibody/peptide-like vs small-molecule) from the same evidence used for site discovery, including topology, hydropathy, PTM propensity, disulfides, domain context, and sequence. Importantly, this evidence is applied consistently across modalities, including small-molecule pocket discovery, to avoid selecting chemically plausible but biologically occluded sites.",
-      "url": "https://arxiv.org/abs/2606.01816v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.01816v1",
-      "published": "2026-06-01T07:32:02Z",
-      "updated": "2026-06-01T07:32:02Z",
+      "abstract": "Protein binder design has largely optimized for affinity alone, leaving conformational selectivity unaddressed: for allosteric targets such as kinases, nuclear receptors, and GPCRs, a binder that engages both active and inactive states provides no functional specificity regardless of how tightly it binds. We introduce AlloGen, a modular framework that decouples backbone generation from a learned state-selectivity scorer $Q_\u03b8$, an SE(3)-invariant interface graph transformer trained via a two-phase curriculum that first learns interface geometry before imposing conformational discrimination. Because $Q_\u03b8$ is fully differentiable and generator-agnostic, it integrates with any backbone generator as a passive reranker or an active gradient-based guide without retraining. Across a diverse benchmark of proteins spanning multiple families and conformational mechanisms, AlloGen consistently identifies binders that preferentially recognize desired structural states while rejecting alternative conformations. Experimental validation on calmodulin further demonstrates that these computational selectivity signals translate to physical molecules, yielding de novo peptides that bind the desired holo conformation while exhibiting no detectable binding to the apo state. Together, these results establish conformational selectivity as a learnable property and provide a general framework for state-selective protein binder design.",
+      "url": "https://arxiv.org/abs/2606.05474v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.05474v1",
+      "published": "2026-06-03T21:53:17Z",
+      "updated": "2026-06-03T21:53:17Z",
       "categories": [
         "q-bio.BM",
         "cs.LG"
@@ -162,42 +165,40 @@
       "primary_category": "q-bio.BM"
     },
     {
-      "id": "2606.01661v1",
-      "title": "Feature leakage and the identifiability of direct-dependency entropy models of neural activity",
+      "id": "2606.05351v1",
+      "title": "Tricriticality and chaos in a generalized Allee-logistic map",
       "authors": [
-        "Houman Safaai",
-        "Bernardo L. Sabatini"
+        "Marcelo A. Pires",
+        "Jos\u00e9 S. Andrade",
+        "Hans J. Herrmann"
       ],
-      "abstract": "Biological neurons receive thousands of synaptic inputs on branching, electrically excitable dendrites, yet population activity is often modeled with direct input-output rules in which each input contributes independently to a scalar drive. We study what successful prediction by such models does, and does not, reveal about neural computation. For conditional maximum-entropy models that match output rates and pairwise output-input coactivities, the entropy explained by a direct model is a prediction measure under the sampled input distribution, not a mechanism-identification test. A restricted MaxEnt fit is an information projection: omitted interaction, temporal, or hidden-state terms can be absorbed into fitted first-order parameters whenever they are correlated with the included sufficient statistics. For sparse correlated binary inputs, this absorption has an explicit coskewness form. We introduce diagnostics that separate in-distribution prediction from recovery of the response rule: state reweighting that holds P(y|x) fixed while changing P(x), conditional log-odds contrasts for local additivity, and temporal leakage controls. In ground-truth simulations, purely higher-order responses can pass first-order entropy and raw coactivity tests under leakage-prone sampling, but are correctly classified after reweighting. Applied to selected, leakage-enriched local tables from CA1 hippocampal recordings, approximately half of tables that appear first-order under empirical weights become distribution-sensitive under balanced reweighting, far above a matched additive-surrogate null. Thus direct entropy-explained fractions and raw coactivity predictions should be interpreted as predictions under the observed state distribution, not as evidence that mechanisms outside the direct model are absent or small.",
-      "url": "https://arxiv.org/abs/2606.01661v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.01661v1",
-      "published": "2026-06-01T04:15:49Z",
-      "updated": "2026-06-01T04:15:49Z",
+      "abstract": "We present a novel nonlinear dynamical model, the generalized Allee-logistic (GAL) map given by $x_{t+1} = r x_t (1 - x_t) G(x_t)$ where $G(x_t) = m (x_t - h) + 1 - m$ incorporates the Allee effect with magnitude $m$ and threshold $h$. The case $m = 0$ yields the logistic map with a continuous transition to extinction. Conversely, $m = 1$ recovers a previously studied model that undergoes only a discontinuous extinction-to-active transition. Between these extremes, the GAL map exhibits nontrivial phenomena, including tricriticality with a closed-form expression for the tricritical point and a universal crossover function. Under a small external input, we verify Widom-like relations. We also note that the Allee effect disfavors the onset of chaos. Our work establishes additional bridges between analytically tractable chaotic maps, nonequilibrium tricriticality, and Allee effects.",
+      "url": "https://arxiv.org/abs/2606.05351v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.05351v1",
+      "published": "2026-06-03T18:52:56Z",
+      "updated": "2026-06-03T18:52:56Z",
       "categories": [
-        "q-bio.NC",
-        "q-bio.QM",
-        "stat.ME"
+        "nlin.CD",
+        "physics.comp-ph",
+        "physics.soc-ph",
+        "q-bio.PE"
       ],
-      "primary_category": "q-bio.NC"
+      "primary_category": "nlin.CD"
     },
     {
-      "id": "2606.01628v1",
-      "title": "Demystifying Multimodal Biomolecular Co-design With Intrinsic Geodesic Coupling",
+      "id": "2606.04566v1",
+      "title": "AF_Cache: Efficient Pipeline for Running AlphaFold for High-Throughput Protein-Protein Interaction Prediction",
       "authors": [
-        "Keyue Qiu",
-        "Xintong Wang",
-        "Zhilong Zhang",
-        "Hao Zhou",
-        "Wei-Ying Ma"
+        "Sarah Narrowe",
+        "Arne Elofsson Claudio Mirabello"
       ],
-      "abstract": "Biomolecules such as proteins and small-molecule ligands play a central role in biological systems, arising from the tight interplay between sequence and three-dimensional structure. Recent generative models for biomolecular co-design aim to capture this interplay by jointly modeling coupled modalities. However, existing approaches largely adopt a parallel execution of marginal generative processes, implicitly enforcing fixed synchronous coupling. We argue that a critical but overlooked degree of freedom lies in how these marginal processes are temporally coupled during training and generation, where inappropriate coupling can introduce high-variance supervision and inconsistent intermediate states, affecting modality consistency. To address this, we introduce GeoCoupling, a systematic framework that optimizes for temporal couplings between heterogeneous modalities. Empirical results across structure-based drug design and unconditional protein design demonstrate the learned couplings consistently outperform synchronous and randomly coupled baselines, yielding biomolecules with improved physical validity and diversity.",
-      "url": "https://arxiv.org/abs/2606.01628v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.01628v1",
-      "published": "2026-06-01T03:25:17Z",
-      "updated": "2026-06-01T03:25:17Z",
+      "abstract": "Motivation: Accurate prediction of protein-protein interactions is essential for understanding biological processes, and recent advances such as AlphaFold2 and AlphaFold3 have enabled structure-based interaction prediction at unprecedented accuracy. However, the high computational cost of these methods, driven primarily by CPU-based repeated multiple sequence alignment (MSA) generation and, for AlphaFold2, repeated model recompilations, limits their applicability in large-scale, high-throughput settings. This creates a need for efficient pipelines that retain predictive performance while substantially reducing runtime. Results: We present AF_Cache, a high-throughput Nextflow pipeline for accelerating protein-protein interaction prediction using AlphaFold2 and AlphaFold3. AF_Cache combines GPU-accelerated MSA generation with MMseqs2, feature caching to eliminate redundant alignment computations, and sequence length bucketing to minimise repeated JAX compilations. Benchmarking on a dataset of 5,050 human mitochondrial protein pairs demonstrates a $\\sim$2-fold reduction in inference time for AlphaFold2 and up to a 13-fold speedup of the MSA generation. AF\\_Cache enables efficient large-scale interaction screening and provides a practical framework for deploying AlphaFold-based methods in high-throughput applications. Availability and implementation: The code and Nextflow pipeline are available on GitHub here: https://github.com/clami66/AF_cache. The code for reproducing the results of the paper, the MSAs, and the predicted models can be found at Zenodo: https://zenodo.org/records/20478892",
+      "url": "https://arxiv.org/abs/2606.04566v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.04566v1",
+      "published": "2026-06-03T07:54:47Z",
+      "updated": "2026-06-03T07:54:47Z",
       "categories": [
-        "q-bio.BM",
-        "cs.AI"
+        "q-bio.BM"
       ],
       "primary_category": "q-bio.BM"
     }

@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-06-02T12:17:32.251221+00:00",
+  "scraped_at": "2026-06-05T11:39:16.599425+00:00",
   "researcher_count": 54,
   "researchers": [
     {
@@ -10,6 +10,53 @@
       "website": "https://ames.caltech.edu/",
       "paper_count": 5,
       "papers": [
+        {
+          "id": "2606.06493v1",
+          "title": "HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers",
+          "authors": [
+            "Lizhi Yang",
+            "Junheng Li",
+            "Nehar Poddar",
+            "Yiling Hou",
+            "Gio Huh",
+            "Robert Griffin",
+            "Georgia Gkioxari",
+            "Aaron Ames"
+          ],
+          "abstract": "For a humanoid robot to be deployed in the real world, the choice of command space (i.e., the interface between task planning and whole-body control) is crucial. Existing whole-body controllers typically demand dense kinematic or spatial references that planners struggle to synthesize from task semantics. We instead propose a compact, explicit interface that is intuitive, general, modular, and expressive enough for diverse manipulation skills. To this end, we introduce HANDOFF, a single humanoid whole-body controller that follows this interface and is distilled via multi-teacher KL distillation under a context-conditioned gating scheme into a mixture-of-experts student from three complementary specialists: whole-body motion tracking with safety-filtered data, locomotion, and fall-recovery. On the Unitree G1, HANDOFF matches state-of-the-art velocity tracking and offers one of the largest robust manipulation workspaces. We further demonstrate hardware feasibility through multiple natural-language-driven task roll-outs, powered by a VLM-driven agentic planner with no task-specific data or controller fine-tuning.",
+          "url": "https://arxiv.org/abs/2606.06493v1",
+          "pdf_url": "https://arxiv.org/pdf/2606.06493v1",
+          "published": "2026-06-04T17:59:50Z",
+          "updated": "2026-06-04T17:59:50Z",
+          "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.LG"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2606.05687v1",
+          "title": "Accelerating and Scaling MPC-Guided Reinforcement Learning for Humanoid Locomotion and Manipulation",
+          "authors": [
+            "Junheng Li",
+            "Liang Wu",
+            "Sergio A. Esteban",
+            "Lizhi Yang",
+            "J\u00e1n Drgo\u0148a",
+            "Aaron D. Ames"
+          ],
+          "abstract": "In humanoid motion control, model predictive control (MPC) offers physically grounded prediction and constraint handling, while reinforcement learning (RL) enables robust whole-body skills through large-scale simulation. However, using MPC inside RL often requires time-consuming problem construction or excessive training overhead, making such frameworks difficult to justify in practice. This work studies efficient training-time MPC guidance for humanoid locomotion and manipulation, termed MPC-RL. We introduce a centroidal-dynamics MPC reward formulation that leverages guidance from MPC trajectories in training time. To make this practical in massively parallel RL, we develop $\u03c0^n$MPC, a parallel-in-horizon and construction-free batched GPU MPC solver that operates directly on time-varying dynamics to avoid high memory usage and pre-compilation. Through a variety of comparative studies and hardware validations, we have found that MPC-RL achieves superior performance in locomotion and manipulation skills. The code base is available at https://github.com/junhengl/mpc-rl.",
+          "url": "https://arxiv.org/abs/2606.05687v1",
+          "pdf_url": "https://arxiv.org/pdf/2606.05687v1",
+          "published": "2026-06-04T04:12:47Z",
+          "updated": "2026-06-04T04:12:47Z",
+          "categories": [
+            "cs.RO",
+            "eess.SY"
+          ],
+          "primary_category": "cs.RO"
+        },
         {
           "id": "2605.15517v1",
           "title": "Terrain Consistent Reference-Guided RL for Humanoid Navigation Autonomy",
@@ -65,48 +112,6 @@
           "categories": [
             "eess.SY",
             "cs.RO"
-          ],
-          "primary_category": "eess.SY"
-        },
-        {
-          "id": "2604.21189v1",
-          "title": "Full-Body Dynamic Safety for Robot Manipulators: 3D Poisson Safety Functions for CBF-Based Safety Filters",
-          "authors": [
-            "Meg Wilkinson",
-            "Gilbert Bahati",
-            "Ryan M. Bena",
-            "Emily Fourney",
-            "Joel W. Burdick",
-            "Aaron D. Ames"
-          ],
-          "abstract": "Collision avoidance for robotic manipulators requires enforcing full-body safety constraints in high-dimensional configuration spaces. Control Barrier Function (CBF) based safety filters have proven effective in enabling safe behaviors, but enforcing the high number of constraints needed for safe manipulation leads to theoretic and computational challenges. This work presents a framework for full-body collision avoidance for manipulators in dynamic environments by leveraging 3D Poisson Safety Functions (PSFs). In particular, given environmental occupancy data, we sample the manipulator surface at a prescribed resolution and shrink free space via a Pontryagin difference according to this resolution. On this buffered domain, we synthesize a globally smooth CBF by solving Poisson's equation, yielding a single safety function for the entire environment. This safety function, evaluated at each sampled point, yields task-space CBF constraints enforced by a real-time safety filter via a multi-constraint quadratic program. We prove that keeping the sample points safe in the buffered region guarantees collision avoidance for the entire continuous robot surface. The framework is validated on a 7-degree-of-freedom manipulator in dynamic environments.",
-          "url": "https://arxiv.org/abs/2604.21189v1",
-          "pdf_url": "https://arxiv.org/pdf/2604.21189v1",
-          "published": "2026-04-23T01:13:02Z",
-          "updated": "2026-04-23T01:13:02Z",
-          "categories": [
-            "cs.RO"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2604.19893v1",
-          "title": "Output Feedback Backup Control Barrier Functions: Safety Guarantees Under Input Bounds and State Estimation Error",
-          "authors": [
-            "David E. J. van Wijk",
-            "Tamas G. Molnar",
-            "Samuel Coogan",
-            "Manoranjan Majji",
-            "Aaron D. Ames",
-            "Joel W. Burdick"
-          ],
-          "abstract": "Guaranteeing the safety of controllers is vital for real-world applications, but is markedly difficult when the states are not perfectly known and when the control inputs are bounded. Backup control barrier functions (bCBFs) use predictions of the flow under a prescribed controller to achieve safety in the presence of bounded inputs and perfect state information. However, when only an estimate of the true state is known, this flow may not be precisely computed, as the initial condition is unknown. Furthermore, the true flow evolves using feedback from the estimated state, thus introducing coupling between known and unknown flows. To address these challenges, we propose a technique that leverages an uncertainty envelope centered around the estimated flow and show that ensuring the safety of this envelope guarantees that the true state satisfies the safety constraints. Additionally, we show that in the presence of state uncertainty, using the resulting Output Feedback Backup Control Barrier Functions (O-bCBFs), there always exists a feasible control input that can guarantee the safety of the true state, even in the presence of input constraints.",
-          "url": "https://arxiv.org/abs/2604.19893v1",
-          "pdf_url": "https://arxiv.org/pdf/2604.19893v1",
-          "published": "2026-04-21T18:14:13Z",
-          "updated": "2026-04-21T18:14:13Z",
-          "categories": [
-            "eess.SY"
           ],
           "primary_category": "eess.SY"
         }
@@ -530,7 +535,7 @@
           "primary_category": "cs.LG"
         },
         {
-          "id": "2602.07840v2",
+          "id": "2602.07840v3",
           "title": "SAGE: Scalable AI Governance & Evaluation",
           "authors": [
             "Benjamin Le",
@@ -555,10 +560,10 @@
             "Wenjing Zhang"
           ],
           "abstract": "Evaluating relevance in large-scale search systems is fundamentally constrained by the governance gap between nuanced, resource-constrained human oversight and the high-throughput requirements of production systems. While traditional approaches rely on engagement proxies or sparse manual review, these methods often fail to capture the full scope of high-impact relevance failures. We present \\textbf{SAGE} (Scalable AI Governance \\& Evaluation), a framework that operationalizes high-quality human product judgment as a scalable evaluation signal. At the core of SAGE is a bidirectional calibration loop where natural-language \\emph{Policy}, curated \\emph{Precedent}, and an \\emph{LLM Surrogate Judge} co-evolve. SAGE systematically resolves semantic ambiguities and misalignments, transforming subjective relevance judgment into an executable, multi-dimensional rubric with near human-level agreement. To bridge the gap between frontier model reasoning and industrial-scale inference, we apply teacher-student distillation to transfer high-fidelity judgments into compact student surrogates at \\textbf{92$\\times$} lower cost. Deployed within LinkedIn Search ecosystems, SAGE guided model iteration through simulation-driven development, distilling policy-aligned models for online serving and enabling rapid offline evaluation. In production, it powered policy oversight that measured ramped model variants and detected regressions invisible to engagement metrics. Collectively, these drove a \\textbf{0.25\\%} lift in LinkedIn daily active users.",
-          "url": "https://arxiv.org/abs/2602.07840v2",
-          "pdf_url": "https://arxiv.org/pdf/2602.07840v2",
+          "url": "https://arxiv.org/abs/2602.07840v3",
+          "pdf_url": "https://arxiv.org/pdf/2602.07840v3",
           "published": "2026-02-08T06:42:50Z",
-          "updated": "2026-02-10T03:26:08Z",
+          "updated": "2026-06-03T19:11:27Z",
           "categories": [
             "cs.IR",
             "cs.AI"
@@ -1209,6 +1214,26 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2606.04269v1",
+          "title": "Instant-Fold: In-Context Imitation Learning for Deformable Object Manipulation",
+          "authors": [
+            "Yilong Wang",
+            "Cheng Qian",
+            "Edward Johns"
+          ],
+          "abstract": "Deformable object manipulation (DOM) is challenging due to high-dimensional, partially observable states that evolve through long-horizon, topology-changing interactions with multiple valid manipulation modes. We introduce Instant-Fold, an in-context imitation learning framework for DOM. Given a single human demonstration, our policy infers and executes diverse manipulation modes directly from the demonstration, including variations in spatial execution and ordering, without requiring gradient updates. Our approach first learns deformation-aware visual representations via temporal contrastive pretraining, after which a flow-matching transformer policy conditioned on the demonstration predicts actions to execute the intended manipulation mode. Trained entirely in simulation, Instant-Fold generalizes across diverse folding modes and transfers zero-shot to real-world settings without additional data collection or finetuning. Videos are available at https://instant-fold.github.io.",
+          "url": "https://arxiv.org/abs/2606.04269v1",
+          "pdf_url": "https://arxiv.org/pdf/2606.04269v1",
+          "published": "2026-06-02T22:46:20Z",
+          "updated": "2026-06-02T22:46:20Z",
+          "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2511.18140v2",
           "title": "Observer-Actor: Active Vision Imitation Learning with Sparse-View Gaussian Splatting",
           "authors": [
@@ -1283,24 +1308,6 @@
             "cs.RO",
             "cs.CV",
             "cs.LG"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2503.06831v1",
-          "title": "One-Shot Dual-Arm Imitation Learning",
-          "authors": [
-            "Yilong Wang",
-            "Edward Johns"
-          ],
-          "abstract": "We introduce One-Shot Dual-Arm Imitation Learning (ODIL), which enables dual-arm robots to learn precise and coordinated everyday tasks from just a single demonstration of the task. ODIL uses a new three-stage visual servoing (3-VS) method for precise alignment between the end-effector and target object, after which replay of the demonstration trajectory is sufficient to perform the task. This is achieved without requiring prior task or object knowledge, or additional data collection and training following the single demonstration. Furthermore, we propose a new dual-arm coordination paradigm for learning dual-arm tasks from a single demonstration. ODIL was tested on a real-world dual-arm robot, demonstrating state-of-the-art performance across six precise and coordinated tasks in both 4-DoF and 6-DoF settings, and showing robustness in the presence of distractor objects and partial occlusions. Videos are available at: https://www.robot-learning.uk/one-shot-dual-arm.",
-          "url": "https://arxiv.org/abs/2503.06831v1",
-          "pdf_url": "https://arxiv.org/pdf/2503.06831v1",
-          "published": "2025-03-10T01:36:14Z",
-          "updated": "2025-03-10T01:36:14Z",
-          "categories": [
-            "cs.RO",
-            "cs.CV"
           ],
           "primary_category": "cs.RO"
         }
@@ -1651,7 +1658,7 @@
       "paper_count": 5,
       "papers": [
         {
-          "id": "2605.25645v1",
+          "id": "2605.25645v2",
           "title": "Fine-Tuning and Serving Gemma 4 31B on Google Cloud TPU: A Technical Comparison with GPU Baselines",
           "authors": [
             "Jatin Kishnani",
@@ -1661,10 +1668,10 @@
             "Sairanjan Mishra"
           ],
           "abstract": "We present the first end-to-end demonstration of fine-tuning and serving Google's Gemma 4 31B model on TPU hardware, providing an empirical comparison of TPU and GPU platforms for large language model adaptation. Using LoRA on a Google TPU v5p-8 for training and TPU v6e-8 (Trillium) for inference, we document the full set of code-level adaptations required to port a GPU-native training recipe, built on PyTorch, HuggingFace TRL, and FSDP, to the JAX + Tunix/Qwix stack. These adaptations span mesh configuration, LoRA module naming conventions, sharding annotation corrections, gradient checkpointing, data pipeline restructuring, and a custom Orbax-to-safetensors checkpoint merging procedure. For inference, we detail the vLLM-TPU Docker setup necessary to serve Gemma 4 on v6e-8 and characterize the resulting latency and throughput profile. Compared with a 2xH100 GPU baseline under identical hyperparameters, TPU training completes 1.61x faster at 2.12x lower cost. Inference throughput is within 3% across platforms, while TPU achieves 2x lower time-to-first-token (235 ms vs. 475 ms). Together, the TPU configuration is 1.82x cheaper for a representative train-plus-service workload. Our work removes a critical gap in the open tooling ecosystem and provides practitioners with a reproducible, production-ready recipe for Gemma 4 deployment on TPU infrastructure.",
-          "url": "https://arxiv.org/abs/2605.25645v1",
-          "pdf_url": "https://arxiv.org/pdf/2605.25645v1",
+          "url": "https://arxiv.org/abs/2605.25645v2",
+          "pdf_url": "https://arxiv.org/pdf/2605.25645v2",
           "published": "2026-05-25T09:51:59Z",
-          "updated": "2026-05-25T09:51:59Z",
+          "updated": "2026-06-02T13:32:07Z",
           "categories": [
             "cs.DC",
             "cs.AI"
@@ -2202,7 +2209,7 @@
           "primary_category": "cs.RO"
         },
         {
-          "id": "2602.06219v1",
+          "id": "2602.06219v2",
           "title": "Coupled Local and Global World Models for Efficient First Order RL",
           "authors": [
             "Joseph Amigo",
@@ -2211,10 +2218,10 @@
             "Ludovic Righetti"
           ],
           "abstract": "World models offer a promising avenue for more faithfully capturing complex dynamics, including contacts and non-rigidity, as well as complex sensory information, such as visual perception, in situations where standard simulators struggle. However, these models are computationally complex to evaluate, posing a challenge for popular RL approaches that have been successfully used with simulators to solve complex locomotion tasks but yet struggle with manipulation. This paper introduces a method that bypasses simulators entirely, training RL policies inside world models learned from robots' interactions with real environments. At its core, our approach enables policy training with large-scale diffusion models via a novel decoupled first-order gradient (FoG) method: a full-scale world model generates accurate forward trajectories, while a lightweight latent-space surrogate approximates its local dynamics for efficient gradient computation. This coupling of a local and global world model ensures high-fidelity unrolling alongside computationally tractable differentiation. We demonstrate the efficacy of our method on the Push-T manipulation task, where it significantly outperforms PPO in sample efficiency. We further evaluate our approach through an ego-centric object manipulation task with a quadruped. Together, these results demonstrate that learning inside data-driven world models is a promising pathway for solving hard-to-model RL tasks in image space without reliance on hand-crafted physics simulators.",
-          "url": "https://arxiv.org/abs/2602.06219v1",
-          "pdf_url": "https://arxiv.org/pdf/2602.06219v1",
+          "url": "https://arxiv.org/abs/2602.06219v2",
+          "pdf_url": "https://arxiv.org/pdf/2602.06219v2",
           "published": "2026-02-05T21:57:41Z",
-          "updated": "2026-02-05T21:57:41Z",
+          "updated": "2026-06-01T20:55:42Z",
           "categories": [
             "cs.RO",
             "cs.AI"
@@ -2249,6 +2256,32 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2606.03920v1",
+          "title": "Benchmarking Visual State Tracking in Multimodal Video Understanding",
+          "authors": [
+            "Sihyun Yu",
+            "Nanye Ma",
+            "Pinzhi Huang",
+            "Hyunseok Lee",
+            "Shusheng Yang",
+            "June Suk Choi",
+            "Ellis Brown",
+            "Oscar Michel",
+            "Boyang Zheng",
+            "Jinwoo Shin",
+            "Saining Xie"
+          ],
+          "abstract": "Understanding a video requires more than recognizing isolated moments, as humans continuously track entities, states, and events over time. This capacity for visual state tracking is fundamental to video understanding, yet remains underexplored in current evaluations of Multimodal Large Language Models (MLLMs). We introduce Visual STAte Tracking benchmark (VSTAT), a video-based benchmark designed to diagnose visual state tracking in MLLMs. VSTAT consists of 834 clips drawn from both synthetic and real-world videos, paired with 1,500 questions that cannot be answered from any single frame or short segment, requiring continuous perception and integration of events across the entire video stream. Despite their strong performance on existing video benchmarks, we find that state-of-the-art MLLMs perform far below humans and only modestly above answer-prior baselines. To analyze this gap, we compare MLLMs' thinking traces with the underlying video stream to understand why and when MLLMs fail on VSTAT. We find that MLLMs reason and track correctly in text, but fail at visually perceiving the events they need to track. Finally, our preliminary evaluation suggests that recent agentic approaches, including MLLM-based video agents and coding agents, do not readily resolve these failures, still falling short on VSTAT.",
+          "url": "https://arxiv.org/abs/2606.03920v1",
+          "pdf_url": "https://arxiv.org/pdf/2606.03920v1",
+          "published": "2026-06-02T17:12:05Z",
+          "updated": "2026-06-02T17:12:05Z",
+          "categories": [
+            "cs.CV"
+          ],
+          "primary_category": "cs.CV"
+        },
+        {
           "id": "2606.00188v1",
           "title": "PaintBench: Deterministic Evaluation of Precise Visual Editing",
           "authors": [
@@ -2266,6 +2299,7 @@
           "updated": "2026-05-29T16:01:14Z",
           "categories": [
             "cs.GR",
+            "cs.CV",
             "cs.LG"
           ],
           "primary_category": "cs.GR"
@@ -2319,7 +2353,7 @@
           "primary_category": "cs.CV"
         },
         {
-          "id": "2604.20329v2",
+          "id": "2604.20329v3",
           "title": "Image Generators are Generalist Vision Learners",
           "authors": [
             "Valentin Gabeur",
@@ -2349,36 +2383,13 @@
             "Radu Soricut"
           ],
           "abstract": "Recent works show that image and video generators exhibit zero-shot visual understanding behaviors, in a way reminiscent of how LLMs develop emergent capabilities of language understanding and reasoning from generative pretraining. While it has long been conjectured that the ability to create visual content implies an ability to understand it, there has been limited evidence that generative vision models have developed strong understanding capabilities. In this work, we demonstrate that image generation training serves a role similar to LLM pretraining, and lets models learn powerful and general visual representations that enable SOTA performance on various vision tasks. We introduce Vision Banana, a generalist model built by instruction-tuning Nano Banana Pro (NBP) on a mixture of its original training data alongside a small amount of vision task data. By parameterizing the output space of vision tasks as RGB images, we seamlessly reframe perception as image generation. Our generalist model, Vision Banana, achieves SOTA results on a variety of vision tasks involving both 2D and 3D understanding, beating or rivaling zero-shot domain-specialists, including Segment Anything Model 3 on segmentation tasks, and the Depth Anything series on metric depth estimation. We show that these results can be achieved with lightweight instruction-tuning without sacrificing the base model's image generation capabilities. The superior results suggest that image generation pretraining is a generalist vision learner. It also shows that image generation serves as a unified and universal interface for vision tasks, similar to text generation's role in language understanding and reasoning. We could be witnessing a major paradigm shift for computer vision, where generative vision pretraining takes a central role in building Foundational Vision Models for both generation and understanding.",
-          "url": "https://arxiv.org/abs/2604.20329v2",
-          "pdf_url": "https://arxiv.org/pdf/2604.20329v2",
+          "url": "https://arxiv.org/abs/2604.20329v3",
+          "pdf_url": "https://arxiv.org/pdf/2604.20329v3",
           "published": "2026-04-22T08:23:48Z",
-          "updated": "2026-05-13T22:46:31Z",
+          "updated": "2026-06-03T18:02:24Z",
           "categories": [
             "cs.CV",
             "cs.AI"
-          ],
-          "primary_category": "cs.CV"
-        },
-        {
-          "id": "2603.22275v1",
-          "title": "Repurposing Geometric Foundation Models for Multi-view Diffusion",
-          "authors": [
-            "Wooseok Jang",
-            "Seonghu Jeon",
-            "Jisang Han",
-            "Jinhyeok Choi",
-            "Minkyung Kwon",
-            "Seungryong Kim",
-            "Saining Xie",
-            "Sainan Liu"
-          ],
-          "abstract": "While recent advances in generative latent spaces have driven substantial progress in single-image generation, the optimal latent space for novel view synthesis (NVS) remains largely unexplored. In particular, NVS requires geometrically consistent generation across viewpoints, but existing approaches typically operate in a view-independent VAE latent space. In this paper, we propose Geometric Latent Diffusion (GLD), a framework that repurposes the geometrically consistent feature space of geometric foundation models as the latent space for multi-view diffusion. We show that these features not only support high-fidelity RGB reconstruction but also encode strong cross-view geometric correspondences, providing a well-suited latent space for NVS. Our experiments demonstrate that GLD outperforms both VAE and RAE on 2D image quality and 3D consistency metrics, while accelerating training by more than 4.4x compared to the VAE latent space. Notably, GLD remains competitive with state-of-the-art methods that leverage large-scale text-to-image pretraining, despite training its diffusion model from scratch without such generative pretraining.",
-          "url": "https://arxiv.org/abs/2603.22275v1",
-          "pdf_url": "https://arxiv.org/pdf/2603.22275v1",
-          "published": "2026-03-23T17:57:05Z",
-          "updated": "2026-03-23T17:57:05Z",
-          "categories": [
-            "cs.CV"
           ],
           "primary_category": "cs.CV"
         }
@@ -3047,7 +3058,7 @@
           "primary_category": "cs.AI"
         },
         {
-          "id": "2604.21017v2",
+          "id": "2604.21017v3",
           "title": "Open-H-Embodiment: A Large-Scale Dataset for Enabling Foundation Models in Medical Robotics",
           "authors": [
             "Open-H-Embodiment Consortium",
@@ -3267,11 +3278,11 @@
             "Sean D. Huver",
             "Axel Krieger"
           ],
-          "abstract": "Autonomous medical robots hold promise to improve patient outcomes, reduce provider workload, democratize access to care, and enable superhuman precision. However, autonomous medical robotics has been limited by a fundamental data problem: existing medical robotic datasets are small, single-embodiment, and rarely shared openly, restricting the development of foundation models that the field needs to advance. We introduce Open-H-Embodiment, the largest open dataset of medical robotic video with synchronized kinematics to date, spanning more than 49 institutions and multiple robotic platforms including the CMR Versius, Intuitive Surgical's da Vinci, da Vinci Research Kit (dVRK), Rob Surgical BiTrack, Virtual Incision's MIRA, Moon Surgical Maestro, and a variety of custom systems, spanning surgical manipulation, robotic ultrasound, and endoscopy procedures. We demonstrate the research enabled by this dataset through two foundation models. GR00T-H is the first open foundation vision-language-action model for medical robotics, which is the only evaluated model to achieve full end-to-end task completion on a structured suturing benchmark (25% of trials vs. 0% for all others) and achieves 64% average success across a 29-step ex vivo suturing sequence. We also train Cosmos-H-Surgical-Simulator, the first action-conditioned world model to enable multi-embodiment surgical simulation from a single checkpoint, spanning nine robotic platforms and supporting in silico policy evaluation and synthetic data generation for the medical domain. These results suggest that open, large-scale medical robot data collection can serve as critical infrastructure for the research community, enabling advances in robot learning, world modeling, and beyond.",
-          "url": "https://arxiv.org/abs/2604.21017v2",
-          "pdf_url": "https://arxiv.org/pdf/2604.21017v2",
+          "abstract": "Autonomous medical robots hold promise to improve patient outcomes, reduce provider workload, democratize access to care, and enable superhuman precision. However, autonomous medical robotics has been limited by a fundamental data problem: existing medical robotic datasets are small, single-embodiment, and rarely shared openly, restricting the development of foundation models that the field needs to advance. We introduce Open-H-Embodiment, the largest open dataset of medical robotic video with synchronized kinematics to date, spanning more than 50 institutions and multiple robotic platforms including the CMR Versius, Intuitive Surgical's da Vinci, da Vinci Research Kit (dVRK), Rob Surgical BiTrack, Virtual Incision's MIRA, Moon Surgical Maestro, and a variety of custom systems, spanning surgical manipulation, robotic ultrasound, and endoscopy procedures. We demonstrate the research enabled by this dataset through two foundation models. GR00T-H is the first open foundation vision-language-action model for medical robotics, which is the only evaluated model to achieve full end-to-end task completion on a structured suturing benchmark (25% of trials vs. 0% for all others) and achieves 64% average success across a 29-step ex vivo suturing sequence. We also train Cosmos-H-Surgical-Simulator, the first action-conditioned world model to enable multi-embodiment surgical simulation from a single checkpoint, spanning nine robotic platforms and supporting in silico policy evaluation and synthetic data generation for the medical domain. These results suggest that open, large-scale medical robot data collection can serve as critical infrastructure for the research community, enabling advances in robot learning, world modeling, and beyond.",
+          "url": "https://arxiv.org/abs/2604.21017v3",
+          "pdf_url": "https://arxiv.org/pdf/2604.21017v3",
           "published": "2026-04-22T19:05:17Z",
-          "updated": "2026-04-29T01:10:46Z",
+          "updated": "2026-06-04T17:26:29Z",
           "categories": [
             "cs.RO",
             "cs.AI"
@@ -3411,7 +3422,7 @@
           "primary_category": "cs.CV"
         },
         {
-          "id": "2605.09989v1",
+          "id": "2605.09989v2",
           "title": "StereoPolicy: Improving Robotic Manipulation Policies via Stereo Perception",
           "authors": [
             "Evans Han",
@@ -3424,11 +3435,11 @@
             "Li Fei-Fei",
             "Ruohan Zhang"
           ],
-          "abstract": "Recent advances in robot imitation learning have yielded powerful visuomotor policies capable of manipulating a wide variety of objects directly from monocular visual inputs. However, monocular observations inherently lack reliable depth cues and spatial awareness, which are critical for precise manipulation in cluttered or geometrically complex scenes. To address this limitation, we introduce StereoPolicy, a new visuomotor policy learning framework that directly leverages synchronized stereo image pairs to strengthen geometric reasoning, without requiring explicit 3D reconstruction or camera calibration. StereoPolicy employs pretrained 2D vision encoders to process each image independently and fuses the resulting representations through a Stereo Transformer. This design implicitly captures spatial correspondence and disparity cues. The framework integrates seamlessly with diffusion-based and pretrained vision-language-action (VLA) policies, delivering consistent improvements over RGB, RGB-D, point cloud, and multi-view baselines across three simulation benchmarks: RoboMimic, RoboCasa, and OmniGibson. We further validate StereoPolicy on real-robot experiments spanning both tabletop and bimanual mobile manipulation settings. Our results underscore stereo vision as a scalable and robust modality that bridges 2D pretrained representations with 3D geometric understanding for robotic manipulation.",
-          "url": "https://arxiv.org/abs/2605.09989v1",
-          "pdf_url": "https://arxiv.org/pdf/2605.09989v1",
+          "abstract": "Recent advances in robot imitation learning have produced powerful visuomotor policies that manipulate diverse objects from visual inputs. However, monocular observations lack depth information, which is critical for precise manipulation in cluttered or geometrically complex scenes. Explicit depth maps and point clouds are often noisy and fragile in real-world manipulation. We introduce StereoPolicy, a visuomotor policy learning framework that directly leverages synchronized stereo image pairs to improve geometric reasoning without constructing explicit 3D representations. StereoPolicy processes each image with pretrained 2D vision encoders and fuses left-right features through a cross-attention-based Stereo Transformer, capturing spatial correspondence and disparity cues implicitly. The framework integrates with diffusion-based and pretrained vision-language-action (VLA) policies, delivering consistent improvements over RGB, RGB-D, point cloud, and multi-view baselines across three simulation benchmarks and seven real-robot tabletop and bimanual mobile manipulation tasks. Our results show that stereo vision bridges 2D pretrained representations and 3D geometric understanding for robotic manipulation.",
+          "url": "https://arxiv.org/abs/2605.09989v2",
+          "pdf_url": "https://arxiv.org/pdf/2605.09989v2",
           "published": "2026-05-11T05:06:12Z",
-          "updated": "2026-05-11T05:06:12Z",
+          "updated": "2026-06-03T20:48:13Z",
           "categories": [
             "cs.RO",
             "cs.CV"
@@ -3590,6 +3601,26 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2606.05268v1",
+          "title": "Aggregating LLM-Based Weak Verifiers for Spatial Layout Generation",
+          "authors": [
+            "Sharon Zhang",
+            "R. Kenny Jones",
+            "Jiajun Wu",
+            "Maneesh Agrawala"
+          ],
+          "abstract": "We present a pipeline for building and aggregating task-specific, LLM-generated weak (imperfect) verifiers into a strong verifier for spatial layout domains. Given a task description, our pipeline asks an LLM to synthesize a collection of verifier programs using a layout verification DSL. Each individual LLM-generated verifier usually provides an imperfect check for a match between the layout and the corresponding task description. We show that by aggregating the responses of many such verifiers we can produce a stronger verifier. Moreover, by applying techniques from weak learning, our pipeline can learn how to aggregate the weak verifiers from a very sparse set of human labeled example layouts (about 10). We find that the strong verifiers produced by our pipeline outperform the status-quo approach of using a set of LLM judges to directly check whether a layout matches a task description, raising F1-scores by up to 7X across a variety of 3D room layout and 2D poster design tasks. We also demonstrate that verifier-guided layout generation using natural language feedback from our strong verifiers improves layout quality of a base layout generator by up to 66.2% according to a human evaluator.",
+          "url": "https://arxiv.org/abs/2606.05268v1",
+          "pdf_url": "https://arxiv.org/pdf/2606.05268v1",
+          "published": "2026-06-03T16:50:49Z",
+          "updated": "2026-06-03T16:50:49Z",
+          "categories": [
+            "cs.GR",
+            "cs.LG"
+          ],
+          "primary_category": "cs.GR"
+        },
+        {
           "id": "2605.31598v1",
           "title": "Linear Scaling Video VLMs for Long Video Understanding",
           "authors": [
@@ -3678,33 +3709,6 @@
           "updated": "2026-05-29T06:16:52Z",
           "categories": [
             "cs.AI"
-          ],
-          "primary_category": "cs.AI"
-        },
-        {
-          "id": "2605.29563v1",
-          "title": "Planning with the Views via Scene Self-Exploration",
-          "authors": [
-            "Kangrui Wang",
-            "Linjie Li",
-            "Zhengyuan Yang",
-            "Shiqi Chen",
-            "Zihan Wang",
-            "Li Fei-Fei",
-            "Jiajun Wu",
-            "Leonidas Guibas",
-            "Lijuan Wang",
-            "Manling Li"
-          ],
-          "abstract": "Can VLMs predict how each camera move changes the view, and plan many such moves ahead? We call this capability view planning, requiring (1)understanding how a single action transforms the view, and (2)composing many such transformations across multi-turn plans to identify a target view. We probe both abilities in our proposed ViewSuite, a 3D point-cloud environment on real ScanNet scenes. Across 13 frontier VLMs, a critical planning gap emerges: they possess basic view-action knowledge but fail to compose it across multi-turn plans, with the gap widening as viewpoint distance grows. To close this gap, we propose an iterative framework that alternates self-exploration with view graph distillation. The key insight is that all exploration trajectories, regardless of their outcome, collectively form a view graph that compactly captures how viewpoints connect across a scene. Distilling this graph into diverse supervised tasks reshapes the policy distribution and overcomes the sparse rewards that stall pure RL. This improves Qwen2.5-VL-7B from 2.5% to 47.8% on interactive view planning, surpassing GPT-5.4 Pro (18.5%) and Gemini 3.1 Pro (21.4%). Self-exploration emerges as a promising path toward VLMs that can actively reason and plan in 3D space.",
-          "url": "https://arxiv.org/abs/2605.29563v1",
-          "pdf_url": "https://arxiv.org/pdf/2605.29563v1",
-          "published": "2026-05-28T08:15:23Z",
-          "updated": "2026-05-28T08:15:23Z",
-          "categories": [
-            "cs.AI",
-            "cs.CV",
-            "cs.RO"
           ],
           "primary_category": "cs.AI"
         }
@@ -3839,6 +3843,316 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2606.02800v1",
+          "title": "Cosmos 3: Omnimodal World Models for Physical AI",
+          "authors": [
+            "Aditi",
+            "Niket Agarwal",
+            "Arslan Ali",
+            "Jon Allen",
+            "Martin Antolini",
+            "Adeline Aubame",
+            "Alisson Azzolini",
+            "Junjie Bai",
+            "Maciej Bala",
+            "Yogesh Balaji",
+            "Josh Bapst",
+            "Aarti Basant",
+            "Mukesh Beladiya",
+            "Mohammad Qazim Bhat",
+            "Zaid Pervaiz Bhat",
+            "Dan Blick",
+            "Vanni Brighella",
+            "Han Cai",
+            "Tiffany Cai",
+            "Eric Cameracci",
+            "Jiaxin Cao",
+            "Yulong Cao",
+            "Mark Carlson",
+            "Carlos Casanova",
+            "Ting-Yun Chang",
+            "Yan Chang",
+            "Yu-Wei Chao",
+            "Prithvijit Chattopadhyay",
+            "Roshan Chaudhari",
+            "Chieh-Yun Chen",
+            "Junyu Chen",
+            "Ke Chen",
+            "Qizhi Chen",
+            "Wenkai Chen",
+            "Xiaotong Chen",
+            "Yu Chen",
+            "An-Chieh Cheng",
+            "Click Cheng",
+            "Xiu Chia",
+            "Jeana Choi",
+            "Chaeyeon Chung",
+            "Wenyan Cong",
+            "Yin Cui",
+            "Magdalena Dadela",
+            "Nalin Dadhich",
+            "Wenliang Dai",
+            "Joyjit Daw",
+            "Alperen Degirmenci",
+            "Rodrigo Vieira Del Monte",
+            "Robert Denomme",
+            "Sameer Dharur",
+            "Marco Di Lucca",
+            "Ke Ding",
+            "Wenhao Ding",
+            "Yifan Ding",
+            "Yuzhu Dong",
+            "Nicole Drumheller",
+            "Yilun Du",
+            "Aigul Dzhumamuratova",
+            "Aleksandr Efitorov",
+            "Hamid Eghbalzadeh",
+            "Naomi Eigbe",
+            "Imad El Hanafi",
+            "Hassan Eslami",
+            "Benedikt Falk",
+            "Jiaojiao Fan",
+            "Jim Fan",
+            "Amol Fasale",
+            "Sergiy Fefilatyev",
+            "Liang Feng",
+            "Francesco Ferroni",
+            "Sanja Fidler",
+            "Xiao Fu",
+            "Vikram Fugro",
+            "Prashant Gaikwad",
+            "TJ Galda",
+            "Katelyn Gao",
+            "Yihuai Gao",
+            "Wenhang Ge",
+            "Sreyan Ghosh",
+            "Arushi Goel",
+            "Vivek Goel",
+            "Akash Gokul",
+            "Rama Govindaraju",
+            "Jinwei Gu",
+            "Miguel Guerrero",
+            "Elfie Guo",
+            "Aryaman Gupta",
+            "Siddharth Gururani",
+            "Hugo Hadfield",
+            "Song Han",
+            "Ankur Handa",
+            "Zekun Hao",
+            "Mohammad Harrim",
+            "Ali Hassani",
+            "Nathan Hayes-Roth",
+            "Yufan He",
+            "Chris Helvig",
+            "Cyrus Hogg",
+            "Madison Huang",
+            "Michael Huang",
+            "Sophia Huang",
+            "Yufan Huang",
+            "Jacob Huffman",
+            "DeLesley Hutchins",
+            "Suneel Indupuru",
+            "Boris Ivanovic",
+            "Arihant Jain",
+            "Joel Jang",
+            "Ryan Ji",
+            "Yanan Jian",
+            "Dongfu Jiang",
+            "Jingyi Jin",
+            "Atharva Joshi",
+            "Nikhilesh Joshi",
+            "Pranjali Joshi",
+            "Jaehun Jung",
+            "Weiwei Kang",
+            "Scott Kassekert",
+            "Jan Kautz",
+            "Ashna Khetan",
+            "Julia Kiczka",
+            "Slawek Kierat",
+            "Gwanghyun Kim",
+            "Kuno Kim",
+            "Sunny Kim",
+            "Kezhi Kong",
+            "Xin Kong",
+            "Zhifeng Kong",
+            "Tomasz Kornuta",
+            "Egor Krivov",
+            "Hui Kuang",
+            "Saurav Kumar",
+            "Chia-Wen Kuo",
+            "George Kurian",
+            "Wojciech Kutak",
+            "JF Lafleche",
+            "Himangshu Lahkar",
+            "Omar Laymoun",
+            "Jayjun Lee",
+            "Sanggil Lee",
+            "Gabriele Leone",
+            "Boyi Li",
+            "Freya Li",
+            "Jiajun Li",
+            "Jinfeng Li",
+            "Ling Li",
+            "Pengcheng Li",
+            "Shangru Li",
+            "Tingle Li",
+            "Xiaolong Li",
+            "Xuan Li",
+            "Zhaoshuo Li",
+            "Zhiqi Li",
+            "Hao Liang",
+            "Maosheng Liao",
+            "Chen-Hsuan Lin",
+            "Tsung-Yi Lin",
+            "Ming-Yu Liu",
+            "Sifei Liu",
+            "Zihan Liu",
+            "Hai Loc Lu",
+            "Xiangyu Lu",
+            "Alice Luo",
+            "Ruipu Luo",
+            "Wenjie Luo",
+            "Jiangran Lyu",
+            "Martin Ding Ma",
+            "Nic Ma",
+            "Qianli Ma",
+            "Dawid Majchrowski",
+            "Louis Marcoux",
+            "Miguel Martin",
+            "Qing Miao",
+            "Ashkan Mirzaei",
+            "Shreyas Misra",
+            "Kaichun Mo",
+            "Durra Mohsin",
+            "Hyejin Moon",
+            "Pawel Morkisz",
+            "Saeid Motiian",
+            "Kirill Motkov",
+            "Seungjun Nah",
+            "Yashraj Narang",
+            "Deepak Narayanan",
+            "Thabang Ngazimbi",
+            "Julian Ouyang",
+            "David Page",
+            "Yatian Pang",
+            "Sehwi Park",
+            "Mahesh Patekar",
+            "Mostofa Patwary",
+            "Marco Pavone",
+            "Trung Pham",
+            "Wei Ping",
+            "Soha Pouya",
+            "Shrimai Prabhumoye",
+            "Varun Praveen",
+            "Delin Qu",
+            "Hesam Rabeti",
+            "Morteza Ramezanali",
+            "Marilyn Reeb",
+            "Xuanchi Ren",
+            "Kristen Rumley",
+            "Wojciech Rymer",
+            "Jun Saito",
+            "Yeongho Seol",
+            "John Shao",
+            "Piyush Shekdar",
+            "Tianwei Shen",
+            "Humphrey Shi",
+            "Min Shi",
+            "Stella Shi",
+            "Kevin Shih",
+            "Mohammad Shoeybi",
+            "Mateusz Sieniawski",
+            "Shuran Song",
+            "Alexander Sotelo",
+            "Amir Sotoodeh",
+            "Sunil Srinivasa",
+            "Vignesh Srinivasakumar",
+            "Bartosz Stefaniak",
+            "Rahul Heinrich Steiger",
+            "Shangkun Sun",
+            "Jiaxiang Tang",
+            "Shitao Tang",
+            "Yangyang Tang",
+            "Yue Tang",
+            "Tolou Tavakkoli",
+            "Kayley Ting",
+            "Krzysztof Tomala",
+            "Wei-Cheng Tseng",
+            "Jibin Varghese",
+            "Sergei Vasilev",
+            "Thomas Volk",
+            "Raju Wagwani",
+            "Roger Waleffe",
+            "Andrew Z. Wang",
+            "Boxiang Wang",
+            "Haoxiang Wang",
+            "Qiao Wang",
+            "Shihao Wang",
+            "Shijie Wang",
+            "Ting-Chun Wang",
+            "Yan Wang",
+            "Yu Wang",
+            "David Wehr",
+            "Fangyin Wei",
+            "Xinshuo Weng",
+            "Jay Zhangjie Wu",
+            "Kedi Wu",
+            "Hongchi Xia",
+            "Summer Xiao",
+            "Tianjun Xiao",
+            "Kevin Xie",
+            "Daguang Xu",
+            "Jiashu Xu",
+            "Mengyao Xu",
+            "Ruqing Xu",
+            "Xingqian Xu",
+            "Yao Xu",
+            "Dinghao Yang",
+            "Dong Yang",
+            "Hans Yang",
+            "Xiaodong Yang",
+            "Xuning Yang",
+            "Yichu Yang",
+            "Yurong You",
+            "Zhiding Yu",
+            "Hao Yuan",
+            "Simon Yuen",
+            "Xiaohui Zeng",
+            "Pengcuo Zeren",
+            "Cindy Zha",
+            "Haotian Zhang",
+            "Jenny Zhang",
+            "Jing Zhang",
+            "Liangkai Zhang",
+            "Paris Zhang",
+            "Shun Zhang",
+            "Xuanmeng Zhang",
+            "Zhizheng Zhang",
+            "Ann Zhao",
+            "Yilin Zhao",
+            "Yuliya Zhautouskaya",
+            "Charles Zhou",
+            "Fengzhe Zhou",
+            "Shilin Zhu",
+            "Yuke Zhu",
+            "Dima Zhylko",
+            "Artur Zolkowski"
+          ],
+          "abstract": "We introduce Cosmos 3, a family of omnimodal world models designed to jointly process and generate language, image, video, audio, and action sequences within a unified mixture-of-transformers architecture. By supporting highly flexible input-output configurations, Cosmos 3 seamlessly unifies critical modalities for Physical AI -- effectively subsuming vision-language models, video generators, world simulators, and world-action models into a single framework. Our evaluation demonstrates that Cosmos 3 establishes a new state-of-the-art across a diverse suite of understanding and generation tasks, demonstrating omnimodal world models as scalable, general-purpose backbones for embodied agents. Our post-trained Cosmos 3 models were ranked as the best open-source Text-to-Image and Image-to-Video models by Artificial Analysis, and the best policy model by RoboArena at the time the technical report was written. To accelerate open research and deployment in Physical AI, we make our code, model checkpoints, curated synthetic datasets, and evaluation benchmark available under the Linux Foundation's OpenMDW-1.1 https://openmdw.ai/license/1-1/ License at https://github.com/nvidia/cosmos}{github.com/nvidia/cosmos and https://huggingface.co/collections/nvidia/cosmos3 . The project website is available at https://research.nvidia.com/labs/cosmos-lab/cosmos3 .",
+          "url": "https://arxiv.org/abs/2606.02800v1",
+          "pdf_url": "https://arxiv.org/pdf/2606.02800v1",
+          "published": "2026-06-01T19:12:30Z",
+          "updated": "2026-06-01T19:12:30Z",
+          "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG",
+            "cs.MM",
+            "cs.RO"
+          ],
+          "primary_category": "cs.CV"
+        },
+        {
           "id": "2604.18933v1",
           "title": "Gated Memory Policy",
           "authors": [
@@ -3955,24 +4269,6 @@
             "cs.AI"
           ],
           "primary_category": "cs.RO"
-        },
-        {
-          "id": "2603.10263v1",
-          "title": "From Prior to Pro: Efficient Skill Mastery via Distribution Contractive RL Finetuning",
-          "authors": [
-            "Zhanyi Sun",
-            "Shuran Song"
-          ],
-          "abstract": "We introduce Distribution Contractive Reinforcement Learning (DICE-RL), a framework that uses reinforcement learning (RL) as a \"distribution contraction\" operator to refine pretrained generative robot policies. DICE-RL turns a pretrained behavior prior into a high-performing \"pro\" policy by amplifying high-success behaviors from online feedback. We pretrain a diffusion- or flow-based policy for broad behavioral coverage, then finetune it with a stable, sample-efficient residual off-policy RL framework that combines selective behavior regularization with value-guided action selection. Extensive experiments and analyses show that DICE-RL reliably improves performance with strong stability and sample efficiency. It enables mastery of complex long-horizon manipulation skills directly from high-dimensional pixel inputs, both in simulation and on a real robot. Project website: https://zhanyisun.github.io/dice.rl.2026/.",
-          "url": "https://arxiv.org/abs/2603.10263v1",
-          "pdf_url": "https://arxiv.org/pdf/2603.10263v1",
-          "published": "2026-03-10T22:49:46Z",
-          "updated": "2026-03-10T22:49:46Z",
-          "categories": [
-            "cs.RO",
-            "cs.LG"
-          ],
-          "primary_category": "cs.RO"
         }
       ]
     },
@@ -4027,7 +4323,7 @@
           "primary_category": "cs.RO"
         },
         {
-          "id": "2604.21017v2",
+          "id": "2604.21017v3",
           "title": "Open-H-Embodiment: A Large-Scale Dataset for Enabling Foundation Models in Medical Robotics",
           "authors": [
             "Open-H-Embodiment Consortium",
@@ -4247,11 +4543,11 @@
             "Sean D. Huver",
             "Axel Krieger"
           ],
-          "abstract": "Autonomous medical robots hold promise to improve patient outcomes, reduce provider workload, democratize access to care, and enable superhuman precision. However, autonomous medical robotics has been limited by a fundamental data problem: existing medical robotic datasets are small, single-embodiment, and rarely shared openly, restricting the development of foundation models that the field needs to advance. We introduce Open-H-Embodiment, the largest open dataset of medical robotic video with synchronized kinematics to date, spanning more than 49 institutions and multiple robotic platforms including the CMR Versius, Intuitive Surgical's da Vinci, da Vinci Research Kit (dVRK), Rob Surgical BiTrack, Virtual Incision's MIRA, Moon Surgical Maestro, and a variety of custom systems, spanning surgical manipulation, robotic ultrasound, and endoscopy procedures. We demonstrate the research enabled by this dataset through two foundation models. GR00T-H is the first open foundation vision-language-action model for medical robotics, which is the only evaluated model to achieve full end-to-end task completion on a structured suturing benchmark (25% of trials vs. 0% for all others) and achieves 64% average success across a 29-step ex vivo suturing sequence. We also train Cosmos-H-Surgical-Simulator, the first action-conditioned world model to enable multi-embodiment surgical simulation from a single checkpoint, spanning nine robotic platforms and supporting in silico policy evaluation and synthetic data generation for the medical domain. These results suggest that open, large-scale medical robot data collection can serve as critical infrastructure for the research community, enabling advances in robot learning, world modeling, and beyond.",
-          "url": "https://arxiv.org/abs/2604.21017v2",
-          "pdf_url": "https://arxiv.org/pdf/2604.21017v2",
+          "abstract": "Autonomous medical robots hold promise to improve patient outcomes, reduce provider workload, democratize access to care, and enable superhuman precision. However, autonomous medical robotics has been limited by a fundamental data problem: existing medical robotic datasets are small, single-embodiment, and rarely shared openly, restricting the development of foundation models that the field needs to advance. We introduce Open-H-Embodiment, the largest open dataset of medical robotic video with synchronized kinematics to date, spanning more than 50 institutions and multiple robotic platforms including the CMR Versius, Intuitive Surgical's da Vinci, da Vinci Research Kit (dVRK), Rob Surgical BiTrack, Virtual Incision's MIRA, Moon Surgical Maestro, and a variety of custom systems, spanning surgical manipulation, robotic ultrasound, and endoscopy procedures. We demonstrate the research enabled by this dataset through two foundation models. GR00T-H is the first open foundation vision-language-action model for medical robotics, which is the only evaluated model to achieve full end-to-end task completion on a structured suturing benchmark (25% of trials vs. 0% for all others) and achieves 64% average success across a 29-step ex vivo suturing sequence. We also train Cosmos-H-Surgical-Simulator, the first action-conditioned world model to enable multi-embodiment surgical simulation from a single checkpoint, spanning nine robotic platforms and supporting in silico policy evaluation and synthetic data generation for the medical domain. These results suggest that open, large-scale medical robot data collection can serve as critical infrastructure for the research community, enabling advances in robot learning, world modeling, and beyond.",
+          "url": "https://arxiv.org/abs/2604.21017v3",
+          "pdf_url": "https://arxiv.org/pdf/2604.21017v3",
           "published": "2026-04-22T19:05:17Z",
-          "updated": "2026-04-29T01:10:46Z",
+          "updated": "2026-06-04T17:26:29Z",
           "categories": [
             "cs.RO",
             "cs.AI"
@@ -4324,6 +4620,33 @@
       "website": "https://people.eecs.berkeley.edu/~pabbeel/",
       "paper_count": 5,
       "papers": [
+        {
+          "id": "2606.05873v1",
+          "title": "LadderMan: Learning Humanoid Perceptive Ladder Climbing",
+          "authors": [
+            "Siheng Zhao",
+            "Yuanhang Zhang",
+            "Ziqi Lu",
+            "Pieter Abbeel",
+            "Rocky Duan",
+            "Koushil Sreenath",
+            "Yue Wang",
+            "C. Karen Liu",
+            "Guanya Shi"
+          ],
+          "abstract": "Humanoid robots hold great promise for operating in human-centered environments, yet ladder climbing remains one of the most challenging tasks due to sparse footholds and handholds, complex whole-body coordination, and sensitivity to perception and control errors. We present \\textbf{LadderMan}, a unified system that enables humanoid robots to robustly climb diverse ladders and perform manipulation under such constrained conditions. Our climbing policy is built on a scalable two-stage learning pipeline, where we use hybrid motion tracking to learn multiple climbing experts from a single reference motion, and distill these experts into a unified depth-based visuomotor climbing policy via hybrid imitation and reinforcement learning. To enable real-world deployment, we leverage vision foundation models to bridge the sim-to-real gap in depth perception. Building on the learned climbing policy, we further train a separate manipulation policy using a dual-agent formulation, allowing stable on-ladder manipulation via teleoperation. Experiments demonstrate that LadderMan achieves robust ladder climbing across a wide range of geometries, successfully transfers to real-world hardware in a zero-shot manner, and supports various manipulation tasks under challenging ladder constraints. Video results are available at https://ladderman-robot.github.io .",
+          "url": "https://arxiv.org/abs/2606.05873v1",
+          "pdf_url": "https://arxiv.org/pdf/2606.05873v1",
+          "published": "2026-06-04T08:47:08Z",
+          "updated": "2026-06-04T08:47:08Z",
+          "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV",
+            "cs.LG"
+          ],
+          "primary_category": "cs.RO"
+        },
         {
           "id": "2605.25210v1",
           "title": "Multi-Objective Learning for Diffusion Models: A Statistical Theory under Semi-Supervised Learning",
@@ -4428,26 +4751,6 @@
             "cs.RO"
           ],
           "primary_category": "cs.RO"
-        },
-        {
-          "id": "2603.06082v4",
-          "title": "Offline Materials Optimization with CliqueFlowmer",
-          "authors": [
-            "Jakub Grudzien Kuba",
-            "Benjamin Kurt Miller",
-            "Sergey Levine",
-            "Pieter Abbeel"
-          ],
-          "abstract": "Recent advances in deep learning inspired neural network-based approaches to computational materials discovery (CMD). A plethora of problems in this field involve finding materials that optimize a target property. Nevertheless, the increasingly popular generative modeling methods are ineffective at boldly exploring attractive regions of the materials space due to their maximum likelihood training. In this work, we offer an alternative CMD technique based on offline model-based optimization (MBO) that fuses direct optimization of a target material property into generation. To that end, we introduce a domain-specific model, dubbed CliqueFlowmer, that incorporates recent advances of clique-based MBO into transformer and flow generation. We validate this model's optimization abilities and show that materials it produces strongly outperform those from generative baselines. To support specialized materials discovery applications and broader interdisciplinary research, we release our code, model weights, and additional project resources at https://github.com/znowu/CliqueFlowmer, https://colab.research.google.com/drive/1usUg7zezFkcYHlm2MdYwZUNJXf_YkWnY?usp=sharing, and https://x.com/kuba_AI/status/2033382617442345321.",
-          "url": "https://arxiv.org/abs/2603.06082v4",
-          "pdf_url": "https://arxiv.org/pdf/2603.06082v4",
-          "published": "2026-03-06T09:33:00Z",
-          "updated": "2026-04-19T06:37:14Z",
-          "categories": [
-            "cs.AI",
-            "cs.CE"
-          ],
-          "primary_category": "cs.AI"
         }
       ]
     },
@@ -5008,6 +5311,28 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2606.05602v1",
+          "title": "Fix the Mind, Not the Move: Interpretable AI Assistance via Knowledge-Gap Localization",
+          "authors": [
+            "Ayano Hiranaka",
+            "Ya-Chuan Hsu",
+            "Stefanos Nikolaidis",
+            "Erdem B\u0131y\u0131k",
+            "Daniel Seita"
+          ],
+          "abstract": "AI assistants in human-AI collaboration often correct suboptimal human actions through behavioral feedback (e.g., alerts or steering-wheel nudges in assistive driving). Such interventions can mitigate immediate errors, but long-term improvement requires addressing the underlying misconceptions that cause repeated mistakes. We introduce SENSEI, a framework that infers user misconceptions from interaction behavior and provides targeted, minimal yet sufficient suggestions to correct them. Our approach departs from action- or trajectory-level interventions by operating over a structured knowledge representation to localize and correct the sources of erroneous behavior. Across three long-horizon tasks with diverse misconceptions and corresponding behaviors, SENSEI demonstrates zero-shot compositional generalization, disentangling multiple overlapping misconceptions despite training only on single-misconception cases. A user study further shows that our method identifies real human misconceptions and provides effective guidance that improves long-horizon task performance, successfully correcting $90\\%$ of student misconceptions. Code and project page are available at https://misoshiruseijin.github.io/SENSEI/.",
+          "url": "https://arxiv.org/abs/2606.05602v1",
+          "pdf_url": "https://arxiv.org/pdf/2606.05602v1",
+          "published": "2026-06-04T02:25:19Z",
+          "updated": "2026-06-04T02:25:19Z",
+          "categories": [
+            "cs.AI",
+            "cs.HC",
+            "cs.LG"
+          ],
+          "primary_category": "cs.AI"
+        },
+        {
           "id": "2604.25126v1",
           "title": "HANDFUL: Sequential Grasp-Conditioned Dexterous Manipulation with Resource Awareness",
           "authors": [
@@ -5096,35 +5421,6 @@
             "cs.CV"
           ],
           "primary_category": "cs.RO"
-        },
-        {
-          "id": "2603.12510v3",
-          "title": "Red-Teaming Vision-Language-Action Models via Quality Diversity Prompt Generation for Robust Robot Policies",
-          "authors": [
-            "Siddharth Srikanth",
-            "Freddie Liang",
-            "Ya-Chuan Hsu",
-            "Varun Bhatt",
-            "Shihan Zhao",
-            "Henry Chen",
-            "Bryon Tjanaka",
-            "Minjune Hwang",
-            "Akanksha Saran",
-            "Daniel Seita",
-            "Aaquib Tabrez",
-            "Stefanos Nikolaidis"
-          ],
-          "abstract": "Vision-Language-Action (VLA) models have significant potential to enable general-purpose robotic systems for a range of vision-language tasks. However, the performance of VLA-based robots is highly sensitive to the precise wording of language instructions, and it remains difficult to predict when such robots will fail. We propose Quality Diversity (QD) optimization as a natural framework for red-teaming embodied models, and present Q-DIG (Quality Diversity for Diverse Instruction Generation), which performs red-teaming by scalably identifying diverse, natural language task descriptions that induce failures while remaining task-relevant. Q-DIG integrates QD techniques with Vision-Language Models (VLMs) to generate a broad spectrum of adversarial instructions that expose meaningful vulnerabilities in VLA behavior. Our results across multiple simulation benchmarks show that Q-DIG finds more diverse and meaningful failure modes compared to baseline methods, and that fine-tuning VLAs on the generated instructions improves task success rates. Furthermore, results from a user study highlight that Q-DIG generates prompts judged to be more natural and human-like than those from baselines. Finally, real-world evaluations of Q-DIG prompts show results consistent with simulation, and fine-tuning VLAs on the generated prompts further success rates on unseen instructions. Together, these findings suggest that Q-DIG is a promising approach for identifying vulnerabilities and improving the robustness of VLA-based robots. Our anonymous project website is at qdigvla.github.io.",
-          "url": "https://arxiv.org/abs/2603.12510v3",
-          "pdf_url": "https://arxiv.org/pdf/2603.12510v3",
-          "published": "2026-03-12T22:58:42Z",
-          "updated": "2026-04-03T20:23:41Z",
-          "categories": [
-            "cs.RO",
-            "cs.AI",
-            "cs.CL"
-          ],
-          "primary_category": "cs.RO"
         }
       ]
     },
@@ -5136,6 +5432,28 @@
       "website": "https://erdembiyik.com/",
       "paper_count": 5,
       "papers": [
+        {
+          "id": "2606.05602v1",
+          "title": "Fix the Mind, Not the Move: Interpretable AI Assistance via Knowledge-Gap Localization",
+          "authors": [
+            "Ayano Hiranaka",
+            "Ya-Chuan Hsu",
+            "Stefanos Nikolaidis",
+            "Erdem B\u0131y\u0131k",
+            "Daniel Seita"
+          ],
+          "abstract": "AI assistants in human-AI collaboration often correct suboptimal human actions through behavioral feedback (e.g., alerts or steering-wheel nudges in assistive driving). Such interventions can mitigate immediate errors, but long-term improvement requires addressing the underlying misconceptions that cause repeated mistakes. We introduce SENSEI, a framework that infers user misconceptions from interaction behavior and provides targeted, minimal yet sufficient suggestions to correct them. Our approach departs from action- or trajectory-level interventions by operating over a structured knowledge representation to localize and correct the sources of erroneous behavior. Across three long-horizon tasks with diverse misconceptions and corresponding behaviors, SENSEI demonstrates zero-shot compositional generalization, disentangling multiple overlapping misconceptions despite training only on single-misconception cases. A user study further shows that our method identifies real human misconceptions and provides effective guidance that improves long-horizon task performance, successfully correcting $90\\%$ of student misconceptions. Code and project page are available at https://misoshiruseijin.github.io/SENSEI/.",
+          "url": "https://arxiv.org/abs/2606.05602v1",
+          "pdf_url": "https://arxiv.org/pdf/2606.05602v1",
+          "published": "2026-06-04T02:25:19Z",
+          "updated": "2026-06-04T02:25:19Z",
+          "categories": [
+            "cs.AI",
+            "cs.HC",
+            "cs.LG"
+          ],
+          "primary_category": "cs.AI"
+        },
         {
           "id": "2604.20210v2",
           "title": "Vibrotactile Preference Learning: Uncertainty-Aware Preference Learning for Personalized Vibration Feedback",
@@ -5227,27 +5545,6 @@
           "pdf_url": "https://arxiv.org/pdf/2601.19388v2",
           "published": "2026-01-27T09:20:14Z",
           "updated": "2026-01-28T03:15:23Z",
-          "categories": [
-            "cs.RO"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2601.09920v2",
-          "title": "SyncTwin: Fast Digital Twin Construction and Synchronization for Safe Robotic Manipulation",
-          "authors": [
-            "Ruopeng Huang",
-            "Boyu Yang",
-            "Wenlong Gui",
-            "Jeremy Morgan",
-            "Erdem Biyik",
-            "Jiachen Li"
-          ],
-          "abstract": "Accurate and safe robotic manipulation under dynamic and visually occluded conditions remains a core challenge in real-world deployment. We introduce SyncTwin, a novel digital twin framework that unifies fast 3D scene reconstruction and real-to-sim synchronization for robust and safety-aware robotic manipulation in such environments. In the offline stage, we employ VGGT to rapidly reconstruct object-level 3D assets from RGB images, forming a reusable geometry library. During execution, SyncTwin continuously synchronizes the digital twin by tracking real-world object states via point cloud segmentation updates and aligning them through colored-ICP registration. The synchronized twin enables motion planners to compute collision-free and dynamically feasible trajectories in simulation, which are safely executed on the real robot through a closed real-to-sim-to-real loop. Experiments in dynamic and occluded scenes show that SyncTwin improves manipulation performance and motion safety, demonstrating the effectiveness of digital twin synchronization for real-world robotic execution. The video demos and code can be found on the project website: https://sync-twin.github.io/.",
-          "url": "https://arxiv.org/abs/2601.09920v2",
-          "pdf_url": "https://arxiv.org/pdf/2601.09920v2",
-          "published": "2026-01-14T23:03:43Z",
-          "updated": "2026-02-20T06:17:03Z",
           "categories": [
             "cs.RO"
           ],
@@ -5857,6 +6154,28 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2606.05602v1",
+          "title": "Fix the Mind, Not the Move: Interpretable AI Assistance via Knowledge-Gap Localization",
+          "authors": [
+            "Ayano Hiranaka",
+            "Ya-Chuan Hsu",
+            "Stefanos Nikolaidis",
+            "Erdem B\u0131y\u0131k",
+            "Daniel Seita"
+          ],
+          "abstract": "AI assistants in human-AI collaboration often correct suboptimal human actions through behavioral feedback (e.g., alerts or steering-wheel nudges in assistive driving). Such interventions can mitigate immediate errors, but long-term improvement requires addressing the underlying misconceptions that cause repeated mistakes. We introduce SENSEI, a framework that infers user misconceptions from interaction behavior and provides targeted, minimal yet sufficient suggestions to correct them. Our approach departs from action- or trajectory-level interventions by operating over a structured knowledge representation to localize and correct the sources of erroneous behavior. Across three long-horizon tasks with diverse misconceptions and corresponding behaviors, SENSEI demonstrates zero-shot compositional generalization, disentangling multiple overlapping misconceptions despite training only on single-misconception cases. A user study further shows that our method identifies real human misconceptions and provides effective guidance that improves long-horizon task performance, successfully correcting $90\\%$ of student misconceptions. Code and project page are available at https://misoshiruseijin.github.io/SENSEI/.",
+          "url": "https://arxiv.org/abs/2606.05602v1",
+          "pdf_url": "https://arxiv.org/pdf/2606.05602v1",
+          "published": "2026-06-04T02:25:19Z",
+          "updated": "2026-06-04T02:25:19Z",
+          "categories": [
+            "cs.AI",
+            "cs.HC",
+            "cs.LG"
+          ],
+          "primary_category": "cs.AI"
+        },
+        {
           "id": "2603.12510v3",
           "title": "Red-Teaming Vision-Language-Action Models via Quality Diversity Prompt Generation for Robust Robot Policies",
           "authors": [
@@ -5949,24 +6268,6 @@
             "cs.NE"
           ],
           "primary_category": "cs.LG"
-        },
-        {
-          "id": "2512.00810v2",
-          "title": "Soft Quality-Diversity Optimization",
-          "authors": [
-            "Saeed Hedayatian",
-            "Stefanos Nikolaidis"
-          ],
-          "abstract": "Quality-Diversity (QD) algorithms constitute a branch of optimization that is concerned with discovering a diverse and high-quality set of solutions to an optimization problem. Current QD methods commonly maintain diversity by dividing the behavior space into discrete regions, ensuring that solutions are distributed across different parts of the space. The QD problem is then solved by searching for the best solution in each region. This approach to QD optimization poses challenges in large solution spaces, where storing many solutions is impractical, and in high-dimensional behavior spaces, where discretization becomes ineffective due to the curse of dimensionality. We present an alternative framing of the QD problem, called \\emph{Soft QD}, that sidesteps the need for discretizations. We validate this formulation by demonstrating its desirable properties, such as monotonicity, and by relating its limiting behavior to the widely used QD Score metric. Furthermore, we leverage it to derive a novel differentiable QD algorithm, \\emph{Soft QD Using Approximated Diversity (SQUAD)}, and demonstrate empirically that it is competitive with current state of the art methods on standard benchmarks while offering better scalability to higher dimensional problems. Source code is available at https://github.com/conflictednerd/soft-qd.",
-          "url": "https://arxiv.org/abs/2512.00810v2",
-          "pdf_url": "https://arxiv.org/pdf/2512.00810v2",
-          "published": "2025-11-30T09:38:42Z",
-          "updated": "2026-03-04T05:35:33Z",
-          "categories": [
-            "cs.LG",
-            "cs.NE"
-          ],
-          "primary_category": "cs.LG"
         }
       ]
     },
@@ -5978,6 +6279,33 @@
       "website": "https://viterbischool.usc.edu/faculty/yue-wang/",
       "paper_count": 5,
       "papers": [
+        {
+          "id": "2606.05873v1",
+          "title": "LadderMan: Learning Humanoid Perceptive Ladder Climbing",
+          "authors": [
+            "Siheng Zhao",
+            "Yuanhang Zhang",
+            "Ziqi Lu",
+            "Pieter Abbeel",
+            "Rocky Duan",
+            "Koushil Sreenath",
+            "Yue Wang",
+            "C. Karen Liu",
+            "Guanya Shi"
+          ],
+          "abstract": "Humanoid robots hold great promise for operating in human-centered environments, yet ladder climbing remains one of the most challenging tasks due to sparse footholds and handholds, complex whole-body coordination, and sensitivity to perception and control errors. We present \\textbf{LadderMan}, a unified system that enables humanoid robots to robustly climb diverse ladders and perform manipulation under such constrained conditions. Our climbing policy is built on a scalable two-stage learning pipeline, where we use hybrid motion tracking to learn multiple climbing experts from a single reference motion, and distill these experts into a unified depth-based visuomotor climbing policy via hybrid imitation and reinforcement learning. To enable real-world deployment, we leverage vision foundation models to bridge the sim-to-real gap in depth perception. Building on the learned climbing policy, we further train a separate manipulation policy using a dual-agent formulation, allowing stable on-ladder manipulation via teleoperation. Experiments demonstrate that LadderMan achieves robust ladder climbing across a wide range of geometries, successfully transfers to real-world hardware in a zero-shot manner, and supports various manipulation tasks under challenging ladder constraints. Video results are available at https://ladderman-robot.github.io .",
+          "url": "https://arxiv.org/abs/2606.05873v1",
+          "pdf_url": "https://arxiv.org/pdf/2606.05873v1",
+          "published": "2026-06-04T08:47:08Z",
+          "updated": "2026-06-04T08:47:08Z",
+          "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV",
+            "cs.LG"
+          ],
+          "primary_category": "cs.RO"
+        },
         {
           "id": "2606.02577v1",
           "title": "RoboDream: Compositional World Models for Scalable Robot Data Synthesis",
@@ -6069,34 +6397,6 @@
             "cs.RO"
           ],
           "primary_category": "cs.RO"
-        },
-        {
-          "id": "2605.25449v1",
-          "title": "Pantheon360: Taming Digital Twin Generation via 3D-Aware 360\u00b0 Video Diffusion",
-          "authors": [
-            "Ting-Hsuan Chen",
-            "Ying-Huan Chen",
-            "Tao Tu",
-            "Jie-Ying Lee",
-            "Cho-Ying Wu",
-            "Fangzhou Lin",
-            "Hengyuan Zhang",
-            "David Paz",
-            "Xinyu Huang",
-            "Yuliang Guo",
-            "Yu-Lun Liu",
-            "Yue Wang",
-            "Liu Ren"
-          ],
-          "abstract": "Generating complete digital twins from videos requires precise camera control, global scene coverage, and strict spatial-temporal consistency constraints that remain challenging for perspective video generators due to their limited field of view (FoV). Their narrow FoV forces long or multi-view trajectories, amplifying cross-view inconsistency and temporal drift. We argue that 360\u00b0 video generation offers a natural solution: panoramic coverage simplifies trajectory design and provides a strong global context for maintaining coherence. We introduce Pantheon360: Taming Digital Twin Generation via 3D-Aware 360\u00b0 Video Diffusion, a controllable 360\u00b0 video generation framework that synthesizes high-fidelity videos from sparse 360\u00b0 inputs. The key idea is an explicit 3D Cache, reconstructed from the input, which serves as a geometric scaffold for any user-defined camera path. This allows the diffusion model to focus on photorealistic texture refinement while the 3D Cache enforces global geometric consistency. Experiments show that Pantheon360 achieves superior visual quality and unmatched geometric coherence, enabling reliable and flexible 360\u00b0 scene generation for downstream simulation and digital-twin applications.",
-          "url": "https://arxiv.org/abs/2605.25449v1",
-          "pdf_url": "https://arxiv.org/pdf/2605.25449v1",
-          "published": "2026-05-25T06:00:01Z",
-          "updated": "2026-05-25T06:00:01Z",
-          "categories": [
-            "cs.CV"
-          ],
-          "primary_category": "cs.CV"
         }
       ]
     },
