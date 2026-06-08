@@ -2,220 +2,240 @@
   "category": "robotics",
   "name": "Robotics Research",
   "description": "Robotics \u2014 Motion Planning, Control Systems, Human-Robot Interaction, Autonomous Systems",
-  "scraped_at": "2026-06-07T10:33:55.596012+00:00",
+  "scraped_at": "2026-06-08T12:40:16.296783+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2606.06493v1",
-      "title": "HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers",
+      "id": "2606.07506v1",
+      "title": "Affordance-Based Hierarchical Reinforcement Learning for Quadruped Pedipulation",
       "authors": [
-        "Lizhi Yang",
-        "Junheng Li",
-        "Nehar Poddar",
-        "Yiling Hou",
-        "Gio Huh",
-        "Robert Griffin",
-        "Georgia Gkioxari",
-        "Aaron Ames"
+        "Tuba Girgin",
+        "Jose Castelblanco",
+        "Gabriel Rodriguez",
+        "Emre Girgin",
+        "Cagri Kilic"
       ],
-      "abstract": "For a humanoid robot to be deployed in the real world, the choice of command space (i.e., the interface between task planning and whole-body control) is crucial. Existing whole-body controllers typically demand dense kinematic or spatial references that planners struggle to synthesize from task semantics. We instead propose a compact, explicit interface that is intuitive, general, modular, and expressive enough for diverse manipulation skills. To this end, we introduce HANDOFF, a single humanoid whole-body controller that follows this interface and is distilled via multi-teacher KL distillation under a context-conditioned gating scheme into a mixture-of-experts student from three complementary specialists: whole-body motion tracking with safety-filtered data, locomotion, and fall-recovery. On the Unitree G1, HANDOFF matches state-of-the-art velocity tracking and offers one of the largest robust manipulation workspaces. We further demonstrate hardware feasibility through multiple natural-language-driven task roll-outs, powered by a VLM-driven agentic planner with no task-specific data or controller fine-tuning.",
-      "url": "https://arxiv.org/abs/2606.06493v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.06493v1",
-      "published": "2026-06-04T17:59:50Z",
-      "updated": "2026-06-04T17:59:50Z",
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.LG"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2606.06491v1",
-      "title": "TempoVLA: Learning Speed-Controllable Vision-Language-Action Policies",
-      "authors": [
-        "Dong Jing",
-        "Jingchen Nie",
-        "Tianqi Zhang",
-        "Jiaqi Liu",
-        "Huaxiu Yao",
-        "Zhiwu Lu",
-        "Mingyu Ding"
-      ],
-      "abstract": "Robot manipulation alternates between low-risk transit phases that call for fast execution and high-risk contact stages that demand slow, precise motion. Yet existing Vision-Language-Action models (VLAs) only inherit a single fixed speed from training demonstrations. Prior efforts to accelerate VLAs through model compression, KV-cache reuse, or reinforcement learning only shift the policy from one fixed speed to another, and leave deceleration almost unexplored. We observe that the magnitude of each predicted action already governs how fast the robot moves, opening a direct route to controllable execution speed. We turn this observation into TempoVLA, a single VLA whose execution speed is controlled by an explicit condition. TempoVLA combines two coupled components. (1) A data-side Variable-Speed Trajectory Augmentation (VSTA) that re-times demonstration to any target speed by merging or splitting actions while preserving its motion semantics. (2) A model-side conditioning mechanism that feeds the speed to the policy. Statistics show that VSTA reaches the requested speed with negligible motion error. Experiments in simulation and on real-world tasks demonstrate that TempoVLA achieves flexible speed control in both directions, while VSTA additionally boosts the default $1\\times$ performance via better data utilization. Furthermore, by cooperating with a large multimodal model, TempoVLA realizes dynamic speed control, accelerating through low-risk phases and decelerating for high-risk ones.",
-      "url": "https://arxiv.org/abs/2606.06491v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.06491v1",
-      "published": "2026-06-04T17:59:40Z",
-      "updated": "2026-06-04T17:59:40Z",
-      "categories": [
-        "cs.RO",
-        "cs.AI"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2606.06461v1",
-      "title": "Flow-based Policy Adaptation without Policy Updates",
-      "authors": [
-        "Luzhe Sun",
-        "Jingtian Ji",
-        "Haoran Chen",
-        "Jiawei Zhou",
-        "Matthew R. Walter"
-      ],
-      "abstract": "Leveraging prior knowledge from pretrained policies, foundation models, or human operators offers an efficient alternative to learning robot skills from scratch. However, these agents often provide actions that are suboptimal, noisy, or misaligned with task-specific expert behavior. We propose GLOVES, a family of flow-based adaptation methods that correct non-expert actions by transporting them toward an expert action distribution. Rather than replacing agentic control with full autonomy, GLOVES performs selective action-level adaptation, improving task success while preserving agent intent. The learned flow also provides a natural in-distribution scoring mechanism through reverse flow evaluation. We use this signal as an intervention gate: actions that appear consistent with the expert distribution are passed through unchanged, while anomalous or out-of-distribution (OOD) actions are corrected. In this way, assistance is only provided when necessary. GLOVES requires only limited expert supervision, using a small number of demonstrations or reusable successful skill segments. By learning local expert action patterns and stitching them during execution, GLOVES provides a lightweight shared-control module for robust action adaptation across tasks and environments. Code and demos are available at ripl.github.io/GLOVES_web.",
-      "url": "https://arxiv.org/abs/2606.06461v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.06461v1",
-      "published": "2026-06-04T17:51:12Z",
-      "updated": "2026-06-04T17:51:12Z",
+      "abstract": "The object manipulation capabilities of quadruped robots is an open research challenge. While previous studies have focused on low-level policy learning, task execution still relies on expert-designed high-level trajectories. Autonomous selection of both an affordable interaction point on the target object and an affordable robot base pose removes the need for pre-designed trajectories. This study proposes a three-level hierarchical reinforcement learning (RL) framework that utilizes pose affordances to guide the navigation policy, while the navigation policy drives the locomotion policy. In addition, the pedipulation policy is guided by interaction-point affordances, enabling object-centric pose alignment of the quadruped robot and effective end-effector manipulation planning. We train the proposed framework in the IsaacSim ecosystem and evaluate it in both simulation and real-world settings. We investigate the effectiveness of pose affordance across multiple scenarios in simulation while various object interaction tasks are validated on real-world setting forming an object-interaction dataset. The results show that the proposed framework can autonomously identify candidate poses based on their affordance and successfully execute object manipulation tasks in the real world without human guidance.",
+      "url": "https://arxiv.org/abs/2606.07506v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.07506v1",
+      "published": "2026-06-05T17:56:42Z",
+      "updated": "2026-06-05T17:56:42Z",
       "categories": [
         "cs.RO"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2606.06423v1",
-      "title": "RiskFlow: Fast and Faithful Safety-Critical Traffic Scenario Generation",
+      "id": "2606.07486v1",
+      "title": "OPENPATH: A Supervisor--Specialist Agent System for Personalized, Accessible, and Multi-stop Urban Trip Planning",
       "authors": [
-        "Qi Lan",
-        "Yining Tang",
-        "Yu Shen",
-        "Yi Zhou",
-        "Yuhao Wei",
-        "Jie Li",
-        "Guofa Li"
+        "Ziyang Xiong",
+        "He Zong",
+        "Zhiyuan Xue",
+        "Manxi Wu"
       ],
-      "abstract": "Safety-critical traffic scenario generation is essential for evaluating autonomous driving systems under rare but high-risk interactions. Existing diffusion-based methods offer strong controllability in closed-loop generation, but their iterative denoising process is computationally expensive and may accumulate sampling and guidance errors over long rollouts, causing unrealistic motion artifacts such as jitter, abnormal acceleration, and off-road behavior. To address these issues, we propose RiskFlow, a closed-loop safety-critical multi-agent traffic generation framework that formulates future trajectory generation as transport in the action space. Instead of relying on iterative denoising, RiskFlow learns an average velocity field over a finite interval to transform Gaussian action sequences into future acceleration and yaw-rate commands with a single forward pass, using a JVP-based objective for efficient and stable training. At test time, RiskFlow applies output-space guidance to the generated actions, steering selected critical agents toward risky interactions while regularizing off-road behavior, and reconstructs physically feasible trajectories through vehicle dynamics. Experiments on nuScenes with tbsim closed-loop evaluation show that RiskFlow achieves a strong adversariality-realism trade-off across multi-agent and long-horizon settings. Compared with representative baselines, RiskFlow consistently improves realism while maintaining competitive safety-critical generation capability, and substantially reduces inference time for evaluation.",
-      "url": "https://arxiv.org/abs/2606.06423v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.06423v1",
-      "published": "2026-06-04T17:28:42Z",
-      "updated": "2026-06-04T17:28:42Z",
-      "categories": [
-        "cs.RO",
-        "cs.AI"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2606.06418v1",
-      "title": "Double Preconditioning (DoPr): Optimization for Test-Time Performance, not Validation Loss",
-      "authors": [
-        "Thomas T. Zhang",
-        "Alok Shah",
-        "Yifei Zhang",
-        "Vincent Zhang",
-        "Nikolai Matni",
-        "Max Simchowitz"
-      ],
-      "abstract": "Many modern applications of deep learning involve training a neural network via a one-step prediction loss (e.g., $L^2$ regression, cross-entropy), but deploy the network by rolling out along its own predictions. Key examples include autoregressive language modeling, flow-based generative modeling, and robot policy learning. It is well-documented that these settings induce a phenomenon we call test-time feedback (TTF): the mismatch between the training/validation loss and downstream metrics of interest, such as task success rate and generation quality, which grows with task length. While data curation, architecture, and objective design have been proposed to combat train-test shift in TTF settings, this paper proposes optimization as a new design axis to mitigate error accumulation. Specifically, we introduce a new optimization paradigm called double-preconditioning (DoPr) uniquely tailored to the challenges of TTF. DoPr combines gradient-wise preconditioning, as in Adam and Muon, with activation-wise preconditioning (AP), such as in KFAC. We show that the addition of AP yields a drop-in intervention for increasing downstream model performance across a range of TTF settings. Interestingly, these gains in test-time performance do not consistently accompany improvements in validation loss, opening new questions about how to properly evaluate models trained with one-step supervised objectives.",
-      "url": "https://arxiv.org/abs/2606.06418v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.06418v1",
-      "published": "2026-06-04T17:22:58Z",
-      "updated": "2026-06-04T17:22:58Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "eess.SY"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2606.06406v1",
-      "title": "Expected String Stability of Human-Led Vehicle Platoons under Stochastic Communication Delays (Full Version)",
-      "authors": [
-        "Francisco Aguilera",
-        "V\u00edctor Jaque",
-        "Andr\u00e9s A. Peters",
-        "Alejandro I. Maass"
-      ],
-      "abstract": "This paper studies expected $\\mathcal{L}_2$ string stability of event-triggered vehicle platoons in which a human driver leads a chain of cooperatively controlled autonomous followers under stochastic communication delays. The leader's driving behavior propagates through the string via vehicle-to-vehicle (V2V) communication, so human-induced disturbances must not amplify along the platoon. Unlike deterministic approaches based on worst-case delay bounds, we derive string-stability conditions depending on the full delay distribution through integral inequalities. The closed-loop platoon is modeled as a stochastic hybrid system capturing vehicle dynamics, communication events, and event-triggering. This framework certifies string stability even when delays exceed deterministic admissible bounds with nonzero probability. Results are evaluated under several delay distributions using the MATLAB HyEQ simulator.",
-      "url": "https://arxiv.org/abs/2606.06406v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.06406v1",
-      "published": "2026-06-04T17:12:19Z",
-      "updated": "2026-06-04T17:12:19Z",
+      "abstract": "Urban trip-planning systems are commonly optimized for travel time and cost, but they offer limited support for the heterogeneous needs that real travelers bring, such as personalized preferences, multi-stop itinerary construction, and end-to-end wheelchair accessibility. We present openpaths, a supervisor-specialist multi-agent system that handles all of these tasks within a single architecture. openpaths adopts a deliberate division of labor: LLM agents parse natural-language input, classify request intent, and orchestrate execution, while classical algorithms perform route optimization over curated mobility and accessibility data. This design ensures that the resulting trip honors heterogeneous user preferences and enforces strict accessibility requirements when requested. Beyond per-user planning, openpaths doubles as a measurement instrument for city-scale accessibility analysis: applied to NYC, the system reveals substantial ADA infrastructure gaps and quantifies their effect on job accessibility for wheelchair users. Overall, this study shows how a supervisor-specialist LLM agentic framework can support heterogeneous trip planning and transparent, equitable transportation analysis in real urban environments.",
+      "url": "https://arxiv.org/abs/2606.07486v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.07486v1",
+      "published": "2026-06-05T17:40:54Z",
+      "updated": "2026-06-05T17:40:54Z",
       "categories": [
         "eess.SY"
       ],
       "primary_category": "eess.SY"
     },
     {
-      "id": "2606.06370v1",
-      "title": "Ensuring Interaction Safety in Multitask Exoskeleton Control: A Simulation-Trained Variable Impedance Framework",
+      "id": "2606.07476v1",
+      "title": "Physiologically Constrained Musculoskeletal Neural Network for Multi-DoF Joint Kinematics Estimation from Partially Observed sEMG",
       "authors": [
-        "Muyuan Ma",
-        "Houcheng Li",
-        "Haotian Zhai",
-        "Lijun Han",
-        "Xinpan Meng",
-        "Xiuze Xia",
-        "Long Cheng"
+        "Wending Heng",
+        "Mingming Zhang",
+        "Glen Cooper",
+        "Zhenhong Li"
       ],
-      "abstract": "Wearable exoskeletons can augment human phys ical capabilities during complex activities. However, ensuring adaptation across diverse tasks while guaranteeing interaction safety remains a critical challenge. To address this, a simulation trained variable impedance control approach with stability guarantees is proposed. First, a simulation-based human exoskeleton motion data generation pipeline is established, utilizing Proximal Policy Optimization (PPO) to synthesize human muscle activations while the exoskeleton provides direct compensation for human biological joint torques. Subsequently, the generated dataset is used to train a dual modality policy that fuses semantic instructions with proprioceptive history, enabling the prediction of reference trajectories and variable impedance gains for nine different motion tasks. To guarantee safety, the network outputs are constrained by a stability criterion derived from Lyapunov stability theory, which bounds stiffness variations to ensure the asymptotic stability of the coupled system. Experimental results indicate that the proposed framework reduces metabolic cost in real-world scenarios com pared with standard baseline methods. These findings suggest the feasibility of the proposed framework for safe, multitask exoskeleton control.",
-      "url": "https://arxiv.org/abs/2606.06370v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.06370v1",
-      "published": "2026-06-04T16:37:01Z",
-      "updated": "2026-06-04T16:37:01Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2606.06366v1",
-      "title": "Waypoints Matter: A Systematic Study for Sampling-Based Trajectory Planning",
-      "authors": [
-        "Josep M. Barbera",
-        "Antonio Artu\u00f1edo",
-        "Jorge Villagra"
-      ],
-      "abstract": "Real-time autonomous driving commonly relies on sampling-based trajectory planners that link candidate trajectories to target waypoints along the road centerline. The placement of these waypoints directly impacts both the existence and quality of feasible trajectories. Yet, its effect on planner performance remains largely unexplored. In this paper, we treat waypoint placement as a first-class design variable. We hold the trajectory primitive and candidate budget fixed, and systematically sweep three placement strategies (uniform spacing, an augmented Ramer-Douglas-Peucker variant (RDP*), and a novel curvature-conditioned allocation) across 449 configurations and five CommonRoad maps of increasing geometric complexity. Our results show that the nominal inter-waypoint spacing $d_s$ is the primary performance driver, with large differences in planner reliability attributed to placement alone. Uniform sampling at a well-tuned spacing matches or surpasses both RDP* and the centered curvature variant. The curvature variant offers a small but consistent advantage on geometrically complex roads under reliability-first and balanced weightings, while RDP* never outperforms uniform sampling. These findings suggest that $d_s$ should be treated as the dominant tuning parameter, with geometry-aware strategies reserved for curvature-rich corridors where feasibility is the limiting factor.",
-      "url": "https://arxiv.org/abs/2606.06366v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.06366v1",
-      "published": "2026-06-04T16:35:30Z",
-      "updated": "2026-06-04T16:35:30Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2606.06358v1",
-      "title": "Impact of RTK Augmentation and INS Integration on GNSS Positioning Accuracy and Continuity: A Benchmarking Study on Inland Waterways",
-      "authors": [
-        "Yan-Yun Zhang",
-        "Jef Billet",
-        "Jan Swevers",
-        "Peter Slaets"
-      ],
-      "abstract": "RTK augmentation andINS integration are widely used to improve GNSS positioning performance. However, on inland waterways, bridges and surrounding structures can degrade satellite visibility and correction availability, causing RTK augmentation loss, and GNSS/INS fusion transients. Since these effects depend on the local environment and sensor configuration, nominal receiver specifications are insufficient, and deployment-specific characterization is required. This paper presents a benchmarking study of an AsteRx-i3 D Pro+ GNSS/INS receiver installed within the mobile Sensor Box developed at KU Leuven. The study combines a real-world bridge-passage case study, static benchmarking, and closed-loop path-following experiments. The static benchmarking evaluates four receiver configurations: standalone GNSS, standalone GNSS with INS integration, RTK-augmented GNSS, and RTK-augmented GNSS with INS integration. The closed-loop experiments use INS-integrated GNSS as the navigation input and compare path-following operational performance with and without RTK augmentation. Results show that correction loss during bridge passage causes reduced positioning accuracy, increased positioning uncertainty and recovery-induced state jumps exceeding 1 m. Static benchmarking and closed-loop experiments confirm that RTK augmentation substantially improves positioning precision and uncertainty consistency, while INS integration supports short-term continuity during RTK unavailability but may introduce drift, bias, or transient uncertainty variations. By characterizing the deployment-specific receiver behavior with RTK augmentation and INS integration, this study motivates higher-level state estimation as a necessary next step toward spatially continuous and uncertainty-consistent positioning on inland waterway. The experimental data are released at: https://doi.org/10.5281/zenodo.20541733.",
-      "url": "https://arxiv.org/abs/2606.06358v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.06358v1",
-      "published": "2026-06-04T16:25:43Z",
-      "updated": "2026-06-04T16:25:43Z",
+      "abstract": "This paper investigates multi-degrees of freedom (DoF) joint kinematics estimation under partially observed surface electromyography (sEMG), where only a subset of task-relevant muscles can be measured due to anatomical inaccessibility or sensor constraints. A novel musculoskeletal neural network (MSK-NN) is proposed to estimate multi-DoF joint angles while simultaneously inferring activations for both measured and unmeasured muscles. MSK-NN consists of a CNN-based muscle activation estimator and an embedded MSK forward dynamics module, forming a fully differentiable architecture. Unlike existing hybrid neural frameworks that require additional biomechanical labels (e.g., muscle-tendon forces, joint torques), MSK-NN is trained without direct supervision of internal biomechanical variables. A composite physics-physiology loss is designed by incorporating a joint kinematics loss, a data-driven muscle synergy loss, and an anatomy-guided trend loss. The proposed method is evaluated on two-DoF wrist kinematics estimation across three rhythmic motions with unconstrained speed and amplitude, and one random motion. Compared with CNN, Bi-LSTM, CNN-LSTM, and PET baselines, MSK-NN achieves lower normalized root mean square error (NRMSE) and higher coefficient of determination (R2), especially for the random motion. More importantly, the optimized MSK parameters remain within physiological limits, and the estimated activation of an input-excluded muscle exhibits strong temporal agreement with its recorded sEMG envelope, demonstrating the capability of musculoskeletal (MSK)-NN to recover physiologically plausible activations.",
+      "url": "https://arxiv.org/abs/2606.07476v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.07476v1",
+      "published": "2026-06-05T17:30:16Z",
+      "updated": "2026-06-05T17:30:16Z",
       "categories": [
         "eess.SY",
+        "cs.RO",
         "eess.SP"
       ],
       "primary_category": "eess.SY"
     },
     {
-      "id": "2606.06347v1",
-      "title": "Attack Detection using Time Series Foundation Models",
+      "id": "2606.07464v1",
+      "title": "Planning-aligned Token Compression for Long-Context Autonomous Driving",
       "authors": [
-        "Sribalaji C. Anand",
-        "Anh Tung Nguyen",
-        "George J. Pappas"
+        "Zhixuan Liang",
+        "Yuxiao Chen",
+        "Yurong You",
+        "Peter Karkus",
+        "Wenhao Ding",
+        "Boyi Li",
+        "Alexander Popov",
+        "Yan Wang",
+        "Maximilian Igl",
+        "Yiming Li",
+        "Danfei Xu",
+        "Nikolai Smolyanskiy",
+        "Boris Ivanovic",
+        "Ping Luo",
+        "Marco Pavone"
       ],
-      "abstract": "This paper addresses the problem of attack detection in cyber-physical systems without any knowledge of the plant model or its structure. A remotely located plant transmits sensor measurements to an operator over a network that is assumed to be under attack. We consider two classes of attacks: model-free replay attacks and model-based stealthy attacks. For the latter, we derive closed-form expressions for the optimal stealthy attack policy against a $\u03c7^2$ detector, for both linear and nonlinear systems. We then propose a model-structure-free detector based on TimesFM, a time-series foundation model developed by Google Research, which serves as a surrogate residual generator operating in a zero-shot fashion. We show empirically that the TimesFM-based detector achieves a comparable or superior attack detection performance. The efficacy of the proposed approach is demonstrated numerically on the IEEE 14-bus power system. We also demonstrate that TimesFM predictions can serve as a substitute for corrupted measurements, a practical mitigation technique when classical redundancy assumptions fail.",
-      "url": "https://arxiv.org/abs/2606.06347v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.06347v1",
-      "published": "2026-06-04T16:19:24Z",
-      "updated": "2026-06-04T16:19:24Z",
+      "abstract": "Monolithic vision-action models represent an emerging paradigm in autonomous driving. However, this architecture produces token sequences that quickly exceed real-time computational budgets when encoding extended temporal context for complex interactions. While approaches like linear transformers and external memory try to make the context lightweight, token compression is most compatible with the architecture as it requires no backbone modifications. Yet existing compression adopts rule-based heuristics like temporal decay, decoupled from planning, risking loss of decision-critical information. We propose COMPACT-VA, a planning-aligned working memory framework built on conditional VQ-VAE, compressing extended context into bounded representations. Compression is conditioned on both historical trajectory and a learned planning intent that the posterior encoder distills from future trajectories during training, while the prior encoder learns to predict it from compressed observations. The compressed memory, concatenated with the predicted latent, feeds the policy for end-to-end optimization, planning with retained decision-critical information. We evaluate on high-signal dynamic scenarios where historical context is most critical for behavior correctness (e.g., stop, yield, or proceed), and accordingly design behavioral metrics. Under comparable token budgets, we achieve $>$6% improvement (68.3%) on success rates with consistent gains across metrics. Ablations validate planning-aligned coupling effectiveness. Closed-loop evaluation confirms that COMPACT-VA maintained general driving performance with 3.3* speedup and 2.7* memory reduction over uncompressed processing.",
+      "url": "https://arxiv.org/abs/2606.07464v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.07464v1",
+      "published": "2026-06-05T17:16:21Z",
+      "updated": "2026-06-05T17:16:21Z",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2606.07449v1",
+      "title": "On orbital stabilization of a circular motion primitive for a dynamic extension of the Dubins car model",
+      "authors": [
+        "Artem Angelchev-Shiryaev",
+        "Pavel E. Aleshin",
+        "Anton S. Shiriaev",
+        "Pavel A. Shamanaev",
+        "Leonid B. Freidovich"
+      ],
+      "abstract": "This paper addresses orbital stabilization of a circular motion primitive for a dynamic extension of the Dubins car model within a transverse-linearization framework. We show that the corresponding transverse linearization is unstable and not stabilizable by linear state feedback. Therefore, the standard linearization-based approach to orbital stabilization cannot be applied directly. The main contribution is a set of explicit and verifiable conditions that characterize when a controller design based on transverse linearization remains applicable. These conditions rely on the specific structure of the dynamics in a neighborhood of the motion and on the use of non-standard transverse coordinates for controller design and analysis. Numerical simulations illustrate the proposed design procedure.",
+      "url": "https://arxiv.org/abs/2606.07449v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.07449v1",
+      "published": "2026-06-05T16:51:55Z",
+      "updated": "2026-06-05T16:51:55Z",
       "categories": [
         "eess.SY",
-        "cs.LG"
+        "cs.RO"
       ],
       "primary_category": "eess.SY"
+    },
+    {
+      "id": "2606.07437v1",
+      "title": "Re-imagining ISO 26262 in the Age of Autonomous Vehicles: Enhancing Controllability through Transferability and Predictability",
+      "authors": [
+        "Chaitanya Shinde",
+        "Hadi Hajieghrary",
+        "Paul Schmitt",
+        "Adam Shoemaker",
+        "Bodo Seifert",
+        "Steve Kenner"
+      ],
+      "abstract": "The ISO 26262 standard defines functional safety for road vehicles through risk assessments based on Severity, Exposure, and Controllability, grounded in a human-driven vehicle paradigm. In the context of autonomous vehicles (AVs), the absence of a human driver necessitates revisiting these principles. This paper decomposes the Controllability placeholder into two auditable evidence dimensions of ISO 26262 by introducing two measurable sub-concepts: Transferability and Predictability. Transferability extends Controllability to capture AV systems' ability to hand off control to dedicated fallback safety mechanisms, while Predictability captures how easily external agents can anticipate AV behavior. Predictability is formally defined from human-robot interaction-inspired principles, and a mathematical framework is provided to quantify it. A designed-versus-achievable gap is introduced to distinguish architectural fallback claims from scene-conditioned achievable fallback capability. The proposed metrics align with ISO 26262 and ISO/PAS 21448 (SOTIF), rendering fallback and interaction claims falsifiable and traceable across ODD slices. These dimensions complement rather than replace existing standards, and the enhancements preserve the structure of ISO 26262 while extending its applicability to driverless automated systems operating at SAE Levels 4 and 5.",
+      "url": "https://arxiv.org/abs/2606.07437v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.07437v1",
+      "published": "2026-06-05T16:35:58Z",
+      "updated": "2026-06-05T16:35:58Z",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.HC",
+        "cs.SE",
+        "eess.SY"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2606.07424v1",
+      "title": "Rapid co-design of Buoyancy-assisted robots for Challenging Locomotion using Gaussian Evolutionary Specialists",
+      "authors": [
+        "Ankit Sinha",
+        "Nitish Sontakke",
+        "Dennis Hong",
+        "Yusuke Tanaka",
+        "Sehoon Ha"
+      ],
+      "abstract": "Designing high-performance legged robots requires jointly optimizing morphology and control. Model-free Reinforcement Learning (RL) offers an alternative to model-predictive control for developing robust controllers without explicitly specifying robot dynamics. Thus, we have seen theuse of RL to train controllers and evaluate designs for robot morphology optimization. While RL has shown success inlocomotion, using it in the co-design inner loop is expensive due to repeated policy training. Universal policies conditioned on morphology offer a promising alternative, but suffer from behavioral diversity collapse, converging to a single strategy that performs sub-optimally across designs. On the other hand, end-to-end Mixture-of-Experts (MoE) architectures fail due to a collapse in its representation. We propose Gaussian Evolutionary Specialists (GES), a framework that decouples design-space partitioning from policy learning to capture diverse behaviors explicitly. GES assigns specialist policies to evolving Gaussian regions and iteratively refines them via training, probing, and territory expansion. The resulting specialists are integrated into a design sampling loop, replacing costly re-training with direct evaluation. When tested on the Buoyancy-Assisted Light Legged Unit (BALLU), GES discovers designs with 5 - 25% higher performance than naive universal policies. On hardware, a GES optimized design overcomes a 24 cm tall obstacle - 3x improvement over the baseline BALLU design. Moreover, GES curtails design optimization time by 37%.",
+      "url": "https://arxiv.org/abs/2606.07424v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.07424v1",
+      "published": "2026-06-05T16:18:15Z",
+      "updated": "2026-06-05T16:18:15Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2606.07389v1",
+      "title": "Simulation-Driven Imitation Learning for Biosignals-Free Shared-Autonomy Prosthetic Grasping",
+      "authors": [
+        "Kaijie Shi",
+        "Wanglong Lu",
+        "Huiling Chen",
+        "Vinicius Prado da Fonseca",
+        "Ting Zou",
+        "Hanli Zhao",
+        "Xianta Jiang"
+      ],
+      "abstract": "Biosignals-free shared-autonomy control of upper-limb prosthetic hands aims to enable natural and low-effort manipulation without relying on EMG or other physiological signals. Recent imitation-learning-based approaches have shown promising results, but their scalability is limited by the cost and variability of collecting large amounts of real-world human demonstration data. In this work, we present a scalable simulation framework that automatically generates diverse reach-to-grasp demonstrations from a wrist-mounted virtual camera. The framework combines physically feasible grasp synthesis, natural reaching trajectories retargeting, and reach--grasp--lift execution in procedurally generated indoor environments. It records wrist-view observations, proprioception, and actions to build a large-scale demonstration dataset for imitation learning. Through extensive simulation benchmarks, we evaluate object and scene generalization and compare several representative state-of-the-art imitation learning methods. Results show that the simulated demonstrations are sufficiently rich and consistent for effective policy learning. In three realistic settings, the learned sim-to-real policy achieves over 90\\% grasp success, surpasses baseline methods, and exhibits stronger generalization, highlighting the promise of simulation-driven training for biosignals-free shared-autonomy prosthetic grasping. The demonstrations are available at \\href{https://sites.google.com/view/sim-prosthetic-grasp/home}{https://sites.google.com/view/sim-prosthetic-grasp/home}.",
+      "url": "https://arxiv.org/abs/2606.07389v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.07389v1",
+      "published": "2026-06-05T15:26:26Z",
+      "updated": "2026-06-05T15:26:26Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2606.07386v1",
+      "title": "Spline Policy: A Structured Representation for Robot Policies",
+      "authors": [
+        "Mengze Tian",
+        "Yiming Li",
+        "Sichao Liu",
+        "Auke Ijspeert",
+        "Sylvain Calinon"
+      ],
+      "abstract": "Modern imitation-learning policies for robot manipulation often represent actions as fixed-resolution action chunks, which are simple and effective but expose limited geometric and temporal structure before execution. This paper studies Spline Policy (SP), a structured representation that replaces action chunks with spline parameters while keeping the policy backbone unchanged. The predicted spline can be decoded as a compact continuous trajectory, queried at different temporal resolutions, constrained or edited in parameter space, and passed to downstream controllers. For quadratic spline outputs, the same representation can also be converted into a state-dependent vector field through an analytical distance-field construction. Under the regularity and projection assumptions of this construction, the induced dynamics do not increase the distance to the generated spline, yielding a principled local corrective mechanism around the predicted motion. The spline output further supports uncertainty propagation from observations to spline parameters, trajectories, and flow fields, and can be combined with classical control mechanisms such as null-space collision avoidance without retraining the policy backbone. We instantiate SP with diffusion, flow-matching, transformer-based, and vision-language-action backbones. Experiments in low-dimensional motion learning, simulated manipulation under matched backbones, dexterous manipulation, and real-robot case studies show that SP remains compatible with modern policy learners while exposing useful motion-structure properties, including compact decoding, temporal resampling, local correction around predicted motions, uncertainty evaluation, and controller compatibility.",
+      "url": "https://arxiv.org/abs/2606.07386v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.07386v1",
+      "published": "2026-06-05T15:23:54Z",
+      "updated": "2026-06-05T15:23:54Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2606.07383v1",
+      "title": "RhinoVLA Technical Report",
+      "authors": [
+        "Huixi Intelligence",
+        ":",
+        "Chen Zhang",
+        "Chenyang Zhou",
+        "Guanglei Ding",
+        "Guanghui He",
+        "Haibin Gao",
+        "Jiajia Chen",
+        "Jianyong Zhang",
+        "Lianyi Yu",
+        "Ningyi Xu",
+        "Ping Xu",
+        "Qingchen Li",
+        "Yingjun Hu",
+        "Yijia Zhang",
+        "Yuxi Liu"
+      ],
+      "abstract": "Vision-Language-Action (VLA) models have shown strong potential for robotic manipulation, but real-time deployment on edge hardware remains challenging. In this work, we identify VLM visual and context tokens as a major source of deployment latency: for GEMM-dominated projection operators, computation grows linearly with the number of input tokens when model dimensions are fixed. Motivated by this observation, we propose RhinoVLA, a deployment-oriented VLA model co-designed with the Huixi R1 edge SoC. RhinoVLA adopts a token-efficient Qwen3-VL backbone and a continuous Action Expert, reducing the VLM-side token and computation burden while preserving pretrained multimodal capability. To support cross-robot learning, RhinoVLA further introduces a unified interface that combines View Registry, 72D physical state-action slot space, and robotinstance LoRA, allowing heterogeneous robot observations and action schemas to be aligned under a shared policy. On the deployment side, RhinoVLA is optimized through hardware-aware compilation, mixed-precision execution, and parallel visual encoding. Experiments show that RhinoVLA achieves downstream performance comparable to \u03c00.5 at a similar parameter scale, while reaching 11.69 Hz end-to-end inference on Huixi R1, meeting the 10 Hz real-time closedloop control target. The project will be open-sourced at https://github.com/HuixiAI/RhinoVLA.",
+      "url": "https://arxiv.org/abs/2606.07383v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.07383v1",
+      "published": "2026-06-05T15:21:41Z",
+      "updated": "2026-06-05T15:21:41Z",
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "primary_category": "cs.RO"
     }
   ]
 }
