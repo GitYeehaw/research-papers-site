@@ -2,253 +2,237 @@
   "category": "cs",
   "name": "CS Research",
   "description": "Computer Science \u2014 AI, Machine Learning, NLP, Computer Vision",
-  "scraped_at": "2026-06-09T11:24:40.323206+00:00",
+  "scraped_at": "2026-06-10T11:44:24.434736+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2606.09828v1",
-      "title": "Latent Spatial Memory for Video World Models",
+      "id": "2606.11190v1",
+      "title": "When to Align, When to Predict: A Phase Diagram for Multimodal Learning",
       "authors": [
-        "Weijie Wang",
-        "Haoyu Zhao",
-        "Yifan Yang",
-        "Feng Chen",
-        "Zeyu Zhang",
-        "Yefei He",
-        "Zicheng Duan",
-        "Donny Y. Chen",
-        "Yuqing Yang",
-        "Bohan Zhuang"
+        "Ilay Kamai",
+        "Hugues Van Assel",
+        "Aviv Regev",
+        "Hagai B. Perets",
+        "Randall Balestriero"
       ],
-      "abstract": "Video world models that maintain 3D spatial consistency across generated frames typically rely on explicit point cloud memory constructed in RGB space. This design is both computationally expensive, requiring repeated rendering and VAE encoding, and inherently lossy, as the round trip through pixel space discards rich features of the learned latent representation. In this paper, we introduce \\emph{latent spatial memory} for video world models, a persistent 3D cache that stores scene information directly in the diffusion latent space, avoiding pixel-space reconstruction. Building on this, we propose Mirage, a latent-space spatial memory framework that constructs the memory by lifting latent tokens into 3D via depth-guided back-projection and queries it by synthesizing novel views through direct latent-space warping. This unified formulation eliminates both the information loss of pixel-space reconstruction and the computational burden of repeated encoding and rendering. Experiments show that latent spatial memory achieves up to \\textbf{10.57}$\\times$ faster end-to-end video generation and \\textbf{55}$\\times$ reduction in memory footprint relative to explicit 3D baselines. Leveraging the geometric prior of the diffusion model, Mirage attains state-of-the-art performance on WorldScore and strong reconstruction quality on RealEstate10K.",
-      "url": "https://arxiv.org/abs/2606.09828v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.09828v1",
-      "published": "2026-06-08T17:59:54Z",
-      "updated": "2026-06-08T17:59:54Z",
-      "categories": [
-        "cs.CV"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2606.09827v1",
-      "title": "MemoryVLA++: Temporal Modeling via Memory and Imagination in Vision-Language-Action Models",
-      "authors": [
-        "Hao Shi",
-        "Weiye Li",
-        "Bin Xie",
-        "Yulin Wang",
-        "Renping Zhou",
-        "Tiancai Wang",
-        "Xiangyu Zhang",
-        "Ping Luo",
-        "Gao Huang"
-      ],
-      "abstract": "Temporal modeling is essential for robotic manipulation, as effective control requires both memory of past interactions and imagination of future states. However, most VLA models rely primarily on the current observation and therefore struggle with long-horizon, temporally dependent tasks. Cognitive science suggests that humans rely on working memory to buffer short-lived context, the hippocampal system to preserve episodic memory of past experience, and internal models to imagine possible future state evolution. Inspired by these mechanisms, we propose MemoryVLA++, a full temporal modeling framework that equips VLA models with memory and imagination for robotic manipulation. A pretrained VLM encodes the current observation into perceptual and cognitive tokens, forming working memory. These tokens query a Perceptual-Cognitive Memory Bank to retrieve relevant historical context. This bank stores low-level details and high-level semantics from past interactions, and is updated through redundancy-aware consolidation. A world model imagines future states in a denoising latent space, and the imagined latents are integrated under memory guidance to form full temporal-aware tokens. The resulting tokens condition a diffusion action expert to predict temporally consistent action sequences. We conduct extensive experiments on 5 simulation benchmarks and 3 categories of real-robot tasks across 3 robots, covering general manipulation, long-horizon temporal tasks, robustness, and generalization. Our method achieves strong performance across Libero, SimplerEnv, Mikasa-Robo, Calvin, Libero-Plus, and diverse real-robot tasks, validating the effectiveness of full temporal modeling with memory and imagination. For example, on real robots, it achieves +9%, +26%, +28% gains on general, memory-dependent, and imagination-dependent tasks. Project Page: https://shihao1895.github.io/MemoryVLA-PP-Web",
-      "url": "https://arxiv.org/abs/2606.09827v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.09827v1",
-      "published": "2026-06-08T17:59:53Z",
-      "updated": "2026-06-08T17:59:53Z",
-      "categories": [
-        "cs.RO",
-        "cs.CV"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2606.09826v1",
-      "title": "OmniGameArena: A Unified UE5 Benchmark for VLM Game Agents with Improvement Dynamics",
-      "authors": [
-        "Mingxian Lin",
-        "Shengju Qian",
-        "Yuqi Liu",
-        "Yi-Hua Huang",
-        "Yiyu Wang",
-        "Wei Huang",
-        "Yitang Li",
-        "Fan Zhang",
-        "Zeyu Hu",
-        "Lingting Zhu",
-        "Xin Wang",
-        "Xiaojuan Qi"
-      ],
-      "abstract": "Vision-language model (VLM) agents are increasingly deployed in interactive game environments. Yet game benchmarks for VLM agents typically report a single first-attempt score per (agent, game) pair, focus on single-agent Solo play, and lack unified protocols for evaluating heterogeneous agent classes (commercial VLMs, open-weight VLMs, and specialized game policies) on the same footing. We address these gaps with OmniGameArena, a real-time benchmark of twelve newly built Unreal Engine 5 games spanning Solo (7), PvP (3), and Coop (2) with unified action interfaces, and the Improvement Dynamics Curve (IDC), an agentic-reflection harness in which a tool-using reflector LLM autonomously refines a bounded skill prompt across multiple rounds. Beyond cold-start leaderboard scores, IDC exposes two additional observables for each (agent, game) pair: how the score evolves across reflection rounds, and how the learned skill behaves on held-out task variants. We report these observables for twelve VLM agents on the cold-start leaderboard and four top agents under IDC.",
-      "url": "https://arxiv.org/abs/2606.09826v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.09826v1",
-      "published": "2026-06-08T17:59:43Z",
-      "updated": "2026-06-08T17:59:43Z",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2606.09825v1",
-      "title": "An Agency-Transferring Model-Free Policy Enhancement Technique",
-      "authors": [
-        "Anton Bolychev",
-        "Georgiy Malaniya",
-        "Sinan Ibrahim",
-        "Pavel Osinenko"
-      ],
-      "abstract": "Training reinforcement learning (RL) policies from scratch is costly: it requires careful reward and environment design, extensive tuning, and substantial computation. Yet many control problems already have a functional but suboptimal policy available as a baseline. This paper proposes a method for embedding such a baseline into the RL training process, simultaneously improving training efficiency relative to from-scratch methods and producing a learning policy that outperforms the baseline. At each step, the method arbitrates between the baseline policy and a trainable learning policy, initially relying strongly on the baseline policy and then progressively transferring agency to the learning policy. By the end of training, the learning policy is a standalone neural network that operates without baseline policy support. The paper formalizes what it means for the baseline policy to be functional: under this policy, the agent reaches a goal set and remains there with high probability. The proposed arbitration mechanism is designed to exploit this property during training, yielding high goal-reaching rates right from the beginning of training. A theoretical analysis provides a formal interpretation of this behavior under stated assumptions and extends it to the final baseline-free regime, where explicit lower bounds are derived for the goal-reaching probability of the standalone learning policy. Empirical results on continuous-control benchmarks show that the proposed method achieves returns that match or exceed those of competitive approaches, while maintaining the highest goal-reaching rates throughout training among the compared methods -- including in the final stage, where the learning policy operates without any baseline support.",
-      "url": "https://arxiv.org/abs/2606.09825v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.09825v1",
-      "published": "2026-06-08T17:59:39Z",
-      "updated": "2026-06-08T17:59:39Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "eess.SY",
-        "math.OC"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2606.09822v1",
-      "title": "Causally Evaluating the Learnability of Formal Language Tasks",
-      "authors": [
-        "V\u00e9steinn Sn\u00e6bjarnarson",
-        "Anej Svete",
-        "Josef Valvoda",
-        "Reda Boumasmoud",
-        "Brian DuSell",
-        "Ryan Cotterell"
-      ],
-      "abstract": "Language models, as multi-task learners, acquire a wide range of abilities during training. A fundamental question is how much task-specific data is needed to learn a given task. Answering this for natural language is difficult: tasks are hard to delineate and can confound one another. To rigorously investigate the relationship between data frequency and learnability, we turn to a controlled setting using formal languages induced from probabilistic finite automata. These serve as a methodological testbed to demonstrate that standard correlational evaluation practices are inherently flawed. To enable causal analysis, we introduce the binning semiring, an algebraic object that lets us control how often a targeted property occurs in a sampled corpus. We formulate the experimental pipeline as a causal graphical model and derive decomposed Kullback-Leibler divergence metrics to measure the learnability of specific sub-tasks. Our experiments show that evaluating learnability without causal intervention leads to incorrect conclusions due to confounders in correlational analysis, and serve as a warning about correlational pitfalls in natural-language settings.",
-      "url": "https://arxiv.org/abs/2606.09822v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.09822v1",
-      "published": "2026-06-08T17:58:36Z",
-      "updated": "2026-06-08T17:58:36Z",
-      "categories": [
-        "cs.CL",
-        "cs.FL"
-      ],
-      "primary_category": "cs.CL"
-    },
-    {
-      "id": "2606.09821v1",
-      "title": "Rethinking the Divergence Regularization in LLM RL",
-      "authors": [
-        "Jiarui Yao",
-        "Xiangxin Zhou",
-        "Penghui Qi",
-        "Wee Sun Lee",
-        "Liefeng Bo",
-        "Tianyu Pang"
-      ],
-      "abstract": "Reinforcement learning (RL) has become a key component of post-training large language models (LLMs). In practice, LLM RL is often off-policy because of training-inference mismatch and policy staleness, making trust-region control essential for stable optimization. Mainstream methods such as PPO and GRPO approximate this control with a ratio-clipping mechanism, but the importance ratio can be a poor proxy for distributional shift in long-tailed vocabularies. Recent work such as DPPO addresses this mismatch by replacing ratio-based clipping with a divergence-based mask, yielding a trust region defined by the sampled token's absolute probability shift. However, DPPO still relies on a hard mask: once a token crosses the trust-region boundary in a harmful direction, its gradient is discarded rather than corrected. To address this, we propose Divergence Regularized Policy Optimization (DRPO), which replaces the hard mask with a smooth advantage-weighted quadratic regularizer on policy shift. DRPO preserves the same trust-region geometry as DPPO while inducing bounded, continuous gradient weights that attenuate diverging updates and provide corrective signals beyond the boundary. Experiments across model scales, architectures, and precision settings show that DRPO improves the stability and efficiency of LLM RL training.",
-      "url": "https://arxiv.org/abs/2606.09821v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.09821v1",
-      "published": "2026-06-08T17:58:23Z",
-      "updated": "2026-06-08T17:58:23Z",
+      "abstract": "Cross-modal alignment (CA) and cross-modal prediction (CP) are the dominant paradigms for multimodal representation learning, yet there is no systematic understanding of when each succeeds, when each fails, and when cross-modal training helps at all -- a gap that leaves practitioners, especially in scientific domains like biomedicine or astrophysics, with heterogeneous instruments and multiple levels of organization and measurement, unable to diagnose why standard methods underperform the best single modality. We develop a unified linear framework that addresses both questions. Under a spiked signal-plus-noise model with structured cross-modal nuisance correlation, we derive separation ratios for both objectives that expose complementary failure modes: alignment whitens each modality and fails when nuisance is strongly correlated across views; prediction encodes whatever is cross-predictable through a one-sided whitening, with recovery governed by source-modality quality. The resulting phase diagram partitions multimodal problems into four regimes: Both, CA only, CP only, and Neither. We present a data-driven procedure to locate real-world datasets in this diagram using a small labeled subsample, identifying the preferred objective and prediction direction before any cross-modal training. Experiments on synthetic data, stereo-vision benchmarks, image-caption pairs, and real astrophysical data validate the predictions in the nonlinear regime, including the Neither regime where cross-modal training is actively harmful. Our framework lets practitioners diagnose their multimodal problem and choose the right objective before committing to training. Code to reproduce the results is available at https://github.com/IlayMalinyak/mm_align_vs_pred.",
+      "url": "https://arxiv.org/abs/2606.11190v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.11190v1",
+      "published": "2026-06-09T17:59:58Z",
+      "updated": "2026-06-09T17:59:58Z",
       "categories": [
         "cs.LG"
       ],
       "primary_category": "cs.LG"
     },
     {
-      "id": "2606.09820v1",
-      "title": "Weighted universal approximation of differentiable maps on infinite-dimensional manifolds",
+      "id": "2606.11189v1",
+      "title": "A Unifying Lens on Supervised Fine-Tuning Through Target Distribution Design",
       "authors": [
-        "Philipp Schmocker",
-        "Josef Teichmann"
+        "Tong Xie",
+        "Yuanhao Ban",
+        "Yunqi Hong",
+        "Sohyun An",
+        "Yihang Chen",
+        "Cho-Jui Hsieh"
       ],
-      "abstract": "We generalize the universal approximation theorem for functional input neural networks (FNN) to differentiable maps by including the approximation of the derivatives. A FNN maps the input from a possibly infinite-dimensional weighted manifold to the real-valued hidden layer, on which a non-linear scalar activation function is applied, and then returns the output into a Banach space via some linear readouts. By proving a weighted Nachbin theorem, we establish a universal approximation theorem (UAT) for differentiable maps, which goes beyond the usual formulation on compact sets and also includes the approximation of the derivatives. This leads us to approximation results for non-anticipative functionals including the horizontal and vertical derivatives. As a further application, we show that linear functions of the signature are able to approximate path space functionals including their directional derivatives.",
-      "url": "https://arxiv.org/abs/2606.09820v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.09820v1",
-      "published": "2026-06-08T17:57:40Z",
-      "updated": "2026-06-08T17:57:40Z",
+      "abstract": "Supervised fine-tuning (SFT) typically maximizes the likelihood of every token in a demonstrated trajectory. However, an observed token can be non-unique, noisy, or misaligned with the model prior. Strictly fitting toward this one-hot target may be suboptimal, especially when the pretrained model encodes a rich knowledge prior. In this work, we reinterpret SFT as target distribution design: instead of studying only the loss objective, we analyze the token-level target that the loss drives the model to match. We introduce the Q-target framework, which decomposes SFT supervision into two explicit choices: (1) how strongly to rely on the observed token, and (2) how to allocate the remaining probability mass over alternatives. This perspective unifies many existing SFT variants as implicit choices of the target distribution Q. Building on this view, we propose Target-SFT which constructs the training objective directly from the desired target distribution. This method consistently outperforms across the ten reasoning dataset-model settings evaluated, showing the effectiveness of this target-based approach. Overall, our formulation reveals a more fundamental design principle for SFT training and opens a broader search space for SFT objectives.",
+      "url": "https://arxiv.org/abs/2606.11189v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.11189v1",
+      "published": "2026-06-09T17:59:54Z",
+      "updated": "2026-06-09T17:59:54Z",
       "categories": [
-        "math.FA",
         "cs.LG",
-        "math.PR",
-        "q-fin.MF",
-        "stat.ML"
+        "cs.AI",
+        "cs.CL"
       ],
-      "primary_category": "math.FA"
+      "primary_category": "cs.LG"
     },
     {
-      "id": "2606.09816v1",
-      "title": "PTL-Diffusion: Manifold-Aware Diffusion with Periodic Terminal Laws",
+      "id": "2606.11188v1",
+      "title": "ARM: An AutoRegressive Large Multimodal Model with Unified Discrete Representations",
       "authors": [
-        "Danqi Zhuang",
-        "Jisui Huang",
-        "Xiaoyue Xi",
-        "Andrew Kiggins",
-        "Xiaojie Wang",
-        "Ke Chen",
-        "Yue Wu"
+        "Junke Wang",
+        "Xiao Wang",
+        "Jiacheng Pan",
+        "Xuefeng Hu",
+        "Feng Li",
+        "Jingxiang Sun",
+        "Chaorui Deng",
+        "Zilong Chen",
+        "Yunpeng Chen",
+        "Kaibin Tian",
+        "Matthew Gwilliam",
+        "Hao Chen",
+        "Danhui Guan",
+        "Kun Xu",
+        "Weilin Huang",
+        "Zuxuan Wu",
+        "Haoqi Fan",
+        "Yu-Gang Jiang",
+        "Zhenheng Yang"
       ],
-      "abstract": "Standard diffusion models typically use a single time-homogeneous Gaussian terminal distribution as the reference law for generation. While this choice is analytically convenient and empirically powerful, it provides little explicit structure for data concentrated near low-dimensional manifolds, where different regions of the data distribution may correspond to distinct local geometric or semantic factors. As a result, the reverse model must recover manifold-level structure almost entirely from an unstructured terminal reference distribution. We propose PTL-Diffusion, a proof-of-concept diffusion framework whose forward noising process converges to a nonconstant periodic family of Gaussian terminal laws rather than to a single invariant law. Unlike a phase-conditioned DDPM, where phase information only enters the denoising network while the forward process remains unchanged, PTL-Diffusion embeds phase structure directly into the forward noising dynamics. The proposed construction remains close to standard denoising diffusion models: for a periodically forced Ornstein--Uhlenbeck-type forward process, we derive closed-form forward marginals, the limiting periodic Gaussian terminal family, and explicit Gaussian reverse posteriors, enabling standard noise-prediction training. We also introduce an invariant-average regularization term coupling the phase-conditioned reverse dynamics through the averaged periodic reference law. Experiments on torus and cylinder point-cloud benchmarks and the Olivetti face dataset show that PTL-Diffusion improves manifold-level distributional matching over matched DDPM baselines, reducing phase-conditioned errors, feature-space covariance errors, and nearest-neighbour manifold distances. These results suggest structured terminal reference laws as a promising direction, while motivating more expressive phase constructions and larger-scale evaluations.",
-      "url": "https://arxiv.org/abs/2606.09816v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.09816v1",
-      "published": "2026-06-08T17:56:16Z",
-      "updated": "2026-06-08T17:56:16Z",
+      "abstract": "This paper introduces ARM, a discrete representation-based AutoRegressive Model that unifies image understanding, generation, and editing within a next-token prediction framework. ARM is built on three efforts: first, we train a discrete semantic visual tokenizer that maps images into compact token sequences. Our tokenizer is supervised with multiple objectives that jointly promote semantic discriminability, language alignment and faithful reconstruction, thereby supporting diverse tasks in a shared latent space. With this, we train a 7B autoregressive model over large-scale text and image token sequences, seamlessly developing vision-language perception and generation capabilities. Finally, to further improve preference-aligned behavior for text-to-image generation and instruction-guided editing, ARM applies reinforcement learning (RL) to optimize task-level objectives such as visual quality, instruction adherence, and edit consistency. Surprisingly, the results show that RL not only substantially improves performance on the target tasks (e.g., raising WISE overall from 0.50 to 0.56, GEdit-Bench-EN G_O from 5.75 to 6.68), but also induces cross-task synergy between text-to-image generation and editing. Collectively, these findings highlight autoregressive modeling, when paired with strong representations and preference optimization, as a scalable foundation for multimodal intelligence. Code: https://github.com/wdrink/ARM.",
+      "url": "https://arxiv.org/abs/2606.11188v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.11188v1",
+      "published": "2026-06-09T17:59:28Z",
+      "updated": "2026-06-09T17:59:28Z",
       "categories": [
-        "cs.CV",
-        "cs.AI",
-        "math.PR"
+        "cs.CV"
       ],
       "primary_category": "cs.CV"
     },
     {
-      "id": "2606.09813v1",
-      "title": "iMaC: Translating Actions into Motion and Contact Images for Embodied World Models",
+      "id": "2606.11187v1",
+      "title": "Next Forcing: Causal World Modeling with Multi-Chunk Prediction",
       "authors": [
-        "Zhenyu Wu",
-        "Xiuwei Xu",
-        "Yukun Zhou",
-        "Yifan Li",
-        "Qiuping Deng",
-        "Xiaofeng Wang",
-        "Zheng Zhu",
-        "Bingyao Yu",
-        "Ziwei Wang",
-        "Jiwen Lu",
-        "Haibin Yan"
+        "Gangwei Xu",
+        "Qihang Zhang",
+        "Jiaming Zhou",
+        "Xing Zhu",
+        "Yujun Shen",
+        "Xin Yang",
+        "Yinghao Xu"
       ],
-      "abstract": "Embodied world models have emerged as a pivotal paradigm for visual robotic decision-making and interactive environment simulation. However, conventional embodied frameworks rely on low-dimensional structured action vectors (e.g., joint angles and end-effector poses), which suffer from limited expressive capacity, poor generalization across diverse embodiments, and unnatural dynamic modeling for complex physical interactions. To address these limitations, this paper proposesiMac (Image as Action Control), a novel unified control paradigm that treats raw visual images as native action representations for embodied world models. Departing from traditional explicit kinematic action encoding, iMac formulates continuous visual manipulation as image-based action tokens, which inherently encapsulate spatial motion intentions, interactive geometric constraints and subtle physical dynamics. We construct a dual-branch embodied architecture consisting of an image-action encoder and a dynamic world predictor: the encoder compresses target-driven visual images into compact action embeddings, while the predictor learns environment transition rules conditioned on image actions to achieve high-fidelity future state prediction and closed-loop embodied control. Extensive experiments are conducted on public embodied manipulation benchmarks and real-world robotic scenarios. The results demonstrate that iMac outperforms vector-based action control baselines in prediction accuracy, task success rate and cross-scene generalization ability. Moreover, our image-action design eliminates the reliance on manually defined action spaces, realizing flexible and universal control for heterogeneous embodied agents. This work provides an innovative visual-action perspective for embodied world models, offering a simple yet effective paradigm for scalable robotic perception and manipulation.",
-      "url": "https://arxiv.org/abs/2606.09813v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.09813v1",
-      "published": "2026-06-08T17:55:41Z",
-      "updated": "2026-06-08T17:55:41Z",
+      "abstract": "Autoregressive video generation has emerged as a powerful paradigm for World Action Models (WAMs). However, existing approaches suffer from slow training convergence and limited converged accuracy, particularly at high frame rates, as the training supervision is confined to the current chunk without explicit signals about future dynamics; they also suffer from slow inference due to iterative video denoising. In this paper, we present Next Forcing, a multi-chunk prediction (MCP) framework for causal world modeling that enables faster training, higher accuracy, and accelerated inference. Inspired by multi-token prediction in large language models, Next Forcing introduces an MCP training objective that augments the main model with lightweight auxiliary MCP modules to simultaneously denoise video chunks at multiple future temporal horizons (next$^1$, next$^2$, next$^3$ chunks). These MCP modules form a causal chain across prediction depths, where intermediate features fused from multiple layers of the main model are leveraged to predict future dynamics, allowing near-future predictions to inform farther-future ones and providing dense multi-scale temporal supervision back to the main model. During training, the MCP modules significantly accelerate convergence and improve converged accuracy, especially at high frame rates: at 50 fps, Next Forcing achieves a 93.1% relative improvement over LingBot-VA at 5k training steps and 2.3x faster convergence, and establishes new state-of-the-art results on the RoboTwin benchmark (94.1/93.5% on Clean/Random). At inference, the MCP modules can be retained to predict the next video chunk in parallel with the current one, achieving 2x inference acceleration. Next Forcing also demonstrates significant improvements on PhyWorld, a benchmark evaluating adherence to physical laws in video generation, and over 50% FVD reduction on general video pretraining.",
+      "url": "https://arxiv.org/abs/2606.11187v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.11187v1",
+      "published": "2026-06-09T17:59:22Z",
+      "updated": "2026-06-09T17:59:22Z",
       "categories": [
-        "cs.RO",
         "cs.CV"
       ],
-      "primary_category": "cs.RO"
+      "primary_category": "cs.CV"
     },
     {
-      "id": "2606.09811v1",
-      "title": "AHA-WAM:Asynchronous Horizon-Adaptive World-Action Modeling with Observation-Guided Context Routing",
+      "id": "2606.11186v1",
+      "title": "AnyMod-LLVE: Low-Light Video Enhancement with Modality-Agnostic Inference",
       "authors": [
-        "Jisong Cai",
-        "Long Ling",
-        "Shiwei Chu",
-        "Zhongshan Liu",
-        "Jiayue Kang",
-        "Zhixuan Liang",
-        "Wenjie Xu",
-        "Yinan Mao",
-        "Weinan Zhang",
-        "Xiaokang Yang",
-        "Ru Ying",
-        "Ran Zheng",
-        "Yao Mu"
+        "Hangfeng Liang",
+        "Yutao Hu",
+        "Yanhan Hu",
+        "Xiaohan Wu",
+        "Wenqi Shao",
+        "Ying Fu"
       ],
-      "abstract": "World-action models have emerged as a promising paradigm for robot manipulation, jointly modeling visual scene dynamics and actions to inject physical priors into policy learning. However, existing world-action models couple world prediction and action execution at the same temporal resolution, forcing the world branch to model near-term frame variations that are redundant and weakly informative. We posit that strictly binding world prediction and action execution to the same temporal rhythm may underutilize the potential of the video branch for embodied control. Therefore, we propose AHA-WAM, an Asynchronous Horizon-Adaptive World-Action Model built on a dual Diffusion Transformer (DiT) architecture that reorganizes world-action modeling around this temporal asymmetry. AHA-WAM instantiates the video DiT as a low-frequency world planner that maintains rolling key-value memory over past observations and exposes reusable layerwise latent context encoding long-horizon scene evolution, while a high-frequency action DiT executes short action chunks in closed loop by querying this context through layerwise joint attention. To support asynchronous execution, we introduce horizon-adaptive offset training and Observation-Guided Video-Context Routing (OVCR), which together let the action expert exploit long-horizon world context while remaining responsive to real-time execution state without rerunning the video DiT. Experiments on RoboTwin and real-world manipulation tasks show that AHA-WAM achieves state-of-the-art performance without any robot-data pretraining, attaining 92.80% average success on RoboTwin and 78.3% success across 4 real-world tasks, while reaching 24.17 Hz closed-loop control with a 4.59x speedup over Fast-WAM.",
-      "url": "https://arxiv.org/abs/2606.09811v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.09811v1",
-      "published": "2026-06-08T17:55:18Z",
-      "updated": "2026-06-08T17:55:18Z",
+      "abstract": "Low-light video enhancement (LLVE) remains a challenging task due to severe information degradation under low-illumination conditions. Recent multimodal approaches have significantly improved enhancement performance by incorporating auxiliary modalities, such as event streams and infrared images. However, these methods typically assume the availability of these modalities at inference, which is often not feasible in real-world scenarios. To solve this problem, in this work, we propose AMNet, a unified multimodal framework for LLVE, to support flexible modality-agnostic inference, where auxiliary modalities may be unavailable. To address the issue of modality absence, we introduce a Spatial-Spectral Dual-Gated Translator that learns the correspondence between auxiliary modalities and RGB inputs, producing implicit auxiliary representations to support the robust enhancement. Additionally, to fully facilitate the learning of cross-modal correspondence, we conduct large-scale multimodal pretraining based on the RGB-only dataset with synthetic auxiliary modalities. Extensive experiments demonstrate that AMNet could handle arbitrary inference-time modality combinations and exhibits superior performance for LLVE under modality absence conditions. Code and models are available on the project page.",
+      "url": "https://arxiv.org/abs/2606.11186v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.11186v1",
+      "published": "2026-06-09T17:59:05Z",
+      "updated": "2026-06-09T17:59:05Z",
       "categories": [
-        "cs.RO",
-        "cs.AI",
         "cs.CV"
       ],
-      "primary_category": "cs.RO"
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2606.11182v1",
+      "title": "EEVEE: Towards Test-time Prompt Learning in the Real World for Self-Improving Agents",
+      "authors": [
+        "Weixian Xu",
+        "Shilong Liu",
+        "Mengdi Wang"
+      ],
+      "abstract": "In this paper, we propose EEVEE, the first multi-dataset test-time prompt learning framework for LLM agents, enabling test-time prompt learning under real-world task streams. Existing methods are largely designed for single-dataset settings, while real-world applications require models to handle heterogeneous input streams drawn from multiple datasets, domains, and task distributions, limiting their practical applicability. To mitigate cross-dataset interference, EEVEE introduces a router that partitions incoming inputs into task clusters and assigns them to suitable prompt configurations. This design is optimized via a router-prompt co-evolution strategy, which employs interleaved router and prompt learning phases to address their mutual dependency. Experiments across multiple datasets demonstrate that the framework improves robustness under heterogeneous data streams while maintaining single-benchmark learning capability and efficiency. Specifically, EEVEE improves average multi-benchmark scores by 10.38 and 24.32 points over Qwen3-4B-Instruct and DeepSeek-V3.2, surpassing SOTA methods GEPA and ACE by up to 37.2% and 48.2%.",
+      "url": "https://arxiv.org/abs/2606.11182v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.11182v1",
+      "published": "2026-06-09T17:57:16Z",
+      "updated": "2026-06-09T17:57:16Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "primary_category": "cs.LG"
+    },
+    {
+      "id": "2606.11180v1",
+      "title": "Lip Forcing: Few-Step Autoregressive Diffusion for Real-time Lip Synchronization",
+      "authors": [
+        "Paul Hyunbin Cho",
+        "Jinhyuk Jang",
+        "SeokYoung Lee",
+        "Joungbin Lee",
+        "Siyoon Jin",
+        "Heeseong Shin",
+        "Jung Yi",
+        "Yunjin Park",
+        "Chulmin Park",
+        "Seungryong Kim"
+      ],
+      "abstract": "Diffusion-based lip synchronization models achieve strong visual quality and audio-visual alignment, but full-sequence bidirectional attention and many denoising steps make them impractical for real-time inference. We present Lip Forcing, to our knowledge the first autoregressive diffusion method for video-to-video (V2V) lip synchronization, which distills a 14B audio-conditioned bidirectional video diffusion teacher into causal students. At inference, the students generate each chunk in only two denoising steps without inference-time CFG, enabling real-time lip synchronization. A lip-sync-specific teacher-trajectory analysis reveals a CFG fidelity-sync tradeoff: no-CFG predictions favor reference fidelity, whereas CFG-guided predictions favor synchronization within a mid-trajectory band. Lip Forcing translates this finding into three analysis-derived components: Sync-Window DMD, a two-step inference schedule, and a SyncNet-based reward. We validate Lip Forcing at two student scales, both distilled from the 14B teacher. The 1.3B student crosses into real-time streaming at 31 FPS, $17.6\\times$ faster than its same-scale bidirectional model. The 14B student, the largest diffusion model reported for V2V lip synchronization, runs $39.8\\times$ faster than its teacher at comparable reference fidelity. Time-to-first-frame is sub-millisecond at both scales, far below every diffusion baseline.",
+      "url": "https://arxiv.org/abs/2606.11180v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.11180v1",
+      "published": "2026-06-09T17:56:36Z",
+      "updated": "2026-06-09T17:56:36Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2606.11176v1",
+      "title": "Data Journalist Agent: Transforming Data into Verifiable Multimodal Stories",
+      "authors": [
+        "Kevin Qinghong Lin",
+        "Batu EI",
+        "Yuhong Shi",
+        "Pan Lu",
+        "Philip Torr",
+        "James Zou"
+      ],
+      "abstract": "Data tells stories that shape society; the data journalist's job is to turn raw information into stories non-experts can trust. A high-quality news feature takes a newsroom team weeks: hunting for context, running statistics, choosing an angle, and designing visuals. Recent agents handle individual steps well: data-science agents close the analysis loop, while design agents synthesize beautiful websites. But can an agent serve as a data journalist end to end? We introduce Data Journalist Agent (Data2Story), a multi-agent framework that orchestrates specialized roles into a single virtual newsroom. Data2Story contributes two innovations. (i) Claims are evidence-grounded: an Inspector links every number, angle, and asset back to data, code, or an external reference. (ii) Articles are multimodally generative: rather than defaulting to plain text and static charts, Data2Story reasons about what readers will want to see, then deploys multimodal tools, such as interactive maps for geography and audio for music. We evaluate Data2Story on 18 articles, each paired with the originally published expert piece, along four axes: (a) human-agent angle coverage; (b) rubric evaluation with 53 participants across five dimensions; (c) computer-use agents as judges, a cost-saving proxy for how readers navigate interactive articles; and (d) verifiability, where a coding verifier re-executes statements against the data and checks claims against references. Data2Story produces competitive, evidence-traceable multimedia stories, with particular strength in transparency and auditability. Human articles retain an edge in editorial angle, creative design, and presentation. We position Data2Story as a collaborator for journalists, enabling more evidence-based, transparent, and verifiable reporting. Code and demos are available at https://data2story.github.io.",
+      "url": "https://arxiv.org/abs/2606.11176v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.11176v1",
+      "published": "2026-06-09T17:51:55Z",
+      "updated": "2026-06-09T17:51:55Z",
+      "categories": [
+        "cs.CV",
+        "cs.CL",
+        "cs.CY",
+        "cs.HC"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2606.11173v1",
+      "title": "The Role of Feedback Alignment in Self-Distillation",
+      "authors": [
+        "Semih Kara",
+        "O\u011fuzhan Ersoy"
+      ],
+      "abstract": "Conditioning a language model on additional context, such as feedback on a previous attempt, typically improves its response. Self-distillation trains the model to retain this improvement when the context is not present. The method works by matching the model's output distribution under two settings: a student that sees only the question, and a self-teacher that also sees the context. What the model learns therefore depends on what context the self-teacher receives, yet the design of this context remains largely unexplored. We study context design for self-distillation by training a solver on feedback from a frozen critic. We compare three conditions: (i) a binary reward (GRPO), (ii) the reference solution, and (iii) a step-by-step critique aligned to the solver's reasoning trace. Step-aligned critique yields the largest gains, outperforming GRPO by 16.11 points and reference-solution-conditioned self-distillation by 5.27 points (Avg@12). Per-token advantage analysis reveals why: step-aligned feedback targets only the tokens where reasoning fails, leaving correct behavior intact. Conditioning on the reference solution, by contrast, pressures the model to change its behavior at every token (even correct steps) because an alternative derivation inevitably differs in phrasing and approach. This suggests that structural alignment between feedback and the solver's reasoning is a key driver of self-distillation effectiveness.",
+      "url": "https://arxiv.org/abs/2606.11173v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.11173v1",
+      "published": "2026-06-09T17:50:09Z",
+      "updated": "2026-06-09T17:50:09Z",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "primary_category": "cs.AI"
+    },
+    {
+      "id": "2606.11172v1",
+      "title": "Predicting Future Behaviors in Reasoning Models Enables Better Steering",
+      "authors": [
+        "Evgenii Kortukov",
+        "Piotr Komorowski",
+        "Florian Klein",
+        "Paula Engl",
+        "Gabriele Sarti",
+        "Seong Joon Oh",
+        "Sebastian Lapuschkin",
+        "Wojciech Samek"
+      ],
+      "abstract": "Deployed large reasoning models (LRMs) often behave unexpectedly. Test-time steering controls LRM outputs by intervening on their hidden representations, but it can degrade output quality. We argue that prior steering work implicitly relies on internal features that detect behavior in already generated text. We show that these detection features are poor predictors of future behavioral outcomes, and thus not the natural intervention target. Instead, we train activation probes to predict future behavior likelihoods from intermediate reasoning steps. These probes predict the most likely behavior with 64%-91% accuracy, revealing a separate type of internal prediction features. Building on these prediction features, we introduce a text-level steering method, Future Probe Controlled Generation. FPCG samples multiple candidate sentences and chooses the best one according to a probe predicting the future behavior likelihood. This enables steering with almost no output quality degradation. FPCG also enables steering in several evaluations where activation steering fails. These results show that distinguishing detection and prediction features enables a more nuanced approach to controlling LRM behaviors.",
+      "url": "https://arxiv.org/abs/2606.11172v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.11172v1",
+      "published": "2026-06-09T17:49:24Z",
+      "updated": "2026-06-09T17:49:24Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG"
     }
   ]
 }

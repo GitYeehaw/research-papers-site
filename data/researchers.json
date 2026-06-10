@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-06-09T11:29:58.086178+00:00",
+  "scraped_at": "2026-06-10T11:49:42.058903+00:00",
   "researcher_count": 54,
   "researchers": [
     {
@@ -11,7 +11,7 @@
       "paper_count": 5,
       "papers": [
         {
-          "id": "2606.06493v2",
+          "id": "2606.06493v3",
           "title": "HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers",
           "authors": [
             "Lizhi Yang",
@@ -24,10 +24,10 @@
             "Aaron Ames"
           ],
           "abstract": "For a humanoid robot to be deployed in the real world, the choice of command space (i.e., the interface between task planning and whole-body control) is crucial. Existing whole-body controllers typically demand dense kinematic or spatial references that planners struggle to synthesize from task semantics. We instead propose a compact, explicit interface that is intuitive, general, modular, and expressive enough for diverse loco-manipulation skills. To this end, we introduce HANDOFF, a single humanoid whole-body controller that follows this interface and is distilled via multi-teacher KL distillation under a context-conditioned gating scheme into a mixture-of-experts student from three complementary specialists: whole-body motion tracking with safety-filtered data, locomotion, and fall-recovery. On the Unitree G1, HANDOFF matches state-of-the-art velocity tracking and offers one of the largest robust manipulation workspaces. We further demonstrate hardware feasibility through multiple natural-language-driven task roll-outs, powered by a VLM-driven agentic planner with no task-specific data or controller fine-tuning.",
-          "url": "https://arxiv.org/abs/2606.06493v2",
-          "pdf_url": "https://arxiv.org/pdf/2606.06493v2",
+          "url": "https://arxiv.org/abs/2606.06493v3",
+          "pdf_url": "https://arxiv.org/pdf/2606.06493v3",
           "published": "2026-06-04T17:59:50Z",
-          "updated": "2026-06-08T08:17:30Z",
+          "updated": "2026-06-09T07:34:32Z",
           "categories": [
             "cs.RO",
             "cs.AI",
@@ -713,6 +713,31 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2606.10025v1",
+          "title": "GHOST: Hierarchical Sub-Goal Policies for Generalizing Robot Manipulation",
+          "authors": [
+            "Sriram Krishna",
+            "Ben Eisner",
+            "Haotian Zhan",
+            "Ying Yuan",
+            "Haoyu Zhen",
+            "Chuang Gan",
+            "Shubham Tulsiani",
+            "David Held"
+          ],
+          "abstract": "We present GHOST, a framework for learning visuomotor manipulation policies that generalize beyond the training distribution. GHOST factorizes control into (i) a high-level policy that predicts the next sub-goal as a distribution over 3D end-effector poses from multi-view RGB-D observations, and (ii) a low-level goal-conditioned controller that executes embodiment-specific actions. To condition image-based policies on 3D goals, we introduce a simple spatial interface that projects predicted goals into the image plane and represents them as end-effector heatmaps. Across a suite of manipulation tasks, this hierarchical factorization consistently improves performance and robustness compared to a flat Diffusion Policy. Further, we show that this hierarchical interface also makes it easy to incorporate human demonstrations without relying on (noisy) action retargeting. As sub-goals are largely embodiment-agnostic, we train the high-level policy on human video to specify how learned skills should be applied and composed, while keeping the low-level policy trained purely on robot data. This hierarchy enables adaptation to novel objects and task variations using a small number of human demonstrations.",
+          "url": "https://arxiv.org/abs/2606.10025v1",
+          "pdf_url": "https://arxiv.org/pdf/2606.10025v1",
+          "published": "2026-06-08T18:08:01Z",
+          "updated": "2026-06-08T18:08:01Z",
+          "categories": [
+            "cs.RO",
+            "cs.CV",
+            "cs.LG"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2605.30326v1",
           "title": "RoboWits: Unexpected Challenges for Robotic Creative Problem Solving",
           "authors": [
@@ -795,30 +820,6 @@
           "pdf_url": "https://arxiv.org/pdf/2509.12741v1",
           "published": "2025-09-16T06:53:18Z",
           "updated": "2025-09-16T06:53:18Z",
-          "categories": [
-            "cs.RO",
-            "cs.AI",
-            "cs.LG"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2509.12379v1",
-          "title": "Geometric Red-Teaming for Robotic Manipulation",
-          "authors": [
-            "Divyam Goel",
-            "Yufei Wang",
-            "Tiancheng Wu",
-            "Guixiu Qiao",
-            "Pavel Piliptchak",
-            "David Held",
-            "Zackory Erickson"
-          ],
-          "abstract": "Standard evaluation protocols in robotic manipulation typically assess policy performance over curated, in-distribution test sets, offering limited insight into how systems fail under plausible variation. We introduce Geometric Red-Teaming (GRT), a red-teaming framework that probes robustness through object-centric geometric perturbations, automatically generating CrashShapes -- structurally valid, user-constrained mesh deformations that trigger catastrophic failures in pre-trained manipulation policies. The method integrates a Jacobian field-based deformation model with a gradient-free, simulator-in-the-loop optimization strategy. Across insertion, articulation, and grasping tasks, GRT consistently discovers deformations that collapse policy performance, revealing brittle failure modes missed by static benchmarks. By combining task-level policy rollouts with constraint-aware shape exploration, we aim to build a general purpose framework for structured, object-centric robustness evaluation in robotic manipulation. We additionally show that fine-tuning on individual CrashShapes, a process we refer to as blue-teaming, improves task success by up to 60 percentage points on those shapes, while preserving performance on the original object, demonstrating the utility of red-teamed geometries for targeted policy refinement. Finally, we validate both red-teaming and blue-teaming results with a real robotic arm, observing that simulated CrashShapes reduce task success from 90% to as low as 22.5%, and that blue-teaming recovers performance to up to 90% on the corresponding real-world geometry -- closely matching simulation outcomes. Videos and code can be found on our project website: https://georedteam.github.io/ .",
-          "url": "https://arxiv.org/abs/2509.12379v1",
-          "pdf_url": "https://arxiv.org/pdf/2509.12379v1",
-          "published": "2025-09-15T19:12:26Z",
-          "updated": "2025-09-15T19:12:26Z",
           "categories": [
             "cs.RO",
             "cs.AI",
@@ -4290,6 +4291,32 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2606.10305v1",
+          "title": "SARM2: Multi-Task Stage Aware Reward Modeling for Self Improving Robotic Manipulation",
+          "authors": [
+            "Qianzhong Chen",
+            "Hau Zheng",
+            "Justin Yu",
+            "Suning Huang",
+            "Jiankai Sun",
+            "Ken Goldberg",
+            "Chuan Wen",
+            "Pieter Abbeel",
+            "Yide Shentu",
+            "Philipp Wu",
+            "Mac Schwager"
+          ],
+          "abstract": "Fine-tuning vision-language-action (VLA) policies for long-horizon manipulation still relies heavily on behavior cloning, which requires costly high-quality demonstrations and keeps policies near the demonstration distribution. Reward models can reduce this dependence by reweighting demonstrations and providing dense supervision for on-robot reinforcement learning (RL), but they must be dense, accurate, and general. Existing methods fall short: task-specific stage-aware models are accurate but require per-task annotations, while general vision-language-model (VLM) reward models are broadly applicable but too coarse for fine-grained long-horizon progress. We introduce RM, a multi-task stage-aware reward model that combines an action-primitive-based stage estimator with a multi-gate Mixture-of-Experts (MMoE) value head to produce dense per-step rewards across manipulation tasks. Building on RM, we further propose SPIRAL (Self-Policy Improvement via Reward-Aligned Learning), an on-policy reward-guided framework that improves VLA policies from cheap autonomous rollouts. On a 10-task benchmark, RM reduces value-estimation MSE by 80% over the strongest baselines; when used in SPIRAL, it improves task success from around 50% to near-perfect performance on Folding Shorts (58% to 100%) and Cleaning Whiteboard (50% to 90%), showing that high-quality dense rewards are key to a stable robot data flywheel. Project website: https://qianzhong-chen.github.io/sarm2.github.io/.",
+          "url": "https://arxiv.org/abs/2606.10305v1",
+          "pdf_url": "https://arxiv.org/pdf/2606.10305v1",
+          "published": "2026-06-09T01:46:23Z",
+          "updated": "2026-06-09T01:46:23Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2605.29298v1",
           "title": "MonoDuo: Using One Robot Arm to Learn Bimanual Policies",
           "authors": [
@@ -4587,37 +4614,6 @@
             "cs.AI"
           ],
           "primary_category": "cs.RO"
-        },
-        {
-          "id": "2603.22435v1",
-          "title": "CaP-X: A Framework for Benchmarking and Improving Coding Agents for Robot Manipulation",
-          "authors": [
-            "Max Fu",
-            "Justin Yu",
-            "Karim El-Refai",
-            "Ethan Kou",
-            "Haoru Xue",
-            "Huang Huang",
-            "Wenli Xiao",
-            "Guanzhi Wang",
-            "Fei-Fei Li",
-            "Guanya Shi",
-            "Jiajun Wu",
-            "Shankar Sastry",
-            "Yuke Zhu",
-            "Ken Goldberg",
-            "Linxi \"Jim\" Fan"
-          ],
-          "abstract": "\"Code-as-Policy\" considers how executable code can complement data-intensive Vision-Language-Action (VLA) methods, yet their effectiveness as autonomous controllers for embodied manipulation remains underexplored. We present CaP-X, an open-access framework for systematically studying Code-as-Policy agents in robot manipulation. At its core is CaP-Gym, an interactive environment in which agents control robots by synthesizing and executing programs that compose perception and control primitives. Building on this foundation, CaP-Bench evaluates frontier language and vision-language models across varying levels of abstraction, interaction, and perceptual grounding. Across 12 models, CaP-Bench reveals a consistent trend: performance improves with human-crafted abstractions but degrades as these priors are removed, exposing a dependence on designer scaffolding. At the same time, we observe that this gap can be mitigated through scaling agentic test-time computation--through multi-turn interaction, structured execution feedback, visual differencing, automatic skill synthesis, and ensembled reasoning--substantially improves robustness even when agents operate over low-level primitives. These findings allow us to derive CaP-Agent0, a training-free framework that recovers human-level reliability on several manipulation tasks in simulation and on real embodiments. We further introduce CaP-RL, showing reinforcement learning with verifiable rewards improves success rates and transfers from sim2real with minimal gap. Together, CaP-X provides a principled, open-access platform for advancing embodied coding agents.",
-          "url": "https://arxiv.org/abs/2603.22435v1",
-          "pdf_url": "https://arxiv.org/pdf/2603.22435v1",
-          "published": "2026-03-23T18:08:10Z",
-          "updated": "2026-03-23T18:08:10Z",
-          "categories": [
-            "cs.RO",
-            "cs.AI"
-          ],
-          "primary_category": "cs.RO"
         }
       ]
     },
@@ -4629,6 +4625,32 @@
       "website": "https://people.eecs.berkeley.edu/~pabbeel/",
       "paper_count": 5,
       "papers": [
+        {
+          "id": "2606.10305v1",
+          "title": "SARM2: Multi-Task Stage Aware Reward Modeling for Self Improving Robotic Manipulation",
+          "authors": [
+            "Qianzhong Chen",
+            "Hau Zheng",
+            "Justin Yu",
+            "Suning Huang",
+            "Jiankai Sun",
+            "Ken Goldberg",
+            "Chuan Wen",
+            "Pieter Abbeel",
+            "Yide Shentu",
+            "Philipp Wu",
+            "Mac Schwager"
+          ],
+          "abstract": "Fine-tuning vision-language-action (VLA) policies for long-horizon manipulation still relies heavily on behavior cloning, which requires costly high-quality demonstrations and keeps policies near the demonstration distribution. Reward models can reduce this dependence by reweighting demonstrations and providing dense supervision for on-robot reinforcement learning (RL), but they must be dense, accurate, and general. Existing methods fall short: task-specific stage-aware models are accurate but require per-task annotations, while general vision-language-model (VLM) reward models are broadly applicable but too coarse for fine-grained long-horizon progress. We introduce RM, a multi-task stage-aware reward model that combines an action-primitive-based stage estimator with a multi-gate Mixture-of-Experts (MMoE) value head to produce dense per-step rewards across manipulation tasks. Building on RM, we further propose SPIRAL (Self-Policy Improvement via Reward-Aligned Learning), an on-policy reward-guided framework that improves VLA policies from cheap autonomous rollouts. On a 10-task benchmark, RM reduces value-estimation MSE by 80% over the strongest baselines; when used in SPIRAL, it improves task success from around 50% to near-perfect performance on Folding Shorts (58% to 100%) and Cleaning Whiteboard (50% to 90%), showing that high-quality dense rewards are key to a stable robot data flywheel. Project website: https://qianzhong-chen.github.io/sarm2.github.io/.",
+          "url": "https://arxiv.org/abs/2606.10305v1",
+          "pdf_url": "https://arxiv.org/pdf/2606.10305v1",
+          "published": "2026-06-09T01:46:23Z",
+          "updated": "2026-06-09T01:46:23Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
         {
           "id": "2606.05873v1",
           "title": "LadderMan: Learning Humanoid Perceptive Ladder Climbing",
@@ -4736,30 +4758,6 @@
             "cs.CV"
           ],
           "primary_category": "cs.RO"
-        },
-        {
-          "id": "2603.10158v1",
-          "title": "Cross-Hand Latent Representation for Vision-Language-Action Models",
-          "authors": [
-            "Guangqi Jiang",
-            "Yutong Liang",
-            "Jianglong Ye",
-            "Jia-Yang Huang",
-            "Changwei Jing",
-            "Rocky Duan",
-            "Pieter Abbeel",
-            "Xiaolong Wang",
-            "Xueyan Zou"
-          ],
-          "abstract": "Dexterous manipulation is essential for real-world robot autonomy, mirroring the central role of human hand coordination in daily activity. Humans rely on rich multimodal perception--vision, sound, and language-guided intent--to perform dexterous actions, motivating vision-based, language-conditioned manipulation systems for robots. However, training reliable vision-language-action (VLA) models for dexterous manipulation requires large-scale demonstrations across many robotic hands. In addition, as new dexterous embodiments appear rapidly, collecting data for each becomes costly and impractical, creating a need for scalable cross-embodiment learning. We introduce XL-VLA, a vision-language-action framework integrated with a unified latent action space shared across diverse dexterous hands. This embodiment-invariant latent space is directly pluggable into standard VLA architectures, enabling seamless cross-embodiment training and efficient reuse of both existing and newly collected data. Experimental results demonstrate that XL-VLA consistently outperforms baseline VLA models operating in raw joint spaces, establishing it as an effective solution for scalable cross-embodiment dexterous manipulation.",
-          "url": "https://arxiv.org/abs/2603.10158v1",
-          "pdf_url": "https://arxiv.org/pdf/2603.10158v1",
-          "published": "2026-03-10T18:50:57Z",
-          "updated": "2026-03-10T18:50:57Z",
-          "categories": [
-            "cs.RO"
-          ],
-          "primary_category": "cs.RO"
         }
       ]
     },
@@ -4771,6 +4769,29 @@
       "website": "https://people.eecs.berkeley.edu/~svlevine/",
       "paper_count": 5,
       "papers": [
+        {
+          "id": "2606.11087v1",
+          "title": "Test-Time Gradient Guidance of Flow Policies in Reinforcement Learning",
+          "authors": [
+            "Zhiyuan Zhou",
+            "Andy Peng",
+            "Charles Xu",
+            "Qiyang Li",
+            "Tobias Springenberg",
+            "Kevin Frans",
+            "Sergey Levine"
+          ],
+          "abstract": "Expressive continuous control policies, such as diffusion and flow models, form the backbone of recent advances in scaling imitation learning for simulated and real robot control. While they are known to scale stably in the supervised imitation learning setting, incorporating them into reinforcement learning (RL) pipelines for policy improvement has proven more difficult. It often requires specialized training objectives or backpropagating through denoising processes, which cause well-known issues with stability and affect scalability. In this paper we study the question of whether simple policy improvement schemes at test time alone, leaving stable supervised policy training intact, can be a competitive alternative which sidesteps these issues. To this end, we propose QGF (Q-Guided Flow), an RL algorithm that performs policy optimization entirely at test time. QGF works by pre-training both a reference flow policy (via a standard behavioral cloning objective) and a value function critic and, at test time, using the value gradient to guide the reference policy to generate higher-value actions without any additional policy learning. Empirically, QGF outperforms prior test-time RL methods on single-task and goal-conditioned offline RL benchmarks with high-dimensional action spaces, and is competitive with state-of-the-art training-time algorithms while being much cheaper to run. Moreover, it exhibits favorable scaling with model size by avoiding the instability of actor-critic training, offering a practical and effective alternative RL algorithm with expressive policies.",
+          "url": "https://arxiv.org/abs/2606.11087v1",
+          "pdf_url": "https://arxiv.org/pdf/2606.11087v1",
+          "published": "2026-06-09T16:45:57Z",
+          "updated": "2026-06-09T16:45:57Z",
+          "categories": [
+            "cs.LG",
+            "cs.AI"
+          ],
+          "primary_category": "cs.LG"
+        },
         {
           "id": "2605.03065v1",
           "title": "OGPO: Sample Efficient Full-Finetuning of Generative Control Policies",
@@ -4951,26 +4972,6 @@
             "q-bio.BM"
           ],
           "primary_category": "cs.LG"
-        },
-        {
-          "id": "2603.06082v4",
-          "title": "Offline Materials Optimization with CliqueFlowmer",
-          "authors": [
-            "Jakub Grudzien Kuba",
-            "Benjamin Kurt Miller",
-            "Sergey Levine",
-            "Pieter Abbeel"
-          ],
-          "abstract": "Recent advances in deep learning inspired neural network-based approaches to computational materials discovery (CMD). A plethora of problems in this field involve finding materials that optimize a target property. Nevertheless, the increasingly popular generative modeling methods are ineffective at boldly exploring attractive regions of the materials space due to their maximum likelihood training. In this work, we offer an alternative CMD technique based on offline model-based optimization (MBO) that fuses direct optimization of a target material property into generation. To that end, we introduce a domain-specific model, dubbed CliqueFlowmer, that incorporates recent advances of clique-based MBO into transformer and flow generation. We validate this model's optimization abilities and show that materials it produces strongly outperform those from generative baselines. To support specialized materials discovery applications and broader interdisciplinary research, we release our code, model weights, and additional project resources at https://github.com/znowu/CliqueFlowmer, https://colab.research.google.com/drive/1usUg7zezFkcYHlm2MdYwZUNJXf_YkWnY?usp=sharing, and https://x.com/kuba_AI/status/2033382617442345321.",
-          "url": "https://arxiv.org/abs/2603.06082v4",
-          "pdf_url": "https://arxiv.org/pdf/2603.06082v4",
-          "published": "2026-03-06T09:33:00Z",
-          "updated": "2026-04-19T06:37:14Z",
-          "categories": [
-            "cs.AI",
-            "cs.CE"
-          ],
-          "primary_category": "cs.AI"
         }
       ]
     },
@@ -7006,7 +7007,7 @@
           "primary_category": "cs.RO"
         },
         {
-          "id": "2602.21331v1",
+          "id": "2602.21331v2",
           "title": "CableRobotGraphSim: A Graph Neural Network for Modeling Partially Observable Cable-Driven Robot Dynamics",
           "authors": [
             "Nelson Chen",
@@ -7016,10 +7017,10 @@
             "Mridul Aanjaneya"
           ],
           "abstract": "General-purpose simulators have accelerated the development of robots. Traditional simulators based on first-principles, however, typically require full-state observability or depend on parameter search for system identification. This work presents \\texttt{CableRobotGraphSim}, a novel Graph Neural Network (GNN) model for cable-driven robots that aims to address shortcomings of prior simulation solutions. By representing cable-driven robots as graphs, with the rigid-bodies as nodes and the cables and contacts as edges, this model can quickly and accurately match the properties of other simulation models and real robots, while ingesting only partially observable inputs. Accompanying the GNN model is a sim-and-real co-training procedure that promotes generalization and robustness to noisy real data. This model is further integrated with a Model Predictive Path Integral (MPPI) controller for closed-loop navigation, which showcases the model's speed and accuracy.",
-          "url": "https://arxiv.org/abs/2602.21331v1",
-          "pdf_url": "https://arxiv.org/pdf/2602.21331v1",
+          "url": "https://arxiv.org/abs/2602.21331v2",
+          "pdf_url": "https://arxiv.org/pdf/2602.21331v2",
           "published": "2026-02-24T20:01:29Z",
-          "updated": "2026-02-24T20:01:29Z",
+          "updated": "2026-06-09T16:18:54Z",
           "categories": [
             "cs.RO"
           ],
