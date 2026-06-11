@@ -2,45 +2,160 @@
   "category": "cs",
   "name": "CS Research",
   "description": "Computer Science \u2014 AI, Machine Learning, NLP, Computer Vision",
-  "scraped_at": "2026-06-10T11:44:24.434736+00:00",
+  "scraped_at": "2026-06-11T12:15:11.950450+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2606.11190v1",
-      "title": "When to Align, When to Predict: A Phase Diagram for Multimodal Learning",
+      "id": "2606.12412v1",
+      "title": "Reroute, Don't Remove: Recoverable Visual Token Routing for Vision-Language Models",
       "authors": [
-        "Ilay Kamai",
-        "Hugues Van Assel",
-        "Aviv Regev",
-        "Hagai B. Perets",
-        "Randall Balestriero"
+        "Cheng-Yu Yang",
+        "Shao-Yuan Lo",
+        "Yu-Lun Liu"
       ],
-      "abstract": "Cross-modal alignment (CA) and cross-modal prediction (CP) are the dominant paradigms for multimodal representation learning, yet there is no systematic understanding of when each succeeds, when each fails, and when cross-modal training helps at all -- a gap that leaves practitioners, especially in scientific domains like biomedicine or astrophysics, with heterogeneous instruments and multiple levels of organization and measurement, unable to diagnose why standard methods underperform the best single modality. We develop a unified linear framework that addresses both questions. Under a spiked signal-plus-noise model with structured cross-modal nuisance correlation, we derive separation ratios for both objectives that expose complementary failure modes: alignment whitens each modality and fails when nuisance is strongly correlated across views; prediction encodes whatever is cross-predictable through a one-sided whitening, with recovery governed by source-modality quality. The resulting phase diagram partitions multimodal problems into four regimes: Both, CA only, CP only, and Neither. We present a data-driven procedure to locate real-world datasets in this diagram using a small labeled subsample, identifying the preferred objective and prediction direction before any cross-modal training. Experiments on synthetic data, stereo-vision benchmarks, image-caption pairs, and real astrophysical data validate the predictions in the nonlinear regime, including the Neither regime where cross-modal training is actively harmful. Our framework lets practitioners diagnose their multimodal problem and choose the right objective before committing to training. Code to reproduce the results is available at https://github.com/IlayMalinyak/mm_align_vs_pred.",
-      "url": "https://arxiv.org/abs/2606.11190v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.11190v1",
-      "published": "2026-06-09T17:59:58Z",
-      "updated": "2026-06-09T17:59:58Z",
+      "abstract": "Vision-language models (VLMs) project images into hundreds to thousands of visual tokens, making decoder inference expensive in both attention computation and KV-cache memory. Existing visual-token reduction methods largely follow a rank-and-remove paradigm: they score visual tokens, keep a compact subset, and permanently discard the rest. We show that this irreversible action is fragile because visual-token importance changes across decoder depth; tokens ranked low at one stage may become relevant in later layers, especially for grounding-sensitive queries. We propose Reroute, a training-free plug-in that replaces removal with recoverable routing. At each routing stage, selected vision tokens pass through decoder blocks, while deferred tokens bypass the stage and re-enter the candidate pool at the next routing decision. Reroute reuses existing attention-score ranking rules and stage-wise schedules, preserving the theoretical TFLOPs and KV-cache budget class of the pruning method it augments. Across FastV, PDrop, and N\u00fcwa variants on LLaVA-1.5 and Qwen backbones, reroute improves grounding under aggressive token reduction while maintaining general VQA performance. These results suggest that VLM token reduction should not be viewed only as irreversible pruning, but also as recoverable routing. The code can be found here: https://github.com/elmma/mllm-reroute/",
+      "url": "https://arxiv.org/abs/2606.12412v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.12412v1",
+      "published": "2026-06-10T17:59:57Z",
+      "updated": "2026-06-10T17:59:57Z",
       "categories": [
-        "cs.LG"
+        "cs.CV",
+        "cs.AI"
       ],
-      "primary_category": "cs.LG"
+      "primary_category": "cs.CV"
     },
     {
-      "id": "2606.11189v1",
-      "title": "A Unifying Lens on Supervised Fine-Tuning Through Target Distribution Design",
+      "id": "2606.12411v1",
+      "title": "Context-Driven Incremental Compression for Multi-Turn Dialogue Generation",
       "authors": [
-        "Tong Xie",
-        "Yuanhao Ban",
-        "Yunqi Hong",
-        "Sohyun An",
-        "Yihang Chen",
-        "Cho-Jui Hsieh"
+        "Yeongseo Jung",
+        "Jaehyeok Kim",
+        "Eunseo Jung",
+        "Jiachuan Wang",
+        "Yongqi Zhang",
+        "Ka Chun Cheung",
+        "Simon See",
+        "Lei Chen"
       ],
-      "abstract": "Supervised fine-tuning (SFT) typically maximizes the likelihood of every token in a demonstrated trajectory. However, an observed token can be non-unique, noisy, or misaligned with the model prior. Strictly fitting toward this one-hot target may be suboptimal, especially when the pretrained model encodes a rich knowledge prior. In this work, we reinterpret SFT as target distribution design: instead of studying only the loss objective, we analyze the token-level target that the loss drives the model to match. We introduce the Q-target framework, which decomposes SFT supervision into two explicit choices: (1) how strongly to rely on the observed token, and (2) how to allocate the remaining probability mass over alternatives. This perspective unifies many existing SFT variants as implicit choices of the target distribution Q. Building on this view, we propose Target-SFT which constructs the training objective directly from the desired target distribution. This method consistently outperforms across the ten reasoning dataset-model settings evaluated, showing the effectiveness of this target-based approach. Overall, our formulation reveals a more fundamental design principle for SFT training and opens a broader search space for SFT objectives.",
-      "url": "https://arxiv.org/abs/2606.11189v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.11189v1",
-      "published": "2026-06-09T17:59:54Z",
-      "updated": "2026-06-09T17:59:54Z",
+      "abstract": "Modern conversational agents condition on an ever-growing dialogue history at each turn, incurring redundant attention and encoding costs that grow with conversation length. Naive truncation or summarization degrades fidelity, while existing context compressors lack cross-turn memory sharing or revision, causing information loss and compounding errors in long dialogues. We revisit the context compression under conversational dynamics and empirically present its fragility. To improve both efficiency and robustness, we introduce Context-Driven Incremental Compression (C-DIC), which treats a conversation as interleaved contextual threads and stores revisable per-thread compression states in a single, compact dialogue memory. At each turn, a lightweight retrieve, revise, and write-back loop shares information across turns and updates stale memories, stabilizing long-horizon behavior. In addition, we adapt truncated backpropagation-through-time (TBPTT) to our multi-turn setting, learning cross-turn dependencies without full-history backpropagation. Extensive experiments on long-form dialogue benchmarks demonstrate superior performance and efficiency of C-DIC; notably, C-DIC shows stable inference latency and perplexity over hundreds of dialogue turns, supporting a scalable path to high-quality dialogue modeling.",
+      "url": "https://arxiv.org/abs/2606.12411v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.12411v1",
+      "published": "2026-06-10T17:59:54Z",
+      "updated": "2026-06-10T17:59:54Z",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "primary_category": "cs.CL"
+    },
+    {
+      "id": "2606.12407v1",
+      "title": "How Seemingly Inconsequential Design Choices Dictate Performance of LLMs in Pathology",
+      "authors": [
+        "Kian R. Weihrauch",
+        "Thomas A. Buckley",
+        "William Lotter",
+        "Arjun K. Manrai"
+      ],
+      "abstract": "General-purpose large language models (LLMs) are routinely used as baselines when evaluating specialized pathology models on whole-slide images (WSIs). Because WSIs exceed contemporary model context limits, LLM baselines routinely use small, high-magnification patches processed independently via majority voting, without systematic evaluation of seemingly inconsequential design choices such as patch size, patch count, and magnification. Generalist LLMs have consistently underperformed specialized systems, reinforcing the perception that domain-specific training or architectural adaptation is necessary for pathology tasks involving WSIs. Here, we conduct a systematic factorial analysis of four input design factors: inference mode, patch size, magnification, and patch count. We demonstrate that prior studies have overstated the gap between specialized models and general-purpose LLMs by choosing non-optimized input configurations. On the MultiPathQA benchmark, switching to a single balanced configuration (large patches at lower magnification, processed jointly) raises GPT-5 from 15.1% to 39.5% on cancer-type classification (TCGA) and from 38.1% to 62.9% on organ classification (GTEx). Per-task optimization yields further gains up to 43.9% (TCGA) and 71.6% (GTEx). The same configuration generalizes to two other models and to a fully held-out CPTAC cohort, where it improves Gemini 3 Flash by 23.4 percentage points without any task-specific tuning.",
+      "url": "https://arxiv.org/abs/2606.12407v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.12407v1",
+      "published": "2026-06-10T17:59:39Z",
+      "updated": "2026-06-10T17:59:39Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2606.12406v1",
+      "title": "FACTR 2: Learning External Force Sensing for Commodity Robot Arms Improves Policy Learning",
+      "authors": [
+        "Steven Oh",
+        "Jason Jingzhou Liu",
+        "Tony Tao",
+        "Philip Han",
+        "Kenneth Shaw",
+        "Satoshi Funabashi",
+        "Ruslan Salakhutdinov",
+        "Deepak Pathak"
+      ],
+      "abstract": "Contact-rich manipulation requires force sensitivity, but many robot arms lack dedicated force sensors due to their high cost. We present Neural External Torque Estimation (NEXT), a data-driven method that estimates external joint torques without needing any dedicated force sensors. NEXT trains in 1 minute from only 10 minutes of free-motion data, yet achieves estimates comparable to dedicated joint-torque sensors. NEXT enables force-feedback teleoperation on low-cost arms and improves policy learning through Force-Informed Re-Sampling Training (FIRST), which up-samples pre-contact and contact segments during behavior cloning. Across five long-horizon tasks, FIRST outperforms prior force-aware policies by over 17% in task progress. Together, NEXT and FIRST bring force-aware teleoperation and policy learning to off-the-shelf robots without additional sensing hardware. Video results and code are available at https://jasonjzliu.com/factr2",
+      "url": "https://arxiv.org/abs/2606.12406v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.12406v1",
+      "published": "2026-06-10T17:59:35Z",
+      "updated": "2026-06-10T17:59:35Z",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.LG",
+        "eess.SY"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2606.12402v1",
+      "title": "DIRECT: When and Where Should You Allocate Test-Time Compute in Embodied Planners?",
+      "authors": [
+        "Jadelynn Dao",
+        "Milan Ganai",
+        "Yasmina Abukhadra",
+        "Ajay Sridhar",
+        "Mozhgan Nasr Azadani",
+        "Katie Luo",
+        "Clark Barrett",
+        "Jiajun Wu",
+        "Chelsea Finn",
+        "Marco Pavone"
+      ],
+      "abstract": "Vision-Language Models (VLMs) are increasingly deployed as high-level planners for embodied agents, with an emerging strategy of scaling test-time compute to improve capability. However, we observe that doing so increases latency, token usage, and FLOPs while yielding uneven, often diminishing gains in downstream success, limiting where embodied agents can be deployed. We argue that choosing when and where to spend test-time compute is central to bringing frontier performance to the real world. We introduce DIRECT, a routing framework that uses multimodal scene context to allocate compute per prompt, improving the success--cost Pareto frontier over fixed model selection. Across three dominant scaling axes, namely chain-of-thought depth, model size, and memory history, our experiments on VLABench and RoboMME show that test-time compute is not a uniform lever: different axes yield qualitatively distinct capability gains. We validate these insights on a physical Franka arm in a DROID setup spanning zero-shot manipulation and long-horizon chaining, where our router matches or exceeds a stronger model's success rate at up to 65% lower average latency. Ultimately, our results show that naively scaling test-time compute is wasteful, and that DIRECT can provide frontier-level embodied planning in robotic systems at a fraction of the cost. Project page can be found at jadee-dao.github.io/direct/.",
+      "url": "https://arxiv.org/abs/2606.12402v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.12402v1",
+      "published": "2026-06-10T17:58:49Z",
+      "updated": "2026-06-10T17:58:49Z",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2606.12400v1",
+      "title": "Doc-to-Atom: Learning to Compile and Compose Memory Atoms",
+      "authors": [
+        "Xingjian Diao",
+        "Wenbo Li",
+        "Yashas Malur Saidutta",
+        "Avinash Amballa",
+        "Lazar Valkov",
+        "Srinivas Chappidi"
+      ],
+      "abstract": "Long input sequences are central to document understanding and multi-step reasoning in Large Language Models, yet the quadratic cost of attention makes inference both memory-intensive and slow. Context distillation mitigates this by compressing contextual information into model parameters, and recent work such as Doc-to-LoRA amortizes context distillation into a single forward pass that generates one LoRA adapter per document. However, producing a single monolithic adapter for all queries leads to irrelevant-query interference, limited compositional recall, and poor scalability to long-document reasoning. To address these challenges, we propose Doc-to-Atom (Doc2Atom), a compositional parametric memory framework that decomposes each document into semantically typed knowledge atoms. Each atom is compiled into an independent micro-LoRA adapter and a provenance retrieval key. At inference time, a lightweight query router selects and assembles only the relevant atoms into a query-specific adapter, which is then injected into a frozen base model. The entire system is trained end-to-end through a multi-objective distillation framework. Experiments on six diverse QA benchmarks demonstrate that Doc2Atom outperforms Doc-to-LoRA baselines while reducing the memory cost of document internalization.",
+      "url": "https://arxiv.org/abs/2606.12400v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.12400v1",
+      "published": "2026-06-10T17:58:20Z",
+      "updated": "2026-06-10T17:58:20Z",
+      "categories": [
+        "cs.CL",
+        "cs.IR"
+      ],
+      "primary_category": "cs.CL"
+    },
+    {
+      "id": "2606.12397v1",
+      "title": "Redesign Mixture-of-Experts Routers with Manifold Power Iteration",
+      "authors": [
+        "Songhao Wu",
+        "Ang Lv",
+        "Ruobing Xie",
+        "Yankai Lin"
+      ],
+      "abstract": "Router is the cornerstone component to the Mixture-of-Experts models. Serving as expert proxies, the rows of the router matrix compute their similarity to the MoE inputs to determine which subset of experts is activated. Ideally, each router row is designed to encode the expert matrix into this representative vector, such that its dot-product with token can better reflect token-expert affinity. However, there exists no design principles to enforce this condensation. In this paper, we propose to align each router row with the principal singular direction of the associated expert, as this direction provides the most expressive mathematical description of a matrix. Based on this principle, we propose a router redesign with Manifold Power Iteration (MPI). Specifically, it introduces a \"Power-then-Retract\" paradigm, where a power iteration step is performed on the router weights, followed by a retraction to impose a norm constraint to ensure both efficiency and stability. Theoretically, we show that MPI drives router rows to converge toward the principal singular directions of associated experts. Empirically, we pretrain MoE model across scales from 1B to 11B parameters to confirm that this alignment facilitates more effective MoE models.",
+      "url": "https://arxiv.org/abs/2606.12397v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.12397v1",
+      "published": "2026-06-10T17:57:36Z",
+      "updated": "2026-06-10T17:57:36Z",
       "categories": [
         "cs.LG",
         "cs.AI",
@@ -49,190 +164,62 @@
       "primary_category": "cs.LG"
     },
     {
-      "id": "2606.11188v1",
-      "title": "ARM: An AutoRegressive Large Multimodal Model with Unified Discrete Representations",
+      "id": "2606.12396v1",
+      "title": "VLGA: Vision-Language-Geometry-Action Models for Autonomous Driving",
       "authors": [
-        "Junke Wang",
-        "Xiao Wang",
-        "Jiacheng Pan",
-        "Xuefeng Hu",
-        "Feng Li",
-        "Jingxiang Sun",
-        "Chaorui Deng",
-        "Zilong Chen",
-        "Yunpeng Chen",
-        "Kaibin Tian",
-        "Matthew Gwilliam",
-        "Hao Chen",
-        "Danhui Guan",
-        "Kun Xu",
-        "Weilin Huang",
-        "Zuxuan Wu",
-        "Haoqi Fan",
-        "Yu-Gang Jiang",
-        "Zhenheng Yang"
+        "Jin Yao",
+        "Dhruva Dixith Kurra",
+        "Tom Lampo",
+        "Zezhou Cheng",
+        "Danhua Guo",
+        "Burhan Yaman"
       ],
-      "abstract": "This paper introduces ARM, a discrete representation-based AutoRegressive Model that unifies image understanding, generation, and editing within a next-token prediction framework. ARM is built on three efforts: first, we train a discrete semantic visual tokenizer that maps images into compact token sequences. Our tokenizer is supervised with multiple objectives that jointly promote semantic discriminability, language alignment and faithful reconstruction, thereby supporting diverse tasks in a shared latent space. With this, we train a 7B autoregressive model over large-scale text and image token sequences, seamlessly developing vision-language perception and generation capabilities. Finally, to further improve preference-aligned behavior for text-to-image generation and instruction-guided editing, ARM applies reinforcement learning (RL) to optimize task-level objectives such as visual quality, instruction adherence, and edit consistency. Surprisingly, the results show that RL not only substantially improves performance on the target tasks (e.g., raising WISE overall from 0.50 to 0.56, GEdit-Bench-EN G_O from 5.75 to 6.68), but also induces cross-task synergy between text-to-image generation and editing. Collectively, these findings highlight autoregressive modeling, when paired with strong representations and preference optimization, as a scalable foundation for multimodal intelligence. Code: https://github.com/wdrink/ARM.",
-      "url": "https://arxiv.org/abs/2606.11188v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.11188v1",
-      "published": "2026-06-09T17:59:28Z",
-      "updated": "2026-06-09T17:59:28Z",
-      "categories": [
-        "cs.CV"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2606.11187v1",
-      "title": "Next Forcing: Causal World Modeling with Multi-Chunk Prediction",
-      "authors": [
-        "Gangwei Xu",
-        "Qihang Zhang",
-        "Jiaming Zhou",
-        "Xing Zhu",
-        "Yujun Shen",
-        "Xin Yang",
-        "Yinghao Xu"
-      ],
-      "abstract": "Autoregressive video generation has emerged as a powerful paradigm for World Action Models (WAMs). However, existing approaches suffer from slow training convergence and limited converged accuracy, particularly at high frame rates, as the training supervision is confined to the current chunk without explicit signals about future dynamics; they also suffer from slow inference due to iterative video denoising. In this paper, we present Next Forcing, a multi-chunk prediction (MCP) framework for causal world modeling that enables faster training, higher accuracy, and accelerated inference. Inspired by multi-token prediction in large language models, Next Forcing introduces an MCP training objective that augments the main model with lightweight auxiliary MCP modules to simultaneously denoise video chunks at multiple future temporal horizons (next$^1$, next$^2$, next$^3$ chunks). These MCP modules form a causal chain across prediction depths, where intermediate features fused from multiple layers of the main model are leveraged to predict future dynamics, allowing near-future predictions to inform farther-future ones and providing dense multi-scale temporal supervision back to the main model. During training, the MCP modules significantly accelerate convergence and improve converged accuracy, especially at high frame rates: at 50 fps, Next Forcing achieves a 93.1% relative improvement over LingBot-VA at 5k training steps and 2.3x faster convergence, and establishes new state-of-the-art results on the RoboTwin benchmark (94.1/93.5% on Clean/Random). At inference, the MCP modules can be retained to predict the next video chunk in parallel with the current one, achieving 2x inference acceleration. Next Forcing also demonstrates significant improvements on PhyWorld, a benchmark evaluating adherence to physical laws in video generation, and over 50% FVD reduction on general video pretraining.",
-      "url": "https://arxiv.org/abs/2606.11187v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.11187v1",
-      "published": "2026-06-09T17:59:22Z",
-      "updated": "2026-06-09T17:59:22Z",
-      "categories": [
-        "cs.CV"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2606.11186v1",
-      "title": "AnyMod-LLVE: Low-Light Video Enhancement with Modality-Agnostic Inference",
-      "authors": [
-        "Hangfeng Liang",
-        "Yutao Hu",
-        "Yanhan Hu",
-        "Xiaohan Wu",
-        "Wenqi Shao",
-        "Ying Fu"
-      ],
-      "abstract": "Low-light video enhancement (LLVE) remains a challenging task due to severe information degradation under low-illumination conditions. Recent multimodal approaches have significantly improved enhancement performance by incorporating auxiliary modalities, such as event streams and infrared images. However, these methods typically assume the availability of these modalities at inference, which is often not feasible in real-world scenarios. To solve this problem, in this work, we propose AMNet, a unified multimodal framework for LLVE, to support flexible modality-agnostic inference, where auxiliary modalities may be unavailable. To address the issue of modality absence, we introduce a Spatial-Spectral Dual-Gated Translator that learns the correspondence between auxiliary modalities and RGB inputs, producing implicit auxiliary representations to support the robust enhancement. Additionally, to fully facilitate the learning of cross-modal correspondence, we conduct large-scale multimodal pretraining based on the RGB-only dataset with synthetic auxiliary modalities. Extensive experiments demonstrate that AMNet could handle arbitrary inference-time modality combinations and exhibits superior performance for LLVE under modality absence conditions. Code and models are available on the project page.",
-      "url": "https://arxiv.org/abs/2606.11186v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.11186v1",
-      "published": "2026-06-09T17:59:05Z",
-      "updated": "2026-06-09T17:59:05Z",
-      "categories": [
-        "cs.CV"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2606.11182v1",
-      "title": "EEVEE: Towards Test-time Prompt Learning in the Real World for Self-Improving Agents",
-      "authors": [
-        "Weixian Xu",
-        "Shilong Liu",
-        "Mengdi Wang"
-      ],
-      "abstract": "In this paper, we propose EEVEE, the first multi-dataset test-time prompt learning framework for LLM agents, enabling test-time prompt learning under real-world task streams. Existing methods are largely designed for single-dataset settings, while real-world applications require models to handle heterogeneous input streams drawn from multiple datasets, domains, and task distributions, limiting their practical applicability. To mitigate cross-dataset interference, EEVEE introduces a router that partitions incoming inputs into task clusters and assigns them to suitable prompt configurations. This design is optimized via a router-prompt co-evolution strategy, which employs interleaved router and prompt learning phases to address their mutual dependency. Experiments across multiple datasets demonstrate that the framework improves robustness under heterogeneous data streams while maintaining single-benchmark learning capability and efficiency. Specifically, EEVEE improves average multi-benchmark scores by 10.38 and 24.32 points over Qwen3-4B-Instruct and DeepSeek-V3.2, surpassing SOTA methods GEPA and ACE by up to 37.2% and 48.2%.",
-      "url": "https://arxiv.org/abs/2606.11182v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.11182v1",
-      "published": "2026-06-09T17:57:16Z",
-      "updated": "2026-06-09T17:57:16Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2606.11180v1",
-      "title": "Lip Forcing: Few-Step Autoregressive Diffusion for Real-time Lip Synchronization",
-      "authors": [
-        "Paul Hyunbin Cho",
-        "Jinhyuk Jang",
-        "SeokYoung Lee",
-        "Joungbin Lee",
-        "Siyoon Jin",
-        "Heeseong Shin",
-        "Jung Yi",
-        "Yunjin Park",
-        "Chulmin Park",
-        "Seungryong Kim"
-      ],
-      "abstract": "Diffusion-based lip synchronization models achieve strong visual quality and audio-visual alignment, but full-sequence bidirectional attention and many denoising steps make them impractical for real-time inference. We present Lip Forcing, to our knowledge the first autoregressive diffusion method for video-to-video (V2V) lip synchronization, which distills a 14B audio-conditioned bidirectional video diffusion teacher into causal students. At inference, the students generate each chunk in only two denoising steps without inference-time CFG, enabling real-time lip synchronization. A lip-sync-specific teacher-trajectory analysis reveals a CFG fidelity-sync tradeoff: no-CFG predictions favor reference fidelity, whereas CFG-guided predictions favor synchronization within a mid-trajectory band. Lip Forcing translates this finding into three analysis-derived components: Sync-Window DMD, a two-step inference schedule, and a SyncNet-based reward. We validate Lip Forcing at two student scales, both distilled from the 14B teacher. The 1.3B student crosses into real-time streaming at 31 FPS, $17.6\\times$ faster than its same-scale bidirectional model. The 14B student, the largest diffusion model reported for V2V lip synchronization, runs $39.8\\times$ faster than its teacher at comparable reference fidelity. Time-to-first-frame is sub-millisecond at both scales, far below every diffusion baseline.",
-      "url": "https://arxiv.org/abs/2606.11180v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.11180v1",
-      "published": "2026-06-09T17:56:36Z",
-      "updated": "2026-06-09T17:56:36Z",
-      "categories": [
-        "cs.CV"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2606.11176v1",
-      "title": "Data Journalist Agent: Transforming Data into Verifiable Multimodal Stories",
-      "authors": [
-        "Kevin Qinghong Lin",
-        "Batu EI",
-        "Yuhong Shi",
-        "Pan Lu",
-        "Philip Torr",
-        "James Zou"
-      ],
-      "abstract": "Data tells stories that shape society; the data journalist's job is to turn raw information into stories non-experts can trust. A high-quality news feature takes a newsroom team weeks: hunting for context, running statistics, choosing an angle, and designing visuals. Recent agents handle individual steps well: data-science agents close the analysis loop, while design agents synthesize beautiful websites. But can an agent serve as a data journalist end to end? We introduce Data Journalist Agent (Data2Story), a multi-agent framework that orchestrates specialized roles into a single virtual newsroom. Data2Story contributes two innovations. (i) Claims are evidence-grounded: an Inspector links every number, angle, and asset back to data, code, or an external reference. (ii) Articles are multimodally generative: rather than defaulting to plain text and static charts, Data2Story reasons about what readers will want to see, then deploys multimodal tools, such as interactive maps for geography and audio for music. We evaluate Data2Story on 18 articles, each paired with the originally published expert piece, along four axes: (a) human-agent angle coverage; (b) rubric evaluation with 53 participants across five dimensions; (c) computer-use agents as judges, a cost-saving proxy for how readers navigate interactive articles; and (d) verifiability, where a coding verifier re-executes statements against the data and checks claims against references. Data2Story produces competitive, evidence-traceable multimedia stories, with particular strength in transparency and auditability. Human articles retain an edge in editorial angle, creative design, and presentation. We position Data2Story as a collaborator for journalists, enabling more evidence-based, transparent, and verifiable reporting. Code and demos are available at https://data2story.github.io.",
-      "url": "https://arxiv.org/abs/2606.11176v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.11176v1",
-      "published": "2026-06-09T17:51:55Z",
-      "updated": "2026-06-09T17:51:55Z",
+      "abstract": "Vision-language-action (VLA) models can describe scenes and reason about them in language, yet still struggle to ground their actions in the dense 3D world around them. Existing approaches either inject features from a frozen 3D foundation model without an objective that ensures the policy uses them, or constrain geometry with sparse box and map losses that provide no dense spatial signal. We introduce VLGA, the first vision-language-action model supervised to reconstruct the dense 3D world it drives through. VLGA introduces geometry as a fourth modality alongside vision, language, and action through a dedicated expert supervised by a per-pixel pointmap regression loss against LiDAR. Extensive experiments conducted on challenging nuScenes and Bench2Drive datasets for open-loop and closed-loop evaluations, respectively, show the superiority of VLGA over counterpart VLA methods. In particular, on open-loop nuScenes, VLGA sets a new state of the art among VLA methods without ego status, with the lowest L2 (0.50\\,m average) and 3-second collision rate (0.18\\%). On closed-loop Bench2Drive, VLGA attains the state-of-the-art driving score of 79.08, +0.71 over the strongest prior VLA, at comparable efficiency and comfort.",
+      "url": "https://arxiv.org/abs/2606.12396v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.12396v1",
+      "published": "2026-06-10T17:57:06Z",
+      "updated": "2026-06-10T17:57:06Z",
       "categories": [
         "cs.CV",
-        "cs.CL",
-        "cs.CY",
-        "cs.HC"
+        "cs.RO"
       ],
       "primary_category": "cs.CV"
     },
     {
-      "id": "2606.11173v1",
-      "title": "The Role of Feedback Alignment in Self-Distillation",
+      "id": "2606.12392v1",
+      "title": "System Report for CCL25-Eval Task 5: New Dataset and LoRA-Fine-Tuned Qwen2.5",
       "authors": [
-        "Semih Kara",
-        "O\u011fuzhan Ersoy"
+        "Haotao Xie"
       ],
-      "abstract": "Conditioning a language model on additional context, such as feedback on a previous attempt, typically improves its response. Self-distillation trains the model to retain this improvement when the context is not present. The method works by matching the model's output distribution under two settings: a student that sees only the question, and a self-teacher that also sees the context. What the model learns therefore depends on what context the self-teacher receives, yet the design of this context remains largely unexplored. We study context design for self-distillation by training a solver on feedback from a frozen critic. We compare three conditions: (i) a binary reward (GRPO), (ii) the reference solution, and (iii) a step-by-step critique aligned to the solver's reasoning trace. Step-aligned critique yields the largest gains, outperforming GRPO by 16.11 points and reference-solution-conditioned self-distillation by 5.27 points (Avg@12). Per-token advantage analysis reveals why: step-aligned feedback targets only the tokens where reasoning fails, leaving correct behavior intact. Conditioning on the reference solution, by contrast, pressures the model to change its behavior at every token (even correct steps) because an alternative derivation inevitably differs in phrasing and approach. This suggests that structural alignment between feedback and the solver's reasoning is a key driver of self-distillation effectiveness.",
-      "url": "https://arxiv.org/abs/2606.11173v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.11173v1",
-      "published": "2026-06-09T17:50:09Z",
-      "updated": "2026-06-09T17:50:09Z",
+      "abstract": "Recently, large language models (LLMs) have achieved promising progress in the fields of classical Chinese translation and the generation of classical poetry. However, domain-specific research on precise translation and affective-semantic understanding of classical poetry remains limited. The main challenge is that most studies treat the poetic appreciation task as a general-domain problem, neglecting the distinctive features of poetic appreciation, while high-quality and domain-specific datasets are extremely limited. To address this limitation, we decompose the task into three subtasks: term interpretation, semantic interpretation, and emotional inference. Based on multiple open-source datasets, we perform data cleansing and alignment to construct the Classical Chinese Poetry Instruction Pair Dataset (CCPoetry-49K), which comprises 49,404 high-quality instruction-response pairs explicitly optimized for this domain. We then propose a domain-specialized LLM, called PoetryQwen, by applying Low-Rank Adaptation (LoRA) to fine-tune the Qwen2.5-14B model. Experimental results on the CCL25-Eval Task 5 benchmark demonstrate that PoetryQwen achieves a score of 0.757, representing a 9.7% improvement over the Qwen2.5-14B-Instruct baseline (0.690). These findings clearly indicate that PoetryQwen significantly enhances performance in precise translation and emotional understanding of classical poetry. We present new dataset and methodological considerations intended to support the domain-specific optimization of LLMs.",
+      "url": "https://arxiv.org/abs/2606.12392v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.12392v1",
+      "published": "2026-06-10T17:54:32Z",
+      "updated": "2026-06-10T17:54:32Z",
       "categories": [
-        "cs.AI",
-        "cs.LG"
+        "cs.CL",
+        "cs.AI"
       ],
-      "primary_category": "cs.AI"
+      "primary_category": "cs.CL"
     },
     {
-      "id": "2606.11172v1",
-      "title": "Predicting Future Behaviors in Reasoning Models Enables Better Steering",
+      "id": "2606.12387v1",
+      "title": "TAHOE: Text-to-SQL with Automated Hint Optimization from Experience",
       "authors": [
-        "Evgenii Kortukov",
-        "Piotr Komorowski",
-        "Florian Klein",
-        "Paula Engl",
-        "Gabriele Sarti",
-        "Seong Joon Oh",
-        "Sebastian Lapuschkin",
-        "Wojciech Samek"
+        "Zhiyi Chen",
+        "Jie Song",
+        "Peng Li"
       ],
-      "abstract": "Deployed large reasoning models (LRMs) often behave unexpectedly. Test-time steering controls LRM outputs by intervening on their hidden representations, but it can degrade output quality. We argue that prior steering work implicitly relies on internal features that detect behavior in already generated text. We show that these detection features are poor predictors of future behavioral outcomes, and thus not the natural intervention target. Instead, we train activation probes to predict future behavior likelihoods from intermediate reasoning steps. These probes predict the most likely behavior with 64%-91% accuracy, revealing a separate type of internal prediction features. Building on these prediction features, we introduce a text-level steering method, Future Probe Controlled Generation. FPCG samples multiple candidate sentences and chooses the best one according to a probe predicting the future behavior likelihood. This enables steering with almost no output quality degradation. FPCG also enables steering in several evaluations where activation steering fails. These results show that distinguishing detection and prediction features enables a more nuanced approach to controlling LRM behaviors.",
-      "url": "https://arxiv.org/abs/2606.11172v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.11172v1",
-      "published": "2026-06-09T17:49:24Z",
-      "updated": "2026-06-09T17:49:24Z",
+      "abstract": "Large Language Models (LLMs) have democratized database access through Text-to-SQL, but moving from prototypes to production remains difficult. Real deployments must handle strict SQL dialects, massive schemas, and evolving user preferences, while supervised fine-tuning is costly and rigid and agentic test-time scaling is expensive. We present Tahoe, a system that treats prompt optimization as a dynamic data management problem. Tahoe uses an error-driven hint learning pipeline across Development and Deployment to consolidate debugging traces into a structured Hint Bank. Compiler feedback is distilled into reusable Syntax Hints for dialect-specific rules, while execution and user feedback are converted into Semantic Hints for schema- and user-specific logic. Tahoe further introduces a Strategy Layer that models conflicting user intents as competing strategies under shared natural-language triggers, with recency signals and post-learning attribution statistics that summarize empirical success, harm, inertness, and support. At inference time, Tahoe retrieves relevant hints and guides the LLM through Logic Planning followed by SQL Synthesis. We implement and evaluate the development-phase workflow, leaving deployment-time human-feedback updates for future work. On Spider 2.0-Snow, Tahoe substantially improves Text-to-SQL without updating model parameters. On 113 supervised Spider 2.0-Snow-0212 examples using GPT-5.5, Tahoe raises pass rate from 61.95 percent to 79.42 percent and pass-at-4 from 72.57 percent to 87.61 percent, achieves 100 percent Snowflake syntax pass rate, and reduces average compiler-feedback critic rounds from 2.79 to 0.12 per sampled candidate. The same Hint Bank also transfers to weaker backbones, including a 19.7 percentage-point pass-rate gain on Doubao-2.0-lite.",
+      "url": "https://arxiv.org/abs/2606.12387v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.12387v1",
+      "published": "2026-06-10T17:52:15Z",
+      "updated": "2026-06-10T17:52:15Z",
       "categories": [
-        "cs.LG"
+        "cs.DB",
+        "cs.AI"
       ],
-      "primary_category": "cs.LG"
+      "primary_category": "cs.DB"
     }
   ]
 }
