@@ -2,226 +2,229 @@
   "category": "robotics",
   "name": "Robotics Research",
   "description": "Robotics \u2014 Motion Planning, Control Systems, Human-Robot Interaction, Autonomous Systems",
-  "scraped_at": "2026-06-11T12:15:32.876122+00:00",
+  "scraped_at": "2026-06-12T11:49:46.033749+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2606.12406v1",
-      "title": "FACTR 2: Learning External Force Sensing for Commodity Robot Arms Improves Policy Learning",
+      "id": "2606.13677v1",
+      "title": "Mana: Dexterous Manipulation of Articulated Tools",
       "authors": [
-        "Steven Oh",
-        "Jason Jingzhou Liu",
-        "Tony Tao",
-        "Philip Han",
-        "Kenneth Shaw",
-        "Satoshi Funabashi",
-        "Ruslan Salakhutdinov",
-        "Deepak Pathak"
+        "Zhao-Heng Yin",
+        "Guanya Shi",
+        "Pieter Abbeel",
+        "C. Karen Liu"
       ],
-      "abstract": "Contact-rich manipulation requires force sensitivity, but many robot arms lack dedicated force sensors due to their high cost. We present Neural External Torque Estimation (NEXT), a data-driven method that estimates external joint torques without needing any dedicated force sensors. NEXT trains in 1 minute from only 10 minutes of free-motion data, yet achieves estimates comparable to dedicated joint-torque sensors. NEXT enables force-feedback teleoperation on low-cost arms and improves policy learning through Force-Informed Re-Sampling Training (FIRST), which up-samples pre-contact and contact segments during behavior cloning. Across five long-horizon tasks, FIRST outperforms prior force-aware policies by over 17% in task progress. Together, NEXT and FIRST bring force-aware teleoperation and policy learning to off-the-shelf robots without additional sensing hardware. Video results and code are available at https://jasonjzliu.com/factr2",
-      "url": "https://arxiv.org/abs/2606.12406v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.12406v1",
-      "published": "2026-06-10T17:59:35Z",
-      "updated": "2026-06-10T17:59:35Z",
+      "abstract": "Articulated tool manipulation remains a major challenge in dexterous robotics due to the need to coordinate internal degrees of freedom and contact-rich interactions. While prior work has largely focused on rigid objects, articulated tool use remains underexplored because of its physical complexity and the difficulty of learning functional grasping and manipulation policies. We present Mana (Manipulation Animator), a general sim-to-real framework that reinterprets dexterous manipulation as an animation problem. Inspired by computer animation, Mana employs a coarse-to-fine pipeline that transforms procedurally-generated grasp keyframes into manipulation trajectories through motion planning and reinforcement learning. The data generation process is largely automatic, requiring only a few mouse clicks to specify functional affordances (<1 minute per tool). Across four articulated tools spanning different scales and joint types, Mana achieves zero-shot sim-to-real transfer for both grasping and in-hand manipulation, demonstrating a scalable approach to dexterous articulated tool use.",
+      "url": "https://arxiv.org/abs/2606.13677v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.13677v1",
+      "published": "2026-06-11T17:59:49Z",
+      "updated": "2026-06-11T17:59:49Z",
       "categories": [
         "cs.RO",
         "cs.AI",
-        "cs.LG",
-        "eess.SY"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2606.12403v1",
-      "title": "World Pilot: Steering Vision-Language-Action Models with World-Action Priors",
-      "authors": [
-        "Zefu Lin",
-        "Rongxu Cui",
-        "Junjia Xu",
-        "Xiaojuan Jin",
-        "Wenling Li",
-        "Lue Fan",
-        "Zhaoxiang Zhang"
-      ],
-      "abstract": "Vision-Language-Action (VLA) models inherit semantic grounding from large-scale pretraining and perform competently across in-distribution manipulation tasks. This grounding, however, is built on static image-text pairs, whereas manipulation is a continuous, contact-rich process whose dynamics this pretraining cannot capture. We present World Pilot, a VLA framework that augments the policy with priors from a World-Action Model (WAM), routed into the decision chain through two complementary pathways. Latent Steering conditions the perception layer on a scene-evolution latent, and Action Steering supplies an anticipated trajectory as a motion prior to the action generator. Together the two priors equip the VLA with an anticipated view of the scene and a trajectory-level motion hint alongside its semantic conditioning, and the scene-evolution prior remains effective even when supplied by a video-pretrained world model that has not been action-post-trained. World Pilot attains a state-of-the-art Total success rate of 84.7% on the LIBERO-Plus zero-shot OOD benchmark and the highest success rate on every real-robot setting across four manipulation tasks, with the largest margins under shifts in viewpoint, geometry, deformable state, and pose. Project Website: https://world-pilot.github.io/",
-      "url": "https://arxiv.org/abs/2606.12403v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.12403v1",
-      "published": "2026-06-10T17:59:08Z",
-      "updated": "2026-06-10T17:59:08Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2606.12402v1",
-      "title": "DIRECT: When and Where Should You Allocate Test-Time Compute in Embodied Planners?",
-      "authors": [
-        "Jadelynn Dao",
-        "Milan Ganai",
-        "Yasmina Abukhadra",
-        "Ajay Sridhar",
-        "Mozhgan Nasr Azadani",
-        "Katie Luo",
-        "Clark Barrett",
-        "Jiajun Wu",
-        "Chelsea Finn",
-        "Marco Pavone"
-      ],
-      "abstract": "Vision-Language Models (VLMs) are increasingly deployed as high-level planners for embodied agents, with an emerging strategy of scaling test-time compute to improve capability. However, we observe that doing so increases latency, token usage, and FLOPs while yielding uneven, often diminishing gains in downstream success, limiting where embodied agents can be deployed. We argue that choosing when and where to spend test-time compute is central to bringing frontier performance to the real world. We introduce DIRECT, a routing framework that uses multimodal scene context to allocate compute per prompt, improving the success--cost Pareto frontier over fixed model selection. Across three dominant scaling axes, namely chain-of-thought depth, model size, and memory history, our experiments on VLABench and RoboMME show that test-time compute is not a uniform lever: different axes yield qualitatively distinct capability gains. We validate these insights on a physical Franka arm in a DROID setup spanning zero-shot manipulation and long-horizon chaining, where our router matches or exceeds a stronger model's success rate at up to 65% lower average latency. Ultimately, our results show that naively scaling test-time compute is wasteful, and that DIRECT can provide frontier-level embodied planning in robotic systems at a fraction of the cost. Project page can be found at jadee-dao.github.io/direct/.",
-      "url": "https://arxiv.org/abs/2606.12402v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.12402v1",
-      "published": "2026-06-10T17:58:49Z",
-      "updated": "2026-06-10T17:58:49Z",
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.CV"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2606.12396v1",
-      "title": "VLGA: Vision-Language-Geometry-Action Models for Autonomous Driving",
-      "authors": [
-        "Jin Yao",
-        "Dhruva Dixith Kurra",
-        "Tom Lampo",
-        "Zezhou Cheng",
-        "Danhua Guo",
-        "Burhan Yaman"
-      ],
-      "abstract": "Vision-language-action (VLA) models can describe scenes and reason about them in language, yet still struggle to ground their actions in the dense 3D world around them. Existing approaches either inject features from a frozen 3D foundation model without an objective that ensures the policy uses them, or constrain geometry with sparse box and map losses that provide no dense spatial signal. We introduce VLGA, the first vision-language-action model supervised to reconstruct the dense 3D world it drives through. VLGA introduces geometry as a fourth modality alongside vision, language, and action through a dedicated expert supervised by a per-pixel pointmap regression loss against LiDAR. Extensive experiments conducted on challenging nuScenes and Bench2Drive datasets for open-loop and closed-loop evaluations, respectively, show the superiority of VLGA over counterpart VLA methods. In particular, on open-loop nuScenes, VLGA sets a new state of the art among VLA methods without ego status, with the lowest L2 (0.50\\,m average) and 3-second collision rate (0.18\\%). On closed-loop Bench2Drive, VLGA attains the state-of-the-art driving score of 79.08, +0.71 over the strongest prior VLA, at comparable efficiency and comfort.",
-      "url": "https://arxiv.org/abs/2606.12396v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.12396v1",
-      "published": "2026-06-10T17:57:06Z",
-      "updated": "2026-06-10T17:57:06Z",
-      "categories": [
         "cs.CV",
-        "cs.RO"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2606.12374v1",
-      "title": "Semantically-Aware Diver Activity Recognition Framework for Effective Underwater Multi-Human-Robot Collaboration",
-      "authors": [
-        "Sadman Sakib Enan",
-        "Junaed Sattar"
-      ],
-      "abstract": "Effective multi-human-robot collaboration is essential for expanding human-led operations in the challenging and high-risk underwater environment. For autonomous underwater vehicles (AUVs) to become true teammates, they must be able to comprehend their surroundings and recognize a diver's activities to offer assistance and ensure safety. Towards this goal, we introduce DAR-Net, a novel transformer-based framework that analyzes complex underwater scenes to classify diver activities. Our contribution lies in a semantically guided learning formulation that couples transformer-based temporal reasoning with pixel-level scene supervision. This multi-loss training strategy explicitly aligns global activity recognition with local human-robot interaction semantics, which is particularly critical in low-visibility underwater conditions. To address the significant challenge of data scarcity in this domain, we present the first-ever Underwater Diver Activity (UDA) dataset, a foundational resource containing over 2,600 annotated images with pixel-level masks. Through rigorous experimental evaluations in a controlled environment, we demonstrate that DAR-Net achieves promising accuracy in recognizing six distinct diver activities, outperforming state-of-the-art models. While this dataset provides a crucial baseline, our work serves as a pioneering step, laying the groundwork for future research and facilitating the development of more intelligent, collaborative underwater robotic systems.",
-      "url": "https://arxiv.org/abs/2606.12374v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.12374v1",
-      "published": "2026-06-10T17:40:19Z",
-      "updated": "2026-06-10T17:40:19Z",
-      "categories": [
-        "cs.RO",
-        "cs.CV"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2606.12372v1",
-      "title": "UniIntervene: Agentic Intervention for Efficient Real-World Reinforcement Learning",
-      "authors": [
-        "Haoyuan Deng",
-        "Yitong Gao",
-        "Yudong Lin",
-        "Haichao Liu",
-        "Zhenyu Wu",
-        "Ziwei Wang"
-      ],
-      "abstract": "Human-in-the-loop reinforcement learning (HiL-RL) has emerged as an effective paradigm for real-world robotic manipulation, enabling online policy improvement with human guidance. However, current HiL-RL frameworks remain intervention-intensive, relying on frequent human corrections to redirect the policy out of unproductive exploration, which incurs high labor cost and limits real-world scalability. To address this, we propose UniIntervene, an agentic intervention model that detects unproductive exploration and autonomously recovers the policy toward high-value states, taking over the bulk of interventions from human operators. Specifically, UniIntervene first performs future-conditioned action-value estimation, predicting the latent consequence of the current action and evaluating its induced value, which provides a more stable progress signal. Building on this, a temporal value-risk critic aggregates recent value dynamics and triggers intervention when the estimated value exhibits sustained stagnation or degradation. When intervention is required, UniIntervene retrieves a high-value recovery target from a memory of past intervention episodes and produces executable corrective actions through a goal-conditioned recovery policy. In this way, UniIntervene turns intervention from passive human correction into a value-aware recovery process for efficient real-world RL. Extensive experiments on diverse real-world manipulation tasks demonstrate that UniIntervene improves the average success rate by 8.6% while reducing human interventions by 57% relative to state-of-the-art HiL-RL baselines.",
-      "url": "https://arxiv.org/abs/2606.12372v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.12372v1",
-      "published": "2026-06-10T17:38:24Z",
-      "updated": "2026-06-10T17:38:24Z",
-      "categories": [
-        "cs.RO",
         "cs.LG"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2606.12366v1",
-      "title": "APT: Action Expert Pretraining Improves Instruction Generalization of Vision-Language-Action Policies",
+      "id": "2606.13675v1",
+      "title": "Improving Robotic Generalist Policies via Flow Reversal Steering",
       "authors": [
-        "Kechun Xu",
-        "Zhenjie Zhu",
-        "Anzhe Chen",
-        "Rong Xiong",
-        "Yue Wang"
+        "Andy Tang",
+        "William Chen",
+        "Andrew Wagenmaker",
+        "Chelsea Finn",
+        "Sergey Levine"
       ],
-      "abstract": "Vision-Language-Action (VLA) models that couple pretrained Vision-Language Models (VLMs) with continuous action experts have achieved strong manipulation performance, yet generalization to out-of-distribution (OOD) language instructions remains poor. A known challenge is the structural imbalance in VLA data, where language is far less diverse than visual and action content, making policies prone to visual shortcuts. While discrete-action methods mitigate this through vision-language co-training, continuous action experts lack such protection: they start from random initialization and learn entirely from imbalanced data, producing noisy gradients that corrupt the VLM and fail to exploit its language capability. We address this from a Bayesian perspective, factorizing the policy into a language-agnostic Vision-Action (VA) prior and a language-conditioned VLA likelihood, and propose APT, a two-stage training method emphasizing Action expert PreTraining. In Stage 1, the action expert is pretrained as a VA prior on vision-action pairs from a frozen VLM, bypassing the language imbalance. In Stage 2, language tokens are injected through a gated fusion mechanism that integrates VLM features while preserving the learned visuomotor prior. APT applies to mainstream VLA architectures, including the $\u03c0$ and GR00T-style architectures. Comprehensive experiments validate that APT achieves consistent gains on unseen instructions and compositional tasks. Project Page: https://xukechun.github.io/papers/APT/",
-      "url": "https://arxiv.org/abs/2606.12366v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.12366v1",
-      "published": "2026-06-10T17:34:25Z",
-      "updated": "2026-06-10T17:34:25Z",
+      "abstract": "Generalist policies can learn a wide range of skills from diverse robot datasets. In order to solve or improve on challenging news tasks, we need a way to infer and invoke the appropriate actions from the policy's rich behavioral prior, especially when directly commanding the policy fails. We focus on flow matching generalists and propose Flow Reversal Steering (FRS): a method that takes suboptimal but ``reasonable'' actions, finds their latent noises by passing them through the flow policy in reverse, and maps them to nearby generalist action modes. We evaluate FRS across many simulated and real-world manipulation settings. First, FRS can turn coarse semantic guidance from humans or vision-language models (VLMs) into corresponding good robot actions, improving zero-shot control. These gains can be distilled with behavioral cloning by training an auxiliary policy to output noises that the generalist maps to good actions -- showing up to 95% absolute task success rate boosts in under a minute of training. Finally, FRS enables policy improvement by bootstrapping reinforcement learning with semantic knowledge, improving on several tasks that standard RL fails to improve on.",
+      "url": "https://arxiv.org/abs/2606.13675v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.13675v1",
+      "published": "2026-06-11T17:59:45Z",
+      "updated": "2026-06-11T17:59:45Z",
       "categories": [
         "cs.RO"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2606.12365v1",
-      "title": "Ambient Diffusion Policy: Imitation Learning from Suboptimal Data in Robotics",
+      "id": "2606.13672v1",
+      "title": "$\\texttt{WEAVER}$, Better, Faster, Longer: An Effective World Model for Robotic Manipulation",
       "authors": [
-        "Adam Wei",
-        "Nicholas Pfaff",
-        "Thomas Cohn",
-        "Arif Kerem Day\u0131",
-        "Constantinos Daskalakis",
-        "Giannis Daras",
-        "Russ Tedrake"
+        "Arnav Kumar Jain",
+        "Yilin Wu",
+        "Jesse Farebrother",
+        "Gokul Swamy",
+        "Andrea Bajcsy"
       ],
-      "abstract": "We propose Ambient Diffusion Policy, a simple and principled method for imitation learning from suboptimal data in robotics. High-quality, task-specific robot data is expensive and time-consuming to collect, while suboptimal datasets with lower-quality or out-of-distribution demonstrations are abundant. Existing methods that co-train on both data sources in robotics often fail to separate the meaningful and the harmful features in the suboptimal samples. In contrast, our method extracts only the useful features by introducing a new axis to co-training in robotics: noise-dependent data usage. Ambient Diffusion Policy restricts the contribution of suboptimal data during training to only the high and low diffusion times. To rigorously justify our approach, we first observe that robot action data exhibits a spectral power law. This induces two important properties on the optimal Diffusion Policy that we exploit: a global-to-local hierarchy and locality. We theoretically formalize this discussion using a simplified model. Our experiments validate Ambient Diffusion Policy on four types of suboptimal action data (noisy trajectories, sim-to-real gap, task mismatch, and large-scale data mixtures) across six tasks. The results show that it effectively learns from arbitrary sources of suboptimal data. Notably, it outperforms existing co-training baselines by up to 33% when scaled to Open X-Embodiment - a large dataset with heterogeneous data quality and unstructured distribution shifts. Overall, Ambient Diffusion Policy increases the utility of suboptimal demonstrations and expands the set of usable data sources in robotics.",
-      "url": "https://arxiv.org/abs/2606.12365v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.12365v1",
-      "published": "2026-06-10T17:34:12Z",
-      "updated": "2026-06-10T17:34:12Z",
+      "abstract": "The potential impacts of world models (WMs, i.e., learned simulators) on robotics are far-reaching -- policy evaluation, policy improvement, and test-time planning -- all with limited real-world interaction. To unlock these downstream capabilities, a WM needs to jointly satisfy three desiderata: $\\textit{(i)}$ fidelity (i.e., producing simulated trajectories that correlate with reality), $\\textit{(ii)}$ consistency (i.e., producing simulated trajectories that are coherent over long horizons), and $\\textit{(iii)}$ efficiency (i.e., producing simulated trajectories quickly). We propose $\\texttt{WEAVER}$ (World Estimation Across Views for Embodied Reasoning): a WM architecture that simultaneously achieves all three desiderata, providing state-of-the-art results on robotic manipulation tasks. $\\texttt{WEAVER}$ is a multi-view WM trained to predict future latents and reward values via a flow-matching loss. We distill the key design decisions across model architecture, memory, and prediction objectives required to unlock the kinds of long-horizon dynamic manipulation tasks that have confounded prior world modeling approaches. We apply $\\texttt{WEAVER}$ in robotic hardware, demonstrating its effectiveness at policy evaluation ($\u03c1$=0.870 correlation with real-world success rate), policy improvement (real-world success rate improvement of $38\\%$ on top of the $\u03c0_{0.5}$ robot foundation model), and test-time planning (real-world success rate improvement of $14\\%$ with a $5-10\\times$ speedup over prior WMs). $\\texttt{WEAVER}$ also demonstrates better performance than prior WMs when evaluated on out-of-distribution scenarios. Code, models, and videos at: https://arnavkj1995.github.io/WEAVER/ .",
+      "url": "https://arxiv.org/abs/2606.13672v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.13672v1",
+      "published": "2026-06-11T17:59:15Z",
+      "updated": "2026-06-11T17:59:15Z",
       "categories": [
-        "cs.RO",
-        "cs.AI"
+        "cs.RO"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2606.12352v1",
-      "title": "CHORUS: Decentralized Multi-Embodiment Collaboration with One VLA Policy",
+      "id": "2606.13633v1",
+      "title": "Aerial Wildfire Suppression Planning with a Hybrid CNN-Cellular Automata Fire Model",
       "authors": [
-        "Ria Doshi",
-        "Tian Gao",
-        "Annie Chen",
-        "Chelsea Finn",
-        "Jeannette Bohg"
+        "Ion Matei",
+        "Maksym Zhenirovskyy",
+        "Takuya Kurihana",
+        "Rohit Vupala",
+        "Anthony Wong"
       ],
-      "abstract": "Multi-robot collaboration allows robots to efficiently take on a wide range of tasks, from moving a couch through a doorway to assembling structures on a construction site. However, achieving such coordination in mobile multi-robot settings remains challenging: centralized methods conditioned on the combined observations of a team scale poorly with team size, and decentralized methods that train one policy per robot often require explicit alignment procedures or information sharing at inference time to overcome partial observability. Our key insight is that the visuomotor priors of pretrained vision-language-action (VLA) models should enable reactive, decentralized collaboration from each robot's local observations alone, without these inference-time assumptions. We propose CHORUS, a framework that adapts a single VLA backbone to control diverse, multi-robot teams. At inference time, each robot runs an independent copy of CHORUS, conditioned only on its own observations and a robot-identifying prompt. In real-world experiments including mobile tape measurement, library book handovers, and laundry basket lifting, CHORUS achieves a 64% point improvement over decentralized, from-scratch models, improves reactivity to teammate behavior by 40% points, and outperforms centralized baselines. Together, these results show that a shared VLA backbone is capable of achieving decentralized multi-robot collaboration, without per-robot policies or inter-robot communication at inference.",
-      "url": "https://arxiv.org/abs/2606.12352v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.12352v1",
-      "published": "2026-06-10T17:26:08Z",
-      "updated": "2026-06-10T17:26:08Z",
+      "abstract": "Aerial wildfire suppression requires not only predicting fire spread, but also designing effective intervention strategies under operational and environmental uncertainty. We present a modeling and optimization framework for aerial wildfire suppression that combines a hybrid neural-cellular automaton wildfire model with gradient-based design of targeted aerial drops. The wildfire model predicts spatially varying spread behavior from terrain, fuel, and wind data, while the intervention module determines binary drop actions with continuous-valued location and orientation parameters mapped to the simulation grid. Water and retardant are represented with distinct suppression effects, corresponding to immediate reduction of active burning and persistent reduction of future spread. To evaluate the robustness of the resulting suppression plans, we quantify both aleatoric uncertainty through Monte Carlo sampling of daily fire-state realizations and epistemic uncertainty through spatially correlated prediction-error perturbations. A case study based on the 2020 Bear Fire shows that the framework can generate coherent aerial suppression schedules for reducing total fire-affected area and can support uncertainty-aware analysis of wildfire intervention strategies.",
+      "url": "https://arxiv.org/abs/2606.13633v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.13633v1",
+      "published": "2026-06-11T17:42:34Z",
+      "updated": "2026-06-11T17:42:34Z",
       "categories": [
-        "cs.RO",
-        "cs.AI"
+        "eess.SY",
+        "cs.LG"
       ],
-      "primary_category": "cs.RO"
+      "primary_category": "eess.SY"
     },
     {
-      "id": "2606.12349v1",
-      "title": "Traceable Virtual Sea Trials in the Marine Robotics Unity Simulator for Manoeuvring Assessment of Unmanned Surface Vehicles",
+      "id": "2606.13605v1",
+      "title": "Distribution-Agnostic Robust Trajectory Optimization via Chance-Constrained Reinforcement Learning",
       "authors": [
-        "Paria Rezayan"
+        "Yashdeep Chaudhary",
+        "Roberto Armellin",
+        "Harry Holt",
+        "Marco Sagliano"
       ],
-      "abstract": "Accurate identification of hydrodynamic derivatives is essential for control and navigation of Unmanned Surface Vehicles (USVs), but high-fidelity manoeuvring data from physical sea trials are constrained by cost and safety. Turning Circle (TC) and Zig-Zag (ZZ) trials remain fundamental to IMO and ITTC assessment procedures. This paper extends the Marine Robotics Unity Simulator (MARUS) by introducing a standardised Virtual Sea Trial framework for automated execution and data generation of TC/ZZ manoeuvres, with traceable command-actuation logging, system-identification (SI)-focused data conditioning, and automated extraction of IMO/ITTC-aligned manoeuvring metrics. A key contribution is a dedicated TC/ZZ data acquisition and post-processing pipeline, improving the repeatability and auditability of simulator-based manoeuvres while producing SI-ready datasets for hydrodynamic-derivative identification and digital-twin workflows. Another feature is explicit command-execution separation for differential-thrust steering, where inputs are recorded as ordered rudder-equivalent commands and realised actuation is logged as an execution-level proxy derived from applied thrust. Case-study results demonstrate repeatable and compliant manoeuvre behaviour. For TC tests, the normalised advance differs by approximately 3.9 percent between port and starboard sides, while the tactical diameter differs by approximately 4.6 to 4.7 percent. For ZZ tests, first and second overshoot excesses remain below 1 degree for both +/- 10 degree and +/- 20 degree manoeuvres, satisfying IMO criteria, while peak yaw rates range from approximately 4.1 to 5.8 deg/s. Overall, the framework provides a repeatable and auditable virtual sea-trial workflow for generating IMO/ITTC-aligned datasets and supporting system identification, hydrodynamic-derivative estimation, and digital-twin calibration.",
-      "url": "https://arxiv.org/abs/2606.12349v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.12349v1",
-      "published": "2026-06-10T17:21:30Z",
-      "updated": "2026-06-10T17:21:30Z",
+      "abstract": "This paper presents a distribution-agnostic robust trajectory-optimization framework based on chance-constrained reinforcement learning. The uncertainty is represented here through initial conditions and process noise, with the only requirement being that it can be sampled. A deterministic nominal trajectory is first computed offline, and reinforcement learning is then used only to robustify that baseline through a structured affine closed-loop correction law comprising a feedforward control adjustment and time-varying feedback gains. Probabilistic feasibility is enforced empirically through rollout-based upper-tail quantiles, while terminal dispersion is regulated through covariance-feasibility penalties. The framework is assessed on two materially different trajectory design problems. The flagship case study is a three-dimensional multi-impulse Earth-Mars transfer, where the learned policy is benchmarked against a recent robust trajectory-optimization reference under Gaussian uncertainty and then evaluated under bounded uniform uncertainty and under process disturbances not seen during training. The second case study is a stochastic atmospheric pinpoint rocket landing problem, used to assess portability to a short-horizon continuous-thrust setting with drag, mass depletion, and glide-slope constraints. The results show that the proposed framework can remain competitive in upper-tail fuel cost while preserving probabilistic feasibility, and that the same robustification scaffold can be carried across heterogeneous spacecraft trajectory planning problems without redesign of its core stochastic-control structure.",
+      "url": "https://arxiv.org/abs/2606.13605v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.13605v1",
+      "published": "2026-06-11T17:22:05Z",
+      "updated": "2026-06-11T17:22:05Z",
+      "categories": [
+        "math.OC",
+        "cs.LG",
+        "eess.SY"
+      ],
+      "primary_category": "math.OC"
+    },
+    {
+      "id": "2606.13601v1",
+      "title": "MCR-Bionic Hand: Anatomical Structural Priors for Dexterous Manipulation",
+      "authors": [
+        "Haosen Yang",
+        "Guowu Wei"
+      ],
+      "abstract": "Dexterous robotic hands are usually formulated as high dimensional active control systems governed by degrees of freedom, actuation, and algorithms. Human hand dexterity, however, is partly encoded in the physical architecture of bones, ligaments, tendons, aponeuroses, and intrinsic muscles. This work describes that contribution as two linked forms of structural intelligence: structural prior generation, in which wrist to finger tenodesis, FDS/FDP routing, and the dorsal extensor hood transform low dimensional posture inputs into default grasp configurations and PIP to DIP coordination; and muscle mediated modulation, in which extrinsic muscles, lumbricals, and interossei regulate MCP posture, distal stability, fingertip force paths, and contact states around that default state. Based on this framework, MCR-Bionic Hand is developed as a 1:1 musculoskeletal biomimetic hand integrating a two row eight bone wrist, cross wrist tendons, anatomical flexor routing, volar plate and collateral ligament constraints, the dorsal extensor hood, and intrinsic muscle pathways within one body. Functional demonstrations and geometric mechanical models show that wrist posture induces multi joint pre shaping, the extensor hood maps PIP posture to a coupled DIP response, and intrinsic plus pathways modulate distal stability and fingertip action direction after grasp formation. Contact rich tasks, including coin rotation, pen transfer, dorsal coin flipping, and cube manipulation, show that MCR-Bionic links low dimensional state generation with fine post contact modulation. These results suggest that anatomical biomimetics is valuable not for visual similarity, but for identifying human hand structures that perform part of control.",
+      "url": "https://arxiv.org/abs/2606.13601v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.13601v1",
+      "published": "2026-06-11T17:20:15Z",
+      "updated": "2026-06-11T17:20:15Z",
       "categories": [
         "cs.RO",
         "eess.SY"
       ],
       "primary_category": "cs.RO"
+    },
+    {
+      "id": "2606.13578v1",
+      "title": "LabVLA: Grounding Vision-Language-Action Models in Scientific Laboratories",
+      "authors": [
+        "Baochang Ren",
+        "Xinjie Liu",
+        "Xi Chen",
+        "Yanshuo Liu",
+        "Chenxi Li",
+        "Daqi Gao",
+        "Zeqin Su",
+        "Jintao Xing",
+        "Zirui Xue",
+        "Rui Li",
+        "Xiangyu Zhao",
+        "Shuofei Qiao",
+        "Minting Pan",
+        "Wangmeng Zuo",
+        "Lei Bai",
+        "Dongzhan Zhou",
+        "Ningyu Zhang",
+        "Huajun Chen"
+      ],
+      "abstract": "Scientific laboratories increasingly rely on AI systems to reason about experiments, but the physical act of doing science remains largely outside their reach. AI can help read literature, generate hypotheses, and plan protocols, yet the execution of those protocols at the bench still requires a human operator. Vision-Language-Action (VLA) models provide one possible interface between written protocols and robot execution, but existing policies are trained mostly on household and tabletop demonstrations and rarely encounter the instruments, transparent liquids, or fixed protocol workflows found in scientific laboratories. Closing this gap requires both laboratory-specific supervision and a unified learning framework that can accommodate the diverse robot embodiments used to execute experimental protocols. We therefore identify data and embodiment as central bottlenecks alongside model design. To address the data side, we build RoboGenesis, a simulation-based workflow and data engine that composes configured laboratory workflows from atomic skills, validates and filters rollouts, and exports structured demonstrations across supported robot profiles. On the policy side, we present LabVLA, trained with a two-stage recipe: FAST action token pretraining first makes the Qwen3-VL-4B-Instruct backbone action aware before any continuous control is learned, and flow matching posttraining then attaches a DiT action expert under knowledge insulation. On the LabUtopia benchmark, LabVLA achieves the highest average success rate among all evaluated baselines under both in-distribution and out-of-distribution settings.",
+      "url": "https://arxiv.org/abs/2606.13578v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.13578v1",
+      "published": "2026-06-11T17:03:53Z",
+      "updated": "2026-06-11T17:03:53Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG",
+        "cs.MM",
+        "cs.RO"
+      ],
+      "primary_category": "cs.CL"
+    },
+    {
+      "id": "2606.13577v1",
+      "title": "Differential Geometric Conditions for Koopman Linearizability of Control-Affine Systems",
+      "authors": [
+        "Shankar A. Deka"
+      ],
+      "abstract": "Koopman linearization opens many possibilities for control synthesis and analysis of nonlinear systems. Whether or not any given nonlinear control system admits a finite-dimensional Koopman representation remains a crucial question to address. A related problem is to categorize the class of all Koopman linearizable nonlinear control systems. In this work, we present differential geometric conditions on the drift and control vector fields of a control-affine nonlinear system, that must be necessarily satisfied for Koopman linear transformation to exist. The same conditions are also shown to be sufficient for (a slightly weaker notion of) Koopman linearizability on control-invariant manifolds. Further, these conditions, together with an additional condition, become necessary and sufficient for Koopman linearizability to a controllable linear system. Our examples illustrate the ease of checking these conditions, and also shed light on how Koopman linearizing transformation may not exist for a control-affine system even though one can linearize the autonomous part of the system via Koopman lifting.",
+      "url": "https://arxiv.org/abs/2606.13577v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.13577v1",
+      "published": "2026-06-11T17:03:00Z",
+      "updated": "2026-06-11T17:03:00Z",
+      "categories": [
+        "math.OC",
+        "eess.SY"
+      ],
+      "primary_category": "math.OC"
+    },
+    {
+      "id": "2606.13515v1",
+      "title": "MaskWAM: Unifying Mask Prompting and Prediction for World-Action Models",
+      "authors": [
+        "Hanyang Yu",
+        "Haitao Lin",
+        "Jingbo Zhang",
+        "Wenyao Zhang",
+        "Chenghao Gu",
+        "Heng Li",
+        "Ping Tan"
+      ],
+      "abstract": "World Action Models (WAMs) present a promising paradigm for robotic control via video prediction. However, current WAMs suffer from fundamental spatial bottlenecks: standard text inputs introduce referential ambiguity in cluttered scenes, while unstructured RGB predictions lack semantic grounding and remain biased by task-irrelevant backgrounds. To overcome these limitations, we introduce MaskWAM, an object-centric world-action model. By jointly integrating masks as both explicit inputs and predictions via a unified Mixture of Transformers (MoT), MaskWAM unlocks robust policy generalization. This design provides two key benefits: (1) predicting future masks yields object-centric semantic supervision that suppresses visual noise, significantly enhancing even standard text-conditioned WAMs; and (2) coupling this predictive supervision with first-frame visual prompts, such as target object masks, establishes a precise spatial anchor that substantially reduces language ambiguity. Crucially, as WAMs are inherently vision-driven architectures, direct mask conditioning yields substantially stronger guidance than text alone, establishing a precise and robust paradigm for manipulating unseen objects. Evaluations on LIBERO, RoboTwin, and real-world tasks demonstrate that MaskWAM significantly outperforms baselines in both language-clear and language-ambiguous tasks.",
+      "url": "https://arxiv.org/abs/2606.13515v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.13515v1",
+      "published": "2026-06-11T16:02:42Z",
+      "updated": "2026-06-11T16:02:42Z",
+      "categories": [
+        "cs.CV",
+        "cs.LG",
+        "cs.RO"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2606.13511v1",
+      "title": "Spectrum Sharing Across Terrestrial and Non-Terrestrial Services in the FR3 Upper Midband",
+      "authors": [
+        "Paolo Testolina",
+        "Ergest Beshaj",
+        "Michele Polese",
+        "Tommaso Melodia"
+      ],
+      "abstract": "The frequency bands between 7 and 24 GHz, also known as upper midband or Frequency Range (FR) 3, are being considered as an enabler of 6th Generation (6G) mobile networks. This portion of the spectrum exhibits different propagation characteristics compared to frequencies above 24 GHz, while also offering the potential to provide larger bandwidth allocations for mobile systems than those available in the sub-6 GHz range. 6G technology and spectrum policy, however, will need to guarantee coexistence with the incumbents that already use these frequency bands, which include a variety of services, from radiolocation to satellite-based communications, remote sensing, and radioastronomy. In this paper, we consider the challenge of coexistence between 6G terrestrial systems and satellite incumbents in different portions of the FR3 bands. Using a large-scale 3D model of a terrestrial deployment in the city of Boston and an open-source ray tracing solution, we evaluate the level of Radio Frequency Interference (RFI) that tens of terrestrial Next Generation Node Bs (gNBs) generate toward satellites at different elevation angles. Our model, based on realistic obstruction, clutter, diffraction, and reflections, shows that sidelobes and Non-Line-of-Sight (NLoS) paths can significantly contribute to RFI. Besides directionality, the spatial distribution of gNBs also plays a key role in defining the RFI levels, suggesting that a careful design and operation of terrestrial deployments can create coexistence opportunities.",
+      "url": "https://arxiv.org/abs/2606.13511v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.13511v1",
+      "published": "2026-06-11T15:57:51Z",
+      "updated": "2026-06-11T15:57:51Z",
+      "categories": [
+        "eess.SY",
+        "cs.NI",
+        "eess.SP"
+      ],
+      "primary_category": "eess.SY"
     }
   ]
 }

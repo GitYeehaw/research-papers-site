@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-06-11T12:20:20.072463+00:00",
+  "scraped_at": "2026-06-12T11:54:35.685003+00:00",
   "researcher_count": 54,
   "researchers": [
     {
@@ -3027,6 +3027,26 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2606.13675v1",
+          "title": "Improving Robotic Generalist Policies via Flow Reversal Steering",
+          "authors": [
+            "Andy Tang",
+            "William Chen",
+            "Andrew Wagenmaker",
+            "Chelsea Finn",
+            "Sergey Levine"
+          ],
+          "abstract": "Generalist policies can learn a wide range of skills from diverse robot datasets. In order to solve or improve on challenging news tasks, we need a way to infer and invoke the appropriate actions from the policy's rich behavioral prior, especially when directly commanding the policy fails. We focus on flow matching generalists and propose Flow Reversal Steering (FRS): a method that takes suboptimal but ``reasonable'' actions, finds their latent noises by passing them through the flow policy in reverse, and maps them to nearby generalist action modes. We evaluate FRS across many simulated and real-world manipulation settings. First, FRS can turn coarse semantic guidance from humans or vision-language models (VLMs) into corresponding good robot actions, improving zero-shot control. These gains can be distilled with behavioral cloning by training an auxiliary policy to output noises that the generalist maps to good actions -- showing up to 95% absolute task success rate boosts in under a minute of training. Finally, FRS enables policy improvement by bootstrapping reinforcement learning with semantic knowledge, improving on several tasks that standard RL fails to improve on.",
+          "url": "https://arxiv.org/abs/2606.13675v1",
+          "pdf_url": "https://arxiv.org/pdf/2606.13675v1",
+          "published": "2026-06-11T17:59:45Z",
+          "updated": "2026-06-11T17:59:45Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2606.12402v1",
           "title": "DIRECT: When and Where Should You Allocate Test-Time Compute in Embodied Planners?",
           "authors": [
@@ -3117,24 +3137,6 @@
             "cs.AI"
           ],
           "primary_category": "cs.RO"
-        },
-        {
-          "id": "2605.05812v2",
-          "title": "Long-Horizon Q-Learning: Accurate Value Learning via n-Step Inequalities",
-          "authors": [
-            "Armaan A. Abraham",
-            "Lucy Xiaoyang Shi",
-            "Chelsea Finn"
-          ],
-          "abstract": "Off-policy, value-based reinforcement learning methods such as Q-learning are appealing because they can learn from arbitrary experience, including data collected by older policies or other agents. In practice, however, bootstrapping makes long-horizon learning brittle: estimation errors at later states propagate backward through temporal-difference (TD) updates and can compound over time. We propose long-horizon Q-learning (LQL), which introduces a principled backstop against compounding error when learning the optimal action-value function. LQL builds on a prior optimality tightening observation: any realized action sequence lower-bounds what the optimal policy can achieve in expectation, so acting optimally earlier should not be worse than following the observed actions for several steps before switching to optimal behavior. Our contribution is to turn this inequality into a practical stabilization mechanism for Q-learning by using a hinge loss to penalize violations of these bounds. Importantly, LQL computes these penalties using network outputs already produced for the TD error, requiring no auxiliary networks and no additional forward passes relative to Q-learning. When combined with multiple state-of-the-art methods on a range of online and offline-to-online benchmarks, LQL consistently outperforms both 1-step TD and n-step TD learning at similar runtime.",
-          "url": "https://arxiv.org/abs/2605.05812v2",
-          "pdf_url": "https://arxiv.org/pdf/2605.05812v2",
-          "published": "2026-05-07T07:47:55Z",
-          "updated": "2026-05-11T14:20:38Z",
-          "categories": [
-            "cs.AI"
-          ],
-          "primary_category": "cs.AI"
         }
       ]
     },
@@ -4419,6 +4421,28 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2606.13677v1",
+          "title": "Mana: Dexterous Manipulation of Articulated Tools",
+          "authors": [
+            "Zhao-Heng Yin",
+            "Guanya Shi",
+            "Pieter Abbeel",
+            "C. Karen Liu"
+          ],
+          "abstract": "Articulated tool manipulation remains a major challenge in dexterous robotics due to the need to coordinate internal degrees of freedom and contact-rich interactions. While prior work has largely focused on rigid objects, articulated tool use remains underexplored because of its physical complexity and the difficulty of learning functional grasping and manipulation policies. We present Mana (Manipulation Animator), a general sim-to-real framework that reinterprets dexterous manipulation as an animation problem. Inspired by computer animation, Mana employs a coarse-to-fine pipeline that transforms procedurally-generated grasp keyframes into manipulation trajectories through motion planning and reinforcement learning. The data generation process is largely automatic, requiring only a few mouse clicks to specify functional affordances (<1 minute per tool). Across four articulated tools spanning different scales and joint types, Mana achieves zero-shot sim-to-real transfer for both grasping and in-hand manipulation, demonstrating a scalable approach to dexterous articulated tool use.",
+          "url": "https://arxiv.org/abs/2606.13677v1",
+          "pdf_url": "https://arxiv.org/pdf/2606.13677v1",
+          "published": "2026-06-11T17:59:49Z",
+          "updated": "2026-06-11T17:59:49Z",
+          "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV",
+            "cs.LG"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2606.10305v1",
           "title": "SARM2: Multi-Task Stage Aware Reward Modeling for Self Improving Robotic Manipulation",
           "authors": [
@@ -4517,40 +4541,6 @@
             "cs.AI"
           ],
           "primary_category": "cs.LG"
-        },
-        {
-          "id": "2605.00080v1",
-          "title": "World Model for Robot Learning: A Comprehensive Survey",
-          "authors": [
-            "Bohan Hou",
-            "Gen Li",
-            "Jindou Jia",
-            "Tuo An",
-            "Xinying Guo",
-            "Sicong Leng",
-            "Haoran Geng",
-            "Yanjie Ze",
-            "Tatsuya Harada",
-            "Philip Torr",
-            "Oier Mees",
-            "Marc Pollefeys",
-            "Zhuang Liu",
-            "Jiajun Wu",
-            "Pieter Abbeel",
-            "Jitendra Malik",
-            "Yilun Du",
-            "Jianfei Yang"
-          ],
-          "abstract": "World models, which are predictive representations of how environments evolve under actions, have become a central component of robot learning. They support policy learning, planning, simulation, evaluation, data generation, and have advanced rapidly with the rise of foundation models and large-scale video generation. However, the literature remains fragmented across architectures, functional roles, and embodied application domains. To address this gap, we present a comprehensive review of world models from a robot-learning perspective. We examine how world models are coupled with robot policies, how they serve as learned simulators for reinforcement learning and evaluation, and how robotic video world models have progressed from imagination-based generation to controllable, structured, and foundation-scale formulations. We further connect these ideas to navigation and autonomous driving, and summarize representative datasets, benchmarks, and evaluation protocols. Overall, this survey systematically reviews the rapidly growing literature on world models for robot learning, clarifies key paradigms and applications, and highlights major challenges and future directions for predictive modeling in embodied agents. To facilitate continued access to newly emerging works, benchmarks, and resources, we will maintain and regularly update the accompanying GitHub repository alongside this survey.",
-          "url": "https://arxiv.org/abs/2605.00080v1",
-          "pdf_url": "https://arxiv.org/pdf/2605.00080v1",
-          "published": "2026-04-30T14:35:31Z",
-          "updated": "2026-04-30T14:35:31Z",
-          "categories": [
-            "cs.RO",
-            "cs.CV"
-          ],
-          "primary_category": "cs.RO"
         }
       ]
     },
@@ -4562,6 +4552,26 @@
       "website": "https://people.eecs.berkeley.edu/~svlevine/",
       "paper_count": 5,
       "papers": [
+        {
+          "id": "2606.13675v1",
+          "title": "Improving Robotic Generalist Policies via Flow Reversal Steering",
+          "authors": [
+            "Andy Tang",
+            "William Chen",
+            "Andrew Wagenmaker",
+            "Chelsea Finn",
+            "Sergey Levine"
+          ],
+          "abstract": "Generalist policies can learn a wide range of skills from diverse robot datasets. In order to solve or improve on challenging news tasks, we need a way to infer and invoke the appropriate actions from the policy's rich behavioral prior, especially when directly commanding the policy fails. We focus on flow matching generalists and propose Flow Reversal Steering (FRS): a method that takes suboptimal but ``reasonable'' actions, finds their latent noises by passing them through the flow policy in reverse, and maps them to nearby generalist action modes. We evaluate FRS across many simulated and real-world manipulation settings. First, FRS can turn coarse semantic guidance from humans or vision-language models (VLMs) into corresponding good robot actions, improving zero-shot control. These gains can be distilled with behavioral cloning by training an auxiliary policy to output noises that the generalist maps to good actions -- showing up to 95% absolute task success rate boosts in under a minute of training. Finally, FRS enables policy improvement by bootstrapping reinforcement learning with semantic knowledge, improving on several tasks that standard RL fails to improve on.",
+          "url": "https://arxiv.org/abs/2606.13675v1",
+          "pdf_url": "https://arxiv.org/pdf/2606.13675v1",
+          "published": "2026-06-11T17:59:45Z",
+          "updated": "2026-06-11T17:59:45Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
         {
           "id": "2606.11087v1",
           "title": "Test-Time Gradient Guidance of Flow Policies in Reinforcement Learning",
@@ -4744,27 +4754,6 @@
             "cs.RO"
           ],
           "primary_category": "cs.LG"
-        },
-        {
-          "id": "2604.01169v1",
-          "title": "Bridging the Simulation-to-Experiment Gap with Generative Models using Adversarial Distribution Alignment",
-          "authors": [
-            "Kai Nelson",
-            "Tobias Kreiman",
-            "Sergey Levine",
-            "Aditi S. Krishnapriyan"
-          ],
-          "abstract": "A fundamental challenge in science and engineering is the simulation-to-experiment gap. While we often possess prior knowledge of physical laws, these physical laws can be too difficult to solve exactly for complex systems. Such systems are commonly modeled using simulators, which impose computational approximations. Meanwhile, experimental measurements more faithfully represent the real world, but experimental data typically consists of observations that only partially reflect the system's full underlying state. We propose a data-driven distribution alignment framework that bridges this simulation-to-experiment gap by pre-training a generative model on fully observed (but imperfect) simulation data, then aligning it with partial (but real) observations of experimental data. While our method is domain-agnostic, we ground our approach in the physical sciences by introducing Adversarial Distribution Alignment (ADA). This method aligns a generative model of atomic positions -- initially trained on a simulated Boltzmann distribution -- with the distribution of experimental observations. We prove that our method recovers the target observable distribution, even with multiple, potentially correlated observables. We also empirically validate our framework on synthetic, molecular, and experimental protein data, demonstrating that it can align generative models with diverse observables. Our code is available at https://kaityrusnelson.com/ada/.",
-          "url": "https://arxiv.org/abs/2604.01169v1",
-          "pdf_url": "https://arxiv.org/pdf/2604.01169v1",
-          "published": "2026-04-01T17:21:33Z",
-          "updated": "2026-04-01T17:21:33Z",
-          "categories": [
-            "cs.LG",
-            "cond-mat.mtrl-sci",
-            "q-bio.BM"
-          ],
-          "primary_category": "cs.LG"
         }
       ]
     },
@@ -4861,7 +4850,7 @@
           "primary_category": "cs.RO"
         },
         {
-          "id": "2603.14483v1",
+          "id": "2603.14483v2",
           "title": "Disentangling Dynamical Systems: Causal Representation Learning Meets Local Sparse Attention",
           "authors": [
             "Markus W. Baumgartner",
@@ -4870,10 +4859,10 @@
             "Ingmar Posner"
           ],
           "abstract": "Parametric system identification methods estimate the parameters of explicitly defined physical systems from data. Yet, they remain constrained by the need to provide an explicit function space, typically through a predefined library of candidate functions chosen via available domain knowledge. In contrast, deep learning can demonstrably model systems of broad complexity with high fidelity, but black-box function approximation typically fails to yield explicit descriptive or disentangled representations revealing the structure of a system. We develop a novel identifiability theorem, leveraging causal representation learning, to uncover disentangled representations of system parameters without structural assumptions. We derive a graphical criterion specifying when system parameters can be uniquely disentangled from raw trajectory data, up to permutation and diffeomorphism. Crucially, our analysis demonstrates that global causal structures provide a lower bound on the disentanglement guarantees achievable when considering local state-dependent causal structures. We instantiate system parameter identification as a variational inference problem, leveraging a sparsity-regularised transformer to uncover state-dependent causal structures. We empirically validate our approach across four synthetic domains, demonstrating its ability to recover highly disentangled representations that baselines fail to recover. Corroborating our theoretical analysis, our results confirm that enforcing local causal structure is often necessary for full identifiability.",
-          "url": "https://arxiv.org/abs/2603.14483v1",
-          "pdf_url": "https://arxiv.org/pdf/2603.14483v1",
+          "url": "https://arxiv.org/abs/2603.14483v2",
+          "pdf_url": "https://arxiv.org/pdf/2603.14483v2",
           "published": "2026-03-15T17:03:34Z",
-          "updated": "2026-03-15T17:03:34Z",
+          "updated": "2026-06-11T14:12:23Z",
           "categories": [
             "cs.LG"
           ],
