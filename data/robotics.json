@@ -2,208 +2,255 @@
   "category": "robotics",
   "name": "Robotics Research",
   "description": "Robotics \u2014 Motion Planning, Control Systems, Human-Robot Interaction, Autonomous Systems",
-  "scraped_at": "2026-06-15T14:30:41.757390+00:00",
+  "scraped_at": "2026-06-16T13:01:59.693513+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2606.14699v1",
-      "title": "Instruct-Particulate: Scaling Feed-Forward 3D Object Articulation with Kinematic Control",
+      "id": "2606.17055v1",
+      "title": "T-Rex: Tactile-Reactive Dexterous Manipulation",
       "authors": [
-        "Ruining Li",
-        "Yuxin Yao",
-        "Matt Zhou",
-        "Chuanxia Zheng",
-        "Christian Rupprecht",
-        "Joan Lasenby",
-        "Shangzhe Wu",
-        "Andrea Vedaldi"
+        "Dantong Niu",
+        "Zhuoyang Liu",
+        "Zekai Wang",
+        "Boning Shao",
+        "Zhao-Heng Yin",
+        "Anirudh Pai",
+        "Yuvan Sharma",
+        "Stefano Saravalle",
+        "Ruijie Zheng",
+        "Jing Wang",
+        "Ryan Punamiya",
+        "Mengda Xu",
+        "Yuqi Xie",
+        "Yunfan Jiang",
+        "Letian Fu",
+        "Konstantinos Kallidromitis",
+        "Matteo Gioia",
+        "Junyi Zhang",
+        "Jiaxin Ge",
+        "Haiwen Feng",
+        "Fabio Galasso",
+        "Wei Zhan",
+        "David M. Chan",
+        "Yutong Bai",
+        "Roei Herzig",
+        "Jiahui Lei",
+        "Fei-Fei Li",
+        "Ken Goldberg",
+        "Jitendra Malik",
+        "Pieter Abbeel",
+        "Yuke Zhu",
+        "Danfei Xu",
+        "Jim",
+        "Fan",
+        "Trevor Darrell"
       ],
-      "abstract": "Reconstructing articulated 3D objects is important for animation, gaming, and robotic simulations. Recent neural networks can estimate the articulated structure of 3D objects, but their generalization remains limited by the scarcity of annotated data for this task. To address this gap, we introduce Instruct-Particulate, a model that takes a 3D mesh together with a target kinematic specification, including part descriptions, connectivity, joint types, and optional point prompts, and predicts the corresponding kinematic part segmentation and joint motion parameters. The kinematic specification disambiguates the task and allows the model to target annotations of different granularity, thereby making it possible to use more abundant heterogeneous training data. At test time, the kinematic specification can be obtained automatically from large-scale vision-language models, so the model can be applied to any input mesh. To train our model at scale, we construct a heterogeneous dataset of more than 150,000 articulated 3D objects, extending existing publicly available collections with data obtained by partially labelling other 3D models (monolithic or already decomposed into parts) with kinematic labels by means of vision-language models. Experiments show that our model generalizes better across categories and to AI-generated meshes, enabling articulated asset reconstruction from real-world images via image-to-3D models.",
-      "url": "https://arxiv.org/abs/2606.14699v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.14699v1",
-      "published": "2026-06-12T17:59:36Z",
-      "updated": "2026-06-12T17:59:36Z",
+      "abstract": "The ability to react dynamically to tactile signals has long been considered crucial to agile human-level dexterity. Yet contemporary learning-based Vision-Language-Action (VLA) models for robotic manipulation generally either overlook the tactile modality or are limited to encoders with static cues, due in part to the scarcity of diverse training data and standardized evaluation, architectural constraints in current VLA models, and limitations of static tactile encoders. In this paper, we push the frontier of tactile-reactive manipulation by addressing all of these limitations. We propose a large-scale, 100-hour tactile-rich dataset collected via a novel, data-efficient recipe that prioritizes elementary motor primitives. To effectively exploit naturally high-frequency touch signals without sacrificing the existing capabilities of existing VLAs, we introduce a variable-rate Mixture-of-Transformers (MoT) architecture equipped with a novel temporal tactile VQ-VAE encoder. We demonstrate the effectiveness of tactile-reactive policies on 12 manipulation tasks requiring delicate force control and deformable object manipulation, achieving over 30% higher average success rate than the strongest baseline.",
+      "url": "https://arxiv.org/abs/2606.17055v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.17055v1",
+      "published": "2026-06-15T17:59:55Z",
+      "updated": "2026-06-15T17:59:55Z",
       "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2606.17054v1",
+      "title": "Human Universal Grasping",
+      "authors": [
+        "Kevin Yuanbo Wu",
+        "Tianxing Zhou",
+        "Isaac Tu",
+        "Billy Yan",
+        "Irmak Guzey",
+        "David Fouhey",
+        "Dandan Shan",
+        "Lerrel Pinto"
+      ],
+      "abstract": "Humans can grasp objects effortlessly, whereas multi-fingered robots are far from this level of generality. We argue that the most natural source of robot grasping data is from humans, who pick up thousands of objects every day. We present HUG, a flow-matching model that generates diverse human grasps for any user-specified object in a single RGB-D image captured from a stereo camera. Using smart glasses, we first collect 1M-HUGs, an egocentric dataset of human grasps spanning 1M frames (27.8 hrs) and 6,707 object instances across 41 buildings. Next, to model the distribution of natural human grasps, our novel flow-matching model fuses RGB and depth observations to output a grasp parameterized by wrist translation, wrist rotation, and MANO hand pose. Predicted grasps can be retargeted to various robot hands, enabling zero-shot grasping in everyday scenes. To standardize evaluation, we build a new simulated benchmark, HUG-Bench, of 90 unseen objects from five geometric categories and various sizes, with metric-scale 3D meshes. We evaluate HUG in the real world on the 30-object test set of HUG-Bench across multiple stereo cameras, robot embodiments, and household environments. HUG outperforms the state-of-the-art grasping baselines by +23% and +34% on our challenging object set. Code, data, benchmark, checkpoints, and an interactive demo are released on our website: https://grasping.io/",
+      "url": "https://arxiv.org/abs/2606.17054v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.17054v1",
+      "published": "2026-06-15T17:59:36Z",
+      "updated": "2026-06-15T17:59:36Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2606.17050v1",
+      "title": "Optimal Bounded Thrust Powered Descent with Analytical Ground-Collision Avoidance",
+      "authors": [
+        "Or Nataf",
+        "Vitaly Shaferman"
+      ],
+      "abstract": "The paper proposes a new approach to address the bounded-thrust powered-descent problem while ensuring ground-collision avoidance. A time-dependent polynomial approximation of the mass is employed to formulate a bounded linear-quadratic optimal-control problem that minimizes the thrust-acceleration control effort, terminal miss, and terminal velocity error. The resulting approximation is used to impose a hard constraint on the horizontal thrust profile while keeping the vertical thrust profile unconstrained. The key idea is a hierarchical separation of the thrust allocation, which enables analytical ground-collision avoidance under bounded thrust. Unlike existing bounded-thrust powered-descent approaches based on numerical optimization and trajectory-shaping constraints, the proposed method provides explicit analytical collision-avoidance conditions. Building on this formulation, the guidance law predicts the switching times between saturated and unsaturated arcs and shapes the thrust-acceleration profile to achieve a soft landing, even when the controller remains saturated over extended portions of the trajectory. Owing to its analytical nature, the guidance law is computationally efficient, and its continuous thrust profile facilitates real-time implementation. The proposed method was evaluated over a grid of perturbed initial conditions in realistic simulations, demonstrating accurate collision-free soft-landing performance. The results highlight the importance of combining saturation-aware guidance with ground-collision avoidance under bounded thrust.",
+      "url": "https://arxiv.org/abs/2606.17050v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.17050v1",
+      "published": "2026-06-15T17:58:45Z",
+      "updated": "2026-06-15T17:58:45Z",
+      "categories": [
+        "eess.SY",
+        "math.OC"
+      ],
+      "primary_category": "eess.SY"
+    },
+    {
+      "id": "2606.17046v1",
+      "title": "Geometric Action Model for Robot Policy Learning",
+      "authors": [
+        "Jisang Han",
+        "Seonghu Jeon",
+        "Jaewoo Jung",
+        "Ren\u00e9 Zurbr\u00fcgg",
+        "Honggyu An",
+        "Tifanny Portela",
+        "Marco Hutter",
+        "Marc Pollefeys",
+        "Seungryong Kim",
+        "Sunghwan Hong"
+      ],
+      "abstract": "Generalist robot policies must follow user instructions while reasoning about how objects, cameras, and robot actions interact in the 3D physical world. Recent vision-language-action models (VLAs) and video world-action models (WAMs) inherit strong semantic or temporal priors from large-scale foundation models, but they still operate primarily on 2D image frames or 2D-derived latent spaces, leaving implicit the 3D geometry required for contact-rich manipulation. We propose the Geometric Action Model (GAM), a language-conditioned manipulation policy that directly repurposes a pretrained geometric foundation model (GFM) as a shared substrate for perception, temporal prediction, and action decoding. GAM splits the GFM at an intermediate layer: the shallow layers serve as an observation encoder, and a causal future predictor inserted at the split layer forecasts future latent tokens conditioned on language, proprioception, and action history. The predicted future tokens are then routed through the remaining GFM blocks for feature propagation and decoding, allowing a single backbone to produce both future geometry and actions. This design equips the GFM with language-conditioned temporal world modeling through minimal architectural modification while preserving its rich geometric priors. Across a broad suite of simulation and real-robot manipulation benchmarks, GAM is more accurate, more robust, faster, and lighter than current foundation-model-scale baselines.",
+      "url": "https://arxiv.org/abs/2606.17046v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.17046v1",
+      "published": "2026-06-15T17:58:03Z",
+      "updated": "2026-06-15T17:58:03Z",
+      "categories": [
+        "cs.RO",
         "cs.CV",
-        "cs.GR",
-        "cs.RO"
+        "cs.LG"
       ],
-      "primary_category": "cs.CV"
+      "primary_category": "cs.RO"
     },
     {
-      "id": "2606.14679v1",
-      "title": "Optimal Hidden-Target Learning for Online Inventory Optimization on General Convex Sets",
+      "id": "2606.17043v1",
+      "title": "Hierarchical Advantage Weighting for Online RL Fine-Tuning of VLAs from Sparse Episode Outcomes",
       "authors": [
-        "Anthony Pineci",
-        "Yunzong Xu"
-      ],
-      "abstract": "Online inventory optimization (OIO) is online convex optimization with physical memory: inventory carryover makes the feasible action set depend on the past. A natural principle, used in stochastic inventory learning and recently in OIO under a single linear capacity constraint, is to maintain a hidden target chosen by an online learner and implement its projection onto the currently feasible order-up-to set. We prove that this simple principle is optimal for OIO on arbitrary bounded convex capacity sets. With online gradient descent as the base learner, the method improves the best known regret guarantee for OIO on general convex sets from inverse to inverse-square-root dependence on the common-demand probability, and we prove a matching lower bound. The same principle gives the first polylogarithmic regret guarantee for strongly convex losses and the first dynamic regret guarantee adapting to Euclidean path variation on general convex capacity sets. The analysis introduces a norm alignment principle: the right state variable is the distance from the hidden target to the feasible set, measured in the same norm as the projection. Under norm alignment, this distance evolves pathwise as a scalar queue, with target movement as arrival and common demand as service. This reduction to one-dimensional queue control resolves the state dependence and extends the guarantees to general convex capacity sets, beyond the reach of prior productwise approaches. Experiments on synthetic and real-world inventory data corroborate the theory.",
-      "url": "https://arxiv.org/abs/2606.14679v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.14679v1",
-      "published": "2026-06-12T17:45:29Z",
-      "updated": "2026-06-12T17:45:29Z",
-      "categories": [
-        "cs.LG",
-        "eess.SY",
-        "math.OC",
-        "stat.ML"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2606.14665v1",
-      "title": "EgoGuide: Egocentric Guidance for Efficient Robot-Free Demonstration Collection and Learning",
-      "authors": [
-        "Yue Xu",
-        "Mingtao Nie",
-        "Tianle Li",
-        "Hong Li",
-        "Yibo Luo",
+        "Tongyan Fang",
         "Siyuan Huang",
-        "Yong-Lu Li"
+        "Naiyu Fang",
+        "Ganlong Zhao",
+        "Zhongjin Luo",
+        "Jianbo Liu",
+        "Xiaogang Wang",
+        "Ying Dong",
+        "Hongsheng Li"
       ],
-      "abstract": "Robot learning from real-world demonstrations is currently constrained by data scaling. Universal Manipulation Interface (UMI) provides an efficient robot-free data collection interface, yet current UMI-style pipelines often collect redundant demonstrations and lack global scene context. To improve data efficiency, we present EgoGuide, a collection interface that records synchronized wrist and head/egocentric observations and couples them with online visual-geometric data quality guidance. We also introduce a Gated Egocentric Residual Policy for robust learning from a viewpoint-varying egocentric camera, allowing head/egocentric context to correct ambiguous local observations while preserving stable wrist-view control. Real-world experiments show that EgoGuide reduces the required number of data episodes and improves data efficiency. The residual policy further improves robustness under visual occlusion. Project Page: https://silicx.github.io/EgoGuide",
-      "url": "https://arxiv.org/abs/2606.14665v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.14665v1",
-      "published": "2026-06-12T17:36:23Z",
-      "updated": "2026-06-12T17:36:23Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2606.14623v1",
-      "title": "Towards unified Geophysical Data Requirements for Magnetic Navigation (MagNav)",
-      "authors": [
-        "Regupathi Angappan",
-        "Kimberly Moore",
-        "Sriharsha Thoram"
-      ],
-      "abstract": "Magnetic Navigation (MagNav) has emerged as a vital alternative Positioning, Navigation, and Timing (PNT) solution, leveraging Earth's magnetic field for robust navigation in GPS/GNSS-degraded or denied environments. Despite its potential, the successful deployment of MagNav is currently hindered by the lack of standardized, high-fidelity geomagnetic reference maps. Existing datasets, primarily designed for geological exploration or academic research, do not meet the distinct operational requirements of navigation systems regarding spatial resolution, error quantification, and global accessibility. This paper initiates a community-focused dialogue on future geophysical data requirements for MagNav, grounded in extensive real-world flight trials. We distinguish between two primary use cases with divergent data needs: Operational MagNav, which requires globally consistent, queryable, and uncertainty-aware datasets for field deployment, and MagNav R&D, which demands comprehensive access to raw survey data to foster innovation. We provide a prioritized set of recommendations for future data requirements, including the development of cohesive, merged datasets, the inclusion of localized 3D uncertainty estimates, and the expansion of the World Magnetic Model (WMM) core field model to spherical harmonic degree 13 to improve consistency. Finally, we emphasize the strategic necessity of designated test ranges to validate these requirements and ensure the operational robustness of MagNav infrastructure.",
-      "url": "https://arxiv.org/abs/2606.14623v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.14623v1",
-      "published": "2026-06-12T16:47:50Z",
-      "updated": "2026-06-12T16:47:50Z",
-      "categories": [
-        "physics.geo-ph",
-        "eess.SY",
-        "physics.data-an"
-      ],
-      "primary_category": "physics.geo-ph"
-    },
-    {
-      "id": "2606.14617v1",
-      "title": "Whole-Body Impedance Model Predictive Control for Safe Physical Human--Robot Interaction on Floating-Base Platforms",
-      "authors": [
-        "Yongyan Cao"
-      ],
-      "abstract": "Floating-base robots must balance under rigid contact constraints while interacting safely with humans. Existing whole-body control~(WBC) frameworks allocate the full joint space to locomotion or rely on fixed-gain impedance feedback that accumulates steady-state error under sustained physical human--robot interaction~(pHRI) forces. This paper extends the authors' fixed-base two-layer Impedance MPC to floating-base platforms through a three-level architecture: a centroidal MPC plans contact forces over a 500\\,ms horizon; a priority-driven WBC layer resolves balance into joint torques through contact-consistent null-space projection; and the residual null space is governed by a receding-horizon quadratic program~(QP) that predicts and rejects pHRI disturbances using a Kalman-augmented state. A contact-consistent feedback linearization reduces the arm end-effector plant to a double integrator with a \\emph{constant} state matrix within each contact mode, enabling offline precomputation of the QP cost and ${\\geq}1$\\,kHz operation. A covariance-inflation protocol preserves the disturbance estimate across contact-mode switches, guaranteeing zero steady-state error under bounded constant pHRI loads, and an Impedance Equivalence Theorem shows the infinite-horizon limit recovers a classical task-space impedance law whose effective mass, damping, and stiffness adapt to posture and contact configuration. Simulations on a 17-DOF biped and the Unitree G1 humanoid validate the design.",
-      "url": "https://arxiv.org/abs/2606.14617v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.14617v1",
-      "published": "2026-06-12T16:41:20Z",
-      "updated": "2026-06-12T16:41:20Z",
+      "abstract": "When pretrained VLA policies are fine-tuned through online RL, each rollout episode produces only a single binary outcome (success or failure), yet the actor update requires per-transition supervision. Existing approaches commonly reduce this sparse outcome to a single scalar reward or advantage signal, which conflates distinct forms of transition-level feedback and provides limited guidance once basic task success becomes achievable. First, a single scalar signal conflates the two objectives of viability and efficiency; once basic success is achieved, the binary label provides no gradient to distinguish efficient completions from slow ones. Second, real-world rollouts mix autonomous and intervention segments; naively assigning episode outcomes across these boundaries introduces incorrect credit assignment. To address these issues, we propose Hierarchical Advantage-Weighted Behavior Cloning (HABC), which trains separate critic heads for these two objectives on different data subsets and combines their outputs with a state-adaptive balance. A state-adaptive gate $g_t$ merges their one-step advantages, prioritizing viability when success is uncertain and shifting to efficiency only when viability is high, and converts the result into per-transition weights on the actor loss. Intervention-aware credit assignment further restricts outcome labels to segments executed by the current policy, preventing supervision from leaking across intervention boundaries. In real-robot experiments on three contact-rich bimanual tasks, HABC raises success from supervised fine-tuning (SFT) baselines of 36%, 44%, and 12% to 92%, 88%, and 38%.",
+      "url": "https://arxiv.org/abs/2606.17043v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.17043v1",
+      "published": "2026-06-15T17:57:14Z",
+      "updated": "2026-06-15T17:57:14Z",
       "categories": [
         "cs.RO",
-        "eess.SY"
+        "cs.LG"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2606.14609v1",
-      "title": "Safe Reinforcement Learning of Autonomous Highway Driving: A Unified Framework for Safety and Efficiency",
+      "id": "2606.17040v1",
+      "title": "R2RDreamer: 3D-aware Data Augmentation for Spatially-generalized 2D Manipulation Policies",
       "authors": [
-        "Chufei Yan",
-        "Zhihao Cui",
-        "Yiyan Lv",
-        "Taojie Chen",
-        "Ning Bian",
-        "Yulei Wang"
+        "Xiuwei Xu",
+        "Haowen Sun",
+        "Angyuan Ma",
+        "Yiwei Zhang",
+        "Zhenyu Wu",
+        "Xiaofeng Wang",
+        "Bingyao Yu",
+        "Zheng Zhu",
+        "Jie Zhou",
+        "Jiwen Lu"
       ],
-      "abstract": "Deep reinforcement learning (DRL) offers a compelling route to decision-making for advanced autonomous vehicles (AVs), yet its trial-and-error nature makes it difficult to guarantee safety during training and to achieve both safety and efficiency at deployment. We propose a unified safe reinforcement learning (SRL) framework that integrates safe distance (SD), reward machines (RM), and mixture-of-experts (MoE), termed MoE-RM-SRL. For deployment, SD and RM jointly shape a rule-aware reward that encodes highway traffic regulations and stage-wise objectives, enabling safe and reliable behavior without sacrificing efficiency. For training, we introduce a sparsely gated MoE layer comprising up to 11 deep Q-networks (DQNs); an SD-based gating rule activates a minimal set of experts for lane-keeping and lane-changing, mitigating the instability, discontinuities, and impulsive transients commonly induced by switching between heterogeneous controllers (e.g., MPC/rule-based modules and learned policies). We implement the proposed architecture in CARLA and integrate it with a 6-DoF driver-in-the-loop virtual-reality (DiL-VR) platform. Experiments in stochastic two-lane traffic show that MoE-RM-SRL substantially improves safety and efficiency over state-of-the-art baselines, and the framework naturally extends to multi-lane driving as well as on-ramp merging and exiting scenarios.",
-      "url": "https://arxiv.org/abs/2606.14609v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.14609v1",
-      "published": "2026-06-12T16:32:22Z",
-      "updated": "2026-06-12T16:32:22Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2606.14606v1",
-      "title": "Impedance MPC with Disturbance Estimation for Dexterous Hand Control",
-      "authors": [
-        "Yongyan Cao"
-      ],
-      "abstract": "Dexterous hands must simultaneously track precise finger trajectories and maintain safe, compliant contact -- objectives in tension for any fixed-gain controller. We present an actuator-agnostic Impedance Model Predictive Control (Impedance MPC) framework for dexterous fingers, instantiating the constant-$A_d$ offset-free architecture established for physical human-robot interaction (pHRI); its stability, recursive-feasibility, and input-to-state-stability guarantees are inherited by preserving the architectural assumptions. An algebraic feedforward reduces the tendon transmission -- hydraulic, cable, pneumatic, twisted-string, or series-elastic -- to a constant-coefficient double integrator, so the QP cost inverse is precomputed offline and a 10-step receding-horizon quadratic program runs at 500\\,Hz while enforcing hard constraints on contact force (ISO/TS 15066), actuation limits, and jerk. An encoder-only augmented-Kalman disturbance state drives steady-state error to zero under any constant contact load. On a hydraulically actuated finger -- the worked example platform, adding pressure and cavitation constraints -- the 500\\,Hz Kalman MPC attains 0.5\\,mrad RMS, 0.1\\,mrad steady-state, and 6.6\\,mrad peak deflection under 1.5\\,Nm contact: 183$\\times$, 1500$\\times$, and 23$\\times$ better than classical impedance. The realized first-move stiffness (18$\\to$323\\,Nm/rad with update rate) is independently verified. The architecture scales to a 16-DOF LEAP Hand MuJoCo simulation, recovering from 2.5\\,N grasp-load disturbances within 0.7\\,s.",
-      "url": "https://arxiv.org/abs/2606.14606v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.14606v1",
-      "published": "2026-06-12T16:28:21Z",
-      "updated": "2026-06-12T16:28:21Z",
+      "abstract": "Spatial generalization is critical for imitation-learned manipulation policies, but achieving it typically requires scaling demonstrations across diverse object poses, robot configurations, and camera viewpoints. Data augmentation from a few source demonstrations offers a practical alternative to costly real-world collection. Simulation-based augmentation can create controllable variation, but requires complex environment and object setup and may introduce a sim-to-real gap. Recent real-to-real methods avoid these issues by jointly editing 3D observations and action trajectories from real demonstrations, yet they still rely on strong 3D scene parsing and geometry completion, and often produce observations tailored to 3D pointcloud policies rather than RGB-based 2D policies. We propose R2RDreamer, a real-to-real demonstration augmentation framework that preserves the geometric consistency of 3D action-observation editing while moving visual completion to 2D video space. Specifically, R2RDreamer first performs lightweight 3D augmentation by editing incomplete object pointclouds and end-effector trajectories in a shared 3D frame; it then projects the edited scene into masked image-space control videos with occlusion-aware reasoning and uses a dense-control image-to-video model to complete temporally coherent RGB observations. Experiments on spatially shifted manipulation tasks with both 2D diffusion-style policies and vision-language-action policies show that R2RDreamer improves spatial generalization from limited source demonstrations, with analyses validating the contributions of 3D editing, occlusion-aware projection, and video completion.",
+      "url": "https://arxiv.org/abs/2606.17040v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.17040v1",
+      "published": "2026-06-15T17:56:19Z",
+      "updated": "2026-06-15T17:56:19Z",
       "categories": [
         "cs.RO",
+        "cs.CV"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2606.17011v1",
+      "title": "ROVE: Unlocking Human Interventions for Humanoid Manipulation via Reinforcement Learning",
+      "authors": [
+        "Wei Xiao",
+        "Weiliang Tang",
+        "Yuying Ge",
+        "Hui Zhou",
+        "Yao Mu",
+        "Li Zhang",
+        "Yixiao Ge"
+      ],
+      "abstract": "Human interventions provide crucial corrective signals for post-training Vision-Language-Action (VLA) models. However, enabling seamless humanoid interventions is a formidable systems challenge due to complex whole-body kinematics and dexterous-hand control. Consequently, the collected intervention trajectories are often suboptimal, and methods that rely on human interventions as expert supervision can absorb hesitant, inefficient, or even erroneous behaviors. To address both the system and algorithmic challenges, we propose ROVE, a reinforcement learning framework for humanoid VLA post-training with imperfect human interventions. First, ROVE introduces a human-in-the-loop pipeline capable of collecting deployment and intervention data for humanoid manipulation. Second, it utilizes Optimistic Value Estimation (OVE) to prioritize high-value behaviors from mixed-quality trajectories. To further robustify value estimation, we incorporate cross-embodiment human experience videos to provide rich supervision for long-tailed failure and recovery modes. The resulting critic yields informative advantage signals, steering the VLA actor to focus on high-value behaviors rather than indiscriminately imitating all actions. On challenging real-world contact-rich and fine-grained humanoid manipulation tasks, ROVE outperforms experience-learning baselines and consistently improves across multiple rollout-intervention iterations.",
+      "url": "https://arxiv.org/abs/2606.17011v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.17011v1",
+      "published": "2026-06-15T17:45:06Z",
+      "updated": "2026-06-15T17:45:06Z",
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2606.17004v1",
+      "title": "Data-Driven Personalization of Automated Insulin Delivery",
+      "authors": [
+        "Ali Kashani",
+        "Ali Tavasoli",
+        "Heman Shakeri"
+      ],
+      "abstract": "Automated insulin delivery (AID) systems are often tuned for the population and offer limited online adaptation to the inter- and intrapatient variability in insulin needs caused by meal patterns, physical activity, and fluctuations in insulin sensitivity. We present a real-time, data-driven personalization approach that adapts controller parameters using the subject's daily glycemic data. The adaptation is formulated as projected gradient descent on a daily risk metric, where the gradient estimation is designed to attenuate noise and metabolic variability. We use contraction theory to validate the optimization framework and convergence of the closed-loop system under adaptation. In silico experiments on the 100-adult cohort of the FDA-accepted UVA/Padova T1D simulator show that our method improves glycemic risk and increases time-in-range (TIR, 70-180\\,mg/dL) by 2%, 3%, and 4% after 4, 8, and 17 weeks, respectively, under variability in meal timing, meal size, and insulin sensitivity.",
+      "url": "https://arxiv.org/abs/2606.17004v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.17004v1",
+      "published": "2026-06-15T17:38:38Z",
+      "updated": "2026-06-15T17:38:38Z",
+      "categories": [
         "eess.SY"
       ],
-      "primary_category": "cs.RO"
+      "primary_category": "eess.SY"
     },
     {
-      "id": "2606.14602v1",
-      "title": "What Robots Do Matters More Than What They Look Like: Task Context Shapes Trust in Educational HRI",
+      "id": "2606.17001v1",
+      "title": "Sandbox-Enabled Digital Twin for Cyber-Physical Systems",
       "authors": [
-        "Anna-Maria Velentza",
-        "Konstantina Nikou",
-        "Anne-Gwenn Bosser",
-        "Nikolaos Fachantidis"
+        "Meet Udeshi",
+        "Md Raz",
+        "Prashanth Krishnamurthy",
+        "Ramesh Karri",
+        "Farshad Khorrami"
       ],
-      "abstract": "Socially assistive robots (SARs) are increasingly deployed in educational and information-sharing contexts, supported by advances in large language models that enable fluent real-time interaction. Despite the growing diversity of robot embodiments, it remains unclear whether a single robot appearance is appropriate across different interaction tasks or whether trust depends primarily on contextual factors. In this study, we examine how robot appearance and task type jointly influence trust in robots. Using a within-subjects video-based experiment (N = 81), participants evaluated three robots with distinct appearances while performing three educationally relevant tasks: teaching, procedural instruction, and personal-information discussion. Results from repeated-measures analyses show a strong main effect of task on trust, with participants reporting the highest trust during instructional guidance, moderate trust during teaching activities, and significantly lower trust when robots requested personal information. In contrast, robot appearance showed no significant main effect, and the interaction between appearance and task was marginal. These findings suggest that trust in human-robot interaction is shaped more strongly by task context than by physical embodiment alone. By focusing on future educators as end users, this work contributes empirical evidence toward task-aware robot deployment in educational environments and highlights the importance of aligning robot roles and behaviors with interaction goals rather than relying solely on anthropomorphic design.",
-      "url": "https://arxiv.org/abs/2606.14602v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.14602v1",
-      "published": "2026-06-12T16:23:49Z",
-      "updated": "2026-06-12T16:23:49Z",
+      "abstract": "Cyber-physical system (CPS) controllers are vulnerable to faults and malicious attacks, including failures triggered only under complex plant conditions, yet pre-deployment validation typically relies on plant models or digital twins that exercise the controller's I/O as a black box. Side-channels, used to detect those run-time behavioral anomalies, are complementary but also open-loop, detached from I/O instrumentation, and driven by synthetic inputs rather than realistic plant feedback. We present a closed-loop digital twin framework that bridges this gap by hosting an unmodified controller binary within the SaMOSA Linux sandbox with its I/O rerouted to an external plant simulator, allowing coupled capture of simulated plant conditions and events alongside the controller's behavioral side-channels. The framework captures four time-synchronized controller side-channels (hardware performance counters, system calls, disk activity, and network activity) alongside plant state, and uses orchestration hooks for repeatable, parameterized runs. We demonstrate the framework on an OpenPLC runtime executing a Structured Text control program against a Modbus-connected IEEE 14-bus power-system model, and also discuss the application to robotics systems. The captured side-channels correlate controller behavior with simulated plant events, establishing an observability foundation for online testing, coverage analysis, and anomaly detection in CPS controllers.",
+      "url": "https://arxiv.org/abs/2606.17001v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.17001v1",
+      "published": "2026-06-15T17:37:16Z",
+      "updated": "2026-06-15T17:37:16Z",
       "categories": [
-        "cs.RO"
+        "eess.SY"
       ],
-      "primary_category": "cs.RO"
+      "primary_category": "eess.SY"
     },
     {
-      "id": "2606.14601v1",
-      "title": "A Statistical and Machine Learning Framework for Operational Threshold Detection and Deployable Dispatch Controller Development in Hydrogen Multi-Energy Systems",
+      "id": "2606.16978v1",
+      "title": "Task-Error Residual Learning for Real-Robot Five-Ball Juggling",
       "authors": [
-        "Shadi Heenatigala",
-        "Hasanika Samarasinghe"
+        "Kai Ploeger",
+        "Jan Peters"
       ],
-      "abstract": "This study presents a statistical and machine learning framework for characterizing a hydrogen-based multi-energy system (H-MES) using one year of high-resolution operational data. Statistical analysis revealed a binary operation driven by renewable surplus, with solar irradiance explaining 45.7% of rank-based variance in hydrogen production, a large effect by conventional standards. Only high-irradiance periods triggered meaningful electrolyzer engagement, while electricity demand exerted a weaker inverse suppression effect ($\u03b5^2 = 0.126$). Multiple regression confirmed electrolyzer power as the dominant linear predictor, with a synergistic solar-wind interaction. Notably, Random Forest analysis ranked wind output first in predictive importance despite its weak bivariate correlation (r = 0.167), revealing non-linear dynamics invisible to parametric methods. A sequence model exploited strong 24-hour autocorrelation (r = 0.845) for operational forecasting, while a reinforcement learning agent optimized hydrogen revenue dispatch. The core contribution is demonstrating that statistical and machine learning approaches are complementary for H-MES modeling and control.",
-      "url": "https://arxiv.org/abs/2606.14601v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.14601v1",
-      "published": "2026-06-12T16:23:33Z",
-      "updated": "2026-06-12T16:23:33Z",
+      "abstract": "For residual learning that refines existing behavior, sample efficiency depends on two things: how much information each rollout returns, and how efficiently the learner uses that information. Reinforcement learning's standard scalar reward carries far less information than the directional task error that defines the task. Random exploration further discards whatever information each rollout returns. Through residual learning with directional task-error supervision and a task error model that drives sample selection, we achieve stable three-, four-, and five-ball juggling on anthropomorphic Barrett WAM arms. Despite planning and controlling through a simple, idealized stack, the system converges from the second attempt. The first attempt drops, after which task error decreases monotonically without further failures. In comparison, five-ball juggling typically takes humans years of practice. We compare residual learners across two ternary axes, the directional information in the learning feedback and the commitment of the analytic prior, spanning Newton-style Jacobian updates, Composite Bayesian Optimization, and stochastic search methods. Both axes prove necessary: neither directional feedback nor an informative prior suffices alone, and the simplest method that combines them, a fixed-Jacobian Newton update, is the most reliable. The learned residual tolerates substantial prior misalignment and degraded joint tracking, affecting mainly convergence speed. The bottleneck for residual learning on real robots is therefore the information content of the supervision signal and how the learner uses it, not the accuracy of the surrounding stack. Video documentation of all experiments is available at https://kai-ploeger.com/residual-juggling.",
+      "url": "https://arxiv.org/abs/2606.16978v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.16978v1",
+      "published": "2026-06-15T17:14:32Z",
+      "updated": "2026-06-15T17:14:32Z",
       "categories": [
+        "cs.RO",
         "cs.LG",
-        "eess.SY",
-        "math.OC",
-        "stat.CO"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2606.14585v1",
-      "title": "Sensitivity Shaping for Latent Modeling",
-      "authors": [
-        "Hongzhan Yu",
-        "Chenghao Li",
-        "Ruipeng Zhang",
-        "Henrik Christensen",
-        "Sicun Gao"
-      ],
-      "abstract": "Generative dynamics models enable planning in challenging robotic systems, but safe deployment requires reliably detecting policy-induced out-of-distribution (OOD) transitions. Existing methods typically treat the learned dynamics as fixed and attach post hoc support surrogates. We show that these surrogates can fail when the dynamics are locally insensitive to critical action choices: unsupported control actions may produce latent predictions that resemble demonstrated transitions, suppressing OOD signals despite large true predictive errors. To address this, we introduce support-conditioned control-sensitivity regularization, which promotes sensitive local response to control input changes in learned dynamics in high-support training regions. This preserves control-induced variation while limiting unstable extrapolation due to weak empirical support. Experiments in vision-based obstacle avoidance, manipulation, and real-robot navigation show improved OOD detection and safer closed-loop planning.",
-      "url": "https://arxiv.org/abs/2606.14585v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.14585v1",
-      "published": "2026-06-12T16:01:50Z",
-      "updated": "2026-06-12T16:01:50Z",
-      "categories": [
-        "cs.RO",
-        "cs.AI"
+        "eess.SY"
       ],
       "primary_category": "cs.RO"
     }
