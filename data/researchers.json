@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-06-16T13:06:52.373416+00:00",
+  "scraped_at": "2026-06-17T12:27:38.089916+00:00",
   "researcher_count": 54,
   "researchers": [
     {
@@ -3197,8 +3197,8 @@
           "primary_category": "cs.CV"
         },
         {
-          "id": "2605.29563v2",
-          "title": "Planning with the Views via Scene Self-Exploration",
+          "id": "2605.29563v3",
+          "title": "Planning with the Views",
           "authors": [
             "Kangrui Wang",
             "Linjie Li",
@@ -3212,10 +3212,10 @@
             "Manling Li"
           ],
           "abstract": "Can VLMs predict how each camera move changes the view, and plan many such moves ahead? We call this capability view planning, requiring (1)understanding how a single action transforms the view, and (2)composing many such transformations across multi-turn plans to identify a target view. We probe both abilities in our proposed ViewSuite, a 3D point-cloud environment on real ScanNet scenes. Across 13 frontier VLMs, a critical planning gap emerges: they possess basic view-action knowledge but fail to compose it across multi-turn plans, with the gap widening as viewpoint distance grows. To close this gap, we propose an iterative framework that alternates self-exploration with view graph distillation. The key insight is that all exploration trajectories, regardless of their outcome, collectively form a view graph that compactly captures how viewpoints connect across a scene. Distilling this graph into diverse supervised tasks reshapes the policy distribution and overcomes the sparse rewards that stall pure RL. This improves Qwen2.5-VL-7B from 2.5% to 47.8% on interactive view planning, surpassing GPT-5.4 Pro (18.5%) and Gemini 3.1 Pro (21.4%). Self-exploration emerges as a promising path toward VLMs that can actively reason and plan in 3D space. Code and Data are at https://viewsuite.github.io.",
-          "url": "https://arxiv.org/abs/2605.29563v2",
-          "pdf_url": "https://arxiv.org/pdf/2605.29563v2",
+          "url": "https://arxiv.org/abs/2605.29563v3",
+          "pdf_url": "https://arxiv.org/pdf/2605.29563v3",
           "published": "2026-05-28T08:15:23Z",
-          "updated": "2026-06-12T17:01:08Z",
+          "updated": "2026-06-15T21:22:38Z",
           "categories": [
             "cs.AI",
             "cs.CV",
@@ -3406,6 +3406,41 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2606.18023v1",
+          "title": "LoopCoder-v2: Only Loop Once for Efficient Test-Time Computation Scaling",
+          "authors": [
+            "Jian Yang",
+            "Shawn Guo",
+            "Wei Zhang",
+            "Tianyu Zheng",
+            "Yaxin Du",
+            "Haau-Sing Li",
+            "Jiajun Wu",
+            "Yue Song",
+            "Yan Xing",
+            "Qingsong Cai",
+            "Zelong Huang",
+            "Chuan Hao",
+            "Ran Tao",
+            "Xianglong Liu",
+            "Wayne Xin Zhao",
+            "Mingjie Tang",
+            "Weifeng Lv",
+            "Ming Zhou",
+            "Bryan Dai"
+          ],
+          "abstract": "Looped Transformers scale latent computation by repeatedly applying shared blocks, but sequential looping increases latency and KV-cache memory with the loop count. Parallel loop Transformers (PLT) alleviate this cost through cross-loop position offsets (CLP) and shared-KV gated sliding-window attention, making loop count a practical design choice. We therefore study PLT loop-count selection through a gain--cost view: an extra loop may refine representations, but CLP also introduces a positional mismatch at each loop boundary. We instantiate this study by training LoopCoder-v2, a family of 7B PLT coders with different loop counts, from scratch on 18T tokens, followed by matched instruction tuning and evaluation. Empirically, the two-loop variant delivers broad gains over the non-looped baseline across code generation, code reasoning, agentic software engineering, and tool-use benchmarks, improving SWE-bench Verified from 43.0 to 64.4 points and Multi-SWE from 14.0 to 31.0 points. In contrast, variants with three or more loops regress, revealing a strongly non-monotonic loop-count effect. Our diagnostics show that loop 2 provides the main productive refinement, while later loops yield diminishing, oscillatory updates and reduced representational diversity. Because the CLP-induced mismatch remains roughly fixed as refinement gains shrink, the offset cost increasingly dominates. This gain--cost trade-off explains PLT's saturation at two loops and provides diagnostics for loop-count selection.",
+          "url": "https://arxiv.org/abs/2606.18023v1",
+          "pdf_url": "https://arxiv.org/pdf/2606.18023v1",
+          "published": "2026-06-16T15:03:05Z",
+          "updated": "2026-06-16T15:03:05Z",
+          "categories": [
+            "cs.LG",
+            "cs.AI"
+          ],
+          "primary_category": "cs.LG"
+        },
+        {
           "id": "2606.12402v1",
           "title": "DIRECT: When and Where Should You Allocate Test-Time Compute in Embodied Planners?",
           "authors": [
@@ -3489,31 +3524,6 @@
           "categories": [
             "cs.CV",
             "cs.GR"
-          ],
-          "primary_category": "cs.CV"
-        },
-        {
-          "id": "2605.30341v1",
-          "title": "GPIC: A Giant Permissive Image Corpus for Visual Generation",
-          "authors": [
-            "Keshigeyan Chandrasegaran",
-            "Kyle Sargent",
-            "Suchir Agarwal",
-            "Michael Jang",
-            "Michael Poli",
-            "Juan Carlos Niebles",
-            "Justin Johnson",
-            "Jiajun Wu",
-            "Li Fei-Fei"
-          ],
-          "abstract": "Studying scalable methods for visual generative modeling requires large, accessible, and stable datasets. We introduce GPIC, a Giant Permissive Image Corpus of approximately 28 trillion pixels. GPIC comprises diverse internet images captioned by a state-of-the-art vision-language model, including 100M training, 200K validation, and 1M test examples. Moreover, all GPIC images are permissively licensed for both research and commercial use. GPIC is safety-filtered, deduplicated, and centrally hosted on Hugging Face. We provide a benchmarking protocol for generative modeling on GPIC. Finally, we provide a reference baseline for pixel-space flow matching on GPIC. Our dataset, benchmark, and models are available at https://huggingface.co/datasets/stanford-vision-lab/gpic. Evaluation toolkit and code are available at https://gpic.stanford.edu",
-          "url": "https://arxiv.org/abs/2605.30341v1",
-          "pdf_url": "https://arxiv.org/pdf/2605.30341v1",
-          "published": "2026-05-28T17:59:26Z",
-          "updated": "2026-05-28T17:59:26Z",
-          "categories": [
-            "cs.CV",
-            "cs.AI"
           ],
           "primary_category": "cs.CV"
         }
@@ -4396,6 +4406,25 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2606.17551v1",
+          "title": "Reversal Q-Learning",
+          "authors": [
+            "Aditya Oberai",
+            "Seohong Park",
+            "Sergey Levine"
+          ],
+          "abstract": "Iterative generative modeling techniques, such as flow matching, provide powerful tools to model complex behaviors for effective offline reinforcement learning (RL). In this work, we propose a new off-policy RL algorithm that trains a flow policy based on prior data. Our idea starts from the \"expanded\" Markov decision process (MDP) framework, which treats individual flow refinement steps as separate actions in an MDP. To enable off-policy RL within this framework, we apply two techniques: we generate virtual on-policy trajectories (by \"reversing\" flows) to make this framework compatible with prior data, and we apply a bias-and-variance reduction technique to mitigate the curse of horizon in off-policy RL. We call the resulting algorithm Reversal Q-learning (RQL). RQL has several advantages over previous flow-based RL methods: it does not suffer from backpropagation through time, makes better use of the learned value function, and directly trains the full, expressive flow policy. Through our experiments on 50 challenging simulated robotic tasks, we show that RQL leads to the best average offline RL performance compared to state-of-the-art flow-based offline RL algorithms.",
+          "url": "https://arxiv.org/abs/2606.17551v1",
+          "pdf_url": "https://arxiv.org/pdf/2606.17551v1",
+          "published": "2026-06-16T05:56:10Z",
+          "updated": "2026-06-16T05:56:10Z",
+          "categories": [
+            "cs.LG",
+            "cs.AI"
+          ],
+          "primary_category": "cs.LG"
+        },
+        {
           "id": "2606.13675v2",
           "title": "Improving Robotic Generalist Policies via Flow Reversal Steering",
           "authors": [
@@ -4488,110 +4517,6 @@
           "pdf_url": "https://arxiv.org/pdf/2604.23073v2",
           "published": "2026-04-24T23:57:45Z",
           "updated": "2026-04-30T20:04:38Z",
-          "categories": [
-            "cs.LG",
-            "cs.RO"
-          ],
-          "primary_category": "cs.LG"
-        },
-        {
-          "id": "2604.15483v2",
-          "title": "$\u03c0_{0.7}$: a Steerable Generalist Robotic Foundation Model with Emergent Capabilities",
-          "authors": [
-            "Physical Intelligence",
-            "Bo Ai",
-            "Ali Amin",
-            "Raichelle Aniceto",
-            "Ashwin Balakrishna",
-            "Greg Balke",
-            "Kevin Black",
-            "George Bokinsky",
-            "Shihao Cao",
-            "Thomas Charbonnier",
-            "Vedant Choudhary",
-            "Foster Collins",
-            "Ken Conley",
-            "Grace Connors",
-            "James Darpinian",
-            "Karan Dhabalia",
-            "Maitrayee Dhaka",
-            "Jared DiCarlo",
-            "Danny Driess",
-            "Michael Equi",
-            "Adnan Esmail",
-            "Yunhao Fang",
-            "Chelsea Finn",
-            "Catherine Glossop",
-            "Thomas Godden",
-            "Ivan Goryachev",
-            "Lachlan Groom",
-            "Haroun Habeeb",
-            "Hunter Hancock",
-            "Karol Hausman",
-            "Gashon Hussein",
-            "Victor Hwang",
-            "Brian Ichter",
-            "Connor Jacobsen",
-            "Szymon Jakubczak",
-            "Rowan Jen",
-            "Tim Jones",
-            "Gregg Kammerer",
-            "Ben Katz",
-            "Liyiming Ke",
-            "Mairbek Khadikov",
-            "Chandra Kuchi",
-            "Marinda Lamb",
-            "Devin LeBlanc",
-            "Brendon LeCount",
-            "Sergey Levine",
-            "Xinyu Li",
-            "Adrian Li-Bell",
-            "Vladislav Lialin",
-            "Zhonglin Liang",
-            "Wallace Lim",
-            "Yao Lu",
-            "Enyu Luo",
-            "Vishnu Mano",
-            "Nandan Marwaha",
-            "Aikys Mongush",
-            "Liam Murphy",
-            "Suraj Nair",
-            "Tyler Patterson",
-            "Karl Pertsch",
-            "Allen Z. Ren",
-            "Gavin Schelske",
-            "Charvi Sharma",
-            "Baifeng Shi",
-            "Lucy Xiaoyang Shi",
-            "Laura Smith",
-            "Jost Tobias Springenberg",
-            "Kyle Stachowicz",
-            "Will Stoeckle",
-            "Jiaming Tang",
-            "Jimmy Tanner",
-            "Shalom Tekeste",
-            "Marcel Torne",
-            "Kyle Vedder",
-            "Quan Vuong",
-            "Anna Walling",
-            "Haohuan Wang",
-            "Jason Wang",
-            "XuDong Wang",
-            "Chris Whalen",
-            "Samuel Whitmore",
-            "Blake Williams",
-            "Charles Xu",
-            "Sukwon Yoo",
-            "Lili Yu",
-            "Wuming Zhang",
-            "Zhuoyang Zhang",
-            "Ury Zhilinsky"
-          ],
-          "abstract": "We present a new robotic foundation model, called $\u03c0_{0.7}$, that can enable strong out-of-the-box performance in a wide range of scenarios. $\u03c0_{0.7}$ can follow diverse language instructions in unseen environments, including multi-stage tasks with various kitchen appliances, provide zero-shot cross-embodiment generalization, for example enabling a robot to fold laundry without seeing the task before, and perform challenging tasks such as operating an espresso machine out of the box at a level of performance that matches much more specialized RL-finetuned models. The main idea behind $\u03c0_{0.7}$ is to use diverse context conditioning during training. This conditioning information, contained in the prompt, makes it possible to steer the model precisely to perform many tasks with different strategies. It is conditioned not just on a language command that describes what it should do, but on additional multimodal information that also describes the manner or strategy in which it should do it, including metadata about task performance and subgoal images. This enables $\u03c0_{0.7}$ to use very diverse data, including demonstrations, potentially suboptimal (autonomous) data including failures, and data from non-robot sources. Our experiments evaluate $\u03c0_{0.7}$ across numerous tasks with multiple robot platforms, on tasks that require speed and dexterity, language following, and compositional task generalization.",
-          "url": "https://arxiv.org/abs/2604.15483v2",
-          "pdf_url": "https://arxiv.org/pdf/2604.15483v2",
-          "published": "2026-04-16T19:18:07Z",
-          "updated": "2026-04-24T23:18:28Z",
           "categories": [
             "cs.LG",
             "cs.RO"
