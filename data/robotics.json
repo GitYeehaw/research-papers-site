@@ -2,256 +2,215 @@
   "category": "robotics",
   "name": "Robotics Research",
   "description": "Robotics \u2014 Motion Planning, Control Systems, Human-Robot Interaction, Autonomous Systems",
-  "scraped_at": "2026-06-17T12:22:51.814425+00:00",
+  "scraped_at": "2026-06-18T11:55:34.827667+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2606.18247v1",
-      "title": "Visual Verification Enables Inference-time Steering and Autonomous Policy Improvement",
+      "id": "2606.19340v1",
+      "title": "Zero-Shot Long-Horizon Dexterous Manipulation via Multi-View 3D-Grounded VLM Reasoning",
       "authors": [
-        "Mingtong Zhang",
-        "Dhruv Shah"
+        "Jisoo Kim",
+        "Sangwon Baik",
+        "Taeksoo Kim",
+        "Sungjoo Kim",
+        "Junyoung Lee",
+        "Mingi Choi",
+        "Hanbyul Joo"
       ],
-      "abstract": "Robots deployed in the real world should learn from their experience and improve over time. This requires a mechanism of practicing and learning from feedback. In this paper, we propose VERITAS, a generator-verifier framework for generalist robot policies for inference-time policy steering and self-improvement. We use a pre-trained generalist robot policy as a ``generator'' and pair it with a gradient-free ``visual verifier'' that evaluates actions at inference time. This framework enables inference-time steering that improves policy performance without additional training. We demonstrate that inference-time verification consistently outperforms vanilla generalists without training on additional demonstration data. Additionally, we demonstrate that the verified rollouts provide effective supervision for offline policy improvement: policies fine-tuned on verified self-generated trajectories achieve consistent performance gains. Notably, we find that post-training with verified rollouts achieves comparable efficiency to expert demonstrations, while requiring no human interventions. Our results highlight inference-time verification as a practical and scalable mechanism for improving robotic policies during deployment.",
-      "url": "https://arxiv.org/abs/2606.18247v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.18247v1",
-      "published": "2026-06-16T17:59:04Z",
-      "updated": "2026-06-16T17:59:04Z",
+      "abstract": "We present a zero-shot framework for long-horizon dexterous manipulation that grounds language instructions into executable 3D task plans from calibrated multi-view RGB images. Rather than training an end-to-end policy, our system uses a vision-language model (VLM) to produce reference-frame task grounding and primitive-level 2D keypoints, then lifts them into 3D via multi-view fusion. This lifting combines triangulation of view-wise VLM groundings with reference-view ray voting, which searches along a semantic camera ray for geometrically consistent candidates across neighboring views. The resulting 3D keypoints support both pick-and-place and tool-use: for tool-use, we retrieve an object-centric atomic action corresponding to the inferred skill category and align its stored 6D tool trajectory to the scene; for dexterous execution, we expand the lifted grasp keypoint into a task-conditioned grasp affordance region and generate feasible grasp-motion pairs with an arm-hand motion generator. Real-world experiments show improved 3D grounding accuracy and execution reliability over single-view RGB-D grounding and fine-tuned VLA baselines. We further demonstrate long-horizon manipulation through closed-loop status verification and replan, enabling zero-shot execution on unseen objects and tool-use tasks in novel scenes.",
+      "url": "https://arxiv.org/abs/2606.19340v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.19340v1",
+      "published": "2026-06-17T17:59:56Z",
+      "updated": "2026-06-17T17:59:56Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2606.19333v1",
+      "title": "Do as I Do: Dexterous Manipulation Data from Everyday Human Videos",
+      "authors": [
+        "Bhawna Paliwal",
+        "Haritheja Etukuru",
+        "William Liang",
+        "Pieter Abbeel",
+        "Nur Muhammad Mahi Shafiullah",
+        "Jitendra Malik"
+      ],
+      "abstract": "How can we scalably generate data for robotic manipulation, especially on human-like platforms such as dexterous multi-fingered hands? Learning from human videos has recently emerged as a likely answer to this question. However, difficulties in estimating hand-object interaction and crossing the human-to-robot embodiment gap have hindered the adoption of abundant monocular RGB-only human videos as the primary source of robot manipulation data. In this work, we present DO AS I DO, an algorithm to reconstruct and retarget monocular RGB human videos to multi-fingered dexterous robotic hands. DO AS I DO reconstructs hand-object interactions from various egocentric and exocentric in-the-wild video sources. The algorithm then retargets these hand-object interaction estimates into a sequence of actions executable in the real world, yielding robot-complete manipulation data from disparate human videos. Overall, DO AS I DO outperforms previous state of the art in estimating hand-object interactions and extracting dexterous manipulation trajectories from RGB videos, as we show in experiments on datasets with ground truths and on a dataset of video clips collected online. Our experiments enable us to propose an efficacy playbook for practitioners collecting human data for manipulation.",
+      "url": "https://arxiv.org/abs/2606.19333v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.19333v1",
+      "published": "2026-06-17T17:57:34Z",
+      "updated": "2026-06-17T17:57:34Z",
       "categories": [
         "cs.RO",
-        "cs.AI"
+        "cs.CV"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2606.18243v1",
-      "title": "MOCHI: Motion Enhancement of Collaborative Human-object Interactions",
+      "id": "2606.19328v1",
+      "title": "UBP2: Uncertainty-Balanced Preference Planning for Efficient Preference-based Reinforcement Learning",
       "authors": [
-        "Jiye Lee",
-        "Yonghun Choi",
-        "Jungdam Won"
+        "Mohamed Nabail",
+        "Leo Cheng",
+        "Jingmin Wang",
+        "Nicholas Rhinehart"
       ],
-      "abstract": "Collaborative human-object interaction shows dynamic and complex movements that require mutual anticipation and continuous adjustment between participants and the shared object. Modeling such collaborative multi-human object interaction (MHOI) scenarios requires high-quality data acquisition as a foundational step; however, this is challenging due to the inherent complexity of MHOI where human-human and human-object interactions occur simultaneously. Such complexity leads to noisy MHOI captures characterized by several artifacts: contact misalignment between hands and objects, motion jitter and temporal inconsistencies in the captured sequences, and missing or incomplete finger-level articulation details. To address these challenges, we present MOCHI (MOtion Enhancement of Collaborative Human-object Interactions), a two-stage framework for enhancing noisy MHOI data. Our approach first generates physically plausible hand grasps through optimization from noisy body input, producing grasps that are both physically plausible and semantically consistent with the body pose, where these optimized grasps are extended into complete hand-object interaction sequences. Consequently, the full-body motion for all participants are refined through a diffusion-based noise optimization framework that uses single-person motion priors. During the optimization process, we introduce optimization objectives to encode human-object and human-human interaction information within these single-person priors. Experimental results demonstrate the effectiveness of our pipeline across diverse MHOI data, either acquired by existing capture methods or synthesized by generative models. We further show robustness of our system across varying numbers of participants and types of interactions, and demonstrate various applications including keyframe-based MHOI creation and data augmentation through varying object geometries.",
-      "url": "https://arxiv.org/abs/2606.18243v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.18243v1",
-      "published": "2026-06-16T17:58:44Z",
-      "updated": "2026-06-16T17:58:44Z",
+      "abstract": "Preference-based RL provides an approach to learning reward models from pairwise comparisons of behaviors, bypassing the need for explicit reward design. However, existing methods typically rely on passive data collection and suffer from poor sample efficiency, especially during the early stages of learning. We introduce a model-based approach that actively directs exploration by jointly reasoning over uncertainties in the reward, dynamics, and value functions. Our method, Uncertainty-Balanced Preference Planning (UBP2), uses ensembles of reward, dynamics, and value function models to evaluate candidate trajectories according to a unified score that combines expected reward, terminal value, and epistemic uncertainty. Planning under this objective yields an explicit tradeoff between exploitation and information acquisition without requiring ad hoc exploration heuristics. Under standard regularity assumptions, we establish sublinear regret guarantees for both finite-horizon and infinite-horizon settings. Empirically, experiments on the Meta-World benchmark show UBP2 achieves substantially higher sample efficiency than model-free preference-based methods and non-optimistic model-based baselines.",
+      "url": "https://arxiv.org/abs/2606.19328v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.19328v1",
+      "published": "2026-06-17T17:54:32Z",
+      "updated": "2026-06-17T17:54:32Z",
       "categories": [
-        "cs.CV",
-        "cs.GR",
-        "cs.RO"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2606.18239v1",
-      "title": "EBench: Elemental Diagnosis of Generalist Mobile Manipulation Policies",
-      "authors": [
-        "Ning Gao",
-        "Jinliang Zheng",
-        "Xing Gao",
-        "Haoxiang Ma",
-        "Hanqing Wang",
-        "Yukai Wang",
-        "Jiantong Chen",
-        "Zanxin Chen",
-        "Shujie Zhang",
-        "Mingda Jia",
-        "Xuekun Jiang",
-        "Zihou Zhu",
-        "Xinyu Li",
-        "Shuai Wang",
-        "Hao Li",
-        "Wenzhe Cai",
-        "Yuqiang Yang",
-        "Xudong Xu",
-        "Zhaoyang Lyu",
-        "Yao Mu",
-        "Tai Wang",
-        "Jiangmiao Pang",
-        "Jia Zeng",
-        "Weinan Zhang",
-        "Chunhua Shen"
-      ],
-      "abstract": "We present EBench, a simulation benchmark that diagnoses generalist mobile manipulation policies beyond a single success-rate scalar. EBench comprises 26 diverse and challenging manipulation tasks annotated along 5 capability dimensions and 4 generalization dimensions. We evaluate state-of-the-art generalist manipulation models including $\u03c0_0$, $\u03c0_{0.5}$, XVLA, and InternVLA-A1, and reveal that models with near success rates exhibit strikingly different capability profiles: $\u03c0_{0.5}$ achieves the highest test success rate and the best train--test retention, whereas InternVLA-A1 dominates mobile manipulation but collapses on dexterous tasks, and XVLA exhibits strengths on a disjoint set of atomic skills compared to other policies. Beyond capability profiling, EBench analyzes the generalization ability from 4 representative perspectives, identifying the impact of different distribution shift factors. The results reveal strengths and weaknesses of models behind an overall score. We hope this benchmark offers a broad set of diagnostic signals to guide iteration on generalist manipulation models.",
-      "url": "https://arxiv.org/abs/2606.18239v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.18239v1",
-      "published": "2026-06-16T17:58:22Z",
-      "updated": "2026-06-16T17:58:22Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2606.18231v1",
-      "title": "Adaptive Volumetric Mechanical Property Fields Invariant to Resolution",
-      "authors": [
-        "Rishit Dagli",
-        "Donglai Xiang",
-        "Vismay Modi",
-        "Xuning Yang",
-        "Gavriel State",
-        "David I. W. Levin",
-        "Maria Shugrina"
-      ],
-      "abstract": "Accurate mechanical properties (or materials) Young's modulus ($E$), Poisson's ratio ($\u03bd$) and density ($\u03c1$) are essential for reliable physics simulation of digital worlds, but most 3D assets lack this information. We propose AdaVoMP, a method for predicting accurate dense spatially-varying ($E$, $\u03bd$, $\u03c1$) for input 3D objects across representations, improving the resolution, accuracy, and memory efficiency over the state-of-the-art. The foundation of our technique is a sparse and adaptive voxel structure SAV that efficiently represents both the input 3D shape and the material field output. We replace the fixed-voxel model of the most accurate prior method, VoMP, with a novel sparse transformer encoder-decoder model that learns to generate a unique SAV autoregressively for every input shape to represent its materials, achieving a resolution $16^3\\times$ higher than prior art. Experiments show that AdaVoMP estimates more accurate volumetric properties, even with lesser test-time compute than all prior art. This allows us to convert high-resolution complex 3D objects into simulation-ready assets, resulting in realistic deformable simulations.",
-      "url": "https://arxiv.org/abs/2606.18231v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.18231v1",
-      "published": "2026-06-16T17:56:03Z",
-      "updated": "2026-06-16T17:56:03Z",
-      "categories": [
-        "cs.CV",
         "cs.LG",
-        "cs.RO"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2606.18223v1",
-      "title": "Learning Red Agent Policy from Observations for Neurosymbolic Autonomous Cyber Agents",
-      "authors": [
-        "Ankita Samaddar",
-        "Sandeep Neema",
-        "Daniel Balasubramanian",
-        "Xenofon Koutsoukos"
-      ],
-      "abstract": "With sophisticated cyber-attacks becoming increasingly prevalent, modern networks require intelligent autonomous cyber-defense agents trained via Reinforcement Learning (RL). These agents employ neurosymbolic approaches such as behavior trees with learning-enabled components (LECs) to learn, reason, adapt, and implement security rules while maintaining critical operations. However, these autonomous networks are partially observable systems, i.e., the cyber-attacker's (red agent's) actions are not observable, making it difficult for the defender to predict red actions, learn red policies, or assess the attacker's intrusion levels. To address this, we propose a Policy Learning Technique using imitation learning to learn policies for partially observable RL agents with discrete states and discrete actions. We apply this technique in an autonomous cyber environment to predict red agent's actions from network observations and defender actions. Integrated with a neurosymbolic cyber-defense agent, our method effectively handles different red policies and achieves high prediction accuracy across diverse simulated scenarios.",
-      "url": "https://arxiv.org/abs/2606.18223v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.18223v1",
-      "published": "2026-06-16T17:50:41Z",
-      "updated": "2026-06-16T17:50:41Z",
-      "categories": [
-        "cs.CR",
         "cs.AI",
-        "cs.LG",
-        "eess.SY"
+        "cs.RO"
       ],
-      "primary_category": "cs.CR"
+      "primary_category": "cs.LG"
     },
     {
-      "id": "2606.18218v1",
-      "title": "Finite-Time Queue Peak Laws in Stochastic Networks: Logarithmic Scaling After Geometric Thresholds",
+      "id": "2606.19314v1",
+      "title": "Modeling Branches for Active Manipulation using Iterative Parameter Estimation",
       "authors": [
-        "Hao Liang",
-        "Cheng Tang",
-        "Yunzong Xu"
+        "Madhav Rijal",
+        "Rashik Shrestha",
+        "Trevor Smith",
+        "Yu Gu"
       ],
-      "abstract": "We study finite-horizon queue peaks in generalized switches, a standard stochastic-network model in which many queues share constrained service resources. Arrivals may be dependent, time-varying, and adapted to the past; the standing load condition is uniform interior slack, meaning the conditional mean arrival vector stays in a fixed contraction of the capacity region. We show that this slack reshapes the finite-time peak law for drift-minimizing scheduling policies such as MaxWeight. The square-root envelope that is sharp without slack persists only up to a geometry-dependent threshold; beyond that threshold, the running maximum grows only logarithmically with the horizon, both with high probability and in expectation. The mechanism is self-normalization: in the current queue direction, the projected fluctuation scale is normalized by the stabilizing drift scale. This removes capacity geometry from the logarithmic coefficient, while geometry remains in the threshold. Matching lower bounds show that both the logarithmic term and a geometric threshold are unavoidable. When finite-time state-space collapse is available, the threshold can be sharpened using local bottleneck geometry. For generalized input-queued switches, we obtain finite-time peak bounds with tight logarithmic coefficients. Simulations illustrate the two-phase envelope, local geometric refinements, and variance-sensitive improvements predicted by the theory.",
-      "url": "https://arxiv.org/abs/2606.18218v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.18218v1",
-      "published": "2026-06-16T17:47:47Z",
-      "updated": "2026-06-16T17:47:47Z",
-      "categories": [
-        "math.PR",
-        "cs.LG",
-        "eess.SY",
-        "math.OC",
-        "stat.ML"
-      ],
-      "primary_category": "math.PR"
-    },
-    {
-      "id": "2606.18189v1",
-      "title": "Beyond Failure Recovery: An Engagement-Aware Human-in-the-loop Framework for Robotic Systems",
-      "authors": [
-        "Jiaying Fang",
-        "Joyce Yang",
-        "Zhanxin Wu",
-        "Bohan Yang",
-        "Tapomayukh Bhattacharjee"
-      ],
-      "abstract": "Conventional human-in-the-loop approaches typically involve users only when a robot encounters failure or uncertainty, treating humans primarily as tools for improving robot performance. However, in many human-centered robotics settings, interaction should support engagement by keeping users involved in decision-making rather than limiting them to failure-driven interventions. This is particularly compelling in physical caregiving, where mobility limitations can reduce users' ability to intervene or modulate the robot's behavior in the moment. As a result, failure-driven interaction policies may relegate users to passive observers for long stretches of the task. For example, a user with mobility limitations may feel less engaged when being continuously and passively fed by a robot. At the same time, overly frequent interaction can be tiring and increase the user's workload. To address this trade-off, we propose Engagement-aware MPC (E-MPC), a user-engagement-aware method that plans interaction to maintain engagement while respecting a workload constraint. E-MPC leverages a user interaction dynamics model that captures how user engagement evolves as a function of both the frequency and type of interaction. Rather than requesting input only when difficulties arise during task execution, the robot proactively considers the user's preferred level of engagement throughout the task, balancing autonomy and interaction while ensuring task success. We evaluate E-MPC in simulation with several ablations and baseline comparisons. Results demonstrate the effectiveness of our approach across diverse user personas. In addition, we conduct a real-world user study with participants with emulated mobility limitations on a robot-assisted bite acquisition system, showing that E-MPC improves user experience while maintaining task success.",
-      "url": "https://arxiv.org/abs/2606.18189v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.18189v1",
-      "published": "2026-06-16T17:21:43Z",
-      "updated": "2026-06-16T17:21:43Z",
+      "abstract": "This study presents a method for modeling diverse plant branches by iteratively estimating material parameters to support delicate branch manipulation. Branch manipulation is necessary in agricultural robotics for plant repositioning, stabilizing, and clearing visual obstructions in dense foliage. The proposed method builds a tetrahedral branch model from point-cloud data and simulates its behavior using the finite element method. Using real observed deformation data, it iteratively estimates branch parameters and then computes an optimal path with a deformation-aware motion planner to move and stabilize branches within another robot's field of view. Across 30 trials on branches with varying geometries and material properties, the proposed method reduced the deformation energy by 35.69% while increasing the path length by 8.10% on average.",
+      "url": "https://arxiv.org/abs/2606.19314v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.19314v1",
+      "published": "2026-06-17T17:37:06Z",
+      "updated": "2026-06-17T17:37:06Z",
       "categories": [
         "cs.RO"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2606.18144v1",
-      "title": "Memory as a Wasting Asset: Pricing Flash Endurance for Embodied Agents, and the Limits of Doing So",
+      "id": "2606.19311v1",
+      "title": "A Lyapunov-Based Perspective on Absolute Stability",
       "authors": [
-        "Josef Liyanjun Chen"
+        "Tessina H. Scholl"
       ],
-      "abstract": "A robot's flash endurance is a non-renewable stock: every persisted write spends one of a few thousand program/erase cycles and never refills, yet no fielded robot memory system prices which memories are worth an erase cycle. We treat embodied memory as depreciating capital and price that stock with a single endurance shadow price $\u03b7$, which makes cost-minimizing placement across a RAM / on-board NVM / cloud hierarchy a threshold in a wear-augmented per-byte index. The index is cost-optimal whatever the sign of the value-write association $\u03c7$; only when $\u03c7> 0$ does the optimum turn non-monotone, sending a robot's most valuable memories off its flash. The pivot is thus empirical, and we measure $\u03c7$ on real robot logs at a pre-specified gate: its sign is a property of the deployment regime -- positive on recurrent long-horizon manipulation ($\\hat\u03c7 \\approx +1.0 \\times 10^{-3}$, replicated at full power), null on a shorter-horizon suite, and negative on non-recurrent teleoperation. Two boundaries scope the result. The endurance budget is dormant on premium 3,000-P/E TLC at datasheet prices and binding on the commodity QLC/eMMC ($\\sim$1,000 P/E) that cheaper edge robots run. And where it binds, a learned wear-aware controller only ties price-based routing on task value, because realized value is tier-invariant across RAM, NVM, and cloud: the rent governs device lifetime and cost, not task performance. Whether wear-aware placement improves task value remains open -- $\u03c7$ is measured against a value proxy, and the non-monotone optimum, while proven, is not yet observed in data.",
-      "url": "https://arxiv.org/abs/2606.18144v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.18144v1",
-      "published": "2026-06-16T16:43:19Z",
-      "updated": "2026-06-16T16:43:19Z",
-      "categories": [
-        "cs.AI",
-        "cs.CY",
-        "cs.LG",
-        "cs.RO"
-      ],
-      "primary_category": "cs.AI"
-    },
-    {
-      "id": "2606.18126v1",
-      "title": "Decentralized Decision-Making for Finite-State Systems over Finite Alphabets is Undecidable",
-      "authors": [
-        "Xiang Yin"
-      ],
-      "abstract": "This paper investigates decentralized decision-making for finite-state transition systems, i.e., discrete-event systems, under finite communication alphabet constraints. We consider a general decentralized observation framework in which a plant is observed by multiple local agents that transmit symbolic messages over a finite alphabet to a memoryless fusion center. The fusion center then produces a binary decision according to a prescribed fusion rule. We study the fundamental question of whether there exist local decision maps that enable exact reconstruction of a given regular specification language from decentralized observations. Contrary to classical results that rely on specific monotone fusion rules such as conjunction and disjunction, we show that the problem becomes undecidable even under a severely restricted information architecture: binary local decision alphabets and a fixed exclusive-or (XOR) fusion rule. The proof is based on a reduction from the Thue word problem, a classical undecidable problem in rewriting systems. We further show that decentralized supervisory control, decentralized fault diagnosis, and decentralized fault prognosis are also undecidable under finite communication alphabets. Our results reveal that existing decidability results fundamentally rely on structural properties of fusion rules, in particular their monotone order-preserving nature. In contrast, non-monotone fusion rules such as XOR break this structure, leading to undecidability even in highly restricted settings.",
-      "url": "https://arxiv.org/abs/2606.18126v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.18126v1",
-      "published": "2026-06-16T16:25:31Z",
-      "updated": "2026-06-16T16:25:31Z",
+      "abstract": "This article presents a unifying perspective on absolute stability concepts. In particular, it develops a Lyapunov-like explanatory framework for a nonscalar circle criterion with its small-gain and strict-passivity special cases. To this end, a general defining inequality for a Lyapunov-like function is proposed that avoids strict definiteness conditions, enabled by a strengthening of the sector constraint. We discuss different ways to derive a quadratic solution: via a linear matrix inequality (LMI), an algebraic Riccati equation, and a matrix equation. By exploiting the Kalman-Yakubovich-Popov (KYP) lemma, classical frequency-domain results are recovered. A passivity-index-based result is derived that simplifies the evaluation. Overall, the presented interrelations may be useful for both analysis and teaching.",
+      "url": "https://arxiv.org/abs/2606.19311v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.19311v1",
+      "published": "2026-06-17T17:33:08Z",
+      "updated": "2026-06-17T17:33:08Z",
       "categories": [
         "eess.SY"
       ],
       "primary_category": "eess.SY"
     },
     {
-      "id": "2606.18112v1",
-      "title": "Qwen-RobotNav Technical Report: A Scalable Navigation Model Designed for an Agentic Navigation System",
+      "id": "2606.19307v1",
+      "title": "Observability and Consistency Analysis for Visual-Inertial Navigation with Anchored Feature Parameterizations",
       "authors": [
-        "Jiazhao Zhang",
-        "Gengze Zhou",
-        "Hale Yin",
-        "Yiyang Huang",
-        "Zixing Lei",
-        "Qihang Peng",
-        "Haoqi Yuan",
-        "Jie Zhang",
-        "Xudong Guo",
-        "Xiaoyue Chen",
-        "An Yang",
-        "Fei Huang",
-        "Junyang Lin",
-        "Dayiheng Liu",
-        "Jingren Zhou",
-        "Zhuoyuan Yu",
-        "Jingyang Fan",
-        "Zhixuan Liang",
-        "Pei Lin",
-        "Ye Wang",
-        "Anzhe Chen",
-        "Kun Yan",
-        "Xiao Xu",
-        "Jiahao Li",
-        "Lulu Hu",
-        "Minying Zhang",
-        "Shurui Li",
-        "Wenhu Xiao",
-        "Shuai Bai",
-        "Xuancheng Ren",
-        "Chenxu Lv",
-        "Chenfei Wu",
-        "Xiong-Hui Chen"
+        "Mitchell Cohen",
+        "Vassili Korotkine",
+        "James Richard Forbes"
       ],
-      "abstract": "Agentic navigation systems require a base navigation model whose observation strategy can be externally reconfigured at inference time, because instruction following, object search, target tracking, and autonomous driving share the same perception-planning backbone yet demand fundamentally different strategies for consuming the visual stream. We present Qwen-RobotNav, a scalable navigation model built on Qwen-RobotNav that addresses it through a parameterised interface with two complementary dimensions: multiple task modes that select the navigation behaviour, and controllable observation parameters (e.g., token budget, per-camera weights) that govern how visual history is encoded. With training-time randomization over all parameters, Qwen-RobotNav is robust to any inference-time configuration requiring zero architectural modification to the Qwen-RobotNav backbone. We train Qwen-RobotNav on 15.6M samples; co-training with vision-language data prevents the collapse into reactive action-sequence mappers observed in trajectory-only training. The parameterised interface also makes Qwen-RobotNav a natural building block for agentic systems: for long-horizon scenarios, an upper-level planner decomposes goals into sub-tasks and dynamically switches Qwen-RobotNav's task mode and context strategy mid-episode, composing complex behaviours from repeated calls to the same model. Extensive experiments show that Qwen-RobotNav sets new state-of-the-art results across major navigation benchmarks. The model exhibits favourable scaling from 2B to 8B parameters, with joint multi-task training developing a shared spatial-planning substrate that transfers across task families, and demonstrates strong zero-shot generalisation to real-world robots across diverse environments.",
-      "url": "https://arxiv.org/abs/2606.18112v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.18112v1",
-      "published": "2026-06-16T16:17:44Z",
-      "updated": "2026-06-16T16:17:44Z",
+      "abstract": "This paper presents an analysis of the observability and consistency properties of filtering-based visual-inertial navigation systems (VINS) that utilize anchored feature representations. The unobservable subspace of VINS with anchored landmark parameterizations is shown to be independent of the estimated landmark state, which leads to improved estimator consistency properties without any additional modifications. However, the unobservable subspace is still found to depend on the estimated navigation state, necessitating additional consistency-enforcing techniques. Two methods to improve the consistency of VINS with anchored feature representations are presented. Simulation results showcase that all estimators employing anchored feature paramterizations exhibit improved consistency properties compared to algorithms that estimate features resolved in a global reference frame, especially in scenarios where feature initialization may be poor. Real-world experiments on the TUM-VI dataset showcase that the use of anchored feature representations alone can yield comparable performance to consistency-improved estimators employing a global feature representation, demonstrating the benefit of using anchored feature parameterizations for VINS.",
+      "url": "https://arxiv.org/abs/2606.19307v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.19307v1",
+      "published": "2026-06-17T17:30:52Z",
+      "updated": "2026-06-17T17:30:52Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2606.19297v1",
+      "title": "Does VLA Even Know the Basics? Measuring Commonsense and World Knowledge Retention in Vision-Language-Action Models",
+      "authors": [
+        "Nikita Kachaev",
+        "Andrey Moskalenko",
+        "Matvey Skripkin",
+        "Nikita Kurlaev",
+        "Daria Pugacheva",
+        "Albina Burlova",
+        "Mikhail Kolosov",
+        "Denis Shepelev",
+        "Andrey Kuznetsov",
+        "Elena Tutubalina",
+        "Aleksandr I. Panov",
+        "Alexey K. Kovalev",
+        "Vlad Shakhuro"
+      ],
+      "abstract": "Embodied Vision-Language-Action (VLA) models are typically obtained by fine-tuning powerful pretrained VLMs on robotics data, yet it is unclear how much commonsense and factual knowledge they retain after adaptation. Failures on knowledge-sensitive tasks are ambiguous, conflating missing knowledge with poor generalization of low-level control. We introduce Act2Answer, a lightweight protocol that adapts VLM knowledge benchmarks to VLA evaluation by requiring agents to answer through action. Each question becomes a short tabletop episode where the agent performs a single object-placement action to select among candidate answers, yielding an action-grounded success rate with reduced control confounds. We curate a test suite of such environments across diverse commonsense and world-knowledge categories and introduce layerwise intent probing to localize answer-relevant information across the VLM backbone and action head. In a large-scale study of 7 VLA models and 9 VLM baselines, we systematically rank models across categories, finding that VLAs show solid performance on simple concepts while exhibiting larger gaps on richer semantic categories relative to their source VLMs, that VQA co-training is associated with better knowledge retention, and that answer-relevant signals peak in middle VLA layers but attenuate in upper layers. Act2Answer is available at https://tttonyalpha.github.io/act2answer/.",
+      "url": "https://arxiv.org/abs/2606.19297v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.19297v1",
+      "published": "2026-06-17T17:20:46Z",
+      "updated": "2026-06-17T17:20:46Z",
+      "categories": [
+        "cs.LG",
+        "cs.RO"
+      ],
+      "primary_category": "cs.LG"
+    },
+    {
+      "id": "2606.19296v1",
+      "title": "Integrated physics-based modeling reveals a thermodynamic gap in small modular reactor load following",
+      "authors": [
+        "Ali Mahboub Rad",
+        "Roshni Anna Jacob",
+        "Bikash Poudel",
+        "Mayir Mamtimin",
+        "Jie Zhang"
+      ],
+      "abstract": "Small modular reactors (SMRs) are increasingly considered for flexible power generation; however, many dynamic studies still neglect the thermodynamic coupling between the primary and secondary loops that is essential for accurate assessment of load-following capability. In this study, we develop a hybrid dynamic framework that couples an equation-based model of the NuScale integral pressurized water reactor, including the reactor, primary loop, and moving-boundary helical-coil once-through steam generator, with a physics-based secondary steam cycle comprising the valve, turbine, condenser, and feedwater pump. This approach enforces mass and energy conservation across the coupled system while preserving physically consistent flow interactions across the domain boundary. The integrated model reproduces nominal design-point conditions and is used to analyze a 5% step load rejection under five control strategies, including a decentralized three-loop control architecture for the valve, feedwater pump, and control rods. The results show that partial control strategies are insufficient for efficient and safe operation, whereas simultaneous action of all three actuators stabilizes steam pressure, limits adverse thermal excursions in the primary loop and maintains acceptable steam generator operating margins during load-following maneuvers. Compared with a conventional linear steam-cycle representation, the coupled framework captures dynamic back-pressure and variable turbine enthalpy drop that are otherwise neglected, leading to different predictions of transient behavior and required steam flow. These findings show that thermodynamically coupled, physics-based steam-cycle models are needed for more accurate assessment of the operational flexibility, efficiency and safety margins of SMRs under realistic load-following conditions.",
+      "url": "https://arxiv.org/abs/2606.19296v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.19296v1",
+      "published": "2026-06-17T17:17:24Z",
+      "updated": "2026-06-17T17:17:24Z",
+      "categories": [
+        "eess.SY",
+        "math.DS"
+      ],
+      "primary_category": "eess.SY"
+    },
+    {
+      "id": "2606.19267v1",
+      "title": "A Mixed-Reality Testbed for Autonomous Vehicles",
+      "authors": [
+        "H. M. Sabbir Ahmad",
+        "Ehsan Sabouni",
+        "Emrullah Celik",
+        "Zean Wan",
+        "Damola Ajeyemi",
+        "Christos G. Cassandras",
+        "Wenchao Li"
+      ],
+      "abstract": "We propose a mixed-reality, hardware-in-the-loop (HIL) testbed for autonomous vehicles that seamlessly integrates a physical testbed of mobile robots with a high-fidelity simulation environment. The virtual simulation enables the creation of diverse, safety-critical driving scenarios to validate state-of-the-art perception, planning, and control algorithms, while augmenting simulations with physical robots equipped with multimodal sensors in photorealistic virtual environments further facilitating rigorous validation. Our testbed also features vehicular connectivity using wireless communication and can accommodate a large number of agents through the combination of physical robots and virtual simulated agents, supporting research on multi-agent systems including Connected and Autonomous Vehicles (CAVs). Finally, we present a safety-guaranteed framework combining perception, planning and a novel online learning-based controller using Control Barrier Functions (CBFs) for CAVs. Experiments using the proposed framework are used to validate and demonstrate the key functionalities and the overall utility of the testbed to bridge the gap between simulation and real-world hardware deployment.",
+      "url": "https://arxiv.org/abs/2606.19267v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.19267v1",
+      "published": "2026-06-17T16:43:33Z",
+      "updated": "2026-06-17T16:43:33Z",
       "categories": [
         "cs.RO",
-        "cs.CV"
+        "eess.SY"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2606.19265v1",
+      "title": "Shape Sensing of Continuum Robots using Direct Laser Writing",
+      "authors": [
+        "Amber K. Rothe",
+        "Nidhi Malhotra",
+        "Jaydev P. Desai"
+      ],
+      "abstract": "Continuum robots offer a promising approach for minimally invasive and natural-orifice surgical procedures due to their inherent compliance and dexterity. However, this flexibility also makes estimating the current shape of the robot challenging. Several approaches have been used to reconstruct the shape of these robots, including imaging, optical sensing, magnetic sensing, and resistive sensing. Strain sensors fabricated using direct laser writing (DLW) could provide an alternative sensing method. This technique involves using a laser to induce carbonization of certain polymers to create graphene patterns, such as strain sensors. In this paper, we demonstrate how a flexible continuum joint and a DLW sensor can be machined as one monolithic structure using the same laser and the same setup. The fabricated sensors are characterized using linear and nonlinear models, which are used to predict the joint angle with error as low as 1.76 degrees. Furthermore, we demonstrate how a DLW sensor can be used to implement closed-loop control in a robotic joint, achieving tracking error under 3 degrees.",
+      "url": "https://arxiv.org/abs/2606.19265v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.19265v1",
+      "published": "2026-06-17T16:41:09Z",
+      "updated": "2026-06-17T16:41:09Z",
+      "categories": [
+        "cs.RO"
       ],
       "primary_category": "cs.RO"
     }
