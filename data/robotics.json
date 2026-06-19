@@ -2,47 +2,109 @@
   "category": "robotics",
   "name": "Robotics Research",
   "description": "Robotics \u2014 Motion Planning, Control Systems, Human-Robot Interaction, Autonomous Systems",
-  "scraped_at": "2026-06-18T11:55:34.827667+00:00",
+  "scraped_at": "2026-06-19T12:14:51.621611+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2606.19340v1",
-      "title": "Zero-Shot Long-Horizon Dexterous Manipulation via Multi-View 3D-Grounded VLM Reasoning",
+      "id": "2606.20562v1",
+      "title": "MemoryWAM: Efficient World Action Modeling with Persistent Memory",
       "authors": [
-        "Jisoo Kim",
-        "Sangwon Baik",
-        "Taeksoo Kim",
-        "Sungjoo Kim",
-        "Junyoung Lee",
-        "Mingi Choi",
-        "Hanbyul Joo"
+        "Sizhe Yang",
+        "Juncheng Mu",
+        "Tianming Wei",
+        "Chenhao Lu",
+        "Xiaofan Li",
+        "Linning Xu",
+        "Zhengrong Xue",
+        "Zhecheng Yuan",
+        "Dahua Lin",
+        "Jiangmiao Pang",
+        "Huazhe Xu"
       ],
-      "abstract": "We present a zero-shot framework for long-horizon dexterous manipulation that grounds language instructions into executable 3D task plans from calibrated multi-view RGB images. Rather than training an end-to-end policy, our system uses a vision-language model (VLM) to produce reference-frame task grounding and primitive-level 2D keypoints, then lifts them into 3D via multi-view fusion. This lifting combines triangulation of view-wise VLM groundings with reference-view ray voting, which searches along a semantic camera ray for geometrically consistent candidates across neighboring views. The resulting 3D keypoints support both pick-and-place and tool-use: for tool-use, we retrieve an object-centric atomic action corresponding to the inferred skill category and align its stored 6D tool trajectory to the scene; for dexterous execution, we expand the lifted grasp keypoint into a task-conditioned grasp affordance region and generate feasible grasp-motion pairs with an arm-hand motion generator. Real-world experiments show improved 3D grounding accuracy and execution reliability over single-view RGB-D grounding and fine-tuned VLA baselines. We further demonstrate long-horizon manipulation through closed-loop status verification and replan, enabling zero-shot execution on unseen objects and tool-use tasks in novel scenes.",
-      "url": "https://arxiv.org/abs/2606.19340v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.19340v1",
-      "published": "2026-06-17T17:59:56Z",
-      "updated": "2026-06-17T17:59:56Z",
+      "abstract": "Robust robotic manipulation in the real world requires not only an understanding of the current observation, but also memory and dynamics modeling. World action models (WAMs) possess these capabilities by jointly modeling visual foresight and actions conditioned on both current and historical observations, making them a promising paradigm for robotic manipulation. However, existing WAMs face a fundamental trade-off: methods with efficient inference typically condition only on a bounded window of recent observations and therefore struggle in non-Markovian environments, whereas methods that preserve long histories incur time and space costs that grow substantially with sequence length. To address this challenge, we introduce MemoryWAM, a world action model with efficient persistent memory. MemoryWAM uses a hybrid memory design that combines recent frames, event-boundary anchor frames, and compact gist tokens that summarize long-range history. A tailored attention mechanism enables retrieval of both detailed short-term context and compressed long-term context, supporting memory-dependent decision-making with reduced inference latency and GPU memory usage. Across long-horizon, memory-dependent manipulation tasks in both simulation and the real world, MemoryWAM outperforms strong vision-language-action (VLA) and WAM baselines while maintaining favorable computational efficiency.",
+      "url": "https://arxiv.org/abs/2606.20562v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.20562v1",
+      "published": "2026-06-18T17:59:51Z",
+      "updated": "2026-06-18T17:59:51Z",
       "categories": [
         "cs.RO"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2606.19333v1",
-      "title": "Do as I Do: Dexterous Manipulation Data from Everyday Human Videos",
+      "id": "2606.20549v1",
+      "title": "Generating Robot Hands from Human Demonstrations",
       "authors": [
-        "Bhawna Paliwal",
-        "Haritheja Etukuru",
-        "William Liang",
-        "Pieter Abbeel",
-        "Nur Muhammad Mahi Shafiullah",
-        "Jitendra Malik"
+        "Sha Yi",
+        "Nicklas Hansen",
+        "Xueqian Bai",
+        "Carmelo Sferrazza",
+        "Michael T. Tolley",
+        "Xiaolong Wang"
       ],
-      "abstract": "How can we scalably generate data for robotic manipulation, especially on human-like platforms such as dexterous multi-fingered hands? Learning from human videos has recently emerged as a likely answer to this question. However, difficulties in estimating hand-object interaction and crossing the human-to-robot embodiment gap have hindered the adoption of abundant monocular RGB-only human videos as the primary source of robot manipulation data. In this work, we present DO AS I DO, an algorithm to reconstruct and retarget monocular RGB human videos to multi-fingered dexterous robotic hands. DO AS I DO reconstructs hand-object interactions from various egocentric and exocentric in-the-wild video sources. The algorithm then retargets these hand-object interaction estimates into a sequence of actions executable in the real world, yielding robot-complete manipulation data from disparate human videos. Overall, DO AS I DO outperforms previous state of the art in estimating hand-object interactions and extracting dexterous manipulation trajectories from RGB videos, as we show in experiments on datasets with ground truths and on a dataset of video clips collected online. Our experiments enable us to propose an efficacy playbook for practitioners collecting human data for manipulation.",
-      "url": "https://arxiv.org/abs/2606.19333v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.19333v1",
-      "published": "2026-06-17T17:57:34Z",
-      "updated": "2026-06-17T17:57:34Z",
+      "abstract": "Robot learning has advanced rapidly in learning control, but learning the physical body of a robot remains much more difficult because jointly searching over design and control creates a very large combinatorial problem. Here, we present a data-driven framework for generating robot hands from human demonstrations. Instead of learning a complex controller together with each candidate design, we generate robot hand designs using the same simple control policy used after fabrication: matching fingertip positions through inverse kinematics. Using more than 4 million frames of human fingertip motion from everyday manipulation, our algorithm optimizes tree-structured robot hands to reproduce desired target motions. The framework produced both a 6-degree-of-freedom (DoF) general-purpose hand and lower-DoF task-specific hands with spatial four-bar mimic joints. To accelerate the search over designs, we trained a reinforcement-learning (RL) actor to propose good hand designs and joint angles, reducing search time from hours to minutes. We fabricated the mechanisms directly as one-piece articulated structures with print-in-place joints. In real-world experiments, the 6-DoF hand achieved highly accurate teleoperated fingertip tracking better than available commercial robot hands, whereas the specialized 3-DoF hands reproduced structured human and synthetic trajectories with reduced mechanical complexity. These results showed that large-scale human motion data can be used not only to train robot controllers but also as a reference for optimizing and generating the physical embodiment of robots.",
+      "url": "https://arxiv.org/abs/2606.20549v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.20549v1",
+      "published": "2026-06-18T17:57:21Z",
+      "updated": "2026-06-18T17:57:21Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2606.20547v1",
+      "title": "The Token Is a Group Element: On Lie-Algebra Attention over Matrix Lie Groups",
+      "authors": [
+        "Przemyslaw Musialski"
+      ],
+      "abstract": "We place the attention token on the group: a token is an element $g_i$ of a matrix Lie group $G$ -- a bare transformation, with no feature payload and no external action $\u03c1(g)$ carrying it. To our knowledge this is the first attention construction whose tokens are bare matrix Lie group elements: their score is the closed-form algebra norm of the relative pose rather than a learned kernel, and it reaches the affine full-frame groups that every irrep- or surjective-exp-based method must exclude. We call it Lie-Algebra Attention. Once tokens are group elements, the rest follows with none of the usual representation-theoretic machinery. The relative geometry of a pair is canonical, $g_i^{-1} g_j$, so the pairwise invariant $w_{ij} = \\log(g_i^{-1} g_j)$ is intrinsic rather than designed; equivariance under the diagonal $G$-action is tautological, and the cocycle condition holds automatically. The attention score is the negative squared algebra norm, $s_{ij} = -\\|\\log(g_i^{-1} g_j)\\|_\u03bb^2/\u03c4$: the canonical proximity kernel under a block-weighted Frobenius inner product, with no irreducible representations, spherical harmonics, Clebsch-Gordan products, or learned kernel. The construction applies to any matrix Lie group on a chosen logarithm chart containing the relative poses, including the non-compact non-abelian affine groups with scale and shear that no vector-token attention method reaches: neither the irrep tradition nor surjective-exp methods. Three sequence-completion experiments, on SE(2), SO(3), and Aff(2), bear this out: the closed-form score matches a learned MLP kernel on the same invariant and outperforms it on SE(2), using 50 to 80x fewer score parameters, while a vector-token baseline breaks invariance by five to twelve orders of magnitude.",
+      "url": "https://arxiv.org/abs/2606.20547v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.20547v1",
+      "published": "2026-06-18T17:56:17Z",
+      "updated": "2026-06-18T17:56:17Z",
+      "categories": [
+        "cs.LG",
+        "cs.CV",
+        "cs.GR",
+        "cs.RO",
+        "math.DG"
+      ],
+      "primary_category": "cs.LG"
+    },
+    {
+      "id": "2606.20495v1",
+      "title": "Increasing Resilience of Continuum Robots via Motion Planning Algorithms",
+      "authors": [
+        "Oxana Shamilyan",
+        "Ievgen Kabin",
+        "Zoya Dyka",
+        "Oleksandr Sudakov",
+        "Peter Langendoerfer"
+      ],
+      "abstract": "This paper presents an experimental study of motion planning for resilient continuum robots. In this study we mainly focused on multi-criteria decision-making, its application for path-planning algorithms, impact on the generated path and execution time. To do this, we used two well-known algorithms for path planning, namely Genetic algorithm and A star algorithm, and modified them by adding the Analytical Hierarchy Process algorithm to evaluate the quality of the paths generated. In our experiment the Analytical Hierarchy Process considers four different criteria, i.e. distance, motors damage, mechanical damage of the robot's arm and accuracy, each considered to contribute to the resilience of a continuum robot. The use of different criteria is necessary to increase the time to maintenance operations of the continuum robot. We conducted the experiments using two different simulated environments of the robot. Although we significantly simplified the robot's model and its environment, we still implemented some of the features of the environment based on the real robot prototype. In particular, one of the environments has single- as well as multi-path points, and other consists of the multi-path points only. The results show that, in contrast to A star, the performance time of Genetic algorithm does not depend on the environment's cardinality. It generates more diverse paths, which increases the robot's resilience.",
+      "url": "https://arxiv.org/abs/2606.20495v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.20495v1",
+      "published": "2026-06-18T17:10:13Z",
+      "updated": "2026-06-18T17:10:13Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2606.20491v1",
+      "title": "Fast Human Attention Prediction for Fixation-guided Active Perception in Autonomous Navigation",
+      "authors": [
+        "Fatma Youssef Mohammed",
+        "Grzegorz Malczyk",
+        "Kostas Alexis"
+      ],
+      "abstract": "Human visual attention relies on structured scanpaths to efficiently process scenes, yet instilling this behavior into robot autonomy is in its infancy and hindered by the high,computational costs of existing predictive models. To address this, we introduce GazeLNN, a computationally lightweight,scanpath prediction model that leverages Liquid Neural Networks as its recurrent engine and employs MobileNetV3 for feature extraction. Operating auto-regressively, the architecture predicts sequential fixation heatmaps conditioned on the current visual stimulus and fixation history. Despite requiring only 0.61 GFLOPs, GazeLNN achieves state-of-the-art performance on the MIT Low Resolution dataset achieving 0.47 ScanMatch score. It outperforms existing recurrent baselines across diverse evaluation metrics, while reducing computational costs by 99.40% and accelerating inference by up to six times. To investigate the role of human attention modeling in robot autonomy and demonstrate the practical utility of this highly efficient architecture, we integrate GazeLNN into an active camera-robot control policy trained via Reinforcement Learning. This integration enables human-fixation-guided perception during autonomous navigation, validated through successful real-world deployments on an aerial robot.",
+      "url": "https://arxiv.org/abs/2606.20491v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.20491v1",
+      "published": "2026-06-18T17:08:06Z",
+      "updated": "2026-06-18T17:08:06Z",
       "categories": [
         "cs.RO",
         "cs.CV"
@@ -50,165 +112,103 @@
       "primary_category": "cs.RO"
     },
     {
-      "id": "2606.19328v1",
-      "title": "UBP2: Uncertainty-Balanced Preference Planning for Efficient Preference-based Reinforcement Learning",
+      "id": "2606.20479v1",
+      "title": "GroundControl: Anticipating Navigation Failures in Vision-Language Agents via Trajectory-Consistent Uncertainty Estimates",
       "authors": [
-        "Mohamed Nabail",
-        "Leo Cheng",
-        "Jingmin Wang",
-        "Nicholas Rhinehart"
+        "Nastaran Darabi",
+        "Divake Kumar",
+        "Sina Tayebati",
+        "Devashri Naik",
+        "Amit Ranjan Trivedi"
       ],
-      "abstract": "Preference-based RL provides an approach to learning reward models from pairwise comparisons of behaviors, bypassing the need for explicit reward design. However, existing methods typically rely on passive data collection and suffer from poor sample efficiency, especially during the early stages of learning. We introduce a model-based approach that actively directs exploration by jointly reasoning over uncertainties in the reward, dynamics, and value functions. Our method, Uncertainty-Balanced Preference Planning (UBP2), uses ensembles of reward, dynamics, and value function models to evaluate candidate trajectories according to a unified score that combines expected reward, terminal value, and epistemic uncertainty. Planning under this objective yields an explicit tradeoff between exploitation and information acquisition without requiring ad hoc exploration heuristics. Under standard regularity assumptions, we establish sublinear regret guarantees for both finite-horizon and infinite-horizon settings. Empirically, experiments on the Meta-World benchmark show UBP2 achieves substantially higher sample efficiency than model-free preference-based methods and non-optimistic model-based baselines.",
-      "url": "https://arxiv.org/abs/2606.19328v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.19328v1",
-      "published": "2026-06-17T17:54:32Z",
-      "updated": "2026-06-17T17:54:32Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.RO"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2606.19314v1",
-      "title": "Modeling Branches for Active Manipulation using Iterative Parameter Estimation",
-      "authors": [
-        "Madhav Rijal",
-        "Rashik Shrestha",
-        "Trevor Smith",
-        "Yu Gu"
-      ],
-      "abstract": "This study presents a method for modeling diverse plant branches by iteratively estimating material parameters to support delicate branch manipulation. Branch manipulation is necessary in agricultural robotics for plant repositioning, stabilizing, and clearing visual obstructions in dense foliage. The proposed method builds a tetrahedral branch model from point-cloud data and simulates its behavior using the finite element method. Using real observed deformation data, it iteratively estimates branch parameters and then computes an optimal path with a deformation-aware motion planner to move and stabilize branches within another robot's field of view. Across 30 trials on branches with varying geometries and material properties, the proposed method reduced the deformation energy by 35.69% while increasing the path length by 8.10% on average.",
-      "url": "https://arxiv.org/abs/2606.19314v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.19314v1",
-      "published": "2026-06-17T17:37:06Z",
-      "updated": "2026-06-17T17:37:06Z",
+      "abstract": "Vision-language navigation agents achieve competitive average success on benchmark tasks, yet failures often arise through predictable trajectory-level breakdowns such as oscillation, stagnation, or inefficient detours. Reliable deployment, therefore, requires uncertainty signals that anticipate emerging failure dynamics during execution rather than reflect only instantaneous action entropy. We introduce \\emph{GroundControl}, a trajectory-consistent uncertainty estimator defined as statistical deviation from nominal goal-directed distance-to-goal dynamics aggregated over an episode. GroundControl models distance evolution using a constant-velocity Kalman filter and combines normalized innovation statistics with complementary trajectory features capturing progress, monotonicity, path efficiency, and oscillatory behavior. The resulting uncertainty score reflects geometric and temporal inconsistency in navigation behavior rather than local prediction dispersion. To evaluate uncertainty quality independently of task success, we formalize \\emph{Selective Risk--Coverage Navigation (SRCN)}, a protocol that measures how effectively an uncertainty score ranks episodes by failure or inefficiency using risk--coverage curves and AURC / E-AURC summaries. Across five EB-Navigation splits ($N=300$ episodes), trajectory-consistent uncertainty achieves near-oracle ordering under success-based selective risk, with weighted-average $\\mathrm{E\\text{-}AURC}_{\\mathrm{SR}}=0.0024$ for the GPT-4o model, substantially outperforming entropy-, conformal-, and heuristic baselines. Under SPL-based selective evaluation, GroundControl consistently achieves the lowest AURC and E-AURC across models and navigation splits. These results show that modeling deviation from goal-directed dynamics provides an interpretable and robust signal for anticipating navigation failures in vision-language agents.",
+      "url": "https://arxiv.org/abs/2606.20479v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.20479v1",
+      "published": "2026-06-18T16:56:20Z",
+      "updated": "2026-06-18T16:56:20Z",
       "categories": [
         "cs.RO"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2606.19311v1",
-      "title": "A Lyapunov-Based Perspective on Absolute Stability",
+      "id": "2606.20458v1",
+      "title": "Slow Brain, Fast Planner: Latency-Resilient VLM-Augmented Urban Navigation",
       "authors": [
-        "Tessina H. Scholl"
+        "Zhenghao \"Mark'' Peng",
+        "Honglin He",
+        "Quanyi Li",
+        "Yukai Ma",
+        "Bolei Zhou"
       ],
-      "abstract": "This article presents a unifying perspective on absolute stability concepts. In particular, it develops a Lyapunov-like explanatory framework for a nonscalar circle criterion with its small-gain and strict-passivity special cases. To this end, a general defining inequality for a Lyapunov-like function is proposed that avoids strict definiteness conditions, enabled by a strengthening of the sector constraint. We discuss different ways to derive a quadratic solution: via a linear matrix inequality (LMI), an algebraic Riccati equation, and a matrix equation. By exploiting the Kalman-Yakubovich-Popov (KYP) lemma, classical frequency-domain results are recovered. A passivity-index-based result is derived that simplifies the evaluation. Overall, the presented interrelations may be useful for both analysis and teaching.",
-      "url": "https://arxiv.org/abs/2606.19311v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.19311v1",
-      "published": "2026-06-17T17:33:08Z",
-      "updated": "2026-06-17T17:33:08Z",
-      "categories": [
-        "eess.SY"
-      ],
-      "primary_category": "eess.SY"
-    },
-    {
-      "id": "2606.19307v1",
-      "title": "Observability and Consistency Analysis for Visual-Inertial Navigation with Anchored Feature Parameterizations",
-      "authors": [
-        "Mitchell Cohen",
-        "Vassili Korotkine",
-        "James Richard Forbes"
-      ],
-      "abstract": "This paper presents an analysis of the observability and consistency properties of filtering-based visual-inertial navigation systems (VINS) that utilize anchored feature representations. The unobservable subspace of VINS with anchored landmark parameterizations is shown to be independent of the estimated landmark state, which leads to improved estimator consistency properties without any additional modifications. However, the unobservable subspace is still found to depend on the estimated navigation state, necessitating additional consistency-enforcing techniques. Two methods to improve the consistency of VINS with anchored feature representations are presented. Simulation results showcase that all estimators employing anchored feature paramterizations exhibit improved consistency properties compared to algorithms that estimate features resolved in a global reference frame, especially in scenarios where feature initialization may be poor. Real-world experiments on the TUM-VI dataset showcase that the use of anchored feature representations alone can yield comparable performance to consistency-improved estimators employing a global feature representation, demonstrating the benefit of using anchored feature parameterizations for VINS.",
-      "url": "https://arxiv.org/abs/2606.19307v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.19307v1",
-      "published": "2026-06-17T17:30:52Z",
-      "updated": "2026-06-17T17:30:52Z",
+      "abstract": "Learning-based planners for sidewalk navigation can generate diverse candidate trajectories in real time, yet their scoring functions often fail to select the best trajectory in challenging situations, outputting trajectories that make the mobile robot drive onto grass, toward pedestrians, or in the wrong direction, even when better candidates exist in the same set. We call this the trajectory scoring gap: in real-world sidewalk navigation, the gap between an anchor-based planner's top choice and the best possible candidate is substantial, likely due to limited high-level scene understanding capability of the planner. Rather than replacing the planner with an end-to-end Vision-Language-Action model, we propose a VLM-Planner interface that uses a VLM to select a candidate index from the planner's proposal set and then fuse it with the planner's initial output. However, VLMs take 1--3s per query and so cannot directly drive a 5--20Hz control loop. We contribute a training-free, latency-resilient trajectory-level fusion layer that turns a stale VLM selection into real-time planner scoring via geometric similarity with exponential decay. On $\\sim$2,000 challenging real-world scenarios (e.g., junctions, pedestrian encounters), VLM selection achieves 30% ADE reduction versus the planner's best selection, while the planner remains competitive in routine situations. In simulation, Score Fusion maintains >80% success rate with delays up to 5s. We demonstrate the full system on a mobile robot navigating challenging campus sidewalks with varied network latency.",
+      "url": "https://arxiv.org/abs/2606.20458v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.20458v1",
+      "published": "2026-06-18T16:40:07Z",
+      "updated": "2026-06-18T16:40:07Z",
       "categories": [
         "cs.RO"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2606.19297v1",
-      "title": "Does VLA Even Know the Basics? Measuring Commonsense and World Knowledge Retention in Vision-Language-Action Models",
+      "id": "2606.20443v1",
+      "title": "Topological Data Analysis for High-Dimensional Dynamic Process Monitoring",
       "authors": [
-        "Nikita Kachaev",
-        "Andrey Moskalenko",
-        "Matvey Skripkin",
-        "Nikita Kurlaev",
-        "Daria Pugacheva",
-        "Albina Burlova",
-        "Mikhail Kolosov",
-        "Denis Shepelev",
-        "Andrey Kuznetsov",
-        "Elena Tutubalina",
-        "Aleksandr I. Panov",
-        "Alexey K. Kovalev",
-        "Vlad Shakhuro"
+        "Angan Mukherjee",
+        "Tyler A. Soderstrom",
+        "Michael J. Kurtz",
+        "Victor M. Zavala"
       ],
-      "abstract": "Embodied Vision-Language-Action (VLA) models are typically obtained by fine-tuning powerful pretrained VLMs on robotics data, yet it is unclear how much commonsense and factual knowledge they retain after adaptation. Failures on knowledge-sensitive tasks are ambiguous, conflating missing knowledge with poor generalization of low-level control. We introduce Act2Answer, a lightweight protocol that adapts VLM knowledge benchmarks to VLA evaluation by requiring agents to answer through action. Each question becomes a short tabletop episode where the agent performs a single object-placement action to select among candidate answers, yielding an action-grounded success rate with reduced control confounds. We curate a test suite of such environments across diverse commonsense and world-knowledge categories and introduce layerwise intent probing to localize answer-relevant information across the VLM backbone and action head. In a large-scale study of 7 VLA models and 9 VLM baselines, we systematically rank models across categories, finding that VLAs show solid performance on simple concepts while exhibiting larger gaps on richer semantic categories relative to their source VLMs, that VQA co-training is associated with better knowledge retention, and that answer-relevant signals peak in middle VLA layers but attenuate in upper layers. Act2Answer is available at https://tttonyalpha.github.io/act2answer/.",
-      "url": "https://arxiv.org/abs/2606.19297v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.19297v1",
-      "published": "2026-06-17T17:20:46Z",
-      "updated": "2026-06-17T17:20:46Z",
-      "categories": [
-        "cs.LG",
-        "cs.RO"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2606.19296v1",
-      "title": "Integrated physics-based modeling reveals a thermodynamic gap in small modular reactor load following",
-      "authors": [
-        "Ali Mahboub Rad",
-        "Roshni Anna Jacob",
-        "Bikash Poudel",
-        "Mayir Mamtimin",
-        "Jie Zhang"
-      ],
-      "abstract": "Small modular reactors (SMRs) are increasingly considered for flexible power generation; however, many dynamic studies still neglect the thermodynamic coupling between the primary and secondary loops that is essential for accurate assessment of load-following capability. In this study, we develop a hybrid dynamic framework that couples an equation-based model of the NuScale integral pressurized water reactor, including the reactor, primary loop, and moving-boundary helical-coil once-through steam generator, with a physics-based secondary steam cycle comprising the valve, turbine, condenser, and feedwater pump. This approach enforces mass and energy conservation across the coupled system while preserving physically consistent flow interactions across the domain boundary. The integrated model reproduces nominal design-point conditions and is used to analyze a 5% step load rejection under five control strategies, including a decentralized three-loop control architecture for the valve, feedwater pump, and control rods. The results show that partial control strategies are insufficient for efficient and safe operation, whereas simultaneous action of all three actuators stabilizes steam pressure, limits adverse thermal excursions in the primary loop and maintains acceptable steam generator operating margins during load-following maneuvers. Compared with a conventional linear steam-cycle representation, the coupled framework captures dynamic back-pressure and variable turbine enthalpy drop that are otherwise neglected, leading to different predictions of transient behavior and required steam flow. These findings show that thermodynamically coupled, physics-based steam-cycle models are needed for more accurate assessment of the operational flexibility, efficiency and safety margins of SMRs under realistic load-following conditions.",
-      "url": "https://arxiv.org/abs/2606.19296v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.19296v1",
-      "published": "2026-06-17T17:17:24Z",
-      "updated": "2026-06-17T17:17:24Z",
+      "abstract": "Real-time process monitoring requires methods that extract actionable information from high-dimensional time-series data. In this work, we present a new approach for process monitoring that combines tools of topological data analysis (TDA) and machine learning. In the proposed approach, we represent multivariate time-series data as manifolds and use topological descriptors to summarize the structure of such data; we then use a neural ordinary differential equation to learn the dynamic evolution of the topological structure of the system. Using real data from an industrial process, we show that this trajectory-based event detection approach is effective at detecting diverse types of events. We contrast this approach against reconstruction-based approaches such as principal component analysis and autoencoders and against a trajectory-based approach that uses Koopman autoencoders.",
+      "url": "https://arxiv.org/abs/2606.20443v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.20443v1",
+      "published": "2026-06-18T16:22:57Z",
+      "updated": "2026-06-18T16:22:57Z",
       "categories": [
         "eess.SY",
-        "math.DS"
+        "cs.LG",
+        "math.AT"
       ],
       "primary_category": "eess.SY"
     },
     {
-      "id": "2606.19267v1",
-      "title": "A Mixed-Reality Testbed for Autonomous Vehicles",
+      "id": "2606.20428v1",
+      "title": "ARC: Adaptive Robust Joint State and Covariance Estimation",
       "authors": [
-        "H. M. Sabbir Ahmad",
-        "Ehsan Sabouni",
-        "Emrullah Celik",
-        "Zean Wan",
-        "Damola Ajeyemi",
-        "Christos G. Cassandras",
-        "Wenchao Li"
+        "Alexandre Hadji-Thomas",
+        "Andrew Stirling",
+        "James R. Forbes"
       ],
-      "abstract": "We propose a mixed-reality, hardware-in-the-loop (HIL) testbed for autonomous vehicles that seamlessly integrates a physical testbed of mobile robots with a high-fidelity simulation environment. The virtual simulation enables the creation of diverse, safety-critical driving scenarios to validate state-of-the-art perception, planning, and control algorithms, while augmenting simulations with physical robots equipped with multimodal sensors in photorealistic virtual environments further facilitating rigorous validation. Our testbed also features vehicular connectivity using wireless communication and can accommodate a large number of agents through the combination of physical robots and virtual simulated agents, supporting research on multi-agent systems including Connected and Autonomous Vehicles (CAVs). Finally, we present a safety-guaranteed framework combining perception, planning and a novel online learning-based controller using Control Barrier Functions (CBFs) for CAVs. Experiments using the proposed framework are used to validate and demonstrate the key functionalities and the overall utility of the testbed to bridge the gap between simulation and real-world hardware deployment.",
-      "url": "https://arxiv.org/abs/2606.19267v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.19267v1",
-      "published": "2026-06-17T16:43:33Z",
-      "updated": "2026-06-17T16:43:33Z",
+      "abstract": "Sensor measurements are frequently corrupted by outliers and non-Gaussian noise. These imperfections in the sensor data can cause classical state estimators to generate biased and unreliable state and uncertainty estimates. Robust estimators reject or downweight outliers but do not perform measurement covariance estimation, whereas joint state and covariance estimators assume Gaussian residuals and fixed loss shape parameters. Integrating these two capabilities into a single framework is an opportunity to simultaneously estimate both state and covariance in the presence of outliers. This paper proposes a unified Block-Coordinate Descent framework that combines a norm-aware adaptive robust loss, an Iteratively Reweighted Least-Squares state update, and a Minimum Weighted Covariance Determinant covariance estimator, yielding a self-tuning joint state and covariance estimator. The framework is evaluated in a Monte-Carlo simulation and on real-world ultra-wideband localization experiments in cluttered non-line-of-sight environments. Results show that the proposed estimator consistently recovers the true inlier measurement covariance and matches or exceeds the state estimation accuracy of all baselines, without requiring any manual parameter tuning.",
+      "url": "https://arxiv.org/abs/2606.20428v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.20428v1",
+      "published": "2026-06-18T16:09:50Z",
+      "updated": "2026-06-18T16:09:50Z",
       "categories": [
-        "cs.RO",
-        "eess.SY"
+        "cs.RO"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2606.19265v1",
-      "title": "Shape Sensing of Continuum Robots using Direct Laser Writing",
+      "id": "2606.20426v1",
+      "title": "TaCauchy: An Extensible FEM Framework for Vision-Based Tactile Simulation",
       "authors": [
-        "Amber K. Rothe",
-        "Nidhi Malhotra",
-        "Jaydev P. Desai"
+        "Hengfei Zhao",
+        "Yifan Xie",
+        "Junhao Gong",
+        "Yue Sun",
+        "Kai Zhu",
+        "Weihua He",
+        "Shoujie Li",
+        "Haohuan Fu",
+        "Wenbo Ding"
       ],
-      "abstract": "Continuum robots offer a promising approach for minimally invasive and natural-orifice surgical procedures due to their inherent compliance and dexterity. However, this flexibility also makes estimating the current shape of the robot challenging. Several approaches have been used to reconstruct the shape of these robots, including imaging, optical sensing, magnetic sensing, and resistive sensing. Strain sensors fabricated using direct laser writing (DLW) could provide an alternative sensing method. This technique involves using a laser to induce carbonization of certain polymers to create graphene patterns, such as strain sensors. In this paper, we demonstrate how a flexible continuum joint and a DLW sensor can be machined as one monolithic structure using the same laser and the same setup. The fabricated sensors are characterized using linear and nonlinear models, which are used to predict the joint angle with error as low as 1.76 degrees. Furthermore, we demonstrate how a DLW sensor can be used to implement closed-loop control in a robotic joint, achieving tracking error under 3 degrees.",
-      "url": "https://arxiv.org/abs/2606.19265v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.19265v1",
-      "published": "2026-06-17T16:41:09Z",
-      "updated": "2026-06-17T16:41:09Z",
+      "abstract": "Vision-based tactile sensors require high-fidelity simulation for reinforcement learning, yet existing approaches struggle to provide accurate mechanical stress fields within GPU-accelerated robotics platforms. We present TaCauchy, an extensible Finite Element Method (FEM) framework that integrates rigorous physics-based force computation into Isaac Sim. Built on the Unified Incremental Potential Contact (UIPC) solver, TaCauchy directly computes Cauchy stress tensors from hyperelastic constitutive laws and projects them onto contact surfaces to obtain traction forces and pressure distributions, providing mechanical ground truth from first principles rather than empirical estimation. Our framework features automatic mesh generation with geometry-aware adaptive refinement and a modular sensor interface enabling rapid integration of diverse sensors (GelSight Mini, DIGIT, 9DTact) with minimal configuration. Performance benchmarks demonstrate 33.40 FPS for single environments and 555 FPS aggregate throughput across 60 parallel environments, with stress extraction overhead under 1 ms. Physical validation experiments show strong agreement between simulated and real tactile responses across force ranges from 1.2556 N to 4.7332 N, achieving SSIM above 0.93, confirming the framework's capability to provide accurate, physically-grounded force supervision for downstream robotic manipulation tasks.",
+      "url": "https://arxiv.org/abs/2606.20426v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.20426v1",
+      "published": "2026-06-18T16:08:45Z",
+      "updated": "2026-06-18T16:08:45Z",
       "categories": [
         "cs.RO"
       ],
