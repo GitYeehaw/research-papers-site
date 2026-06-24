@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-06-23T11:29:49.547192+00:00",
+  "scraped_at": "2026-06-24T11:16:29.373156+00:00",
   "researcher_count": 54,
   "researchers": [
     {
@@ -1304,6 +1304,52 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2606.24628v1",
+          "title": "ArtiTwinSplat: Interactable Digital Twin Reconstruction via Gaussian Splatting from RGB-D videos",
+          "authors": [
+            "Pranjal Mishra",
+            "Ren\u00e9 Zurbr\u00fcgg",
+            "Max Wilder-Smith",
+            "Marco Hutter",
+            "Marc Pollefeys",
+            "Zuria Bauer",
+            "Hermann Blum"
+          ],
+          "abstract": "Deploying robots in unstructured real-world environments needs accurate, interactive models of the objects. Constructing these models at scale remains a critical bottleneck for robotic system integration. We present ArtiTwinSplat, a framework that automatically constructs articulated, photo-realistic digital twins of objects directly from RGB-D videos, requiring no CAD models, simulation assets, or manual annotations. Our method is built on 3D Gaussian Splatting that preserve geometric fidelity and photometric realism, coupled with an unsupervised articulation discovery pipeline that recovers part structure and joint kinematics from observed motion alone. With tracking and optimization stages our method provides stable, queryable digital twins that support real-time rendering, viewpoint control, and interactive manipulation. Unlike prior methods confined to simulation, ArtiTwinSplat operates directly on real-world observations and produces twins that are immediately usable by downstream robot planning and learning systems. This method offers a practical, scalable pathway toward digital twin construction, lowering the integration barrier for articulated object manipulation in embodied AI and human-robot collaboration contexts.",
+          "url": "https://arxiv.org/abs/2606.24628v1",
+          "pdf_url": "https://arxiv.org/pdf/2606.24628v1",
+          "published": "2026-06-23T14:24:07Z",
+          "updated": "2026-06-23T14:24:07Z",
+          "categories": [
+            "cs.RO",
+            "cs.CV"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2606.24208v1",
+          "title": "Grounding Generative Policies in Physics: Optimization-Guided Diffusion for Robot Control",
+          "authors": [
+            "Sabrina Bodmer",
+            "Ren\u00e9 Zurbr\u00fcgg",
+            "Tifanny Portela",
+            "Hao Ma",
+            "Alexandre Didier",
+            "Marco Hutter",
+            "Colin Jones",
+            "Melanie Zeilinger"
+          ],
+          "abstract": "Diffusion models sample effectively from high-dimensional, multimodal distributions, but their outputs may violate deployment constraints. For task-space robot policies, generated grasps, waypoints, or trajectories can be distributionally valid yet infeasible, violating reachability, collision-avoidance, or closed-loop executability requirements. This embodiment gap limits zero-shot deployment across robots, even when the task-space behavior itself is transferable. We propose an inference-time optimization framework that couples the behavior generation to physical feasibility by formulating diffusion guidance as a constrained optimization problem. Our key insight is to replace the sampling perturbation in the backward process with an optimized correction, allowing hard constraints or soft penalties to be imposed during sampling without the need to retrain the diffusion model, while keeping samples close to the learned prior. We evaluate the method on dexterous grasp synthesis with reachability and collision-avoidance constraints, and dynamic manipulation with controller-level trackability constraints. Across settings and robot embodiments, optimization-guided denoising matches the feasibility of projection- and gradient-guidance baselines while better preserving grasp quality, and improving controller-level executability and task success, with task success improving by up to 20pp. on dexterous grasping and 23pp. on visuomotor manipulation over the best baseline.",
+          "url": "https://arxiv.org/abs/2606.24208v1",
+          "pdf_url": "https://arxiv.org/pdf/2606.24208v1",
+          "published": "2026-06-23T06:49:30Z",
+          "updated": "2026-06-23T06:49:30Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2606.18959v1",
           "title": "TactSpace: Learning a Physics-enriched Shared Latent Space for Tactile Sim-to-Real Transfer",
           "authors": [
@@ -1328,7 +1374,7 @@
           "primary_category": "cs.RO"
         },
         {
-          "id": "2606.17046v1",
+          "id": "2606.17046v2",
           "title": "Geometric Action Model for Robot Policy Learning",
           "authors": [
             "Jisang Han",
@@ -1343,10 +1389,10 @@
             "Sunghwan Hong"
           ],
           "abstract": "Generalist robot policies must follow user instructions while reasoning about how objects, cameras, and robot actions interact in the 3D physical world. Recent vision-language-action models (VLAs) and video world-action models (WAMs) inherit strong semantic or temporal priors from large-scale foundation models, but they still operate primarily on 2D image frames or 2D-derived latent spaces, leaving implicit the 3D geometry required for contact-rich manipulation. We propose the Geometric Action Model (GAM), a language-conditioned manipulation policy that directly repurposes a pretrained geometric foundation model (GFM) as a shared substrate for perception, temporal prediction, and action decoding. GAM splits the GFM at an intermediate layer: the shallow layers serve as an observation encoder, and a causal future predictor inserted at the split layer forecasts future latent tokens conditioned on language, proprioception, and action history. The predicted future tokens are then routed through the remaining GFM blocks for feature propagation and decoding, allowing a single backbone to produce both future geometry and actions. This design equips the GFM with language-conditioned temporal world modeling through minimal architectural modification while preserving its rich geometric priors. Across a broad suite of simulation and real-robot manipulation benchmarks, GAM is more accurate, more robust, faster, and lighter than current foundation-model-scale baselines.",
-          "url": "https://arxiv.org/abs/2606.17046v1",
-          "pdf_url": "https://arxiv.org/pdf/2606.17046v1",
+          "url": "https://arxiv.org/abs/2606.17046v2",
+          "pdf_url": "https://arxiv.org/pdf/2606.17046v2",
           "published": "2026-06-15T17:58:03Z",
-          "updated": "2026-06-15T17:58:03Z",
+          "updated": "2026-06-22T21:44:31Z",
           "categories": [
             "cs.RO",
             "cs.CV",
@@ -1375,47 +1421,6 @@
           "updated": "2026-06-04T10:43:14Z",
           "categories": [
             "cs.RO"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2605.27114v2",
-          "title": "VR-DAgger: Immersive VR for Dexterous Data Collection and Uncertainty-Guided On-Policy Correction",
-          "authors": [
-            "Ren\u00e9 Zurbr\u00fcgg",
-            "Tifanny Portela",
-            "Arjun Bhardwaj",
-            "Aravind Elanjimattathil Vijayan",
-            "Maximum Wilder-Smith",
-            "Marco Hutter"
-          ],
-          "abstract": "Learning from demonstrations is effective for robotic manipulation, but collecting sufficient task-specific data remains a major bottleneck. Under distribution shift, small errors compound, performance degrades, and expert time is often spent on redundant, low-value corrections instead of the few critical failure cases. We present VR-DAgger, a human-in-the-loop framework centered on an immersive VR application for dexterous teleoperation, demonstration collection, and selective policy correction. The VR client provides intuitive hand control with synchronized scene visualization, while a backend workstation runs simulation and learning, enabling autonomous rollouts without continuous operator oversight. We use Monte Carlo (MC) dropout to score uncertainty during Isaac Lab rollouts of a diffusion policy and select informative failure segments for correction. These segments are replayed in VR as clips, where the operator selectively labels and corrects the policy's behavior, concentrating supervision where uncertainty is highest without full-rollout monitoring or a separate intervention classifier. We evaluate on three dexterous manipulation tasks (Pan pick-and-place, Drawer opening, Valve turning) with a 10-DoF XHand under standard and challenging initial configurations. Active labeling consistently improves over behavioral cloning across all tasks, with gains of up to 23 percentage points. Compared to unguided human-in-the-loop inspection, VR-DAgger reduces per-sample collection time by approximately 40% by focusing review on selected segments rather than full rollouts.",
-          "url": "https://arxiv.org/abs/2605.27114v2",
-          "pdf_url": "https://arxiv.org/pdf/2605.27114v2",
-          "published": "2026-05-26T14:52:39Z",
-          "updated": "2026-05-28T19:27:21Z",
-          "categories": [
-            "cs.RO"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2605.24975v1",
-          "title": "Bridging the Gap: Enabling Soft Actor Critic for High Performance Legged Locomotion",
-          "authors": [
-            "Gianluca Sabatini",
-            "Chenhao Li",
-            "Marco Hutter"
-          ],
-          "abstract": "Proximal Policy Optimization (PPO) has become the de facto standard for training legged robots, thanks to its robustness and scalability in massively parallel simulation environments like IsaacLab. However, its on-policy nature makes it inherently sample-inefficient, preventing its use for continuous adaptation and fine-tuning on real hardware. Soft Actor-Critic (SAC), by contrast, is an off-policy algorithm that can reuse past experience, making it a natural candidate for sim-to-real transfer workflows where the same algorithm can be used both in simulation and for online learning on the real robot. Despite these advantages, SAC has consistently failed to match PPO's empirical performance in massively parallel training settings. This work identifies the root causes of this gap and introduces targeted modifications, covering policy initialization, timeout-aware critic targets, and multi-step return estimation, that enable SAC to train stably at scale. Evaluated across multiple legged robot platforms and diverse locomotion tasks, our approach closes the performance gap with PPO entirely.",
-          "url": "https://arxiv.org/abs/2605.24975v1",
-          "pdf_url": "https://arxiv.org/pdf/2605.24975v1",
-          "published": "2026-05-24T10:04:11Z",
-          "updated": "2026-05-24T10:04:11Z",
-          "categories": [
-            "cs.RO",
-            "cs.AI",
-            "cs.LG"
           ],
           "primary_category": "cs.RO"
         }
@@ -3394,6 +3399,29 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2606.24884v1",
+          "title": "InSight: Self-Guided Skill Acquisition via Steerable VLAs",
+          "authors": [
+            "Maggie Wang",
+            "Lars Osterberg",
+            "Stephen Tian",
+            "Ola Shorinwa",
+            "Jiajun Wu",
+            "Mac Schwager"
+          ],
+          "abstract": "Vision-language-action (VLA) models can learn manipulation skills from demonstrations, but their capabilities are bounded by the skills in the training data. We present InSight, a framework that unlocks autonomous skill acquisition by rendering VLAs steerable at the primitive-action level (e.g., \"move gripper to the bowl\", \"lift upward\", \"pour the bottle\"). InSight consists of two primary stages: (1) an automated segmentation pipeline that partitions demonstrations into labeled primitives via VLM plan decomposition and end-effector poses to enable VLA primitive steerability, and (2) a VLM-guided data flywheel that identifies missing primitives required to accomplish a novel task, autonomously attempts demonstrations of the missing primitives with VLM-proposed low-level control, and automatically labels, stores, and integrates successful demonstrations into the VLA training set. We evaluate InSight across simulation and real-world manipulation tasks, including block flipping, drawer closing, sweeping, twisting, and pouring, without any human demonstrations of these target skills. Once learned, these primitives can be composed to execute novel, long-horizon tasks without additional human demonstrations. Our findings demonstrate that primitive steerability provides a practical foundation for continual skill acquisition in VLA policies. Project website: https://insight-vla.github.io.",
+          "url": "https://arxiv.org/abs/2606.24884v1",
+          "pdf_url": "https://arxiv.org/pdf/2606.24884v1",
+          "published": "2026-06-23T17:59:01Z",
+          "updated": "2026-06-23T17:59:01Z",
+          "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.LG"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2606.18023v1",
           "title": "LoopCoder-v2: Only Loop Once for Efficient Test-Time Computation Scaling",
           "authors": [
@@ -3490,28 +3518,6 @@
           "updated": "2026-05-29T17:59:02Z",
           "categories": [
             "cs.CV"
-          ],
-          "primary_category": "cs.CV"
-        },
-        {
-          "id": "2605.30347v1",
-          "title": "NeuROK: Generative 4D Neural Object Kinematics",
-          "authors": [
-            "Chen Geng",
-            "Guangzhao He",
-            "Yue Gao",
-            "Yunzhi Zhang",
-            "Shangzhe Wu",
-            "Jiajun Wu"
-          ],
-          "abstract": "Data-driven approaches have revolutionized 3D vision, enabling transformers to effectively reconstruct and generate static 3D objects. However, generating simulative 4D dynamics -- realistic temporal deformations of static objects under various physical conditions -- remains challenging and often ad hoc, despite its importance in building comprehensive 3D world models. Most existing methods assume a predefined physical model and use system identification to estimate parameters, restricting these methods to specific categories and small-scale datasets. We propose that these restrictions can be overcome by learning a data-driven kinematic state parameterization for object-centric physical systems. Specifically, we learn both a latent space representing all possible states of the object and a decoder that maps any sampled latent to a plausibly deformed shape of the object. We refer to this parameterization as Neural Object Kinematics (NeuROK), and learn a transformer-based encoder-decoder model on a curated large-scale 4D dataset. This formulation and the learned model significantly simplify the generation of simulative dynamics since we only need to consider the dynamics within a low-dimensional latent space from the Lagrangian mechanics' perspective in classical physics. We demonstrate the effectiveness and generality of this neural simulation framework across diverse dynamic object types, showing clear advantages over prior works. Project page: https://chen-geng.com/neurok",
-          "url": "https://arxiv.org/abs/2605.30347v1",
-          "pdf_url": "https://arxiv.org/pdf/2605.30347v1",
-          "published": "2026-05-28T17:59:53Z",
-          "updated": "2026-05-28T17:59:53Z",
-          "categories": [
-            "cs.CV",
-            "cs.GR"
           ],
           "primary_category": "cs.CV"
         }
@@ -3646,7 +3652,7 @@
       "paper_count": 5,
       "papers": [
         {
-          "id": "2606.22923v1",
+          "id": "2606.22923v2",
           "title": "PanoVine: Whole-Body Visuomotor Control for Soft Growing Vine Robot",
           "authors": [
             "Yimeng Qin",
@@ -3657,10 +3663,10 @@
             "Allison Okamura"
           ],
           "abstract": "Vine robots, a class of soft, growing robots, are suitable for navigating complex and confined environments due to their compliant bodies and self-supporting growth mechanism. However, hysteresis, tether interactions, and deformations make them difficult to predict and model, which in turn limits the effectiveness of conventional planning and control approaches. In this work, we present a data-driven, vision-based control framework for the first autonomous vine robot system. Our system integrates 19 cameras distributed along the robot's body to provide comprehensive feedback of both the robot state and the surrounding environment. Using this rich whole-body vision feedback, we train an end-to-end visuomotor policy from demonstrations for closed-loop autonomous control in complex environments. The policy efficiently aggregates information from distributed sensing while maintaining robustness to inaccurate robot states and actuation. Experimental results demonstrate that the learned policy enables robust navigation and manipulation in challenging scenarios, including steering through branched structures, climbing up slopes, traversing unsupported terrain, reaching objects precisely, and maneuvering through confined spaces and obstacles. Project website https://panovine-bot.github.io",
-          "url": "https://arxiv.org/abs/2606.22923v1",
-          "pdf_url": "https://arxiv.org/pdf/2606.22923v1",
+          "url": "https://arxiv.org/abs/2606.22923v2",
+          "pdf_url": "https://arxiv.org/pdf/2606.22923v2",
           "published": "2026-06-22T07:02:19Z",
-          "updated": "2026-06-22T07:02:19Z",
+          "updated": "2026-06-23T06:43:19Z",
           "categories": [
             "cs.RO"
           ],
@@ -3708,7 +3714,7 @@
           "primary_category": "cs.RO"
         },
         {
-          "id": "2606.02800v3",
+          "id": "2606.02800v4",
           "title": "Cosmos 3: Omnimodal World Models for Physical AI",
           "authors": [
             "NVIDIA",
@@ -4009,10 +4015,10 @@
             "Artur Zolkowski"
           ],
           "abstract": "We introduce Cosmos 3, a family of omnimodal world models designed to jointly process and generate language, image, video, audio, and action sequences within a unified mixture-of-transformers architecture. By supporting highly flexible input-output configurations, Cosmos 3 seamlessly unifies critical modalities for Physical AI -- effectively subsuming vision-language models, video generators, world simulators, and world-action models into a single framework. Our evaluation demonstrates that Cosmos 3 establishes a new state-of-the-art across a diverse suite of understanding and generation tasks, demonstrating omnimodal world models as scalable, general-purpose backbones for embodied agents. Our post-trained Cosmos 3 models were ranked as the best open-source Text-to-Image and Image-to-Video models by Artificial Analysis, and the best policy model by RoboArena at the time the technical report was written. To accelerate open research and deployment in Physical AI, we make our code, model checkpoints, curated synthetic datasets, and evaluation benchmark available under the Linux Foundation's OpenMDW-1.1 License at https://github.com/nvidia/cosmos and https://huggingface.co/collections/nvidia/cosmos3. The project website is available at https://research.nvidia.com/labs/cosmos-lab/cosmos3.",
-          "url": "https://arxiv.org/abs/2606.02800v3",
-          "pdf_url": "https://arxiv.org/pdf/2606.02800v3",
+          "url": "https://arxiv.org/abs/2606.02800v4",
+          "pdf_url": "https://arxiv.org/pdf/2606.02800v4",
           "published": "2026-06-01T19:12:30Z",
-          "updated": "2026-06-16T23:18:34Z",
+          "updated": "2026-06-23T17:33:32Z",
           "categories": [
             "cs.CV",
             "cs.AI",
@@ -4418,7 +4424,7 @@
           "primary_category": "cs.LG"
         },
         {
-          "id": "2606.18610v1",
+          "id": "2606.18610v2",
           "title": "SC3-Eval: Evaluating Robot Foundation Models via Self-Consistent Video Generation",
           "authors": [
             "Wei-Cheng Tseng",
@@ -4435,10 +4441,10 @@
             "Quan Vuong"
           ],
           "abstract": "Evaluating generalist robot manipulation policies in the real world is expensive, slow, and difficult to scale. Action-conditioned video world models offer a scalable alternative by simulating policy rollouts. Autoregressive rollouts accumulate compounding errors, observations across multiple camera views must remain mutually consistent, and the evaluator must generalize to policies whose behaviors lie outside the training distribution. We address these challenges with SC3-Eval, a self-consistent video generation recipe that adapts a pre-trained video foundation model into an accurate policy evaluator by enforcing three complementary forms of consistency. First, forward-inverse dynamics consistency jointly trains the model to predict frames from actions and to recover actions from frames, anchoring generated rollouts to a physically plausible action manifold and counteracting the drift a forward-only model cannot penalize. Second, cross-view consistency trains the model to inpaint each camera view from the other, keeping the multi-camera observation coherent over long rollouts without any explicit memory mechanism. Third, test-time consistency reuses the inverse dynamics mode at inference as a per-action-chunk uncertainty signal that terminates rollouts whose generated frames drift away from the requested actions. We also demonstrate SC3-Eval rollouts reproduce the failure modes that policies exhibit in real-world rollouts, supporting fine-grained diagnostic comparison rather than aggregate ranking alone. Across seven real-world vision-language-action policies, SC3-Eval attains a closed-loop Pearson correlation of $0.929$ and MMRV of $0.119$, outperforming three strong prior video-model-based baselines, and generalizes to new tasks.",
-          "url": "https://arxiv.org/abs/2606.18610v1",
-          "pdf_url": "https://arxiv.org/pdf/2606.18610v1",
+          "url": "https://arxiv.org/abs/2606.18610v2",
+          "pdf_url": "https://arxiv.org/pdf/2606.18610v2",
           "published": "2026-06-17T02:15:46Z",
-          "updated": "2026-06-17T02:15:46Z",
+          "updated": "2026-06-23T00:20:02Z",
           "categories": [
             "cs.RO",
             "cs.CV"
