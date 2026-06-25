@@ -2,222 +2,236 @@
   "category": "robotics",
   "name": "Robotics Research",
   "description": "Robotics \u2014 Motion Planning, Control Systems, Human-Robot Interaction, Autonomous Systems",
-  "scraped_at": "2026-06-24T11:11:35.891379+00:00",
+  "scraped_at": "2026-06-25T10:49:45.369175+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2606.24884v1",
-      "title": "InSight: Self-Guided Skill Acquisition via Steerable VLAs",
+      "id": "2606.26095v1",
+      "title": "Learning Action Priors for Cross-embodiment Robot Manipulation",
       "authors": [
-        "Maggie Wang",
-        "Lars Osterberg",
-        "Stephen Tian",
-        "Ola Shorinwa",
-        "Jiajun Wu",
-        "Mac Schwager"
+        "Dong Jing",
+        "Tianqi Zhang",
+        "Jiaqi Liu",
+        "Jinman Zhao",
+        "Zelong Sun",
+        "Li Erran Li",
+        "Zhiwu Lu",
+        "Mingyu Ding"
       ],
-      "abstract": "Vision-language-action (VLA) models can learn manipulation skills from demonstrations, but their capabilities are bounded by the skills in the training data. We present InSight, a framework that unlocks autonomous skill acquisition by rendering VLAs steerable at the primitive-action level (e.g., \"move gripper to the bowl\", \"lift upward\", \"pour the bottle\"). InSight consists of two primary stages: (1) an automated segmentation pipeline that partitions demonstrations into labeled primitives via VLM plan decomposition and end-effector poses to enable VLA primitive steerability, and (2) a VLM-guided data flywheel that identifies missing primitives required to accomplish a novel task, autonomously attempts demonstrations of the missing primitives with VLM-proposed low-level control, and automatically labels, stores, and integrates successful demonstrations into the VLA training set. We evaluate InSight across simulation and real-world manipulation tasks, including block flipping, drawer closing, sweeping, twisting, and pouring, without any human demonstrations of these target skills. Once learned, these primitives can be composed to execute novel, long-horizon tasks without additional human demonstrations. Our findings demonstrate that primitive steerability provides a practical foundation for continual skill acquisition in VLA policies. Project website: https://insight-vla.github.io.",
-      "url": "https://arxiv.org/abs/2606.24884v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.24884v1",
-      "published": "2026-06-23T17:59:01Z",
-      "updated": "2026-06-23T17:59:01Z",
+      "abstract": "Most Vision-Language-Action (VLA) models build on a Vision-Language Model (VLM) backbone by attaching an action module and optimizing the full policy jointly. This design inherits strong visual and linguistic priors from the VLM, but leaves the action module to learn physical motion almost from scratch. As a result, the policy lacks an explicit motion prior, forcing early optimization to simultaneously discover temporal action dynamics and cross-modal alignment, a challenge further amplified in cross-embodiment settings. In this work, we propose to pretrain the action module with motion priors before cross-modal VLA alignment. Specifically, we introduce a two-stage training framework that equips the action module with cross-embodiment temporal motion structure before VLA training begins. In Stage~1, a lightweight flow-matching-based encoder-decoder action module efficiently learns temporal motion structure solely from unconditioned action trajectories, without processing visual or language tokens. In Stage~2, this learned prior is transferred to VLA training through decoder reuse and early-stage latent distillation, aligning visual-language features with the action embedding space while still allowing end-to-end policy refinement. In addition, the trained encoder serves as a compact history compressor, summarizing state-action histories into a single temporal context token for history-aware modeling at negligible cost. Extensive experiments across 13 diverse cross-embodiment tasks on both simulated and real-world platforms validate the effectiveness of our approach. Compared with VLA training without action priors, our model achieves faster convergence, higher success rates, and substantially stronger performance on data-scarce real-world tasks. Moreover, scaling up the action data in Stage~1 yields a more generalizable action prior that directly improves downstream VLA performance.",
+      "url": "https://arxiv.org/abs/2606.26095v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.26095v1",
+      "published": "2026-06-24T17:59:56Z",
+      "updated": "2026-06-24T17:59:56Z",
       "categories": [
         "cs.RO",
         "cs.AI",
-        "cs.LG"
+        "cs.CV"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2606.24814v1",
-      "title": "Vision-Language Model Reasoning for Contextual Semantic Mapping in Intralogistics",
+      "id": "2606.26093v1",
+      "title": "ForceBand: Learning Forceful Manipulation with sEMG",
       "authors": [
-        "Marvin R\u00fcdt",
-        "Hao Pang",
-        "Constantin Enke",
-        "Z\u00e4zilia Seibold",
-        "Kai Furmans"
+        "Botao He",
+        "Zhi Wang",
+        "Linna Kuang",
+        "Ishaan Ghosh",
+        "Jitendra Malik",
+        "Cornelia Fermuller",
+        "Tingfan Wu",
+        "Jiayuan Mao",
+        "Ruoshi Liu",
+        "Haozhi Qi",
+        "Yiannis Aloimonos"
       ],
-      "abstract": "Autonomous mobile robots operating in intralogistics environments rely on geometric maps for localization and navigation, but lack semantic understanding of objects and their contextual properties. We present a contextual semantic mapping pipeline that combines SLAM-based geometric mapping, SAM-based instance segmentation, instance clustering, and VLM multi-view reasoning to produce a contextual semantic map representation encoding geometric structure, object class, and object movability. By aggregating observations across multiple viewpoints and querying a VLM in a zero-shot, open-vocabulary setting, the pipeline infers contextual object properties--here demonstrated through movability--without requiring task-specific training or predefined object categories. We evaluate three VLMs under two prompting strategies and conduct a component-wise analysis of the pipeline. The proposed pipeline achieves 98.93 % mIoU for semantic classification and 89.17 % mAcc for object movability estimation. Component analysis identifies VLM reasoning as the primary bottleneck for contextual understanding and instance clustering as the main limitation for panoptic performance. The resulting semantic map supports context-aware filtering and robust navigation in dynamic intralogistics environments.",
-      "url": "https://arxiv.org/abs/2606.24814v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.24814v1",
-      "published": "2026-06-23T16:59:52Z",
-      "updated": "2026-06-23T16:59:52Z",
+      "abstract": "Human demonstrations are a scalable data source for learning robot manipulation policies. However, common sources of human demonstration data, such as motion-capture trajectories and internet videos, capture mostly motion and appearance while missing the contact forces that are critical for force-sensitive manipulation. In this paper, we introduce ForceBand, a low-cost wrist-worn sEMG system that turns human muscle activity into force-enriched demonstrations. We first collect a 10-hour multimodal dataset containing egocentric video, sEMG, IMU, and fingertip force measurements across diverse actions and objects. Using this dataset, we pre-train an EMG2Force model that predicts per-finger forces from sEMG and IMU signals. After a short user-specific calibration, users can collect target-task demonstrations using only ForceBand and video; EMG2Force then labels these demonstrations with per-finger force traces, producing force-augmented demonstrations for robot policy learning. Experiments show that ForceBand recovers fine-grained fingertip interactions with over 50% lower force prediction error than vision-based baselines and achieves an 87% success rate on pick, squeeze, and place tasks that require object-specific force control across objects with diverse shapes, sizes, and weights. Project website: https://forceband-emg.github.io",
+      "url": "https://arxiv.org/abs/2606.26093v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.26093v1",
+      "published": "2026-06-24T17:59:35Z",
+      "updated": "2026-06-24T17:59:35Z",
       "categories": [
         "cs.RO"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2606.24767v1",
-      "title": "Compact Object-Level Representations with Open-Vocabulary Understanding for Indoor Visual Relocalization",
+      "id": "2606.26048v1",
+      "title": "Deep Reinforcement Learning-Enhanced Event-Triggered Data-Driven Predictive Control for a 3D Cable-Driven Soft Robotic Arm",
       "authors": [
-        "Zhaopeng Cui",
-        "Jiarui Hu",
-        "Jingbo Liu",
-        "Boming Zhao",
-        "Xiyue Guo",
-        "Boyin Feng",
-        "Haocheng Peng",
-        "Yujun Shen",
-        "Hujun Bao",
-        "Guofeng Zhang"
+        "Cheng Ouyang",
+        "Moeen Ul Islam",
+        "Kaixiang Zhang",
+        "Zhaojian Li",
+        "Xiaobo Tan",
+        "Dong Chen"
       ],
-      "abstract": "Indoor visual relocalization plays a critical role in emerging spatial and embodied AI applications. However, prior research was predominantly devoted to low-level vision schemes, struggling to perceive scene semantics and compositions, which limits both interpretability and applicability. In this paper, we explore the issue of how to organize rich object information in a scene, including semantics, layout, and geometry, into a structured map representation, thereby utilizing object units exclusively to drive the camera relocalization task. To this end, we propose OpenReLoc, a camera relocalization system designed to provide scene understanding and accurate pose estimation capabilities. Leveraging recent foundation models, we first introduce a multi-modal mechanism to integrate open-vocabulary semantic knowledge for effective 2D-3D object matching. Additionally, we design object-oriented reference frames as position priors, paired with a reference frame selection strategy based on the Distance-IoU (DIOU), enabling extension to scalable scenes. Moreover, to ensure stable and accurate pose optimization, we also propose a dual-path 2D Iterative Closest Pixel loss guided by object shape. Experimental results demonstrate that OpenReLoc achieves superior relocalization recall and accuracy across various datasets. Our source code will be released upon acceptance.",
-      "url": "https://arxiv.org/abs/2606.24767v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.24767v1",
-      "published": "2026-06-23T16:27:04Z",
-      "updated": "2026-06-23T16:27:04Z",
+      "abstract": "Soft robots are challenging to control due to their nonlinear and time-varying dynamics. Data-enabled predictive control (DeePC) offers a model-free alternative by directly leveraging measured input-output trajectories to construct a predictive controller. However, its receding-horizon formulation requires solving a constrained optimization problem at every sampling instant, which can be computationally demanding for real-time deployment on resource-limited robotic platforms.To address this limitation, we propose an adaptive reinforcement-learning-based event-triggered DeePC (RL-ET-DeePC) framework for soft robotic control. A model-free RL policy is trained to determine when to invoke the DeePC optimizer based on the current system state representation, thereby reducing unnecessary optimization calls while preserving closed-loop performance.Simulation results show that RL-ET-DeePC reduces optimization frequency by up to 66% compared to periodic DeePC, while maintaining comparable tracking accuracy. Hardware experiments on a three-dimensional cable-driven soft robotic arm demonstrate zero-shot transfer, achieving a 34% reduction in optimization frequency with tracking accuracy comparable to periodic DeePC and more consistent performance than a static threshold-based event-triggered baseline.",
+      "url": "https://arxiv.org/abs/2606.26048v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.26048v1",
+      "published": "2026-06-24T17:26:18Z",
+      "updated": "2026-06-24T17:26:18Z",
       "categories": [
-        "cs.CV",
-        "cs.RO"
+        "cs.RO",
+        "eess.SY"
       ],
-      "primary_category": "cs.CV"
+      "primary_category": "cs.RO"
     },
     {
-      "id": "2606.24742v1",
-      "title": "World Value Models for Robotic Manipulation",
+      "id": "2606.26047v1",
+      "title": "Learning Robot Visual Navigation in Crowds via Intention-Aware Scene Representations",
       "authors": [
-        "Zhihao Wang",
-        "Jianxiong Li",
-        "Yu Cui",
-        "Yuan Gao",
-        "Xianyuan Zhan",
-        "Junzhi Yu",
-        "Xiao Ma"
+        "Han Bao",
+        "Bingyi Xia",
+        "Hanjing Ye",
+        "Yu Zhan",
+        "Hao Cheng",
+        "Baozhi Jia",
+        "Wenjun Xu",
+        "Jiankun Wang"
       ],
-      "abstract": "Generalist value models play a pivotal role in scaling robotic policy learning from large-scale, mixed-quality data. Mathematically, accurate value estimation demands deep temporal understanding, requiring models to both ground the current belief using historical context and plan over future outcomes. However, most existing robotic value models are built on Vision-Language Model (VLM) backbones that are pretrained primarily on static or temporally sparse visual observations, lacking the requisite temporal modeling capabilities for value estimation. Unlike VLMs, world models naturally excel at temporal modeling and future planning, making them ideal foundations for learning generalizable value functions. Driven by this insight, we marry world models with value estimation to construct a new generalist robotic value model, World Value Model (WVM), that offers accurate task progressions to assess data quality. On standard benchmarks, WVM delivers state-of-the-art (SOTA) Value-Order Correlation (VOC) results. Complementing standard evaluation suites that contains only expert data, we further introduce Suboptimal-Value-Bench, a multi-embodiment benchmark consisting of 800 suboptimal trajectories with high-fidelity, human-labeled frame annotations. Our evaluations show that WVM maintains its SOTA performance on Suboptimal-Value-Bench, establishing its robustness in handling both expert and suboptimal data. When deployed for policy learning, WVM improves manipulation performance across various policy extraction approaches in both simulated and real-world deployment, providing robust guidance for learning from mixed-quality data.",
-      "url": "https://arxiv.org/abs/2606.24742v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.24742v1",
-      "published": "2026-06-23T16:07:48Z",
-      "updated": "2026-06-23T16:07:48Z",
+      "abstract": "Robot crowd navigation requires the ability to infer human intentions while accounting for the structural constraints of the environment. Currently, deep reinforcement learning (DRL) provides a promising method for learning navigation policies that understand human intentions. However, most of them rely on limited scene representations, treating pedestrians as simple 2D points and ignoring rich visual cues from both humans and the environment. To address this issue, we introduce iCrowdNav, a novel visual crowd navigation method with intention-aware scene representations, to encode behavioral and structural context from egocentric visual observations. Our method employs two key components: a spatio-temporal encoder for extracting occupancy features of the scene, and Intent-Interact Former (I$^2$ Former), an attention-based module that encodes human poses to infer pedestrians' motion intentions. These features are integrated into a compact state embedding that supports effective DRL policy training. Extensive experiments show that our method achieves superior performance over baselines, and real-world deployment demonstrates vision-based crowd navigation.",
+      "url": "https://arxiv.org/abs/2606.26047v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.26047v1",
+      "published": "2026-06-24T17:26:17Z",
+      "updated": "2026-06-24T17:26:17Z",
       "categories": [
         "cs.RO"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2606.24712v1",
-      "title": "TACTFUL: Tactile-Driven Exploration For Object Localization and Identification in Confined Environments",
+      "id": "2606.26046v1",
+      "title": "RoboAtlas: Contextual Active SLAM",
       "authors": [
-        "Shivani Kamtikar",
-        "Chung Hee Kim",
-        "Camilla Tabasso",
-        "Tye Brady",
-        "Joshua Migdal",
-        "Taskin Padir"
+        "Alexander Schperberg",
+        "Shivam K. Panda",
+        "Abraham P. Vinod",
+        "M. K. Jawed",
+        "Stefano Di Cairano"
       ],
-      "abstract": "Humans effortlessly locate and identify objects by touch alone, even without vision. In contrast, robotic systems rely heavily on vision and struggle with autonomous tactile exploration and object identification. We present TACTFUL, a vision-free tactile exploration framework that enables a multi-fingered robot to autonomously explore confined workspaces, discover objects through contact, and identify them via tactile reconstruction. Trained entirely on real hardware without simulation, our system learns a single policy that balances global workspace exploration with local surface refinement through a dynamic reward schedule. Our results demonstrate that tactile sensing, when paired with structured learning, can serve as an effective primary modality for object-level reasoning, achieving 77% success with 0.015 m average reconstruction error and outperforming baseline approaches on real-world objects.",
-      "url": "https://arxiv.org/abs/2606.24712v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.24712v1",
-      "published": "2026-06-23T15:33:51Z",
-      "updated": "2026-06-23T15:33:51Z",
+      "abstract": "We present RoboAtlas, a contextual Active SLAM framework that adaptively balances geometric exploration and semantic reasoning using a scalable 3D semantic mapping system, OpenRoboVox. RoboAtlas integrates frontier exploration, global semantic-map reasoning, and egocentric VLM-based reasoning through a contextual multi-armed bandit that transitions from exploration to semantically guided navigation as scene understanding improves. We evaluate the system in simulation and on a Unitree Go2 robot in large-scale real-world environments exceeding 1800 m2 with approx. 30k mapped semantic instances, achieving a 100% task success rate. On the GOAT-Bench \"Val Unseen\" benchmark, RoboAtlas achieves state-of-the-art performance with highest reported success rate (SR) of 90.6%, using GPT-4o, improving over the strongest prior baseline by 17.8 percentage points in SR. Using the much smaller Qwen2.5-VL-7B model, it still achieves 88.8% SR, outperforming all baselines using GPT-4o in SR, and revealing the importance of the information gained by our semantic mapping framework over simply replacing the underlying foundation model. The results demonstrate that grounding foundation models with large-scale 3D semantic maps enables robust and efficient contextual Active SLAM.",
+      "url": "https://arxiv.org/abs/2606.26046v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.26046v1",
+      "published": "2026-06-24T17:26:07Z",
+      "updated": "2026-06-24T17:26:07Z",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2606.26025v1",
+      "title": "In-Context World Modeling for Robotic Control",
+      "authors": [
+        "Siyin Wang",
+        "Junhao Shi",
+        "Senyu Fei",
+        "Zhaoyang Fu",
+        "Li Ji",
+        "Jingjing Gong",
+        "Xipeng Qiu"
+      ],
+      "abstract": "Modern Vision-Language-Action (VLA) models often fail to generalize to novel setups, such as altered camera viewpoints or robot morphologies, because they are typically conditioned only on current observations and language instructions. By ignoring the underlying system configuration as a variable, these models implicitly assume a fixed execution context encountered during training, necessitating data-intensive fine-tuning for any new environment. In this work, we introduce In-Context World Modeling (ICWM), a framework that treats system identification as an in-context adaptation problem. ICWM enables robot policies to autonomously infer essential system variables from a short history of self-generated, task-agnostic interactions. Unlike traditional In-Context Learning that uses demonstrations to specify what task to perform, ICWM leverages the context window to understand how the system operates. By processing these interactions before task execution, the model implicitly captures the world dynamics of the current system, enabling adaptation to novel configurations without parameter updates. Extensive experiments in simulation and on real-world robot platforms demonstrate that ICWM significantly outperforms standard VLA baselines on novel camera viewpoints.",
+      "url": "https://arxiv.org/abs/2606.26025v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.26025v1",
+      "published": "2026-06-24T16:53:36Z",
+      "updated": "2026-06-24T16:53:36Z",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2606.26017v1",
+      "title": "G2DP: Diffusion Planning with Spatio-Temporal Grid Guidance",
+      "authors": [
+        "Hang Yu",
+        "Ye Jin",
+        "Alessandro Canevaro",
+        "Julian Schmidt",
+        "Julian Jordan",
+        "Peizheng Li",
+        "Marc Kaufeld",
+        "Silvan Lindner",
+        "Johannes Betz",
+        "Wilhelm Stork"
+      ],
+      "abstract": "In autonomous driving, diffusion-based planners have emerged as a promising paradigm for robust motion planning in dense and interactive traffic, as they can effectively model diverse driving behaviors. However, their inherent stochasticity often requires explicit guidance during denoising to ensure safety and route adherence for robust closed-loop execution. Existing guidance typically relies on sparse, entity-centric geometric queries or post-hoc refinement, yielding limited situational awareness and fragile performance in interactive scenes. To address this issue, we propose G2DP (Grid-Guided Diffusion Planning), a diffusion-based planner that directly enforces dense environmental constraints through inference-time guidance. Specifically, G2DP constructs a differentiable spatio-temporal cost volume by fusing probabilistic future occupancy distributions with a route-progress map. By formulating this volume as a continuous safety energy functional, it injects dense gradients directly into the denoising loop, actively steering trajectory generation toward collision-free and progress-optimal regions. Extensive closed-loop evaluations show that G2DP achieves state-of-the-art performance on nuPlan, outperforming the strongest imitation-learning baseline by +7.2 points in reactive score. It further maintains top scores in zero-shot transfers to interPlan and DeepScenario benchmarks, with collision avoidance improving by +10.15 over the unguided approach on interPlan. These results demonstrate that spatio-temporal cost grids serve as an effective representation for robust guidance in diffusion-based planning.",
+      "url": "https://arxiv.org/abs/2606.26017v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.26017v1",
+      "published": "2026-06-24T16:38:55Z",
+      "updated": "2026-06-24T16:38:55Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2606.26010v1",
+      "title": "FAR-LIO: Enabling High-Speed Autonomy through Fast, Accurate, and Robust LiDAR-Inertial Odometry",
+      "authors": [
+        "Maximilian Leitenstern",
+        "Marcel Weinmann",
+        "Patrick Haft",
+        "Tobias Lasser",
+        "Dominik Kulmer",
+        "Markus Lienkamp"
+      ],
+      "abstract": "Robust and accurate odometry estimation is essential in modern robotics. In environments characterized by highly dynamic motion and sensor noise, odometry estimation becomes increasingly challenging. Autonomous racing combines both factors in an unstructured setting, where minimizing odometry latency is essential for stable closed-loop control. This paper introduces FAR-LIO, a highly optimized CUDA-accelerated LiDAR-inertial odometry framework developed for Fast, Accurate, and Robust performance. Our system leverages a novel CUDA-based voxel hashmap to enable parallelized nearest-neighbor search and efficient map updates. We employ a sparsity-aware Generalized Iterative Closest Point algorithm with adaptive thresholding on top of the CUDA-based voxel hashmap with adaptive density to achieve low-latency without compromising accuracy. An Extended Kalman Filter serves as a robust backend. It utilizes an upsampling and delay compensation strategy to fuse the LiDAR odometry with high-frequency IMU data, thereby ensuring a robust and smooth odometry output. We evaluate FAR-LIO across four different sensor setups, using both public datasets and data from two autonomous racecars driving at speeds of up to 250 km/h. FAR-LIO achieves an average 6.9% reduction in the positional error and 38.4% lower runtime compared to state-of-the-art baselines on target hardware using a single parameter set. This demonstrates its computational efficiency and broad applicability. To build upon our work, our code is available open-source on https://github.com/TUMFTM/FAR-LIO.",
+      "url": "https://arxiv.org/abs/2606.26010v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.26010v1",
+      "published": "2026-06-24T16:30:51Z",
+      "updated": "2026-06-24T16:30:51Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2606.26008v1",
+      "title": "Emcar: Embodied Controller for Animating Robots",
+      "authors": [
+        "Carlos Gomez Cubero",
+        "Elizabeth Jochum"
+      ],
+      "abstract": "This chapter describes EMCAR, a novel software tool for programming robot motion that leverages the unique affordances of artistic practices such as puppetry and drawing to conceive, design, and program novel interactions and realize new use cases for HRI. The advantage of this no-code platform is that it expands creative applications for collaborative robots - putting robots directly in the hands of artists - and provides an inclusive environment that enables individuals with little or no technical backgrounds to engage meaningfully in collaborations and robotics research.",
+      "url": "https://arxiv.org/abs/2606.26008v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.26008v1",
+      "published": "2026-06-24T16:29:19Z",
+      "updated": "2026-06-24T16:29:19Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2606.26006v1",
+      "title": "FORCE: Efficient VLA Reinforcement Fine-Tuning via Value-Calibrated Warm-up and Self-Distillation",
+      "authors": [
+        "Shuyi Zhang",
+        "Yunfan Lou",
+        "Hongyang Cheng",
+        "Yichen Guo",
+        "Chuyao Fu",
+        "Yaoxu Lyu",
+        "Xiaojie Zhang",
+        "Haoran Li",
+        "Pengwei Wang",
+        "Zhongyuan Wang",
+        "Shanghang Zhang"
+      ],
+      "abstract": "Vision-Language-Action (VLA) models are often constrained by the imitation ceiling imposed by sub-optimal data. While Reinforcement Learning (RL) fine-tuning can surpass this limit, it is notoriously sample inefficient. This challenge arises from two core issues: (1) catastrophic initial unlearning due to an unstable Q-function and (2) inefficient policy updates caused by low-quality exploration data, often forcing a reliance on costly human interventions. We introduce FORCE, a 3-stage framework that stabilizes fine-tuning by tackling both issues. FORCE first incorporates a Value-Calibrated Warm-Up phase, utilizing on-policy rollouts to mitigate the distributional shift of the Q-function. Subsequently, during the online stage, this calibrated Q-function acts as a filter for both the policy's own action proposals and expert data, ensuring only high-value actions are used for the policy update. We evaluate FORCE on various simulation and real-world tasks, and the result shows that FORCE achieves a 79% absolute improvement in success rates and outperform prior RL methods by 10%, while accelerating training by 32.5%. Critically, it mitigates the common success rate drop and achieves this robust performance without human intervention, marking a significant step towards deploying capable and autonomous robotic agents.",
+      "url": "https://arxiv.org/abs/2606.26006v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.26006v1",
+      "published": "2026-06-24T16:23:18Z",
+      "updated": "2026-06-24T16:23:18Z",
       "categories": [
         "cs.RO",
         "cs.AI"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2606.24680v1",
-      "title": "Multi-Worker Assembly Line Rebalancing with Relevance-Guided Configuration Preservation",
-      "authors": [
-        "Martina Vinetti",
-        "Sabino Roselli",
-        "Martin Fabian"
-      ],
-      "abstract": "In assembly line balancing, tasks are assigned to stations in order to satisfy a required cycle time. When production conditions change, the line must be rebalanced by modifying the current task allocation, typically aiming to move as few tasks as possible between stations. Similarity measures are commonly used to control such changes, but they generally evaluate configuration preservation by treating all tasks equally, which may not reflect their different practical importance. In this work, a \\emph{pruned Mean Similarity Factor} is proposed for assembly line rebalancing, evaluating similarity only over a subset of structurally relevant tasks identified through a relevance score. The proposed measure is integrated into a compact mixed-integer linear programming (MILP) formulation that considers practical aspects of manual assembly, specifically workload balance, ergonomic exposure, multi-worker stations, and positional constraints. Computational experiments on extended benchmark instances derived from the literature show that the proposed approach can obtain optimal rebalancing solutions within reasonable computational times, while maintaining high task colocation and balanced workload and ergonomic distributions. In particular, focusing the similarity evaluation on relevant tasks helps reduce the computational effort.",
-      "url": "https://arxiv.org/abs/2606.24680v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.24680v1",
-      "published": "2026-06-23T15:10:17Z",
-      "updated": "2026-06-23T15:10:17Z",
-      "categories": [
-        "eess.SY"
-      ],
-      "primary_category": "eess.SY"
-    },
-    {
-      "id": "2606.24641v1",
-      "title": "Suboptimal and Reduced-Order MPC via Timescale Separation",
-      "authors": [
-        "Stefano Di Gregorio",
-        "Guido Carnevale",
-        "Giuseppe Notarstefano"
-      ],
-      "abstract": "In this paper, we propose a generalized framework for the design and analysis of suboptimal and reduced-order nonlinear Model Predictive Control (MPC) architectures. The proposed framework manages real-time operation of MPC schemes by (i) computing the control action suboptimally, i.e., by running a generic optimal control algorithm for a finite number of iterations, and (ii) relying on a reduced-order model that neglects part of the plant dynamics (accounting for, e.g., unmodeled dynamics or a low-level compensator). To rigorously handle the interplay between optimization error and model mismatch, we treat the sampling time as a tunable design parameter. We analyze the resulting closed-loop system, comprising the full-order physical plant interconnected with the iterative optimization algorithm (treated as a dynamical system), by leveraging tools from timescale separation. We prove that operating at a sufficiently fast sampling rate ensures that the closed-loop system maintains recursive feasibility and achieves an exponentially stable equilibrium point. The effectiveness of the proposed framework is validated on an underactuated two-link robotic arm through virtual experiments in the high-fidelity MuJoCo physics engine.",
-      "url": "https://arxiv.org/abs/2606.24641v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.24641v1",
-      "published": "2026-06-23T14:38:26Z",
-      "updated": "2026-06-23T14:38:26Z",
-      "categories": [
-        "math.OC",
-        "eess.SY"
-      ],
-      "primary_category": "math.OC"
-    },
-    {
-      "id": "2606.24633v1",
-      "title": "Beyond Monotonic Progress: Retry-Supervised Value Learning for Robot Imitation",
-      "authors": [
-        "Xinyao Qin",
-        "Junjie Lu",
-        "Kaixin Wang",
-        "Chuheng Zhang",
-        "Sinjae Kang",
-        "Kimin Lee",
-        "Min Xu",
-        "Bin Liang",
-        "Jun Yang",
-        "Li Zhao"
-      ],
-      "abstract": "Human demonstrations for robot imitation learning often contain mistakes and corrective behaviors, such as imprecise grasps, object misalignment, unstable contact, and repeated attempts. While these segments are commonly treated as noisy or suboptimal data, they provide valuable evidence about when execution deviates from a desirable path and how task feasibility can be restored. However, existing reward and value models often rely on monotonic progress assumptions, which capture coarse task advancement but may overlook local execution errors and corrective behaviors in imperfect demonstrations. In this work, we propose ReTVL (ReTry-Supervised Value Learning), a framework for learning mistake-sensitive value functions from mixed-quality robot demonstrations by leveraging retry events as sparse supervision. ReTVL captures the local degradation-and-recovery structure around mistakes by combining global progress calibration with local pairwise preference learning induced by sparsely annotated retry keypoints. The learned value model is then used to reweight demonstration chunks for downstream behavior cloning, reducing the influence of harmful execution errors while preserving useful corrective behaviors. Experiments on real-robot manipulation tasks show that ReTVL produces more fine-grained value estimates than progress-based baselines and improves imitation learning from imperfect demonstrations.",
-      "url": "https://arxiv.org/abs/2606.24633v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.24633v1",
-      "published": "2026-06-23T14:27:10Z",
-      "updated": "2026-06-23T14:27:10Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2606.24632v1",
-      "title": "Parallel Dynamic Programming for Conic Linear Quadratic Control",
-      "authors": [
-        "Luyao Zhang",
-        "Gabriel Bravo-Palacios",
-        "Brian Plancher",
-        "Sergio Grammatico"
-      ],
-      "abstract": "Linear Quadratic (LQ) control problems are at the heart of linear control theory and Model Predictive Control (MPC). While performant, standard approaches to solving such problems are inherently serial, limiting real-time scalability despite the parallel computing power available on modern multi-core CPUs. Contributing to addressing this challenge and motivated by ``divide and conquer'' strategies, we present a parallel-in-time approach that solves computationally demanding conic optimal control problems through the use of the alternating direction method of multipliers (ADMM). In particular, we formulate the inner primal update of ADMM as an LQ problem and split the reformulated problem along the time horizon. This enables us to derive a variant of the Riccati recursion using dynamic programming to solve each subproblem in parallel. Numerical benchmarks on two real-world applications demonstrate as much as a 5x speedup compared to existing related approaches on multi-core CPU hardware.",
-      "url": "https://arxiv.org/abs/2606.24632v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.24632v1",
-      "published": "2026-06-23T14:26:38Z",
-      "updated": "2026-06-23T14:26:38Z",
-      "categories": [
-        "math.OC",
-        "cs.RO"
-      ],
-      "primary_category": "math.OC"
-    },
-    {
-      "id": "2606.24631v1",
-      "title": "Optimization-based Safe Trajectory Planning for Autonomous Ground Vehicle in Multi-Floor Scenarios",
-      "authors": [
-        "Zishang Xiang",
-        "Runda Zhang",
-        "Runqi Chai",
-        "Kaiyuan Chen",
-        "Senchun Chai",
-        "Yuanqing Xia"
-      ],
-      "abstract": "The development of trajectory planning strategies for autonomous ground vehicles (AGVs) represents a prevailing research interest within the domain of intelligent transportation systems. This paper introduces a trajectory planning framework tailored for multi-floor scenarios. The framework consists of two main modules: the task planning module and the trajectory planning module. The task planning module involves a strategic selection phase, where a task planning strategy based on generalized voronoi diagrams (GVD) and multi-objective algorithms is proposed to select the floor exits for each floor. The trajectory planning module utilizes optimization-based methods to generate high-quality trajectories, and a warm-started hierarchical planning framework is designed to ensure rapid convergence. Additionally, for handling complex obstacle constraints, a correlation constraint calculation method is designed for reducing obstacle constraints in trajectory planning. Finally, the feasibility and effectiveness of the proposed framework are verified through simulations.",
-      "url": "https://arxiv.org/abs/2606.24631v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.24631v1",
-      "published": "2026-06-23T14:26:22Z",
-      "updated": "2026-06-23T14:26:22Z",
-      "categories": [
-        "cs.RO"
       ],
       "primary_category": "cs.RO"
     }
