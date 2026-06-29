@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-06-28T10:36:50.433371+00:00",
+  "scraped_at": "2026-06-29T12:45:46.950131+00:00",
   "researcher_count": 54,
   "researchers": [
     {
@@ -3116,6 +3116,39 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2606.28276v1",
+          "title": "SimFoundry: Modular and Automated Scene Generation for Policy Learning and Evaluation",
+          "authors": [
+            "Nadun Ranawaka",
+            "Josiah Wong",
+            "Wei-Lin Pai",
+            "Wei-Teng Chu",
+            "Tianyuan Dai",
+            "Masoud Moghani",
+            "Hang Yin",
+            "Yunfan Jiang",
+            "Wesley Durbano",
+            "Brandon Huynh",
+            "Yu Fang",
+            "Linxi Fan",
+            "Danfei Xu",
+            "Ruohan Zhang",
+            "Li Fei-Fei",
+            "Bowen Wen",
+            "Ajay Mandlekar",
+            "Yuke Zhu"
+          ],
+          "abstract": "Training and evaluating robot policies in the real world is costly and difficult to scale. We introduce SimFoundry, a modular and automated system for zero-shot real-to-sim scene construction from a video. SimFoundry generates sim-ready digital twins and supports object, scene, and task editing, enabling the automated generation of diverse digital cousins: affordance-preserving variations of reconstructed real-world scenes. Policies trained on SimFoundry data transfer zero-shot to challenging real tasks involving multi-step manipulation, articulated object interaction, and bimanual interaction, and its digital cousins (variations of the original scene, objects, and tasks) facilitate generalization to new real-world conditions. Across 7 manipulation tasks and 5 policy architectures, SimFoundry simulation evaluations strongly predict real-world performance, with mean Pearson correlation 0.911 and mean maximum ranking violation 0.018. When evaluating sim-trained policies zero-shot in the real world, policies trained with object, scene, and task cousins in simulation show average task success rate improvements of 17%, 21%, and 40%, respectively. Additional details at https://research.nvidia.com/labs/gear/simfoundry/ .",
+          "url": "https://arxiv.org/abs/2606.28276v1",
+          "pdf_url": "https://arxiv.org/pdf/2606.28276v1",
+          "published": "2026-06-26T17:18:43Z",
+          "updated": "2026-06-26T17:18:43Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2606.17055v2",
           "title": "T-Rex: Tactile-Reactive Dexterous Manipulation",
           "authors": [
@@ -3242,31 +3275,6 @@
             "cs.RO"
           ],
           "primary_category": "cs.CV"
-        },
-        {
-          "id": "2605.09989v2",
-          "title": "StereoPolicy: Improving Robotic Manipulation Policies via Stereo Perception",
-          "authors": [
-            "Evans Han",
-            "Yunfan Jiang",
-            "Yingke Wang",
-            "Haoyue Xiao",
-            "Huang Huang",
-            "Jianwen Xie",
-            "Jiajun Wu",
-            "Li Fei-Fei",
-            "Ruohan Zhang"
-          ],
-          "abstract": "Recent advances in robot imitation learning have produced powerful visuomotor policies that manipulate diverse objects from visual inputs. However, monocular observations lack depth information, which is critical for precise manipulation in cluttered or geometrically complex scenes. Explicit depth maps and point clouds are often noisy and fragile in real-world manipulation. We introduce StereoPolicy, a visuomotor policy learning framework that directly leverages synchronized stereo image pairs to improve geometric reasoning without constructing explicit 3D representations. StereoPolicy processes each image with pretrained 2D vision encoders and fuses left-right features through a cross-attention-based Stereo Transformer, capturing spatial correspondence and disparity cues implicitly. The framework integrates with diffusion-based and pretrained vision-language-action (VLA) policies, delivering consistent improvements over RGB, RGB-D, point cloud, and multi-view baselines across three simulation benchmarks and seven real-robot tabletop and bimanual mobile manipulation tasks. Our results show that stereo vision bridges 2D pretrained representations and 3D geometric understanding for robotic manipulation.",
-          "url": "https://arxiv.org/abs/2605.09989v2",
-          "pdf_url": "https://arxiv.org/pdf/2605.09989v2",
-          "published": "2026-05-11T05:06:12Z",
-          "updated": "2026-06-03T20:48:13Z",
-          "categories": [
-            "cs.RO",
-            "cs.CV"
-          ],
-          "primary_category": "cs.RO"
         }
       ]
     },
@@ -4077,6 +4085,31 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2606.28320v1",
+          "title": "WARP-RM: A Warp-Augmented Relative Progress Reward Model for Data Curation",
+          "authors": [
+            "Justin Yu",
+            "Andrew Goldberg",
+            "Kavish Kondap",
+            "Karim El-Refai",
+            "Ethan Ransing",
+            "Qianzhong Chen",
+            "Mac Schwager",
+            "Fred Shentu",
+            "Philipp Wu",
+            "Ken Goldberg"
+          ],
+          "abstract": "Scaling imitation learning requires large datasets, yet human teleoperation inevitably produces mixed-quality demonstrations containing hesitations and recoveries. Prior frame-level progress reward models supervise on absolute temporal progress proxies that suffer from label noise, or require costly human annotations to define subtask boundaries. We present WARP (Warp-Augmented Relative Progress), a novel fully self-supervised algorithm for learning dense, signed relative progress magnitudes directly from successful demonstrations. WARP generates per-frame progress targets via time-warp augmentations of demonstrations (variable playback speeds and reversals) and we train WARP-RM to predict the normalized elapsed time between input frames. Aggregating these predictions across overlapping windows yields a dense frame-level progress signal. We then introduce WARP-BC, which leverages these scalar reward estimates to upweight high-advantage action chunks during behavior cloning, where chunk-level advantage is obtained by aggregating per-frame rewards. We evaluate our approach on a physical bimanual robot system performing a long-horizon deformable object manipulation task: folding T-shirts from a random crumpled start. To evaluate policy robustness against suboptimal data, we construct training datasets of varying quality using episode length as a proxy for teleoperation sub-optimality. As the dataset is widened to admit more inefficiencies, WARP-BC maintains a 19/20 success rate compared to vanilla BC's collapse to 2/20, improving throughput by up to 18x.",
+          "url": "https://arxiv.org/abs/2606.28320v1",
+          "pdf_url": "https://arxiv.org/pdf/2606.28320v1",
+          "published": "2026-06-26T17:58:06Z",
+          "updated": "2026-06-26T17:58:06Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2606.19980v1",
           "title": "ENPIRE: Agentic Robot Policy Self-Improvement in the Real World",
           "authors": [
@@ -4209,32 +4242,6 @@
           "pdf_url": "https://arxiv.org/pdf/2606.11535v1",
           "published": "2026-06-10T00:37:03Z",
           "updated": "2026-06-10T00:37:03Z",
-          "categories": [
-            "cs.RO"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2606.10305v1",
-          "title": "SARM2: Multi-Task Stage Aware Reward Modeling for Self Improving Robotic Manipulation",
-          "authors": [
-            "Qianzhong Chen",
-            "Hau Zheng",
-            "Justin Yu",
-            "Suning Huang",
-            "Jiankai Sun",
-            "Ken Goldberg",
-            "Chuan Wen",
-            "Pieter Abbeel",
-            "Yide Shentu",
-            "Philipp Wu",
-            "Mac Schwager"
-          ],
-          "abstract": "Fine-tuning vision-language-action (VLA) policies for long-horizon manipulation still relies heavily on behavior cloning, which requires costly high-quality demonstrations and keeps policies near the demonstration distribution. Reward models can reduce this dependence by reweighting demonstrations and providing dense supervision for on-robot reinforcement learning (RL), but they must be dense, accurate, and general. Existing methods fall short: task-specific stage-aware models are accurate but require per-task annotations, while general vision-language-model (VLM) reward models are broadly applicable but too coarse for fine-grained long-horizon progress. We introduce RM, a multi-task stage-aware reward model that combines an action-primitive-based stage estimator with a multi-gate Mixture-of-Experts (MMoE) value head to produce dense per-step rewards across manipulation tasks. Building on RM, we further propose SPIRAL (Self-Policy Improvement via Reward-Aligned Learning), an on-policy reward-guided framework that improves VLA policies from cheap autonomous rollouts. On a 10-task benchmark, RM reduces value-estimation MSE by 80% over the strongest baselines; when used in SPIRAL, it improves task success from around 50% to near-perfect performance on Folding Shorts (58% to 100%) and Cleaning Whiteboard (50% to 90%), showing that high-quality dense rewards are key to a stable robot data flywheel. Project website: https://qianzhong-chen.github.io/sarm2.github.io/.",
-          "url": "https://arxiv.org/abs/2606.10305v1",
-          "pdf_url": "https://arxiv.org/pdf/2606.10305v1",
-          "published": "2026-06-09T01:46:23Z",
-          "updated": "2026-06-09T01:46:23Z",
           "categories": [
             "cs.RO"
           ],
@@ -4449,7 +4456,7 @@
           "primary_category": "cs.LG"
         },
         {
-          "id": "2606.18610v2",
+          "id": "2606.18610v3",
           "title": "SC3-Eval: Evaluating Robot Foundation Models via Self-Consistent Video Generation",
           "authors": [
             "Wei-Cheng Tseng",
@@ -4466,10 +4473,10 @@
             "Quan Vuong"
           ],
           "abstract": "Evaluating generalist robot manipulation policies in the real world is expensive, slow, and difficult to scale. Action-conditioned video world models offer a scalable alternative by simulating policy rollouts. Autoregressive rollouts accumulate compounding errors, observations across multiple camera views must remain mutually consistent, and the evaluator must generalize to policies whose behaviors lie outside the training distribution. We address these challenges with SC3-Eval, a self-consistent video generation recipe that adapts a pre-trained video foundation model into an accurate policy evaluator by enforcing three complementary forms of consistency. First, forward-inverse dynamics consistency jointly trains the model to predict frames from actions and to recover actions from frames, anchoring generated rollouts to a physically plausible action manifold and counteracting the drift a forward-only model cannot penalize. Second, cross-view consistency trains the model to inpaint each camera view from the other, keeping the multi-camera observation coherent over long rollouts without any explicit memory mechanism. Third, test-time consistency reuses the inverse dynamics mode at inference as a per-action-chunk uncertainty signal that terminates rollouts whose generated frames drift away from the requested actions. We also demonstrate SC3-Eval rollouts reproduce the failure modes that policies exhibit in real-world rollouts, supporting fine-grained diagnostic comparison rather than aggregate ranking alone. Across seven real-world vision-language-action policies, SC3-Eval attains a closed-loop Pearson correlation of $0.929$ and MMRV of $0.119$, outperforming three strong prior video-model-based baselines, and generalizes to new tasks.",
-          "url": "https://arxiv.org/abs/2606.18610v2",
-          "pdf_url": "https://arxiv.org/pdf/2606.18610v2",
+          "url": "https://arxiv.org/abs/2606.18610v3",
+          "pdf_url": "https://arxiv.org/pdf/2606.18610v3",
           "published": "2026-06-17T02:15:46Z",
-          "updated": "2026-06-23T00:20:02Z",
+          "updated": "2026-06-26T17:59:04Z",
           "categories": [
             "cs.RO",
             "cs.CV"
