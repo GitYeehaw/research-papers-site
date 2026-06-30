@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-06-29T12:45:46.950131+00:00",
+  "scraped_at": "2026-06-30T11:21:18.179572+00:00",
   "researcher_count": 54,
   "researchers": [
     {
@@ -3439,7 +3439,7 @@
           "primary_category": "cs.CV"
         },
         {
-          "id": "2606.26423v1",
+          "id": "2606.26423v2",
           "title": "CoStream: Composing Simple Behaviors for Generalizable Complex Manipulation",
           "authors": [
             "Haonan Chen",
@@ -3453,11 +3453,11 @@
             "Edward H. Adelson",
             "Yilun Du"
           ],
-          "abstract": "Long-horizon, contact-rich complex manipulation tasks, such as seating a GPU into a PCIe slot, demand both millimeter high precision and out-of-the-box generalization to new tasks. Existing paradigms struggle to satisfy both: classical pipelines use brittle, task-specific interfaces to achieve high-precision control but require costly pipeline redesigns to adapt to new tasks, whereas monolithic end-to-end policies provide better generalization but lack high precision on complex, out-of-distribution tasks unless retrained with new data. Both paradigms share an implicit assumption: once a manipulation capability is acquired, it must be deployed as a rigid pipeline or monolithic whole, rather than being freely decomposed and recomposed. In this paper, we show that complex manipulation capabilities can emerge naturally from the composition of simple, independent behaviors. Rather than deploying a monolithic policy or a rigid pipeline, we propose \\ourshort, a framework orchestrating foundation models and diverse sensing modalities into multiple composable core behaviors: a semantic behavior extracting spatial constraints via foundation models; a predictive behavior forecasting trajectories by tracking keypoints in imagined videos; and a reactive behavior providing high-frequency tactile and force corrections. On a shared $SE(3)$ interface, these outputs compose by right-multiplication into a single pose command at each control step, executed by a compliant controller. We demonstrate \\ourshort on 8 real-world tasks spanning everyday manipulation and precision assembly, with the strongest gains in contact-rich assembly and object transfer, and show robust recovery from manual perturbations during execution. {Website:} https://costream-simple.github.io",
-          "url": "https://arxiv.org/abs/2606.26423v1",
-          "pdf_url": "https://arxiv.org/pdf/2606.26423v1",
+          "abstract": "Long-horizon, contact-rich complex manipulation tasks, such as seating a GPU into a PCIe slot, demand both millimeter high precision and out-of-the-box generalization to new tasks. Existing paradigms struggle to satisfy both: classical pipelines use brittle, task-specific interfaces to achieve high-precision control but require costly pipeline redesigns to adapt to new tasks, whereas monolithic end-to-end policies provide better generalization but lack high precision on complex, out-of-distribution tasks unless retrained with new data. Both paradigms share an implicit assumption: once a manipulation capability is acquired, it must be deployed as a rigid pipeline or monolithic whole, rather than being freely decomposed and recomposed. In this paper, we show that complex manipulation capabilities can emerge naturally from the composition of simple, independent behaviors. Rather than deploying a monolithic policy or a rigid pipeline, we propose CoStream, a framework orchestrating foundation models and diverse sensing modalities into multiple composable core behaviors: a semantic behavior extracting spatial constraints via foundation models; a predictive behavior forecasting trajectories by tracking keypoints in imagined videos; and a reactive behavior providing high-frequency tactile and force corrections. On a shared $SE(3)$ interface, these outputs compose by right-multiplication into a single pose command at each control step, executed by a compliant controller. We demonstrate CoStream on 8 real-world tasks spanning everyday manipulation and precision assembly, with the strongest gains in contact-rich assembly and object transfer, and show robust recovery from manual perturbations during execution. Website: https://costream-simple.github.io",
+          "url": "https://arxiv.org/abs/2606.26423v2",
+          "pdf_url": "https://arxiv.org/pdf/2606.26423v2",
           "published": "2026-06-24T22:25:19Z",
-          "updated": "2026-06-24T22:25:19Z",
+          "updated": "2026-06-26T20:07:20Z",
           "categories": [
             "cs.RO",
             "cs.AI"
@@ -3677,6 +3677,25 @@
       "website": "https://shurans.github.io/",
       "paper_count": 5,
       "papers": [
+        {
+          "id": "2606.30457v1",
+          "title": "Behavior Prompting Policy: Demonstrations as Prompts for Manipulation",
+          "authors": [
+            "Austin Patel",
+            "Ben Pekarek",
+            "Joel Enrique Castro Hernandez",
+            "Shuran Song"
+          ],
+          "abstract": "We study behavior prompting, a paradigm that enables robots to perform new tasks at inference time given a single human demonstration, which we call a behavior prompt. To enable this capability, we present contributions in algorithm, data, and evaluation. For algorithm, we introduce Behavior Prompting Policy (BPP), an in-context visuomotor architecture that translates the behavior prompt and the current observation into robot actions. For data, we identify that task diversity is the primary driver of the prompting capability and introduce iPhUMI, a handheld manipulation interface for collecting diverse training data. For evaluation, we introduce DrawAnything and LIBERO-Gen to evaluate test-time adaptation to unseen drawing and tabletop manipulation tasks. We also demonstrate that iPhUMI serves as a practical interface for specifying behavior prompts at test time, enabling a human to command a robot via a single demonstration to complete known tasks or to define new robot capabilities. Altogether, behavior prompting provides a flexible and scalable way to teach robots new skills without the need for expensive fine-tuning. Our project website is located at https://behavior-prompting.github.io/ .",
+          "url": "https://arxiv.org/abs/2606.30457v1",
+          "pdf_url": "https://arxiv.org/pdf/2606.30457v1",
+          "published": "2026-06-29T15:23:44Z",
+          "updated": "2026-06-29T15:23:44Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
         {
           "id": "2606.22923v2",
           "title": "PanoVine: Whole-Body Visuomotor Control for Soft Growing Vine Robot",
@@ -4053,26 +4072,6 @@
             "cs.RO"
           ],
           "primary_category": "cs.CV"
-        },
-        {
-          "id": "2604.18933v1",
-          "title": "Gated Memory Policy",
-          "authors": [
-            "Yihuai Gao",
-            "Jinyun Liu",
-            "Shuang Li",
-            "Shuran Song"
-          ],
-          "abstract": "Robotic manipulation tasks exhibit varying memory requirements, ranging from Markovian tasks that require no memory to non-Markovian tasks that depend on historical information spanning single or multiple interaction trials. Surprisingly, simply extending observation histories of a visuomotor policy often leads to a significant performance drop due to distribution shift and overfitting. To address these issues, we propose Gated Memory Policy (GMP), a visuomotor policy that learns both when to recall memory and what to recall. To learn when to recall memory, GMP employs a learned memory gate mechanism that selectively activates history context only when necessary, improving robustness and reactivity. To learn what to recall efficiently, GMP introduces a lightweight cross-attention module that constructs effective latent memory representations. To further enhance robustness, GMP injects diffusion noise into historical actions, mitigating sensitivity to noisy or inaccurate histories during both training and inference. On our proposed non-Markovian benchmark MemMimic, GMP achieves a 30.1% average success rate improvement over long-history baselines, while maintaining competitive performance on Markovian tasks in RoboMimic. All code, data and in-the-wild deployment instructions are available on our project website https://gated-memory-policy.github.io/.",
-          "url": "https://arxiv.org/abs/2604.18933v1",
-          "pdf_url": "https://arxiv.org/pdf/2604.18933v1",
-          "published": "2026-04-21T00:14:50Z",
-          "updated": "2026-04-21T00:14:50Z",
-          "categories": [
-            "cs.RO",
-            "cs.AI"
-          ],
-          "primary_category": "cs.RO"
         }
       ]
     },
@@ -4258,6 +4257,36 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2606.30645v1",
+          "title": "VLK: Learning Humanoid Loco-Manipulation from Synthetic Interactions in Reconstructed Scenes",
+          "authors": [
+            "Yen-Jen Wang",
+            "Jiaman Li",
+            "Sirui Chen",
+            "Takara E. Truong",
+            "Pei Xu",
+            "Pieter Abbeel",
+            "Rocky Duan",
+            "Koushil Sreenath",
+            "Angjoo Kanazawa",
+            "Carmelo Sferrazza",
+            "Guanya Shi",
+            "Karen Liu"
+          ],
+          "abstract": "Perception-based humanoid loco-manipulation requires connecting egocentric observations and task instructions to whole-body motion. Learning this mapping requires synchronized egocentric images, language commands, and robot-compatible kinematic trajectories, yet no existing data source provides this complete tuple at scale. We address this bottleneck by generating vision-language-kinematics (VLK) supervision synthetically in reconstructed scenes. Our pipeline leverages 3D Gaussian Splatting to reconstruct metric-scale indoor environments, synthesizes navigation and object-interaction trajectories using privileged scene information, and renders paired egocentric observations after the fact. We produce 48,000 paired trajectories with no human intervention and train a VLK policy that predicts short-horizon whole-body kinematic trajectories. A whole-body tracker converts these predictions into actions on the physical humanoid. We evaluate on the physical Unitree G1 performing navigation and single-object transport, demonstrating that synthesized interactions in reconstructed scenes provide effective supervision for sim-to-real perception-based humanoid loco-manipulation. Project Website: https://vision-language-kinematics.github.io/",
+          "url": "https://arxiv.org/abs/2606.30645v1",
+          "pdf_url": "https://arxiv.org/pdf/2606.30645v1",
+          "published": "2026-06-29T17:59:55Z",
+          "updated": "2026-06-29T17:59:55Z",
+          "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.GR",
+            "eess.SY"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2606.27375v1",
           "title": "Scalable Behavior Cloning with Open Data, Training, and Evaluation",
           "authors": [
@@ -4381,28 +4410,6 @@
             "cs.LG"
           ],
           "primary_category": "cs.LG"
-        },
-        {
-          "id": "2606.13677v1",
-          "title": "Mana: Dexterous Manipulation of Articulated Tools",
-          "authors": [
-            "Zhao-Heng Yin",
-            "Guanya Shi",
-            "Pieter Abbeel",
-            "C. Karen Liu"
-          ],
-          "abstract": "Articulated tool manipulation remains a major challenge in dexterous robotics due to the need to coordinate internal degrees of freedom and contact-rich interactions. While prior work has largely focused on rigid objects, articulated tool use remains underexplored because of its physical complexity and the difficulty of learning functional grasping and manipulation policies. We present Mana (Manipulation Animator), a general sim-to-real framework that reinterprets dexterous manipulation as an animation problem. Inspired by computer animation, Mana employs a coarse-to-fine pipeline that transforms procedurally-generated grasp keyframes into manipulation trajectories through motion planning and reinforcement learning. The data generation process is largely automatic, requiring only a few mouse clicks to specify functional affordances (<1 minute per tool). Across four articulated tools spanning different scales and joint types, Mana achieves zero-shot sim-to-real transfer for both grasping and in-hand manipulation, demonstrating a scalable approach to dexterous articulated tool use.",
-          "url": "https://arxiv.org/abs/2606.13677v1",
-          "pdf_url": "https://arxiv.org/pdf/2606.13677v1",
-          "published": "2026-06-11T17:59:49Z",
-          "updated": "2026-06-11T17:59:49Z",
-          "categories": [
-            "cs.RO",
-            "cs.AI",
-            "cs.CV",
-            "cs.LG"
-          ],
-          "primary_category": "cs.RO"
         }
       ]
     },
@@ -5846,6 +5853,29 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2606.30084v1",
+          "title": "One Forward Beats Two: InnerZoom for Accurate and Efficient GUI Grounding",
+          "authors": [
+            "Chen Liu",
+            "Ling Chen",
+            "Hanzhang Zhou",
+            "Liangyu Chen",
+            "Chenglin Cai",
+            "Xin Yu",
+            "Steven Hoi",
+            "Yue Wang"
+          ],
+          "abstract": "MLLM-based GUI grounding methods commonly formulate target localization as autoregressive coordinate generation, enabling models to leverage the strong instruction-following and semantic understanding capabilities of MLLMs. However, this formulation requires the model to retain region-level target evidence while decoding coordinate tokens with the spatial precision demanded by GUI clicking. Our diagnostic analysis reveals that target-region awareness emerges in intermediate decoder layers but is neither retained nor translated into the final coordinate prediction. Existing ZoomIn-style methods address this issue through an external crop-and-rerun pass, which improves localization but increases end-to-end latency and computational cost. To retain the accuracy benefits of two-pass zooming without this extra cost, we propose InnerZoom, a single-forward framework for cross-layer evidence bridging. InnerZoom transforms target-related cues from the original forward pass into a compact cross-layer evidence state, then preserves, refines, and reinjects this state throughout later decoding layers to guide coordinate prediction. Extensive experimental results suggest that InnerZoom-4B achieves state-of-the-art performance on all six GUI grounding benchmarks, obtaining 64.7 on OSWorld-G, 40.2 on UI-Vision, 73.1 on OSWorld-GR, and 87.6 on MMBench-GUI, surpassing the previous best results by 4.1, 3.2, 2.9, and 2.3 points, respectively. Under a controlled 4B setting, InnerZoom improves the same SFT+RL baseline by 5.3 points on average and outperforms two-pass ZoomIn by 1.3 points on average, while reducing end-to-end latency by up to 31.8% and TFLOPs by about 29%. Code and models will be publicly available.",
+          "url": "https://arxiv.org/abs/2606.30084v1",
+          "pdf_url": "https://arxiv.org/pdf/2606.30084v1",
+          "published": "2026-06-29T10:20:39Z",
+          "updated": "2026-06-29T10:20:39Z",
+          "categories": [
+            "cs.CV"
+          ],
+          "primary_category": "cs.CV"
+        },
+        {
           "id": "2606.25706v1",
           "title": "Learning Asynchronous Upper-body Task-space Trajectory Tracking Policy for Humanoid Robots",
           "authors": [
@@ -5929,26 +5959,6 @@
           "pdf_url": "https://arxiv.org/pdf/2606.20990v1",
           "published": "2026-06-18T23:47:27Z",
           "updated": "2026-06-18T23:47:27Z",
-          "categories": [
-            "cs.RO"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2606.12366v1",
-          "title": "APT: Action Expert Pretraining Improves Instruction Generalization of Vision-Language-Action Policies",
-          "authors": [
-            "Kechun Xu",
-            "Zhenjie Zhu",
-            "Anzhe Chen",
-            "Rong Xiong",
-            "Yue Wang"
-          ],
-          "abstract": "Vision-Language-Action (VLA) models that couple pretrained Vision-Language Models (VLMs) with continuous action experts have achieved strong manipulation performance, yet generalization to out-of-distribution (OOD) language instructions remains poor. A known challenge is the structural imbalance in VLA data, where language is far less diverse than visual and action content, making policies prone to visual shortcuts. While discrete-action methods mitigate this through vision-language co-training, continuous action experts lack such protection: they start from random initialization and learn entirely from imbalanced data, producing noisy gradients that corrupt the VLM and fail to exploit its language capability. We address this from a Bayesian perspective, factorizing the policy into a language-agnostic Vision-Action (VA) prior and a language-conditioned VLA likelihood, and propose APT, a two-stage training method emphasizing Action expert PreTraining. In Stage 1, the action expert is pretrained as a VA prior on vision-action pairs from a frozen VLM, bypassing the language imbalance. In Stage 2, language tokens are injected through a gated fusion mechanism that integrates VLM features while preserving the learned visuomotor prior. APT applies to mainstream VLA architectures, including the $\u03c0$ and GR00T-style architectures. Comprehensive experiments validate that APT achieves consistent gains on unseen instructions and compositional tasks. Project Page: https://xukechun.github.io/papers/APT/",
-          "url": "https://arxiv.org/abs/2606.12366v1",
-          "pdf_url": "https://arxiv.org/pdf/2606.12366v1",
-          "published": "2026-06-10T17:34:25Z",
-          "updated": "2026-06-10T17:34:25Z",
           "categories": [
             "cs.RO"
           ],
