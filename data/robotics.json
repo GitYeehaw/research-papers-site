@@ -2,225 +2,223 @@
   "category": "robotics",
   "name": "Robotics Research",
   "description": "Robotics \u2014 Motion Planning, Control Systems, Human-Robot Interaction, Autonomous Systems",
-  "scraped_at": "2026-06-30T11:16:22.473069+00:00",
+  "scraped_at": "2026-07-01T11:30:52.904586+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2606.30645v1",
-      "title": "VLK: Learning Humanoid Loco-Manipulation from Synthetic Interactions in Reconstructed Scenes",
+      "id": "2606.32028v1",
+      "title": "DVG-WM: Disentangled Video Generation Enables Efficient Embodied World Model for Robotic Manipulation",
       "authors": [
-        "Yen-Jen Wang",
-        "Jiaman Li",
-        "Sirui Chen",
-        "Takara E. Truong",
-        "Pei Xu",
-        "Pieter Abbeel",
-        "Rocky Duan",
-        "Koushil Sreenath",
-        "Angjoo Kanazawa",
-        "Carmelo Sferrazza",
-        "Guanya Shi",
-        "Karen Liu"
+        "Ziyu Shan",
+        "Zhenyu Wu",
+        "Xiaofeng Wang",
+        "Zheng Zhu",
+        "Ziwei Wang"
       ],
-      "abstract": "Perception-based humanoid loco-manipulation requires connecting egocentric observations and task instructions to whole-body motion. Learning this mapping requires synchronized egocentric images, language commands, and robot-compatible kinematic trajectories, yet no existing data source provides this complete tuple at scale. We address this bottleneck by generating vision-language-kinematics (VLK) supervision synthetically in reconstructed scenes. Our pipeline leverages 3D Gaussian Splatting to reconstruct metric-scale indoor environments, synthesizes navigation and object-interaction trajectories using privileged scene information, and renders paired egocentric observations after the fact. We produce 48,000 paired trajectories with no human intervention and train a VLK policy that predicts short-horizon whole-body kinematic trajectories. A whole-body tracker converts these predictions into actions on the physical humanoid. We evaluate on the physical Unitree G1 performing navigation and single-object transport, demonstrating that synthesized interactions in reconstructed scenes provide effective supervision for sim-to-real perception-based humanoid loco-manipulation. Project Website: https://vision-language-kinematics.github.io/",
-      "url": "https://arxiv.org/abs/2606.30645v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.30645v1",
-      "published": "2026-06-29T17:59:55Z",
-      "updated": "2026-06-29T17:59:55Z",
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.GR",
-        "eess.SY"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2606.30632v1",
-      "title": "GROW$^2$: Grounding Which and Where for Robot Tool Use",
-      "authors": [
-        "Yuhong Deng",
-        "Yuyao Liu",
-        "David Hsu"
-      ],
-      "abstract": "Can the robot use a plate to cut a cake if no knife is available? Tool use greatly expands robot capabilities, but to use tools creatively beyond their intended functions, the robot faces the challenge of $\\textit{open-world affordance grounding}$: select an open-category object to act as a tool and localize its specific region of action. To this end, we introduce GROW$^2$ (GROunding Which and Where), which leverages object parts as a natural abstraction to split the grounding process hierarchically into semantic and geometric levels, thus bypassing the need for data-heavy, end-to-end training. Semantically, GROW$^2$ harnesses the commonsense reasoning of Vision-Language Models (VLMs) to parse a natural-language task instruction, select a suitable object as the tool, and identify task-relevant parts on the tool and the target object. Geometrically, vision foundation models then ground the selected parts into precise 3D regions from a single RGB-D image. Experiments on established benchmarks show that GROW$^2$ outperforms state-of-the-art baselines on affordance prediction benchmarks. Further, it achieves zero-shot generalization over open-category objects and outperforms baselines in both simulated and real-world robot tool use experiments.",
-      "url": "https://arxiv.org/abs/2606.30632v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.30632v1",
-      "published": "2026-06-29T17:56:53Z",
-      "updated": "2026-06-29T17:56:53Z",
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.CV"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2606.30613v1",
-      "title": "Sequential Planning via Anchored Robotic Keypoints",
-      "authors": [
-        "Bryce Grant",
-        "Aryeh Rothenberg",
-        "Logan Senning",
-        "Zonghe Chua",
-        "Zach Patterson",
-        "Peng Wang"
-      ],
-      "abstract": "We present Sequential Planning via Anchored Robotic Keypoints, SPARK, a training-free neurosymbolic manipulation system that reaches 43.7% on six LIBERO-PRO position \\& task cells, more than doubling CaP-Agent0 and Vision-Language-Action (VLA) baselines. CaP-Agent0, a multi-turn code-generation agent, achieves 18.2% by re-querying an LLM at every turn, but its restart-from-scratch solution proves costly against minor policy failures. Perception is the layer that fails most under position and task changes so SPARK spends its computation there. A single Gemini call composes the plan as a typed behavior tree (BT) of composable primitives, each already containing the low-level control (motion, grasping, depth geometry) a code-generation agent would otherwise regenerate on every trial. The rest of the budget goes to perception: a second Gemini call proposes three alternative text prompts per object, SAM3 evaluates each, and we keep the prompt$\\to$label pair with the most confident detection and a recovery loop then retries a failed primitive against freshly detected objects, with no new LLM call. The alternative prompts add +27.7 points on the spatial suite and +10.0 on the object suite, with the recovery loop adding +5.0 overall. SPARK runs the same primitives on three robot families (UR10e, Franka FR3, bimanual Franka) across nine unique tasks at twenty trials each, averaging 68%. Since the detector, planner, and controller modules sit behind the typed plan, they swap independently without training, and each primitive's checkable post-condition traces a failure to the corresponding module or a kinematic limit. Every trial logs a verified, labeled trajectory, so a training-free planner that already beats VLAs can supply the data those policies need without teleoperation. Project page: https://cwru-aism.github.io/spark-page/",
-      "url": "https://arxiv.org/abs/2606.30613v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.30613v1",
-      "published": "2026-06-29T17:48:01Z",
-      "updated": "2026-06-29T17:48:01Z",
+      "abstract": "Video-based embodied world models provide an appealing substrate for robotic manipulation by predicting future states, yet current approaches remain limited by a fundamental entanglement: accurately modeling dynamics typically requires low-level temporal reasoning, while producing high-resolution frames demands expansive visual synthesis according to high-level semantics. This entanglement results in slow inference speed for iterative planning or too coarse predictions to retain contact-rich details. To solve this dilemma, we present Disentangled Video Generation World Model (DVG-WM), an efficient framework that explicitly decomposes world modeling into dynamics learning and visual synthesis. Conditioned on an initial observation and a language instruction, our model first generates a plausible sequence of intermediate visual states to preview the physical interaction and refines them to obtain high-fidelity videos. Furthermore, an efficient cascading mechanism is proposed, where DVG-WM uses flow matching to directly map the dynamics to video latents, and introduces a latent degradation mechanism to regenerate contact-rich details. Experiments on LIBERO and real-world platforms demonstrate improved video quality with up to 3.97 times acceleration, validating that disentangled video generation can be an efficient embodied world model for robotic manipulation.",
+      "url": "https://arxiv.org/abs/2606.32028v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.32028v1",
+      "published": "2026-06-30T17:54:32Z",
+      "updated": "2026-06-30T17:54:32Z",
       "categories": [
         "cs.RO"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2606.30581v1",
-      "title": "Realtime Wind Estimation using Low Cost Quadrotor Uncrewed Aerial Vehicles",
+      "id": "2606.32027v1",
+      "title": "Freeform Preference Learning for Robotic Manipulation",
       "authors": [
-        "Hiranya Udagedara",
-        "Mahdis Bisheban"
+        "Marcel Torne",
+        "Anubha Mahajan",
+        "Abhijnya Bhat",
+        "Chelsea Finn"
       ],
-      "abstract": "In environmental monitoring as well as emergency response applications such as wildfires, wind velocity measurement is essential. Quadrotor UAVs have become popular platforms for wind velocity estimation due to their maneuverability, compact size, and cost-effectiveness. Numerous studies use the Extended Kalman Filter (EKF) to estimate the wind velocity based on the quadrotor dynamic model. However, most of them use hovering quadrotors only for wind estimation, others use a near-linear trajectory to estimate near-constant velocities. Furthermore, EKF performance is constrained by its reliance on linearized approximations of the nonlinear quadrotor dynamics around current states, limiting accuracy in highly nonlinear scenarios, including windy conditions. This study proposes the use of an Unscented Kalman Filter (UKF), a nonlinear estimator to provide accurate wind estimations while maintaining the trajectory of the quadrotor UAV. The quadrotor is modeled on the Special Euclidean group SE(3) and the approach is evaluated through numerical simulations using a geometric controller to maintain quadrotor flight paths. The results indicate that as the nonlinearity of the simulation increases, the UKF consistently outperforms the EKF. This demonstrates the potential of the UKF as a reliable estimator for highly nonlinear scenarios, capable of maintaining the trajectory with minimal deviation while providing accurate wind velocity estimations.",
-      "url": "https://arxiv.org/abs/2606.30581v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.30581v1",
-      "published": "2026-06-29T17:24:16Z",
-      "updated": "2026-06-29T17:24:16Z",
-      "categories": [
-        "cs.RO",
-        "eess.SY"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2606.30575v1",
-      "title": "MOAR Planner: Multi-Objective and Adaptive Risk-Aware Path Planning for Infrastructure Inspection with a UAV",
-      "authors": [
-        "Louis Petit",
-        "Alexis Lussier Desbiens"
-      ],
-      "abstract": "The problem of autonomous navigation for UAV inspection remains challenging as it requires effectively navigating in close proximity to obstacles, while accounting for dynamic risk factors such as weather conditions, communication reliability, and battery autonomy. This paper introduces the MOAR path planner which addresses the complexities of evolving risks during missions. It offers real-time trajectory adaptation while concurrently optimizing safety, time, and energy. The planner employs a risk-aware cost function that integrates pre-computed cost maps, the new concepts of damage and insertion costs, and an adaptive speed planning framework. With that, the optimal path is searched in a graph using a discrete representation of the state and action spaces. The method is evaluated through simulations and real-world flight tests. The results show the capability to generate real-time trajectories spanning a broad range of evaluation metrics: around 90% of the range occupied by popular algorithms. The proposed framework contributes by enabling UAVs to navigate more autonomously and reliably in critical missions.",
-      "url": "https://arxiv.org/abs/2606.30575v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.30575v1",
-      "published": "2026-06-29T17:18:02Z",
-      "updated": "2026-06-29T17:18:02Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2606.30552v1",
-      "title": "Training Vision-Language-Action Models with Dense Embodied Chain-of-Thought Supervision",
-      "authors": [
-        "Haoyang Li",
-        "Guanlin Li",
-        "Youhe Feng",
-        "Chen Zhao",
-        "Zhuoran Wang",
-        "Yang Li",
-        "Qizhe Wei",
-        "Shifeng Bao",
-        "Haitao Shen",
-        "Yihan Zhao",
-        "Tong Yang",
-        "Jing Zhang"
-      ],
-      "abstract": "Cross-embodiment transfer in vision-language-action (VLA) models remains challenging because low-level state and action spaces differ fundamentally across robot platforms. We observe that the high-level cognitive process underlying manipulation, including scene perception, object identification, task planning, and sub-task decomposition, is largely shared across embodiments. Based on this observation, we present ZR-0, a 2.6 billion parameter end-to-end VLA model that uses dense Embodied Chain-of-Thought (ECoT) supervision to align cross-embodiment representations within the vision-language model (VLM). ZR-0 adopts a dual-stream architecture: a pre-trained VLM (System 2) generates structured ECoT reasoning during training, while a Diffusion Transformer-based action expert (System 1) produces continuous action chunks via flow matching. The two components are coupled through cross-attention, with an attention mask that restricts the action expert to input prompt features only, enabling ECoT generation to be entirely skipped at inference without any performance loss. ZR-0 is pre-trained on ProcCorpus-60M, a large-scale dataset comprising approximately 60 million frames (approximately 1,000 hours) from over 400K trajectories, with dense ECoT annotations covering 96.8% of all frames. We evaluate ZR-0 on three simulation benchmarks spanning single-arm (LIBERO), bimanual (RoboTwin 2.0), and humanoid (RoboCasa GR-1 Tabletop) embodiments, as well as real-world experiments on the xArm platform, demonstrating strong performance across all settings. Code and model checkpoints are available at https://github.com/RUCKBReasoning/ZR-0.",
-      "url": "https://arxiv.org/abs/2606.30552v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.30552v1",
-      "published": "2026-06-29T16:48:48Z",
-      "updated": "2026-06-29T16:48:48Z",
-      "categories": [
-        "cs.RO",
-        "cs.CV"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2606.30537v1",
-      "title": "Learning from Mistakes: Rollout-Retrieval Lifelong Policy Learning for Autonomous Driving",
-      "authors": [
-        "Cheng Gong",
-        "Haoyang Wang",
-        "Chao Lu",
-        "Zirui Li",
-        "Jianwei Gong"
-      ],
-      "abstract": "Autonomous driving policies should be able to improve continually as deployment exposes them to increasingly diverse and long-tail traffic situations. However, most learning-based policies are trained or fine-tuned on expert demonstrations and then rely largely on generalization to handle challenging closed-loop scenarios, lacking an explicit mechanism to correct and retain the mistakes exposed in these scenarios. This paper studies autonomous driving policy improvement from a lifelong learning perspective: Can a pretrained policy improve continually by accumulating corrective knowledge derived from its own mistakes, while retaining previously acquired driving competence? To answer this question, we propose Rollout-Retrieval Lifelong Policy Learning (R$^2$LPL), a policy learning framework that retrieves corrective targets from recoverable policy-induced mistakes and retains the resulting knowledge through lifelong policy learning. R^2LPL addresses a key bottleneck in continual policy improvement: closed-loop mistakes reveal where the policy is weak, but do not directly specify what the policy should learn. By filtering recoverable mistake-related states and retrieving feasible corrective targets, R$^2$LPL turns sparse failure evidence into compact supervised knowledge for stable and sample-efficient policy improvement. We evaluate R$^2$LPL on large-scale closed-loop nuPlan benchmarks. With only a few rollout and continual-learning cycles, R$^2$LPL elevates a learning-based planner with moderate initial performance to state-of-the-art performance across the evaluated benchmarks, especially on the challenging and long-tail Test14-hard split. These results demonstrate the effectiveness of R$^2$LPL in converting recoverable closed-loop mistakes into corrective knowledge for sustained policy improvement.",
-      "url": "https://arxiv.org/abs/2606.30537v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.30537v1",
-      "published": "2026-06-29T16:37:50Z",
-      "updated": "2026-06-29T16:37:50Z",
+      "abstract": "Reward design remains a central bottleneck for autonomous robot policy improvement, especially in long-horizon manipulation tasks where sparse success labels provide too little signal and binary preferences collapse many competing notions of quality into one ambiguous signal. We introduce Freeform Preference Learning (FPL), a method for learning robot policies from freeform human preferences. Rather than asking annotators which of two trajectories is better overall, FPL lets them define natural-language preference axes, such as speed, safety, quality of placement, or carefulness, and provide pairwise preferences along each axis. These annotations are used to learn a language-conditioned reward model that maps a trajectory and preference label to an axis-specific reward. We use this model to train a reward-conditioned policy that optimizes across the multiple human-specified dimensions. Across four real-world and two simulated long-horizon manipulation tasks, FPL improves over sparse-reward and binary-preference methods by 38 percentage points. Beyond improved performance, FPL learns dense progress signals without explicit subtask segmentation, shows compositionality of behavior not present in the data, and allows users to steer the policy towards different behaviors at test time without retraining. Blog post with videos available at https://freeform-pl.github.io/fpl.website/",
+      "url": "https://arxiv.org/abs/2606.32027v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.32027v1",
+      "published": "2026-06-30T17:54:02Z",
+      "updated": "2026-06-30T17:54:02Z",
       "categories": [
         "cs.RO",
         "cs.AI",
-        "cs.CV",
         "cs.LG"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2606.30476v1",
-      "title": "PS-MOT: Cultivating Instance Awareness from Point Seeds for Multi-Object Tracking",
+      "id": "2606.32010v1",
+      "title": "Dual-Regime Absorbing Markov Chain Theory in Remote Estimation: Age-Minimizing Push Policies",
       "authors": [
-        "Kai Luo",
-        "Fei Teng",
-        "Mengfei Duan",
-        "Wanjun Jia",
-        "Xu Wang",
-        "Hao Shi",
-        "Kunyu Peng",
-        "Zhiyong Li",
-        "Kailun Yang"
+        "Ismail Cosandal",
+        "Sennur Ulukus",
+        "Nail Akar"
       ],
-      "abstract": "We introduce Point-supervised Multi-Object Tracking (PS-MOT) as a cost-effective alternative to traditional bounding box supervision, shifting the focus from spatial fitting to topological center-driven representation. However, PS-MOT faces challenges, e.g., spatial ambiguity and identity drift due to the lack of explicit geometric structure and scale constraints. To address these, we propose PS-Track, a hierarchical pipeline transitioning from points to instances across data, model, and loss levels. At the data level, we introduce Temporal-Feedback Prompting (TFP) to evolve points into temporally consistent pseudo-labels using negative spatial cues and motion priors. At the model level, we design the Point-Excited Wavelet Attention (PEWA) module, which leverages semantic correlations to activate high-frequency components, ``hallucinating'' object boundaries. At the loss level, Uncertainty-Guided Gaussian Learning (UGL) models pseudo-labels as probabilistic distributions, dynamically calibrating supervision intensity. Experiments on DanceTrack, EmboTrack, SportsMOT, and JRDB demonstrate that PS-Track provides a feasible and effective point-supervised alternative across diverse tracking scenarios, establishing a new state-of-the-art for point-supervised tracking. The source code is available at https://github.com/xifen523/PS-MOT.",
-      "url": "https://arxiv.org/abs/2606.30476v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.30476v1",
-      "published": "2026-06-29T15:36:00Z",
-      "updated": "2026-06-29T15:36:00Z",
+      "abstract": "For a remote estimation system, we study the optimization of age of incorrect information (AoII), which is a recently proposed semantic-aware information freshness metric. In particular, we assume an information source that observes a discrete-time finite-state Markov chain (DTMC), and occasionally transmits status update packets to a remote monitor which is tasked with remote estimation of the source. For the forward channel from the source to the monitor, we assume the channel delay to be modeled by a general discrete-time phase-type (DPH) distribution, whereas the reverse channel from the monitor to the source is assumed to be perfect, ensuring that the source has perfect information on the AoII and the remote estimate at the monitor, at all times. Push-based transmissions are initiated when AoII exceeds a threshold depending on the current estimation value, i.e., multi-threshold policy. In this very general setting, our goal is to minimize a weighted sum of the time average of a polynomial function of AoII, depending on the remote estimate, and energy consumption from transmissions. We formulate the problem as a semi-Markov decision process (SMDP) with the same state-space of the original DTMC to obtain the optimal multi-threshold policy, whereas the parameters of the SMDP are obtained by using a novel stochastic tool called dual-regime absorbing Markov chain (DR-AMC), and its corresponding absorption time distribution named as dual-regime DPH (DR-DPH). The proposed method is validated with numerical examples using comparisons against other policies obtained by exhaustive search, and also various benchmark policies.",
+      "url": "https://arxiv.org/abs/2606.32010v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.32010v1",
+      "published": "2026-06-30T17:44:23Z",
+      "updated": "2026-06-30T17:44:23Z",
       "categories": [
-        "cs.CV",
-        "cs.RO",
-        "eess.IV"
+        "cs.IT",
+        "cs.NI",
+        "eess.SP",
+        "eess.SY"
       ],
-      "primary_category": "cs.CV"
+      "primary_category": "cs.IT"
     },
     {
-      "id": "2606.30474v1",
-      "title": "Grasp-Oriented Non-Prehensile Manipulation via Learning a Graspability Field",
+      "id": "2606.32009v1",
+      "title": "Human-as-Humanoid: Enabling Zero-Shot Humanoid Learning from Ego-Exo Human Videos with Human-Aligned Embodiments",
       "authors": [
-        "Licheng Zhong",
-        "Gim Hee Lee"
+        "Xiaopeng Lin",
+        "Ruoqi Yang",
+        "Shijie Lian",
+        "Zhaolong Shen",
+        "Bin Yu",
+        "Changti Wu",
+        "Haibao Liu",
+        "Yuxiang Zhang",
+        "Hong Li",
+        "Qiyuan Su",
+        "Haochen Liu",
+        "Xuguo He",
+        "Yukun Shi",
+        "Cong Huang",
+        "Zhirui Zhang",
+        "Bojun Cheng",
+        "Kai Chen"
       ],
-      "abstract": "Non-prehensile manipulation is often used as a preparatory step for robotic grasping, yet existing approaches typically require a predefined target object pose. In practice, however, objects admit multiple graspable configurations and the desired pose is not known in advance. We reformulate non-prehensile manipulation for grasping as optimizing an object centric graspability objective rather than reaching a specific pose. We construct a graspable set from synthesized grasps and define a graspability field that measures how suitable an object configuration is for successful grasp execution. The scalar measure provides a dense learning signal for reinforcement learning and determines when to terminate manipulation. This yields a closed-loop manipulation-to-grasp pipeline driven by a single policy. Experiments in simulation and on a real robot show that the policy reliably reconfigures objects into graspable states and transitions to grasping without external planners or manually specified stopping conditions. The predicted graspability distance correlates with real world grasp success, which indicates that the learned representation captures grasp feasibility of object configurations.",
-      "url": "https://arxiv.org/abs/2606.30474v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.30474v1",
-      "published": "2026-06-29T15:33:27Z",
-      "updated": "2026-06-29T15:33:27Z",
+      "abstract": "Vision-language-action (VLA) models across robot embodiments require high-quality observation--action supervision to learn deployable action distributions, yet scaling such robot data remains difficult, especially for high-DoF humanoids. Teleoperation provides controller-aligned supervision, while human egocentric videos capture diverse bimanual manipulation but do not directly provide executable robot actions. We introduce Human-as-Humanoid, a human-to-humanoid supervision framework that enables near-real-time human-centric action generation, making human demonstrations usable for high-DoF humanoid VLA training by jointly aligning the robot embodiment, the sensing setup, and the action-label interface. Built on PrimeU, a human-aligned 60-DoF upper-body humanoid, Human-as-Humanoid uses synchronized ego-exo videos to pair deployment-aligned egocentric observations with exocentric motion recovery, retargets the recovered human motion through staged Inverse Kinematics (IK) into controller-aligned 60-DoF action chunks, and trains the VLA model with Forward Kinematics (FK)-aware supervision to preserve wrist and fingertip task-space geometry. This converts large-scale human demonstrations from visual observations into executable observation--action supervision for the target humanoid. Experiments validate the conversion chain at the motion-recovery, robot-action-space, and real-robot deployment levels. Human-as-Humanoid yields a 4.8--7.2x raw demonstration-throughput gain over humanoid teleoperation in our data-collection analysis, and on several downstream tasks, policies post-trained only with the converted human labels generalize to real-robot deployment without target-task robot demonstrations. The official project website is available at https://zgc-embodyai.github.io/Human-as-Humanoid.",
+      "url": "https://arxiv.org/abs/2606.32009v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.32009v1",
+      "published": "2026-06-30T17:44:16Z",
+      "updated": "2026-06-30T17:44:16Z",
       "categories": [
         "cs.RO"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2606.30457v1",
-      "title": "Behavior Prompting Policy: Demonstrations as Prompts for Manipulation",
+      "id": "2606.32003v1",
+      "title": "On the Comparison of Reinforcement Learning and Adaptive Control for Linear Systems under Packet Loss and Uncertainty",
       "authors": [
-        "Austin Patel",
-        "Ben Pekarek",
-        "Joel Enrique Castro Hernandez",
-        "Shuran Song"
+        "Moh Kamalul Wafi"
       ],
-      "abstract": "We study behavior prompting, a paradigm that enables robots to perform new tasks at inference time given a single human demonstration, which we call a behavior prompt. To enable this capability, we present contributions in algorithm, data, and evaluation. For algorithm, we introduce Behavior Prompting Policy (BPP), an in-context visuomotor architecture that translates the behavior prompt and the current observation into robot actions. For data, we identify that task diversity is the primary driver of the prompting capability and introduce iPhUMI, a handheld manipulation interface for collecting diverse training data. For evaluation, we introduce DrawAnything and LIBERO-Gen to evaluate test-time adaptation to unseen drawing and tabletop manipulation tasks. We also demonstrate that iPhUMI serves as a practical interface for specifying behavior prompts at test time, enabling a human to command a robot via a single demonstration to complete known tasks or to define new robot capabilities. Altogether, behavior prompting provides a flexible and scalable way to teach robots new skills without the need for expensive fine-tuning. Our project website is located at https://behavior-prompting.github.io/ .",
-      "url": "https://arxiv.org/abs/2606.30457v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.30457v1",
-      "published": "2026-06-29T15:23:44Z",
-      "updated": "2026-06-29T15:23:44Z",
+      "abstract": "This paper presents a comparative study between Adaptive Quantized Control (AQC) and Deep Deterministic Policy Gradient (DDPG) reinforcement learning for uncertain linear systems with input quantization over communication channels subject to packet loss. The considered setting also includes dynamic switching from a nominal unstable system to a more unstable one during operation. The AQC is designed for unknown system dynamics using acknowledgment messages to compensate for packet losses, whereas the DDPG controller is trained using the nominal system model without acknowledgment messages. Numerical results show that the DDPG controller achieves faster transient responses and improved damping within its training environment. However, under model uncertainty, packet loss, and dynamic switching, the AQC consistently demonstrates superior robustness owing to its rigorous Lyapunov stability guarantees. These results highlight the trade-off between data-driven performance and model-based robustness, and provide insight into the applicability of reinforcement learning and adaptive control for networked uncertain systems.",
+      "url": "https://arxiv.org/abs/2606.32003v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.32003v1",
+      "published": "2026-06-30T17:36:20Z",
+      "updated": "2026-06-30T17:36:20Z",
+      "categories": [
+        "eess.SY"
+      ],
+      "primary_category": "eess.SY"
+    },
+    {
+      "id": "2606.31993v1",
+      "title": "OopsieVerse: A Safety Benchmark with Damage-Aware Simulation for Robot Manipulation",
+      "authors": [
+        "Arnav Balaji",
+        "Arpit Bahety",
+        "Sriniket Ambatipudi",
+        "Daniel Lam",
+        "Junhong Xu",
+        "Roberto Mart\u00edn-Mart\u00edn"
+      ],
+      "abstract": "While robotic manipulation capabilities have advanced rapidly, physical safety remains a major barrier to deploying household robots: task success is insufficient if the robot damages itself or its surroundings. Simulation offers a harm-free alternative to costly and dangerous real-world training and evaluation, yet existing simulators lack general mechanisms to detect, quantify, and represent damage. To address this gap, we introduce OOPSIEVERSE, a unified simulation framework and benchmark for damage-aware household manipulation. OOPSIEVERSE provides damage as an explicit, physically-grounded, and taskagnostic signal by converting sources such as contact forces, temperature changes, and liquid interactions into corresponding mechanical, thermal or fluid damage. OOPSIEVERSE comprises two core elements: (1) DAMAGESIM, a simulator-agnostic framework for detecting and quantifying damage during navigation and manipulation, and (2) a suite of household tasks designed to evaluate common damage modes and distinguish between task completion and safe execution. We demonstrate the generality of our framework by instantiating DAMAGESIM in two simulators with different physics backends, OmniGibson (Nvidia Omniverse) and RoboCasa (MuJoCo). We further showcase the utility of OOPSIEVERSE across multiple use cases, including (1) guiding safer demonstration collection via real-time damage feedback, (2) learning safer manipulation policies through damage-conditioned imitation learning and reinforcement learning, (3) benchmarking the safety of state-of-the-art Vision Language Action policies, and (4) improving real-world safety of sim-to-real transferred policies. Together, our results highlight the potential of OOPSIEVERSE as an open-source foundation for systematic, scalable research on safe robot manipulation. For code and more information, please refer to https://robin-lab.cs.utexas.edu/oopsieverse/",
+      "url": "https://arxiv.org/abs/2606.31993v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.31993v1",
+      "published": "2026-06-30T17:30:05Z",
+      "updated": "2026-06-30T17:30:05Z",
       "categories": [
         "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2606.31958v1",
+      "title": "Adapting Generalist Robot Policies with Semantic Reinforcement Learning",
+      "authors": [
+        "Jagdeep Singh Bhatia",
+        "Andrew Wagenmaker",
+        "William Chen",
+        "Sergey Levine"
+      ],
+      "abstract": "Generalist robot policies learn a diverse repertoire of behaviors from large-scale pretraining. In principle, this makes them excellent priors for downstream adaptation via reinforcement learning (RL). In practice, however, standard RL methods leveraging this prior optimize directly over robot actions, requiring the base policy's action distribution to be close to that of a performant policy from the start. This assumption breaks down for complex or long-horizon tasks that fall outside the pretraining distribution. Our key insight is that, for sufficiently expressive generalist policies, language prompts are an effective alternative space for learning to solve such tasks: modulating language inputs elicits skills already within the policy's repertoire, which can be composed to solve tasks beyond its zero-shot capabilities. We propose Semantic Action Reinforcement Learning (SARL), which learns to optimize this prompt space through online interaction, treating the generalist policy as a controllable skill prior. Importantly, leveraging pretrained skills rather than learning new ones from scratch yields structured, semantically meaningful exploration and highly efficient online improvement, and learning to modulate prompts through experience grounds them in induced real-world behaviors for robust task-solving. Across real-world settings and simulated benchmarks, we show SARL unlocks fundamentally new capabilities -- adapting VLA behavior to solve complex, long-horizon tasks -- and significantly outperforms existing approaches for improving robot behavior in deployment.",
+      "url": "https://arxiv.org/abs/2606.31958v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.31958v1",
+      "published": "2026-06-30T17:00:33Z",
+      "updated": "2026-06-30T17:00:33Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2606.31948v1",
+      "title": "RRT-Rope: A deterministic shortening approach for fast near-optimal path planning in large-scale uncluttered 3D environments",
+      "authors": [
+        "Louis Petit",
+        "Alexis Lussier Desbiens"
+      ],
+      "abstract": "Many path planning algorithms have been introduced so far, but most are costly, in path cost and in processing time, in large-scale uncluttered 3D environments such as underground mining stopes explored by an unmanned aerial vehicle (UAV). Rapidly-exploring Random Tree (RRT) algorithms are popular because of their probabilistic completeness and rapidity in finding a feasible path in single-query problems. Many of the algorithms (e.g. Informed RRT*, RRT#) developed to improve RRT need considerable time to converge in large environments. Shortcutting an RRT is an old idea that has been proven to outperform RRT variants. This paper introduces a new method, RRT-Rope, that aims at finding a near-optimal solution in a drastically shorter amount of time. The proposed approach benefits from fast computation of a feasible path with an altered version of RRT-connect, and post-processes it quickly with a deterministic shortcutting technique, taking advantage of intermediate nodes added to each branch of the tree. This paper presents simulations and statistics carried out to show the efficiency of RRT-Rope, which gives better results in terms of path cost and computation time than other popular RRT variations and shortening techniques in all our simulation environments, and is up to 70% faster than the next best algorithm in a representative stope.",
+      "url": "https://arxiv.org/abs/2606.31948v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.31948v1",
+      "published": "2026-06-30T16:54:00Z",
+      "updated": "2026-06-30T16:54:00Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2606.31941v1",
+      "title": "LeCropFollow: Latent Space Planning for Navigation in Unstructured Crop Fields",
+      "authors": [
+        "Felipe Tommaselli",
+        "Francisco Affonso",
+        "Arthur Pompeu",
+        "Gianluca Capezzuto",
+        "Arun Narenthiran Sivakumar",
+        "Girish Chowdhary",
+        "Marcelo Becker"
+      ],
+      "abstract": "Unstructured navigational features, such as irregular planting or discontinuities, remain the primary failure mode for under-canopy agricultural robots. Existing geometric approaches often fail in these scenarios because they compress high-dimensional visual data into deterministic spatial references, effectively discarding the uncertainty and semantic context required to navigate ambiguous terrain. To address this, we present LeCropFollow, a visual navigation framework that bypasses explicit geometric modeling in favor of a learned latent representation. By integrating a self-supervised semantic heatmap extractor with TD-MPC2, a Model-Based Reinforcement Learning (MBRL) planner, our system optimizes trajectories directly within a latent manifold. The framework operates over the uncompressed heatmap signal, preserving the semantic context that geometric reductions discard. We demonstrate that this representational shift enables zero-shot transfer from simplified simulation to the physical world without fine-tuning. Extensive field experiments in late-stage corn fields show that LeCropFollow matches state-of-the-art baselines in unstructured rows but significantly outperforms them in plantation gaps, achieving a 2.4x reduction in semantic failures compared to keypoint-based methods. These results suggest that latent planning offers a robust alternative to geometric estimation for operations in heterogeneous agricultural environments. Code, models, and data available: https://felipe-tommaselli.github.io/lecropfollow .",
+      "url": "https://arxiv.org/abs/2606.31941v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.31941v1",
+      "published": "2026-06-30T16:47:08Z",
+      "updated": "2026-06-30T16:47:08Z",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2606.31919v1",
+      "title": "MVP-Nav: Multi-layer Value Map Planner Navigator",
+      "authors": [
+        "Wenyuan Xie",
+        "Shaokai Wu",
+        "Yijin Zhou",
+        "Yanbiao Ji",
+        "Guodong Zhang",
+        "Bayram Bayramli",
+        "Qiuchang Li",
+        "Xunchu Zhou",
+        "Yue Ding",
+        "Hongtao Lu"
+      ],
+      "abstract": "Zero-shot Object Goal Navigation (ZSON) with RGB-only perception poses a fundamental challenge for embodied agents, as the absence of explicit depth information introduces severe physical uncertainty and semantic-physical misalignment. Existing approaches either rely on high-level semantic reasoning without geometric grounding or learn end-to-end policies that lack explicit physical constraints, often resulting in semantically plausible but physically unsafe behaviors. In this paper, we propose MVP-Nav, a physical-aware RGB-only navigation framework that aligns perception, planning, and control with the real 3D world. MVP-Nav reconstructs explicit physical occupancy from monocular observations by leveraging 3D foundation models to project 2D semantic instances into 3D oriented bounding boxes, forming a global spatial semantic representation. To unify high-level semantic reasoning and low-level physical constraints, we introduce a Multi-layer Value Map (MVM) that integrates semantic priorities and reconstructed geometry into a shared cost space, enabling physically grounded geometric planning. Extensive experiments on zero-shot object navigation benchmarks demonstrate that MVP-Nav significantly outperforms existing depth-free methods, achieving state-of-the-art performance and validating that structured physical priors can effectively compensate for the absence of active depth sensors.",
+      "url": "https://arxiv.org/abs/2606.31919v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.31919v1",
+      "published": "2026-06-30T16:25:47Z",
+      "updated": "2026-06-30T16:25:47Z",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV"
       ],
       "primary_category": "cs.RO"
     }

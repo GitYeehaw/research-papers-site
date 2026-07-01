@@ -2,281 +2,227 @@
   "category": "cs",
   "name": "CS Research",
   "description": "Computer Science \u2014 AI, Machine Learning, NLP, Computer Vision",
-  "scraped_at": "2026-06-30T11:16:00.993808+00:00",
+  "scraped_at": "2026-07-01T11:30:29.356300+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2606.30645v1",
-      "title": "VLK: Learning Humanoid Loco-Manipulation from Synthetic Interactions in Reconstructed Scenes",
+      "id": "2606.32040v1",
+      "title": "FaceMoE: Mixture of Experts for Low-Resolution Face Recognition",
       "authors": [
-        "Yen-Jen Wang",
-        "Jiaman Li",
-        "Sirui Chen",
-        "Takara E. Truong",
-        "Pei Xu",
-        "Pieter Abbeel",
-        "Rocky Duan",
-        "Koushil Sreenath",
-        "Angjoo Kanazawa",
-        "Carmelo Sferrazza",
-        "Guanya Shi",
-        "Karen Liu"
+        "Kartik Narayan",
+        "Vishal M. Patel"
       ],
-      "abstract": "Perception-based humanoid loco-manipulation requires connecting egocentric observations and task instructions to whole-body motion. Learning this mapping requires synchronized egocentric images, language commands, and robot-compatible kinematic trajectories, yet no existing data source provides this complete tuple at scale. We address this bottleneck by generating vision-language-kinematics (VLK) supervision synthetically in reconstructed scenes. Our pipeline leverages 3D Gaussian Splatting to reconstruct metric-scale indoor environments, synthesizes navigation and object-interaction trajectories using privileged scene information, and renders paired egocentric observations after the fact. We produce 48,000 paired trajectories with no human intervention and train a VLK policy that predicts short-horizon whole-body kinematic trajectories. A whole-body tracker converts these predictions into actions on the physical humanoid. We evaluate on the physical Unitree G1 performing navigation and single-object transport, demonstrating that synthesized interactions in reconstructed scenes provide effective supervision for sim-to-real perception-based humanoid loco-manipulation. Project Website: https://vision-language-kinematics.github.io/",
-      "url": "https://arxiv.org/abs/2606.30645v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.30645v1",
-      "published": "2026-06-29T17:59:55Z",
-      "updated": "2026-06-29T17:59:55Z",
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.GR",
-        "eess.SY"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2606.30642v1",
-      "title": "LeVo 2: Stable and Melodious Song Generation via Hierarchical Representation Modeling and Progressive Post-Training",
-      "authors": [
-        "Shun Lei",
-        "Huaicheng Zhang",
-        "Dapeng Wu",
-        "Yaoxun Xu",
-        "Lishi Zuo",
-        "Wei Tan",
-        "Hangting Chen",
-        "Guangzheng Li",
-        "Jianwei Yu",
-        "Zhiyong Wu",
-        "Dong Yu"
-      ],
-      "abstract": "Full-length song generation must preserve coherence and musicality, render detailed vocal and accompaniment acoustics, and follow lyrics and prompts. Existing language model-based systems face a structural trade-off: mixed-token modeling preserves vocal-instrument coordination but obscures track-specific details, whereas dual-track prediction improves acoustics but requires longer sequences and weakens global planning. We present LeVo 2, a hybrid LLM-Diffusion framework for controllable full-length song generation. LeVo 2 formulates this trade-off as hierarchical modeling: LeLM first predicts mixed tokens for semantic planning, then predicts vocal and accompaniment tokens in parallel for track-specific refinement, while a diffusion-based Music Codec reconstructs full-length waveforms. A central contribution of this extended version is an aesthetics-guided training schedule for alignment. During pre-training, an automated music aesthetic evaluation framework assigns musicality-tier conditions to large-scale data, providing musicality priors before preference alignment. Progressive post-training applies SFT, large-scale offline DPO, and closed-loop semi-online DPO to separately improve generation quality, controllability, and musicality. Modular extension then trains the Track-Specific LM for acoustic refinement while preserving the aligned semantic planner. This schedule separates musicality learning, controllability alignment, and acoustic refinement, mitigating optimization conflict and the limitations of static offline preference pairs. Expert listening tests and objective evaluations show that LeVo 2 outperforms open-source baselines across six subjective dimensions, and approaches leading commercial systems on several listening metrics. Ablations validate the effects of the training strategy, aesthetics guidance, scaling, and hierarchical architecture.",
-      "url": "https://arxiv.org/abs/2606.30642v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.30642v1",
-      "published": "2026-06-29T17:59:20Z",
-      "updated": "2026-06-29T17:59:20Z",
-      "categories": [
-        "cs.SD",
-        "cs.AI"
-      ],
-      "primary_category": "cs.SD"
-    },
-    {
-      "id": "2606.30639v1",
-      "title": "Self-Evolving World Models for LLM Agent Planning",
-      "authors": [
-        "Xuan Zhang",
-        "Wenxuan Zhang",
-        "See-Kiong Ng",
-        "Yang Deng"
-      ],
-      "abstract": "World models offer a principled way to equip long-horizon LLM agents with foresight: predictions of action consequences before execution. However, unreliable foresight can be ignored, misused, or even degrade downstream decision-making. In this paper, we introduce WorldEvolver, a self-evolving world model framework that revises its deployment-time context while keeping the downstream agent and all model parameters frozen. WorldEvolver integrates three modules: (i) Episodic Memory, which exploits real action transitions through retrieval-based simulation; (ii) Semantic Memory, which extracts persistent heuristic rules from prediction-observation mismatches; and (iii) Selective Foresight, which filters low-confidence predictions before integrating them into agent reasoning context. We evaluate WorldEvolver on ALFWorld and ScienceWorld, measuring world model prediction accuracy on Word2World and downstream agent success rate on AgentBoard. Extensive experiments show that WorldEvolver achieves the highest prediction accuracy across three backbones and leads other world model baselines on downstream agent success rate, demonstrating that test-time memory revision enhances both predictive fidelity and planning performance.",
-      "url": "https://arxiv.org/abs/2606.30639v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.30639v1",
-      "published": "2026-06-29T17:58:43Z",
-      "updated": "2026-06-29T17:58:43Z",
-      "categories": [
-        "cs.AI",
-        "cs.CL"
-      ],
-      "primary_category": "cs.AI"
-    },
-    {
-      "id": "2606.30638v1",
-      "title": "Open-Vocabulary and Referring Segmentation for 3D Gaussians Using 2D Detectors",
-      "authors": [
-        "Jameel Hassan",
-        "Yasiru Ranasinghe",
-        "Vishal Patel"
-      ],
-      "abstract": "3D Gaussian Splatting (3DGS) has emerged at the forefront of 3D scene reconstruction. Extending 3DGS with language-driven, open-vocabulary understanding has gained significant attention for real-world applications such as embodied AI. Recent methods achieve this by learning an instance feature attribute and assigning semantics by distilling high-dimensional Contrastive Language-Image Pretraining (CLIP) features directly into the scene representation. However, the instance grouping mechanisms of these methods either require a predefined number of instances or suffer from noise in their bottom-up grouping strategies. Furthermore, the reliance on CLIP restricts semantic understanding to simple noun phrases, preventing complex spatial reasoning and referential expression grounding. We present GaussDet, a method that circumvents the need for dense CLIP features by leveraging discrete, open-vocabulary 2D object detectors with referring expression capabilities. We learn instance features for individual Gaussians to decompose the scene into 3D instance groups. By rendering these groups and aggregating semantic votes from multi-view 2D detections, we generate a robust View-Aggregated Semantic Label Distribution (VASD) for each 3D instance. This view-aggregation strategy acts as a strong regularizer, attenuating spurious labels caused by low-quality instance grouping. Our approach enables a straightforward, zero-shot extension from simple language queries to complex referential grounding. Extensive evaluations across two key tasks -- open-vocabulary segmentation (LeRF-OVS, ScanNet) and referring expression grounding (Ref-LeRF) -- demonstrate that GaussDet achieves consistent improvements over existing methods. Most notably, we achieve a substantial 16.7% mIoU improvement in referential grounding within a strict zero-shot setting.",
-      "url": "https://arxiv.org/abs/2606.30638v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.30638v1",
-      "published": "2026-06-29T17:58:41Z",
-      "updated": "2026-06-29T17:58:41Z",
+      "abstract": "Low-resolution face recognition (LR-FR) remains a challenging task due to poor feature extraction and aggregation, as probe images often contain limited identity information resulting from extreme degradations such as blur, occlusion, and low contrast. Additionally, the domain gap between high-resolution (HR) gallery images and low-resolution (LR) probe images poses a significant challenge. A single feature encoder struggles to generalize effectively across both domains when fine-tuned on an LR dataset, and this issue is further magnified by catastrophic forgetting. To address these challenges, we propose FaceMoE, an effective adaptation of Mixture of Experts (MoE) transfomer architecture for low-resolution face-recognition . Specifically, we introduce multiple specialized feed-forward network (FFN) experts and incorporate a top-k router, which dynamically assigns tokens to appropriate experts. This design emergently promotes specialization across experts for different semantic regions of the face, which enables FaceMoE to perform resolution-aware feature extraction. Moreover, the top-k router facilitates sparse expert activation, enabling the model to preserve pretrained knowledge when finetuned on a LR dataset, while increasing model capacity without proportional computational overhead. FaceMoE is trained with a combined face recognition loss, router z-loss, and load balancing loss to ensure expert specialization and stable training. To the best of our knowledge, this is the first work leveraging MoE for LR-FR. Extensive experiments across eleven datasets, spanning HR, mixed-quality, and LR benchmarks, demonstrate that FaceMoE significantly outperforms state-of-the-art methods. Code: https://github.com/Kartik-3004/FaceMoE",
+      "url": "https://arxiv.org/abs/2606.32040v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.32040v1",
+      "published": "2026-06-30T17:59:57Z",
+      "updated": "2026-06-30T17:59:57Z",
       "categories": [
         "cs.CV"
       ],
       "primary_category": "cs.CV"
     },
     {
-      "id": "2606.30634v1",
-      "title": "One-Step Gradient Delay is Not a Barrier for Large-Scale Asynchronous Pipeline Parallel LLM Pretraining",
+      "id": "2606.32039v1",
+      "title": "GEAR: Guided End-to-End AutoRegression for Image Synthesis",
       "authors": [
-        "Philip Zmushko",
-        "Egor Petrov",
-        "Nursultan Abdullaev",
-        "Mikhail Khrushchev",
-        "Samuel Horv\u00e1th"
+        "Bin Lin",
+        "Zheyuan Liu",
+        "Chenguo Lin",
+        "Sixiang Chen",
+        "Yunyang Ge",
+        "Yunlong Lin",
+        "Jianwei Zhang",
+        "Miles Yang",
+        "Zhao Zhong",
+        "Liefeng Bo",
+        "Li Yuan"
       ],
-      "abstract": "Modern large-scale LLM pretraining benefits from utilizing Pipeline Parallelism; however, synchronous implementations leave GPUs idle during pipeline bubbles, wasting computational resources. Asynchronous Pipeline Parallelism eliminates these bubbles, maximizing throughput at the cost of gradient staleness. Among asynchronous schedules, PipeDream-2BW is particularly appealing: unlike the original PipeDream schedule, it ensures a constant one-step gradient delay regardless of pipeline depth. However, its adoption remains limited due to the common belief that optimizing under staleness is fundamentally unstable. In this work, we challenge this assumption, demonstrating that degradation under one-step delay depends strongly on optimizer choice rather than being an intrinsic limitation. We provide the first comprehensive empirical analysis showing that while AdamW, the predominant optimizer at the time when PipeDream-2BW was introduced, indeed suffers from severe degradation, recent methods like Muon exhibit strong robustness under a one-step delay. We introduce an optimizer-agnostic Error Feedback-inspired correction to further mitigate delay effects. We provide supporting theoretical analysis demonstrating convergence for Muon with and without this correction. Extensive evaluation on models up to 10B parameters confirms that our strategies bridge the performance gap with synchronous training, highlighting the practical potential of asynchronous pipeline parallelism at scale.",
-      "url": "https://arxiv.org/abs/2606.30634v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.30634v1",
-      "published": "2026-06-29T17:57:50Z",
-      "updated": "2026-06-29T17:57:50Z",
+      "abstract": "Visual generative models are typically trained in two stages. A tokenizer is first trained for reconstruction and then frozen, after which a generator is trained on its discrete indices or continuous latents. This decoupling leaves the tokenizer unaware of what the generator finds easy to model. We present GEAR (Guided End-to-end AutoRegression), which trains a vector-quantized (VQ) tokenizer and an autoregressive (AR) generator jointly and end-to-end, guided by representation alignment. The key obstacle is that the VQ index fed to the AR model is non-differentiable, so gradients cannot reach the tokenizer, and a straight-through estimator collapses. GEAR resolves this with a dual read-out of the codebook assignment. A hard, one-hot branch trains the AR with next-token prediction, while a differentiable soft branch carries a representation-alignment loss that flows back to guide only the tokenizer. The AR model thereby steers its tokenizer toward an index distribution it can predict more easily. This shifts the alignment burden from the tokenizer to the AR: the tokenizer's own features become less DINOv2-like while the AR's become more so, the opposite of diffusion-side recipes that make the latent itself semantic. GEAR speeds up ImageNet gFID convergence by up to 10x relative to the strong LlamaGen-REPA baseline, learns markedly better patch-level and spatially-coherent features, and generalizes across quantizers (VQVAE, LFQ, IBQ) and to text-to-image generation.",
+      "url": "https://arxiv.org/abs/2606.32039v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.32039v1",
+      "published": "2026-06-30T17:59:57Z",
+      "updated": "2026-06-30T17:59:57Z",
       "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2606.32038v1",
+      "title": "Introspective Coupling: Self-Explanation Training Tracks Behavioral Change Despite Fixed Supervision",
+      "authors": [
+        "Zifan Carl Guo",
+        "Laura Ruis",
+        "Jacob Andreas",
+        "Belinda Z. Li"
+      ],
+      "abstract": "When does training language models (LMs) to generate explanations of their predictions yield faithful introspection, rather than superficial imitation? We study LMs trained to explain which features of their inputs influenced their behavior, using models' counterfactual behavior on modified inputs as supervision. Surprisingly, we find that LMs trained on fixed counterfactual explanations derived from earlier checkpoints of themselves, or even from behaviorally similar models in different families, frequently produce explanations more faithful to their own current behaviors than to those of their training targets. This \"introspective\" coupling between LM explanations and behaviors occurs when training explanations remain sufficiently correlated with current behaviors over the course of training, even as behaviors themselves shift. We also show that introspective coupling tracks behavior shifts: when explanation training is provided concurrently with other post-training objectives, explanations track those shifts without requiring updated supervision. This phenomenon appears in multiple tasks, including sycophancy and refusal, and is robust to label noise. Overall, our results show that even fixed datasets of counterfactual explanations can provide scalable and generalizable post-training signal for introspection.",
+      "url": "https://arxiv.org/abs/2606.32038v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.32038v1",
+      "published": "2026-06-30T17:59:32Z",
+      "updated": "2026-06-30T17:59:32Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
         "cs.LG"
+      ],
+      "primary_category": "cs.CL"
+    },
+    {
+      "id": "2606.32036v1",
+      "title": "PointSplat: Compact Gaussian Splatting via Human-Centric Prediction",
+      "authors": [
+        "Yujie Guo",
+        "Yudong Jin",
+        "Lingteng Qiu",
+        "Zehong Shen",
+        "Zhen Xu",
+        "Jing Zhang",
+        "Xianchao Shen",
+        "Hujun Bao",
+        "Sida Peng",
+        "Xiaowei Zhou"
+      ],
+      "abstract": "Producing 3D human representations from input views on the fly is essential for immersive live streaming systems, where representation compactness is as critical as high fidelity given limited computational power and transmission bandwidth. Although recent feed-forward reconstruction methods achieve impressive quality through the view-centric prediction of 3D representations, they repeatedly encode the same subject content across multiple views, leading to significant inter-view redundancy. Our key insight is to perform predictions directly in 3D space, enabling the network to learn and produce a highly compact representation. To this end, we propose PointSplat, a novel human-centric approach that directly infers Gaussian primitives from an input point set. The proposed method first estimates a coarse geometric proxy and performs ray casting to prune redundant points and establish explicit 2D--3D correspondences. Subsequently, it employs a Point-Image Transformer to fuse appearance and geometry features, predicting Gaussian attributes in a single forward pass. This design restricts predictions to foreground regions of interest, substantially reducing the total number of Gaussians while improving novel-view rendering quality. Extensive experiments demonstrate that PointSplat achieves higher efficiency and quality while exhibiting strong robustness to variations in view count and image resolution across multiple datasets.",
+      "url": "https://arxiv.org/abs/2606.32036v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.32036v1",
+      "published": "2026-06-30T17:59:05Z",
+      "updated": "2026-06-30T17:59:05Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2606.32034v1",
+      "title": "QVal: Cheaply Evaluating Dense Supervision Signals for Long-Horizon LLM Agents",
+      "authors": [
+        "Sergio Hern\u00e1ndez-Guti\u00e9rrez",
+        "Matteo Merler",
+        "Ilze Amanda Auzina",
+        "Joschka Str\u00fcber",
+        "Ameya Prabhu",
+        "Matthias Bethge"
+      ],
+      "abstract": "LLM agents increasingly act over long horizons, where a single trajectory can contain hundreds or thousands of actions. In these settings, outcome-only rewards provide too sparse guidance, failing to inform the model about the goodness of intermediate actions. Dense supervision methods aim to solve this problem by scoring intermediate steps, from intrinsic confidence to self-distillation and embedding similarities. However, it is common practice to evaluate them by measuring the downstream performance of a training pipeline that integrates them. This is expensive, conflates supervision quality with training engineering confounders, and renders different methodological families requiring distinct training setups incomparable. As a result, dense supervision methods are rarely benchmarked on common ground. We introduce QVal, a training-free testbed for directly evaluating dense supervision signals. Given a state-action pair, QVal measures how well a method's score is Q-aligned: whether it orders actions according to the Q-values of a strong reference-policy. This lets us compare signals before any training run and separate signal quality from other engineering choices. We instantiate QVal as QVal-v1.0, benchmarking 21 dense supervision methods across four diverse environments and seven methodological families, with over 1.2K evaluation experiments across six open-weight model backbones. We find that simple prompting baselines consistently outperform recent dense supervision methods from the literature, and that performance clusters strongly by family. These findings hold across model sizes, environments, and observation modalities. QVal is designed to be easily extensible to new environments and methods, enabling researchers to iterate on dense supervision methods before any training run.",
+      "url": "https://arxiv.org/abs/2606.32034v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.32034v1",
+      "published": "2026-06-30T17:58:23Z",
+      "updated": "2026-06-30T17:58:23Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
       ],
       "primary_category": "cs.LG"
     },
     {
-      "id": "2606.30632v1",
-      "title": "GROW$^2$: Grounding Which and Where for Robot Tool Use",
+      "id": "2606.32033v1",
+      "title": "SpheRoPE: Zero-Shot Optimization-Free 360 Panorama Generation with Spherical RoPE",
       "authors": [
-        "Yuhong Deng",
-        "Yuyao Liu",
-        "David Hsu"
+        "Or Hirschorn",
+        "Aaron Olender",
+        "Eli Alshan",
+        "Ianir Ideses",
+        "Lior Fritz",
+        "Sagie Benaim"
       ],
-      "abstract": "Can the robot use a plate to cut a cake if no knife is available? Tool use greatly expands robot capabilities, but to use tools creatively beyond their intended functions, the robot faces the challenge of $\\textit{open-world affordance grounding}$: select an open-category object to act as a tool and localize its specific region of action. To this end, we introduce GROW$^2$ (GROunding Which and Where), which leverages object parts as a natural abstraction to split the grounding process hierarchically into semantic and geometric levels, thus bypassing the need for data-heavy, end-to-end training. Semantically, GROW$^2$ harnesses the commonsense reasoning of Vision-Language Models (VLMs) to parse a natural-language task instruction, select a suitable object as the tool, and identify task-relevant parts on the tool and the target object. Geometrically, vision foundation models then ground the selected parts into precise 3D regions from a single RGB-D image. Experiments on established benchmarks show that GROW$^2$ outperforms state-of-the-art baselines on affordance prediction benchmarks. Further, it achieves zero-shot generalization over open-category objects and outperforms baselines in both simulated and real-world robot tool use experiments.",
-      "url": "https://arxiv.org/abs/2606.30632v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.30632v1",
-      "published": "2026-06-29T17:56:53Z",
-      "updated": "2026-06-29T17:56:53Z",
+      "abstract": "We present a zero-shot, training-free and optimization-free framework for generating 360 panoramic images and videos by directly injecting spherical priors into pre-trained diffusion transformers. Existing methods either rely on costly fine-tuning on scarce panoramic data that limits generalization, or leverage multi-step optimization that incurs prohibitive inference latency. We observe that contemporary generative models natively exhibit some panoramic priors from large-scale training. However, these emergent capabilities are insufficient, as the models fundamentally fail to satisfy the rigorous topological constraints imposed by equirectangular projection (ERP). We introduce a zero-shot and optimization-free approach that resolves these constraints at inference time. Spherical RoPE replaces standard rotary position embeddings: low-frequency channels are re-parameterized as 3D Cartesian coordinates to natively encode the spherical manifold, while high-frequency channels are harmonically quantized to enforce exact periodicity. Coupled with complementary Semantic Distortion classifier-free guidance (CFG) that explicitly steers geometry, we avoid retraining and inherit the full creative breadth of state-of-the-art models. Our approach generalizes across diverse backbones and 360 generation modalities. We demonstrate this across text-to-panorama using Flux.1, Flux.2, and LTX-Video backbones, achieving competitive performance against baselines, all while remaining training-free. Project page: https://orhir.github.io/SpheRoPE",
+      "url": "https://arxiv.org/abs/2606.32033v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.32033v1",
+      "published": "2026-06-30T17:57:04Z",
+      "updated": "2026-06-30T17:57:04Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2606.32032v1",
+      "title": "Reinforcement Learning with Metacognitive Feedback Elicits Faithful Uncertainty Expression in LLMs",
+      "authors": [
+        "Gabrielle Kaili-May Liu",
+        "Avi Caciularu",
+        "Gal Yona",
+        "Idan Szpektor",
+        "Arman Cohan"
+      ],
+      "abstract": "Metacognition is a critical component of intelligence that describes the ability to monitor and regulate one's own cognitive processes. Yet LLMs exhibit systemic deficiencies in key metacognitive faculties: they hallucinate with high confidence, fail to recognize knowledge boundaries, and misrepresent their internal uncertainty--undermining trustworthiness and reliability. Since monitoring task performance and adapting behavior accordingly are central to metacognition, we posit that models capable of accurately judging their own performance are better positioned to improve it. We operationalize this idea via two novel mechanisms: reinforcement learning with metacognitive feedback (RLMF), a paradigm to refine completion rankings during preference optimization based on the quality of a model's self-judgments of performance, and metacognitive data selection, which uses similar self-judgments to identify high-value training examples, outperforming naive active learning. We apply these innovations to the problem of faithful calibration (FC), a task that is itself fundamentally metacognitive: the goal is to align expressed with intrinsic uncertainty, difficult even for frontier LLMs. We adopt a two-stage, decoupled approach, first using these methods to calibrate the faithfulness of models' self-reported confidence scores, then mapping to natural, context-adaptable linguistic uncertainty via targeted output editing. Extensive experiments show RLMF achieves generalizable, state-of-the-art FC on diverse tasks while preserving accuracy. Further, RLMF surpasses standard RL by up to 63% while enhancing models' ability to assess and express their own capability limits. This positions RLMF as a promising paradigm to enhance LLM metacognition toward improved abilities and alignment, and suggests metacognitive performance as an effective RL signal to overcome limits of prior intrinsic feedback methods.",
+      "url": "https://arxiv.org/abs/2606.32032v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.32032v1",
+      "published": "2026-06-30T17:56:01Z",
+      "updated": "2026-06-30T17:56:01Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CL"
+    },
+    {
+      "id": "2606.32029v1",
+      "title": "When LLMs Read Tables Carelessly: Measuring and Reducing Data Referencing Errors",
+      "authors": [
+        "Yuqing Yang",
+        "Qi Zhu",
+        "Zhen Han",
+        "Boran Han",
+        "Zhengyuan Shen",
+        "Shuai Wang",
+        "Vassilis N. Ioannidis",
+        "Huzefa Rangwala"
+      ],
+      "abstract": "While large language models (LLMs) perform well on table tasks, they still make data referencing errors (DREs), i.e., incorrectly citing or omitting table values, despite understanding the table structure. Beyond final-answer accuracy, DREs directly compromise the correctness and reliability of intermediate reasoning steps. Yet prior studies have only offered limited, small-scale analyses. In this work, we present the first systematic evaluation of tabular data referencing errors across different models and tasks. Our results show that DREs occur across all tested models (1.7B to 20B parameters). Furthermore, we demonstrate that incorporating data referencing as a critic significantly improves answer accuracy up to 12.0%, through critic-based filtering and rejection sampling. Finally, we trained a lightweight 4B-parameter critic model that achieves an average F1 score of 78.2% in detecting both in-distribution and out-of-distribution DREs, and effectively assists inference for larger models.",
+      "url": "https://arxiv.org/abs/2606.32029v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.32029v1",
+      "published": "2026-06-30T17:54:50Z",
+      "updated": "2026-06-30T17:54:50Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CL"
+    },
+    {
+      "id": "2606.32027v1",
+      "title": "Freeform Preference Learning for Robotic Manipulation",
+      "authors": [
+        "Marcel Torne",
+        "Anubha Mahajan",
+        "Abhijnya Bhat",
+        "Chelsea Finn"
+      ],
+      "abstract": "Reward design remains a central bottleneck for autonomous robot policy improvement, especially in long-horizon manipulation tasks where sparse success labels provide too little signal and binary preferences collapse many competing notions of quality into one ambiguous signal. We introduce Freeform Preference Learning (FPL), a method for learning robot policies from freeform human preferences. Rather than asking annotators which of two trajectories is better overall, FPL lets them define natural-language preference axes, such as speed, safety, quality of placement, or carefulness, and provide pairwise preferences along each axis. These annotations are used to learn a language-conditioned reward model that maps a trajectory and preference label to an axis-specific reward. We use this model to train a reward-conditioned policy that optimizes across the multiple human-specified dimensions. Across four real-world and two simulated long-horizon manipulation tasks, FPL improves over sparse-reward and binary-preference methods by 38 percentage points. Beyond improved performance, FPL learns dense progress signals without explicit subtask segmentation, shows compositionality of behavior not present in the data, and allows users to steer the policy towards different behaviors at test time without retraining. Blog post with videos available at https://freeform-pl.github.io/fpl.website/",
+      "url": "https://arxiv.org/abs/2606.32027v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.32027v1",
+      "published": "2026-06-30T17:54:02Z",
+      "updated": "2026-06-30T17:54:02Z",
       "categories": [
         "cs.RO",
         "cs.AI",
-        "cs.CV"
+        "cs.LG"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2606.30627v1",
-      "title": "Pessimism's Paradox: Conservative Offline Training Amplifies Reward Hacking During Online Adaptation in Reasoning Models",
+      "id": "2606.32026v1",
+      "title": "AdaJEPA: An Adaptive Latent World Model",
       "authors": [
-        "Subramanyam Sahoo",
-        "Aman Chadha",
-        "Vinija Jain",
-        "Divya Chaudhary"
+        "Ying Wang",
+        "Oumayma Bounou",
+        "Yann LeCun",
+        "Mengye Ren"
       ],
-      "abstract": "Conservative offline training is widely advocated as a safe foundation for subsequent online adaptation: if a policy stays close to well-supported behaviour, the argument goes, it is less likely to exploit imperfections in a learned reward model. We challenge this intuition empirically and mechanistically. We train a Qwen3-14B policy under Direct Preference Optimisation (DPO) with three levels of conservatism ($\u03b2\\in \\{\u03b2_{\\mathrm{lo}}, \u03b2_{\\mathrm{mid}}, \u03b2_{\\mathrm{hi}}\\}$ derived from empirical log-ratio percentiles), then adapt each checkpoint online against a learned reward ensemble (3\\,$\\times$\\,Qwen3-1.7B) while measuring true performance on GSM8K exact-answer accuracy. We find that \\emph{higher offline conservatism monotonically increases reward-hacking damage}, measured by the Goodhart gap and its area under the curve (AUGC), with Spearman $\u03c1= 1.0$ across all three conditions. Mechanistic analysis reveals a three-link causal chain: (i) high-$\u03b2$ DPO compresses policy entropy, (ii) Low-entropy policies generate responses with reduced diversity, concentrating in a narrow region of the reward model's training distribution (lower pairwise cosine distance), and (iii) despite this proximity, ensemble disagreement (epistemic uncertainty) increases with $\u03b2$ and is exploited faster during online optimisation. We further fit a power-law curve to the $(\u03b2, \\augc)$ data and identify a practical optimal conservatism level $\u03b2^{\\star}$ that balances alignment fidelity against hacking vulnerability. Our results suggest that the field needs \\emph{calibrated}, not \\emph{maximal}, conservatism.",
-      "url": "https://arxiv.org/abs/2606.30627v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.30627v1",
-      "published": "2026-06-29T17:56:03Z",
-      "updated": "2026-06-29T17:56:03Z",
+      "abstract": "Latent world models enable planning from high-dimensional observations by predicting future states in a compact latent space. However, these models are typically kept frozen at test time: when their predictions become inaccurate, planning can fail, especially under test-time distribution shift. To address this, we propose AdaJEPA, an adaptive latent world model that performs test-time adaptation within the closed loop of model predictive control (MPC). After training, AdaJEPA plans and executes the first action chunk, uses the observed next-state transition as a self-supervised adaptation signal, and replans with the updated model. This closed-loop update continuously recalibrates the world model without additional expert demonstrations. Across a range of goal-reaching tasks, AdaJEPA substantially improves planning success with as few as one gradient step per MPC replanning step.",
+      "url": "https://arxiv.org/abs/2606.32026v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.32026v1",
+      "published": "2026-06-30T17:53:48Z",
+      "updated": "2026-06-30T17:53:48Z",
       "categories": [
         "cs.LG",
-        "cs.AI",
-        "stat.ML"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2606.30626v1",
-      "title": "DOPD: Dual On-policy Distillation",
-      "authors": [
-        "Xinlei Yu",
-        "Gen Li",
-        "Qingyi Si",
-        "Guibin Zhang",
-        "Yuqi Xu",
-        "Congcong Wang",
-        "Shuai Dong",
-        "Kaiwen Tuo",
-        "Xiangyu Zeng",
-        "Kaituo Feng",
-        "Qunzhong Wang",
-        "Yang Shi",
-        "Xiaobin Hu",
-        "Xiangyu Yue",
-        "Jiaqi Wang",
-        "Shuicheng Yan"
-      ],
-      "abstract": "On-policy distillation (OPD) offers superior capacity transfer by supervising student-sampled trajectories with dense token-level signals. To furnish high-quality supervision sources and thereby elevate the performance frontier of distillation, an intuitive direction is to infuse privileged information to either teacher or student itself. However, this additional input induces a potential failure mode we dub privilege illusion: a pattern that conflates the transferable capability gap that students are meant to close, and the information asymmetry gap that can only be mimicked but never replicated. This issue is further amplified by the inherent non-uniformity of token-level supervision, where only a small subset of tokens carries pivotal capability-bearing signals. To this end, we propose DOPD, an advantage-aware dual distillation paradigm that dynamically routes token-level supervision between privileged teacher and privileged student policies based on their advantage gap and relative probabilities. Each token receives supervision of different strength, objective, and strategy from either teacher or student itself, which transfers credible capability while simultaneously receiving auxiliary signals, to alleviate privilege illusion. Extensive experiments on both large language model (LLM) and vision-language model (VLM) settings demonstrate that DOPD consistently outperforms Vanilla OPD and other counterparts. Further results on stability, robustness, continual learning, and out-of-distribution tasks validate its superiority.",
-      "url": "https://arxiv.org/abs/2606.30626v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.30626v1",
-      "published": "2026-06-29T17:55:53Z",
-      "updated": "2026-06-29T17:55:53Z",
-      "categories": [
         "cs.AI"
       ],
-      "primary_category": "cs.AI"
-    },
-    {
-      "id": "2606.30625v1",
-      "title": "Optimization Dynamics Imprint Semantic Specificity in Contrastive Embedding Norms",
-      "authors": [
-        "Ziwei Su",
-        "Junyu Ren",
-        "Victor Veitch"
-      ],
-      "abstract": "Contrastive embedding models trained with scale-invariant losses are typically paired with distance metrics like cosine similarity, effectively ignoring embedding magnitudes. However, surprisingly, empirical studies reveal that despite this, these \"discarded\" norms seem to correlate with semantic properties such as concept specificity, token frequency, and human uncertainty. In this work, we provide a formal theoretical framework explaining this phenomenon. By analyzing the optimization dynamics, we derive an analytic formula demonstrating that embedding length naturally encodes this information as a byproduct of the training process. We also show how this gives rise to signals that can serve as \"free\" calibration tools in specific models and retrieval tasks, providing a grounded explanation for a previously heuristic observation.",
-      "url": "https://arxiv.org/abs/2606.30625v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.30625v1",
-      "published": "2026-06-29T17:55:40Z",
-      "updated": "2026-06-29T17:55:40Z",
-      "categories": [
-        "stat.ML",
-        "cs.AI",
-        "cs.LG",
-        "math.OC"
-      ],
-      "primary_category": "stat.ML"
-    },
-    {
-      "id": "2606.30616v1",
-      "title": "Scaling the Horizon, Not the Parameters: Reaching Trillion-Parameter Performance with a 35B Agent",
-      "authors": [
-        "Lei Bai",
-        "Zongsheng Cao",
-        "Yang Chen",
-        "Zhiyao Cui",
-        "Shangheng Du",
-        "Yue Fan",
-        "Shiyang Feng",
-        "Zijie Guo",
-        "Haonan He",
-        "Liang He",
-        "Xiaohan He",
-        "Shuyue Hu",
-        "Yusong Hu",
-        "Songtao Huang",
-        "Yichen Jiang",
-        "Hao Li",
-        "Xin Li",
-        "Dahua Lin",
-        "Weihao Lin",
-        "Fenghua Ling",
-        "Dongrui Liu",
-        "Zhuo Liu",
-        "Runmin Ma",
-        "Chunjiang Mu",
-        "Haoyang Peng",
-        "Tianshuo Peng",
-        "Jinxin Shi",
-        "Luohe Shi",
-        "Boyuan Sun",
-        "Zelin Tan",
-        "Shengji Tang",
-        "Qianyi Wang",
-        "Yiming Wu",
-        "Yi Xie",
-        "Xiangchao Yan",
-        "Jingqi Ye",
-        "Peng Ye",
-        "Fangchen Yu",
-        "Jiakang Yuan",
-        "Bihao Zhan",
-        "Bo Zhang",
-        "Chen Zhang",
-        "Shufei Zhang",
-        "Shuaiyu Zhang",
-        "Wenlong Zhang",
-        "Yiqun Zhang",
-        "Junpeng Zhao",
-        "Zhijie Zhong",
-        "Bowen Zhou",
-        "Yuhao Zhou"
-      ],
-      "abstract": "We introduce Agents-A1, a 35B Mixture-of-Experts Agentic Model that reaches trillion-parameter-level performance by scaling the agent horizon. We investigate agent-horizon scaling from two perspectives: scaling long-horizon trajectories and scaling heterogeneous agent abilities. To support this goal, we build a long-horizon knowledge-action infrastructure that connects external knowledge, actions, observations, and verifier outcomes, producing agentic trajectories with an average length of 45K tokens. Based on this, we train Agents-A1 with a three-stage recipe. First, we perform full-domain supervised fine-tuning to align the base model with broad agentic behaviors. Second, we train domain-level teacher models to capture specialized expertise in each domain. Third, we propose a multi-teacher domain-routed on-policy distillation with salient vocabulary alignment to improve knowledge transfer efficiency across different domains, unifying six heterogeneous domains into one deployable student model. Agents-A1 achieves strong and broad performance for long-horizon agent benchmarks. Compared with 1T-parameter model such as Kimi-K2.6 and DeepSeek-V4-pro, Agents-A1 achieves leading results on SEAL-0 (56.4), IFBench (80.6), HiPhO (46.4), FrontierScience-Olympiad (79.0), and MolBench-Bind (56.8), and remains highly competitive on SciCode (44.3), HLE (47.6) and BrowseComp (75.5). We hope this work provides the community with a practical path for scaling the horizon using a 35B agent that can reach or match the performance of 1T models on long-horizon tasks.",
-      "url": "https://arxiv.org/abs/2606.30616v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.30616v1",
-      "published": "2026-06-29T17:50:54Z",
-      "updated": "2026-06-29T17:50:54Z",
-      "categories": [
-        "cs.CL"
-      ],
-      "primary_category": "cs.CL"
+      "primary_category": "cs.LG"
     }
   ]
 }
