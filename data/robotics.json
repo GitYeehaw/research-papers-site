@@ -2,193 +2,64 @@
   "category": "robotics",
   "name": "Robotics Research",
   "description": "Robotics \u2014 Motion Planning, Control Systems, Human-Robot Interaction, Autonomous Systems",
-  "scraped_at": "2026-07-01T11:30:52.904586+00:00",
+  "scraped_at": "2026-07-02T10:48:37.390682+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2606.32028v1",
-      "title": "DVG-WM: Disentangled Video Generation Enables Efficient Embodied World Model for Robotic Manipulation",
+      "id": "2607.01230v1",
+      "title": "Distributed Containment of a Compromised Agent through Repulsive Cages",
       "authors": [
-        "Ziyu Shan",
-        "Zhenyu Wu",
-        "Xiaofeng Wang",
-        "Zheng Zhu",
-        "Ziwei Wang"
+        "Luigi Petruzziello",
+        "Camilla Fioravanti",
+        "Gabriele Oliva"
       ],
-      "abstract": "Video-based embodied world models provide an appealing substrate for robotic manipulation by predicting future states, yet current approaches remain limited by a fundamental entanglement: accurately modeling dynamics typically requires low-level temporal reasoning, while producing high-resolution frames demands expansive visual synthesis according to high-level semantics. This entanglement results in slow inference speed for iterative planning or too coarse predictions to retain contact-rich details. To solve this dilemma, we present Disentangled Video Generation World Model (DVG-WM), an efficient framework that explicitly decomposes world modeling into dynamics learning and visual synthesis. Conditioned on an initial observation and a language instruction, our model first generates a plausible sequence of intermediate visual states to preview the physical interaction and refines them to obtain high-fidelity videos. Furthermore, an efficient cascading mechanism is proposed, where DVG-WM uses flow matching to directly map the dynamics to video latents, and introduces a latent degradation mechanism to regenerate contact-rich details. Experiments on LIBERO and real-world platforms demonstrate improved video quality with up to 3.97 times acceleration, validating that disentangled video generation can be an efficient embodied world model for robotic manipulation.",
-      "url": "https://arxiv.org/abs/2606.32028v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.32028v1",
-      "published": "2026-06-30T17:54:32Z",
-      "updated": "2026-06-30T17:54:32Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2606.32027v1",
-      "title": "Freeform Preference Learning for Robotic Manipulation",
-      "authors": [
-        "Marcel Torne",
-        "Anubha Mahajan",
-        "Abhijnya Bhat",
-        "Chelsea Finn"
-      ],
-      "abstract": "Reward design remains a central bottleneck for autonomous robot policy improvement, especially in long-horizon manipulation tasks where sparse success labels provide too little signal and binary preferences collapse many competing notions of quality into one ambiguous signal. We introduce Freeform Preference Learning (FPL), a method for learning robot policies from freeform human preferences. Rather than asking annotators which of two trajectories is better overall, FPL lets them define natural-language preference axes, such as speed, safety, quality of placement, or carefulness, and provide pairwise preferences along each axis. These annotations are used to learn a language-conditioned reward model that maps a trajectory and preference label to an axis-specific reward. We use this model to train a reward-conditioned policy that optimizes across the multiple human-specified dimensions. Across four real-world and two simulated long-horizon manipulation tasks, FPL improves over sparse-reward and binary-preference methods by 38 percentage points. Beyond improved performance, FPL learns dense progress signals without explicit subtask segmentation, shows compositionality of behavior not present in the data, and allows users to steer the policy towards different behaviors at test time without retraining. Blog post with videos available at https://freeform-pl.github.io/fpl.website/",
-      "url": "https://arxiv.org/abs/2606.32027v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.32027v1",
-      "published": "2026-06-30T17:54:02Z",
-      "updated": "2026-06-30T17:54:02Z",
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.LG"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2606.32010v1",
-      "title": "Dual-Regime Absorbing Markov Chain Theory in Remote Estimation: Age-Minimizing Push Policies",
-      "authors": [
-        "Ismail Cosandal",
-        "Sennur Ulukus",
-        "Nail Akar"
-      ],
-      "abstract": "For a remote estimation system, we study the optimization of age of incorrect information (AoII), which is a recently proposed semantic-aware information freshness metric. In particular, we assume an information source that observes a discrete-time finite-state Markov chain (DTMC), and occasionally transmits status update packets to a remote monitor which is tasked with remote estimation of the source. For the forward channel from the source to the monitor, we assume the channel delay to be modeled by a general discrete-time phase-type (DPH) distribution, whereas the reverse channel from the monitor to the source is assumed to be perfect, ensuring that the source has perfect information on the AoII and the remote estimate at the monitor, at all times. Push-based transmissions are initiated when AoII exceeds a threshold depending on the current estimation value, i.e., multi-threshold policy. In this very general setting, our goal is to minimize a weighted sum of the time average of a polynomial function of AoII, depending on the remote estimate, and energy consumption from transmissions. We formulate the problem as a semi-Markov decision process (SMDP) with the same state-space of the original DTMC to obtain the optimal multi-threshold policy, whereas the parameters of the SMDP are obtained by using a novel stochastic tool called dual-regime absorbing Markov chain (DR-AMC), and its corresponding absorption time distribution named as dual-regime DPH (DR-DPH). The proposed method is validated with numerical examples using comparisons against other policies obtained by exhaustive search, and also various benchmark policies.",
-      "url": "https://arxiv.org/abs/2606.32010v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.32010v1",
-      "published": "2026-06-30T17:44:23Z",
-      "updated": "2026-06-30T17:44:23Z",
-      "categories": [
-        "cs.IT",
-        "cs.NI",
-        "eess.SP",
-        "eess.SY"
-      ],
-      "primary_category": "cs.IT"
-    },
-    {
-      "id": "2606.32009v1",
-      "title": "Human-as-Humanoid: Enabling Zero-Shot Humanoid Learning from Ego-Exo Human Videos with Human-Aligned Embodiments",
-      "authors": [
-        "Xiaopeng Lin",
-        "Ruoqi Yang",
-        "Shijie Lian",
-        "Zhaolong Shen",
-        "Bin Yu",
-        "Changti Wu",
-        "Haibao Liu",
-        "Yuxiang Zhang",
-        "Hong Li",
-        "Qiyuan Su",
-        "Haochen Liu",
-        "Xuguo He",
-        "Yukun Shi",
-        "Cong Huang",
-        "Zhirui Zhang",
-        "Bojun Cheng",
-        "Kai Chen"
-      ],
-      "abstract": "Vision-language-action (VLA) models across robot embodiments require high-quality observation--action supervision to learn deployable action distributions, yet scaling such robot data remains difficult, especially for high-DoF humanoids. Teleoperation provides controller-aligned supervision, while human egocentric videos capture diverse bimanual manipulation but do not directly provide executable robot actions. We introduce Human-as-Humanoid, a human-to-humanoid supervision framework that enables near-real-time human-centric action generation, making human demonstrations usable for high-DoF humanoid VLA training by jointly aligning the robot embodiment, the sensing setup, and the action-label interface. Built on PrimeU, a human-aligned 60-DoF upper-body humanoid, Human-as-Humanoid uses synchronized ego-exo videos to pair deployment-aligned egocentric observations with exocentric motion recovery, retargets the recovered human motion through staged Inverse Kinematics (IK) into controller-aligned 60-DoF action chunks, and trains the VLA model with Forward Kinematics (FK)-aware supervision to preserve wrist and fingertip task-space geometry. This converts large-scale human demonstrations from visual observations into executable observation--action supervision for the target humanoid. Experiments validate the conversion chain at the motion-recovery, robot-action-space, and real-robot deployment levels. Human-as-Humanoid yields a 4.8--7.2x raw demonstration-throughput gain over humanoid teleoperation in our data-collection analysis, and on several downstream tasks, policies post-trained only with the converted human labels generalize to real-robot deployment without target-task robot demonstrations. The official project website is available at https://zgc-embodyai.github.io/Human-as-Humanoid.",
-      "url": "https://arxiv.org/abs/2606.32009v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.32009v1",
-      "published": "2026-06-30T17:44:16Z",
-      "updated": "2026-06-30T17:44:16Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2606.32003v1",
-      "title": "On the Comparison of Reinforcement Learning and Adaptive Control for Linear Systems under Packet Loss and Uncertainty",
-      "authors": [
-        "Moh Kamalul Wafi"
-      ],
-      "abstract": "This paper presents a comparative study between Adaptive Quantized Control (AQC) and Deep Deterministic Policy Gradient (DDPG) reinforcement learning for uncertain linear systems with input quantization over communication channels subject to packet loss. The considered setting also includes dynamic switching from a nominal unstable system to a more unstable one during operation. The AQC is designed for unknown system dynamics using acknowledgment messages to compensate for packet losses, whereas the DDPG controller is trained using the nominal system model without acknowledgment messages. Numerical results show that the DDPG controller achieves faster transient responses and improved damping within its training environment. However, under model uncertainty, packet loss, and dynamic switching, the AQC consistently demonstrates superior robustness owing to its rigorous Lyapunov stability guarantees. These results highlight the trade-off between data-driven performance and model-based robustness, and provide insight into the applicability of reinforcement learning and adaptive control for networked uncertain systems.",
-      "url": "https://arxiv.org/abs/2606.32003v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.32003v1",
-      "published": "2026-06-30T17:36:20Z",
-      "updated": "2026-06-30T17:36:20Z",
+      "abstract": "UAV swarms and cyber-physical multi-agent systems are increasingly deployed in safety-critical missions that require coordinated motion, distributed decision making, and autonomy. A major security risk arises when a legitimate agent is hijacked and driven by adversarial high-level commands. Rather than focusing on detection and isolation of malicious agents, we exploit a structural property common in autonomous platforms: low-level collision-avoidance modules are typically implemented as independent safety layers and may remain active even under high-level compromise. Building on this property, we propose a distributed containment framework that uses the compromised agent's uncompromised avoidance response as an indirect actuation channel. Defender agents select their geometric configuration to shape the repulsive field experienced by the target, with the goal of keeping it inside a prescribed admissible region and, when required, steering it toward a desired destination. The interaction is modeled as an online Stackelberg game in which defenders act as leaders and the adversary reacts by choosing the target command. Using support-function and normal-cone arguments, we derive an exact geometric characterization of robust one-step containment and introduce the notion of a repulsive cage. These results define a centralized Stackelberg oracle and motivate a fully distributed online approximation based on local communication and dynamic field estimation. We prove sublinear dynamic-regret bounds with respect to the centralized benchmark, quantifying the effect of network-induced estimation errors and temporal variability of the stage-wise optimum. Simulations validate the approach and corroborate the theory.",
+      "url": "https://arxiv.org/abs/2607.01230v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.01230v1",
+      "published": "2026-07-01T17:59:24Z",
+      "updated": "2026-07-01T17:59:24Z",
       "categories": [
         "eess.SY"
       ],
       "primary_category": "eess.SY"
     },
     {
-      "id": "2606.31993v1",
-      "title": "OopsieVerse: A Safety Benchmark with Damage-Aware Simulation for Robot Manipulation",
+      "id": "2607.01215v1",
+      "title": "Computationally Efficient Near-Optimal Control for Current Ripple Reduction and Optimization of Three-Phase Motors via LMIs",
       "authors": [
-        "Arnav Balaji",
-        "Arpit Bahety",
-        "Sriniket Ambatipudi",
-        "Daniel Lam",
-        "Junhong Xu",
-        "Roberto Mart\u00edn-Mart\u00edn"
+        "Huu-Thinh Do",
+        "Trung B. Tran",
+        "Jing Sun",
+        "Ilya Kolmanovsky"
       ],
-      "abstract": "While robotic manipulation capabilities have advanced rapidly, physical safety remains a major barrier to deploying household robots: task success is insufficient if the robot damages itself or its surroundings. Simulation offers a harm-free alternative to costly and dangerous real-world training and evaluation, yet existing simulators lack general mechanisms to detect, quantify, and represent damage. To address this gap, we introduce OOPSIEVERSE, a unified simulation framework and benchmark for damage-aware household manipulation. OOPSIEVERSE provides damage as an explicit, physically-grounded, and taskagnostic signal by converting sources such as contact forces, temperature changes, and liquid interactions into corresponding mechanical, thermal or fluid damage. OOPSIEVERSE comprises two core elements: (1) DAMAGESIM, a simulator-agnostic framework for detecting and quantifying damage during navigation and manipulation, and (2) a suite of household tasks designed to evaluate common damage modes and distinguish between task completion and safe execution. We demonstrate the generality of our framework by instantiating DAMAGESIM in two simulators with different physics backends, OmniGibson (Nvidia Omniverse) and RoboCasa (MuJoCo). We further showcase the utility of OOPSIEVERSE across multiple use cases, including (1) guiding safer demonstration collection via real-time damage feedback, (2) learning safer manipulation policies through damage-conditioned imitation learning and reinforcement learning, (3) benchmarking the safety of state-of-the-art Vision Language Action policies, and (4) improving real-world safety of sim-to-real transferred policies. Together, our results highlight the potential of OOPSIEVERSE as an open-source foundation for systematic, scalable research on safe robot manipulation. For code and more information, please refer to https://robin-lab.cs.utexas.edu/oopsieverse/",
-      "url": "https://arxiv.org/abs/2606.31993v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.31993v1",
-      "published": "2026-06-30T17:30:05Z",
-      "updated": "2026-06-30T17:30:05Z",
+      "abstract": "The optimal control of three-phase permanent-magnet synchronous motors (PMSMs) is challenging due to their nonlinearity and the discrete nature of the control set. Existing approaches either rely on mixed-integer trajectory optimization or require computationally intensive value-iteration procedures. This paper proposes a Linear Matrix Inequality (LMI)-based method for approximating the infinite-horizon value function using a quadratic parameterization and iterated Bellman inequalities, yielding a tractable convex program. The computed function can be obtained efficiently offline and used online as a tail cost in a horizon-one optimal control law. Simulation results show that the proposed approach achieves a favorable trade-off between switching effort and current ripple, with performance comparable to that of finite-control-set MPC but with a significantly lower computational cost.",
+      "url": "https://arxiv.org/abs/2607.01215v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.01215v1",
+      "published": "2026-07-01T17:53:21Z",
+      "updated": "2026-07-01T17:53:21Z",
       "categories": [
-        "cs.RO"
+        "math.OC",
+        "eess.SY"
       ],
-      "primary_category": "cs.RO"
+      "primary_category": "math.OC"
     },
     {
-      "id": "2606.31958v1",
-      "title": "Adapting Generalist Robot Policies with Semantic Reinforcement Learning",
+      "id": "2607.01212v1",
+      "title": "FurnitureVLA: Learning Long-Horizon Bimanual Furniture Assembly with Vision-Language-Action Model",
       "authors": [
-        "Jagdeep Singh Bhatia",
-        "Andrew Wagenmaker",
-        "William Chen",
-        "Sergey Levine"
+        "Chenyang Ma",
+        "Yue Yang",
+        "Radu Corcodel",
+        "Siddarth Jain",
+        "Andrew Wu",
+        "Chiori Hori",
+        "Diego Romeres"
       ],
-      "abstract": "Generalist robot policies learn a diverse repertoire of behaviors from large-scale pretraining. In principle, this makes them excellent priors for downstream adaptation via reinforcement learning (RL). In practice, however, standard RL methods leveraging this prior optimize directly over robot actions, requiring the base policy's action distribution to be close to that of a performant policy from the start. This assumption breaks down for complex or long-horizon tasks that fall outside the pretraining distribution. Our key insight is that, for sufficiently expressive generalist policies, language prompts are an effective alternative space for learning to solve such tasks: modulating language inputs elicits skills already within the policy's repertoire, which can be composed to solve tasks beyond its zero-shot capabilities. We propose Semantic Action Reinforcement Learning (SARL), which learns to optimize this prompt space through online interaction, treating the generalist policy as a controllable skill prior. Importantly, leveraging pretrained skills rather than learning new ones from scratch yields structured, semantically meaningful exploration and highly efficient online improvement, and learning to modulate prompts through experience grounds them in induced real-world behaviors for robust task-solving. Across real-world settings and simulated benchmarks, we show SARL unlocks fundamentally new capabilities -- adapting VLA behavior to solve complex, long-horizon tasks -- and significantly outperforms existing approaches for improving robot behavior in deployment.",
-      "url": "https://arxiv.org/abs/2606.31958v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.31958v1",
-      "published": "2026-06-30T17:00:33Z",
-      "updated": "2026-06-30T17:00:33Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2606.31948v1",
-      "title": "RRT-Rope: A deterministic shortening approach for fast near-optimal path planning in large-scale uncluttered 3D environments",
-      "authors": [
-        "Louis Petit",
-        "Alexis Lussier Desbiens"
-      ],
-      "abstract": "Many path planning algorithms have been introduced so far, but most are costly, in path cost and in processing time, in large-scale uncluttered 3D environments such as underground mining stopes explored by an unmanned aerial vehicle (UAV). Rapidly-exploring Random Tree (RRT) algorithms are popular because of their probabilistic completeness and rapidity in finding a feasible path in single-query problems. Many of the algorithms (e.g. Informed RRT*, RRT#) developed to improve RRT need considerable time to converge in large environments. Shortcutting an RRT is an old idea that has been proven to outperform RRT variants. This paper introduces a new method, RRT-Rope, that aims at finding a near-optimal solution in a drastically shorter amount of time. The proposed approach benefits from fast computation of a feasible path with an altered version of RRT-connect, and post-processes it quickly with a deterministic shortcutting technique, taking advantage of intermediate nodes added to each branch of the tree. This paper presents simulations and statistics carried out to show the efficiency of RRT-Rope, which gives better results in terms of path cost and computation time than other popular RRT variations and shortening techniques in all our simulation environments, and is up to 70% faster than the next best algorithm in a representative stope.",
-      "url": "https://arxiv.org/abs/2606.31948v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.31948v1",
-      "published": "2026-06-30T16:54:00Z",
-      "updated": "2026-06-30T16:54:00Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2606.31941v1",
-      "title": "LeCropFollow: Latent Space Planning for Navigation in Unstructured Crop Fields",
-      "authors": [
-        "Felipe Tommaselli",
-        "Francisco Affonso",
-        "Arthur Pompeu",
-        "Gianluca Capezzuto",
-        "Arun Narenthiran Sivakumar",
-        "Girish Chowdhary",
-        "Marcelo Becker"
-      ],
-      "abstract": "Unstructured navigational features, such as irregular planting or discontinuities, remain the primary failure mode for under-canopy agricultural robots. Existing geometric approaches often fail in these scenarios because they compress high-dimensional visual data into deterministic spatial references, effectively discarding the uncertainty and semantic context required to navigate ambiguous terrain. To address this, we present LeCropFollow, a visual navigation framework that bypasses explicit geometric modeling in favor of a learned latent representation. By integrating a self-supervised semantic heatmap extractor with TD-MPC2, a Model-Based Reinforcement Learning (MBRL) planner, our system optimizes trajectories directly within a latent manifold. The framework operates over the uncompressed heatmap signal, preserving the semantic context that geometric reductions discard. We demonstrate that this representational shift enables zero-shot transfer from simplified simulation to the physical world without fine-tuning. Extensive field experiments in late-stage corn fields show that LeCropFollow matches state-of-the-art baselines in unstructured rows but significantly outperforms them in plantation gaps, achieving a 2.4x reduction in semantic failures compared to keypoint-based methods. These results suggest that latent planning offers a robust alternative to geometric estimation for operations in heterogeneous agricultural environments. Code, models, and data available: https://felipe-tommaselli.github.io/lecropfollow .",
-      "url": "https://arxiv.org/abs/2606.31941v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.31941v1",
-      "published": "2026-06-30T16:47:08Z",
-      "updated": "2026-06-30T16:47:08Z",
+      "abstract": "Current work on robot furniture assembly mostly focuses on toy-scale settings or single-arm manipulation. We introduce FurnitureVLA, the first systematic study of real-scale bimanual furniture assembly using Vision-Language-Action models (VLAs). We formalize the task, develop a scalable simulation pipeline for expert data generation and evaluation, and build a VR teleoperation system for single-operator bimanual control to collect high-quality real-world demonstrations. To address extreme long-horizon assembly with up to 7 subtasks and 1550 control steps, we propose a progress-enhanced VLA, finetuned on semantically grounded subtasks, that jointly predicts actions and a continuous progress signal, enabling automatic subtask transitions and reducing compounding errors during inference. We further study perception and control design factors that critically affect precision in real-scale assembly. FurnitureVLA improves average simulation success from 48% to 80% compared to baselines across three furniture types, with an additional 21% gain from our design factor study. We validate on a real Kinova Gen3 platform with only 16% drop on the hardest task.",
+      "url": "https://arxiv.org/abs/2607.01212v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.01212v1",
+      "published": "2026-07-01T17:51:21Z",
+      "updated": "2026-07-01T17:51:21Z",
       "categories": [
         "cs.RO",
         "cs.AI"
@@ -196,31 +67,140 @@
       "primary_category": "cs.RO"
     },
     {
-      "id": "2606.31919v1",
-      "title": "MVP-Nav: Multi-layer Value Map Planner Navigator",
+      "id": "2607.01203v1",
+      "title": "GPU-Parallel Linearization Error Bounds for Real-Time Robust Optimal Control of Nonlinear and Neural Network Dynamics",
       "authors": [
-        "Wenyuan Xie",
-        "Shaokai Wu",
-        "Yijin Zhou",
-        "Yanbiao Ji",
-        "Guodong Zhang",
-        "Bayram Bayramli",
-        "Qiuchang Li",
-        "Xunchu Zhou",
-        "Yue Ding",
-        "Hongtao Lu"
+        "Jeffrey Fang",
+        "Keyi Shen",
+        "Anutam Srinivasan",
+        "Glen Chou"
       ],
-      "abstract": "Zero-shot Object Goal Navigation (ZSON) with RGB-only perception poses a fundamental challenge for embodied agents, as the absence of explicit depth information introduces severe physical uncertainty and semantic-physical misalignment. Existing approaches either rely on high-level semantic reasoning without geometric grounding or learn end-to-end policies that lack explicit physical constraints, often resulting in semantically plausible but physically unsafe behaviors. In this paper, we propose MVP-Nav, a physical-aware RGB-only navigation framework that aligns perception, planning, and control with the real 3D world. MVP-Nav reconstructs explicit physical occupancy from monocular observations by leveraging 3D foundation models to project 2D semantic instances into 3D oriented bounding boxes, forming a global spatial semantic representation. To unify high-level semantic reasoning and low-level physical constraints, we introduce a Multi-layer Value Map (MVM) that integrates semantic priorities and reconstructed geometry into a shared cost space, enabling physically grounded geometric planning. Extensive experiments on zero-shot object navigation benchmarks demonstrate that MVP-Nav significantly outperforms existing depth-free methods, achieving state-of-the-art performance and validating that structured physical priors can effectively compensate for the absence of active depth sensors.",
-      "url": "https://arxiv.org/abs/2606.31919v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.31919v1",
-      "published": "2026-06-30T16:25:47Z",
-      "updated": "2026-06-30T16:25:47Z",
+      "abstract": "This paper studies real-time robust optimal control for uncertain nonlinear systems, where linear time-varying (LTV) approximations make planning tractable but require sound linearization error bounds (LEBs) to guarantee robust constraint satisfaction. We develop tight, differentiable, GPU-parallel LEBs for LTV approximations of nonlinear and neural network (NN) dynamics. For analytic dynamics, we introduce path-based Hessian bounds that are tighter than standard interval methods. For NN dynamics, we derive certified LEBs using NN verifier-generated affine relaxations and local Jacobian corrections. We adapt a GPU-parallel system-level synthesis LTV-based robust control solver to be compatible with these LEBs by extending it to handle right-invertible disturbance matrices and non-zero-centered disturbance sets for tight zonotopic uncertainty propagation. Our method, GPUSLS-LEO, enables online optimization of robust feedback policies that account for linearization error, producing tight, formally verified reachable tubes. On complex nonlinear and NN dynamics up to 168 state dimensions, our method can compute robust control policies on the GPU at rates up to 67 Hz, reducing solve times and conservativeness relative to baselines while preserving formal guarantees and real-time performance.",
+      "url": "https://arxiv.org/abs/2607.01203v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.01203v1",
+      "published": "2026-07-01T17:42:37Z",
+      "updated": "2026-07-01T17:42:37Z",
+      "categories": [
+        "eess.SY",
+        "cs.AI",
+        "cs.LG",
+        "cs.RO",
+        "math.OC"
+      ],
+      "primary_category": "eess.SY"
+    },
+    {
+      "id": "2607.01201v1",
+      "title": "Sensorless Four-Channel Control Architecture Using Inverse Dynamics Modeling for Human-Scale Bilateral Teleoperation",
+      "authors": [
+        "Amir Noohian",
+        "Dylan Miller",
+        "Justin Valentine",
+        "Alan Lynch",
+        "Martin Jagersand"
+      ],
+      "abstract": "The four-channel teleoperation architecture is a well-established framework for achieving transparency in bilateral systems. However, its performance in human-scale teleoperation is limited by high inertia, modeling challenges, and reliance on noisy and costly force/torque sensors. This paper introduces a sensorless four-channel architecture based on inverse dynamics modeling. The controller is implemented and validated on a customized WAM bilateral teleoperation setup. Experiments demonstrate that the proposed approach outperforms conventional two- and four-channel schemes as well as transparency-enhancement methods, improving position and force tracking, reducing operator effort, and increasing maximum transmittable impedance without external sensors. A door-opening case study involving sustained whole-body contact along the manipulator further demonstrates the effectiveness of the method in realistic human-scale manipulation tasks.",
+      "url": "https://arxiv.org/abs/2607.01201v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.01201v1",
+      "published": "2026-07-01T17:37:48Z",
+      "updated": "2026-07-01T17:37:48Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2607.01200v1",
+      "title": "FastBridge: Closing the Model-Based Realization Gap in Safety Filters on 3D Gaussian Splatting for Fast Quadrotor Flight",
+      "authors": [
+        "Tscholl Dario",
+        "Nakka Yashwanth Kumar",
+        "Gunter Brian"
+      ],
+      "abstract": "Fast quadrotor flight requires safe obstacle avoidance under tight onboard compute limits. While 3D Gaussian Splatting (3DGS) provides a continuous, geometry-aware scene representation for perception-driven navigation, existing 3DGS safety filters use reduced-order models such as single- and double-integrators that ignore actuator limits and assume commanded accelerations are realized instantaneously. Building on an analytic collision cone barrier for 3DGS, we introduce a nonlinear, actuator-aware safety filter enforced through the full quadrotor dynamics. We derive a high-relative-degree collision cone exponential CBF and a backup CBF that preserves QP feasibility under input constraints using a forward-simulated backup policy. Compared with a state-of-the-art 3DGS safety filter, our approach reduces trajectory jerk by 47% and runs 2.25 times faster. We validate the method in simulation and on hardware for real-time navigation in cluttered, perception-derived environments.",
+      "url": "https://arxiv.org/abs/2607.01200v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.01200v1",
+      "published": "2026-07-01T17:33:01Z",
+      "updated": "2026-07-01T17:33:01Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2607.01189v1",
+      "title": "TERA: A Unified Taylor Model Enabled Reachability Analysis Framework",
+      "authors": [
+        "Salma Iraky",
+        "Andrew Sogokon"
+      ],
+      "abstract": "Reachability analysis of safety-critical systems requires computing rigorous enclosures of all possible state trajectories. Taylor Model (TM)-based methods have proved effective at mitigating the so-called wrapping effect which leads to overly conservative enclosures of reachable sets. However, existing tools are often hard to extend or focused on narrow system classes (e.g. deterministic systems modelled by ODEs, or hybrid systems). We develop TERA: a Python-native framework for TM-based reachability analysis of continuous, hybrid and stochastic systems within a single symbolic-numeric workflow. TERA is free and open-source, enabling rapid prototyping of reachability analysis techniques with rigorous enclosures. At present, our implementation is able to compute tight reachable set over-approximations for non-linear ODEs and hybrid systems on difficult benchmark problems, and already supports analysis of continuous-time stochastic systems. Our goal is to develop a robust open-source Python infrastructure for rigorous reachability analysis supporting a broad class of systems, including stochastic hybrid systems.",
+      "url": "https://arxiv.org/abs/2607.01189v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.01189v1",
+      "published": "2026-07-01T17:20:49Z",
+      "updated": "2026-07-01T17:20:49Z",
+      "categories": [
+        "eess.SY"
+      ],
+      "primary_category": "eess.SY"
+    },
+    {
+      "id": "2607.01166v1",
+      "title": "Structured 4D Latent Predictive Model for Robot Planning",
+      "authors": [
+        "Zhiyi Li",
+        "Peilin Wu",
+        "Xiaoshen Han",
+        "Ruojin Cai",
+        "Yilun Du"
+      ],
+      "abstract": "Video predictive models are emerging as a powerful paradigm in robotics, offering a promising path toward task generalization, long-horizon planning, and flexible decision-making. However, prevailing approaches often operate on 2D video sequences, inherently lacking the 3D geometric understanding necessary for precise spatial reasoning and physical consistency. We introduce a Structured 4D Latent Predictive Model, which predicts the evolution of a scene's 3D structure in a structured latent space conditioned on observations and textual instructions. Our representation encodes the scene holistically and can be decoded into diverse 3D formats, enabling a more complete and 3D consistent scene understanding. This structured 4D latent predictive model serves as a planner, generating future scenes that are translated into executable actions by a goal-conditioned inverse dynamics module. Experiments demonstrate that our model generates futures with strong visual quality, substantially better 3D consistency and multi-view coherence compared to state-of-the-art video-based planners. Consequently, our full planning pipeline achieves superior performance on complex manipulation tasks, exhibits robust generalization to novel visual conditions, and proves effective on real-world robotic platforms. Our website is available at https://structured-4d-model.github.io/.",
+      "url": "https://arxiv.org/abs/2607.01166v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.01166v1",
+      "published": "2026-07-01T16:52:49Z",
+      "updated": "2026-07-01T16:52:49Z",
       "categories": [
         "cs.RO",
-        "cs.AI",
         "cs.CV"
       ],
       "primary_category": "cs.RO"
+    },
+    {
+      "id": "2607.01148v1",
+      "title": "Emergence of Preferential Attachment and Glass-Ceiling Effects in Autonomous Networks of LLMs",
+      "authors": [
+        "Yiming Zhang",
+        "Vikram Krishnamurthy"
+      ],
+      "abstract": "We investigate the emergence of structural disparities in networks of collaborating large language model (LLM) agents. When LLM agents autonomously choose collaborators, the resulting communication network exhibits preferential-attachment dynamics: agents that are already prominent become increasingly likely to attract additional connections. In some cases, weaker LLM agents (agents with smaller base model or older version) can disproportionately occupy central and influential network positions relative to stronger LLM agents. We interpret this as a type-dependent glass-ceiling effect (GCE). We model the network of LLM agents as a time-evolving sequence of directed weighted graphs, where the vector-valued edge weights represent cumulative tokens exchanged, number of interaction rounds, and reasoning effort. Using a contraction mapping argument on the mean-field dynamics, we prove that the importance (centrality) of each agent type converges to a unique stable equilibrium. To ground the model in LLM decision mechanisms, we introduce a cross-attention-inspired utility for collaborator selection. This utility specifies the local connection dynamics and, together with the mean-field model, yields a predictive characterization of the limiting network structure and its type-dependent centrality gaps. To validate the theory, we develop an experimental testbed with 100 LLM agents. Our experiments show that autonomous network formation can generate persistent centrality disparities, with their magnitude and direction depending on model family, model size, system-prompt design, and task context. They further show that the effect of preferential attachment depends on its alignment with model capability: reinforcing it improves collective performance when stronger agents become central, whereas weakening it improves performance when network dynamics instead favor weaker agents.",
+      "url": "https://arxiv.org/abs/2607.01148v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.01148v1",
+      "published": "2026-07-01T16:28:48Z",
+      "updated": "2026-07-01T16:28:48Z",
+      "categories": [
+        "cs.SI",
+        "eess.SY"
+      ],
+      "primary_category": "cs.SI"
+    },
+    {
+      "id": "2607.01133v1",
+      "title": "Towards Metric-Agnostic Trajectory Forecasting",
+      "authors": [
+        "Markus Knoche",
+        "Daan de Geus",
+        "Bastian Leibe"
+      ],
+      "abstract": "Accurate trajectory forecasting of surrounding traffic participants is a core capability for autonomous driving, enabling vehicles to anticipate behavior and plan safe maneuvers. We observe that current state-of-the-art forecasting models on Argoverse 2 and the Waymo Open Motion Dataset tailor their training objectives to the different benchmark metrics. Because these metrics encourage conflicting behavior, we propose a paradigm change for trajectory forecasting: training models with metric-agnostic probabilistic objectives and treating metric optimization as a downstream task applied to the predictive distribution. Concretely, we introduce Trajectory Distribution Evaluation (TraDiE) policies, metric-specific policies that map a predictive distribution to the set of $K$ trajectories and confidences required by trajectory forecasting metrics. We evaluate this framework by introducing DONUT-NLL, which adapts the training objective of the state-of-the-art trajectory forecasting model DONUT to directly optimize the predictive distribution. Using our policies, DONUT-NLL achieves state-of-the-art results on all metrics of the Waymo motion prediction benchmark.",
+      "url": "https://arxiv.org/abs/2607.01133v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.01133v1",
+      "published": "2026-07-01T16:20:43Z",
+      "updated": "2026-07-01T16:20:43Z",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "primary_category": "cs.CV"
     }
   ]
 }

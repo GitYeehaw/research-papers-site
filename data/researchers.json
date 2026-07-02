@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-07-01T11:35:46.974199+00:00",
+  "scraped_at": "2026-07-02T10:53:23.837318+00:00",
   "researcher_count": 54,
   "researchers": [
     {
@@ -1300,6 +1300,26 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2607.00215v1",
+          "title": "ELMP: Efficient Learning for Motion Planning via Analytical Policy Gradients",
+          "authors": [
+            "Yixiao Li",
+            "Tifanny Portela",
+            "Jordis Herrmann",
+            "Ren\u00e9 Zurbr\u00fcgg",
+            "Marco Hutter"
+          ],
+          "abstract": "Neural Motion Planners (NMPs) enable fast reactive motion generation, but adapting them to new environments typically requires recollecting large expert datasets, which is computationally prohibitive. We propose ELMP, a framework for data-efficient adaptation via self-supervised fine-tuning. Rather than generating additional expert trajectories with expensive global planners, ELMP directly optimizes the policy through a differentiable kinematic layer using dense collision, target-reaching, and smoothness objectives. This replaces expert data generation with rapid problem sampling, reducing per-sample adaptation cost by roughly two orders of magnitude. To further support robust generalization across changing kinematic chains, we introduce a mechanism to explicitly encode tool geometry via point clouds. Benchmarked against classical and neural baselines, ELMP achieves an 84.8% average success rate with orders-of-magnitude lower cold-start latency than classical methods. In unseen environments, self-supervised fine-tuning improves success rate from 57.3% (zero-shot) to 89.8%, removing the data collection bottleneck. Our approach maintains millisecond-level inference latency and is validated on a physical Franka Emika Panda robot.",
+          "url": "https://arxiv.org/abs/2607.00215v1",
+          "pdf_url": "https://arxiv.org/pdf/2607.00215v1",
+          "published": "2026-06-30T21:47:09Z",
+          "updated": "2026-06-30T21:47:09Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2606.31912v1",
           "title": "Learning Locomotion on Discrete Terrain via Minimal Proximity Sensing",
           "authors": [
@@ -1383,30 +1403,6 @@
           "pdf_url": "https://arxiv.org/pdf/2606.24208v1",
           "published": "2026-06-23T06:49:30Z",
           "updated": "2026-06-23T06:49:30Z",
-          "categories": [
-            "cs.RO"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2606.18959v1",
-          "title": "TactSpace: Learning a Physics-enriched Shared Latent Space for Tactile Sim-to-Real Transfer",
-          "authors": [
-            "Arunim Joarder",
-            "Arjun Bhardwaj",
-            "Ren\u00e9 Zurbr\u00fcgg",
-            "Mayank Mittal",
-            "Florin P\u00fcntener",
-            "Sira Bielefeldt",
-            "Cosmin Roman",
-            "Vaishakh Patil",
-            "Marco Hutter"
-          ],
-          "abstract": "Tactile sensing provides direct measurements of contact interactions that are essential for robotic manipulation. However, current simulators lack the fidelity to faithfully model the complex deformation and transduction mechanics of tactile sensors, severely hindering sim-to-real transfer in robot learning pipelines. To address this challenge, we propose a multi-modal representation learning framework that aligns heterogeneous tactile modalities within a shared latent space, eliminating the need for accurate raw-signal simulation while preserving relevant contact information. Our approach employs modality-specific encoders to project diverse tactile observations, such as simulated penetration depth and real-world capacitance, into a common embedding space. The model is trained using self- and cross-reconstruction objectives alongside contrastive alignment, encouraging modality-invariant yet information-rich representations. We evaluate the learned embeddings on indenter shape identification, force prediction, and geometric reconstruction tasks, training exclusively in simulation and testing directly on real sensor measurements. Our results demonstrate zero-shot sim-to-real transfer across physically dissimilar representations. Furthermore, incorporating multi-physics simulation modalities yields more informative embeddings that transfer across diverse downstream tasks, demonstrating a 16.7% reduction in force prediction error and a 45.8% reduction in shape reconstruction error. Finally, we release an efficient Warp-based implementation of a penalty-based tactile simulation model for Isaac Lab, enabling scalable tactile data generation.",
-          "url": "https://arxiv.org/abs/2606.18959v1",
-          "pdf_url": "https://arxiv.org/pdf/2606.18959v1",
-          "published": "2026-06-17T11:41:27Z",
-          "updated": "2026-06-17T11:41:27Z",
           "categories": [
             "cs.RO"
           ],
@@ -3664,6 +3660,30 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2607.01088v1",
+          "title": "ROSA: A Robotics Foundation Model Serving System for Robot Factories",
+          "authors": [
+            "Wenqi Jiang",
+            "Jason Clemons",
+            "Rowland O'Flaherty",
+            "Hugo Hadfield",
+            "Alperen Degirmenci",
+            "Shuran Song",
+            "Yashraj Narang",
+            "Christos Kozyrakis"
+          ],
+          "abstract": "Robotics foundation models (RFMs) are making general-purpose robots increasingly practical for factory deployments. While RFM serving systems are central to this vision, existing systems are largely shaped by a single-robot, single-model assumption: inference is treated as an edge-computing problem handled by an on-robot or dedicated nearby GPU, and the serving objective is to minimize the latency of a single action model. In this paper, we propose ROSA, an RFM serving system for robot factories designed around three key principles. First, ROSA adopts shared GPU-pool serving, allowing a fleet of robots to access powerful server-class GPUs over the network in order to improve inference performance, battery duration, and GPU utilization. Second, ROSA provides a robotics-aware programming abstraction and system design that supports multi-model pipelines, per-task performance requirements, and failure handling. Third, ROSA uses factory-objective-driven scheduling to maximize SLO-qualified factory productivity rather than minimizing individual request latency. We implement ROSA on top of Ray Serve for distributed orchestration, with vLLM, PyTorch, and JAX as model-serving backends, and evaluate it on both real robots and synthetic large-scale workloads. The results show that ROSA improves factory productivity by up to 12.06x over conventional dedicated serving systems.",
+          "url": "https://arxiv.org/abs/2607.01088v1",
+          "pdf_url": "https://arxiv.org/pdf/2607.01088v1",
+          "published": "2026-07-01T15:45:08Z",
+          "updated": "2026-07-01T15:45:08Z",
+          "categories": [
+            "cs.RO",
+            "cs.DC"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2606.31494v1",
           "title": "Robustness of Robotic Manipulation: Foundations and Frontiers",
           "authors": [
@@ -3688,7 +3708,7 @@
           "primary_category": "cs.RO"
         },
         {
-          "id": "2606.30988v1",
+          "id": "2606.30988v2",
           "title": "Multisensory Continual Learning: Adapting Pretrained Visuomotor Policies to Force",
           "authors": [
             "Jaden Clark",
@@ -3701,10 +3721,10 @@
             "Shuran Song"
           ],
           "abstract": "Robot manipulation often relies on sensory feedback beyond vision, particularly in contact-rich settings where force, tactile, or audio signals reveal interaction states that are not directly observable from images. However, these modalities are often hardware- and task-specific, and large-scale multisensory robot datasets remain scarce. As a result, it is impractical to pretrain policies with every sensor they may encounter. We study multisensory continual learning: adapting a pretrained robot policy to new tasks with newly introduced modalities while preserving performance under the original sensor suite. We propose MuSe, which incorporates limited multisensory data into pretrained vision-only policies through multi-stage fusion, multisensory future prediction, and experience replay over pretraining data. We instantiate MuSe by augmenting a pretrained vision-only policy with force-torque sensing and evaluate it on real-world manipulation tasks. Our experiments show that MuSe performs strongly on contact-rich finetuning tasks while preserving, and in some cases improving, performance on the original pretraining tasks. These results suggest that a modest multisensory dataset can improve general robot capabilities beyond the finetuning distribution. Project website: https://jadenvc.github.io/multisensory-continual-learning/",
-          "url": "https://arxiv.org/abs/2606.30988v1",
-          "pdf_url": "https://arxiv.org/pdf/2606.30988v1",
+          "url": "https://arxiv.org/abs/2606.30988v2",
+          "pdf_url": "https://arxiv.org/pdf/2606.30988v2",
           "published": "2026-06-29T23:58:07Z",
-          "updated": "2026-06-29T23:58:07Z",
+          "updated": "2026-07-01T17:50:32Z",
           "categories": [
             "cs.RO"
           ],
@@ -3749,25 +3769,6 @@
             "cs.RO"
           ],
           "primary_category": "cs.RO"
-        },
-        {
-          "id": "2606.19656v1",
-          "title": "DF-ExpEnse: Diffusion Filtered Exploration for Sample Efficient Finetuning",
-          "authors": [
-            "Calvin Luo",
-            "Chen Sun",
-            "Shuran Song"
-          ],
-          "abstract": "A natural recipe for intelligent robotic decision-making is initializing from pretrained generative control policies, which have summarized offline experience, and adapting them to self-collected online experience. We present DF-ExpEnse, an exploration technique that improves the quality of online experience collection, thus increasing finetuning sample-efficiency. DF-ExpEnse leverages the multimodal modeling capabilities of the generative control policy to create an expressive and tractably evaluatable candidate set. It then utilizes an ensemble of critics to identify the action that best balances quality with high exploration interest. In fleet settings, DF-ExpEnse further enables cross-agent communication to facilitate collaborative exploration as a group. DF-ExpEnse can be seamlessly integrated with existing strategies that finetune pretrained generative control policies via reinforcement learning. We experimentally validate consistent sample-efficiency benefits through DF-ExpEnse across a variety of manipulation and locomotion tasks, compared to default finetuning and alternative action selection schemes. Project can be found at https://df-expense.github.io.",
-          "url": "https://arxiv.org/abs/2606.19656v1",
-          "pdf_url": "https://arxiv.org/pdf/2606.19656v1",
-          "published": "2026-06-17T23:40:45Z",
-          "updated": "2026-06-17T23:40:45Z",
-          "categories": [
-            "cs.RO",
-            "cs.LG"
-          ],
-          "primary_category": "cs.RO"
         }
       ]
     },
@@ -3779,6 +3780,37 @@
       "website": "https://goldberg.berkeley.edu/",
       "paper_count": 5,
       "papers": [
+        {
+          "id": "2607.00272v1",
+          "title": "ASPIRE: Agentic /Skills Discovery for Robotics",
+          "authors": [
+            "Runyu Lu",
+            "Yubo Wu",
+            "Ethan Kou",
+            "Letian Fu",
+            "Wenli Xiao",
+            "Ajay Mandlekar",
+            "Yinzhen Xu",
+            "Guanya Shi",
+            "Ken Goldberg",
+            "Ang Chen",
+            "Mosharaf Chowdhury",
+            "Yuke Zhu",
+            "Linxi \"Jim\" Fan",
+            "Guanzhi Wang"
+          ],
+          "abstract": "Traditional robot programming is challenging: it requires orchestrating multimodal perception, managing physical contact dynamics, and handling diverse configurations and execution failures. We introduce ASPIRE (Agentic Skill Programming through Iterative Robot Exploration), a continual learning system that autonomously writes and refines robot control programs in a code-as-policy paradigm while compounding experience into a reusable skill library. ASPIRE discovers skills that persist across tasks, simulation and real-world settings, and embodiments. It operates in an open-ended loop with three components: (1) a closed-loop robot execution engine that exposes fine-grained multimodal traces, enabling autonomous failure diagnosis, repair synthesis, and validation; (2) a continually expanding skill library that distills validated fixes into reusable, transferable knowledge; and (3) evolutionary search that generates diverse task sequences and control programs to explore beyond single-trajectory refinement. ASPIRE surpasses prior methods by up to 77% on LIBERO-Pro manipulation under perturbation, 72% on Robosuite bimanual handover, and 32% on BEHAVIOR-1K long-horizon household tasks. Its accumulated library also enables zero-shot generalization to unseen long-horizon tasks: on LIBERO-Pro Long, ASPIRE achieves 31% success versus 4% for prior methods despite their use of test-time reasoning and retries. Finally, simulation-discovered skills provide initial evidence of sim-to-real transfer, substantially reducing real-robot programming effort across different embodiments and robot APIs.",
+          "url": "https://arxiv.org/abs/2607.00272v1",
+          "pdf_url": "https://arxiv.org/pdf/2607.00272v1",
+          "published": "2026-06-30T23:38:46Z",
+          "updated": "2026-06-30T23:38:46Z",
+          "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.MA"
+          ],
+          "primary_category": "cs.RO"
+        },
         {
           "id": "2606.28320v1",
           "title": "WARP-RM: A Warp-Augmented Relative Progress Reward Model for Data Curation",
@@ -3916,27 +3948,6 @@
           "pdf_url": "https://arxiv.org/pdf/2606.17055v2",
           "published": "2026-06-15T17:59:55Z",
           "updated": "2026-06-18T20:58:46Z",
-          "categories": [
-            "cs.RO"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2606.11535v1",
-          "title": "Adversarial Attacks on Learned Policies for Surgical Robotic Tasks",
-          "authors": [
-            "Shutong Jin",
-            "Ziyang Chen",
-            "Preethi Satish",
-            "Paavan Gupta",
-            "Florian T. Pokorny",
-            "Ken Goldberg"
-          ],
-          "abstract": "Learning-based policies are being considered to augment the dexterity of human surgeons in robot-assisted surgery. Can the end-to-end mapping from visual observations to robot actions be vulnerable to adversarial attacks, potentially leading to patient injury? In this paper, we present the first study of adversarial threats to learning-based policies in surgical robotics. We investigate two threat modes: (a) disruptive attacks, where imperceptible visual perturbations interrupt policy execution, and (b) steering attacks, where such perturbations steer policy actions toward attacker-specified directions. We formulate three adversarial attack methods, each with increasing access to policy information, and evaluate their impact on two surgical subtasks: debridement and suturing. Our evaluation covers three end-to-end policy architectures: ACT, Diffusion Policy, and Pi0. In addition, we introduce a new class of photometric adversarial attacks that mimic natural visual changes, such as lighting variations, to generate effective yet visually plausible perturbations. Results from 560 physical experiments using phantoms for debridement and suturing suggest that state-of-the-art policies can be significantly disrupted, resulting in an average 61% reduction in surgical subtask success rates. Project page: https://sites.google.com/view/adversary-surgery",
-          "url": "https://arxiv.org/abs/2606.11535v1",
-          "pdf_url": "https://arxiv.org/pdf/2606.11535v1",
-          "published": "2026-06-10T00:37:03Z",
-          "updated": "2026-06-10T00:37:03Z",
           "categories": [
             "cs.RO"
           ],
@@ -5806,7 +5817,7 @@
           "primary_category": "cs.RO"
         },
         {
-          "id": "2606.19938v1",
+          "id": "2606.19938v2",
           "title": "Triangular Consistency as a Universal Constraint for Learning Optical Flow",
           "authors": [
             "Yi Xiao",
@@ -5817,10 +5828,10 @@
             "Dong Lao"
           ],
           "abstract": "We propose triangular consistency as a first-principled constraint for optical flow, which is agnostic to network architecture, supervision type, and dataset, and applies to both image-pair and multi-frame settings. This simple but powerful constraint is to compose two flows to induce a third flow and enforce consistency among the three. The composed flows may arise from (i) image pairs, yielding cycle consistency; (ii) multiple video frames, producing longer-range motion through temporal chaining; or (iii) image pairs combined with controlled synthetic transformations, which becomes data augmentation. This triangular consistency introduces negligible computational overhead and requires no additional annotations. Since it is derived directly from the geometry of optical flow, it does not rely on model-specific assumptions and serves as a ``universal'' plug-and-play component for optical flow training. Experiments show consistent improvement across supervised, unsupervised, and transfer learning settings.",
-          "url": "https://arxiv.org/abs/2606.19938v1",
-          "pdf_url": "https://arxiv.org/pdf/2606.19938v1",
+          "url": "https://arxiv.org/abs/2606.19938v2",
+          "pdf_url": "https://arxiv.org/pdf/2606.19938v2",
           "published": "2026-06-18T08:34:32Z",
-          "updated": "2026-06-18T08:34:32Z",
+          "updated": "2026-07-01T01:37:02Z",
           "categories": [
             "cs.CV",
             "cs.AI"
