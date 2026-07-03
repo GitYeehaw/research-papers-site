@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-07-02T10:53:23.837318+00:00",
+  "scraped_at": "2026-07-03T10:51:10.788779+00:00",
   "researcher_count": 54,
   "researchers": [
     {
@@ -1300,6 +1300,27 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2607.01454v1",
+          "title": "SE(2) Navigation Mesh",
+          "authors": [
+            "Shuyang Shi",
+            "Kaixian Qu",
+            "Changan Chen",
+            "Ines Kast",
+            "Yuntao Ma",
+            "Marco Hutter"
+          ],
+          "abstract": "Global navigation for ground robots in complex multi-level environments requires representations that accurately capture traversable regions while enabling efficient path planning. Current approaches present key limitations: Point clouds and volumetric occupancy maps lack explicit surface structure for traversability estimation, whereas direct pathfinding on dense triangle meshes is computationally prohibitive. Navigation meshes mitigate these challenges through polygonal abstraction of the underlying mesh, but assume yaw-invariant traversability, rendering them unsuitable for non-circular robots in constrained spaces. We propose SE(2) Navigation Mesh (SE(2) NavMesh), a polygonal representation of traversable regions that encodes yaw-dependent traversability. Our method evaluates traversability using footprint masks and constructs a graph over yaw-specific layers with explicit translational and rotational connectivity. Grounded in this representation, we develop an A*-String Pulling-A* (ASA) pathfinding strategy that hierarchically optimizes robot position and heading. We also present an online method that incrementally updates the SE(2) NavMesh from streaming point clouds during concurrent geometry reconstruction. In simulation, the SE(2) NavMesh captures over 50% more traversable area than classical NavMeshes, and the SE(2) NavMesh + ASA pipeline consistently outperforms sampling-based baselines in constrained environments. Extensive real-world experiments on a physical robot validate real-time online generation and successful navigation across multiple environments.",
+          "url": "https://arxiv.org/abs/2607.01454v1",
+          "pdf_url": "https://arxiv.org/pdf/2607.01454v1",
+          "published": "2026-07-01T20:21:02Z",
+          "updated": "2026-07-01T20:21:02Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2607.00215v1",
           "title": "ELMP: Efficient Learning for Motion Planning via Analytical Policy Gradients",
           "authors": [
@@ -1320,7 +1341,7 @@
           "primary_category": "cs.RO"
         },
         {
-          "id": "2606.31912v1",
+          "id": "2606.31912v2",
           "title": "Learning Locomotion on Discrete Terrain via Minimal Proximity Sensing",
           "authors": [
             "Jiale Fan",
@@ -1332,10 +1353,10 @@
             "Robert Baines"
           ],
           "abstract": "Learning-based control has revolutionized dynamic locomotion, yet navigating unstructured terrain remains limited by a robot's incomplete awareness of imminent ground contact. While global perception systems such as LiDARs and depth cameras provide environmental context, they are frequently plagued by latencies, occlusions, and the high computational cost of dense geometric reconstruction. On the other hand, proprioceptive feedback is purely reactive, initiating corrections only after impact has occurred. This work explores embedding a minimal suite of low-cost, high-frequency infrared proximity sensors directly into the feet of a quadrupedal robot. These sensors provide \"pre-contact\" feedback that is robust to self-occlusions and significantly less computationally demanding than conventional vision-based pipelines. By integrating these localized signals into a reinforcement learning framework, we enable the robot to anticipate terrain discontinuities such as gaps and stepping stones that are problematic for traditional perception stacks due to occlusions or state estimation drift. We demonstrate that such sparse, near-field sensing can be reliably modeled in simulation and transferred to the real world with high fidelity. Experimental results show that local proximity sensing substantially improves traversal robustness over discrete terrain and offers a low-power, low-latency alternative or complement to complex global perception suites in unpredictable environments. For more information about results and methods, please see the project website: https://sites.google.com/view/foot-tof/home.",
-          "url": "https://arxiv.org/abs/2606.31912v1",
-          "pdf_url": "https://arxiv.org/pdf/2606.31912v1",
+          "url": "https://arxiv.org/abs/2606.31912v2",
+          "pdf_url": "https://arxiv.org/pdf/2606.31912v2",
           "published": "2026-06-30T16:16:37Z",
-          "updated": "2026-06-30T16:16:37Z",
+          "updated": "2026-07-02T12:23:51Z",
           "categories": [
             "cs.RO"
           ],
@@ -1382,29 +1403,6 @@
           "categories": [
             "cs.RO",
             "cs.CV"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2606.24208v1",
-          "title": "Grounding Generative Policies in Physics: Optimization-Guided Diffusion for Robot Control",
-          "authors": [
-            "Sabrina Bodmer",
-            "Ren\u00e9 Zurbr\u00fcgg",
-            "Tifanny Portela",
-            "Hao Ma",
-            "Alexandre Didier",
-            "Marco Hutter",
-            "Colin Jones",
-            "Melanie Zeilinger"
-          ],
-          "abstract": "Diffusion models sample effectively from high-dimensional, multimodal distributions, but their outputs may violate deployment constraints. For task-space robot policies, generated grasps, waypoints, or trajectories can be distributionally valid yet infeasible, violating reachability, collision-avoidance, or closed-loop executability requirements. This embodiment gap limits zero-shot deployment across robots, even when the task-space behavior itself is transferable. We propose an inference-time optimization framework that couples the behavior generation to physical feasibility by formulating diffusion guidance as a constrained optimization problem. Our key insight is to replace the sampling perturbation in the backward process with an optimized correction, allowing hard constraints or soft penalties to be imposed during sampling without the need to retrain the diffusion model, while keeping samples close to the learned prior. We evaluate the method on dexterous grasp synthesis with reachability and collision-avoidance constraints, and dynamic manipulation with controller-level trackability constraints. Across settings and robot embodiments, optimization-guided denoising matches the feasibility of projection- and gradient-guidance baselines while better preserving grasp quality, and improving controller-level executability and task success, with task success improving by up to 20pp. on dexterous grasping and 23pp. on visuomotor manipulation over the best baseline.",
-          "url": "https://arxiv.org/abs/2606.24208v1",
-          "pdf_url": "https://arxiv.org/pdf/2606.24208v1",
-          "published": "2026-06-23T06:49:30Z",
-          "updated": "2026-06-23T06:49:30Z",
-          "categories": [
-            "cs.RO"
           ],
           "primary_category": "cs.RO"
         }
@@ -5559,7 +5557,7 @@
       "paper_count": 5,
       "papers": [
         {
-          "id": "2606.31612v1",
+          "id": "2606.31612v2",
           "title": "What Memory Do GUI Agents Really Need? From Passive Records to Active Task-Driving States",
           "authors": [
             "Chen Liu",
@@ -5573,11 +5571,11 @@
             "Steven Hoi",
             "Yue Wang"
           ],
-          "abstract": "Mobile GUI agents increasingly face long-horizon tasks that require reading, updating, and reusing task-relevant data across pages and applications. Existing memory methods treat memory largely as passive storage, where past observations are accumulated and retrieved when needed. Yet retrieving a value does not reveal its current role in the workflow. The agent must still infer from accumulated records whether the value should be used now, has already been used, or must wait for a later dependency. This implicit reconstruction becomes unreliable in long trajectories with similar fields, repeated values, distractors, and outdated states, causing repeated or missed operations. We propose Active Task Driving Memory (ATMem), which shifts GUI-agent memory from passive storage to an actively maintained execution state. ATMem maintains task-relevant information as a continually updated execution state that links each value to its role and current status, enabling action selection based on the current workflow state. We therefore introduce \\textbf{STR-GRPO}, an online reinforcement learning method that learns to use ATMem selectively according to its contribution to task completion. STR-GRPO contrasts memory-on and memory-off rollouts to estimate when memory use improves execution, while memory-cost-aware reward discourages costly memory usage that does not improve execution. To evaluate whether agents can complete all in-scope work while avoiding out-of-scope actions over long-horizon execution, we build a challenging mobile benchmark. From a list of near identical entries, agents must act on every entry that satisfies the instruction and reject entries that violate its constraints.",
-          "url": "https://arxiv.org/abs/2606.31612v1",
-          "pdf_url": "https://arxiv.org/pdf/2606.31612v1",
+          "abstract": "Mobile GUI agents increasingly face long-horizon tasks that require reading, updating, and reusing task-relevant data across pages and applications. Existing methods treat memory largely as passive storage, where past observations are accumulated and retrieved when needed. Yet retrieving a value does not reveal its current role in the workflow. The agent must still infer from accumulated records whether the value should be used now, has already been used, or must wait for a later dependency. This implicit reconstruction becomes unreliable in long trajectories with repeated values, distractors, and outdated states, causing repeated or missed operations. To address this, we propose Active Task Driving Memory (ATMem), which shifts GUI-agent memory from passive storage to an actively maintained execution state. ATMem maintains task-relevant information as a continually updated execution state that links each value to its role and current status, enabling action selection based on the current workflow state. While supervised fine-tuning enables the agent to construct ATMem, it does not teach when ATMem is beneficial. We therefore introduce STR-GRPO, an online reinforcement learning method that encourages selective use of ATMem based on its contribution to task completion. STR-GRPO contrasts memory-on and memory-off rollouts to estimate when memory use improves execution, while memory-cost-aware reward discourages costly memory usage that does not improve execution. To evaluate whether agents can complete all in-scope work while avoiding out-of-scope actions, we build a challenging mobile benchmark. From a list of near identical entries, agents must act on every entry that satisfies the instruction and reject entries that violate its constraints. We further introduce App-Level Progress and Scope-Aware F1 to measure these two dimensions separately.",
+          "url": "https://arxiv.org/abs/2606.31612v2",
+          "pdf_url": "https://arxiv.org/pdf/2606.31612v2",
           "published": "2026-06-30T13:01:19Z",
-          "updated": "2026-06-30T13:01:19Z",
+          "updated": "2026-07-02T06:42:39Z",
           "categories": [
             "cs.CV"
           ],
@@ -5861,7 +5859,7 @@
           "primary_category": "cs.CV"
         },
         {
-          "id": "2603.28896v1",
+          "id": "2603.28896v2",
           "title": "Fisheye3R: Adapting Unified 3D Feed-Forward Foundation Models to Fisheye Lenses",
           "authors": [
             "Ruxiao Duan",
@@ -5871,11 +5869,11 @@
             "Alex Wong",
             "Yunwen Zhou"
           ],
-          "abstract": "Feed-forward foundation models for multi-view 3-dimensional (3D) reconstruction have been trained on large-scale datasets of perspective images; when tested on wide field-of-view images, e.g., from a fisheye camera, their performance degrades. Their error arises from changes in spatial positions of pixels due to a non-linear projection model that maps 3D points onto the 2D image plane. While one may surmise that training on fisheye images would resolve this problem, there are far fewer fisheye images with ground truth than perspective images, which limit generalization. To enable inference on imagery exhibiting high radial distortion, we propose Fisheye3R, a novel adaptation framework that extends these multi-view 3D reconstruction foundation models to natively accommodate fisheye inputs without performance regression on perspective images. To address the scarcity of fisheye images and ground truth, we introduce flexible learning schemes that support self-supervised adaptation using only unlabeled perspective images and supervised adaptation without any fisheye training data. Extensive experiments across three foundation models, including VGGT, $\u03c0^3$, and MapAnything, demonstrate that our approach consistently improves camera pose, depth, point map, and field-of-view estimation on fisheye images.",
-          "url": "https://arxiv.org/abs/2603.28896v1",
-          "pdf_url": "https://arxiv.org/pdf/2603.28896v1",
+          "abstract": "Feed-forward foundation models for multi-view 3-dimensional (3D) reconstruction have been trained on large-scale datasets of perspective images; when tested on wide field-of-view images, e.g., from a fisheye camera, their performance degrades. This degradation arises from changes in spatial arrangements of pixels induced by the non-linear projection model that maps 3D points onto the 2D image plane. While one may surmise that training on fisheye images would resolve this problem, there are far fewer fisheye images with ground truth than perspective images, which limits generalization. To enable inference on imagery exhibiting high radial distortion, we propose \\textit{Fisheye3R}, a novel adaptation framework that extends these multi-view 3D reconstruction foundation models to natively accommodate fisheye inputs without performance regression on perspective images. To address the scarcity of fisheye images and ground truth, we introduce flexible learning schemes that support self-supervised adaptation using only unlabeled perspective images and supervised adaptation without any fisheye training data. Extensive experiments across three foundation models, including VGGT, $\u03c0^3$, and MapAnything, demonstrate that our approach consistently improves camera pose, depth, point map, and field-of-view estimation on fisheye images. Code is available at https://github.com/android-xr/fisheye3r.",
+          "url": "https://arxiv.org/abs/2603.28896v2",
+          "pdf_url": "https://arxiv.org/pdf/2603.28896v2",
           "published": "2026-03-30T18:18:56Z",
-          "updated": "2026-03-30T18:18:56Z",
+          "updated": "2026-07-01T20:30:45Z",
           "categories": [
             "cs.CV"
           ],
