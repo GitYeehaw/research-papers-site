@@ -2,225 +2,263 @@
   "category": "robotics",
   "name": "Robotics Research",
   "description": "Robotics \u2014 Motion Planning, Control Systems, Human-Robot Interaction, Autonomous Systems",
-  "scraped_at": "2026-07-06T12:11:27.495267+00:00",
+  "scraped_at": "2026-07-07T11:16:04.359858+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2607.02503v1",
-      "title": "VT-WAM: Visual-Tactile World Action Model for Contact-Rich Manipulation",
+      "id": "2607.05396v1",
+      "title": "From Fixed to Free Cameras: Calibration-Free View-Robust Vision-Language-Action Model",
       "authors": [
-        "Shuai Tian",
-        "Yupeng Zheng",
-        "Yuhang Zheng",
-        "Songen Gu",
-        "Yujie Zang",
-        "Yuxing Qin",
-        "Weize Li",
-        "Haoran Li",
-        "Wenchao Ding",
-        "Dongbin Zhao"
+        "Wenhao Li",
+        "Xueying Jiang",
+        "Quanhao Qian",
+        "Deli Zhao",
+        "Shijian Lu",
+        "Gongjie Zhang",
+        "Ran Xu"
       ],
-      "abstract": "Contact-rich manipulation requires policies to react to local deformation, pressure, slip, and friction, yet these cues are temporally sparse and often invisible in visual observations. Existing visual-tactile policies usually feed tactile observations directly into action prediction, but rarely model tactile deformation dynamics during action generation. In this paper, we introduce VT-WAM, a Visual-Tactile World Action Model that jointly learns future visual prediction, tactile deformation prediction, and action prediction within a unified flow matching framework. In particular, VT-WAM introduces (1) Asymmetric Mixture-of-Transformers (MoT) attention to bridge a first-frame visual anchor with temporal tactile dynamics, and (2) contact-gated Action-Visual-Tactile Attention Guidance (AVTAG) to encourage action queries to rely on tactile evidence during contact phases. Across six real-world contact-rich manipulation tasks, VT-WAM achieves a 71.67% average success rate, outperforming Fast-WAM by 26.67% and OmniVTLA by 35.84%. Ablations demonstrate that modeling tactile deformation dynamics and guiding contact-phase tactile attention are both important for contact-rich tasks. Project website: https://vt-wam.github.io/.",
-      "url": "https://arxiv.org/abs/2607.02503v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.02503v1",
-      "published": "2026-07-02T17:58:36Z",
-      "updated": "2026-07-02T17:58:36Z",
+      "abstract": "Real-world robot deployment rarely maintains the training-stage camera setup, where cameras often experience repositioning or remounting depending on actual scenarios. Existing view-robust Vision-Language-Action (VLA) policies tolerate such camera variations only when the camera extrinsics are explicitly provided, making them fragile and hard to use especially when view robustness is critical. We argue that the policy should not be told where the camera is, but rather figure it out by itself. To this end, we introduce Camera-Centric VLA (CamVLA), a new VLA model that decouples manipulation controls from camera geometry by predicting (i) a camera-centric end-effector action expressed in the local camera frame, and (ii) a 6-DoF hand-eye matrix relating cameras to the robot base. A deterministic geometric transformation composes the two predictions into a robot base-frame action. This disentangles how I should move in pose-independent camera-centric action generation from where I am looking from in camera-perspective geometric grounding. The resulting policy is calibration-free, depth-free, and single-view, requiring only a single monocular RGB image as the visual observation and task instruction at deployment. Evaluations in both simulation and real-world robot data show that CamVLA consistently improves success rates across diverse unseen viewpoints. Project page: https://alibaba-damo-academy.github.io/CamVLA/.",
+      "url": "https://arxiv.org/abs/2607.05396v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.05396v1",
+      "published": "2026-07-06T17:59:59Z",
+      "updated": "2026-07-06T17:59:59Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG",
+        "cs.RO"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2607.05391v1",
+      "title": "LLM-as-a-Verifier: A General-Purpose Verification Framework",
+      "authors": [
+        "Jacky Kwok",
+        "Shulu Li",
+        "Pranav Atreya",
+        "Yuejiang Liu",
+        "Yixing Jiang",
+        "Chelsea Finn",
+        "Marco Pavone",
+        "Ion Stoica",
+        "Azalia Mirhoseini"
+      ],
+      "abstract": "Scaling pre-training, post-training, and test-time compute have become the central paradigms for improving the capabilities of LLMs. In this work, we identify verification, the ability to determine the correctness of a solution, as a new scaling axis. To unlock this and demonstrate its effectiveness, we introduce LLM-as-a-Verifier, a general-purpose verification framework that provides fine-grained feedback for agentic tasks without requiring additional training. Unlike standard LM judges that prompt LLMs to produce discrete scores for candidate solutions, LLM-as-a-Verifier computes the expectation over the distribution of scoring token logits to generate continuous scores. This probabilistic formulation enables verification to scale along multiple dimensions: (1) score granularity, (2) repeated evaluation, and (3) criteria decomposition. In particular, we show that scaling the scoring granularity leads to better separation between positive and negative solutions, resulting in more calibrated comparisons. Moreover, scaling repeated evaluation and criteria decomposition consistently lead to additional gains in verification accuracy through variance and complexity reduction. We further introduce a cost-efficient ranking algorithm for selecting the best solution among candidates using the verifier's continuous scores. LLM-as-a-Verifier achieves state-of-the-art performance on Terminal-Bench V2 (86.5%), SWE-Bench Verified (78.2%), RoboRewardBench (87.4%), and MedAgentBench (73.3%). Beyond verification, the fine-grained signals from LLM-as-a-Verifier can also serve as a proxy for estimating task progress. We build an extension for Claude Code, enabling developers to monitor and improve their own agentic systems. Finally, we show that LLM-as-a-Verifier can provide dense feedback for RL, improving the sample efficiency of SAC and GRPO on robotics and mathematical reasoning benchmarks.",
+      "url": "https://arxiv.org/abs/2607.05391v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.05391v1",
+      "published": "2026-07-06T17:59:35Z",
+      "updated": "2026-07-06T17:59:35Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG",
+        "cs.MA",
+        "cs.RO"
+      ],
+      "primary_category": "cs.AI"
+    },
+    {
+      "id": "2607.05390v1",
+      "title": "Deform360: A Massive Multi-view Visuotactile Dataset for Deformable World Models",
+      "authors": [
+        "Hongyu Li",
+        "Wanjia Fu",
+        "Xiaoyan Cong",
+        "Zekun Li",
+        "Binghao Huang",
+        "Hanxiao Jiang",
+        "Xintong He",
+        "Yiqing Liang",
+        "Rao Fu",
+        "Tao Lu",
+        "Srinath Sridhar",
+        "Kevin A. Smith",
+        "George Konidaris",
+        "Yunzhu Li"
+      ],
+      "abstract": "Predicting object dynamics (i.e., world modeling) is a fundamental challenge for robotic manipulation, and modeling deformable objects presents a particularly difficult case due to their high-dimensional state spaces and complex material properties. While current world models approach this through two distinct paradigms: learning the dynamics over the 2D pixel space or more explicit 3D geometric space. A systematic understanding of their relative strengths and limitations remains elusive due to the lack of diverse, large-scale real-world data. To address this, we present Deform360, a large-scale visuotactile dataset featuring 198 daily-life objects, 1,980 interaction sequences, and over 215 hours of observations from 41 surround-view cameras and bimanual tactile grippers to capture both global motion and contact-induced local deformations. Leveraging a novel markerless visuotactile 3D tracking pipeline to extract dense geometry and motion, we systematically evaluate current state-of-the-art world models, comparing 2D video models against 3D particle models. Finally, we provide a preliminary demonstration indicating the real-world applicability of our dataset by performing robot planning tasks on deformable objects. Our analysis reveals key insights into the trade-offs between structural priors and scalability, providing a solid benchmark for future research in generalizable deformable object-centric world modeling. Project website: https://deform360.lhy.xyz",
+      "url": "https://arxiv.org/abs/2607.05390v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.05390v1",
+      "published": "2026-07-06T17:59:18Z",
+      "updated": "2026-07-06T17:59:18Z",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2607.05377v1",
+      "title": "Cortex: A Bidirectionally Aligned Embodied Agent Framework for Long-horizon Manipulation",
+      "authors": [
+        "Jiaqi Peng",
+        "Xiqian Yu",
+        "Delin Feng",
+        "Yuqiang Yang",
+        "Wenzhe Cai",
+        "Jing Xiong",
+        "Ganlin Yang",
+        "Jinliang Zheng",
+        "Jiafei Cao",
+        "Xueyuan Wei",
+        "Jiangmiao Pang",
+        "Yuan Shen",
+        "Tai Wang"
+      ],
+      "abstract": "While recent Vision-Language-Action (VLA) models show promise toward generalist manipulation policies, they struggle with long-horizon tasks due to their Markovian nature-relying solely on current observations. Hierarchical dual-system methods address this but suffer from a gap between high-level planning semantics and low-level execution kinematics. We introduce Cortex, a bidirectionally aligned embodied agent framework with a customized planning interface that conveys executable and tractable subtask plans from high-level VLM to low-level VLA. Specifically, we standardize manipulation subtasks into 32 canonical skill primitives and inject tractability principles, such as representative object attributes and improved trajectory reachability, into the data generation pipeline. This enables automatic annotation of over 4k hours of open-source video data and generation of 30 hours of simulation data. We further devise an event-balanced sampling strategy to construct training data for fine-tuning the framework to better handle planning ambiguity during subtask transitions, enhanced by carefully designed harness engineering from task contexts to skill constraints during inference. Both open-loop VLM and closed-loop system evaluations demonstrate Cortex's efficacy, e.g., it outperforms monolithic baselines by 3.1% on Libero-long and 4.1% on RoboTwin. Notably, Cortex's generalist VLM enables zero-shot completion of unseen real-world long-horizon tasks, such as multi-stage chemistry experiments, by simply combining with a fine-tuned VLA-a capability infeasible through VLA fine-tuning alone.",
+      "url": "https://arxiv.org/abs/2607.05377v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.05377v1",
+      "published": "2026-07-06T17:55:05Z",
+      "updated": "2026-07-06T17:55:05Z",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2607.05369v1",
+      "title": "GaP: A Graph-as-Policy Multi-Agent Self-Learning Harness For Variational Automation Tasks",
+      "authors": [
+        "Kaiyuan Chen",
+        "Shuangyu Xie",
+        "Letian Fu",
+        "Justin Yu",
+        "William Pacini",
+        "Sandeep Bajamahal",
+        "Hudson Kim",
+        "Jaimyn Drake",
+        "Daehwa Kim",
+        "Haoru Xue",
+        "Jonathan Francis",
+        "Christian Juette",
+        "Peter Schaldenbrand",
+        "Muhammet Yunus Seker",
+        "Ruwan Wickramarachchi",
+        "Uksang Yoo",
+        "Guanzhi Wang",
+        "Adithyavairavan Murali",
+        "Balakumar Sundaralingam",
+        "S. Shankar Sastry",
+        "Spencer Huang",
+        "Yuke Zhu",
+        "Linxi \"Jim\" Fan",
+        "Ken Goldberg"
+      ],
+      "abstract": "For robots to work reliably in commercial and industrial applications, can recent advances in agentic coding systems combine interpretable robot programming with the open-world adaptability of model-free policies? We focus on \"Variational Automation\" (VA), a class of tasks that have larger variations in object geometry and pose than fixed automation. Model-free policies often struggle to close the reliability gap for VA tasks, which must be executed persistently and reliably in commercial and industrial applications. Motivated by prior work on Task and Motion Planning (TAMP) and the Robot Operating System (ROS), we introduce Graph-as-Policy (GaP), a multi-agent coding harness that generates directed computation graphs with perception, planning, and control nodes from a Modular Open Robot Skill Library (MORSL). GaP then generates an internal simulation environment to rehearse task instances with different graphs in parallel to iteratively refine the graph structure and parameters to improve success rates and throughput. Evaluation with 8 new open VA task benchmarks, 4 in-simulation and 4 in real-world, suggests that GaP can achieve success rates that significantly outperform baselines. Details, code, and data can be found online: https://graph-robots.github.io/gap",
+      "url": "https://arxiv.org/abs/2607.05369v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.05369v1",
+      "published": "2026-07-06T17:47:31Z",
+      "updated": "2026-07-06T17:47:31Z",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2607.05348v1",
+      "title": "Beyond Isolated Objects: Relationship-aware Open Vocabulary Scene Understanding via 3D Scene Graph Analysis",
+      "authors": [
+        "Xianhao Chen",
+        "Jiarui Hu",
+        "Yuanbo Yang",
+        "Xiyu Zhang",
+        "Tengyue Wang",
+        "Hujun Bao",
+        "Guofeng Zhang",
+        "Zhaopeng Cui"
+      ],
+      "abstract": "Open-vocabulary 3D scene understanding aims to segment 3D scenes beyond predefined categories by transferring semantic knowledge from vision-language models. Existing methods have advanced this task by lifting language-aligned 2D features into 3D, yet they often rely on context-independent semantic representations, leaving object relationships underexplored for contextual refinement. We propose RelGraphOV, a relationship-aware framework that uses 3D scene graphs to enhance open-vocabulary 3D understanding. Our method constructs relational scene graphs from multi-view observations by leveraging vision-language reasoning to infer object relationships and prune geometrically implausible connections, without manual relationship annotations. To aggregate relational context while avoiding feature interference, we introduce an Adaptive Gated Dual-Stream Contextual GAT that separates dense geometric features and semantic CLIP embeddings, performs edge-guided message passing, and adaptively fuses complementary semantics. A hierarchical contrastive objective further promotes instance-level consistency and category-level discrimination. Experiments on ScanNetV2, ScanNet200, ScanNet$++$, and Replica demonstrate strong performance and generalization ability. Project Page: https://cxavireh.github.io/relgraphov-projectpage",
+      "url": "https://arxiv.org/abs/2607.05348v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.05348v1",
+      "published": "2026-07-06T17:29:49Z",
+      "updated": "2026-07-06T17:29:49Z",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2607.05315v1",
+      "title": "Socially-Aware Autonomous Doorway Traversal and Payload Delivery for Emergency Assistance",
+      "authors": [
+        "Andrew Snowdy",
+        "Ananya Trivedi",
+        "Sarvesh Prajapati",
+        "Lorena Maria Genua",
+        "Taskin Padir"
+      ],
+      "abstract": "In this work, we focus on the scenario of a robot-assisted emergency evacuation. We consider two capabilities relevant to such a setting. The first is opening doors ahead of the people being evacuated, so that their path toward an exit stays clear. The second is retrieving rescue equipment and delivering it to the emergency responders carrying out the evacuation. From a systems perspective, this involves several tasks at once. The robot must locate ADA-compliant door buttons and the rescue equipment it needs to retrieve. Additionally, it must remain aware of the people around it and adapt its behavior to them, so that it supports the evacuation rather than getting in the way. We address these demands with a behavior tree at the core of our framework. This structure is chosen for its ability to select high-level tasks based on environmental triggers, and to extend to new situations as they arise. We evaluate the system in 105 trials on the Toyota Human Support Robot, across five hardware and three simulation scenarios. These trials capture the decisions the robot must make in this setting: whether to press a door button, yield to a nearby person, walk through a door someone else is holding, or first retrieve rescue equipment before traversing the door. Overall, the system completes 97 of the 105 trials successfully. These results suggest our framework provides a practical basis for robotic assistance in broader emergency response tasks. Code and video demonstrations are available at https://github.com/AndrewSnowdy/hsr_mm_control.",
+      "url": "https://arxiv.org/abs/2607.05315v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.05315v1",
+      "published": "2026-07-06T16:56:00Z",
+      "updated": "2026-07-06T16:56:00Z",
       "categories": [
         "cs.RO"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2607.02501v1",
-      "title": "Embodied.cpp: A Portable Inference Runtime of Embodied AI Models on Heterogeneous Robots",
+      "id": "2607.05241v1",
+      "title": "GelNeuro: A Sensing-Computing Integrated Neuromorphic Tactile System for Texture Recognition",
       "authors": [
-        "Ling Xu",
-        "Chuyu Han",
-        "Borui Li",
-        "Hao Wu",
-        "Shiqi Jiang",
-        "Ting Cao",
-        "Chuanyou Li",
-        "Sheng Zhong",
-        "Shuai Wang"
+        "Luoyang Bian",
+        "Xinpan Meng",
+        "Zhenghua Ma",
+        "Houcheng Li",
+        "Long Cheng"
       ],
-      "abstract": "Embodied AI models now span vision-language-action (VLA) models and world-action models (WAMs), but practical deployment remains fragmented across model-specific Python stacks, backend assumptions, and robot-side glue code, especially on heterogeneous edge devices. Existing inference runtimes are designed mainly for request-response serving and therefore do not satisfy the runtime contract of embodied deployment: multi-rate execution inside closed-loop control, latency-first batch-1 inference on heterogeneous hardware, and extensible embodied interfaces beyond fixed token I/O. We present Embodied.cpp, a portable C++ inference runtime for embodied models. Based on an architectural analysis of representative VLA models and WAMs, Embodied.cpp captures a shared execution path and organizes it into five layers: input adapters, sequence builders, backbone execution, head plugins, and deployment adapters. The runtime provides modular multi-rate execution, latency-first fused inference, and extensible operator and I/O support, enabling deployment across heterogeneous devices, robots, and simulators through one backend abstraction. We evaluate Embodied.cpp on two VLA models, HY-VLA and pi0.5, and on a preliminary WAM benchmark using a LingBot-VA Transformer block. The VLA deployments achieve successful closed-loop execution with 100.0% and 91.0% task success rates, respectively. The WAM benchmark reduces block memory from 312.2 MiB to 88.1 MiB. These results show that Embodied.cpp improves deployment efficiency while preserving high accuracy across diverse embodied model architectures.",
-      "url": "https://arxiv.org/abs/2607.02501v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.02501v1",
-      "published": "2026-07-02T17:58:28Z",
-      "updated": "2026-07-02T17:58:28Z",
-      "categories": [
-        "cs.RO",
-        "cs.CV",
-        "cs.OS"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2607.02496v1",
-      "title": "Controllable Sim Agents with Behavior Latents",
-      "authors": [
-        "Juanwu Lu",
-        "Junyu Zhu",
-        "Ziran Wang"
-      ],
-      "abstract": "Realistic traffic simulation requires agents that imitate logged behavior and can also be steered along interpretable axes. Such controllability enables engineers to isolate variables, reproduce specific edge cases, and test autonomous systems without real-world risk. We introduce Controllable Neural Variational Agents (CNeVA), a controllable simulated-agent framework that learns to infer a per-agent Gaussian behavior latent from per-channel discounted returns via a closed-form conjugate variational update, conditioning a rectified-flow trajectory generator trained on a mixed channel-mask curriculum for classifier-free guidance. To tackle scarcity in reward signals, we propose soft eligibility gates that replace hard binary thresholds with smooth exponential decay, preserving the gradient signal for near-threshold agents. On the Waymo Open Motion Dataset, CNeVA attains competitive realism on the benchmark while exposing per-channel controllability that the higher-ranked imitation models lack. Speed- and acceleration-based steering produces monotone responses without stall-induced reward hacking. Safety controllability is monotone and substantial with the introduction of soft eligibility. We manage to achieve steerable map compliance under a context-residual return measure. Furthermore, our experiment demonstrates that steering metrics must be read alongside physical-plausibility guardrails to avoid reward-hacking confounds.",
-      "url": "https://arxiv.org/abs/2607.02496v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.02496v1",
-      "published": "2026-07-02T17:55:39Z",
-      "updated": "2026-07-02T17:55:39Z",
-      "categories": [
-        "cs.RO",
-        "cs.LG"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2607.02478v1",
-      "title": "Docking of Autonomous Vehicles with a Stationary Docking Station in 3D Space",
-      "authors": [
-        "Ram Milan Kumar Verma",
-        "Shashi Ranjan Kumar",
-        "Hemendra Arya"
-      ],
-      "abstract": "In this letter, we present a strategy for autonomous docking of autonomous vehicles in three-dimensional space. Docking is a safety-critical task and requires expert piloting skills. Vehicles with autonomous docking capabilities are highly desirable in various applications, such as marine vehicle docking, aerial vehicle docking, spacecraft docking, and landing. To dock autonomously with the docking station, the vehicle must align itself to a specific desired orientation relative to the docking station and also reduce speed as it approaches. The vehicle achieves near-zero speed to dock successfully and safely without colliding with the docking station. Inspired by the philosophies from the guidance literature, we present a finite-time sliding mode-based strategy to achieve the same. The range and line-of-sight kinematics relations describing the motion of the vehicle with respect to the stationary docking station are used to steer the vehicle to achieve the desired orientation for docking. This docking strategy is validated in MATLAB\\textsuperscript{\\textregistered} simulations for various initial locations and orientations of both the vehicle and the docking station.",
-      "url": "https://arxiv.org/abs/2607.02478v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.02478v1",
-      "published": "2026-07-02T17:47:09Z",
-      "updated": "2026-07-02T17:47:09Z",
-      "categories": [
-        "eess.SY"
-      ],
-      "primary_category": "eess.SY"
-    },
-    {
-      "id": "2607.02474v1",
-      "title": "QuadRocket: An Aerial Robotic Testbed for Adaptive Thrust-Vector Control of Rocket-Like Vehicles",
-      "authors": [
-        "Pedro Santos",
-        "Joel Reis",
-        "Paulo Oliveira",
-        "Carlos Silvestre"
-      ],
-      "abstract": "This paper presents QuadRocket, a quadrotor-based rocket prototype that provides a low-cost, low-risk platform for validating advanced thrust-vector control strategies for launch vehicle-type systems. The prototype consists of a cylindrical main body mounted on top of a quadrotor through a universal joint, forming a flying inverted pendulum with non-negligible inertia. For control design, the coupled system is modeled as a single axisymmetric rigid body actuated by a vectored force applied along its longitudinal axis. A reduced-attitude representation on the two sphere is adopted to explicitly exploit the vehicle's axial symmetry and to decouple yaw from the thrust-vector direction. On this model, we derive an adaptive backstepping controller that achieves almost global trajectory tracking in the presence of unknown constant disturbances, while a control-point transformation mitigates non minimum-phase behavior. The quadrotor is then treated as a thrust vector actuator, and a dynamic-surface-based attitude controller is designed to track the desired thrust-vector, accounting for actuation dynamics and avoiding explicit differentiation of virtual control signals. The complete architecture is evaluated in simulation and validated experimentally in an indoor motion-capture arena. Results demonstrate accurate trajectory tracking, effective disturbance compensation, and confirm the suitability of the QuadRocket as a versatile testbed for thrust-vector-controlled robotic vehicles.",
-      "url": "https://arxiv.org/abs/2607.02474v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.02474v1",
-      "published": "2026-07-02T17:43:09Z",
-      "updated": "2026-07-02T17:43:09Z",
-      "categories": [
-        "cs.RO",
-        "eess.SY"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2607.02472v1",
-      "title": "Learning Agile Intruder Interception using Differentiable Quadrotor Dynamics",
-      "authors": [
-        "Michael Anoruo",
-        "Xiaoyu Tian",
-        "Abhishek Rathod",
-        "Timothy Naudet",
-        "Thomas Canchola",
-        "Eric Sturzinger",
-        "Kshitij Goel",
-        "Wennie Tabib"
-      ],
-      "abstract": "This paper presents a methodology for learning a control policy to intercept an intruder using the 3D direction unit vector to the intruder and the interceptor state. Prior deep reinforcement learning approaches assume either relative position or distance to the intruder is available, but this information is not readily accessible in real-world applications that employ passive, monocular camera sensors. Instead, we propose a solution that leverages an analytical policy gradient method using differentiable quadrotor dynamics to learn agile interception at speeds up to 10 m/s. The proposed approach outperforms baseline methods that utilize simplified point mass dynamics by an average of 30%.",
-      "url": "https://arxiv.org/abs/2607.02472v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.02472v1",
-      "published": "2026-07-02T17:40:06Z",
-      "updated": "2026-07-02T17:40:06Z",
+      "abstract": "Neuromorphic visuo-tactile sensing offers a promising paradigm for low-latency and low-power robotic perception. However, existing systems still rely heavily on a host computer for event readout, preprocessing, or relaying prior to chip inference. This paper presents GelNeuro, a fully integrated sensing-computing visuo-tactile system that directly pairs a GelSight Mini-based optical tactile front end with the Speck2f neuromorphic system-on-chip (SoC). Contact-induced marker motions are captured as dynamic vision sensor (DVS) events and routed through the on-chip network to a spiking convolutional neural network (SCNN) classifier. To mitigate accuracy degradation during 8-bit deployment, a hardware-aware weight clamping strategy is introduced. Evaluated on a 15-class natural texture recognition task, hardware-in-the-loop testing on the physical chip achieves a 96.3% accuracy within an 80 ms inference window. Notably, the system consumes only 19.6 mW of board-level active power-over three orders of magnitude lower than conventional CPU/GPU baselines on the same benchmark. GelNeuro also exhibits robust generalization across unseen contact depths, demonstrating the viability of direct sensor-to-chip tactile recognition on edge neuromorphic hardware.",
+      "url": "https://arxiv.org/abs/2607.05241v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.05241v1",
+      "published": "2026-07-06T15:52:35Z",
+      "updated": "2026-07-06T15:52:35Z",
       "categories": [
         "cs.RO"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2607.02466v1",
-      "title": "Learning to Move Before Learning to Do: Task-Agnostic pretraining for VLAs",
+      "id": "2607.05209v1",
+      "title": "Shadow Pricing of Static Voltage Stability Services within Unit Commitment for Inverter-Dominated Power Systems",
       "authors": [
-        "Junhao Shi",
-        "Siyin Wang",
-        "Xiaopeng Yu",
-        "Li Ji",
-        "Jingjing Gong",
-        "Xipeng Qiu"
+        "Peng Wang",
+        "Luis Badesa"
       ],
-      "abstract": "Vision-Language-Action (VLA) models are fundamentally bottlenecked by the scarcity of expert demonstrations -- triplets of observations, instructions, and actions that are costly to collect at scale. We argue that this bottleneck stems from conflating two distinct learning objectives: acquiring physical competence (how to move) and acquiring semantic alignment (what to do). Crucially, only the latter requires language supervision. Building on this Decomposition Hypothesis, we propose Task-Agnostic Pretraining (TAP), a two-stage framework that first learns transferable motor priors from cheap, unlabeled interaction data -- including discarded off-task trajectories and autonomous robot play -- via a self-supervised Inverse Dynamics objective. A lightweight second stage then grounds these priors in language using minimal expert data. On the SIMPLER benchmark, TAP matches models trained on over 1M expert trajectories while using orders of magnitude less labeled data, yielding a 10% absolute gain over standard behavior cloning. On a real-world WidowX platform, TAP retains 25% success under camera perturbations where internet-scale baselines collapse to 0%, demonstrating that task-agnostic pretraining produces robust, transferable physical representations and offers a scalable path forward for Embodied AI.",
-      "url": "https://arxiv.org/abs/2607.02466v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.02466v1",
-      "published": "2026-07-02T17:33:37Z",
-      "updated": "2026-07-02T17:33:37Z",
-      "categories": [
-        "cs.RO",
-        "cs.AI"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2607.02458v1",
-      "title": "Nonholonomic Source Seeking by Torque Tuning: Local and Semi-Global Feedbacks",
-      "authors": [
-        "Bo Wang"
-      ],
-      "abstract": "This paper studies source seeking for a torque-controlled nonholonomic vehicle with a laterally displaced scalar sensor. The vehicle has constant forward speed, while its yaw motion is controlled by torque input with unknown inertia and damping. The objective is to steer the vehicle to a source-centered circular motion so that the lateral sensor approaches the unknown source, without using position, heading, source-location, gradient, or source-value information. The proposed torque law combines a fast oscillatory component, which generates averaged steering through symmetric-product approximation, with a slowly tuned bias component, which selects the desired orbit. Two bias-tuning designs are developed. The first is an output-feedback design using only the scalar measurement; it applies a Lie-bracket extremum-seeking update and yields local practical stability. The second is a velocity-assisted design using forward-speed and yaw-rate measurements; it tunes the bias through the yaw-rate tracking error and yields a globally asymptotically stable averaged system, implying semi-global practical stability of the original system. Simulations illustrate the proposed designs.",
-      "url": "https://arxiv.org/abs/2607.02458v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.02458v1",
-      "published": "2026-07-02T17:24:46Z",
-      "updated": "2026-07-02T17:24:46Z",
+      "abstract": "Modern power systems are increasingly dominated by Inverter-Based Resources (IBR), most of which work in Grid-following (GFL) mode. This implies that they do not directly control their terminal voltage, so the static voltage stability at these buses may be compromised, especially under constant-power-factor operation that lacks voltage-adaptive reactive support. In addition, weather-driven IBR are often installed in electrically remote areas with low Short-Circuit Ratio (SCR), further exacerbating voltage issues. To address this challenge, grid-forming control can be utilized to enhance low-SCR buses, while GFL-IBR could be explicitly required to provide voltage support through grid codes. As an alternative, a market mechanism could be devised that incentivizes relevant generators to proactively adjust their operating points as a service to maintain voltage stability, while the theoretical framework for such a market has not been developed. To fill this gap, this work adopts a second-order cone-based static voltage stability constraint for GFL-IBR buses within a unit commitment problem, and proposes a mechanism to assign shadow prices to this ancillary service. To determine appropriate price values under non-convex conditions, different pricing schemes are assessed. Using a modified IEEE 30-bus system, we demonstrate that both the dispatchable and restricted pricing methods can yield revenue-adequate service prices, though the former may deliver less efficient price signals and the latter may require well-defined uplift payments. This implies that, given differentiated pricing mechanisms and price signals, operators need to select a suitable pricing method in accordance with actual system conditions and market rules.",
+      "url": "https://arxiv.org/abs/2607.05209v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.05209v1",
+      "published": "2026-07-06T15:27:18Z",
+      "updated": "2026-07-06T15:27:18Z",
       "categories": [
         "eess.SY"
       ],
       "primary_category": "eess.SY"
     },
     {
-      "id": "2607.02431v1",
-      "title": "WorldSample: Closed-loop Real-robot RL with World Modelling",
+      "id": "2607.05180v1",
+      "title": "VLM-CASE: Vision-Language Model Enabled Context-Adaptive Safety Envelopes for Anticipatory Safe Autonomous Driving",
       "authors": [
-        "Yuquan Xue",
-        "Le Xu",
-        "Zeyi Liu",
-        "Zhenyu Wu",
-        "Zhengyi Gu",
-        "Xinyang Song",
-        "Bofang Jia",
-        "Ziwei Wang"
+        "Tianjia Yang",
+        "Ke Li",
+        "Ruwen Qin",
+        "Xianbiao Hu"
       ],
-      "abstract": "Reinforcement learning (RL) can overcome the demonstration-coverage limitation of imitation learning (IL) by allowing robots to improve through trial-and-error interaction beyond the states observed in demonstrations. However, deploying RL on real robots remains constrained by high interaction costs, since each physical rollout is costly and reflects only one realized action-outcome path. To address this challenge, we propose WorldSample, a physically grounded data augmentation framework for real-robot RL that closes a real-synthetic loop between physical rollouts, world-model generation, and policy improvement. Grounded on real rollouts, WorldSample generates high-fidelity synthetic transitions through a post-trained world model, which greatly lowers the visual hallucination. Specifically, rather than simply using these transitions as real-world experience, WorldSample introduces Policy-Paced Learning (PPL) to regulate the training process through sample selection and scheduling, balancing useful augmentation against value overestimation and mitigating the hallucination-induced noise. Experiments on robot manipulation tasks involving contact-rich and precise tasks show that WorldSample improves policy success rate by 28% while reducing training steps by 59% compared with baselines. Furthermore, WorldSample improves world model visual fidelity by 19.4dB in PSNR and 0.47 in SSIM over demonstration-only post-training, validating the effectiveness of the real-synthetic loop for both policy and world model performance.",
-      "url": "https://arxiv.org/abs/2607.02431v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.02431v1",
-      "published": "2026-07-02T17:00:37Z",
-      "updated": "2026-07-02T17:00:37Z",
-      "categories": [
-        "cs.RO",
-        "cs.AI"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2607.02417v1",
-      "title": "LIME: Learning Intent-aware Camera Motion from Egocentric Video",
-      "authors": [
-        "Boyang Sun",
-        "Jiajie Li",
-        "Yung-Hsu Yang",
-        "Chenyangguang Zhang",
-        "Tim Engelbracht",
-        "Sunghwan Hong",
-        "Cesar Cadena",
-        "Marc Pollefeys",
-        "Hermann Blum"
-      ],
-      "abstract": "Autonomous robots often need to move their camera before they can act: to inspect an object, reveal an occluded region, or obtain a view that responds to a user's intent. While vision-language navigation translates instructions to base motion and vision-language-action policies map instructions to manipulation actions, language-conditioned camera motion remains comparatively underexplored as a first-class action. We formulate language-conditioned camera motion generation: given a current RGB observation and a free-form natural-language intent, predict a relative target camera pose for the next observation. This task is inherently non-trivial: viewpoint changes are driven by latent perceptual intentions, and a valid motion may operate at different semantic granularity, from entering a room to looking around a corner, inspecting a visible object, or revealing an occluded detail. To model this structure, we mine multi-intention camera-motion supervision from egocentric video, pairing plausible intents and observation-gain descriptions with relative SE(3) target poses. We propose LIME, a vision-language camera-motion generator that combines an auto-regressive observation-gain output with a continuous flow-matching pose head. This design lets the model jointly predict what the next view should reveal while representing multi-hypothesis target views. Across experiments and downstream robotic tasks, we show that LIME can learn to actively choose camera poses from passive human video, turning ordinary egocentric recordings into supervision for intent-aware active perception.",
-      "url": "https://arxiv.org/abs/2607.02417v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.02417v1",
-      "published": "2026-07-02T16:48:43Z",
-      "updated": "2026-07-02T16:48:43Z",
+      "abstract": "Adverse driving conditions, such as bad weather, remain a principal barrier to autonomous driving because they degrade two things at once: what the vehicle can perceive and what it can physically do. Human drivers cope by anticipation, reasoning about the scene and re-budgeting speed, following distance, and steering before grip or sight is lost, whereas current autonomous driving systems at best react after the fact. This paper proposes VLM-CASE, a framework that gives an autonomous vehicle this anticipatory capacity while keeping its motion bounded by a formal safety model at all times. A vision-language model (VLM), fine-tuned with low-rank adaptation (LoRA), reasons about the scene from the front-camera image and reports the road surface and visibility conditions. This output parametrizes a context-adaptive safety envelope (CASE), derived from physical limits and the guarantees of responsibility-sensitive safety, that couples braking and steering through a shared friction budget. A model predictive controller then drives freely within the envelope, while the VLM runs asynchronously so it never blocks the real-time control loop. We validate the framework in closed-loop CARLA simulation on tasks that demand both lateral and longitudinal control, across a range of weather, road-surface, and lighting conditions. The resulting controller, VLM-CASE-MPC, completes all trials, outperforming a conventional MPC baseline and a state-of-the-art VLM-integrated controller. Ablations confirm that the gains come from context adaptation, with the friction and visibility adaptations proving complementary. Furthermore, the framework is controller-agnostic and pairs with almost any low-level controller, offering a promising direction for safe autonomous driving. The dataset and supplementary materials for VLM-CASE are available at https://github.com/ytj254/VLM-CASE.",
+      "url": "https://arxiv.org/abs/2607.05180v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.05180v1",
+      "published": "2026-07-06T14:58:47Z",
+      "updated": "2026-07-06T14:58:47Z",
       "categories": [
         "cs.RO",
         "cs.CV",
-        "cs.LG"
+        "eess.SY"
       ],
       "primary_category": "cs.RO"
     }

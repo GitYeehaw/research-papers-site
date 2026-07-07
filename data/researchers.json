@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-07-06T12:16:23.903896+00:00",
+  "scraped_at": "2026-07-07T11:20:55.687646+00:00",
   "researcher_count": 54,
   "researchers": [
     {
@@ -373,6 +373,32 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2607.02834v1",
+          "title": "On the Design Space of Discrete Diffusion Online Adaptation for Molecular Optimization",
+          "authors": [
+            "Trevor Chen",
+            "Ariel Dai",
+            "Jason Yang",
+            "Riccardo De Santi",
+            "Daniel Khalil",
+            "Wenda Chu",
+            "Nate Gruver",
+            "Pranav Murugan",
+            "Alexander F. G. Goldberg",
+            "Maruan Al-Shedivat",
+            "Yisong Yue"
+          ],
+          "abstract": "Molecular optimization often starts from a pretrained generative model that captures a broad prior over valid molecular structures. At test time, however, the goal is not to sample from this prior, but to use a limited oracle budget to shift generation toward task-specific high-reward molecules. We study this adaptation problem for discrete diffusion models. Each online round couples several choices. The loop must decide which candidates to evaluate, how rewards become model updates, which feedback to reuse, and how far to move beyond the pretrained prior. These choices have mostly been studied in isolation, leaving open whether they complement one another, become redundant, or interfere inside a full online adaptation loop. We conduct controlled studies across six small-molecule binding-affinity tasks and three protein-fitness tasks. We find that acquisition, reward shaping, and model debiasing provide complementary routes to higher reward, especially for small molecules. Replay further stabilizes learning, while validity penalties keep small-molecule exploration on the valid molecular manifold. Together, these findings point to a practical recipe for feedback-efficient molecular optimization: online fine-tuning with acquisition, reward shaping, debiasing, replay, and validity control. This recipe outperforms offline fine-tuning and inference-time search baselines under matched oracle-call budgets and GPU-hour accounting. The gains are largest when high-reward candidates require larger shifts from the pretrained prior.",
+          "url": "https://arxiv.org/abs/2607.02834v1",
+          "pdf_url": "https://arxiv.org/pdf/2607.02834v1",
+          "published": "2026-07-03T00:06:31Z",
+          "updated": "2026-07-03T00:06:31Z",
+          "categories": [
+            "cs.LG"
+          ],
+          "primary_category": "cs.LG"
+        },
+        {
           "id": "2606.22346v1",
           "title": "Flow Annealing Posterior Sampling for Function-Space Regression and Inverse Problems",
           "authors": [
@@ -457,29 +483,6 @@
             "cs.AI"
           ],
           "primary_category": "cs.AI"
-        },
-        {
-          "id": "2605.00503v2",
-          "title": "End-to-End Autoregressive Image Generation with 1D Semantic Tokenizer",
-          "authors": [
-            "Wenda Chu",
-            "Bingliang Zhang",
-            "Jiaqi Han",
-            "Yizhuo Li",
-            "Linjie Yang",
-            "Yisong Yue",
-            "Qiushan Guo"
-          ],
-          "abstract": "Autoregressive image modeling relies on visual tokenizers to compress images into compact latent representations. We design an end-to-end training pipeline that jointly optimizes reconstruction and generation, enabling direct supervision from generation results to the tokenizer. This contrasts with prior two-stage approaches that train tokenizers and generative models separately. We further investigate leveraging vision foundation models to improve 1D tokenizers for autoregressive modeling. Our autoregressive generative model achieves strong empirical results, including a state-of-the-art FID score of 1.48 without guidance on ImageNet 256x256 generation.",
-          "url": "https://arxiv.org/abs/2605.00503v2",
-          "pdf_url": "https://arxiv.org/pdf/2605.00503v2",
-          "published": "2026-05-01T08:25:51Z",
-          "updated": "2026-05-04T10:19:31Z",
-          "categories": [
-            "cs.CV",
-            "cs.LG"
-          ],
-          "primary_category": "cs.CV"
         }
       ]
     },
@@ -1076,6 +1079,23 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2607.04367v1",
+          "title": "A Perception-Manipulation Robotics System for Food Cutting",
+          "authors": [
+            "Xinyuan Luo",
+            "Wenzhen Yuan"
+          ],
+          "abstract": "In the development of cooking robots, mastering the task of cutting is crucial. A significant challenge lies in the diverse properties of food, which necessitate distinct cutting policies and even different knives for optimal processing. This paper presents a perception-manipulation framework for food-cutting tasks. Our system features a knife selection module that utilizes force data from a preliminary fixed trial cut to select the appropriate knife for the given food. This is followed by an adaptive cutting phase using reinforcement learning (RL) to balance cutting speed and energy efficiency. In our experiments, the knife selection module achieved 100% successful rate on unseen food, and we compared the performances of fixed policy, RL policy, with human operators. Our method not only achieves high performance but also demonstrates comparable results to those of human participants.",
+          "url": "https://arxiv.org/abs/2607.04367v1",
+          "pdf_url": "https://arxiv.org/pdf/2607.04367v1",
+          "published": "2026-07-05T15:51:13Z",
+          "updated": "2026-07-05T15:51:13Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2606.22437v2",
           "title": "MMGist: A Comprehensive Multimodal Benchmark for 2027",
           "authors": [
@@ -1158,27 +1178,6 @@
             "cs.AI"
           ],
           "primary_category": "cs.AI"
-        },
-        {
-          "id": "2604.08945v1",
-          "title": "TouchAnything: Diffusion-Guided 3D Reconstruction from Sparse Robot Touches",
-          "authors": [
-            "Langzhe Gu",
-            "Hung-Jui Huang",
-            "Mohamad Qadri",
-            "Michael Kaess",
-            "Wenzhen Yuan"
-          ],
-          "abstract": "Accurate object geometry estimation is essential for many downstream tasks, including robotic manipulation and physical interaction. Although vision is the dominant modality for shape perception, it becomes unreliable under occlusions or challenging lighting conditions. In such scenarios, tactile sensing provides direct geometric information through physical contact. However, reconstructing global 3D geometry from sparse local touches alone is fundamentally underconstrained. We present TouchAnything, a framework that leverages a pretrained large-scale 2D vision diffusion model as a semantic and geometric prior for 3D reconstruction from sparse tactile measurements. Unlike prior work that trains category-specific reconstruction networks or learns diffusion models directly from tactile data, we transfer the geometric knowledge encoded in pretrained visual diffusion models to the tactile domain. Given sparse contact constraints and a coarse class-level description of the object, we formulate reconstruction as an optimization problem that enforces tactile consistency while guiding solutions toward shapes consistent with the diffusion prior. Our method reconstructs accurate geometries from only a few touches, outperforms existing baselines, and enables open-world 3D reconstruction of previously unseen object instances. Our project page is https://grange007.github.io/touchanything .",
-          "url": "https://arxiv.org/abs/2604.08945v1",
-          "pdf_url": "https://arxiv.org/pdf/2604.08945v1",
-          "published": "2026-04-10T04:26:36Z",
-          "updated": "2026-04-10T04:26:36Z",
-          "categories": [
-            "cs.CV",
-            "cs.RO"
-          ],
-          "primary_category": "cs.CV"
         }
       ]
     },
@@ -2974,6 +2973,34 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2607.05391v1",
+          "title": "LLM-as-a-Verifier: A General-Purpose Verification Framework",
+          "authors": [
+            "Jacky Kwok",
+            "Shulu Li",
+            "Pranav Atreya",
+            "Yuejiang Liu",
+            "Yixing Jiang",
+            "Chelsea Finn",
+            "Marco Pavone",
+            "Ion Stoica",
+            "Azalia Mirhoseini"
+          ],
+          "abstract": "Scaling pre-training, post-training, and test-time compute have become the central paradigms for improving the capabilities of LLMs. In this work, we identify verification, the ability to determine the correctness of a solution, as a new scaling axis. To unlock this and demonstrate its effectiveness, we introduce LLM-as-a-Verifier, a general-purpose verification framework that provides fine-grained feedback for agentic tasks without requiring additional training. Unlike standard LM judges that prompt LLMs to produce discrete scores for candidate solutions, LLM-as-a-Verifier computes the expectation over the distribution of scoring token logits to generate continuous scores. This probabilistic formulation enables verification to scale along multiple dimensions: (1) score granularity, (2) repeated evaluation, and (3) criteria decomposition. In particular, we show that scaling the scoring granularity leads to better separation between positive and negative solutions, resulting in more calibrated comparisons. Moreover, scaling repeated evaluation and criteria decomposition consistently lead to additional gains in verification accuracy through variance and complexity reduction. We further introduce a cost-efficient ranking algorithm for selecting the best solution among candidates using the verifier's continuous scores. LLM-as-a-Verifier achieves state-of-the-art performance on Terminal-Bench V2 (86.5%), SWE-Bench Verified (78.2%), RoboRewardBench (87.4%), and MedAgentBench (73.3%). Beyond verification, the fine-grained signals from LLM-as-a-Verifier can also serve as a proxy for estimating task progress. We build an extension for Claude Code, enabling developers to monitor and improve their own agentic systems. Finally, we show that LLM-as-a-Verifier can provide dense feedback for RL, improving the sample efficiency of SAC and GRPO on robotics and mathematical reasoning benchmarks.",
+          "url": "https://arxiv.org/abs/2607.05391v1",
+          "pdf_url": "https://arxiv.org/pdf/2607.05391v1",
+          "published": "2026-07-06T17:59:35Z",
+          "updated": "2026-07-06T17:59:35Z",
+          "categories": [
+            "cs.AI",
+            "cs.CL",
+            "cs.LG",
+            "cs.MA",
+            "cs.RO"
+          ],
+          "primary_category": "cs.AI"
+        },
+        {
           "id": "2606.32027v1",
           "title": "Freeform Preference Learning for Robotic Manipulation",
           "authors": [
@@ -3063,27 +3090,6 @@
             "cs.CV"
           ],
           "primary_category": "cs.RO"
-        },
-        {
-          "id": "2606.12352v1",
-          "title": "CHORUS: Decentralized Multi-Embodiment Collaboration with One VLA Policy",
-          "authors": [
-            "Ria Doshi",
-            "Tian Gao",
-            "Annie Chen",
-            "Chelsea Finn",
-            "Jeannette Bohg"
-          ],
-          "abstract": "Multi-robot collaboration allows robots to efficiently take on a wide range of tasks, from moving a couch through a doorway to assembling structures on a construction site. However, achieving such coordination in mobile multi-robot settings remains challenging: centralized methods conditioned on the combined observations of a team scale poorly with team size, and decentralized methods that train one policy per robot often require explicit alignment procedures or information sharing at inference time to overcome partial observability. Our key insight is that the visuomotor priors of pretrained vision-language-action (VLA) models should enable reactive, decentralized collaboration from each robot's local observations alone, without these inference-time assumptions. We propose CHORUS, a framework that adapts a single VLA backbone to control diverse, multi-robot teams. At inference time, each robot runs an independent copy of CHORUS, conditioned only on its own observations and a robot-identifying prompt. In real-world experiments including mobile tape measurement, library book handovers, and laundry basket lifting, CHORUS achieves a 64% point improvement over decentralized, from-scratch models, improves reactivity to teammate behavior by 40% points, and outperforms centralized baselines. Together, these results show that a shared VLA backbone is capable of achieving decentralized multi-robot collaboration, without per-robot policies or inter-robot communication at inference.",
-          "url": "https://arxiv.org/abs/2606.12352v1",
-          "pdf_url": "https://arxiv.org/pdf/2606.12352v1",
-          "published": "2026-06-10T17:26:08Z",
-          "updated": "2026-06-10T17:26:08Z",
-          "categories": [
-            "cs.RO",
-            "cs.AI"
-          ],
-          "primary_category": "cs.RO"
         }
       ]
     },
@@ -3096,7 +3102,7 @@
       "paper_count": 5,
       "papers": [
         {
-          "id": "2606.28276v1",
+          "id": "2606.28276v2",
           "title": "SimFoundry: Modular and Automated Scene Generation for Policy Learning and Evaluation",
           "authors": [
             "Nadun Ranawaka",
@@ -3119,10 +3125,10 @@
             "Yuke Zhu"
           ],
           "abstract": "Training and evaluating robot policies in the real world is costly and difficult to scale. We introduce SimFoundry, a modular and automated system for zero-shot real-to-sim scene construction from a video. SimFoundry generates sim-ready digital twins and supports object, scene, and task editing, enabling the automated generation of diverse digital cousins: affordance-preserving variations of reconstructed real-world scenes. Policies trained on SimFoundry data transfer zero-shot to challenging real tasks involving multi-step manipulation, articulated object interaction, and bimanual interaction, and its digital cousins (variations of the original scene, objects, and tasks) facilitate generalization to new real-world conditions. Across 7 manipulation tasks and 5 policy architectures, SimFoundry simulation evaluations strongly predict real-world performance, with mean Pearson correlation 0.911 and mean maximum ranking violation 0.018. When evaluating sim-trained policies zero-shot in the real world, policies trained with object, scene, and task cousins in simulation show average task success rate improvements of 17%, 21%, and 40%, respectively. Additional details at https://research.nvidia.com/labs/gear/simfoundry/ .",
-          "url": "https://arxiv.org/abs/2606.28276v1",
-          "pdf_url": "https://arxiv.org/pdf/2606.28276v1",
+          "url": "https://arxiv.org/abs/2606.28276v2",
+          "pdf_url": "https://arxiv.org/pdf/2606.28276v2",
           "published": "2026-06-26T17:18:43Z",
-          "updated": "2026-06-26T17:18:43Z",
+          "updated": "2026-07-04T00:42:40Z",
           "categories": [
             "cs.RO"
           ],
@@ -3203,7 +3209,7 @@
           "primary_category": "cs.CV"
         },
         {
-          "id": "2605.29563v3",
+          "id": "2605.29563v4",
           "title": "Planning with the Views",
           "authors": [
             "Kangrui Wang",
@@ -3218,10 +3224,10 @@
             "Manling Li"
           ],
           "abstract": "Can VLMs predict how each camera move changes the view, and plan many such moves ahead? We call this capability view planning, requiring (1)understanding how a single action transforms the view, and (2)composing many such transformations across multi-turn plans to identify a target view. We probe both abilities in our proposed ViewSuite, a 3D point-cloud environment on real ScanNet scenes. Across 13 frontier VLMs, a critical planning gap emerges: they possess basic view-action knowledge but fail to compose it across multi-turn plans, with the gap widening as viewpoint distance grows. To close this gap, we propose an iterative framework that alternates self-exploration with view graph distillation. The key insight is that all exploration trajectories, regardless of their outcome, collectively form a view graph that compactly captures how viewpoints connect across a scene. Distilling this graph into diverse supervised tasks reshapes the policy distribution and overcomes the sparse rewards that stall pure RL. This improves Qwen2.5-VL-7B from 2.5% to 47.8% on interactive view planning, surpassing GPT-5.4 Pro (18.5%) and Gemini 3.1 Pro (21.4%). Self-exploration emerges as a promising path toward VLMs that can actively reason and plan in 3D space. Code and Data are at https://viewsuite.github.io.",
-          "url": "https://arxiv.org/abs/2605.29563v3",
-          "pdf_url": "https://arxiv.org/pdf/2605.29563v3",
+          "url": "https://arxiv.org/abs/2605.29563v4",
+          "pdf_url": "https://arxiv.org/pdf/2605.29563v4",
           "published": "2026-05-28T08:15:23Z",
-          "updated": "2026-06-15T21:22:38Z",
+          "updated": "2026-07-02T21:24:05Z",
           "categories": [
             "cs.AI",
             "cs.CV",
@@ -3706,7 +3712,7 @@
           "primary_category": "cs.RO"
         },
         {
-          "id": "2606.30988v2",
+          "id": "2606.30988v3",
           "title": "Multisensory Continual Learning: Adapting Pretrained Visuomotor Policies to Force",
           "authors": [
             "Jaden Clark",
@@ -3718,11 +3724,11 @@
             "Yifan Hou",
             "Shuran Song"
           ],
-          "abstract": "Robot manipulation often relies on sensory feedback beyond vision, particularly in contact-rich settings where force, tactile, or audio signals reveal interaction states that are not directly observable from images. However, these modalities are often hardware- and task-specific, and large-scale multisensory robot datasets remain scarce. As a result, it is impractical to pretrain policies with every sensor they may encounter. We study multisensory continual learning: adapting a pretrained robot policy to new tasks with newly introduced modalities while preserving performance under the original sensor suite. We propose MuSe, which incorporates limited multisensory data into pretrained vision-only policies through multi-stage fusion, multisensory future prediction, and experience replay over pretraining data. We instantiate MuSe by augmenting a pretrained vision-only policy with force-torque sensing and evaluate it on real-world manipulation tasks. Our experiments show that MuSe performs strongly on contact-rich finetuning tasks while preserving, and in some cases improving, performance on the original pretraining tasks. These results suggest that a modest multisensory dataset can improve general robot capabilities beyond the finetuning distribution. Project website: https://jadenvc.github.io/multisensory-continual-learning/",
-          "url": "https://arxiv.org/abs/2606.30988v2",
-          "pdf_url": "https://arxiv.org/pdf/2606.30988v2",
+          "abstract": "Robot manipulation often relies on sensory feedback beyond vision, particularly in contact-rich settings where force, tactile, or audio signals reveal interaction states that are not directly observable from images. However, these modalities are often hardware- and task-specific, and large-scale multisensory robot datasets remain scarce. As a result, it is impractical to pretrain policies with every sensor they may encounter. We study multisensory continual learning: adapting a pretrained robot policy to new tasks with newly introduced modalities while preserving performance under the original sensor suite. We propose MultiSensory World Model (MuSe), which incorporates limited multisensory data into pretrained vision-only policies through multi-stage fusion, multisensory future prediction, and experience replay over pretraining data. We instantiate MuSe by augmenting a pretrained vision-only policy with force-torque sensing and evaluate it on real-world manipulation tasks. Our experiments show that MuSe performs strongly on contact-rich finetuning tasks while preserving, and in some cases improving, performance on the original pretraining tasks. These results suggest that a modest multisensory dataset can improve general robot capabilities beyond the finetuning distribution. Project website: https://jadenvc.github.io/multisensory-continual-learning/",
+          "url": "https://arxiv.org/abs/2606.30988v3",
+          "pdf_url": "https://arxiv.org/pdf/2606.30988v3",
           "published": "2026-06-29T23:58:07Z",
-          "updated": "2026-07-01T17:50:32Z",
+          "updated": "2026-07-05T18:58:42Z",
           "categories": [
             "cs.RO"
           ],
@@ -3778,6 +3784,74 @@
       "website": "https://goldberg.berkeley.edu/",
       "paper_count": 5,
       "papers": [
+        {
+          "id": "2607.05369v1",
+          "title": "GaP: A Graph-as-Policy Multi-Agent Self-Learning Harness For Variational Automation Tasks",
+          "authors": [
+            "Kaiyuan Chen",
+            "Shuangyu Xie",
+            "Letian Fu",
+            "Justin Yu",
+            "William Pacini",
+            "Sandeep Bajamahal",
+            "Hudson Kim",
+            "Jaimyn Drake",
+            "Daehwa Kim",
+            "Haoru Xue",
+            "Jonathan Francis",
+            "Christian Juette",
+            "Peter Schaldenbrand",
+            "Muhammet Yunus Seker",
+            "Ruwan Wickramarachchi",
+            "Uksang Yoo",
+            "Guanzhi Wang",
+            "Adithyavairavan Murali",
+            "Balakumar Sundaralingam",
+            "S. Shankar Sastry",
+            "Spencer Huang",
+            "Yuke Zhu",
+            "Linxi \"Jim\" Fan",
+            "Ken Goldberg"
+          ],
+          "abstract": "For robots to work reliably in commercial and industrial applications, can recent advances in agentic coding systems combine interpretable robot programming with the open-world adaptability of model-free policies? We focus on \"Variational Automation\" (VA), a class of tasks that have larger variations in object geometry and pose than fixed automation. Model-free policies often struggle to close the reliability gap for VA tasks, which must be executed persistently and reliably in commercial and industrial applications. Motivated by prior work on Task and Motion Planning (TAMP) and the Robot Operating System (ROS), we introduce Graph-as-Policy (GaP), a multi-agent coding harness that generates directed computation graphs with perception, planning, and control nodes from a Modular Open Robot Skill Library (MORSL). GaP then generates an internal simulation environment to rehearse task instances with different graphs in parallel to iteratively refine the graph structure and parameters to improve success rates and throughput. Evaluation with 8 new open VA task benchmarks, 4 in-simulation and 4 in real-world, suggests that GaP can achieve success rates that significantly outperform baselines. Details, code, and data can be found online: https://graph-robots.github.io/gap",
+          "url": "https://arxiv.org/abs/2607.05369v1",
+          "pdf_url": "https://arxiv.org/pdf/2607.05369v1",
+          "published": "2026-07-06T17:47:31Z",
+          "updated": "2026-07-06T17:47:31Z",
+          "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CL",
+            "cs.LG"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2607.04610v1",
+          "title": "RoboVista: Evaluating Vision Language Models for Diverse Robot Applications",
+          "authors": [
+            "Shuangyu Xie",
+            "Kaiyuan Chen",
+            "Ziyang Chen",
+            "Simeon Adebola",
+            "Yixuan Huang",
+            "Zehan Ma",
+            "Tianshuang Qiu",
+            "Wentao Yuan",
+            "Dhruv Shah",
+            "Pannag R. Sanketi",
+            "Ken Goldberg"
+          ],
+          "abstract": "Diverse applications for robotics, such as industry and agriculture, require robots to operate across various embodiments, changing visual conditions, and complex planning. Vision-Language Models (VLMs) offer a promising foundation for general-purpose and interpretable robotic reasoning. Aligning VLMs with diverse robot applications requires a modular understanding of the individual decision components that underlie robotic behavior. Capturing such structure is challenging for conventional robot benchmarks that are primarily based on teleoperated, end-to-end datasets. We propose Robot Question Answering (RQA), a modular evaluation framework and RoboVista, a benchmark curated from real robotic systems, research papers, and expert annotations. RoboVista contains 474 Visual Question Answering (VQA) instances with human annotated reasoning and covers 39 unique task types in agricultural, industrial, domestic, surgical robotics, autonomous driving, and open robot datasets. Experiments on RoboVista show that state-of-the-art VLMs exhibit substantial gaps. Physical robot experiments suggest strong correlation between RoboVista performance and real-world task execution.",
+          "url": "https://arxiv.org/abs/2607.04610v1",
+          "pdf_url": "https://arxiv.org/pdf/2607.04610v1",
+          "published": "2026-07-06T02:34:56Z",
+          "updated": "2026-07-06T02:34:56Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
         {
           "id": "2607.00272v1",
           "title": "ASPIRE: Agentic /Skills Discovery for Robotics",
@@ -3865,91 +3939,6 @@
             "cs.AI"
           ],
           "primary_category": "cs.AI"
-        },
-        {
-          "id": "2606.19419v1",
-          "title": "Playful Agentic Robot Learning",
-          "authors": [
-            "Junyi Zhang",
-            "Jiaxin Ge",
-            "Hanjun Yoo",
-            "Letian Fu",
-            "Zihan Yang",
-            "Yaowei Liu",
-            "Raj Saravanan",
-            "Shaofeng Yin",
-            "Justin Yu",
-            "Dantong Niu",
-            "Zirui Wang",
-            "Roei Herzig",
-            "Ken Goldberg",
-            "Yutong Bai",
-            "David M. Chan",
-            "Ion Stoica",
-            "Angjoo Kanazawa",
-            "Jiahui Lei",
-            "Haiwen Feng",
-            "Trevor Darrell"
-          ],
-          "abstract": "Current agentic robot systems can write executable Code-as-Policy programs, observe feedback, and revise behavior across multiple attempts, but they remain largely task-driven: reusable skills are acquired only after explicit instructions. We study Playful Agentic Robot Learning, where an embodied coding agent uses self-directed play as a continual skill-learning stage before downstream tasks arrive. We introduce RATs, Robotics Agent Teams designed for play-time skill acquisition. During play, RATs proposes novel yet learnable exploratory tasks, plans and executes robot-code policies, verifies intermediate progress, diagnoses failures, retries with dense, step-level feedback, and distills successful executions into a persistent code skill library. At test time, the agent reuses relevant skills from this frozen library to help solve new tasks. Experiments in LIBERO-PRO and MolmoSpaces show that play-learned skills improve held-out downstream tasks over no-play and random-play baselines, with 20.6 and 17.0 percentage-point gains over CaP-Agent0 on LIBERO-PRO and MolmoSpaces, respectively. Moreover, the learned skills can be plugged into other inference-time Code-as-Policy agents by simply retrieving them into the context, improving RoboSuite and real-world transfer by 8.9 and 8.8 points, respectively, without finetuning the underlying model.",
-          "url": "https://arxiv.org/abs/2606.19419v1",
-          "pdf_url": "https://arxiv.org/pdf/2606.19419v1",
-          "published": "2026-06-17T17:55:23Z",
-          "updated": "2026-06-17T17:55:23Z",
-          "categories": [
-            "cs.RO",
-            "cs.AI"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2606.17055v2",
-          "title": "T-Rex: Tactile-Reactive Dexterous Manipulation",
-          "authors": [
-            "Dantong Niu",
-            "Zhuoyang Liu",
-            "Zekai Wang",
-            "Boning Shao",
-            "Zhao-Heng Yin",
-            "Anirudh Pai",
-            "Yuvan Sharma",
-            "Stefano Saravalle",
-            "Ruijie Zheng",
-            "Jing Wang",
-            "Ryan Punamiya",
-            "Mengda Xu",
-            "Yuqi Xie",
-            "Yunfan Jiang",
-            "Letian Fu",
-            "Konstantinos Kallidromitis",
-            "Matteo Gioia",
-            "Junyi Zhang",
-            "Jiaxin Ge",
-            "Haiwen Feng",
-            "Fabio Galasso",
-            "Wei Zhan",
-            "David M. Chan",
-            "Yutong Bai",
-            "Roei Herzig",
-            "Jiahui Lei",
-            "Li Fei-Fei",
-            "Ken Goldberg",
-            "Jitendra Malik",
-            "Pieter Abbeel",
-            "Yuke Zhu",
-            "Danfei Xu",
-            "Linxi Fan",
-            "Trevor Darrell"
-          ],
-          "abstract": "The ability to react dynamically to tactile signals has long been considered crucial to agile human-level dexterity. Yet contemporary learning-based Vision-Language-Action (VLA) models for robotic manipulation generally either overlook the tactile modality or are limited to encoders with static cues, due in part to the scarcity of diverse training data and standardized evaluation, architectural constraints in current VLA models, and limitations of static tactile encoders. In this paper, we push the frontier of tactile-reactive manipulation by addressing all of these limitations. We propose a large-scale, 100-hour tactile-rich dataset collected via a novel, data-efficient recipe that prioritizes elementary motor primitives. To effectively exploit naturally high-frequency touch signals without sacrificing the existing capabilities of existing VLAs, we introduce a variable-rate Mixture-of-Transformers (MoT) architecture equipped with a novel temporal tactile VQ-VAE encoder. We demonstrate the effectiveness of tactile-reactive policies on 12 manipulation tasks requiring delicate force control and deformable object manipulation, achieving over 30% higher average success rate than the strongest baseline.",
-          "url": "https://arxiv.org/abs/2606.17055v2",
-          "pdf_url": "https://arxiv.org/pdf/2606.17055v2",
-          "published": "2026-06-15T17:59:55Z",
-          "updated": "2026-06-18T20:58:46Z",
-          "categories": [
-            "cs.RO"
-          ],
-          "primary_category": "cs.RO"
         }
       ]
     },
@@ -5815,7 +5804,7 @@
           "primary_category": "cs.RO"
         },
         {
-          "id": "2606.19938v2",
+          "id": "2606.19938v3",
           "title": "Triangular Consistency as a Universal Constraint for Learning Optical Flow",
           "authors": [
             "Yi Xiao",
@@ -5826,10 +5815,10 @@
             "Dong Lao"
           ],
           "abstract": "We propose triangular consistency as a first-principled constraint for optical flow, which is agnostic to network architecture, supervision type, and dataset, and applies to both image-pair and multi-frame settings. This simple but powerful constraint is to compose two flows to induce a third flow and enforce consistency among the three. The composed flows may arise from (i) image pairs, yielding cycle consistency; (ii) multiple video frames, producing longer-range motion through temporal chaining; or (iii) image pairs combined with controlled synthetic transformations, which becomes data augmentation. This triangular consistency introduces negligible computational overhead and requires no additional annotations. Since it is derived directly from the geometry of optical flow, it does not rely on model-specific assumptions and serves as a ``universal'' plug-and-play component for optical flow training. Experiments show consistent improvement across supervised, unsupervised, and transfer learning settings.",
-          "url": "https://arxiv.org/abs/2606.19938v2",
-          "pdf_url": "https://arxiv.org/pdf/2606.19938v2",
+          "url": "https://arxiv.org/abs/2606.19938v3",
+          "pdf_url": "https://arxiv.org/pdf/2606.19938v3",
           "published": "2026-06-18T08:34:32Z",
-          "updated": "2026-07-01T01:37:02Z",
+          "updated": "2026-07-02T19:40:00Z",
           "categories": [
             "cs.CV",
             "cs.AI"
@@ -6520,18 +6509,18 @@
           "primary_category": "cs.RO"
         },
         {
-          "id": "2508.08983v1",
-          "title": "Rational Inverse Reasoning",
+          "id": "2508.08983v2",
+          "title": "Rational Inverse Reasoning: Few-Shot Imitation by Inferring Intent through Planning",
           "authors": [
             "Ben Zandonati",
             "Tom\u00e1s Lozano-P\u00e9rez",
             "Leslie Pack Kaelbling"
           ],
-          "abstract": "Humans can observe a single, imperfect demonstration and immediately generalize to very different problem settings. Robots, in contrast, often require hundreds of examples and still struggle to generalize beyond the training conditions. We argue that this limitation arises from the inability to recover the latent explanations that underpin intelligent behavior, and that these explanations can take the form of structured programs consisting of high-level goals, sub-task decomposition, and execution constraints. In this work, we introduce Rational Inverse Reasoning (RIR), a framework for inferring these latent programs through a hierarchical generative model of behavior. RIR frames few-shot imitation as Bayesian program induction: a vision-language model iteratively proposes structured symbolic task hypotheses, while a planner-in-the-loop inference scheme scores each by the likelihood of the observed demonstration under that hypothesis. This loop yields a posterior over concise, executable programs. We evaluate RIR on a suite of continuous manipulation tasks designed to test one-shot and few-shot generalization across variations in object pose, count, geometry, and layout. With as little as one demonstration, RIR infers the intended task structure and generalizes to novel settings, outperforming state-of-the-art vision-language model baselines.",
-          "url": "https://arxiv.org/abs/2508.08983v1",
-          "pdf_url": "https://arxiv.org/pdf/2508.08983v1",
+          "abstract": "Humans can learn a new manipulation task from one or two demonstrations and then perform it in a new room, with new objects, under new constraints. Modern robot imitation learning, in contrast, typically needs hundreds to thousands of demonstrations and still degrades under modest shifts in layout, geometry, object set or task constraints. We argue this gap is not just about data, but also about the level of abstraction at which learning occurs; generalization requires inferring the latent intent underlying why a demonstrator behaved in a certain way, rather than reproducing how they moved. We present Rational Inverse Reasoning (RIR), which casts few-shot imitation as inference over latent explanation programs: compact, executable descriptions of intent that map an object-centric scene to a structured task-and-motion-planning (TAMP) specification of goals, subgoals and constraints. A vision-language model proposes candidate programs, and a hierarchical planner supplies a bounded-rational likelihood. By combining VLM program proposals, and planner-grounded feedback, RIR iteratively refines the candidate set to approximate a posterior over concise, executable programs. On a 2D reasoning benchmark and a real Franka FR3, RIR recovers transferable task structure from as little as one demonstration. Generalizing to substantially new layouts and object sets, RIR outperforms VLM-planning baselines that lack explicit rationality and planning-grounded inference, increasing downstream success rate by $34$ and $28$ percentage points in the one- and three-shot settings.",
+          "url": "https://arxiv.org/abs/2508.08983v2",
+          "pdf_url": "https://arxiv.org/pdf/2508.08983v2",
           "published": "2025-08-12T14:49:44Z",
-          "updated": "2025-08-12T14:49:44Z",
+          "updated": "2026-07-03T00:28:09Z",
           "categories": [
             "cs.RO",
             "cs.AI"
@@ -6619,18 +6608,18 @@
           "primary_category": "cs.RO"
         },
         {
-          "id": "2508.08983v1",
-          "title": "Rational Inverse Reasoning",
+          "id": "2508.08983v2",
+          "title": "Rational Inverse Reasoning: Few-Shot Imitation by Inferring Intent through Planning",
           "authors": [
             "Ben Zandonati",
             "Tom\u00e1s Lozano-P\u00e9rez",
             "Leslie Pack Kaelbling"
           ],
-          "abstract": "Humans can observe a single, imperfect demonstration and immediately generalize to very different problem settings. Robots, in contrast, often require hundreds of examples and still struggle to generalize beyond the training conditions. We argue that this limitation arises from the inability to recover the latent explanations that underpin intelligent behavior, and that these explanations can take the form of structured programs consisting of high-level goals, sub-task decomposition, and execution constraints. In this work, we introduce Rational Inverse Reasoning (RIR), a framework for inferring these latent programs through a hierarchical generative model of behavior. RIR frames few-shot imitation as Bayesian program induction: a vision-language model iteratively proposes structured symbolic task hypotheses, while a planner-in-the-loop inference scheme scores each by the likelihood of the observed demonstration under that hypothesis. This loop yields a posterior over concise, executable programs. We evaluate RIR on a suite of continuous manipulation tasks designed to test one-shot and few-shot generalization across variations in object pose, count, geometry, and layout. With as little as one demonstration, RIR infers the intended task structure and generalizes to novel settings, outperforming state-of-the-art vision-language model baselines.",
-          "url": "https://arxiv.org/abs/2508.08983v1",
-          "pdf_url": "https://arxiv.org/pdf/2508.08983v1",
+          "abstract": "Humans can learn a new manipulation task from one or two demonstrations and then perform it in a new room, with new objects, under new constraints. Modern robot imitation learning, in contrast, typically needs hundreds to thousands of demonstrations and still degrades under modest shifts in layout, geometry, object set or task constraints. We argue this gap is not just about data, but also about the level of abstraction at which learning occurs; generalization requires inferring the latent intent underlying why a demonstrator behaved in a certain way, rather than reproducing how they moved. We present Rational Inverse Reasoning (RIR), which casts few-shot imitation as inference over latent explanation programs: compact, executable descriptions of intent that map an object-centric scene to a structured task-and-motion-planning (TAMP) specification of goals, subgoals and constraints. A vision-language model proposes candidate programs, and a hierarchical planner supplies a bounded-rational likelihood. By combining VLM program proposals, and planner-grounded feedback, RIR iteratively refines the candidate set to approximate a posterior over concise, executable programs. On a 2D reasoning benchmark and a real Franka FR3, RIR recovers transferable task structure from as little as one demonstration. Generalizing to substantially new layouts and object sets, RIR outperforms VLM-planning baselines that lack explicit rationality and planning-grounded inference, increasing downstream success rate by $34$ and $28$ percentage points in the one- and three-shot settings.",
+          "url": "https://arxiv.org/abs/2508.08983v2",
+          "pdf_url": "https://arxiv.org/pdf/2508.08983v2",
           "published": "2025-08-12T14:49:44Z",
-          "updated": "2025-08-12T14:49:44Z",
+          "updated": "2026-07-03T00:28:09Z",
           "categories": [
             "cs.RO",
             "cs.AI"

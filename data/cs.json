@@ -2,137 +2,54 @@
   "category": "cs",
   "name": "CS Research",
   "description": "Computer Science \u2014 AI, Machine Learning, NLP, Computer Vision",
-  "scraped_at": "2026-07-06T12:11:06.198532+00:00",
+  "scraped_at": "2026-07-07T11:15:43.203149+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2607.02517v1",
-      "title": "WorldDirector: Building Controllable World Simulators with Persistent Dynamic Memory",
+      "id": "2607.05396v1",
+      "title": "From Fixed to Free Cameras: Calibration-Free View-Robust Vision-Language-Action Model",
       "authors": [
-        "Hanlin Wang",
-        "Hao Ouyang",
-        "Qiuyu Wang",
-        "Wen Wang",
-        "Qingyan Bai",
-        "Ka Leong Cheng",
-        "Yue Yu",
-        "Yixuan Li",
-        "Yihao Meng",
-        "Zichen Liu",
-        "Yanhong Zeng",
-        "Yujun Shen",
-        "Qifeng Chen"
+        "Wenhao Li",
+        "Xueying Jiang",
+        "Quanhao Qian",
+        "Deli Zhao",
+        "Shijian Lu",
+        "Gongjie Zhang",
+        "Ran Xu"
       ],
-      "abstract": "We present WorldDirector, a highly controllable video world model framework designed for persistent dynamic object memory and unrestricted viewpoint exploration. Unlike existing world models that entangle physical dynamics with pixel rendering and rely on continuous visual observation to sustain motion, our framework explicitly decouples semantic motion orchestration from visual generation. By leveraging an LLM to coordinate 3D trajectories with camera movements and subsequently employing these orchestrated trajectories as control signals for video generation, our approach ensures strict physical logic and appearance stability, successfully preserving the exact visual identities of dynamic entities even when they re-enter the scene after prolonged periods out of view. Experimental results demonstrate that our method supports the synthesis of complex and extended events with unprecedented controllability and persistent dynamic object memory. Project Page: https://worlddirector.github.io/",
-      "url": "https://arxiv.org/abs/2607.02517v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.02517v1",
-      "published": "2026-07-02T17:59:59Z",
-      "updated": "2026-07-02T17:59:59Z",
+      "abstract": "Real-world robot deployment rarely maintains the training-stage camera setup, where cameras often experience repositioning or remounting depending on actual scenarios. Existing view-robust Vision-Language-Action (VLA) policies tolerate such camera variations only when the camera extrinsics are explicitly provided, making them fragile and hard to use especially when view robustness is critical. We argue that the policy should not be told where the camera is, but rather figure it out by itself. To this end, we introduce Camera-Centric VLA (CamVLA), a new VLA model that decouples manipulation controls from camera geometry by predicting (i) a camera-centric end-effector action expressed in the local camera frame, and (ii) a 6-DoF hand-eye matrix relating cameras to the robot base. A deterministic geometric transformation composes the two predictions into a robot base-frame action. This disentangles how I should move in pose-independent camera-centric action generation from where I am looking from in camera-perspective geometric grounding. The resulting policy is calibration-free, depth-free, and single-view, requiring only a single monocular RGB image as the visual observation and task instruction at deployment. Evaluations in both simulation and real-world robot data show that CamVLA consistently improves success rates across diverse unseen viewpoints. Project page: https://alibaba-damo-academy.github.io/CamVLA/.",
+      "url": "https://arxiv.org/abs/2607.05396v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.05396v1",
+      "published": "2026-07-06T17:59:59Z",
+      "updated": "2026-07-06T17:59:59Z",
       "categories": [
-        "cs.CV"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2607.02516v1",
-      "title": "Alignment Is All You Need For X-to-4D Generation",
-      "authors": [
-        "Qiaowei Miao",
-        "Kehan Li",
-        "Yawei Luo",
-        "Yi Yang"
-      ],
-      "abstract": "Generative diffusion models excel at synthesizing high-quality images, videos, and 3D content under multimodal control. However, arbitrary user-defined modality-to-4D (X-to-4D) generation remains challenging due to the high cost of constructing diverse datasets and the limited scalability of existing methods. This paper presents Align4D, a flexible framework that translates any-modal input into coherent video-3D pairs, using video to guide 4D motion and 3D data to shape 4D geometry. Align4D introduces three key techniques: (1) Object Distance Alignment, which searches Video-Aligned and Multiview-Aligned Object Distances (VAOD/MAOD), respectively, to reconcile 4D renderings with video and the priors of multiview diffusion models; (2) Motion-Geometry Joint Alignment, which constrains known and unknown views through synchronized video and 3D inputs, ensuring consistent 4D generation; and (3) Asynchronous Optimization, which decouples Gaussian attribute and deformation network training to enhance motion and geometry fidelity. We further propose the X4D dataset, which integrates prompt, image, video, and 3D data for benchmarking. Experiments on X4D and Consistent4D demonstrate that Align4D achieves state-of-the-art quality and consistency in X-to-4D generation. Project page: https://miaoqiaowei.github.io/Align4D/.",
-      "url": "https://arxiv.org/abs/2607.02516v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.02516v1",
-      "published": "2026-07-02T17:59:57Z",
-      "updated": "2026-07-02T17:59:57Z",
-      "categories": [
-        "cs.CV"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2607.02515v1",
-      "title": "PointDiT: Pixel-Space Diffusion for Monocular Geometry Estimation",
-      "authors": [
-        "Haofei Xu",
-        "Rundi Wu",
-        "Philipp Henzler",
-        "Nikolai Kalischek",
-        "Michael Oechsle",
-        "Fabian Manhardt",
-        "Marc Pollefeys",
-        "Andreas Geiger",
-        "Federico Tombari",
-        "Michael Niemeyer"
-      ],
-      "abstract": "State-of-the-art single-image 3D reconstruction methods often rely on complex hybrid architectures and loss functions, or compress geometry into latent spaces in order to leverage pre-trained latent diffusion models. In this work, we show that such architectural overhead and intricate loss formulations are unnecessary. We introduce a minimalist pixel-space Diffusion Transformer, built on a plain ViT, that operates directly on raw 3D point map patches and is conditioned on image tokens from a pre-trained DINOv3. Unlike existing latent diffusion approaches, we train our diffusion backbone entirely from scratch, eliminating the need for point map tokenizers. Despite its simplicity, our approach surpasses complex latent-based diffusion models while remaining significantly simpler than hybrid alternatives. Notably, it produces sharper geometric structure and is more robust in highly ambiguous regions, such as transparent objects.",
-      "url": "https://arxiv.org/abs/2607.02515v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.02515v1",
-      "published": "2026-07-02T17:59:56Z",
-      "updated": "2026-07-02T17:59:56Z",
-      "categories": [
-        "cs.CV"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2607.02514v1",
-      "title": "Distributed Attacks in Persistent-State AI Control",
-      "authors": [
-        "Josh Hills",
-        "Ida Caspary",
-        "Asa Cooper Stickland"
-      ],
-      "abstract": "As AI coding agents become more autonomous, they increasingly ship code iteratively, with the codebase persisting across sessions. This persistence creates a new attack surface: a misaligned or prompt-injected agent can distribute attacks across pull requests (PRs) and time its payload for the PR with the best natural cover. To study the resulting dynamics, we introduce Iterative VibeCoding, a setting for AI control, the study of safely deploying capable but potentially untrusted AI. In Iterative VibeCoding, a coding agent builds software over a sequence of PRs in a persistent codebase while pursuing a covert side task. Our benchmark includes two task families: CLI tools and Flask web services, across 20 total task variations. We use Claude Sonnet 4.5 as the attack agent and GPT-4o as the monitor. We compare gradual attacks, which distribute the side task across PRs, against non-gradual attacks concentrated in a single PR. No single monitor is robust to both: which strategy evades best (success while evading the monitor) depends on the monitor type, so a defender cannot close off both gradual and non-gradual attacks with any one monitor. High evasion (>= 65%) generalizes across model attack agent backends (Sonnet 4.5, Gemini 3.1 Pro, Kimi K2.5), confirming this is a property of the persistent-state attack surface rather than a single model's capability. Evasion also remains high across state-of-the-art monitor models and the gap between gradual and non-gradual evasion widens for more capable models. We introduce a stateful link-tracker monitor that tracks suspicious buildup across PRs. On both task families, it detects gradual attacks substantially better than diff monitors that merely see more accumulated history. Combining this stronger monitor with trajectory monitors in a four-monitor ensemble reduces gradual-attack evasion from 93% under the weakest standard diff monitor to 47%.",
-      "url": "https://arxiv.org/abs/2607.02514v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.02514v1",
-      "published": "2026-07-02T17:59:56Z",
-      "updated": "2026-07-02T17:59:56Z",
-      "categories": [
-        "cs.AI"
-      ],
-      "primary_category": "cs.AI"
-    },
-    {
-      "id": "2607.02513v1",
-      "title": "LACUNA: A Testbed for Evaluating Localization Precision for LLM Unlearning",
-      "authors": [
-        "Matteo Boglioni",
-        "Thibault Rousset",
-        "Siva Reddy",
-        "Marius Mosbach",
-        "Verna Dankers"
-      ],
-      "abstract": "LLMs memorize sensitive training data, including personally identifiable information (PII), creating a pressing need for reliable post hoc removal methods. Unlearning has emerged as a promising solution, with state-of-the-art(SOTA) methods often following a localize-first, unlearn-second paradigm that targets specific model parameters. However, existing benchmarks evaluate unlearning solely at the output level, leaving open the question of whether unlearning truly erases knowledge from a model's parameters or merely obfuscates it, a concern reinforced by the success of resurfacing attacks. To bridge this gap, we introduce LACUNA: the first unlearning testbed with ground-truth parameter-level localization. LACUNA injects PII of synthetic individuals into predefined parameters of 1B and 7B OLMo-based models via masked continual pretraining, enabling direct evaluation of whether unlearning targets the weights responsible for knowledge storage. We use LACUNA to benchmark current SOTA unlearning methods and find that, despite strong output-level performance, existing methods are highly imprecise and susceptible to resurfacing attacks. We further show that when localization is successful, even a simple gradient-based unlearning method achieves strong erasure and robustness to resurfacing attacks, highlighting the importance of precise unlearning. We release LACUNA to complement behavioral evaluations and drive further advances in robust, localization-based unlearning.",
-      "url": "https://arxiv.org/abs/2607.02513v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.02513v1",
-      "published": "2026-07-02T17:59:52Z",
-      "updated": "2026-07-02T17:59:52Z",
-      "categories": [
-        "cs.CL",
+        "cs.CV",
         "cs.AI",
-        "cs.LG"
+        "cs.LG",
+        "cs.RO"
       ],
-      "primary_category": "cs.CL"
+      "primary_category": "cs.CV"
     },
     {
-      "id": "2607.02512v1",
-      "title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
+      "id": "2607.05394v1",
+      "title": "Weak-to-Strong Generalization via Direct On-Policy Distillation",
       "authors": [
-        "Wentao Zhang",
-        "Liliana Hotsko",
-        "Woojeong Kim",
-        "Pengyu Nie",
-        "Stuart Shieber",
-        "Yuntian Deng"
+        "Shiyuan Feng",
+        "Huan-ang Gao",
+        "Haohan Chi",
+        "Hanlin Wu",
+        "Zhilong Zhang",
+        "Zheng Jiang",
+        "Bingxiang He",
+        "Wei-Ying Ma",
+        "Ya-Qin Zhang",
+        "Hao Zhou"
       ],
-      "abstract": "Many everyday programming tasks resist clean rule-based implementation, such as alerting on important log lines, repairing malformed JSON, or ranking search results by intent, and are increasingly outsourced to large language model APIs at the cost of locality, reproducibility, and price. We propose fuzzy-function programming: compiling such a function from a natural-language specification into a compact, locally-executable neural artifact. We instantiate this paradigm with Program-as-Weights (PAW), in which a 4B compiler trained on FuzzyBench, a 10M-example dataset we release, emits parameter-efficient adapters for a frozen, lightweight interpreter. A 0.6B Qwen3 interpreter executing PAW programs matches the performance of direct prompting of Qwen3-32B, while using roughly one fiftieth of the inference memory and running at 30 tokens/s on a MacBook M3. PAW reframes the foundation model from a per-input problem solver into a tool builder: invoked once per function definition, it produces a small reusable artifact whose subsequent calls per function application are cheap and offline.",
-      "url": "https://arxiv.org/abs/2607.02512v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.02512v1",
-      "published": "2026-07-02T17:59:50Z",
-      "updated": "2026-07-02T17:59:50Z",
+      "abstract": "Reinforcement learning with verifiable rewards (RLVR) is a powerful recipe for improving language-model reasoning, but it is expensive to repeat on every new strong model because the target model must generate many rollouts during training. As models scale, post-training itself becomes a bottleneck. We study a weak-to-strong alternative: run RL on a smaller model where rollouts are cheaper, then reuse what that RL run learned to improve a stronger target model. Directly distilling the post-RL weak teacher is not enough, because the teacher's final policy mixes useful RL gains with the limitations of the smaller model. We propose Direct On-Policy Distillation (Direct-OPD), which transfers the teacher's RL-induced policy shift instead. Direct-OPD compares the post-RL teacher with its own pre-RL reference and treats their log-ratio as a dense implicit reward for the student. In plain terms, the checkpoint pair tells us which actions RL made the weak model more or less likely to take, and Direct-OPD applies that signal on the stronger student's own on-policy states. This directly reuses the weak model's RL supervision signal without training an explicit reward model or running sparse-reward RL on the target model. Empirically, Direct-OPD consistently leverages weaker teachers to improve stronger target models; notably, it boosts Qwen3-1.7B from 48.3% to 62.4% on AIME 2024 in just 4 hours on 8 A100 GPUs. It outperforms step-matched direct RL and enables the sequential composition of multiple policy shifts. Our results show that RL outcomes can be reused across model scales as implicit reward signals, not merely as final models to imitate.",
+      "url": "https://arxiv.org/abs/2607.05394v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.05394v1",
+      "published": "2026-07-06T17:59:58Z",
+      "updated": "2026-07-06T17:59:58Z",
       "categories": [
         "cs.LG",
         "cs.AI",
@@ -141,94 +58,200 @@
       "primary_category": "cs.LG"
     },
     {
-      "id": "2607.02510v1",
-      "title": "Online Safety Monitoring for LLMs",
+      "id": "2607.05393v1",
+      "title": "Interpretable Human-Label-Free Deep Learning for Real-Bogus Classification with Uncertainty Quantification",
       "authors": [
-        "Mona Schirmer",
-        "Metod Jazbec",
-        "Alexander Timans",
-        "Christian Naesseth",
-        "Maja Waldron",
-        "Eric Nalisnick"
+        "Rapha\u00ebl Bonnet-Guerrini",
+        "Bruno Sanchez",
+        "Dominique Fouchez",
+        "Benjamin Racine",
+        "Maya Guy",
+        "Mariam Sabalbal",
+        "Manal Yassine",
+        "Vincenzo Piuri"
       ],
-      "abstract": "Despite alignment training, LLMs remain prone to generating unsafe outputs at deployment time. Monitoring outputs online and raising an alarm when safety can no longer be assumed is therefore critical. We study a simple real-time monitor that turns a verifier signal from an external model into an alarm decision by thresholding, with the threshold calibrated via risk control. In experiments on mathematical reasoning and red teaming datasets, we show that this simple design is competitive with more advanced monitors based on sequential hypothesis testing.",
-      "url": "https://arxiv.org/abs/2607.02510v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.02510v1",
-      "published": "2026-07-02T17:59:43Z",
-      "updated": "2026-07-02T17:59:43Z",
+      "abstract": "Time-domain surveys generate many transient candidates, making Real-Bogus classification a critical step in automated discovery pipelines. Reliable labels are costly, while community labels can be noisy and survey-dependent. We aim to develop a Real-Bogus classification framework that can be trained without human-labeled data using injected transients and bogus-dominated survey data, remains robust under strong class contamination, and provides calibrated uncertainty quantification. We combine simulated transient injections with a contaminated survey class and train a dual-network model using asymmetric co-teaching for classes with different label-noise levels. We evaluate performance on a benchmark subset and analyze the learned representation with latent-space visualization tools. For uncertainty quantification (UQ), we compare MC dropout and deep ensembles and propose a low-cost hybrid strategy that exploits the dual-network setting to improve calibration. We extend the evaluation to the light-curve domain to assess recovery of light-curve classes. The method achieves strong Real-Bogus performance on the labeled subset and remains stable under severe class contamination. It recovers transient light-curve classes with high fidelity, while single-source identification is limited by ambiguity in light-curve-derived labels. Our hybrid UQ approach achieves competitive calibration relative to more expensive ensemble baselines. Latent-space analyses indicate that uncertainty aligns with the decision boundary and reveal subclasses within the bogus population. Our results show that injection-driven, weakly supervised training can enable scalable and consistent Real-Bogus classification without human-labeled training data while providing calibrated uncertainties. The method is suited for transfer to forthcoming surveys by re-running the injection-based training pipeline.",
+      "url": "https://arxiv.org/abs/2607.05393v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.05393v1",
+      "published": "2026-07-06T17:59:58Z",
+      "updated": "2026-07-06T17:59:58Z",
       "categories": [
+        "astro-ph.IM",
+        "astro-ph.GA",
+        "astro-ph.HE",
         "cs.AI",
-        "cs.CL",
-        "cs.LG",
-        "stat.AP",
-        "stat.ML"
+        "cs.LG"
       ],
-      "primary_category": "cs.AI"
+      "primary_category": "astro-ph.IM"
     },
     {
-      "id": "2607.02509v1",
-      "title": "ReContext: Recursive Evidence Replay as LLM Harness for Long-Context Reasoning",
+      "id": "2607.05392v1",
+      "title": "SynCity 3000: Bootstrapping Scene-Scale 3D Diffusion",
       "authors": [
-        "Yanjun Zhao",
-        "Ruizhong Qiu",
-        "Tianxin Wei",
-        "Yuanchen Bei",
-        "Zhining Liu",
-        "Lingjie Chen",
-        "Ismini Lourentzou",
-        "Hanghang Tong",
-        "Jingrui He"
+        "Paul Engstler",
+        "Iro Laina",
+        "Christian Rupprecht",
+        "Andrea Vedaldi"
       ],
-      "abstract": "Understanding and reasoning over long contexts has become a key requirement for deploying large language models (LLMs) in realistic applications. Although recent LLMs support increasingly long context windows, they often fail to use relevant evidence that is already present in the input, revealing a gap between context access and effective context utilization. In this work, we propose Recursive Evidence Replay as LLM Harness for Long-Context Reasoning (RECONTEXT), a training-free inference method for improving long-context reasoning. RECONTEXT uses model-internal relevance signals to construct a query-conditioned evidence pool and replays it before final generation while preserving the full original context. This recursive selection process separates evidence organization from answer generation without training, external memory, or context pruning. We also provide a theoretical analysis based on associative memory, which characterizes the context as a memory store, the question as a retrieval cue, attention as cue-trace association, and replay as trace reactivation. Experiments on eight long-context datasets with 128K context length show that RECONTEXT consistently improves evidence utilization across Qwen3-4B, Qwen3-8B, and Llama3-8B, achieving the best average rank on all three backbones. Code is available at https://github.com/Yanjun-Zhao/ReContext.",
-      "url": "https://arxiv.org/abs/2607.02509v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.02509v1",
-      "published": "2026-07-02T17:59:26Z",
-      "updated": "2026-07-02T17:59:26Z",
-      "categories": [
-        "cs.AI"
-      ],
-      "primary_category": "cs.AI"
-    },
-    {
-      "id": "2607.02508v1",
-      "title": "From SRA to Self-Flow: Data Augmentation or Self-Supervision?",
-      "authors": [
-        "Dengyang Jiang",
-        "Mengmeng Wang",
-        "Harry Yang",
-        "Jingdong Wang"
-      ],
-      "abstract": "Representation alignment has become an effective way to accelerate diffusion transformer training and improve generation quality. Recent self-alignment methods, such as SRA and Self-Flow, further remove the dependency on external pretrained encoders by constructing alignment within the diffusion model itself. However, the mechanism behind the improvement from SRA to Self-Flow, dual-time scheduling, remains under-examined: Self-Flow attributes its gain to interactions between tokens at different noise levels, where cleaner tokens help infer noisier ones. In this work, we revisit this explanation and ask whether the gain instead comes from data augmentation along the noise dimension. To disentangle these factors, we introduce Attention Separation, which preserves the same dual-timestep input as Self-Flow while blocking attention between tokens assigned to different noise levels. Surprisingly, removing such interaction does not degrade performance and can even improve it, suggesting that the improvement from SRA to Self-Flow mainly comes from data augmentation. Furthermore,We show that Attention Separation itself provides an augmentation effect by splitting a single image into multiple effective training parts to expand the training data. Based on these observations, we combine self-representation alignment with dual-timestep and attention-separation augmentation, and demonstrate the effectiveness of this design on ImageNet.",
-      "url": "https://arxiv.org/abs/2607.02508v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.02508v1",
-      "published": "2026-07-02T17:59:25Z",
-      "updated": "2026-07-02T17:59:25Z",
+      "abstract": "We present SynCity 3000, a framework for generating 3D scenes that are globally coherent while enabling fine-grained layout control. Building on the ability of current image-to-3D generators to produce complex 3D assets from a single image, we extend this capability to the scale of entire scenes by adapting the generator to be applicable as a convolutional operator. We achieve this by fine-tuning the model on scene-like data generated by a new synthetic data engine, which we propose to address the scarcity of 3D scene data for training. The convolutional generator is then applied to a dimetric image of the entire scene, generated from the user prompt, resulting in 3D scenes of arbitrary size and complexity. Across diverse prompts and layouts, SynCity 3000 produces large, coherent, and detailed scenes, addressing the shortcomings of prior approaches to 3D scene generation.",
+      "url": "https://arxiv.org/abs/2607.05392v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.05392v1",
+      "published": "2026-07-06T17:59:35Z",
+      "updated": "2026-07-06T17:59:35Z",
       "categories": [
         "cs.CV"
       ],
       "primary_category": "cs.CV"
     },
     {
-      "id": "2607.02507v1",
-      "title": "What LLM Agents Say When No One Is Watching: Social Structure and Latent Objective Emergence in Multi-Agent Debates",
+      "id": "2607.05391v1",
+      "title": "LLM-as-a-Verifier: A General-Purpose Verification Framework",
       "authors": [
-        "Arman Ghaffarizadeh",
-        "Danyal Mohaddes",
-        "Aliakbar Izadkhah",
-        "Shahriar Noroozizadeh"
+        "Jacky Kwok",
+        "Shulu Li",
+        "Pranav Atreya",
+        "Yuejiang Liu",
+        "Yixing Jiang",
+        "Chelsea Finn",
+        "Marco Pavone",
+        "Ion Stoica",
+        "Azalia Mirhoseini"
       ],
-      "abstract": "LLM agents will increasingly act in socially structured settings where role, audience, and relational context can shape what is advantageous or costly to say. We study whether such social structure, without any explicit objective in the prompt, changes what an agent expresses publicly relative to an off-the-record (OTR) channel elicited under the same condition. We introduce a dual-channel debate framework in which agents produce public utterances that enter the shared history alongside OTR responses that are recorded but never shown to the other participant. Across 10 models, 3 scenarios, and 5 variations within each scenario, alignment-inducing settings produce systematic public-OTR divergence in the targeted agent, with its decision divergence rising from a $\\sim$3% baseline to roughly 40%. The effect is consistent across four aggregate analyses: stance, semantic similarity, natural language inference, and survey responses. In some cases, the OTR response explicitly attributes public accommodation to relational pressures, such as career risk or sponsorship obligation. The findings suggest that agent evaluation should extend beyond explicit goals and detect emergent objectives. We present a dual-channel evaluation framework and complementary behavioral measures that operationalize this assessment.",
-      "url": "https://arxiv.org/abs/2607.02507v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.02507v1",
-      "published": "2026-07-02T17:59:23Z",
-      "updated": "2026-07-02T17:59:23Z",
+      "abstract": "Scaling pre-training, post-training, and test-time compute have become the central paradigms for improving the capabilities of LLMs. In this work, we identify verification, the ability to determine the correctness of a solution, as a new scaling axis. To unlock this and demonstrate its effectiveness, we introduce LLM-as-a-Verifier, a general-purpose verification framework that provides fine-grained feedback for agentic tasks without requiring additional training. Unlike standard LM judges that prompt LLMs to produce discrete scores for candidate solutions, LLM-as-a-Verifier computes the expectation over the distribution of scoring token logits to generate continuous scores. This probabilistic formulation enables verification to scale along multiple dimensions: (1) score granularity, (2) repeated evaluation, and (3) criteria decomposition. In particular, we show that scaling the scoring granularity leads to better separation between positive and negative solutions, resulting in more calibrated comparisons. Moreover, scaling repeated evaluation and criteria decomposition consistently lead to additional gains in verification accuracy through variance and complexity reduction. We further introduce a cost-efficient ranking algorithm for selecting the best solution among candidates using the verifier's continuous scores. LLM-as-a-Verifier achieves state-of-the-art performance on Terminal-Bench V2 (86.5%), SWE-Bench Verified (78.2%), RoboRewardBench (87.4%), and MedAgentBench (73.3%). Beyond verification, the fine-grained signals from LLM-as-a-Verifier can also serve as a proxy for estimating task progress. We build an extension for Claude Code, enabling developers to monitor and improve their own agentic systems. Finally, we show that LLM-as-a-Verifier can provide dense feedback for RL, improving the sample efficiency of SAC and GRPO on robotics and mathematical reasoning benchmarks.",
+      "url": "https://arxiv.org/abs/2607.05391v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.05391v1",
+      "published": "2026-07-06T17:59:35Z",
+      "updated": "2026-07-06T17:59:35Z",
       "categories": [
         "cs.AI",
         "cs.CL",
         "cs.LG",
-        "cs.MA"
+        "cs.MA",
+        "cs.RO"
       ],
       "primary_category": "cs.AI"
+    },
+    {
+      "id": "2607.05390v1",
+      "title": "Deform360: A Massive Multi-view Visuotactile Dataset for Deformable World Models",
+      "authors": [
+        "Hongyu Li",
+        "Wanjia Fu",
+        "Xiaoyan Cong",
+        "Zekun Li",
+        "Binghao Huang",
+        "Hanxiao Jiang",
+        "Xintong He",
+        "Yiqing Liang",
+        "Rao Fu",
+        "Tao Lu",
+        "Srinath Sridhar",
+        "Kevin A. Smith",
+        "George Konidaris",
+        "Yunzhu Li"
+      ],
+      "abstract": "Predicting object dynamics (i.e., world modeling) is a fundamental challenge for robotic manipulation, and modeling deformable objects presents a particularly difficult case due to their high-dimensional state spaces and complex material properties. While current world models approach this through two distinct paradigms: learning the dynamics over the 2D pixel space or more explicit 3D geometric space. A systematic understanding of their relative strengths and limitations remains elusive due to the lack of diverse, large-scale real-world data. To address this, we present Deform360, a large-scale visuotactile dataset featuring 198 daily-life objects, 1,980 interaction sequences, and over 215 hours of observations from 41 surround-view cameras and bimanual tactile grippers to capture both global motion and contact-induced local deformations. Leveraging a novel markerless visuotactile 3D tracking pipeline to extract dense geometry and motion, we systematically evaluate current state-of-the-art world models, comparing 2D video models against 3D particle models. Finally, we provide a preliminary demonstration indicating the real-world applicability of our dataset by performing robot planning tasks on deformable objects. Our analysis reveals key insights into the trade-offs between structural priors and scalability, providing a solid benchmark for future research in generalizable deformable object-centric world modeling. Project website: https://deform360.lhy.xyz",
+      "url": "https://arxiv.org/abs/2607.05390v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.05390v1",
+      "published": "2026-07-06T17:59:18Z",
+      "updated": "2026-07-06T17:59:18Z",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2607.05389v1",
+      "title": "InFlux++: Real and Synthetic Data for Estimating Dynamic Camera Intrinsics",
+      "authors": [
+        "Erich Liang",
+        "Caleb Kha-Uong",
+        "Chinmaya Saran",
+        "Sreemanti Dey",
+        "David W. Liu",
+        "Junhan Ouyang",
+        "Benjamin Zhou",
+        "Jia Deng"
+      ],
+      "abstract": "Camera intrinsics are vital for recovering 3D structure from 2D video. However, most 3D algorithms assume fixed intrinsics throughout a video, an assumption that often fails for real-world in-the-wild videos. Consequently, estimating per-frame intrinsics from RGB images is critical for making 3D methods robust to videos with dynamic intrinsics. InFlux previously advanced this research direction by establishing the first real-world benchmark with per-frame ground truth intrinsics for dynamic intrinsics videos. Nevertheless, existing methods remain inaccurate due to two obstacles: (i) training data is scarce and lacks intrinsics diversity; and (ii) benchmarks, including InFlux, have limited scene and camera motion diversity, making it difficult to properly evaluate methods. To address both gaps, we present InFlux++, consisting of two components. InFlux++ Synth is a large-scale procedurally generated synthetic video dataset with 441K+ annotated frames from 1841 high-resolution videos, providing accurate per-frame ground truth intrinsics for training dynamic intrinsics prediction models; a subset also includes per-frame pose, depth, and normals. The videos feature rich intrinsics diversity through changes in camera zoom and focus, as well as dynamic objects and realistic rendering effects such as lens distortion and defocus blur. InFlux++ Real is a large-scale real-world benchmark that extends InFlux with 514K+ newly captured frames across 334 high-resolution videos, spanning a wider range of scenes and camera motions. Finetuning existing intrinsics prediction methods on InFlux++ Synth consistently improves focal length estimation across both InFlux++ Real and InFlux, suggesting that synthetic supervision is promising for RGB-based intrinsics prediction. For the dataset, benchmark, code, videos, submission instructions, and live leaderboard, please visit https://influx.cs.princeton.edu/ .",
+      "url": "https://arxiv.org/abs/2607.05389v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.05389v1",
+      "published": "2026-07-06T17:58:33Z",
+      "updated": "2026-07-06T17:58:33Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2607.05382v1",
+      "title": "Search Beyond What Can Be Taught: Evolving the Knowledge Boundary in Agentic Visual Generation",
+      "authors": [
+        "Haozhe Wang",
+        "Weijia Feng",
+        "Jinpeng Yu",
+        "Che Liu",
+        "Ping Nie",
+        "Fangzhen Lin",
+        "Jiaming Liu",
+        "Ruihua Huang",
+        "Jimmy Lin",
+        "Wenhu Chen",
+        "Cong Wei"
+      ],
+      "abstract": "Visual generators excel at rendering, but they confidently fabricate what they do not know. User requests are unbounded, evolving, and deeply long-tailed: new characters, trending entities, post-cutoff events, and more. This world-knowledge bottleneck is structural: generators are trained on fixed corpora, but the visual world is open-ended. We construct SearchGen-20K and SearchGen-Bench, with 20,839 prompts spanning twelve failure categories and twenty-two domains, paired with a pre-executed multimodal SearchGen-Corpus-1M to support offline, reproducible research. On SearchGen-Bench, frontier open generators score only 21 to 28 out of 100, a 40-point collapse invisible to existing benchmarks. The natural remedy is to employ search tools, enabling agentic visual generation. However, we find that naive search fails: it retrieves indiscriminately, injecting noise into prompts the generator already handles. We trace the root cause to a generator-specific, evolving knowledge boundary: the divide between what a generator can internalize through training and what must remain in external context. Although this boundary is hard to specify in advance, we show that it is discoverable through a teach-then-search co-training framework. Even a minimal version of this co-training recipe produces monotonic improvement, laying the foundation for recursive self-improvement in visual generation that can meet world-knowledge-grounded requests. We release the full dataset, co-training corpus, and search corpus as a replayable harness for tool-augmented, world-knowledge-grounded visual generation.",
+      "url": "https://arxiv.org/abs/2607.05382v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.05382v1",
+      "published": "2026-07-06T17:56:12Z",
+      "updated": "2026-07-06T17:56:12Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2607.05381v1",
+      "title": "What Does a Discrete Diffusion Model Learn?",
+      "authors": [
+        "Rodrigo Casado Noguerales",
+        "Bernhard Sch\u00f6lkopf",
+        "Thomas Hofmann",
+        "Aran Raoufi"
+      ],
+      "abstract": "What does a discrete diffusion model learn: a denoiser, a score ratio, or a bridge plug-in predictor? At the level of jump rates, these are one object in different coordinates, and reading a neural network in the wrong coordinate changes the process being trained and sampled. Starting with a rigorous derivation of the continuous-time Markov chain (CTMC) ELBO for any noising process, boundary terms included, we prove the \\emph{Oracle Distance} theorem: the negative ELBO is exactly equal to the data entropy plus the path KL from the oracle reverse process to the learned one, not merely a bound. Its unique optimizer is therefore the conditional expectation of the true reverse jump rate given the current noisy state, and its irreducible cost is the rate at which the forward process $Z_t$ destroys information about the clean data $Z_0$, $-\\tfrac{d}{dt}I(Z_0; Z_t)$, so every noising process shares the same best achievable negative ELBO: the data entropy. For sequences with token-factorizing noise, the oracle projection yields three exact coordinates for the optimizer: denoiser, cavity (bridge plug-in), and score, with closed-form conversions among them. This framework identifies which law each loss in the literature actually optimizes, recovering MDM, UDM, SEDD, and GIDD as special cases; explains why denoiser and cavity coincide for masked diffusion but not for uniform diffusion; proves that a denoiser parameterization makes the uniform ELBO diverge at initialization while the bridge plug-in stays finite; and calibrates ELBO implementations exactly at initialization. Every identity is verified numerically, without approximation, on an exactly solvable model.",
+      "url": "https://arxiv.org/abs/2607.05381v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.05381v1",
+      "published": "2026-07-06T17:56:11Z",
+      "updated": "2026-07-06T17:56:11Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL",
+        "cs.IT",
+        "stat.ML"
+      ],
+      "primary_category": "cs.LG"
+    },
+    {
+      "id": "2607.05380v1",
+      "title": "TabPack: Efficient Hyperparameter Ensembles for Tabular Deep Learning",
+      "authors": [
+        "Yury Gorishniy",
+        "Akim Kotelnikov",
+        "Ivan Rubachev",
+        "Artem Babenko"
+      ],
+      "abstract": "In deep learning for tabular data, efficient ensembles of multilayer perceptrons (MLPs) have recently emerged as effective and practical architectures. Existing methods of this kind use the same hyperparameters for all underlying MLPs, which requires hyperparameter tuning for achieving the best performance. In this work, we introduce TabPack, an efficient MLP ensemble with strong out-of-the-box performance and reduced reliance on traditional tuning. In a single run, TabPack samples and trains many MLPs with different hyperparameters efficiently in parallel and selects ensemble members on the fly during training. Thus, TabPack only requires specifying ranges from which to sample MLP hyperparameter rather than exact hyperparameter values, which naturally demands less precision for good performance. In experiments on medium-to-large public datasets, TabPack with default settings performs on par with extensively tuned prior methods, thus substantially reducing effort and compute resources needed to achieve competitive results on tabular tasks. Notably, running the default TabPack configuration on a modern MacBook took less time than tuning some baselines on an industry-grade GPU.",
+      "url": "https://arxiv.org/abs/2607.05380v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.05380v1",
+      "published": "2026-07-06T17:55:55Z",
+      "updated": "2026-07-06T17:55:55Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG"
     }
   ]
 }
