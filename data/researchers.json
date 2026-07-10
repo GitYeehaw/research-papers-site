@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-07-09T11:19:15.124439+00:00",
+  "scraped_at": "2026-07-10T11:18:08.599710+00:00",
   "researcher_count": 54,
   "researchers": [
     {
@@ -1754,7 +1754,7 @@
       "paper_count": 5,
       "papers": [
         {
-          "id": "2606.16447v1",
+          "id": "2606.16447v2",
           "title": "Training and Evaluating Diffusion Policies with Long Context Lengths",
           "authors": [
             "Abhinav Agarwal",
@@ -1767,11 +1767,11 @@
             "Asuman Ozdaglar",
             "Russ Tedrake"
           ],
-          "abstract": "Imitation learning has enabled highly-dexterous robotic manipulation from RGB observations. Policies trained with these methods, however, typically condition robot actions on only a short history of observations. These policies cannot solve tasks that require memory and can get stuck repeatedly executing the same failing motions. In this work, we first benchmark policy performance as context length is incrementally increased from short to long, across a spectrum of tasks with varying local stability and memory requirements, and in multiple data regimes. To our knowledge, this is the first study to investigate context length in imitation learning at this level of detail. Our results challenge prior claims: naively scaling context length is not as brittle as advertised in literature. With an appropriate conditioning method and denoising backbone (UNet+Cross-Attention), single-task policies achieve high success rates on many tasks in the usual data regime even with naive scaling. Next, we propose a training algorithm to jointly train policies at multiple context lengths, further reducing the sample complexity of long-context learning. Finally, we apply our findings to re-evaluate some previously proposed solutions to long-context imitation learning.",
-          "url": "https://arxiv.org/abs/2606.16447v1",
-          "pdf_url": "https://arxiv.org/pdf/2606.16447v1",
+          "abstract": "Imitation learning has enabled highly-dexterous robotic manipulation from RGB observations. Policies trained with these methods, however, typically condition robot actions on only a short history of observations. These policies cannot solve tasks that require memory and can get stuck repeatedly executing the same failing motions. In this work, we first benchmark policy performance as context length is incrementally increased from short to long, across a spectrum of tasks with varying local stability and memory requirements, and in multiple data regimes. To our knowledge, this is the first study to investigate context length for Diffusion Policies at this level of detail. Our results challenge prior claims: naively scaling context length is not as brittle as advertised in literature. With an appropriate conditioning method and denoising backbone (UNet+Cross-Attention), single-task policies achieve high success rates on many tasks in the usual data regime even with naive scaling. Next, we propose a training algorithm to jointly train policies at multiple context lengths, further reducing the sample complexity of long-context learning. Finally, we apply our findings to re-evaluate some previously proposed solutions to long-context imitation learning.",
+          "url": "https://arxiv.org/abs/2606.16447v2",
+          "pdf_url": "https://arxiv.org/pdf/2606.16447v2",
           "published": "2026-06-15T09:19:34Z",
-          "updated": "2026-06-15T09:19:34Z",
+          "updated": "2026-07-09T08:44:02Z",
           "categories": [
             "cs.RO",
             "cs.AI"
@@ -3275,7 +3275,7 @@
       "paper_count": 5,
       "papers": [
         {
-          "id": "2606.26428v1",
+          "id": "2606.26428v2",
           "title": "Play2Perfect: What Matters in Dexterous Play Pretraining for Precise Assembly?",
           "authors": [
             "Tyler Ga Wei Lum",
@@ -3284,10 +3284,10 @@
             "Jeannette Bohg"
           ],
           "abstract": "Multi-fingered robots promise the speed and dexterity of human hands, yet challenging problems such as precise assembly have remained out of reach. These tasks are contact-rich, making data collection for imitation learning difficult, and sparse-reward, making direct exploration with reinforcement learning (RL) intractable. Consequently, prior work has made progress by structuring the problem with specialized grippers, tool attachments, and environment fixtures. In this work, we argue that before a robot can perfect precise assembly, it must first learn to play. We further ask the question: what factors in the process of learning to play matter for precise assembly? We propose Play2Perfect, an RL framework for task-agnostic pretraining through play on diverse objects and goals, which is then perfected on precise assembly. The goal of play is to acquire reusable manipulation priors, such as grasping, in-hand reorientation and pose reaching. Finetuning then adapts this general prior to assembly, focusing exploration on the final contact-rich, high-precision interactions needed for success. We systematically study key design choices in play pretraining, including object diversity, training objective, trajectory diversity, and goal precision. We show that our prior is 33x more sample-efficient than RL training from scratch, even when provided with dense, multi-stage rewards. We demonstrate zero-shot sim-to-real transfer, achieving 60% success on tight insertions with only 0.5 mm contact clearance, and over 50% success on long-horizon multi-part assembly and screwing.",
-          "url": "https://arxiv.org/abs/2606.26428v1",
-          "pdf_url": "https://arxiv.org/pdf/2606.26428v1",
+          "url": "https://arxiv.org/abs/2606.26428v2",
+          "pdf_url": "https://arxiv.org/pdf/2606.26428v2",
           "published": "2026-06-24T22:39:12Z",
-          "updated": "2026-06-24T22:39:12Z",
+          "updated": "2026-07-09T17:59:45Z",
           "categories": [
             "cs.RO",
             "cs.AI"
@@ -3395,6 +3395,30 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2607.08024v1",
+          "title": "APIVOT: Adaptive Planning with Interleaved Vision-Language Thoughts",
+          "authors": [
+            "Emily Jin",
+            "Joy Hsu",
+            "Yiqing Xu",
+            "Weiyu Liu",
+            "Nick Haber",
+            "Jiajun Wu"
+          ],
+          "abstract": "Long-horizon robot planning requires jointly reasoning over semantic task structure and geometric feasibility. To successfully execute a task, a robot must decompose goals, select task-relevant objects, and sequence actions, while ensuring that plans satisfy spatial constraints such as limited free space and object collisions. In this work, we propose APIVOT, a VLM-based planner that adaptively interleaves language and visual thoughts for long-horizon planning. APIVOT learns to leverage language for semantic reasoning, while using visual thoughts as imagined future states for internal verification of geometric feasibility. On long-horizon kitchen tasks, APIVOT outperforms general-purpose VLMs and prior planning frameworks, achieving the largest gains in spatially constrained settings. We find that APIVOT learns meaningful modality selection behavior, demonstrating that adaptive interleaving of vision-language thoughts improves both planning success and reasoning efficiency.",
+          "url": "https://arxiv.org/abs/2607.08024v1",
+          "pdf_url": "https://arxiv.org/pdf/2607.08024v1",
+          "published": "2026-07-09T01:02:35Z",
+          "updated": "2026-07-09T01:02:35Z",
+          "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG",
+            "cs.RO"
+          ],
+          "primary_category": "cs.CV"
+        },
+        {
           "id": "2606.27187v1",
           "title": "HarmVideoBench: Benchmarking Harmful Video Understanding in Large Multimodal Models",
           "authors": [
@@ -3499,41 +3523,6 @@
             "cs.LG"
           ],
           "primary_category": "cs.RO"
-        },
-        {
-          "id": "2606.18023v1",
-          "title": "LoopCoder-v2: Only Loop Once for Efficient Test-Time Computation Scaling",
-          "authors": [
-            "Jian Yang",
-            "Shawn Guo",
-            "Wei Zhang",
-            "Tianyu Zheng",
-            "Yaxin Du",
-            "Haau-Sing Li",
-            "Jiajun Wu",
-            "Yue Song",
-            "Yan Xing",
-            "Qingsong Cai",
-            "Zelong Huang",
-            "Chuan Hao",
-            "Ran Tao",
-            "Xianglong Liu",
-            "Wayne Xin Zhao",
-            "Mingjie Tang",
-            "Weifeng Lv",
-            "Ming Zhou",
-            "Bryan Dai"
-          ],
-          "abstract": "Looped Transformers scale latent computation by repeatedly applying shared blocks, but sequential looping increases latency and KV-cache memory with the loop count. Parallel loop Transformers (PLT) alleviate this cost through cross-loop position offsets (CLP) and shared-KV gated sliding-window attention, making loop count a practical design choice. We therefore study PLT loop-count selection through a gain--cost view: an extra loop may refine representations, but CLP also introduces a positional mismatch at each loop boundary. We instantiate this study by training LoopCoder-v2, a family of 7B PLT coders with different loop counts, from scratch on 18T tokens, followed by matched instruction tuning and evaluation. Empirically, the two-loop variant delivers broad gains over the non-looped baseline across code generation, code reasoning, agentic software engineering, and tool-use benchmarks, improving SWE-bench Verified from 43.0 to 64.4 points and Multi-SWE from 14.0 to 31.0 points. In contrast, variants with three or more loops regress, revealing a strongly non-monotonic loop-count effect. Our diagnostics show that loop 2 provides the main productive refinement, while later loops yield diminishing, oscillatory updates and reduced representational diversity. Because the CLP-induced mismatch remains roughly fixed as refinement gains shrink, the offset cost increasingly dominates. This gain--cost trade-off explains PLT's saturation at two loops and provides diagnostics for loop-count selection.",
-          "url": "https://arxiv.org/abs/2606.18023v1",
-          "pdf_url": "https://arxiv.org/pdf/2606.18023v1",
-          "published": "2026-06-16T15:03:05Z",
-          "updated": "2026-06-16T15:03:05Z",
-          "categories": [
-            "cs.LG",
-            "cs.AI"
-          ],
-          "primary_category": "cs.LG"
         }
       ]
     },

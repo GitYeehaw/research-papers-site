@@ -2,52 +2,161 @@
   "category": "robotics",
   "name": "Robotics Research",
   "description": "Robotics \u2014 Motion Planning, Control Systems, Human-Robot Interaction, Autonomous Systems",
-  "scraped_at": "2026-07-09T11:14:26.297571+00:00",
+  "scraped_at": "2026-07-10T11:13:20.576911+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2607.07622v1",
-      "title": "Continuous and large-scale: ELEANOR, the soft architected arm inspired by the elephant trunk",
+      "id": "2607.08751v1",
+      "title": "DexVerse: A Modular Benchmark for Multi-Task, Multi-Embodiment Dexterous Manipulation",
       "authors": [
-        "Giovanna A. Naselli",
-        "Anderson B. Nardin",
-        "Seonggun Joe",
-        "Ryan Drinkwater",
-        "Enrico Donato",
-        "Diego Bianchi",
-        "Egidio Falotico",
-        "Michel C. Milinkovitch",
-        "Lucia Beccai"
+        "Yunchao Yao",
+        "Zhuxiu Xu",
+        "Tianqi Zhang",
+        "Zixian Liu",
+        "Sikai Li",
+        "Zhenyu Wei",
+        "Feng Chen",
+        "Dihong Huang",
+        "Kechang Wan",
+        "Chenyang Ma",
+        "Shuqi Zhao",
+        "Shenghua Gao",
+        "Masayoshi Tomizuka",
+        "Yi Ma",
+        "Mingyu Ding"
       ],
-      "abstract": "The elephant trunk is a dexterous and versatile manipulator whose performance is still unmatched in robotics. In previous works, modularity was prioritized and relatively small-scale continuum robots were built. We take the natural proboscis of the *Loxodonta africana* species as a model and propose a different design approach which favors structural continuity and dynamic properties that plausibly emulate those of the natural trunk, while conferring high adaptability to the environment and humans. Instead of targeting prescribed behaviors, we show that a biomimetic design based on the macroscopic properties of the natural system enables elephant-like movements and grasping. We build by 3D printing an 85 cm long, compliant, tapered, volumetrically tessellated continuum arm, which is combined with tendon-driven actuation mimicking the longitudinal and oblique muscles of the natural model. We demonstrate whole-body grasping of objects having different shapes and dimensions and discuss a comparison to the biological trunk highlighting aspects of both biology and robotics.",
-      "url": "https://arxiv.org/abs/2607.07622v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.07622v1",
-      "published": "2026-07-08T16:38:51Z",
-      "updated": "2026-07-08T16:38:51Z",
+      "abstract": "Building general-purpose dexterous manipulation policies requires benchmarks that go beyond isolated tasks to systematically evaluate policies across diverse interaction modes, sensory conditions, and robot embodiments. However, existing benchmarks remain limited in task and data diversity, embodiment coverage, or controllable visual variation, hindering studies of cross-task and cross-embodiment generalization. We present DexVerse, a large-scale and modular benchmark for dexterous manipulation. DexVerse includes 100 tasks spanning a broad range of manipulation skills, including object grasping and relocation, articulated-object interaction, functional tool use, bimanual coordination, non-prehensile control, contact-rich behaviors, multi-goal execution, and long-horizon multi-stage task completion. It supports 3 robot arms and 6 dexterous hands, and is extensible to new tasks, assets, and embodiments. To evaluate visuomotor generalization, DexVerse provides configurable visual variations in textures, background, lighting, and camera viewpoints. We further provide a VR-based teleoperation interface and 3,180 demonstrations with synchronized proprioceptive, RGB, depth, point-cloud, and state observations. We benchmark representative methods, including Diffusion Policy, DP3, OpenVLA, and $\u03c0_{0.5}$, across 19 tasks. Results reveal substantial challenges in task generalization and visuomotor robustness, establishing DexVerse as a promising testbed for general-purpose dexterous manipulation. Project page: https://ycyao216.github.io/DexVerse.site",
+      "url": "https://arxiv.org/abs/2607.08751v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.08751v1",
+      "published": "2026-07-09T17:50:47Z",
+      "updated": "2026-07-09T17:50:47Z",
       "categories": [
         "cs.RO"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2607.07608v1",
-      "title": "Dual Latent Memory in Vision-Language-Action Models for Robotic Manipulation",
+      "id": "2607.08742v1",
+      "title": "ContactMimic: Humanoid Object Interaction via Contact Control",
       "authors": [
-        "Hongyu Qu",
-        "Jianzhe Gao",
-        "Xiaobin Hu",
-        "Shaohuan Yang",
-        "Xinlei Yu",
-        "Rui Yan",
-        "Wenguan Wang",
-        "Xiangbo Shu",
-        "Shuicheng Yan"
+        "Xinyao Li",
+        "Xialin He",
+        "Runpei Dong",
+        "Saurabh Gupta"
       ],
-      "abstract": "Mainstream Vision-Language-Action (VLA) models predict actions primarily from the current observation under a Markovian assumption, thus struggling with long-horizon, temporally dependent tasks. Existing memory-augmented VLAs either expand the observation window or retrieve history from the memory bank as auxiliary policy-side context. However, they leave memory outside the native latent embedding space of VLA reasoning, preventing historical experience from being fluidly interleaved with multimodal reasoning and action formation. To this end, we introduce LaMem-VLA, a latent-memory-native framework that reconstructs historical experience into latent memory tokens and directly interweaves them with VLA reasoning. At its core, LaMem-VLA introduces four coordinated components: (i) a curator that organizes historical experience into two complementary short-term and long-term memory vaults; (ii) a seeker that queries both vaults using the multimodal cognition to retrieve context-relevant evidence; (iii) a condenser that reconstructs the retrieved evidence into compact short-term and long-term latent memory tokens; and (iv) a weaver that injects these memory tokens with the current observation and instruction into one continuous embedding sequence. By representing, retrieving, and consuming historical experience entirely in the same continuous latent space, LaMem-VLA enables memory to directly participate in VLA reasoning and guide action generation under a bounded context. Extensive experiments on SimplerEnv and LIBERO demonstrate the superiority of our LaMem-VLA.",
-      "url": "https://arxiv.org/abs/2607.07608v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.07608v1",
-      "published": "2026-07-08T16:26:06Z",
-      "updated": "2026-07-08T16:26:06Z",
+      "abstract": "Keypoint tracking alone is insufficient for object interaction tasks such as sitting on a chair, wiping a board, or pushing furniture, where the robot can reach the correct pose without making meaningful physical contact with the object. We present CONTACTMIMIC, a learning framework that tracks explicit partlevel binary contact commands alongside keypoint trajectories. CONTACTMIMIC is made possible through the use of contact-following rewards and a trajectory augmentation scheme aimed at breaking the correlations between keypoint trajectories and contact labels. The resulting policy successfully decouples contact behavior from keypoint geometry, and achieves precise physical contact as well as contact-controllability (produce or suppress contact during deployment as desired). Simulation experiments across 10 diverse human-object interaction motions confirm that CONTACTMIMIC exhibits contact controllability that enables it to complete manipulation tasks without task-specific rewards, while also outperforming keypoint-only trackers on contact-relevant tasks. Ablations confirm the necessity of the proposed trajectory augmentation scheme and sim2real deployment validates contact controllability in the real world across 5 different motions. Video results are available on https://lixinyao11.github.io/contactmimic-page/.",
+      "url": "https://arxiv.org/abs/2607.08742v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.08742v1",
+      "published": "2026-07-09T17:42:15Z",
+      "updated": "2026-07-09T17:42:15Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2607.08741v1",
+      "title": "ARDY: Autoregressive Diffusion with Hybrid Representation for Interactive Human Motion Generation",
+      "authors": [
+        "Kaifeng Zhao",
+        "Mathis Petrovich",
+        "Haotian Zhang",
+        "Tingwu Wang",
+        "Siyu Tang",
+        "Davis Rempe"
+      ],
+      "abstract": "Generating realistic 3D human motions in real-time within interactive applications is key for animation, simulation, and humanoid robotics. While recent offline motion generation approaches offer precise control via text and kinematic constraints, they lack the inference speed required for interactive settings. Conversely, existing online methods enable real-time synthesis but often sacrifice controllability or struggle with complex text semantics and long-horizon goals due to limited context windows. In this work, we introduce ARDY, a streaming generation framework that bridges this gap by enabling high-fidelity motion generation controllable via online text prompts and flexible kinematic constraints. ARDY employs a hybrid representation that combines explicit root features with a latent body embedding, balancing precise trajectory control with efficient generative learning. We propose a two-stage autoregressive transformer denoiser that features variable history context and supports conditioning on flexible, long-horizon kinematic constraints. By training on a large-scale motion capture dataset and being directly conditioned on text labels and kinematic constraints sampled from ground truth poses, ARDY natively learns controllable generation that supports online prompting and flexible long-horizon goals. Extensive evaluations on the HumanML3D benchmark and the large-scale, high-fidelity Bones Rigplay dataset demonstrate ARDY's high motion quality and constraint adherence, validating the efficacy of our key architectural decisions. Finally, we demonstrate the method's practical versatility through an interactive demo featuring dynamic text control, diverse keyframe pose constraints, path following, and interactive locomotion control via mouse and keyboard. Supplementary video results, code, and model releases can be found at https://research.nvidia.com/labs/sil/projects/ardy/.",
+      "url": "https://arxiv.org/abs/2607.08741v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.08741v1",
+      "published": "2026-07-09T17:41:49Z",
+      "updated": "2026-07-09T17:41:49Z",
+      "categories": [
+        "cs.GR",
+        "cs.CV",
+        "cs.LG",
+        "cs.RO"
+      ],
+      "primary_category": "cs.GR"
+    },
+    {
+      "id": "2607.08735v1",
+      "title": "Learning Adaptive Solvers for Distributed Factor Graph Optimization on Matrix Lie Groups",
+      "authors": [
+        "Jaeho Shin",
+        "Maani Ghaffari",
+        "Yulun Tian"
+      ],
+      "abstract": "Modern robotic perception increasingly involves large-scale geometric optimization problems distributed across multiple robots or sessions. However, existing distributed solvers often depend on brittle hand tuning and primarily target rigid body pose graphs. To address this, we present DeepCORD, a learning-augmented framework for distributed factor graph optimization on general matrix Lie groups. By unfolding a parallel and accelerated Riemannian optimizer into differentiable iterations, DeepCORD learns a self-supervised feedback policy that dynamically adapts solver parameters according to the optimization phase and communication status. The resulting method enables adaptive distributed optimization over matrix Lie groups under both synchronous and asynchronous communication regimes. Extensive experiments on real-world $\\mathrm{SE}$(3) pose graph optimization and $\\mathrm{SL}$(4) projective submap alignment show that our method achieves lower objective values than existing distributed baselines on most benchmarks across realistic operating scenarios.",
+      "url": "https://arxiv.org/abs/2607.08735v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.08735v1",
+      "published": "2026-07-09T17:35:26Z",
+      "updated": "2026-07-09T17:35:26Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2607.08724v1",
+      "title": "Latent Memory Palace: Reasoning for Control as Autoregressive Variational Inference",
+      "authors": [
+        "Chuning Zhu",
+        "Eva Xu",
+        "Jose Barreiros",
+        "Krishnan Srinivasan",
+        "Paarth Shah",
+        "Abhishek Gupta"
+      ],
+      "abstract": "Human decision-making is highly flexible -- some actions are taken immediately; others require longer deliberation. Language models have exhibited a similar capacity for adaptive \"reasoning.\" However, transferring this capability to continuous control policies has been challenging, as directly reasoning in language space may lack the granularity for spatial understanding and precise motions. In this work, we show that reasoning for control policies can emerge by organizing information in an autoregressive latent space reminiscent of a memory palace, where retrieval is iterative and adaptive. Our method, Latent Memory Palace (LMP), formulates reasoning as variational inference with an autoregressive latent distribution. We derive a latent-space reinforcement learning technique to tractably optimize its variational lower bound. The resulting policy, LMP-$\u03c0$, achieves strong empirical performance in simulation and real-world domains while exhibiting interpretable, adaptive allocation of test-time compute. We further show that the same framework yields a variable-length action tokenizer, LMP-$\\texttt{tok}$, which significantly improves the performance of downstream autoregressive policies. Together, these results present a new perspective on latent reasoning for control through the lens of variational inference.",
+      "url": "https://arxiv.org/abs/2607.08724v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.08724v1",
+      "published": "2026-07-09T17:30:49Z",
+      "updated": "2026-07-09T17:30:49Z",
+      "categories": [
+        "cs.LG",
+        "cs.RO"
+      ],
+      "primary_category": "cs.LG"
+    },
+    {
+      "id": "2607.08639v1",
+      "title": "Native Video-Action Pretraining for Generalizable Robot Control",
+      "authors": [
+        "Qihang Zhang",
+        "Lin Li",
+        "Luyao Zhang",
+        "Shuai Yang",
+        "Yiming Luo",
+        "Shuaiting Li",
+        "Ruilin Wang",
+        "Junke Wang",
+        "Jiahao Shao",
+        "Gangwei Xu",
+        "Jiaming Zhou",
+        "Yishu Shen",
+        "Yudong Jin",
+        "Fangyi Xu",
+        "Shuailei Ma",
+        "Jiaqi Liao",
+        "Guanxing Lu",
+        "Zifan Shi",
+        "Yongkun Wen",
+        "Yujie Zhao",
+        "Weixuan Tang",
+        "Xinyang Wang",
+        "Chaojian Li",
+        "Jiapeng Zhu",
+        "Ka Leong Cheng",
+        "Nan Xue",
+        "Xing Zhu",
+        "Yujun Shen",
+        "Yinghao Xu"
+      ],
+      "abstract": "The advent of video-action models offers a promising path for robot control. Nevertheless, we argue that repurposing video generative models designed for digital content creation is inherently inadequate for physical environments. To bridge this gap, we present LingBot-VA 2.0, a video-action foundation model built from the ground up for embodiment. Four core design principles showcase its evolution from LingBot-VA. (1) Departing from traditional reconstruction-focused VAEs, we introduce a semantic visual-action tokenizer, which aligns visual representations with both semantics and actions, improving instruction following and action precision in subsequent policy learning. (2) Given the strictly causal nature of temporal dynamics, we adopt a causal pretraining paradigm, training from scratch to circumvent the catastrophic forgetting that frequently occurs when adapting bidirectional architectures. (3) To meet the demands of high-frequency inference, our model employs a sparse MoE backbone, expanding model capacity without compromising efficiency. (4) Real-time closed-loop control is realized through an enhanced asynchronous inference scheme, which predicts future latents in parallel with action execution while re-grounding each rollout on the latest observation via learned forward dynamics. Real-world deployment validates LingBot-VA 2.0 as a robust foundation model, as evidenced by its few-shot generalization across complex manipulation tasks.",
+      "url": "https://arxiv.org/abs/2607.08639v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.08639v1",
+      "published": "2026-07-09T16:15:43Z",
+      "updated": "2026-07-09T16:15:43Z",
       "categories": [
         "cs.RO",
         "cs.CV"
@@ -55,165 +164,88 @@
       "primary_category": "cs.RO"
     },
     {
-      "id": "2607.07601v1",
-      "title": "CARLA-GS: Decoupling Representation, Reasoning, and Physics Simulation for Autonomous Driving Corner-Case Synthesis",
+      "id": "2607.08620v1",
+      "title": "A New Human-Likeness and Comfort Index for Robot Movements Along Prescribed Paths",
       "authors": [
-        "Kaicong Huang",
-        "Meng Ma",
-        "Ruimin Ke"
+        "Rosanna Coccaro",
+        "Enrico Ferrentino",
+        "Antonio Parziale",
+        "Angelo Marcelli",
+        "Pasquale Chiacchio"
       ],
-      "abstract": "Safety evaluation for autonomous driving is dominated by rare, safety-critical interactions, motivating simulators that can deliberately synthesize corner cases with photorealistic observations. Corner-case generation is inherently a multi-source problem spanning visual representation, scene reasoning, and vehicle trajectory generation and control. Prior knowledge- and model-based approaches typically focus on scene or trajectory components in isolation, while diffusion-based methods attempt end-to-end generation but still struggle to ensure spatiotemporal consistency and physical realism. To unify these aspects within a single framework, we propose CARLA-GS, a modular corner-case synthesis pipeline that decouples visual representation, semantic reasoning, and physics-based execution while maintaining tight cross-module coupling. Starting from real driving data, we reconstruct an editable gaussian scene with additional geometry-consistent constraints. A multi-agent LLM then performs scene-level reasoning to identify risky interactions and generate intent-level waypoint trajectories, while the low-level motion control is delegated to CARLA, where a PID controller ensures kinematic and dynamic feasibility. The simulated vehicle states are finally re-projected into the gaussian scene for ego-centric rendering. This design enables high-level semantic reasoning, low-level physically executable motion, and photorealistic corner-case generation within a unified pipeline. Experiments on the Waymo Open Dataset show, both quantitatively and qualitatively, that our framework enables controllable corner-case generation and produces photorealistic, spatiotemporally consistent videos aligned with semantic intent and physically feasible motion.",
-      "url": "https://arxiv.org/abs/2607.07601v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.07601v1",
-      "published": "2026-07-08T16:20:19Z",
-      "updated": "2026-07-08T16:20:19Z",
+      "abstract": "As human-robot interaction rapidly spreads in numerous fields, the subject of robot acceptance gains increasing importance. Visual similarity to the human body, as occurs for humanoids, is generally not enough to ensure acceptance in physical interaction, as acceptance directly links to comfort and ergonomics, which are measured in terms of the quality of the robot movement perceived by the human. This paper discusses the connection between comfort and similarity of the robot movement to the human one. By considering the kinematic characterization of human movement, this paper focuses on the time laws of such movements, wherein the end-effector path is prescribed. Based on the lognormality principle for modeling human movements, a human-likeness index is defined and used to provide an a priori characterization of trajectories. Such an index can be used to evaluate the performance of trajectory generation algorithms in producing human-like movements before they are actually executed. For validation purposes, 68 subjects are required to judge their comfort. The results of three experimental campaigns involving a physical interaction with a robot demonstrate a globally consistent trend between the preference in terms of perceived comfort and the distribution of the suggested human-likeness index.",
+      "url": "https://arxiv.org/abs/2607.08620v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.08620v1",
+      "published": "2026-07-09T15:53:51Z",
+      "updated": "2026-07-09T15:53:51Z",
       "categories": [
-        "cs.RO",
-        "cs.AI"
+        "cs.RO"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2607.07600v1",
-      "title": "Approximability of Electrical Distribution Network Reconfiguration for General Graphs",
+      "id": "2607.08578v1",
+      "title": "Robust Dynamic Operating Envelopes in Unbalanced Three-Phase Distribution Systems",
       "authors": [
-        "Christian Wallisch",
-        "Andrea Benigni",
-        "Carsten Hartmann",
-        "Leon Kellerhals"
+        "Wilhiam de Carvalho",
+        "Florin Capitanescu",
+        "Cyril Rasic",
+        "Jean-Fran\u00e7ois Toubeau",
+        "Fran\u00e7ois Vall\u00e9e"
       ],
-      "abstract": "Electrical distribution networks are regional, medium- and low-voltage power grids connecting energy sources to individual households and businesses with given power demands. While these networks contain redundant power lines for reliability, they are typically operated in a radial (spanning tree) configuration by opening and closing switches on the lines. The challenge is to find a spanning tree that minimizes the sum of the resistive power losses: The power loss of a line $e$ is its resistance $r(e)$ times the squared current $f(e)^2$ flowing across the line. We study approximation algorithms for this problem, known as Distribution Network Reconfiguration (DNR). We give an $n$-approximation algorithm and, via a new NP-hardness for planar Balanced Connected Partition with a fixed number of parts, show that no $n^{1-\\varepsilon}$-approximation is possible even on planar graphs unless P $=$ NP, for any $\\varepsilon>0$. Since the approximation hardness holds only if there are many sources, we focus on $k$-DNR with $k$ sources; this is motivated by traditional distribution networks, where oftentimes $k = 1$. For $2$-DNR, we give an approximation lower bound of $\u03a9(\\log^2 n)$ conditioned on P $\\neq$ NP. For $1$-DNR, which is equivalent to finding an uncapacitated confluent flow minimizing the squared Euclidean norm, we prove APX-hardness and give an $\\mathcal{O}(\\sqrt{n})$-approximation for uniform line resistances, answering an open question by Gupta et al. [Math. Program. 2022].",
-      "url": "https://arxiv.org/abs/2607.07600v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.07600v1",
-      "published": "2026-07-08T16:18:17Z",
-      "updated": "2026-07-08T16:18:17Z",
+      "abstract": "This paper proposes a robust optimization formulation to calculate dynamic operating envelopes (DOEs) to safely operate unbalanced three-phase distribution systems. Unlike conventional formulations that satisfy network constraints only at the envelope bound, the robust formulation covers the entire envelope range. We formulate a robust non-linear programming (NLP) problem with the full AC power flow equations, as well as an approximate linear programming (LP) model. Numerical simulations are run with real-world data from Belgium and two different distribution test feeders. The paper compares the conventional approaches with their robust counterparts and examines the trade-off between constraint violation and envelope size as well as accuracy and solve time aspects.",
+      "url": "https://arxiv.org/abs/2607.08578v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.08578v1",
+      "published": "2026-07-09T15:13:36Z",
+      "updated": "2026-07-09T15:13:36Z",
       "categories": [
-        "cs.DS",
-        "eess.SY"
-      ],
-      "primary_category": "cs.DS"
-    },
-    {
-      "id": "2607.07597v1",
-      "title": "Quantum Software Engineering in Practice: FPGA and AI Integration for Quantum Certification",
-      "authors": [
-        "Marcos Guillermo Lammers",
-        "Jos\u00e9 Manuel Su\u00e1rez",
-        "Adri\u00e1n Pousa",
-        "Luis Mariano Bibb\u00f3",
-        "Alejandro Fern\u00e1ndez"
-      ],
-      "abstract": "The emergence of Quantum Software Engineering (QSE) responds to the need for systematic, disciplined, and quantifiable approaches to the development, operation, and maintenance of quantum software. Within this context, quantum computer certification represents a significant challenge: verifying that quantum devices produce valid entangled states despite hardware imperfections, noise, and decoherence. This paper presents QAccCert, a hybrid certification framework developed following QSE principles, demonstrating how heterogeneous technologies like FPGAs and Artificial Intelligence can be integrated for quantum processing. The framework implements entanglement certification through CHSH inequality violation in ideal quantum simulations using Qiskit AerSimulator. Through LLM-guided optimization, the system achieves 99.94% of the theoretical maximum of $2\\sqrt{2}$, evidencing more efficient parameter space exploration than random search. These simulated results illustrate how QSE methodologies, combined with strategic technology interconnection, can be applied for practical and scalable quantum certification on real NISQ hardware in future work. This study provides a concrete case study of systematic quantum software development.",
-      "url": "https://arxiv.org/abs/2607.07597v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.07597v1",
-      "published": "2026-07-08T16:14:07Z",
-      "updated": "2026-07-08T16:14:07Z",
-      "categories": [
-        "quant-ph",
-        "cs.SE",
-        "eess.SY"
-      ],
-      "primary_category": "quant-ph"
-    },
-    {
-      "id": "2607.07594v1",
-      "title": "Koopman Spectral Analysis of Lithium-Ion Battery Dynamics: State of Charge as a Marginally Stable Observable",
-      "authors": [
-        "Bakhtiar Nafis",
-        "Khalid Mahmud Labib",
-        "Saad Waheed",
-        "Shabbir Ahmed"
-      ],
-      "abstract": "Accurate state-of-charge (SOC) estimation remains a fundamental challenge in lithium-ion battery management systems because battery dynamics are highly nonlinear, operating-condition dependent, and sensitive to parameter variations caused by aging and temperature. Conventional model-based estimators, such as equivalent circuit model (ECM) and Kalman-filter-based approaches, rely heavily on repeated parameter identification and accurate electrochemical modeling, whereas purely data-driven methods often sacrifice physical interpretability. This work proposes a Koopman-theoretic, data-driven framework for SOC estimation using Dynamic Mode Decomposition with control (DMDc) combined with Hankel time-delay embedding. Instead of explicitly identifying ECM parameters, the proposed approach reconstructs a lifted dynamical state space directly from measured terminal voltage and current obtained through Hybrid Pulse Power Characterization (HPPC) testing. Spectral decomposition of the identified DMDc operator reveals intrinsic battery dynamics in terms of Koopman modes and eigenvalues. The SOC dynamics naturally emerge as the slowest marginally stable mode whose eigenvalue lies closest to the unit circle, consistent with the integrator-type behavior of charge conservation. The corresponding modal coordinate is subsequently utilized as an SOC-sensitive observable.",
-      "url": "https://arxiv.org/abs/2607.07594v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.07594v1",
-      "published": "2026-07-08T16:13:20Z",
-      "updated": "2026-07-08T16:13:20Z",
-      "categories": [
-        "eess.SY"
+        "eess.SY",
+        "math.OC"
       ],
       "primary_category": "eess.SY"
     },
     {
-      "id": "2607.07574v1",
-      "title": "Context-Aware Force Estimation for Deformable Tool Manipulation in Robotic Environmental Swabbing via Few-Shot Continual Adaptation",
+      "id": "2607.08575v1",
+      "title": "FabriVLA: A Lightweight Vision-Language-Action Model for Precise Multi-Task Manipulation",
       "authors": [
-        "Siavash Mahmoudi",
-        "Chaitainya Kuppar Reddy",
-        "Yang Tian",
-        "Dongyi Wang"
+        "Shiyuan Yang",
+        "Borong Zhang",
+        "Jizheng Zhang",
+        "Zhijia Tao",
+        "Junfei Guo",
+        "Donglai Ran",
+        "Xu Bian",
+        "Qingbiao Li"
       ],
-      "abstract": "Robotic surface swabbing requires sustained interaction between a compliant tool and heterogeneous environments, where accurate estimation of tip-level contact force is critical for consistent sampling performance. However, deformable tool dynamics introduce nonlinear viscoelastic hysteresis that decouples wrist-mounted force measurements from true contact forces, while tool-integrated sensors are impractical for deployment due to sterility and disposability constraints. This paper presents a data-driven framework for contact force estimation in Deformable Tool Manipulation (DTM) that leverages proprioceptive sensing without requiring explicit physical models or permanent embedded sensing hardware at the tool tip. A recurrent architecture is first identified through a comparative evaluation of temporal models, where a compact LSTM achieves the lowest estimation error and sub-millisecond inference latency. To address generalization across unseen surfaces and tool compliance conditions, we introduce a parameter-isolated few-shot adaptation strategy that augments a frozen recurrent backbone with low-dimensional context embeddings using feature-wise linear modulation (FiLM). Experiments on a UR5e platform across nine tool-surface interaction regimes demonstrate that the proposed approach significantly improves robustness under domain shift, reducing zero-shot estimation error by up to 63\\% while preserving baseline performance without catastrophic forgetting. These results show that separating shared deformation-history dynamics from domain-specific conditioning enables reliable force estimation for DTM in non-stationary environments.",
-      "url": "https://arxiv.org/abs/2607.07574v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.07574v1",
-      "published": "2026-07-08T16:01:23Z",
-      "updated": "2026-07-08T16:01:23Z",
+      "abstract": "We present FabriVLA, a lightweight Vision-Language-Action model for Precise Multi-Task Manipulation. FabriVLA combines an InternVL3.5 vision-language backbone with a flow-matching action head featuring gated self-attention across action tokens and shallow VLM layer fusion for enriched spatial context. The model is trained via single stage joint optimization from a pretrained VLM and randomly initialized action head. On the Meta-World MT50 benchmark spanning 50 diverse manipulation tasks, FabriVLA achieves a tier-average success rate of 90.0%, demonstrating that a compact VLA built on a 1B scale VLM can achieve strong performance without relying on multi billion parameter VLA backbones.",
+      "url": "https://arxiv.org/abs/2607.08575v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.08575v1",
+      "published": "2026-07-09T15:06:43Z",
+      "updated": "2026-07-09T15:06:43Z",
       "categories": [
         "cs.RO"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2607.07570v1",
-      "title": "On the Robustness in Data-Driven Nonlinear Optimal Control: From Stability to Optimality",
+      "id": "2607.08550v1",
+      "title": "ESBMC-Arduino: Closing the Deployment Gap for Formal Verification of Open-Hardware PLCs",
       "authors": [
-        "Yicheng Lin",
-        "Zhisheng Duan",
-        "Tianzhi Li",
-        "Bingxian Wu",
-        "Zhiyong Sun"
+        "Pierre Dantas",
+        "Lucas Cordeiro",
+        "Waldir Junior"
       ],
-      "abstract": "In data-driven nonlinear control, optimal controllers designed from learned models are inevitably subject to model mismatch when deployed on actual systems, potentially compromising both closed-loop stability and optimality. This paper investigates how the model mismatch propagates through the optimal control structure and alters the resulting optimality. First, we show that the nominal optimal value function remains a Lyapunov function under a quantifiable criterion, thereby preserving closed-loop robust stability. Building upon this foundation, we establish explicit characterizations for optimality deviations induced by model mismatch in both closed-loop performance and optimal controllers, and then reveal their consistency with classical linear-quadratic results. In addition, the proposed analysis admits a unified computational formulation with a provably convergent iterative algorithm, enabling quantitative assessment of optimality robustness in nonlinear optimal control. Numerical examples validate the theoretical analysis, reveal its intrinsic connection with classical results, and demonstrate its practical computability.",
-      "url": "https://arxiv.org/abs/2607.07570v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.07570v1",
-      "published": "2026-07-08T15:58:57Z",
-      "updated": "2026-07-08T15:58:57Z",
+      "abstract": "OpenPLC, Arduino OPTA, CONTROLLINO, and Industrial Shields M-Duino bring IEC 61131-3 to low-cost microcontrollers used in real automation and industrial control system (ICS) security research. Existing open-source verifiers for IEC 61131-3, including ESBMC-PLC, prove safety over an abstract scan-cycle model with idealized unbounded integers. The board artifact runs on a resource-constrained microcontroller unit (MCU) with 16-bit words (8-bit AVR Arduinos), and sensors are read via a finite-resolution analog-to-digital converter (ADC). We show this deployment gap makes naive width-aware verification unsound: across 123 real programs, checking 16-bit overflow without a hardware input model yields 44% false alarms (54/123) and finds no genuine defects, because it explores sensor values no ADC can produce. Since the gap lies where computation meets the physical process - a bounded sensor reading scaled by finite-width arithmetic into an actuation command - an overflow can silently suppress a safety action, such as a high-level alarm. An unbounded input model fabricates alarms that no environment can trigger. We present hardware-faithful verification for IEC 61131-3 on open hardware: a declarative hardware abstraction layer (HAL) descriptor (width, ADC/PWM resolution, I/O binding) and a sound lowering that interprets arithmetic at target width and constrains inputs to hardware-realizable ranges. We instantiate it for Arduino as ArduinoTool, deriving HAL parameters from official cores and realizing the input-range model in the ESBMC Ladder Diagram (LD) frontend. On the 123-program corpus, the HAL annotator eliminates all 54 false alarms while preserving robustness proofs, and a controlled corpus demonstrates the rare width-dependent defects it detects with realizable witnesses.",
+      "url": "https://arxiv.org/abs/2607.08550v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.08550v1",
+      "published": "2026-07-09T14:42:15Z",
+      "updated": "2026-07-09T14:42:15Z",
       "categories": [
-        "math.OC",
+        "cs.PL",
+        "cs.AR",
         "eess.SY"
       ],
-      "primary_category": "math.OC"
-    },
-    {
-      "id": "2607.07542v1",
-      "title": "SonoRank: Towards Calibration-Free Real-Time Finger Flexion Detection from Forearm Ultrasound Sequences",
-      "authors": [
-        "Dean Zadok",
-        "Alon Wolf",
-        "Alex M. Bronstein",
-        "Oren Salzman"
-      ],
-      "abstract": "Powered prosthetic hands are frequently abandoned, largely due to the limited functionality of current devices that rely on surface electromyography (sEMG). Sonomyography (ultrasound) has emerged as a promising alternative, owing to its ability to observe muscle activity in real time and control a greater number of degrees of freedom. Yet, existing ultrasound-based methods require per-user fine-tuning, limiting their commercialization. We propose SonoRank, an important step towards calibration-free finger flexion detection from forearm ultrasound video. SonoRank first learns to rank pairs of ultrasound sequences by their relative motion magnitude for each of the five fingers. The learned representations are then fine-tuned to classify whether each finger is actively flexing, using a rest reference that is captured at the beginning of the operation. Under 12-fold leave-one-subject-out cross-validation on a dataset of twelve subjects with synchronized kinematics, SonoRank achieves a 28% improvement in F1 score over direct classification baselines that skip the ranking stage. These results establish pairwise ranking as an effective pretraining signal for subject-independent control, bringing ultrasound-based prosthetics closer to practical, calibration-free deployment.",
-      "url": "https://arxiv.org/abs/2607.07542v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.07542v1",
-      "published": "2026-07-08T15:41:37Z",
-      "updated": "2026-07-08T15:41:37Z",
-      "categories": [
-        "cs.RO",
-        "cs.CV"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2607.07533v1",
-      "title": "Generating Personalized Lower-Limb Kinematics Across Walking Speeds Using Subject-Conditioned Diffusion",
-      "authors": [
-        "Diya Dinesh",
-        "Adrian Krieger",
-        "Changseob Song",
-        "Dongho Park",
-        "Aaron J. Young",
-        "Inseung Kang"
-      ],
-      "abstract": "Personalizing exoskeleton assistance requires user-specific gait data across many locomotor tasks, yet collecting this data demands repeated motion capture sessions that are costly, time-intensive, and especially burdensome for clinical populations. This challenge is most acute across walking speeds, where gait changes substantially and deviates further in clinical gait. This work introduces a subject-conditioned residual diffusion framework that generates personalized lower-limb kinematics at unseen walking speeds from a subject's gait sequence at a single seen speed. Given sagittal-plane hip, knee, and ankle trajectories at a seen speed and a desired unseen speed, the model generates a residual that transforms the seen trajectory into the unseen one, using a transformer denoiser conditioned on the subject's gait and the two speeds through feature-wise linear modulation. Trained only on able-bodied data, the model achieved a mean absolute error (MAE) of 3.4\u00b0 on held-out able-bodied subjects. Without any stroke-specific fine-tuning, it achieved a 6.0\u00b0 MAE on out-of-training-distribution stroke subjects, retaining subject identity for clinical gait. The framework reduced the MAE by over 70% relative to supervised feed-forward baselines, and a single seen speed matched the accuracy of four speeds within 0.4\u00b0. These results demonstrate that subject-conditioned residual diffusion can synthesize personalized gait across speeds from minimal data, reducing the collection burden for downstream exoskeleton personalization.",
-      "url": "https://arxiv.org/abs/2607.07533v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.07533v1",
-      "published": "2026-07-08T15:29:18Z",
-      "updated": "2026-07-08T15:29:18Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
+      "primary_category": "cs.PL"
     }
   ]
 }
