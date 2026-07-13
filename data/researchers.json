@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-07-12T10:03:33.941727+00:00",
+  "scraped_at": "2026-07-13T11:26:54.734690+00:00",
   "researcher_count": 54,
   "researchers": [
     {
@@ -950,7 +950,7 @@
       "paper_count": 5,
       "papers": [
         {
-          "id": "2606.22332v1",
+          "id": "2606.22332v2",
           "title": "Tactile Genesis: Exploring Tactile Sensors at Scale for Learning Dexterous Tasks",
           "authors": [
             "Trinity Chung",
@@ -961,11 +961,11 @@
             "Katerina Fragkiadaki",
             "Aran Nayebi"
           ],
-          "abstract": "Tactile sensing is critical for contact-rich dexterous manipulation, yet it remains unclear which tactile abstractions a policy needs and when richer tactile fields justify their hardware cost. This is hard to study empirically: each sensor effectively defines a new robot, and no lab can replicate the same learning experiment across all of them. We present Tactile Genesis, a GPU-parallel tactile sensor simulation platform that exposes binary contact, contact depth, per-taxel kinematic force/torque, elastomer marker displacement, geometry-aware proximity, contact audio, and a voxelized temperature field (the first of its kind in robot learning physics simulation platforms) under a common interface, with configurable placement, resolution, and a realistic noise model (drift, hysteresis, dead taxels, crosstalk). It scales past 20,000 parallel environments and 1,000 taxels on a single GPU, improving throughput by 3 to 20 times over previous tactile simulators. We train teacher-student policies on three dexterous tasks, ablating sensor type, placement, resolution, and noise, and verify transfer to the real XHand1. Proprioception alone is insufficient on every task. Sensor placement dominates sensor type: fingertip-only coverage trails whole-hand coverage by a wide margin, while adding the palm and proximal phalanges closes most of the gap to the privileged teacher. Resolution matters far less than coverage: placing 200 taxels across the whole hand suffices across tasks. We find that force/torque per taxel is consistently the most useful sensor type. These results give concrete guidance for both future tactile hardware design for improving robot hands and policy-side observation choice in dexterous manipulation. https://neuroagents-lab.github.io/2026-tactile-genesis/",
-          "url": "https://arxiv.org/abs/2606.22332v1",
-          "pdf_url": "https://arxiv.org/pdf/2606.22332v1",
+          "abstract": "Tactile sensing is critical for contact-rich dexterous manipulation, yet it remains unclear which tactile abstractions a policy needs and when richer tactile fields justify their hardware cost. This is hard to study empirically: each sensor effectively defines a new robot, and no lab can replicate the same learning experiment across all of them. We present Tactile Genesis, a GPU-parallel tactile sensor simulation platform that exposes binary contact, contact depth, per-taxel kinematic force/torque, elastomer marker displacement, geometry-aware proximity, contact audio, and a voxelized temperature field (the first of its kind in robot learning physics simulation platforms) under a common interface, with configurable placement, resolution, and a realistic noise model (drift, hysteresis, dead taxels, crosstalk). It scales past 20,000 parallel environments and 1,000 taxels on a single GPU, improving throughput by 3 to 20 times over previous tactile simulators. We train teacher-student policies on three dexterous tasks, ablating sensor type, placement, resolution, and noise, and verify transfer to the real XHand1. Proprioception alone is insufficient on every task. Sensor placement dominates sensor type: fingertip-only coverage trails whole-hand coverage by a wide margin, while adding the palm and proximal phalanges closes most of the gap to the privileged teacher. Resolution matters far less than coverage: placing 200 taxels across the whole hand suffices across tasks. We find that force/torque per taxel is consistently the most useful sensor type. These results give concrete guidance for both future tactile hardware design for improving robot hands and policy-side observation choice in dexterous manipulation. https://neuroagents-lab.github.io/tactile-genesis/",
+          "url": "https://arxiv.org/abs/2606.22332v2",
+          "pdf_url": "https://arxiv.org/pdf/2606.22332v2",
           "published": "2026-06-21T04:49:03Z",
-          "updated": "2026-06-21T04:49:03Z",
+          "updated": "2026-07-09T18:33:50Z",
           "categories": [
             "cs.RO"
           ],
@@ -1637,6 +1637,57 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2607.09042v1",
+          "title": "Learning More from Less: Reinforcement Learning from Hindsight",
+          "authors": [
+            "Iris Xu",
+            "Sunshine Jiang",
+            "John Marangola",
+            "Nitish Dashora",
+            "Richard Li",
+            "Thomas Liu",
+            "Zexue He",
+            "Yuheng Zhi",
+            "Alex Pentland",
+            "Pulkit Agrawal",
+            "Zhang-Wei Hong"
+          ],
+          "abstract": "Reinforcement learning (RL) is increasingly used to post-train vision-language-action (VLA) models, but every update consumes robot rollouts that are slow and costly to collect, making sample efficiency a central concern. Manipulation tasks typically provide only sparse rewards, so a weak policy fails almost every rollout early in training and has little to learn from, even when those failures execute coherent behavior. Such a failure, however, is a success at a different task. We present Learning from Hindsight (LfH), which brings hindsight relabeling to RL post-training of VLAs by scoring failed rollouts against the tasks they actually achieved. A single vision-language model relabels both the instruction and the reward, proposing a hindsight instruction for a group of failed rollouts and scoring how well each satisfies it, and the policy trains on the relabeled and original rollouts jointly. Because VLAs generalize across language, relabeling in language lets the policy learn more from the same trajectories. On out-of-distribution LIBERO-PRO tasks, where standard RL improves only slowly, LfH achieves $5\\times$ improvement in sample efficiency, and outperforms a dense progress-reward baseline. The gains hold across VLA backbones and on a physical Franka robot.",
+          "url": "https://arxiv.org/abs/2607.09042v1",
+          "pdf_url": "https://arxiv.org/pdf/2607.09042v1",
+          "published": "2026-07-10T02:17:41Z",
+          "updated": "2026-07-10T02:17:41Z",
+          "categories": [
+            "cs.LG"
+          ],
+          "primary_category": "cs.LG"
+        },
+        {
+          "id": "2607.08837v1",
+          "title": "Prompt-Driven Exploration",
+          "authors": [
+            "Sunshine Jiang",
+            "John Marangola",
+            "David Zhang",
+            "Raghuram Kowdeed",
+            "Ruiyang Luo",
+            "Nitish Dashora",
+            "Richard Li",
+            "Pulkit Agrawal",
+            "Zhang-Wei Hong"
+          ],
+          "abstract": "Exploration is essential to RL since a policy cannot improve by repeatedly sampling the behaviors it already prefers. Standard methods inject stochasticity in the action space, but such jitter only yields rollouts close to the original. Escaping a weak policy often requires global perturbations that action noise cannot produce. Large language models (LLMs) and vision-language-action (VLA) models offer a pathway: they condition the policy on a natural language prompt, and since the rollout follows from it, modifying the prompt induces global changes. The challenge is finding prompts that induce useful global changes. With a weak policy that rarely succeeds, reward is too sparse to select on. Our idea is to refine prompts from the rollouts themselves: a vision-language model (VLM) reasons over the rollout video, diagnoses how the policy responded, and rewrites the prompt to elicit better behavior next time. This procedure realizes posterior sampling, a classical RL exploration framework, at the level of prompts: the VLM maintains an implicit distribution over useful prompts and updates it from observed rollouts. We call this strategy Prompt-Driven Exploration (PDE). Across manipulation and reasoning tasks, PDE enables RL to learn successful policies even from zero-reward starts, and improves sample efficiency more broadly. Our website is available at https://xinyunsunshine.github.io/prompt-rl.",
+          "url": "https://arxiv.org/abs/2607.08837v1",
+          "pdf_url": "https://arxiv.org/pdf/2607.08837v1",
+          "published": "2026-07-09T18:00:24Z",
+          "updated": "2026-07-09T18:00:24Z",
+          "categories": [
+            "cs.LG",
+            "cs.AI"
+          ],
+          "primary_category": "cs.LG"
+        },
+        {
           "id": "2606.06627v1",
           "title": "What Matters When Cotraining Robot Manipulation Policies on Everyday Human Videos?",
           "authors": [
@@ -1707,41 +1758,6 @@
             "cs.NE"
           ],
           "primary_category": "cs.LG"
-        },
-        {
-          "id": "2605.15548v1",
-          "title": "KaRMA: A Kinematic Metric for Fine Manipulation Ability in Robotic Hands",
-          "authors": [
-            "Martin Peticco",
-            "Pulkit Agrawal"
-          ],
-          "abstract": "Traditional robotic hand metrics focus on static properties such as workspace, manipulability, and grasp stability. However, these metrics do not directly measure dexterity under the standard definition in robotic manipulation: the ability to continuously change an object's pose within the hand while maintaining contact from an initial grasp. We introduce Kinematic Rolling Manipulation Ability (KaRMA), a kinematic-only metric for fine manipulation that quantifies reachable in-hand translation and reorientation of a spherical test object within a two-finger precision pinch through feasible rolling motions. KaRMA enforces joint limits, collision constraints, rolling contact, and antipodal force feasibility, then investigates reachable in-hand object poses via breadth-first search over translation and rotation primitives. KaRMA reports three scores: translational coverage (KaRMA-T), rotational coverage (KaRMA-R), and sensitivity to the initial grasp (KaRMA-S). We evaluate KaRMA on 16 widely used robotic hands and compare against static baselines, showing that KaRMA separates hands that rank identically under static proxies, reveals translation-rotation tradeoffs invisible to existing baselines, and is qualitatively consistent with selected published task benchmarks where Jacobian-based metrics can be misleading.",
-          "url": "https://arxiv.org/abs/2605.15548v1",
-          "pdf_url": "https://arxiv.org/pdf/2605.15548v1",
-          "published": "2026-05-15T02:40:05Z",
-          "updated": "2026-05-15T02:40:05Z",
-          "categories": [
-            "cs.RO"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2604.02523v1",
-          "title": "Tune to Learn: How Controller Gains Shape Robot Policy Learning",
-          "authors": [
-            "Antonia Bronars",
-            "Younghyo Park",
-            "Pulkit Agrawal"
-          ],
-          "abstract": "Position controllers have become the dominant interface for executing learned manipulation policies. Yet a critical design decision remains understudied: how should we choose controller gains for policy learning? The conventional wisdom is to select gains based on desired task compliance or stiffness. However, this logic breaks down when controllers are paired with state-conditioned policies: effective stiffness emerges from the interplay between learned reactions and control dynamics, not from gains alone. We argue that gain selection should instead be guided by learnability: how amenable different gain settings are to the learning algorithm in use. In this work, we systematically investigate how position controller gains affect three core components of modern robot learning pipelines: behavior cloning, reinforcement learning from scratch, and sim-to-real transfer. Through extensive experiments across multiple tasks and robot embodiments, we find that: (1) behavior cloning benefits from compliant and overdamped gain regimes, (2) reinforcement learning can succeed across all gain regimes given compatible hyperparameter tuning, and (3) sim-to-real transfer is harmed by stiff and overdamped gain regimes. These findings reveal that optimal gain selection depends not on the desired task behavior, but on the learning paradigm employed. Project website: https://younghyopark.me/tune-to-learn",
-          "url": "https://arxiv.org/abs/2604.02523v1",
-          "pdf_url": "https://arxiv.org/pdf/2604.02523v1",
-          "published": "2026-04-02T21:23:08Z",
-          "updated": "2026-04-02T21:23:08Z",
-          "categories": [
-            "cs.RO"
-          ],
-          "primary_category": "cs.RO"
         }
       ]
     },
@@ -3875,7 +3891,7 @@
           "primary_category": "cs.RO"
         },
         {
-          "id": "2606.28320v2",
+          "id": "2606.28320v3",
           "title": "WARP-RM: A Warp-Augmented Relative Progress Reward Model for Data Curation",
           "authors": [
             "Justin Yu",
@@ -3889,11 +3905,11 @@
             "Philipp Wu",
             "Ken Goldberg"
           ],
-          "abstract": "Scaling imitation learning requires large datasets, yet human teleoperation inevitably produces mixed-quality demonstrations containing hesitations and recoveries. Prior frame-level progress reward models supervise on absolute temporal progress proxies that suffer from label noise, or require costly human annotations to define subtask boundaries. We present WARP (Warp-Augmented Relative Progress), a novel fully self-supervised algorithm for learning dense, signed relative progress magnitudes directly from successful demonstrations. WARP generates per-frame progress targets via time-warp augmentations of demonstrations (variable playback speeds and reversals) and we train WARP-RM to predict the normalized elapsed time between input frames. Aggregating these predictions across overlapping windows yields a dense frame-level progress signal. We then introduce WARP-BC, which leverages these scalar reward estimates to upweight high-advantage action chunks during behavior cloning, where chunk-level advantage is obtained by aggregating per-frame rewards. We evaluate our approach on a physical bimanual robot system performing a long-horizon deformable object manipulation task: folding T-shirts from a random crumpled start. To evaluate policy robustness against suboptimal data, we construct training datasets of varying quality using episode length as a proxy for teleoperation sub-optimality. As the dataset is widened to admit more inefficiencies, WARP-BC maintains a 19/20 success rate compared to vanilla BC's collapse to 2/20, improving throughput by up to 18x. Project page: https://uynitsuj.github.io/warp-rm/",
-          "url": "https://arxiv.org/abs/2606.28320v2",
-          "pdf_url": "https://arxiv.org/pdf/2606.28320v2",
+          "abstract": "Scaling imitation learning requires large datasets, yet human teleoperation inevitably produces mixed-quality demonstrations containing hesitations and recoveries. Prior frame-level progress reward models supervise on absolute temporal progress proxies that suffer from label noise, or require costly human annotations to define subtask boundaries. We present WARP (Warp-Augmented Relative Progress), a novel fully self-supervised algorithm for learning dense, signed relative progress magnitudes directly from successful demonstrations. WARP generates per-frame progress targets via time-warp augmentations of demonstrations (variable playback speeds and reversals) and we train WARP-RM to predict the normalized elapsed time between input frames. Aggregating these predictions across overlapping windows yields a dense frame-level progress signal. We then introduce WARP-BC, which leverages these scalar reward estimates to upweight high-advantage action chunks during behavior cloning, where chunk-level advantage is obtained by aggregating per-frame rewards. We evaluate our approach on a physical bimanual robot system performing a long-horizon deformable object manipulation task: folding T-shirts from a random crumpled start. To evaluate policy robustness against suboptimal data, we construct training datasets of varying quality using episode length as a proxy for teleoperation sub-optimality. As the dataset is widened to admit more inefficiencies, WARP-BC maintains a 19/20 success rate compared to vanilla BC's collapse to 2/20, improving throughput by up to 18x. Furthermore, we evaluate a bottle-in-bin placement task in the real-world, as well as in a reproducible simulation of the task, where gains in success, speed, and throughput hold under paired significance tests, and we release all simulation code and evaluation artifacts. Project page: https://uynitsuj.github.io/warp-rm/",
+          "url": "https://arxiv.org/abs/2606.28320v3",
+          "pdf_url": "https://arxiv.org/pdf/2606.28320v3",
           "published": "2026-06-26T17:58:06Z",
-          "updated": "2026-07-07T23:02:07Z",
+          "updated": "2026-07-10T14:49:00Z",
           "categories": [
             "cs.RO"
           ],
