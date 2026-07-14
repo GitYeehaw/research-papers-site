@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-07-13T11:26:54.734690+00:00",
+  "scraped_at": "2026-07-14T10:10:44.635169+00:00",
   "researcher_count": 54,
   "researchers": [
     {
@@ -126,6 +126,27 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2607.10842v1",
+          "title": "D-SafeMPC: Diffusion-Driven Safe Model Predictive Control with Discrete-Time Control Barrier Functions",
+          "authors": [
+            "Erdi Sayar",
+            "Ersin Da\u015f",
+            "Joel W. Burdick",
+            "Alois Knoll",
+            "Erdal Kayacan"
+          ],
+          "abstract": "A key limitation on the use of diffusion models in robotic planning is their inability to inherently enforce safety or dynamical constraints, which often results in physically infeasible or unsafe outputs. Hybrid approaches that employ model predictive control (MPC) to address this problem can be unstable, as poor trajectory initializations from the diffusion model prevent the MPC from converging to a safe and feasible solution. To overcome these challenges, we propose D-SafeMPC, which enhances the interaction between diffusion and control. Our method guides the reverse diffusion process with control barrier functions (CBFs) and control Lyapunov functions (CLFs) and employs an iterative-projection scheme where an MPC refines the trajectory at each denoising step. This steers sampling toward safe, goal-directed regions and provides reliable MPC warm starts. In simulations on a Franka manipulator across four scenarios (one static-obstacle and three dynamic-obstacle settings) and in a sim-to-real experiment on a physical Franka robot, D-SafeMPC improves safety, task success rates, and planning efficiency over state-of-the-art baselines. To facilitate reproducibility, our source code and experimental configurations are available in a repository at https://github.com/erdiphd/D-SafeMPC",
+          "url": "https://arxiv.org/abs/2607.10842v1",
+          "pdf_url": "https://arxiv.org/pdf/2607.10842v1",
+          "published": "2026-07-12T17:10:05Z",
+          "updated": "2026-07-12T17:10:05Z",
+          "categories": [
+            "cs.RO",
+            "eess.SY"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2604.21189v1",
           "title": "Full-Body Dynamic Safety for Robot Manipulators: 3D Poisson Safety Functions for CBF-Based Safety Filters",
           "authors": [
@@ -207,24 +228,6 @@
             "eess.SY"
           ],
           "primary_category": "eess.SY"
-        },
-        {
-          "id": "2603.27796v1",
-          "title": "Spectral Decomposition of Inverse Dynamics for Fast Exploration in Model-Based Manipulation",
-          "authors": [
-            "Solvin Sigurdson",
-            "Benjamin Riviere",
-            "Joel Burdick"
-          ],
-          "abstract": "Planning long duration robotic manipulation sequences is challenging because of the complexity of exploring feasible trajectories through nonlinear contact dynamics and many contact modes. Moreover, this complexity grows with the problem's horizon length. We propose a search tree method that generates trajectories using the spectral decomposition of the inverse dynamics equation. This equation maps actuator displacement to object displacement, and its spectrum is efficient for exploration because its components are orthogonal and they approximate the reachable set of the object while remaining dynamically feasible. These trajectories can be combined with any search based method, such as Rapidly-Exploring Random Trees (RRT), for long-horizon planning. Our method performs similarly to recent work in model-based planning for short-horizon tasks, and differentiates itself with its ability to solve long-horizon tasks: whereas existing methods fail, ours can generate 45 second duration, 10+ contact mode plans using 15 seconds of computation, demonstrating real-time capability in highly complex domains.",
-          "url": "https://arxiv.org/abs/2603.27796v1",
-          "pdf_url": "https://arxiv.org/pdf/2603.27796v1",
-          "published": "2026-03-29T18:22:36Z",
-          "updated": "2026-03-29T18:22:36Z",
-          "categories": [
-            "cs.RO"
-          ],
-          "primary_category": "cs.RO"
         }
       ]
     },
@@ -1079,6 +1082,26 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2607.11690v1",
+          "title": "Requirement-Driven Design of Whole-Body Social Tactile Sensing via Virtual Human-Robot Interaction",
+          "authors": [
+            "Dakarai Crowder",
+            "Ruohan Zhang",
+            "Alexis E. Block",
+            "Wenzhen Yuan"
+          ],
+          "abstract": "Tactile sensing for social-physical human-robot interaction (spHRI) is designed in a hardware-driven manner, where predefined sensor configurations constrain coverage, spatial resolution, and the range of recognizable gestures. We propose a requirement-driven framework that derives sensing requirements, specifically spatial resolution and placement, directly from interaction data. Using a VR-based platform with haptic feedback, we collected high-resolution whole-body contact distributions across multiple social scenarios, from which we identified nine recurring social touch gestures. Eight gestures were selected for controlled data collection with 18 participants, yielding an open-source dataset of 5,520 trials. Analysis of contact distributions and simulated tactile encodings provides quantitative baselines for skin coverage and sensor density on a humanoid robot platform. While demonstrated on a single robot platform, the methodology is designed to be transferable to other robot morphologies, potentially enabling morphology-specific sensing requirements to be derived prior to hardware fabrication.",
+          "url": "https://arxiv.org/abs/2607.11690v1",
+          "pdf_url": "https://arxiv.org/pdf/2607.11690v1",
+          "published": "2026-07-13T15:23:45Z",
+          "updated": "2026-07-13T15:23:45Z",
+          "categories": [
+            "cs.RO",
+            "cs.HC"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2607.04367v1",
           "title": "A Perception-Manipulation Robotics System for Food Cutting",
           "authors": [
@@ -1153,31 +1176,6 @@
             "cs.RO"
           ],
           "primary_category": "cs.RO"
-        },
-        {
-          "id": "2604.17009v1",
-          "title": "Small Model as Master Orchestrator: Learning Unified Agent-Tool Orchestration with Parallel Subtask Decomposition",
-          "authors": [
-            "Wenzhen Yuan",
-            "Wutao Xiong",
-            "Fanchen Yu",
-            "Shengji Tang",
-            "Ting Liu",
-            "Tao Chen",
-            "Peng Ye",
-            "Yuzhuo Fu",
-            "Wanli Ouyang",
-            "Lei Bai"
-          ],
-          "abstract": "Multi-agent systems (MAS) demonstrate clear advantages in tackling complex problems by coordinating diverse agents and external tools. However, most existing orchestration methods rely on static workflows or serial agent scheduling, and are further constrained by heterogeneous interface protocols between tools and agents. This leads to high system complexity and poor extensibility. To mitigate these issues, we propose Agent-as-Tool, a unified parallel orchestration paradigm that abstracts both agents and tools into a standardized, learnable action space with protocol normalization and explicit state feedback. Building on this paradigm, we train a lightweight orchestrator, ParaManager, which decouples planning decisions from subtask solving, enabling state-aware parallel subtask decomposition, delegation, and asynchronous execution. For training, we adopt a two-stage ParaManager training pipeline. It improves robustness by incorporating supervised fine-tuning (SFT) trajectories equipped with recovery mechanisms, and further applies reinforcement learning (RL) to achieve an optimal balance among task success, protocol compliance, diversity, and reasoning efficiency. Experiments show that ParaManager achieves strong performance across multiple benchmarks and exhibits robust generalization under unseen model pools.",
-          "url": "https://arxiv.org/abs/2604.17009v1",
-          "pdf_url": "https://arxiv.org/pdf/2604.17009v1",
-          "published": "2026-04-18T14:41:27Z",
-          "updated": "2026-04-18T14:41:27Z",
-          "categories": [
-            "cs.AI"
-          ],
-          "primary_category": "cs.AI"
         }
       ]
     },
@@ -3019,7 +3017,7 @@
           "primary_category": "cs.AI"
         },
         {
-          "id": "2606.32027v1",
+          "id": "2606.32027v2",
           "title": "Freeform Preference Learning for Robotic Manipulation",
           "authors": [
             "Marcel Torne",
@@ -3028,10 +3026,10 @@
             "Chelsea Finn"
           ],
           "abstract": "Reward design remains a central bottleneck for autonomous robot policy improvement, especially in long-horizon manipulation tasks where sparse success labels provide too little signal and binary preferences collapse many competing notions of quality into one ambiguous signal. We introduce Freeform Preference Learning (FPL), a method for learning robot policies from freeform human preferences. Rather than asking annotators which of two trajectories is better overall, FPL lets them define natural-language preference axes, such as speed, safety, quality of placement, or carefulness, and provide pairwise preferences along each axis. These annotations are used to learn a language-conditioned reward model that maps a trajectory and preference label to an axis-specific reward. We use this model to train a reward-conditioned policy that optimizes across the multiple human-specified dimensions. Across four real-world and two simulated long-horizon manipulation tasks, FPL improves over sparse-reward and binary-preference methods by 38 percentage points. Beyond improved performance, FPL learns dense progress signals without explicit subtask segmentation, shows compositionality of behavior not present in the data, and allows users to steer the policy towards different behaviors at test time without retraining. Blog post with videos available at https://freeform-pl.github.io/fpl.website/",
-          "url": "https://arxiv.org/abs/2606.32027v1",
-          "pdf_url": "https://arxiv.org/pdf/2606.32027v1",
+          "url": "https://arxiv.org/abs/2606.32027v2",
+          "pdf_url": "https://arxiv.org/pdf/2606.32027v2",
           "published": "2026-06-30T17:54:02Z",
-          "updated": "2026-06-30T17:54:02Z",
+          "updated": "2026-07-13T14:43:22Z",
           "categories": [
             "cs.RO",
             "cs.AI",
@@ -3291,6 +3289,27 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2607.11884v1",
+          "title": "Mixture of Frames Policy: Multi-Frame Action Denoising for Bimanual Mobile Manipulation",
+          "authors": [
+            "Dian Wang",
+            "Jisang Park",
+            "Xiaomeng Xu",
+            "Han Zhang",
+            "Shuran Song",
+            "Jeannette Bohg"
+          ],
+          "abstract": "Robotic manipulation is inherently multi-frame: local actions may be simple in an end-effector frame, while transport, upright-object handling, and whole-body coordination are better represented in a base-aligned frame. However, modern diffusion-based visuomotor policies typically commit to a single predefined action frame, forcing one denoiser to model action distributions that are often unnecessarily complex in that frame. We propose Mixture of Frames Policy (MoF), a diffusion policy that performs synchronized action denoising across multiple coordinate frames. MoF maintains a single canonical diffusion state, re-expresses it in several task-relevant frames, applies frame-specialized denoisers, and fuses their noise predictions back in the canonical frame. To make this possible for intermediate noisy diffusion states, we introduce a column-based 6D rotation representation within an SE(3) action parameterization that supports exact, differentiable frame transformations without requiring noisy rotations to lie on the SO(3) manifold. Across nine simulated bimanual manipulation tasks, we show that the best action frame is task-dependent and that MoF improves over oracle frame selection and standard Mixture-of-Experts (MoE) baselines. We further evaluate MoF on two real-world bimanual mobile manipulation tasks, demonstrating that it outperforms all constituent single-frame baselines. Project homepage: https://mofpo.github.io",
+          "url": "https://arxiv.org/abs/2607.11884v1",
+          "pdf_url": "https://arxiv.org/pdf/2607.11884v1",
+          "published": "2026-07-13T17:59:40Z",
+          "updated": "2026-07-13T17:59:40Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2606.26428v2",
           "title": "Play2Perfect: What Matters in Dexterous Play Pretraining for Precise Assembly?",
           "authors": [
@@ -3374,27 +3393,6 @@
           "pdf_url": "https://arxiv.org/pdf/2603.03243v2",
           "published": "2026-03-03T18:36:49Z",
           "updated": "2026-05-14T23:12:06Z",
-          "categories": [
-            "cs.RO"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2602.22001v1",
-          "title": "Are Foundation Models the Route to Full-Stack Transfer in Robotics?",
-          "authors": [
-            "Freek Stulp",
-            "Samuel Bustamante",
-            "Jo\u00e3o Silv\u00e9rio",
-            "Alin Albu-Sch\u00e4ffer",
-            "Jeannette Bohg",
-            "Shuran Song"
-          ],
-          "abstract": "In humans and robots alike, transfer learning occurs at different levels of abstraction, from high-level linguistic transfer to low-level transfer of motor skills. In this article, we provide an overview of the impact that foundation models and transformer networks have had on these different levels, bringing robots closer than ever to \"full-stack transfer\". Considering LLMs, VLMs and VLAs from a robotic transfer learning perspective allows us to highlight recurring concepts for transfer, beyond specific implementations. We also consider the challenges of data collection and transfer benchmarks for robotics in the age of foundation models. Are foundation models the route to full-stack transfer in robotics? Our expectation is that they will certainly stay on this route as a key technology.",
-          "url": "https://arxiv.org/abs/2602.22001v1",
-          "pdf_url": "https://arxiv.org/pdf/2602.22001v1",
-          "published": "2026-02-25T15:19:44Z",
-          "updated": "2026-02-25T15:19:44Z",
           "categories": [
             "cs.RO"
           ],
@@ -3671,6 +3669,27 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2607.11884v1",
+          "title": "Mixture of Frames Policy: Multi-Frame Action Denoising for Bimanual Mobile Manipulation",
+          "authors": [
+            "Dian Wang",
+            "Jisang Park",
+            "Xiaomeng Xu",
+            "Han Zhang",
+            "Shuran Song",
+            "Jeannette Bohg"
+          ],
+          "abstract": "Robotic manipulation is inherently multi-frame: local actions may be simple in an end-effector frame, while transport, upright-object handling, and whole-body coordination are better represented in a base-aligned frame. However, modern diffusion-based visuomotor policies typically commit to a single predefined action frame, forcing one denoiser to model action distributions that are often unnecessarily complex in that frame. We propose Mixture of Frames Policy (MoF), a diffusion policy that performs synchronized action denoising across multiple coordinate frames. MoF maintains a single canonical diffusion state, re-expresses it in several task-relevant frames, applies frame-specialized denoisers, and fuses their noise predictions back in the canonical frame. To make this possible for intermediate noisy diffusion states, we introduce a column-based 6D rotation representation within an SE(3) action parameterization that supports exact, differentiable frame transformations without requiring noisy rotations to lie on the SO(3) manifold. Across nine simulated bimanual manipulation tasks, we show that the best action frame is task-dependent and that MoF improves over oracle frame selection and standard Mixture-of-Experts (MoE) baselines. We further evaluate MoF on two real-world bimanual mobile manipulation tasks, demonstrating that it outperforms all constituent single-frame baselines. Project homepage: https://mofpo.github.io",
+          "url": "https://arxiv.org/abs/2607.11884v1",
+          "pdf_url": "https://arxiv.org/pdf/2607.11884v1",
+          "published": "2026-07-13T17:59:40Z",
+          "updated": "2026-07-13T17:59:40Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2607.01088v1",
           "title": "ROSA: A Robotics Foundation Model Serving System for Robot Factories",
           "authors": [
@@ -3755,27 +3774,6 @@
           "pdf_url": "https://arxiv.org/pdf/2606.30457v1",
           "published": "2026-06-29T15:23:44Z",
           "updated": "2026-06-29T15:23:44Z",
-          "categories": [
-            "cs.RO"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2606.22923v2",
-          "title": "PanoVine: Whole-Body Visuomotor Control for Soft Growing Vine Robot",
-          "authors": [
-            "Yimeng Qin",
-            "Xiaomeng Xu",
-            "William Heap",
-            "Aditi Oak",
-            "Shuran Song",
-            "Allison Okamura"
-          ],
-          "abstract": "Vine robots, a class of soft, growing robots, are suitable for navigating complex and confined environments due to their compliant bodies and self-supporting growth mechanism. However, hysteresis, tether interactions, and deformations make them difficult to predict and model, which in turn limits the effectiveness of conventional planning and control approaches. In this work, we present a data-driven, vision-based control framework for the first autonomous vine robot system. Our system integrates 19 cameras distributed along the robot's body to provide comprehensive feedback of both the robot state and the surrounding environment. Using this rich whole-body vision feedback, we train an end-to-end visuomotor policy from demonstrations for closed-loop autonomous control in complex environments. The policy efficiently aggregates information from distributed sensing while maintaining robustness to inaccurate robot states and actuation. Experimental results demonstrate that the learned policy enables robust navigation and manipulation in challenging scenarios, including steering through branched structures, climbing up slopes, traversing unsupported terrain, reaching objects precisely, and maneuvering through confined spaces and obstacles. Project website https://panovine-bot.github.io",
-          "url": "https://arxiv.org/abs/2606.22923v2",
-          "pdf_url": "https://arxiv.org/pdf/2606.22923v2",
-          "published": "2026-06-22T07:02:19Z",
-          "updated": "2026-06-23T06:43:19Z",
           "categories": [
             "cs.RO"
           ],
@@ -6019,6 +6017,33 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2607.10655v1",
+          "title": "Artificial Foveated Perception for Mitigating Shortcut Learning in Robotic Foundation Models",
+          "authors": [
+            "Xiatao Sun",
+            "Yuan Zhuang",
+            "Mateo Sanchez Lopez Negrete",
+            "Matei-Victor Coldea",
+            "Chen Liang",
+            "Haoyang Zhang",
+            "Che Liu",
+            "Ziyao Zeng",
+            "Shawn Li",
+            "Qian Wang",
+            "Fei Miao",
+            "Daniel Rakita"
+          ],
+          "abstract": "Robotic foundation models have recently made substantial progress in multi-task capability, cross-embodiment transfer, and language-conditioned control. Yet robust deployment across diverse real-world settings remains difficult, in part because policies often fail to distinguish causally relevant visual structure from spurious scene-level correlations. We identify this failure mode as shortcut learning: the tendency to exploit predictive but non-causal correlations in the training distribution rather than the task-relevant visual evidence that determines successful action. Although shortcut learning has been extensively studied in computer vision and broader machine learning, its role in robotic foundation models remains comparatively underexplored. We propose Artificial Foveated Perception (AFP), a lightweight, policy-agnostic module that takes the same vision and language inputs as Vision-Language-Action and World Action Model pipelines and predicts task-conditioned masks over relevant objects, the robot, and other action-critical regions. We use these masks primarily as an auxiliary grounding signal during fine-tuning, aligning policy attention with task-relevant regions while leaving the core architecture unchanged. After fine-tuning, the policy executes on the original observation stream without requiring AFP in the control loop. We evaluate AFP across state-of-the-art robotic foundation models and show that foveated perception reduces fine-tuning time, suppresses overfitting, and improves generalization under environmental perturbations. Ablations over mask quality and grounding-loss design further show that these gains arise from directing policy learning toward task-relevant visual evidence. These results suggest that task-conditioned foveated perception is a practical mechanism for making robotic foundation models more robust, data-efficient, and scalable.",
+          "url": "https://arxiv.org/abs/2607.10655v1",
+          "pdf_url": "https://arxiv.org/pdf/2607.10655v1",
+          "published": "2026-07-12T08:42:36Z",
+          "updated": "2026-07-12T08:42:36Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2605.26478v1",
           "title": "Efficient On-policy Visual-RL via Stochastic Decoupled Policy Gradient",
           "authors": [
@@ -6098,23 +6123,6 @@
           "pdf_url": "https://arxiv.org/pdf/2512.24428v1",
           "published": "2025-12-30T19:08:36Z",
           "updated": "2025-12-30T19:08:36Z",
-          "categories": [
-            "cs.RO"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2512.23140v2",
-          "title": "A New Software Tool for Generating and Visualizing Robot Self-Collision Matrices",
-          "authors": [
-            "Roshan Klein-Seetharama",
-            "Daniel Rakita"
-          ],
-          "abstract": "In robotics, it is common to check whether a given robot state results in self-intersection (i.e., a self-collision query) or to assess its distance from such an intersection (i.e., a self-proximity query). These checks are typically performed between pairs of shapes attached to different robot links. However, many of these shape pairs can be excluded in advance, as their configurations are known to always or never result in contact. This information is typically encoded in a self-collision matrix, where each entry (i, j) indicates whether a check should be performed between shape i and shape j. While the MoveIt Setup Assistant is widely used to generate such matrices, current tools are limited by static visualization, lack of proximity support, rigid single-geometry assumptions, and tedious refinement workflows, hindering flexibility and reuse in downstream robotics applications. In this work, we introduce an interactive tool that overcomes these limitations by generating and visualizing self-collision matrices across multiple shape representations, enabling dynamic inspection, filtering, and refinement of shape pairs. Outputs are provided in both JSON and YAML for easy integration. The system is implemented in Rust and uses the Bevy game engine to deliver high-quality visualizations. We demonstrate its effectiveness on multiple robot platforms, showing that matrices generated using diverse shape types yield faster and more accurate self-collision and self-proximity queries.",
-          "url": "https://arxiv.org/abs/2512.23140v2",
-          "pdf_url": "https://arxiv.org/pdf/2512.23140v2",
-          "published": "2025-12-29T02:02:32Z",
-          "updated": "2025-12-30T22:46:52Z",
           "categories": [
             "cs.RO"
           ],
