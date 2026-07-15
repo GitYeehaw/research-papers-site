@@ -2,228 +2,228 @@
   "category": "robotics",
   "name": "Robotics Research",
   "description": "Robotics \u2014 Motion Planning, Control Systems, Human-Robot Interaction, Autonomous Systems",
-  "scraped_at": "2026-07-14T10:05:48.240780+00:00",
+  "scraped_at": "2026-07-15T10:09:59.357257+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2607.11884v1",
-      "title": "Mixture of Frames Policy: Multi-Frame Action Denoising for Bimanual Mobile Manipulation",
+      "id": "2607.13034v1",
+      "title": "Do AI Agents Know When a Task Is Simple? Toward Complexity-Aware Reasoning and Execution",
       "authors": [
-        "Dian Wang",
-        "Jisang Park",
-        "Xiaomeng Xu",
-        "Han Zhang",
-        "Shuran Song",
-        "Jeannette Bohg"
+        "Junjie Yin",
+        "Xinyu Feng"
       ],
-      "abstract": "Robotic manipulation is inherently multi-frame: local actions may be simple in an end-effector frame, while transport, upright-object handling, and whole-body coordination are better represented in a base-aligned frame. However, modern diffusion-based visuomotor policies typically commit to a single predefined action frame, forcing one denoiser to model action distributions that are often unnecessarily complex in that frame. We propose Mixture of Frames Policy (MoF), a diffusion policy that performs synchronized action denoising across multiple coordinate frames. MoF maintains a single canonical diffusion state, re-expresses it in several task-relevant frames, applies frame-specialized denoisers, and fuses their noise predictions back in the canonical frame. To make this possible for intermediate noisy diffusion states, we introduce a column-based 6D rotation representation within an SE(3) action parameterization that supports exact, differentiable frame transformations without requiring noisy rotations to lie on the SO(3) manifold. Across nine simulated bimanual manipulation tasks, we show that the best action frame is task-dependent and that MoF improves over oracle frame selection and standard Mixture-of-Experts (MoE) baselines. We further evaluate MoF on two real-world bimanual mobile manipulation tasks, demonstrating that it outperforms all constituent single-frame baselines. Project homepage: https://mofpo.github.io",
-      "url": "https://arxiv.org/abs/2607.11884v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.11884v1",
-      "published": "2026-07-13T17:59:40Z",
-      "updated": "2026-07-13T17:59:40Z",
+      "abstract": "Large language model (LLM) agents increasingly automate multi-step engineering and informatics workflows, yet they rarely ask how much effort a task actually requires. They often follow a maximum-context-first strategy--re-reading files and dependencies they have already seen--turning a one-line edit into a small code-base audit. We argue the missing capability is task-aware execution-scope estimation: judging a task's difficulty, the information it truly needs, and the shortest reliable path before committing budget. We formalize minimum-sufficient execution and the Agent Cognitive Redundancy Ratio (ACRR), and propose E3 (Estimate, Execute, Expand): the agent estimates an initial operating point, executes a minimum viable path, and expands scope only when verification fails. On MSE-Bench--a deterministic benchmark of 121 edits in a capability-controlled simulator--E3 matches the strongest baseline's 100% success while cutting cost by 85%, tokens by 91%, and inspected files by 92%, and further beats a strong adaptive retrieval baseline by 16%; the gains survive held-out instruction wording and essentially every cost weighting. A companion real-model harness (LLM-Case) corroborates the effect on a live gpt-4o agent editing a real open-source library, with every candidate patch graded by actually running the project's real pytest suite against a measured oracle: the over-reading is milder but real, and E3 is the leanest and fastest policy at comparable task success--its one shortfall a provider rate-limit, not a wrong edit. We frame this as a controlled probe of execution redundancy, not a measurement of any deployed agent, and position task-aware execution as a step toward engineering-grounded AI (EGAI)--agents whose effort is anchored in the engineering reality of the task. We release the framework and benchmark.",
+      "url": "https://arxiv.org/abs/2607.13034v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.13034v1",
+      "published": "2026-07-14T17:59:31Z",
+      "updated": "2026-07-14T17:59:31Z",
       "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2607.11874v1",
-      "title": "A Minimalist Retargeting-Guided Reinforcement Learning Recipe for Dexterous Manipulation",
-      "authors": [
-        "Yunhai Feng",
-        "Natalie Leung",
-        "Jiaxuan Wang",
-        "Lujie Yang",
-        "Haozhi Qi",
-        "Preston Culbertson"
-      ],
-      "abstract": "Recent work in humanoid whole-body control has found success with a simple recipe: retarget human motion to robot kinematic references, then train policies via reinforcement learning (RL) to track them. But how does this recipe transfer to dexterous manipulation? The answer is not obvious, as manipulation involves complex, contact-rich dynamics and requires delicate regulation of contact modes and forces. We present REGRIND, a minimalist retargeting-guided RL pipeline that learns dexterous manipulation policies from a single human demonstration. REGRIND retargets human hand-object motion to a robot reference that preserves hand-object spatial and contact relationships, trains a residual RL policy in simulation to track object-centric keypoints along that reference, and transfers the resulting policy zero-shot to hardware with careful system identification. The resulting policies produce fluid, human-like behavior on two different multi-fingered hands across contact-rich tool-use tasks, including operating a pair of scissors and turning a screwdriver. Through systematic hardware experiments, we identify and analyze the key factors that govern sim-to-real transfer in dexterous manipulation, offering practical guidance for retargeting-based learning in contact-rich settings. Videos and code are available at https://yunhaifeng.com/REGRIND.",
-      "url": "https://arxiv.org/abs/2607.11874v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.11874v1",
-      "published": "2026-07-13T17:56:08Z",
-      "updated": "2026-07-13T17:56:08Z",
-      "categories": [
-        "cs.RO",
         "cs.AI",
-        "cs.LG"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2607.11855v1",
-      "title": "Robust bipedal locomotion on flowable slopes via foot-driven terrain manipulation",
-      "authors": [
-        "Deniz Kerimoglu",
-        "Junnosuke Kamohara",
-        "Jiyeon Maeng",
-        "Ziwon Yoon",
-        "Seth Hutchinson",
-        "Ye Zhao",
-        "Daniel I. Goldman"
-      ],
-      "abstract": "Bipedal robots are challenging to control because they operate close to instability, where small variations in foot-terrain contact can rapidly destabilize locomotion. On rigid terrain, bipedal robots mitigate this fragility by using well-established contact mechanics and control strategies. On flowable surfaces such as granular slopes, foot contact can induce large surface deformations and solid-fluid-like transitions, coupling terrain effects with robot dynamics, leading to underperformance or failure. This is partly due to the lack of reliable methods to represent the dynamics of flowable terrain, making it difficult to account for terrain effects in locomotion design. Here, we investigate how controlling terrain response can improve bipedal locomotion on granular slopes by studying the terradynamics of cleated feet, thin plates emanating from the foot soles. Systematic studies of a small-scale (1.4 kg) robophysical biped reveal that cleats with sparse and dense spacing lead to excessive terrain yielding and resistance, respectively, degrading performance and leading to failure. An intermediate cleat spacing distributes interaction forces to maintain substrate stresses near (or below) the yield threshold, enabling walking on granular slopes up to 30 degrees. Guided by these principles, we design a foot that actively adjusts cleat depth and accommodates both rigid and granular terrain. We also demonstrate that the principles of effective foot-terrain interaction translate to a larger (15 kg) autonomous biped. Our study presents an alternative to conventional body-centric robot control approaches, which regulate terrain-induced effects through body motion, by instead regulating terrain interactions through limb-centric approach.",
-      "url": "https://arxiv.org/abs/2607.11855v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.11855v1",
-      "published": "2026-07-13T17:42:03Z",
-      "updated": "2026-07-13T17:42:03Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2607.11827v1",
-      "title": "Sparse Robust Optimal Control in Continuous-Time: A Computationally Viable Approach",
-      "authors": [
-        "Siddhartha Ganguly",
-        "Ashwin Aravind",
-        "Souvik Das",
-        "Masaaki Nagahara",
-        "Debasish Chatterjee"
-      ],
-      "abstract": "This article presents a novel, numerically viable algorithm for solving sparse robust optimal control problems in continuous time. We consider a constrained linear noisy system governed by an ordinary differential equation (ODE), with an $L^1$-type objective function in line with the sparse optimal control literature. The resulting optimal control problem is shown to admit a semi-infinite programming (SIP) formulation. Building upon this insight, we develop a new framework that enables the computation of exact solutions -- to our knowledge, the first such achievement in the context of sparse optimal control. We demonstrate that a finite and computationally viable convex optimization problem can be solved to recover, in a lossless manner, both the optimal value and the corresponding optimizers of the original SIP, while also guaranteeing satisfaction of uncountably many constraints. We also show that the parameter-dependent noisy systems and the minimum attention problem fall into our framework and can be solved efficiently via our algorithm. The efficacy of our algorithm is illustrated through a benchmark numerical example.",
-      "url": "https://arxiv.org/abs/2607.11827v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.11827v1",
-      "published": "2026-07-13T17:18:41Z",
-      "updated": "2026-07-13T17:18:41Z",
-      "categories": [
-        "math.OC",
+        "cs.CL",
+        "cs.SE",
         "eess.SY"
       ],
-      "primary_category": "math.OC"
+      "primary_category": "cs.AI"
     },
     {
-      "id": "2607.11822v1",
-      "title": "Active Noise Floor Estimation for Reliability-Optimal POMDPs: A Value-of-Noise-Information Approach",
+      "id": "2607.13033v1",
+      "title": "DenseReward: Dense Reward Learning via Failure Synthesis for Robotic Manipulation",
       "authors": [
-        "Hyung-Jin Yoon"
+        "Yu Fang",
+        "Wanxi Dong",
+        "Jiaqi Liu",
+        "Yue Yang",
+        "Mingxiao Huo",
+        "Yao Mu",
+        "Huaxiu Yao",
+        "Li Erran Li",
+        "Daniel Szafir",
+        "Mingyu Ding"
       ],
-      "abstract": "Finite Reliability Representations (FRR) certify when a cell-constant policy is sufficient for reliable decision-making in a partially observed system with a known physical noise floor. In practice, however, sensing and execution noise can be latent and context-dependent. This paper develops a certificate-aware active disambiguation framework for an unknown physical noise parameter theta = (sigma_y, sigma_u), with the sensor-only case obtained by fixing sigma_u. We define the Value of Noise Information (VoNI) as the expected excess FRR certificate gap caused by using a reliability cover calibrated to the current estimate rather than to the realized noise parameter. We bound VoNI using action-value model mismatch and FRR radius inflation, showing that noise estimation has low decision value in sub-crossover regimes where the FRR certificate is insensitive to theta, but becomes valuable when posterior uncertainty can invalidate the current cover. A bi-level decision maker uses a posterior over theta, obtained from innovation statistics, execution residuals, or another online estimator, and triggers diagnostic probing only when uncertainty threatens the FRR certificate. We also interpret VoNI as a tractable, certificate-aware approximation to a high-level finite POMDP for latent sensing-execution regime disambiguation. Under stationary, identifiable, and persistently exciting regimes, we establish posterior consistency and convergence of the induced policy loss to the FRR approximation floor. Closed-loop UGV simulations with EKF-based innovation residuals show earlier detection of abrupt sensing-noise jumps, lower drift-tracking error, and substantially fewer probing actions than posterior-entropy exploration over 50 Monte Carlo trials.",
-      "url": "https://arxiv.org/abs/2607.11822v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.11822v1",
-      "published": "2026-07-13T17:16:26Z",
-      "updated": "2026-07-13T17:16:26Z",
+      "abstract": "Reinforcement learning holds great promise for improving robot policies beyond the limits of imitation learning. However, its practical adoption remains bottlenecked by the lack of reliable vision-language reward models that provide dense and informative feedback. Two key challenges remain: acquiring diverse failure data at scale and obtaining fine-grained reward signals beyond sparse trajectory-level success labels. Collecting failure trajectories typically requires laborious human effort, while pseudo-failures constructed by relabeling successful demonstrations fail to capture the diverse physical failure modes that arise during robot execution. Meanwhile, existing reward models often predict sparse binary or trajectory-level rewards, which provide limited guidance for efficient policy optimization. We introduce DenseReward, a dense robotic reward model that addresses both challenges. To train DenseReward, we develop an automated failure data generation pipeline that synthesizes physically realistic failure trajectories in simulation without human labeling, covering diverse failure modes such as collisions, missed grasps, object drops, and recovery behaviors. DenseReward predicts dense frame-level reward scores from visual observations and language instructions, enabling fine-grained estimation of task progress throughout an episode. Experiments show that DenseReward outperforms general-purpose VLMs and existing robotic reward models in dense reward prediction across both simulated and real-world manipulation. We further demonstrate that DenseReward provides effective reward guidance for downstream model predictive control and reinforcement learning. We release the dataset, trained reward models, and evaluation suite to support the development of failure-aware dense reward modeling for robot learning.",
+      "url": "https://arxiv.org/abs/2607.13033v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.13033v1",
+      "published": "2026-07-14T17:59:29Z",
+      "updated": "2026-07-14T17:59:29Z",
       "categories": [
-        "eess.SY",
         "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2607.13028v1",
+      "title": "TerraZero: Procedural Driving Simulation for Zero-Demonstration Self-Play at Scale",
+      "authors": [
+        "Zhouchonghao Wu",
+        "Akshay Rangesh",
+        "Weixin Li",
+        "Wei-Jer Chang",
+        "Zachary Lee",
+        "Tim Wang",
+        "Wei Zhan"
+      ],
+      "abstract": "Training robust autonomous driving agents requires a simulator that is fast enough for reinforcement learning at scale, realistic enough to ground behavior in real-world map structure, and diverse enough to cover the safety-critical long tail that logged data rarely contains. We present TerraZero, a procedural driving simulator and self-play training stack. A configurable C engine runs simulation on the CPU and policy inference on the GPU over a zero-copy path, sustaining 1.3M agent-steps per second on a single server-grade GPU, far faster than existing object-level simulators, while keeping fidelity lighter single-agent systems omit: heterogeneous agents, multiple dynamics models, and full traffic-rule enforcement. TerraZero treats logged data only as a source of real-world map geometry, populating each map with randomized rule-based road users and signal controllers and randomizing agent dynamics, rewards, and sizes per episode, so a map yields an unbounded set of scenarios. Every reported policy trains from scratch by reinforcement learning alone on a compute-efficient self-play recipe across GPUs, with zero human demonstrations and no fallback planner at inference. Policies generalize zero-shot across cities and datasets, including emergent left-hand-traffic driving without explicit supervision. As an ego policy, TerraZero is the first fully learned policy to top the InterPlan long-tail benchmark, ahead of larger learned planners; on routine-driving val14 it ranks among the best approaches and is the safest, posting the best collision and time-to-collision scores. On Waymo Open Sim Agents realism the same recipe outperforms other demonstration-free methods and is competitive with the strongest reference-anchored self-play method. One stack serves both roles: driving policies across dynamics for cars and trucks, and sim agents that jointly control vehicles, pedestrians, and cyclists.",
+      "url": "https://arxiv.org/abs/2607.13028v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.13028v1",
+      "published": "2026-07-14T17:59:02Z",
+      "updated": "2026-07-14T17:59:02Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "primary_category": "cs.LG"
+    },
+    {
+      "id": "2607.13017v1",
+      "title": "FlowWAM: Optical Flow as a Unified Action Representation for World Action Models",
+      "authors": [
+        "Yixiang Chen",
+        "Peiyan Li",
+        "Yuan Xu",
+        "Qisen Ma",
+        "Jiabing Yang",
+        "Kai Wang",
+        "Jianhua Yang",
+        "Dong An",
+        "He Guan",
+        "Gaoteng Liu",
+        "Jianlou Si",
+        "Jun Huang",
+        "Jing Liu",
+        "Nianfeng Liu",
+        "Yan Huang",
+        "Liang Wang"
+      ],
+      "abstract": "World Action Models (WAMs) are able to leverage pretrained video generators for both world modeling and action prediction. However, directly leveraging such video generators for control raises a new challenge: how to represent actions in a suitable form that aligns with pretrained video generators while carrying enough motion cues for accurate control. Existing numerical actions fail to satisfy the former, and prior visual action representations overlook the temporal motion structure across frames. We address this issue with FlowWAM, a dual-stream diffusion framework that adopts optical flow as a unified, video-native action representation. Flow videos share the same format as RGB videos and encode rich per-pixel displacement. By jointly modeling them within a shared pretrained video generator, FlowWAM can naturally implement two modes of WAMs. In policy mode, FlowWAM generates flow for action prediction, while in world-model mode, it uses target flow sequences to guide future video generation. Moreover, since flow can be easily extracted from raw videos without action labels, FlowWAM can leverage large-scale action-unlabeled video datasets for pretraining. We empirically find that our flow-based action representation delivers gains across both modes. On RoboTwin manipulation, FlowWAM raises the success rate to 92.94% on the Clean setting and 92.14% on Random, outperforming both VLA and WAM baselines. On WorldArena world modeling, it achieves the best overall EWMScore (63.71) with an 18.4% relative improvement in trajectory accuracy. More results can be found on our project website: https://flow-wam.github.io .",
+      "url": "https://arxiv.org/abs/2607.13017v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.13017v1",
+      "published": "2026-07-14T17:57:12Z",
+      "updated": "2026-07-14T17:57:12Z",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2607.12992v1",
+      "title": "ChunkFlow: Towards Continuity-Consistent Chunked Policy Learning",
+      "authors": [
+        "Zhao Yang",
+        "Yinan Shi",
+        "Mingyuan Yao",
+        "Wenyao Xue",
+        "Yawei Jueluo",
+        "Longjun Liu"
+      ],
+      "abstract": "Vision-language action (VLA) models increasingly adopt chunked action heads to satisfy real-time constraints; however, this introduces boundary jitter: overlapping regions between consecutive chunks often yield inconsistent predictions, degrading temporal coherence and the task success rate. Existing methods, such as inference-time blending, merely reweight mismatched proposals without correcting underlying errors, leading to residual accumulation under biased or noisy histories. We propose ChunkFlow, a seam-aware training-and-execution framework for chunked policies that aligns chunk structure with boundary execution. It partitions each chunk into frozen, editable, and future zones, applies deterministic overlap blending at execution, and trains raw predictions with seam and first- and second-order continuity losses. History corruption and scheduled sampling improve robustness to executed-history errors, while an AWAC fine-tuning stage adapts the policy without removing these structural regularizers. Under mild smoothness assumptions, pre-blending seam discrepancies provably decay with increasing overlap. Experiments on CALVIN, LIBERO, and real robots show an improved success-stability trade-off with low-latency inference. Project page: https://cytoderm-ai.github.io/chunkflow.",
+      "url": "https://arxiv.org/abs/2607.12992v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.12992v1",
+      "published": "2026-07-14T17:43:25Z",
+      "updated": "2026-07-14T17:43:25Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2607.12965v1",
+      "title": "MAMMOTH: A Multi-Modal End-to-End Policy for Off-Road Mobility Robust to Missing Modality",
+      "authors": [
+        "Ahaan Kotian",
+        "Shivani Subramanyan",
+        "Suresh Sundaram"
+      ],
+      "abstract": "Reliable autonomous navigation in unstructured off-road environments remains a critical unsolved challenge due to extreme terrain diversity, drastic illumination variations and acute sensor degradation. Recent developments have approached the problem as a traversability costmap estimation or visual navigation task. However, many exhibit heavy reliance on RGB modality, leading to poor performance in varied illumination such as glares, shadows or low ambient light. Achieving robust generalization in such conditions requires integrating modalities that provide supplementary scene information. Such multi-modal methods suffer from a rigid dependency on the presence of near-perfect sensor inputs, leaving them unable to robustly handle sensor degradation or individual modality failure. To address these limitations, we introduce MAMMOTH (MAsking Multi-Modal inputs for Off-road Traversability Heuristic-informed navigation), a unified end-to-end navigation policy for robust off-road visual-goal-conditioned navigation and undirected exploration. Specifically, MAMMOTH efficiently fuses multi-modal observations (RGB, Thermal, 3D Pointcloud and Ego Velocity) and is trained with a modality dropout scheme, enabling it to generalize to missing modalities at inference time. Furthermore, we employ a diffusion policy to learn the joint conditional probability distribution of physically-grounded trajectories and a intrinsic traversability heuristic. MAMMOTH utilizes this heuristic to prefer safer, smoother trajectories. We validate MAMMOTH through extensive real-world robot experiments in distinct off-road environments, including night-time operation. Our results demonstrate superior performance, with significant improvements in collision avoidance, terrain-aware planning and generalization to missing modalities. The code and dataset used for this work will be made publicly available.",
+      "url": "https://arxiv.org/abs/2607.12965v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.12965v1",
+      "published": "2026-07-14T17:04:47Z",
+      "updated": "2026-07-14T17:04:47Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2607.12951v1",
+      "title": "Optimal Assembly of Repurposed Lithium-Ion Battery Packs under Cell Heterogeneity and Screening Uncertainty",
+      "authors": [
+        "Hassan Zahid Butt",
+        "Xingpeng Li"
+      ],
+      "abstract": "The growing supply of retired electric vehicle batteries presents an opportunity for second-life stationary energy storage, but assembling heterogeneous retired cells into reliable packs is challenging due to substantial variation in capacity, DC internal resistance (DCIR), and self-discharge. This paper proposes a robust optimization framework for cell-to-pack assembly of second-life batteries. A topology-screening stage first identifies minimum-cell series-parallel configurations satisfying inverter and energy requirements, reducing the dimensionality of the subsequent assignment problem. For each candidate topology, a mixed-integer linear program selects cells and assigns them along the series string, enforcing power, voltage, and energy requirements as hard constraints while minimizing a normalized, weighted sum of DCIR spread, capacity spread, and self-discharge imbalance. Additionally, measurement uncertainty in capacity and DCIR is modeled as bounded intervals to guarantee feasibility under worst-case parameter deviations. The framework is evaluated on four heterogeneous inventories for a 10 kW/10 kWh stationary backup application. The proposed method satisfies all feasibility requirements in every case, while single-metric sorting heuristics each fail on at least one inventory. Relative to the best single-metric baseline by objective value, it reduces the normalized mismatch objective by 76-87%, demonstrating that jointly optimizing cell matching with application-level feasibility requirements improves heterogeneous second-life pack assembly under screening uncertainty.",
+      "url": "https://arxiv.org/abs/2607.12951v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.12951v1",
+      "published": "2026-07-14T16:46:38Z",
+      "updated": "2026-07-14T16:46:38Z",
+      "categories": [
+        "eess.SY"
       ],
       "primary_category": "eess.SY"
     },
     {
-      "id": "2607.11792v1",
-      "title": "Casting Everything to Online API Services? A Survey of Integrating Localized Speech Recognition Models in Robotic Systems",
+      "id": "2607.12931v1",
+      "title": "ExToken: Structured Exploration for Efficient Vision-Language-Action Reinforcement Fine-tuning",
       "authors": [
-        "Sheng Li",
-        "Jing Li",
-        "Felix Schijve",
-        "Jun Hu",
-        "Emilia Barakova"
+        "Yilun Kong",
+        "Yunpeng Qing",
+        "Guozheng Ma",
+        "Haoyu Wang",
+        "Li Shen",
+        "Zhi Hou",
+        "Dacheng Tao"
       ],
-      "abstract": "Automatic speech recognition (ASR) has become a critical component of modern robotic systems because it is one of the most natural and intuitive ways for humans to interact with robots. A commonly used method is to directly use API services online. But is that all we can do? This article provides an overview of how ASR technologies are integrated into various intelligent robots and machines. We discuss the evolution of speech recognition from established approaches to state-of-the-art deep learning models, such as OpenAI's Whisper. We also list large-scale datasets and open source toolkits that have been widely used in both industry and academia. We structure the survey around ASR model families, deployment strategies in robotics (especially ROS-based, cloud-based, and hybrid solutions), and several real-world robotic platforms. Finally, we outline the challenges of deploying robust speech recognition in robots and discuss future directions, including multimodal interaction in diverse and dynamic environments. This paper can help social robotics researchers better navigate the emerging domain of language-based natural human-robot interaction.",
-      "url": "https://arxiv.org/abs/2607.11792v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.11792v1",
-      "published": "2026-07-13T16:45:19Z",
-      "updated": "2026-07-13T16:45:19Z",
+      "abstract": "Reinforcement Learning (RL) has demonstrated significant potential for improving Vision-Language-Action (VLA) models on complex manipulation tasks. However, its practical scalability remains severely limited by the substantial cost of environmental interactions. In this work, we first investigate the exploration stagnation bottleneck in current VLA-RL frameworks and reveal that trajectory diversity is fundamentally more important to sample efficiency than the sheer quantity of collected rollouts. Motivated by these insights, we introduce RL Exploration Token (ExToken), a simple yet general framework that condition VLA policies on discrete behavioral priors derived from offline demonstrations for structured exploration. By conditioning the policy on different tokens during rollout collection, ExToken encourages the agent to explore diverse behavioral modes, substantially improving state-action coverage and exploration efficiency. To bridge exploration during training with deterministic inference at deployment, ExToken further incorporates a state-conditioned token selector that adaptively predicts effective behavioral modes for unseen scenarios. Extensive experiments across simulated and real-world robotic manipulation tasks demonstrate that ExToken consistently accelerates convergence, improves task performance, and exhibits strong robustness under highly constrained interaction budgets.",
+      "url": "https://arxiv.org/abs/2607.12931v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.12931v1",
+      "published": "2026-07-14T16:04:41Z",
+      "updated": "2026-07-14T16:04:41Z",
       "categories": [
-        "cs.RO",
-        "eess.AS"
+        "cs.RO"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2607.11785v1",
-      "title": "MIRA: A Modular Open-Source Micro-UAV for Indoor Research",
+      "id": "2607.12892v1",
+      "title": "UR-VC: Unsupervised Robotic Value Correction for Time-Derived Progress Proxies",
       "authors": [
-        "Lucas K. de Oliveira",
-        "Felipe A. G. Tommaselli",
-        "Jo\u00e3o Aires Marsicano",
-        "Marco S. Tayar",
-        "Pedro A. R. Saraiva",
-        "Ricardo V. Godoy",
-        "Marcelo Becker"
+        "Lirui Zhao",
+        "Modi Shi",
+        "Li Chen",
+        "Qi Liu",
+        "Ping Luo",
+        "Hongyang Li"
       ],
-      "abstract": "Indoor robotics research increasingly relies on micro-UAVs whose airframe, electronics, and control software are fully open to modification. Off-the-shelf platforms rarely expose the low-level access required for such modifications, while building a custom alternative typically requires substantial engineering effort before flight testing can begin, leaving many laboratories to work within constraints that limit the scope of their research. We present MIRA (Modular Indoor Research Architecture), a low-cost, open-source micro-UAV for indoor research built around a replicable 3D-printed PLA airframe and a containerized low-level software package managing the companion-to-autopilot communication bridge via Micro XRCE-DDS. Designed as a white-box architecture, core subsystems are individually replaceable without firmware refactoring, supporting local fabrication and component substitution from existing lab inventory. We characterize MIRA through manual flight in position-control mode within an optical motion-capture volume, where the communication pipeline sustains a median companion-to-autopilot latency of 0.02 ms and power spectral density analysis confirms the structural vibration energy stays concentrated in a narrow 90 to 110 Hz band, isolated from the sub-20 Hz control bandwidth and within the autopilot safety thresholds.",
-      "url": "https://arxiv.org/abs/2607.11785v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.11785v1",
-      "published": "2026-07-13T16:37:07Z",
-      "updated": "2026-07-13T16:37:07Z",
+      "abstract": "Modern robot learning systems increasingly rely on dense progress or value signals to evaluate intermediate states, guide policy learning, and detect task completion, making the quality of these signals critical. Since such dense labels are rarely available at scale, normalized time within a demonstration is often used as a scalable substitute: later frames are treated as higher progress. However, this time-derived label is only a noisy proxy for physical task progress. In contact-rich manipulation, a robot may make progress and then lose it through slips, failed grasps, or partial undoing, while the time-derived label continues to increase monotonically. We introduce Unsupervised Robotic Value Correction (UR-VC), an offline, training-free method for correcting time-derived progress labels. UR-VC exploits a simple regularity in demonstration data: similar states often recur across different episodes, but at different timestamps. Instead of trusting the timestamp from a single trajectory, UR-VC retrieves similar states from other episodes and aggregates their time-derived labels to obtain a corrected progress estimate. UR-VC requires no manual progress labels, reward annotations, or additional value model. We evaluate UR-VC on real bimanual cloth flatten-and-fold data, a long-horizon deformable-object manipulation task with visible intermediate progress. The corrected labels capture local regressions and non-uniform progress that normalized time cannot represent, while preserving the overall task trend. We further use the corrected signal to construct advantage labels for VLA training, following recent advantage-conditioned policy learning. UR-VC shows a positive trend in real-robot task success under matched data, model, and training settings.",
+      "url": "https://arxiv.org/abs/2607.12892v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.12892v1",
+      "published": "2026-07-14T15:33:33Z",
+      "updated": "2026-07-14T15:33:33Z",
       "categories": [
         "cs.RO",
+        "cs.AI"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2607.12861v1",
+      "title": "Unveiling Complex Collective Behaviors from Simple Rewards",
+      "authors": [
+        "Yize Mi",
+        "Jianan Li",
+        "Liang Li",
+        "Shiyu Zhao"
+      ],
+      "abstract": "Multi-agent Reinforcement Learning (MARL) holds great potential for robot swarms, but the black-box nature of neural policies complicates strategic analysis, limiting multi-robot applications. Furthermore, complex swarm behaviors can surprisingly emerge from simple rewards without explicit aggregation incentives. Unveiling the mechanisms behind this emergence is critical, but the disconnection between simple rewards and collective behaviors exacerbates interpretability challenges. This paper aims to reveal the hidden mechanisms in this process. We propose a two-stage EEC (\\LinkIII) explanatory framework. This includes a novel analytical tool called the Agent Response Map (ARM), which reveals agents' decision-making patterns across space and identifies regions of aggregation and avoidance. ARM reveals that the robots implicitly learn the geometric fields of the environment and utilize these structures as desired targets for coordinated movement. We validate this finding across two distinct tasks: a cooperative multi-robot shape assembly and a competitive predator-prey pursuit-evasion. 1) In the cooperative task, ARM identifies the unoccupied target interior as the desired destination for robot navigation. As the center becomes occupied, this target region automatically shifts toward the boundary, demonstrating the robots' capacity to autonomously explore unoccupied areas. 2) In the competitive task, ARM surprisingly identifies the boundary of the predators' Voronoi diagram as the convergence destination for prey agents. Together, these two tasks demonstrate the capability of ARM to discover the hidden geometric structures underlying MARL policies in robot swarms.",
+      "url": "https://arxiv.org/abs/2607.12861v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.12861v1",
+      "published": "2026-07-14T15:11:26Z",
+      "updated": "2026-07-14T15:11:26Z",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
         "eess.SY"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2607.11779v1",
-      "title": "A Compact Top-Loading Robot for Endovascular Interventions: Design, Control and Evaluation",
-      "authors": [
-        "Jonas Fischer",
-        "Lennart Karstensen",
-        "Franziska Mathis-Ullrich"
-      ],
-      "abstract": "Robot-assisted endovascular intervention can potentially reduce radiation exposure, improve surgeon ergonomics, enable telesurgery, support active assistance and autonomy, and enhance procedural precision. However, existing systems often suffer from limited procedural coverage because constrained patient-side setups, restricted flexibility, and complex instrument exchange hinder clinical workflow integration. This work presents a compact robotic system for endovascular interventions that enables continuous translational and rotational manipulation of standard endovascular instruments. The system consists of two alternating carts with pneumatically actuated membrane grippers integrated into rotating gripper gears. Its top-loading design allows rapid exchange of instruments such as guidewires and catheters without changing the robotic setup. A leader-follower control strategy enables continuous motion despite the finite stroke of each cart. The system was evaluated in motion-tracking experiments with guidewires and catheters and in an in vitro vascular phantom. The motion-tracking experiments showed generally smooth translational and rotational motion profiles. Across all tested guidewire and catheter experiments, the mean relative tracking errors were 3.6% for translational motion and 4.1% for rotational motion. In the vascular phantom, robot-assisted navigation reached the target in most trials, demonstrating the feasibility of the proposed manipulation concept under in vitro conditions. The presented robotic system demonstrates technical feasibility for continuous manipulation of standard endovascular instruments in bench-top and in vitro experiments. The compact top-loading design may ease instrument exchange and clinical workflow integration. Future work will focus on improving gripping performance, actuation speed, force feedback, and evaluation in more clinically realistic settings.",
-      "url": "https://arxiv.org/abs/2607.11779v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.11779v1",
-      "published": "2026-07-13T16:35:14Z",
-      "updated": "2026-07-13T16:35:14Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2607.11739v1",
-      "title": "AutoPath: Learning Transferable Goal-Conditioned Stochastic Path Prior for Safe Navigation Without Human Demonstrations",
-      "authors": [
-        "Ziyang Zhang",
-        "Boyang Zhou",
-        "Zesong Yang",
-        "Haocheng Peng",
-        "Zeming Gai",
-        "Xiao Liang",
-        "Yujun Shen",
-        "Danping Zou",
-        "Ruizhen Hu",
-        "Hujun Bao",
-        "Zhaopeng Cui"
-      ],
-      "abstract": "Real-time navigation in cluttered and dynamic environments requires collision-free and dynamically feasible motion under limited perception. However, feasible navigation behaviors are inherently multimodal because multiple paths may exist around obstacles. In this paper, we formulate navigation as learning a transferable goal-conditioned stochastic path prior that models a reusable distribution over goal-aligned geometry-consistent local paths conditioned on local observations. This formulation enables structured sampling of navigation candidates, allowing multiple feasible paths to be explored through sampling without relying on robot-specific motion constraints. To this end, we introduce a goal-aligned canonical state representation that removes in-plane rotational ambiguity and normalizes local geometry with respect to the goal, enabling rotation-invariant path distribution learning. We further develop a structured prior learning framework that parameterizes local paths using a geometry-aware polar action manifold and incorporates risk-sensitive utility shaping with multi-goal distributional rollouts for stable and safety-aware planning. Extensive experiments in dense static environments and dynamic pedestrian scenarios demonstrate that the proposed method achieves consistently high success rates with competitive efficiency while enabling cross-platform transfer of a single path prior learned on differential-drive robots to quadruped platforms without retraining.",
-      "url": "https://arxiv.org/abs/2607.11739v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.11739v1",
-      "published": "2026-07-13T16:00:41Z",
-      "updated": "2026-07-13T16:00:41Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2607.11734v1",
-      "title": "NeuralActuator: Neural Actuation Modeling for Robot Dynamics and External Force Perception",
-      "authors": [
-        "Zhiyang Dou",
-        "John U. Onyemelukwe",
-        "Hangxing Zhang",
-        "Heng Zhang",
-        "Minghao Guo",
-        "Yunsheng Tian",
-        "Michal Piotr Lipiec",
-        "Joshua Jacob",
-        "Chao Liu",
-        "Peter Yichen Chen",
-        "Yuri Ivanov",
-        "Wojciech Matusik"
-      ],
-      "abstract": "Differentiable simulators have advanced policy learning and model-based control, yet actuator dynamics remain an important source of sim-to-real error. This is particularly acute on low-cost platforms, where the linear current-to-torque relation $\u03c4= K_tI$ becomes unreliable during commanded-target tracking because of friction, hysteresis, backlash, and thermal effects. We present NeuralActuator, a neural actuator model that jointly predicts (i) a simulator-equivalent generalized-effort surrogate for trajectory propagation on low-cost servo platforms, (ii) external force with a contact-probability gate for sensorless force perception, and (iii) a motor-condition score for the supervised joint. We also introduce the Neural Actuation Dataset (NAD), collected with a twin-arm teleoperation system that records robot states and actuator telemetry together with external-force labels. The torque-surrogate head is trained through differentiable simulation from pose trajectories without direct generalized-effort labels, while the force, gate, and motor-condition heads receive direct supervision. A Transformer captures temporal dependencies while supporting real-time inference. We evaluate NeuralActuator on a 5-DoF OpenManipulator-X, a 6-DoF SO-101, and a 7-DoF Franka Emika Panda, spanning three actuator families and platforms costing approximately USD 500 to over USD 30,000. The low-cost platforms support dynamics and force evaluation, while the offline Franka experiment provides an additional payload-force-estimation benchmark. Experiments further demonstrate its application for motor condition estimation on OpenManipulator-X and improved behavior-cloning performance when NeuralActuator is used as a pretrained module.",
-      "url": "https://arxiv.org/abs/2607.11734v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.11734v1",
-      "published": "2026-07-13T15:58:34Z",
-      "updated": "2026-07-13T15:58:34Z",
-      "categories": [
-        "cs.RO",
-        "cs.CV",
-        "cs.GR",
-        "cs.LG"
       ],
       "primary_category": "cs.RO"
     }
