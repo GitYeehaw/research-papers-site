@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-07-16T10:23:23.666247+00:00",
+  "scraped_at": "2026-07-17T10:19:36.596765+00:00",
   "researcher_count": 54,
   "researchers": [
     {
@@ -3125,6 +3125,34 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2607.15275v1",
+          "title": "RoboTTT: Context Scaling for Robot Policies",
+          "authors": [
+            "Yunfan Jiang",
+            "Yevgen Chebotar",
+            "Ruijie Zheng",
+            "Fengyuan Hu",
+            "Yunhao Ge",
+            "Jimmy Wu",
+            "Tianyuan Dai",
+            "Scott Reed",
+            "Li Fei-Fei",
+            "Yuke Zhu",
+            "Linxi \"Jim\" Fan"
+          ],
+          "abstract": "Recent robot foundation models operate with single-step or short-history visuomotor context. We introduce Test-Time-Training Robot Policies (RoboTTT), a robot model and training recipe that scale visuomotor context to 8K timesteps, three orders of magnitude beyond state-of-the-art policies, without growing inference latency. At this context length, we unlock new robot capabilities: one-shot in-context imitation from human video demonstrations, on-the-fly policy improvement, robustness to perturbations, and stronger performance on multi-stage, long-horizon tasks. We also observe, for the first time, steady gains in closed-loop performance as pretraining context length scales. At its core, RoboTTT integrates Test-Time Training into robot foundation models such as Vision-Language-Action policies, yielding a sequence model whose recurrent state consists of fast weights, parameters updated by gradient descent during both training and inference, compressing histories into weight space and retrieving contextual information for long-context conditioning. To scale training context length, the recipe combines sequence action forcing with truncated backpropagation through time. On challenging real-robot manipulation tasks, RoboTTT improves overall performance by 87% over the single-step context baseline and fully completes a five-minute, ten-stage assembly task, which no baseline ever does. RoboTTT trained with 8K-timestep context outperforms the same model pretrained with 1K timesteps by 62%, suggesting context length as a new scaling axis for robot foundation models. Videos are available at https://research.nvidia.com/labs/gear/robottt/",
+          "url": "https://arxiv.org/abs/2607.15275v1",
+          "pdf_url": "https://arxiv.org/pdf/2607.15275v1",
+          "published": "2026-07-16T17:59:06Z",
+          "updated": "2026-07-16T17:59:06Z",
+          "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.LG"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2606.28276v2",
           "title": "SimFoundry: Modular and Automated Scene Generation for Policy Learning and Evaluation",
           "authors": [
@@ -3257,33 +3285,6 @@
             "cs.RO"
           ],
           "primary_category": "cs.AI"
-        },
-        {
-          "id": "2605.18746v2",
-          "title": "ESI-Bench: Towards Embodied Spatial Intelligence that Closes the Perception-Action Loop",
-          "authors": [
-            "Yining Hong",
-            "Jiageng Liu",
-            "Han Yin",
-            "Manling Li",
-            "Leonidas Guibas",
-            "Li Fei-Fei",
-            "Jiajun Wu",
-            "Yejin Choi"
-          ],
-          "abstract": "Spatial intelligence unfolds through a perception-action loop: agents act to acquire observations, and reason about how observations vary as a function of action. Rather than passively processing what is seen, they actively uncover what is unseen - occluded structure, dynamics, containment, and functionality that cannot be resolved from passive sensing alone. We move beyond prior formulations of spatial intelligence that assume oracle observations by recasting the observer as an actor. We introduce ESI-BENCH, a comprehensive benchmark for embodied spatial intelligence spanning 10 task categories and 29 subcategories built on OmniGibson, grounded in Spelke's core knowledge systems. Agents must decide what abilities to deploy - perception, locomotion, and manipulation - and how to sequence them to actively accumulate task-relevant evidence. We conduct extensive experiments on state-of-the-art MLLMs and find that active exploration substantially outperforms passive counterparts, with agents spontaneously discovering emergent spatial strategies without explicit instructions, while random multi-view often adds noise rather than signal despite consuming far more images. Most failures stem not from weak perception but from action blindness: poor action choices lead to poor observations, which in turn drive cascading errors. While explicit 3D grounding stabilizes reasoning on depth-sensitive tasks, imperfect 3D representation proves more harmful than 2D baselines by distorting spatial relations. Human studies further reveal that unlike humans who seek falsifying viewpoints and revise beliefs under contradiction, models commit prematurely with high confidence regardless of evidence quality, exposing a metacognitive gap that neither better perception nor more embodied interaction alone can close.",
-          "url": "https://arxiv.org/abs/2605.18746v2",
-          "pdf_url": "https://arxiv.org/pdf/2605.18746v2",
-          "published": "2026-05-18T17:59:02Z",
-          "updated": "2026-05-25T08:34:52Z",
-          "categories": [
-            "cs.CV",
-            "cs.AI",
-            "cs.CL",
-            "cs.LG",
-            "cs.RO"
-          ],
-          "primary_category": "cs.CV"
         }
       ]
     },
@@ -3416,21 +3417,47 @@
       "paper_count": 5,
       "papers": [
         {
-          "id": "2607.13501v1",
-          "title": "LAPO: Leave-One-Turn Attribution for Self-Generated Process Rewards in Multi-Turn Search Reasoning",
+          "id": "2607.13501v2",
+          "title": "LOTAPO: Leave-One-Turn Attribution for Self-Generated Process Rewards in Multi-Turn Search Reasoning",
           "authors": [
             "Qiang Zhu",
-            "Jiajun Wu"
+            "Jiajun Wu",
+            "Longyi Wang"
           ],
-          "abstract": "Reinforcement learning for multi-turn search reasoning typically relies on terminal outcome rewards, which cannot distinguish useful, redundant, and harmful intermediate interactions. We propose LAPO, a self-generated process-supervision method based on backward leave-one-turn attribution. For each search turn, LAPO replaces the turn and its retrieval observation with a fixed [DELETE] placeholder and measures the resulting change in the current policy's mean log-likelihood of the gold answer. This Answer-Likelihood Gain estimates the turn's contribution while preserving all downstream interactions, allowing early evidence to be evaluated in the complete reasoning context. LAPO further applies sign-consistency gating, retaining only normalized process advantages whose directions agree with their raw attribution scores. The method requires no additional reward model, teacher, verifier, or LLM-as-a-Judge. Across seven knowledge-intensive question-answering datasets with local retrieval, LAPO achieves an average exact-match score of 0.326, outperforming the strongest step-reward baseline, IGPO, by 0.053. Ablations show complementary benefits from backward attribution and sign-consistency gating, demonstrating that policy-derived retrospective attribution can provide effective process supervision for multi-turn search agents.",
-          "url": "https://arxiv.org/abs/2607.13501v1",
-          "pdf_url": "https://arxiv.org/pdf/2607.13501v1",
+          "abstract": "Reinforcement learning for multi-turn search reasoning typically relies on terminal outcome rewards, which cannot distinguish useful, redundant, and harmful intermediate interactions. We propose LOTAPO , a self-generated process-supervision method based on backward leave-one-turn attribution. For each search turn, LOTAPO replaces the turn and its retrieval observation with a fixed [DELETE] placeholder and measures the resulting change in the current policy's mean log-likelihood of the gold answer. This Answer-Likelihood Gain estimates the turn's contribution while preserving all downstream interactions, allowing early evidence to be evaluated in the complete reasoning context. LOTAPO further applies sign-consistency gating, retaining only normalized process advantages whose directions agree with their raw attribution scores. The method requires no additional reward model, teacher, verifier, or LLM-as-a-Judge. Across seven knowledge-intensive question-answering datasets with local retrieval, LOTAPO achieves an average exact-match score of 0.326, outperforming the strongest step-reward baseline, IGPO, by 0.053. Ablations show complementary benefits from backward attribution and sign-consistency gating, demonstrating that policy-derived retrospective attribution can provide effective process supervision for multi-turn search agents.",
+          "url": "https://arxiv.org/abs/2607.13501v2",
+          "pdf_url": "https://arxiv.org/pdf/2607.13501v2",
           "published": "2026-07-15T06:55:28Z",
-          "updated": "2026-07-15T06:55:28Z",
+          "updated": "2026-07-16T15:39:38Z",
           "categories": [
             "cs.AI"
           ],
           "primary_category": "cs.AI"
+        },
+        {
+          "id": "2607.14163v1",
+          "title": "A vision foundation model for single-cell biology via spatial gene cartography",
+          "authors": [
+            "Ridvan Yesiloglu",
+            "Sakib Mostafa",
+            "James Zou",
+            "Ash Alizadeh",
+            "Jiajun Wu",
+            "Lei Xing",
+            "Ehsan Adeli",
+            "Md Tauhidul Islam"
+          ],
+          "abstract": "Most single-cell foundation models are adapted from language models, representing each cell as a sequence of gene tokens. This discards the relationships among genes and often the magnitude of their expression. We present scVision, a vision foundation model that instead renders each cell as a continuous image. Using optimal transport, it places genes at fixed positions on a single shared, pan-tissue layout so that co-expressed genes become spatial neighbours, turning a transcriptome into an image in which gene programs appear as local texture. We pretrain a vision transformer by masked image modelling on 72 million human cells and use the frozen encoder with no fine-tuning. In zero-shot evaluations on six independent, held-out studies, scVision is the most accurate cell-type annotator and recovers gene programs without supervision, ahead of existing foundation models and classical baselines; on multi-study integration it matches the strongest token-based model while conserving the most biological structure, without ever seeing a batch label. Permuting the gene layout with the network fixed sharply lowers accuracy, more than removing the vision transformer itself, showing that biologically meaningful position, not the network, carries the signal. By preserving expression magnitude and gene relationships, scVision reframes single-cell representation learning as a vision problem, connecting it to the mature methods of computer vision.",
+          "url": "https://arxiv.org/abs/2607.14163v1",
+          "pdf_url": "https://arxiv.org/pdf/2607.14163v1",
+          "published": "2026-07-15T01:03:17Z",
+          "updated": "2026-07-15T01:03:17Z",
+          "categories": [
+            "q-bio.QM",
+            "cs.CV",
+            "cs.LG"
+          ],
+          "primary_category": "q-bio.QM"
         },
         {
           "id": "2607.08024v1",
@@ -3513,31 +3540,6 @@
             "cs.AI"
           ],
           "primary_category": "cs.RO"
-        },
-        {
-          "id": "2606.25592v1",
-          "title": "VPA-Guard: Defending and Benchmarking Image-to-Video Generation Against Visual Prompt Attacks",
-          "authors": [
-            "Yining Sun",
-            "Haoyu Kang",
-            "Jiajun Wu",
-            "Heng Zhang",
-            "Danyang Zhang",
-            "Zhenjun Zhao",
-            "Haochen Han",
-            "Fangming Liu",
-            "Wai Kin Victor Chan",
-            "Alex Jinpeng Wang"
-          ],
-          "abstract": "Recent advancements in Image-to-Video (I2V) generation have transformed input images from simple appearance references into interactive control interfaces where visual cues such as arrows, sketches, and emojis orchestrate complex video dynamics with unprecedented controllability. However, these seemingly innocuous static cues can be interpreted by models as executable temporal instructions, unfolding into harmful actions in the generated videos. Despite the severity of this threat, existing safety benchmarks remain predominantly focused on text-based and content-only image-based jailbreaks, leaving implicit visual prompt attacks insufficiently explored. To bridge this gap, we present VVA-Bench, the first systematic benchmark for evaluating video generation safety under categorized vision-centric prompt attacks. Extensive experiments on VVA-Bench demonstrate that state-of-the-art models are highly susceptible to such attacks, with Attack Success Rates (ASR) reaching 100.0\\% on Wan 2.7 and 74.8\\% on Veo 3.1. To mitigate these risks, we propose VPA-Guard, a retrieval-augmented and self-evolving defense framework. By leveraging few-shot reasoning to identify latent malicious intents, our method reduces the attack ASR by 44.2\\% and the harmfulness score by 73.4\\% on average, while maintaining the model's utility for legitimate user edits. Our work provides both a rigorous benchmark and an effective defense strategy to advance safe and socially responsible multimodal generation.",
-          "url": "https://arxiv.org/abs/2606.25592v1",
-          "pdf_url": "https://arxiv.org/pdf/2606.25592v1",
-          "published": "2026-06-24T09:00:08Z",
-          "updated": "2026-06-24T09:00:08Z",
-          "categories": [
-            "cs.CV"
-          ],
-          "primary_category": "cs.CV"
         }
       ]
     },
