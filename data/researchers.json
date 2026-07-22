@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-07-21T10:36:36.567147+00:00",
+  "scraped_at": "2026-07-22T10:36:48.609023+00:00",
   "researcher_count": 54,
   "researchers": [
     {
@@ -815,6 +815,30 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2607.18695v1",
+          "title": "Attributes Should Come from Images, Not Class Names: Distribution-Conditioned Attribute Selection for Vision-Language Models",
+          "authors": [
+            "Gautam Rajendrakumar Gare",
+            "Jia Shi",
+            "Zhiqiu Lin",
+            "Deepak Pathak",
+            "John Galeotti",
+            "Deva Ramanan"
+          ],
+          "abstract": "A popular route to interpretable zero-shot classification asks a large language model (LLM) to describe each class name and prompts CLIP with the resulting descriptors. We show that these descriptors carry little visual evidence of their own: removing the class name from the prompt collapses ImageNet accuracy from 59.5% to 15.5%. The diagnosis is that the descriptors are conditioned on the label rather than on the images, so they describe the concept in general and mislead exactly when the data shifts; an LLM insists that strawberries are red, but every strawberry in ImageNet-Sketch is a colorless line drawing. We therefore select attributes from the target image collection instead: we score a large attribute pool against the images in CLIP's joint embedding space and keep the top-scoring attributes per class. Selected this way, class-name-free attribute prompts reach 23.8% on ImageNet (against 15.5% for LLM descriptors), the gain holds on four shifted ImageNet variants, and reselecting from the LLM's own pool isolates the selection mechanism as the cause. With one image per class, the selected attributes outperform the prompt-tuning method CoOp by 3 points while fitting in under a minute instead of 14 hours, with no learned soft prompt to obscure the decision. Because the attribute set is chosen by the data, it doubles as a readable summary of a dataset, which we use to describe distribution shift in words.",
+          "url": "https://arxiv.org/abs/2607.18695v1",
+          "pdf_url": "https://arxiv.org/pdf/2607.18695v1",
+          "published": "2026-07-21T04:34:24Z",
+          "updated": "2026-07-21T04:34:24Z",
+          "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG",
+            "eess.IV"
+          ],
+          "primary_category": "cs.CV"
+        },
+        {
           "id": "2606.22303v1",
           "title": "FlowDPG: Deterministic Policy Gradient on Flow Matching Policies for Real-World Manipulation",
           "authors": [
@@ -913,34 +937,6 @@
             "cs.RO"
           ],
           "primary_category": "cs.LG"
-        },
-        {
-          "id": "2604.00940v1",
-          "title": "YieldSAT: A Multimodal Benchmark Dataset for High-Resolution Crop Yield Prediction",
-          "authors": [
-            "Miro Miranda",
-            "Deepak Pathak",
-            "Patrick Helber",
-            "Benjamin Bischke",
-            "Hiba Najjar",
-            "Francisco Mena",
-            "Cristhian Sanchez",
-            "Akshay Pai",
-            "Diego Arenas",
-            "Matias Valdenegro-Toro",
-            "Marcela Charfuelan",
-            "Marlon Nuske",
-            "Andreas Dengel"
-          ],
-          "abstract": "Crop yield prediction requires substantial data to train scalable models. However, creating yield prediction datasets is constrained by high acquisition costs, heterogeneous data quality, and data privacy regulations. Consequently, existing datasets are scarce, low in quality, or limited to regional levels or single crop types, hindering the development of scalable data-driven solutions. In this work, we release YieldSAT, a large, high-quality, and multimodal dataset for high-resolution crop yield prediction. YieldSAT spans various climate zones across multiple countries, including Argentina, Brazil, Uruguay, and Germany, and includes major crop types, including corn, rapeseed, soybeans, and wheat, across 2,173 expert-curated fields. In total, over 12.2 million yield samples are available, each with a spatial resolution of 10 m. Each field is paired with multispectral satellite imagery, resulting in 113,555 labeled satellite images, complemented by auxiliary environmental data. We demonstrate the potential of large-scale and high-resolution crop yield prediction as a pixel regression task by comparing various deep learning models and data fusion architectures. Furthermore, we highlight open challenges arising from severe distribution shifts in the ground truth data under real-world conditions. To mitigate this, we explore a domain-informed Deep Ensemble approach that exhibits significant performance gains. The dataset is available at https://yieldsat.github.io/.",
-          "url": "https://arxiv.org/abs/2604.00940v1",
-          "pdf_url": "https://arxiv.org/pdf/2604.00940v1",
-          "published": "2026-04-01T14:13:23Z",
-          "updated": "2026-04-01T14:13:23Z",
-          "categories": [
-            "cs.CV"
-          ],
-          "primary_category": "cs.CV"
         }
       ]
     },
@@ -1082,6 +1078,29 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2607.19046v1",
+          "title": "Contrastive On-Policy Distillation",
+          "authors": [
+            "Jiacheng Ruan",
+            "Jun Tang",
+            "Wenzhen Yuan",
+            "Ting Liu",
+            "Shuai Bai",
+            "Dayiheng Liu",
+            "Zhibo Yang",
+            "Yuzhuo Fu"
+          ],
+          "abstract": "On-policy Distillation (OPD) supervises a student model on trajectories sampled from its own policy by minimizing the divergence between the output distributions of the teacher and student at each token position, thereby providing dense token-level supervision. Although existing OPD methods have demonstrated strong performance in improving the reasoning ability of student models, their objectives fundamentally rely on token-level distribution matching. Consequently, they lack an explicit signal for comparing a token's relative compatibility across reasoning modes and thus do not directly model preferences between these modes. To address this limitation, we propose COPD, a contrastive OPD framework. Specifically, for each token generated by the student model, a frozen teacher model scores the same student state under two contrasting instructions that elicit light and heavy reasoning. The difference between the resulting log probabilities serves as a token-level advantage signal to guide the OPD update. Rather than merely imitating a single teacher distribution, COPD directly encourages the student model to learn more concise and efficient reasoning strategies. We conduct experiments on nine multimodal benchmarks covering both reasoning and understanding tasks. The results show that COPD substantially reduces reasoning length without compromising model performance and consistently improves efficiency across different tasks and model scales. Furthermore, the contrastive formulation can be seamlessly integrated into the On-policy Self-distillation (OPSD) framework, where self-contrastive supervision is constructed without an additional teacher model, thereby enabling the model to distill itself toward lightweight reasoning.",
+          "url": "https://arxiv.org/abs/2607.19046v1",
+          "pdf_url": "https://arxiv.org/pdf/2607.19046v1",
+          "published": "2026-07-21T12:35:04Z",
+          "updated": "2026-07-21T12:35:04Z",
+          "categories": [
+            "cs.CV"
+          ],
+          "primary_category": "cs.CV"
+        },
+        {
           "id": "2607.11690v1",
           "title": "Requirement-Driven Design of Whole-Body Social Tactile Sensing via Virtual Human-Robot Interaction",
           "authors": [
@@ -1156,24 +1175,6 @@
           "categories": [
             "cs.RO",
             "cs.AI"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2604.27557v1",
-          "title": "Function-based Parametric Co-Design Optimization of Dexterous Hands",
-          "authors": [
-            "Mohammad Amin Mirzaee",
-            "Harsh Gupta",
-            "Wenzhen Yuan"
-          ],
-          "abstract": "Despite advances in dexterous hand manipulation, robotic hand design is still largely decoupled from task-driven evaluation and control, limiting systematic optimization. Existing robotic hand co-design approaches are often limited in scope, optimizing a small subset of design parameters. We introduce a comprehensive parametric framework for robotic hand generation that unifies palm structure, finger kinematics, fingertip geometry, and fine-scale surface curvatures within a single design space. Fine geometric features are introduced through parametric surface deformation kernels that directly influence contact interactions. We validate the framework on design optimization in grasp stability tasks in simulation and real-world dynamic scenarios. Our framework produces simulation- and fabrication-ready hand models and will be released as open-source to enable rapid design iteration for dexterous hand co-design optimization frameworks and cross-embodiment policy training and control research.",
-          "url": "https://arxiv.org/abs/2604.27557v1",
-          "pdf_url": "https://arxiv.org/pdf/2604.27557v1",
-          "published": "2026-04-30T08:06:00Z",
-          "updated": "2026-04-30T08:06:00Z",
-          "categories": [
-            "cs.RO"
           ],
           "primary_category": "cs.RO"
         }
@@ -3118,6 +3119,33 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2607.19343v1",
+          "title": "Masked Visual Actions for Unified World Modeling",
+          "authors": [
+            "Hadi Alzayer",
+            "Wenlong Huang",
+            "Haonan Chen",
+            "Christopher Luey",
+            "Lvmin Zhang",
+            "Maneesh Agrawala",
+            "Gordon Wetzstein",
+            "Li Fei-Fei",
+            "Yilun Du",
+            "Jiajun Wu",
+            "Jia-Bin Huang"
+          ],
+          "abstract": "Video models absorb rich priors over how the visual world moves, interacts, and responds to contact, making them promising substrates for robotic world modeling. The central challenge is how to communicate action to such models in a form aligned with the visual space in which they learned these interaction priors, yet still grounded in physical manipulation. We introduce Masked Visual Actions, a pixel-space control interface that expresses action as a partially revealed trajectory of an arbitrary entity in a video. Revealing robot motion makes the model act as a forward dynamics model that predicts the scene's response to low-level robot actions, while revealing desired object motion makes the same model recover robot behavior consistent with that outcome. Finetuned with only 15 hours of masked examples from real videos and simulation, a single checkpoint achieves strong visual fidelity and controllability across diverse scenes and multiple embodiments. In downstream manipulation settings, the model produces imagined rollouts whose outcomes correlate with real-world execution for policy evaluation, improves decision making by ranking candidate futures in model-based planning, and supports inverse modeling by synthesizing robot motion from desired object motion.",
+          "url": "https://arxiv.org/abs/2607.19343v1",
+          "pdf_url": "https://arxiv.org/pdf/2607.19343v1",
+          "published": "2026-07-21T17:59:11Z",
+          "updated": "2026-07-21T17:59:11Z",
+          "categories": [
+            "cs.CV",
+            "cs.RO"
+          ],
+          "primary_category": "cs.CV"
+        },
+        {
           "id": "2607.15275v1",
           "title": "RoboTTT: Context Scaling for Robot Policies",
           "authors": [
@@ -3146,7 +3174,7 @@
           "primary_category": "cs.RO"
         },
         {
-          "id": "2606.28276v2",
+          "id": "2606.28276v3",
           "title": "SimFoundry: Modular and Automated Scene Generation for Policy Learning and Evaluation",
           "authors": [
             "Nadun Ranawaka",
@@ -3160,19 +3188,19 @@
             "Wesley Durbano",
             "Brandon Huynh",
             "Yu Fang",
-            "Linxi Fan",
             "Danfei Xu",
             "Ruohan Zhang",
             "Li Fei-Fei",
+            "Linxi Fan",
             "Bowen Wen",
             "Ajay Mandlekar",
             "Yuke Zhu"
           ],
           "abstract": "Training and evaluating robot policies in the real world is costly and difficult to scale. We introduce SimFoundry, a modular and automated system for zero-shot real-to-sim scene construction from a video. SimFoundry generates sim-ready digital twins and supports object, scene, and task editing, enabling the automated generation of diverse digital cousins: affordance-preserving variations of reconstructed real-world scenes. Policies trained on SimFoundry data transfer zero-shot to challenging real tasks involving multi-step manipulation, articulated object interaction, and bimanual interaction, and its digital cousins (variations of the original scene, objects, and tasks) facilitate generalization to new real-world conditions. Across 7 manipulation tasks and 5 policy architectures, SimFoundry simulation evaluations strongly predict real-world performance, with mean Pearson correlation 0.911 and mean maximum ranking violation 0.018. When evaluating sim-trained policies zero-shot in the real world, policies trained with object, scene, and task cousins in simulation show average task success rate improvements of 17%, 21%, and 40%, respectively. Additional details at https://research.nvidia.com/labs/gear/simfoundry/ .",
-          "url": "https://arxiv.org/abs/2606.28276v2",
-          "pdf_url": "https://arxiv.org/pdf/2606.28276v2",
+          "url": "https://arxiv.org/abs/2606.28276v3",
+          "pdf_url": "https://arxiv.org/pdf/2606.28276v3",
           "published": "2026-06-26T17:18:43Z",
-          "updated": "2026-07-04T00:42:40Z",
+          "updated": "2026-07-21T02:12:54Z",
           "categories": [
             "cs.RO"
           ],
@@ -3251,33 +3279,6 @@
             "cs.AI"
           ],
           "primary_category": "cs.CV"
-        },
-        {
-          "id": "2605.29563v4",
-          "title": "Planning with the Views",
-          "authors": [
-            "Kangrui Wang",
-            "Linjie Li",
-            "Zhengyuan Yang",
-            "Shiqi Chen",
-            "Zihan Wang",
-            "Li Fei-Fei",
-            "Jiajun Wu",
-            "Leonidas Guibas",
-            "Lijuan Wang",
-            "Manling Li"
-          ],
-          "abstract": "Can VLMs predict how each camera move changes the view, and plan many such moves ahead? We call this capability view planning, requiring (1)understanding how a single action transforms the view, and (2)composing many such transformations across multi-turn plans to identify a target view. We probe both abilities in our proposed ViewSuite, a 3D point-cloud environment on real ScanNet scenes. Across 13 frontier VLMs, a critical planning gap emerges: they possess basic view-action knowledge but fail to compose it across multi-turn plans, with the gap widening as viewpoint distance grows. To close this gap, we propose an iterative framework that alternates self-exploration with view graph distillation. The key insight is that all exploration trajectories, regardless of their outcome, collectively form a view graph that compactly captures how viewpoints connect across a scene. Distilling this graph into diverse supervised tasks reshapes the policy distribution and overcomes the sparse rewards that stall pure RL. This improves Qwen2.5-VL-7B from 2.5% to 47.8% on interactive view planning, surpassing GPT-5.4 Pro (18.5%) and Gemini 3.1 Pro (21.4%). Self-exploration emerges as a promising path toward VLMs that can actively reason and plan in 3D space. Code and Data are at https://viewsuite.github.io.",
-          "url": "https://arxiv.org/abs/2605.29563v4",
-          "pdf_url": "https://arxiv.org/pdf/2605.29563v4",
-          "published": "2026-05-28T08:15:23Z",
-          "updated": "2026-07-02T21:24:05Z",
-          "categories": [
-            "cs.AI",
-            "cs.CV",
-            "cs.RO"
-          ],
-          "primary_category": "cs.AI"
         }
       ]
     },
@@ -3410,6 +3411,33 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2607.19343v1",
+          "title": "Masked Visual Actions for Unified World Modeling",
+          "authors": [
+            "Hadi Alzayer",
+            "Wenlong Huang",
+            "Haonan Chen",
+            "Christopher Luey",
+            "Lvmin Zhang",
+            "Maneesh Agrawala",
+            "Gordon Wetzstein",
+            "Li Fei-Fei",
+            "Yilun Du",
+            "Jiajun Wu",
+            "Jia-Bin Huang"
+          ],
+          "abstract": "Video models absorb rich priors over how the visual world moves, interacts, and responds to contact, making them promising substrates for robotic world modeling. The central challenge is how to communicate action to such models in a form aligned with the visual space in which they learned these interaction priors, yet still grounded in physical manipulation. We introduce Masked Visual Actions, a pixel-space control interface that expresses action as a partially revealed trajectory of an arbitrary entity in a video. Revealing robot motion makes the model act as a forward dynamics model that predicts the scene's response to low-level robot actions, while revealing desired object motion makes the same model recover robot behavior consistent with that outcome. Finetuned with only 15 hours of masked examples from real videos and simulation, a single checkpoint achieves strong visual fidelity and controllability across diverse scenes and multiple embodiments. In downstream manipulation settings, the model produces imagined rollouts whose outcomes correlate with real-world execution for policy evaluation, improves decision making by ranking candidate futures in model-based planning, and supports inverse modeling by synthesizing robot motion from desired object motion.",
+          "url": "https://arxiv.org/abs/2607.19343v1",
+          "pdf_url": "https://arxiv.org/pdf/2607.19343v1",
+          "published": "2026-07-21T17:59:11Z",
+          "updated": "2026-07-21T17:59:11Z",
+          "categories": [
+            "cs.CV",
+            "cs.RO"
+          ],
+          "primary_category": "cs.CV"
+        },
+        {
           "id": "2607.13501v2",
           "title": "LOTAPO: Leave-One-Turn Attribution for Self-Generated Process Rewards in Multi-Turn Search Reasoning",
           "authors": [
@@ -3507,32 +3535,6 @@
             "cs.CL"
           ],
           "primary_category": "cs.CV"
-        },
-        {
-          "id": "2606.26423v2",
-          "title": "CoStream: Composing Simple Behaviors for Generalizable Complex Manipulation",
-          "authors": [
-            "Haonan Chen",
-            "Yuxiang Ma",
-            "Stephen Tian",
-            "Xiaoshen Han",
-            "Wenlong Huang",
-            "Feiyang Wu",
-            "Yunzhu Li",
-            "Jiajun Wu",
-            "Edward H. Adelson",
-            "Yilun Du"
-          ],
-          "abstract": "Long-horizon, contact-rich complex manipulation tasks, such as seating a GPU into a PCIe slot, demand both millimeter high precision and out-of-the-box generalization to new tasks. Existing paradigms struggle to satisfy both: classical pipelines use brittle, task-specific interfaces to achieve high-precision control but require costly pipeline redesigns to adapt to new tasks, whereas monolithic end-to-end policies provide better generalization but lack high precision on complex, out-of-distribution tasks unless retrained with new data. Both paradigms share an implicit assumption: once a manipulation capability is acquired, it must be deployed as a rigid pipeline or monolithic whole, rather than being freely decomposed and recomposed. In this paper, we show that complex manipulation capabilities can emerge naturally from the composition of simple, independent behaviors. Rather than deploying a monolithic policy or a rigid pipeline, we propose CoStream, a framework orchestrating foundation models and diverse sensing modalities into multiple composable core behaviors: a semantic behavior extracting spatial constraints via foundation models; a predictive behavior forecasting trajectories by tracking keypoints in imagined videos; and a reactive behavior providing high-frequency tactile and force corrections. On a shared $SE(3)$ interface, these outputs compose by right-multiplication into a single pose command at each control step, executed by a compliant controller. We demonstrate CoStream on 8 real-world tasks spanning everyday manipulation and precision assembly, with the strongest gains in contact-rich assembly and object transfer, and show robust recovery from manual perturbations during execution. Website: https://costream-simple.github.io",
-          "url": "https://arxiv.org/abs/2606.26423v2",
-          "pdf_url": "https://arxiv.org/pdf/2606.26423v2",
-          "published": "2026-06-24T22:25:19Z",
-          "updated": "2026-06-26T20:07:20Z",
-          "categories": [
-            "cs.RO",
-            "cs.AI"
-          ],
-          "primary_category": "cs.RO"
         }
       ]
     },

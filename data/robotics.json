@@ -2,217 +2,227 @@
   "category": "robotics",
   "name": "Robotics Research",
   "description": "Robotics \u2014 Motion Planning, Control Systems, Human-Robot Interaction, Autonomous Systems",
-  "scraped_at": "2026-07-21T10:31:41.193048+00:00",
+  "scraped_at": "2026-07-22T10:31:58.579493+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2607.18236v1",
-      "title": "Patch Policy: Efficient Embodied Control via Dense Visual Representations",
+      "id": "2607.19343v1",
+      "title": "Masked Visual Actions for Unified World Modeling",
       "authors": [
-        "Gaoyue Zhou",
-        "Zichen Jeff Cui",
-        "Ada Langford",
-        "Bowen Tan",
-        "Yann LeCun",
-        "Lerrel Pinto"
+        "Hadi Alzayer",
+        "Wenlong Huang",
+        "Haonan Chen",
+        "Christopher Luey",
+        "Lvmin Zhang",
+        "Maneesh Agrawala",
+        "Gordon Wetzstein",
+        "Li Fei-Fei",
+        "Yilun Du",
+        "Jiajun Wu",
+        "Jia-Bin Huang"
       ],
-      "abstract": "Pretrained dense visual features from Vision Transformers (ViTs) are powerful yet have been underutilized in robot learning. Modern robot policies either compress each observation into a single global token, or rely on visual backbones trained from scratch, sacrificing both fine-grained spatial detail and the benefits of large-scale visual pre-training. While there exist policies that do operate on dense patch features like large vision-language-action models (VLAs), they tend to be heavy and slow, inheriting the full cost of a billion-parameter vision-language model (VLM) backbone. We close this gap with Patch Policy, a minimal architectural extension that enables transformer-based policies to consume dense pre-trained patch tokens directly without the computational overhead of a full VLM. At its core is a block-causal attention mask that preserves the temporal causality of standard policies while letting the model attend over many patch tokens per observation, alongside other state information. Patch Policy is lightweight, fast, and highly effective. Across four simulated and three real-world environment suites, our method achieves a 40% relative improvement over policies using state-of-the-art global-pooled representations. Furthermore, it surpasses fine-tuned OpenVLA-OFT by 18% while using roughly 0.7% of the parameters. We believe Patch Policy provides a pipeline for the robotics community to readily leverage continuing progress in visual representation learning, without sacrificing the training efficiency or inference speed required for high-frequency, reactive control. Videos can be viewed at https://patch-policy.github.io",
-      "url": "https://arxiv.org/abs/2607.18236v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.18236v1",
-      "published": "2026-07-20T17:59:41Z",
-      "updated": "2026-07-20T17:59:41Z",
+      "abstract": "Video models absorb rich priors over how the visual world moves, interacts, and responds to contact, making them promising substrates for robotic world modeling. The central challenge is how to communicate action to such models in a form aligned with the visual space in which they learned these interaction priors, yet still grounded in physical manipulation. We introduce Masked Visual Actions, a pixel-space control interface that expresses action as a partially revealed trajectory of an arbitrary entity in a video. Revealing robot motion makes the model act as a forward dynamics model that predicts the scene's response to low-level robot actions, while revealing desired object motion makes the same model recover robot behavior consistent with that outcome. Finetuned with only 15 hours of masked examples from real videos and simulation, a single checkpoint achieves strong visual fidelity and controllability across diverse scenes and multiple embodiments. In downstream manipulation settings, the model produces imagined rollouts whose outcomes correlate with real-world execution for policy evaluation, improves decision making by ranking candidate futures in model-based planning, and supports inverse modeling by synthesizing robot motion from desired object motion.",
+      "url": "https://arxiv.org/abs/2607.19343v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.19343v1",
+      "published": "2026-07-21T17:59:11Z",
+      "updated": "2026-07-21T17:59:11Z",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2607.19306v1",
+      "title": "From Distances to Trajectories: Real-Time Signed Distance Function Mapping and Distance-Accelerated Motion Planning for UAVs",
+      "authors": [
+        "Jason Stanley",
+        "Zhirui Dai",
+        "Qihao Qian",
+        "Tzu-Chin Ho",
+        "Tianxing Fan",
+        "Siddharth Saha",
+        "Christopher Barngrover",
+        "Ki Myung Brian Lee",
+        "Nikolay Atanasov"
+      ],
+      "abstract": "Autonomous flight in cluttered environments requires a robot to build a geometric map of its surroundings and plan safe, dynamically feasible trajectories, all onboard and in real time. Conventional approaches treat mapping and planning as separate stages and often rely on binary occupancy for collision checking. We argue that these two stages should be co-designed around a single representation: a signed distance function (SDF). By encoding distance to the nearest obstacle, an SDF provides richer information for planning and trajectory optimization than occupancy alone. We develop an Octree REsidual Network (OREN) that pairs an explicit octree prior with an implicit neural residual to reconstruct SDFs online from point cloud observations with the efficiency of volumetric methods and the accuracy and differentiability of neural methods. In tandem, we develop Bubble$^\\star$, a search-based planner that exploits the distance information to grow maximal collision-free balls, which we call bubbles, with formal guarantees of termination, completeness, and failure detection. Planning over a graph of bubbles significantly reduces collision checks compared to a grid-based A$^\\star$ search and returns a bubble sequence that forms a safe corridor for trajectory optimization. We demonstrate the integrated OREN-Bubble$^\\star$ approach onboard a quadrotor, navigating unseen indoor environments in real time under tight compute constraints. OREN improves SDF estimation by $22$% compared to baselines, while Bubble$^\\star$ finds trajectories spanning $\\approx 90$ m through a cluttered environment in $1$-$3$ sec., whereas baselines take up to $10$ sec. in the same environment.",
+      "url": "https://arxiv.org/abs/2607.19306v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.19306v1",
+      "published": "2026-07-21T17:18:46Z",
+      "updated": "2026-07-21T17:18:46Z",
       "categories": [
         "cs.RO",
-        "cs.LG"
+        "cs.AI",
+        "cs.CV",
+        "eess.SY"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2607.18231v1",
-      "title": "FM-VLA: Force-based Memory for Vision-Language-Action Models in Contact-Rich Manipulation",
+      "id": "2607.19294v1",
+      "title": "Dataset on residential electricity load profiles in Switzerland",
       "authors": [
-        "Ruicheng Li",
-        "Qixiu Li",
-        "Ruichun Ma",
-        "Yu Deng",
-        "Lin Luo",
-        "Zhiying Du",
-        "Jianfeng Xiang",
-        "Huizhi Liang",
-        "Ruicheng Wang",
-        "Jiaolong Yang",
-        "Baining Guo"
+        "Katharina Kaiser",
+        "Markus Kreft",
+        "Marina Gonz\u00e1lez Vay\u00e1",
+        "Gabriela Hug"
       ],
-      "abstract": "Vision-language-action (VLA) models have achieved impressive generalization in robotic manipulation, and recent memory-augmented VLAs have relaxed the Markovian assumption by conditioning on past images or language summaries. Vision-based memory approaches address this by conditioning on sampled past image frames, but they are computationally expensive and fundamentally limited when temporal events are visually ambiguous, e.g., pushing a button multiple times with small movements. We propose FM-VLA, a VLA model with force-based memory, enabling temporal context reasoning for non-Markovian, contact-rich manipulation. We encode force histories into compact force memory tokens with a variational autoencoder (VAE) pretrained with force time series reconstruction. By projecting force latent representations and short state history as additional conditioning tokens to the action expert module, we enable VLAs to leverage accumulated contact event history to guide manipulation. We evaluate FM-VLA on three memory-dependent tasks, including finding a hidden block, pressing a button, and wiping a dish for a specific number of times. Our lightweight force memory achieves over 80% success rate with minimal inference overhead, significantly outperforming baseline approaches. Project page: https://qft-333.github.io/FM-VLA-Page/",
-      "url": "https://arxiv.org/abs/2607.18231v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.18231v1",
-      "published": "2026-07-20T17:58:31Z",
-      "updated": "2026-07-20T17:58:31Z",
+      "abstract": "Residential electricity profiles are undergoing significant changes due to the increasing adoption of distributed renewable generation, heat pumps, and electric vehicles. Up-to-date real-world measurements are essential for characterizing these evolving consumption patterns and providing a timely empirical foundation for research. This paper presents a dataset of 15-minute smart meter measurements from 2,447 residential installations in Switzerland, covering the years 2023 and 2024. The dataset encompasses both active and reactive energy (withdrawal and injection) of diverse installation types, including apartments, single-family houses, heat pumps, and common building areas. A subset of the associated customers participated in a pilot project featuring novel grid tariffs and automated load control. The corresponding price profiles and metadata are also included. The dataset aims to support research focusing on distribution grid modeling, load forecasting, and the assessment of time-varying tariffs.",
+      "url": "https://arxiv.org/abs/2607.19294v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.19294v1",
+      "published": "2026-07-21T17:03:32Z",
+      "updated": "2026-07-21T17:03:32Z",
       "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2607.18210v1",
-      "title": "Optimization of sim-to-real transfer in the humanoid robot NICO",
-      "authors": [
-        "Juraj Gavura",
-        "Igor Farka\u0161"
-      ],
-      "abstract": "Robotic grasping requires accurate coordination between visual perception, object localization, inverse kinematics, and hand control. However, when movements planned in simulation are executed on a physical robot, the sim-to-real gap can cause small positioning errors that prevent successful grasping. In our previous work, we introduced a low-cost haptic calibration method that improved 2D reaching accuracy of the humanoid robot NICO. In this paper, we extend this approach from reaching to tabletop object grasping by adding YOLO-based object and hand detection, stereo vision-based localization using the robot's built-in low-resolution fisheye cameras, and task-specific corrections for grasp execution. Together, these components form a novel calibration-based grasping pipeline that does not require RGB-D cameras, motion capture, or external tracking systems. We also implemented a visual feedback model that aligns the robot hand with the detected object before grasping. Our results show that the fully nonlinear calibration model achieved the best performance inside the calibrated area, while the visual feedback model achieved the highest overall grasping success across the full tabletop workspace.",
-      "url": "https://arxiv.org/abs/2607.18210v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.18210v1",
-      "published": "2026-07-20T17:45:04Z",
-      "updated": "2026-07-20T17:45:04Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2607.18200v1",
-      "title": "Learning Adaptive Safety Margins for Visual Navigation",
-      "authors": [
-        "Junyi Hu",
-        "Shuaihang Yuan",
-        "Geeta Chandra Raju Bethala",
-        "Anthony Tzes",
-        "Yi Fang"
-      ],
-      "abstract": "Robots in cluttered indoor spaces often fail not because they cannot generate collision-free paths, but because a fixed safety margin is mis-calibrated: conservative margins cause detours and timeouts, while permissive margins lead to near-boundary shortcuts under perception bias. Diffusion-based planners propose diverse trajectory candidates from egocentric RGB-D, yet reliable selection remains the bottleneck. We propose a context-conditioned safety critic that learns an adaptive clearance preference for ranking diffusion proposals, decomposed into three complementary terms: (i) a safety term with a clearance-budget penalty and a control-barrier-function residual for waypoint- and transition-wise safety, (ii) an efficiency term combining a smoothness penalty with a safety-gated detour-ratio penalty that avoids detours without incentivizing risky shortcuts, and (iii) a distance-constraint matching term that anchors the learned budget to realized ESDF clearances to prevent margin collapse. We train the critic with privileged ESDF geometry in simulation and distill it into a perception-only selector via a two-stage teacher-student procedure. On PointGoal navigation in HM3D and MP3D, including cross-dataset transfer, our method achieves the highest success rate (SR) and success weighted by path length (SPL) among strong diffusion, optimization, and RL baselines. Trained purely in simulation, it transfers to a Unitree G1 humanoid and navigates cluttered indoor scenes without task-specific tuning.",
-      "url": "https://arxiv.org/abs/2607.18200v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.18200v1",
-      "published": "2026-07-20T17:40:25Z",
-      "updated": "2026-07-20T17:40:25Z",
-      "categories": [
-        "cs.RO",
-        "cs.AI"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2607.18197v1",
-      "title": "Imitation of Arm Gestures by the Semi-Humanoid Robot NICO",
-      "authors": [
-        "Anastasiya Ihnatovich",
-        "Igor Farka\u0161"
-      ],
-      "abstract": "Seamless human-robot interaction (HRI) requires a number of perceptual and motor abilities from the robot, one of them being the imitation of human gestures. Humanoid robots have an advantage in HRI thanks to their anthropomorphic features. In this work, we develop a system for imitation of human arm gestures by the semi-humanoid robot NICO based on analytical geometry and a pretrained MediaPipe pose-estimation model. For each input RGB frame, 3D coordinates of relevant human body landmarks, including arm joints and hand keypoints, are obtained using the MediaPipe framework. Joint angles are then computed from these coordinates using derived geometric relations. Finally, the computed angles are properly mapped to NICO's motor configuration and executed in a predefined motion sequence. Preliminary experiments on several representative arm gestures with six participants of different height indicate that the proposed method can produce meaningful imitative motions from monocular RGB input only, while also highlighting limitations in more complex poses and wrist-related movements.",
-      "url": "https://arxiv.org/abs/2607.18197v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.18197v1",
-      "published": "2026-07-20T17:37:57Z",
-      "updated": "2026-07-20T17:37:57Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2607.18154v1",
-      "title": "World Translation: Minimizing Sim-to-Real Gap with Backward Dynamics Extraction and Unpaired Domain Translation",
-      "authors": [
-        "Xinchen Yao",
-        "Leixin Chang",
-        "Hua Chen"
-      ],
-      "abstract": "The gap between simulation and reality remains a fundamental challenge in deploying simulation-trained robotic policies in the real world. Real-to-sim methods narrow this gap from the real side, learning transition dynamics from real data to build a more realistic digital world. Learned dynamics models are their dominant instance. Such methods, however, face a partial observability problem: the same observation may branch to different transitions due to unobservable factors. Existing methods assume these factors can be recovered from observation history. However, this may fail whenever observation history is uninformative, such as a sudden contact event with no prior warning. To address this limitation, we propose \\textit{World Translation}, which exploits a complementary strength of simulators and learned dynamics. Simulators are deterministic but physically imperfect, while learned models are accurate but underdetermined under partial observability. Rather than predicting transitions forward from history, we extract the unobservable dynamics information backward from an observed transition, then translate this feature across simulation and reality as an unpaired domain-translation problem that preserves dynamics content while transferring domain style. Experiments across humanoid, quadruped, and manipulator platforms show that our method achieves more accurate dynamics modeling than baselines, with the largest gains when unobservable factors cannot be recovered from observation history. Real-robot deployment on Go2 quadruped confirms improved policy transfer.",
-      "url": "https://arxiv.org/abs/2607.18154v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.18154v1",
-      "published": "2026-07-20T16:52:58Z",
-      "updated": "2026-07-20T16:52:58Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2607.18147v1",
-      "title": "LLMs and Agentic AI Systems for Smart Grids: A Tutorial on Architectures and Applications",
-      "authors": [
-        "Daniela Rojas",
-        "Abdulwahab Albassam",
-        "Aidan G. Leung",
-        "Jett Ngo",
-        "Ryan Luo",
-        "Peter R. Quawas",
-        "Junpyung Kim",
-        "Kangkai Liang",
-        "Mansi Nanavati",
-        "Jonathan Mai",
-        "Meng-Chi Tsai",
-        "Yun-Tong Tsai",
-        "Yize Chen",
-        "Yuanyuan Shi"
-      ],
-      "abstract": "Large language models (LLMs) and agentic AI systems have evolved from natural language tasks to using external tools to plan, retrieve, and act in technical domains. In smart grids, recent work applies agentic schemes to forecasting, optimization, and control, wrapping trusted solvers behind language interfaces and orchestrating multi-step workflows. The literature lacks a unified approach to designing and evaluating such systems. LLMs can produce numerically plausible yet physically infeasible outputs, evaluation protocols vary across tasks, and the boundary between what the model should and should not compute is implicit. This paper presents a solver-grounded design principle: a numerical result is reported only when it originates from a trusted tool and passes explicit verification. We review the building blocks of LLM and agentic AI systems for power systems: prompting strategies and agentic architectures. We instantiate the principle in four case studies: wind power forecasting, EV charging scheduling, power flow analysis, and contingency diagnosis, each comparing an LLM-only baseline against its solver-grounded counterpart on identical data and metrics. EVAgent reproduces the CVXPY optimum while reducing LLM-only unmet energy by 7.5-9.5x, and GridDebugAgent repairs 17/39 contingency cases while reducing total violations by 52.3%. We propose a four-group evaluation framework spanning task utility, solver-grounded correctness, faithfulness and safe failure, and cost and latency. A consistent division of labor emerges: the agentic system reliably orchestrates, retrieves, and explains, while trusted tools compute and a verification gate decides what is reported.",
-      "url": "https://arxiv.org/abs/2607.18147v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.18147v1",
-      "published": "2026-07-20T16:45:13Z",
-      "updated": "2026-07-20T16:45:13Z",
-      "categories": [
-        "eess.SY",
-        "cs.AI"
+        "eess.SY"
       ],
       "primary_category": "eess.SY"
     },
     {
-      "id": "2607.18135v1",
-      "title": "Isaac Sim-to-Real: Reinforcement Learning based Locomotion for Quadrupeds",
+      "id": "2607.19288v1",
+      "title": "No Training, Better Flights: Test-Time Scaled VLMs for UAV Navigation",
       "authors": [
-        "Jordan Dowdy",
-        "Jean Chagas Vaz"
+        "Feinan Cheng",
+        "Dongliang Xu",
+        "Wenli Nong",
+        "Zhiheng Zhang",
+        "Ang Liu",
+        "Tianyu Wang",
+        "Yue Yao"
       ],
-      "abstract": "Learning-based approaches to locomotion have risen in popularity in recent years, showing the capability for complex legged locomotion and whole-body control. Reinforcement learning (RL), the primary learning-based approach for locomotion, often utilizes a high-performance simulation tool, providing a controlled and efficient training and development environment. However, policies that perform well in simulation frequently encounter unexpected challenges when deployed on a physical system, known as the sim-to-real gap. This work presents a robust RL locomotion framework capable of whole-body control. The proposed RL framework utilizes Nvidia's new set of simulation tools, Isaac Sim, and its companion RL framework, Isaac Lab, for training, achieving a zero-shot sim-to-real policy. The performance of our policy is validated on physical hardware using the Unitree Go1, with experimental results showing similar velocity tracking performance to the quadruped's integrated controller, with a greater ability to recover from large disturbances, and achieve linear velocities of 2.0 m/s and angular velocities of 1.8 rad/s.",
-      "url": "https://arxiv.org/abs/2607.18135v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.18135v1",
-      "published": "2026-07-20T16:27:56Z",
-      "updated": "2026-07-20T16:27:56Z",
+      "abstract": "Test-time scaling offers a promising method to improve the inference performance of Vision-Language Models (VLMs) without additional training. Existing approaches to vision-language navigation (VLN) for Unmanned Aerial Vehicle (UAV) typically relies on a single inference pass, which can falter in complex environments by producing suboptimal or unsafe trajectories. In this paper, we explore a simple and effective approach to apply test-time scaling to VLN for UAV. We enhance navigation reasoning through an iterative refinement process that requires no extra model training, guiding the model to re-evaluate its initial navigation plan for better accuracy and safety. Our method first prompts the model to generate multiple parallel candidates and then performs a self-correction step, achieving deeper and more robust planning without changing the underlying model. To further strengthen decision-making, we design a multi-criteria scoring function to evaluate the refined candidates based on safety, goal alignment, and forward-progress. This simple yet powerful combination enables a frozen UAV navigation VLMs to self-correct and generate more accurate and reliable flight plans, achieving SOTA performance in this task.",
+      "url": "https://arxiv.org/abs/2607.19288v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.19288v1",
+      "published": "2026-07-21T16:59:12Z",
+      "updated": "2026-07-21T16:59:12Z",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2607.19284v1",
+      "title": "Stochastic Multi-Objective Kinodynamic Planning Against Adversaries",
+      "authors": [
+        "Thomas Marshall Vielmetti",
+        "Daniel Cherenson",
+        "Dimitra Panagou"
+      ],
+      "abstract": "This paper addresses multi-objective kinodynamic planning in environments with stochastic hybrid adversaries that probabilistically transition to adversarial modes based on the ego state. The goal is to construct the Pareto-front of paths that trade off execution cost and the probability of safety constraint violation (risk). Existing chance-constrained planners evaluate risk over open-loop trajectories, yielding overly conservative solutions that fail to account for ego-agent reactivity. To address this limitation, we shift the planning space to sequences of closed-loop policies, and integrate sample-based risk evaluation directly into tree construction via Monte-Carlo particle rollouts. We first introduce Stochastic Multi-Objective RRT (SMO-RRT), for which we prove probabilistic completeness, followed by Stochastic Multi-Objective Stable Sparse RRT (SMO-SST), which leverages selective pruning to improve numerical performance at the cost of completeness. For both algorithms, we derive a finite-sample bound on the probability of chance constraint violation for systems with non-Gaussian, state-dependent uncertainty, enabling probabilistically safe planning in a broad class of environments applicable to multi-agent systems, social navigation, and autonomous driving.",
+      "url": "https://arxiv.org/abs/2607.19284v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.19284v1",
+      "published": "2026-07-21T16:56:34Z",
+      "updated": "2026-07-21T16:56:34Z",
       "categories": [
         "cs.RO"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2607.18106v1",
-      "title": "Importance Sampling and PCA for Finding Failures in Commercial Autonomous Vehicles",
+      "id": "2607.19274v1",
+      "title": "Eversion-based robots can enable safe access,steering and endoscopic imaging within the spinal subarachnoid space",
       "authors": [
-        "Hailey Warner",
-        "Duncan Eddy",
-        "Shreya Parjan",
-        "Caroline Cahilly",
-        "Harrison Delecki",
-        "Matthias Kleinstauber",
-        "Chaitanya Shinde",
-        "Jerry Lopez",
-        "Mykel J. Kochenderfer"
+        "Zicong Wu",
+        "Panagiotis Kalozoumis",
+        "S. M. Hadi Sadati",
+        "Aminul I. Ahmed",
+        "Jonathan Shapey",
+        "Christian Baker",
+        "Thomas Booth",
+        "Wenfeng Xia",
+        "Sebastien Ourselin",
+        "Panagiotis Vartholomeos",
+        "Christos Bergeles"
       ],
-      "abstract": "Methods for discovering rare failures in autonomous systems have so far been demonstrated almost exclusively in simulations with simple, academic driving stacks, leaving open whether they generalize to the more robust planners used in commercial systems. We address this gap by applying two rare-event discovery algorithms to a commercial autonomous trucking stack. Adaptive stress testing (AST) uses reinforcement learning to search for the most likely noise trajectories leading to a simulated collision, while diffusion-based failure sampling (DiFS) trains a denoising diffusion model to sample a diverse set of failures. We show that both algorithms find simulated collisions during merge and cut-in maneuvers where traditional Monte Carlo simulation does not. To make these failures actionable, we introduce a statistical analysis based on principal component analysis (PCA) that classifies failures into common modes and identifies the timesteps that most influence the outcome. We cluster the principal components and invert the PCA transform to recover generalized noise trajectories, and show that these trajectories reproduce failures in identical and similar scenarios. This provides a path from failure discovery to systematic diagnosis of perception-level flaws.",
-      "url": "https://arxiv.org/abs/2607.18106v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.18106v1",
-      "published": "2026-07-20T16:07:20Z",
-      "updated": "2026-07-20T16:07:20Z",
+      "abstract": "Safe navigation within the spinal subarachnoid space is constrained by its narrow, compliant, and delicate anatomy. Conventional catheters and continuum robots rely on proximal pushing, generating friction and shear along the tissue device interface that limit distal controllability and increase the risk of neural injury. Here, we present a 2 mm diameter eversion-growing robotic platform that enables friction minimised extension and steering within the human spinal subarachnoid space, validated through computational modelling, phantom experiments, and intact human cadaver studies. The robot integrates a miniature endoscope for real time intrathecal visualisation and advances by pressure driven tip eversion, localising motion to the distal tip while minimising translational sliding of the deployed body. Phantom experiments demonstrated reductions of 65.2% in mean interaction force and 48.0% in peak interaction force compared with matched push-based insertion. Physics based modelling showed that eversion based growth redistributed tissue loading, reducing local stress concentrations and interfacial shear relative to conventional insertion. In an intact human cadaver, the system achieved 150 mm of controlled intrathecal extension with concurrent fluoroscopic and endoscopic visualisation, providing access across multiple vertebral levels from a standard lumbar entry point. Postprocedural laminectomy and durotomy revealed no observable macroscopic disruption of the dura mater or surrounding neural structures. These results provide the first mechanically characterised and multimodally validated demonstration of eversion-based robotic navigation in intact human spinal anatomy, establishing a quantitative and procedural foundation for future intrathecal interventions. Further validation in larger anatomical cohorts and under physiological conditions will be required before clinical translation.",
+      "url": "https://arxiv.org/abs/2607.19274v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.19274v1",
+      "published": "2026-07-21T16:46:00Z",
+      "updated": "2026-07-21T16:46:00Z",
       "categories": [
         "cs.RO"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2607.18089v1",
-      "title": "Real-Time Flight Test Maneuver Selection with Monte Carlo Tree Search",
+      "id": "2607.19271v1",
+      "title": "Model-Agnostic Meta Learning for Differentiable MPC",
       "authors": [
-        "Nicholas E. Bostock",
-        "Helen Pruitt-Kennett",
-        "Marc R. Schlichting",
-        "Mykel J. Kochenderfer"
+        "Salma Elfeki",
+        "Riccardo Zuliani",
+        "Niklas Schmid",
+        "Efe C. Balta",
+        "John Lygeros"
       ],
-      "abstract": "Flight test is shifting toward a data-centric approach in which data contribute to model refinement, reducing reliance on pre-scripted test points. An open problem is how to sequence maneuvers within a sortie to maximize uncertainty reduction under resource limits. We present a real-time planning framework that combines a Gaussian Process (GP) belief model with Monte Carlo Tree Search (MCTS) to select pilot-actionable maneuvers under fuel constraints. Candidate maneuvers are scored using weighted integrated variance reduction (wIVR), and shallow lookahead is performed with a propagated per-evaluation-point variance state to account for downstream coverage redundancy and transition cost. The planner is evaluated in a closed, human-in-the-loop X-Plane simulation against greedy wIVR selection and a fixed test-card baseline. Sortie-summary statistics show significant directional differences, with MCTS-wIVR achieving higher uncertainty reduction per unit fuel over both baselines. The results indicate that posterior-aware adaptive planning is a promising approach to increase efficiency of flight tests.",
-      "url": "https://arxiv.org/abs/2607.18089v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.18089v1",
-      "published": "2026-07-20T15:55:12Z",
-      "updated": "2026-07-20T15:55:12Z",
+      "abstract": "Applying policy optimization to Model Predictive Control (MPC) yields high-performance and reliable controllers. However, the resulting controllers often overfit their training conditions and suffer significant performance degradation in unseen tasks. We propose a novel framework combining policy optimization with meta-learning to train highly adaptable MPC controllers. Our approach enables rapid adaptation to unseen tasks, maintaining high performance at a fraction of the computational cost required for full retraining. Furthermore, we integrate system identification into the pipeline to continuously refine both the MPC hyperparameters and the underlying predictive models. We validate our proposed methodology on a Ball-on-Plate system, demonstrating superior adaptability across various parameterized trajectory-tracking tasks.",
+      "url": "https://arxiv.org/abs/2607.19271v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.19271v1",
+      "published": "2026-07-21T16:42:11Z",
+      "updated": "2026-07-21T16:42:11Z",
       "categories": [
+        "eess.SY",
+        "math.OC"
+      ],
+      "primary_category": "eess.SY"
+    },
+    {
+      "id": "2607.19263v1",
+      "title": "The Limits of Quantum Computers for Power Flow",
+      "authors": [
+        "Cameron Khanpour",
+        "Samuel Talkington"
+      ],
+      "abstract": "This letter proves realistic grid properties limit the applicability of quantum computers for power flow. Grids that split into two large regions meeting at only a few buses, common in transmission networks, force the pseudo condition number of the DC susceptance matrix to grow polynomially in the network size, and long chains of lines bridging such regions force quadratic growth, making recent empirical observations rigorous. The bounds also hold with overwhelming probability for arbitrary bounded random line susceptances. Combined with query and tomography lower bounds, this precludes end-to-end quantum advantage for DC power flow at every readout level, and these obstructions persist through AC power flow, optimal power flow, and unit commitment. All proofs are formally verified with accompanying Lean 4 source code.",
+      "url": "https://arxiv.org/abs/2607.19263v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.19263v1",
+      "published": "2026-07-21T16:36:17Z",
+      "updated": "2026-07-21T16:36:17Z",
+      "categories": [
+        "quant-ph",
         "eess.SY"
+      ],
+      "primary_category": "quant-ph"
+    },
+    {
+      "id": "2607.19213v1",
+      "title": "Computing on the Fly: Navigating a Vision for the Future of Drone Computing",
+      "authors": [
+        "Kevin Butler",
+        "Christopher Stewart",
+        "Nils Aschenbruck",
+        "Alina Gerall",
+        "Weisong Shi",
+        "Deborah Silver",
+        "Ufuk Topcu"
+      ],
+      "abstract": "The report envisions a decade in which drones move goods, medical supplies, and information at a scale comparable to national infrastructure investments like highways and the electric grid. Potential applications include natural disaster detection drones that spot wildfire sources within minutes, medical supply chains that bypass ground congestion to reach rural hospitals, and nationwide fleets that continuously inspect bridges and power lines. Realizing this future, however, requires closing what report authors call a \"capability gap,\" where hardware and aspirations are outpacing the software and systems needed to operate safely at scale. The report identifies twelve technical challenges that must be addressed to realize the transformative potential of drone technology: Scaling to millions of drones; AI intelligence and assurance; Edge-cloud continuum and real-time coordination; AI autonomy and agentic systems; Data, training, and validation infrastructure; Critical infrastructure protection; Building reliable fleets from non-deterministic agents; Trust, security, and distributed authentication; Next-generation drone networks; Human-AI partnership and scalable insight; Standards, certification, and regulation; and Workforce development and education. These twelve challenges and proposed approaches to them form the basis of the report, laying out a multifaceted path forward for the evolution of done technology.",
+      "url": "https://arxiv.org/abs/2607.19213v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.19213v1",
+      "published": "2026-07-21T15:42:35Z",
+      "updated": "2026-07-21T15:42:35Z",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2607.19196v1",
+      "title": "STL-GCS: A Planner-Controller Framework for Signal Temporal Logic via Graphs of Time-varying Convex Sets",
+      "authors": [
+        "Nicola De Carli",
+        "Gregorio Marchesini",
+        "Dimos Dimarogonas"
+      ],
+      "abstract": "We present a unified trajectory planning and control framework for the satisfaction of Signal Temporal Logic (STL) specifications defined over convex predicates. At the planning layer, STL tasks are encoded as time-varying convex sets in configuration space, specifically designed so that forward invariance of the system with respect to these sets implies satisfaction of the specification with a prescribed robustness margin. This representation is then lifted to the joint time--configuration space and combined with the Graphs of Convex Sets (GCS) framework, yielding a shortest-path formulation of the planning problem over convex spatio-temporal sets. Trajectories are parameterized by B-splines, which enable continuous-time enforcement of STL satisfaction, collision avoidance, and smoothness constraints. At the control layer, the same time-varying sets used for planning are exploited to design a feedback controller that tracks the planned trajectory while prioritizing satisfaction of the STL specification during execution in the presence of tracking errors and model mismatch. We validate the proposed approach in simulation and in real-world experiments on space robotic platforms.",
+      "url": "https://arxiv.org/abs/2607.19196v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.19196v1",
+      "published": "2026-07-21T15:30:55Z",
+      "updated": "2026-07-21T15:30:55Z",
+      "categories": [
+        "eess.SY",
+        "cs.RO"
       ],
       "primary_category": "eess.SY"
     }
