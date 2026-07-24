@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-07-23T10:36:20.981558+00:00",
+  "scraped_at": "2026-07-24T10:31:11.692678+00:00",
   "researcher_count": 54,
   "researchers": [
     {
@@ -10,6 +10,26 @@
       "website": "https://ames.caltech.edu/",
       "paper_count": 5,
       "papers": [
+        {
+          "id": "2607.20842v1",
+          "title": "Robust Adaptive Backup Control Barrier Functions",
+          "authors": [
+            "Ersin Da\u015f",
+            "David E. J. van Wijk",
+            "Tamas G. Molnar",
+            "Aaron D. Ames",
+            "Joel W. Burdick"
+          ],
+          "abstract": "We propose a notion of robust adaptive backup control barrier functions for nonlinear control affine systems with parametric uncertainty in both the drift dynamics and actuation matrix. Backup control barrier functions guarantee safety by predicting the system's trajectory under a pre-certified safe controller. However, these predictions rely on the model and can be inaccurate when the system contains unknown parameters. To address this issue, we estimate the unknown parameters using element-wise certified adaptive estimators that provide a parameter adaptation law and component-wise estimation error bounds. We compute the backup flow using the estimated model and tighten the safety conditions using these certified bounds. The resulting safety conditions account for the sensitivity of the predicted flow to parameter estimation errors. Moreover, to handle uncertainty in the actuation matrix, we use a duality-based reformulation that enables the use of a computationally efficient quadratic-program-based safety filter. We prove that controllers satisfying the proposed robust adaptive backup control barrier function constraints guarantee safety under parametric uncertainty and input constraints.",
+          "url": "https://arxiv.org/abs/2607.20842v1",
+          "pdf_url": "https://arxiv.org/pdf/2607.20842v1",
+          "published": "2026-07-23T02:05:33Z",
+          "updated": "2026-07-23T02:05:33Z",
+          "categories": [
+            "eess.SY"
+          ],
+          "primary_category": "eess.SY"
+        },
         {
           "id": "2606.26215v1",
           "title": "TaskNPoint: How to Teach Your Humanoid to Hit a Backhand in Minutes",
@@ -95,25 +115,6 @@
             "eess.SY"
           ],
           "primary_category": "cs.RO"
-        },
-        {
-          "id": "2605.15517v1",
-          "title": "Terrain Consistent Reference-Guided RL for Humanoid Navigation Autonomy",
-          "authors": [
-            "William D. Compton",
-            "Zachary Olkin",
-            "Aaron D. Ames"
-          ],
-          "abstract": "We present a method for training reference-guided, perceptive reinforcement learning locomotion policies for humanoid robots in which reference trajectories are modulated in training to be consistent with terrain geometry. Aiming to deploy our method with standard navigation autonomy infrastructure, we synthesize SE(2)-controllable reference trajectories inside the RL training loop, projecting desired footsteps onto valid footholds and adjusting swing-foot and center-of-mass trajectories to match the terrain. The resulting policy exposes a clean SE(2) velocity interface compatible with standard navigation planners. In simulation, environmentally-conditioned references significantly improve reference tracking performance compared to environment agnostic references. On hardware, we integrate the policy with an MPC + control barrier function planner and demonstrate long-horizon (>70m) closed-loop autonomous navigation on the Unitree G1 through outdoor environments containing rough terrain and consecutive flights of stairs, with all sensing and computation onboard.",
-          "url": "https://arxiv.org/abs/2605.15517v1",
-          "pdf_url": "https://arxiv.org/pdf/2605.15517v1",
-          "published": "2026-05-15T01:27:50Z",
-          "updated": "2026-05-15T01:27:50Z",
-          "categories": [
-            "cs.RO",
-            "eess.SY"
-          ],
-          "primary_category": "cs.RO"
         }
       ]
     },
@@ -125,6 +126,26 @@
       "website": "https://www.me.caltech.edu/people/joel-burdick",
       "paper_count": 5,
       "papers": [
+        {
+          "id": "2607.20842v1",
+          "title": "Robust Adaptive Backup Control Barrier Functions",
+          "authors": [
+            "Ersin Da\u015f",
+            "David E. J. van Wijk",
+            "Tamas G. Molnar",
+            "Aaron D. Ames",
+            "Joel W. Burdick"
+          ],
+          "abstract": "We propose a notion of robust adaptive backup control barrier functions for nonlinear control affine systems with parametric uncertainty in both the drift dynamics and actuation matrix. Backup control barrier functions guarantee safety by predicting the system's trajectory under a pre-certified safe controller. However, these predictions rely on the model and can be inaccurate when the system contains unknown parameters. To address this issue, we estimate the unknown parameters using element-wise certified adaptive estimators that provide a parameter adaptation law and component-wise estimation error bounds. We compute the backup flow using the estimated model and tighten the safety conditions using these certified bounds. The resulting safety conditions account for the sensitivity of the predicted flow to parameter estimation errors. Moreover, to handle uncertainty in the actuation matrix, we use a duality-based reformulation that enables the use of a computationally efficient quadratic-program-based safety filter. We prove that controllers satisfying the proposed robust adaptive backup control barrier function constraints guarantee safety under parametric uncertainty and input constraints.",
+          "url": "https://arxiv.org/abs/2607.20842v1",
+          "pdf_url": "https://arxiv.org/pdf/2607.20842v1",
+          "published": "2026-07-23T02:05:33Z",
+          "updated": "2026-07-23T02:05:33Z",
+          "categories": [
+            "eess.SY"
+          ],
+          "primary_category": "eess.SY"
+        },
         {
           "id": "2607.10842v1",
           "title": "D-SafeMPC: Diffusion-Driven Safe Model Predictive Control with Discrete-Time Control Barrier Functions",
@@ -204,26 +225,6 @@
           "pdf_url": "https://arxiv.org/pdf/2604.08831v1",
           "published": "2026-04-10T00:04:11Z",
           "updated": "2026-04-10T00:04:11Z",
-          "categories": [
-            "eess.SY"
-          ],
-          "primary_category": "eess.SY"
-        },
-        {
-          "id": "2604.03536v1",
-          "title": "SafeSpace: Aggregating Safe Sets from Backup Control Barrier Functions under Input Constraints",
-          "authors": [
-            "Pio Ong",
-            "David E. J. van Wijk",
-            "Massimiliano de Sa",
-            "Joel W. Burdick",
-            "Aaron D. Ames"
-          ],
-          "abstract": "Control barrier functions (CBFs) provide a principled framework for enforcing safety in control systems -- yet the certified safe operating region in practice is often conservative, especially under input bounds. In many applications, multiple smaller safe sets can be certified independently, e.g., around distinct equilibria with different stabilizing controllers. This paper proposes a framework for uniting such regions into a single certified safe set using \\emph{combinatorial CBFs}. We refine the combinatorial CBF framework by introducing an auxiliary variable that enables logical compositions of individual CBFs. In the proposed framework, we show that such compositions yield a \\emph{generalized combinatorial CBF} under a condition termed \\emph{conjunctive compatibility}. Building on this result, we extend the framework to enable the aggregation of multiple implicit safe sets generated by the backup CBF framework. We show that the resulting CBF-based quadratic program yields a continuous safety filter over the aggregated safe region. The approach is demonstrated on two spacecraft safety problems, safe attitude control and safe station keeping, where multiple certified safe regions are combined to expand the operational envelope.",
-          "url": "https://arxiv.org/abs/2604.03536v1",
-          "pdf_url": "https://arxiv.org/pdf/2604.03536v1",
-          "published": "2026-04-04T01:17:10Z",
-          "updated": "2026-04-04T01:17:10Z",
           "categories": [
             "eess.SY"
           ],
@@ -2321,7 +2322,7 @@
           "primary_category": "cs.GR"
         },
         {
-          "id": "2605.22819v1",
+          "id": "2605.22819v2",
           "title": "Cambrian-P: Pose-Grounded Video Understanding",
           "authors": [
             "Jihan Yang",
@@ -2331,13 +2332,14 @@
             "Junyi Zhang",
             "Bingyi Kang",
             "Hu Xu",
+            "Shang-Wen Li",
             "Saining Xie"
           ],
           "abstract": "Camera pose matters. The position and orientation of each viewpoint define a shared spatial coordinate frame that relates observations across video frames. Yet this signal is largely absent from multimodal LLMs (MLLMs) for video understanding, which process frames as isolated 2D snapshots, instead of the persistent scene humans perceive. We revisit pose as a lightweight supervisory signal and introduce Cambrian-P, a video MLLM augmented with per-frame learnable camera tokens and a pose regression head. With a carefully designed sampling scheme, the model achieves substantial gains of 4.5-6.5% on spatial reasoning benchmarks such as VSI-Bench, generalizes across eight additional spatial and general video QA benchmarks, and, as a byproduct, achieves state of the art streaming pose estimation on ScanNet. Surprisingly, training on pseudo-annotated poses from in-the-wild video further improves general video QA benchmarks, showing pose helps beyond spatial reasoning. Together, these results position camera pose as a fundamental signal for video models that reason about the physical world.",
-          "url": "https://arxiv.org/abs/2605.22819v1",
-          "pdf_url": "https://arxiv.org/pdf/2605.22819v1",
+          "url": "https://arxiv.org/abs/2605.22819v2",
+          "pdf_url": "https://arxiv.org/pdf/2605.22819v2",
           "published": "2026-05-21T17:59:45Z",
-          "updated": "2026-05-21T17:59:45Z",
+          "updated": "2026-07-23T02:53:47Z",
           "categories": [
             "cs.CV"
           ],
@@ -4574,6 +4576,32 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2607.20683v1",
+          "title": "FELT: Generating Tactile Signals from Vision for Visuo-Tactile Manipulation",
+          "authors": [
+            "Zinan Li",
+            "Yiyang Ling",
+            "Yuming Gu",
+            "Binghao Huang",
+            "Chenhao Liang",
+            "Sharfin Islam",
+            "Hisham Bedri",
+            "John Chirikjian",
+            "Yunzhu Li",
+            "Stefanos Nikolaidis",
+            "Daniel Seita"
+          ],
+          "abstract": "The sense of touch is central to manipulation, especially when vision is occluded or ambiguous. Although combining vision and touch improves manipulation, learning robust visuo-tactile policies requires substantial tactile data. Such data remains scarcer than visual data, because tactile sensors are fragile, specialized, and hard to standardize. To address this, we present Feature-Extracted Latent Tactile (FELT), a learning-based framework that synthesizes per-finger pressure tactile images from RGB observations, reducing the need for tactile-equipped data collection. FELT uses a large frozen visual encoder and a lightweight query decoder to predict tactile signals in a single feed-forward pass. To respect the physical topology of dual-finger tactile sensors, FELT decodes the left and right tactile sensor panels through separate branches, capturing the asymmetric contact patterns during interactions such as wiping, insertion, and in-hand rotation. At inference time, FELT only requires RGB data, allowing us to augment existing vision-only data with tactile observations, either as generated tactile images or as latent tactile features. Experiments on four contact-rich manipulation tasks demonstrate that both generated tactile images and latent tactile features improve policy success over vision-only baselines, with latent feature requiring no real tactile sensor during policy training or deployment. Supplementary material is available on our anonymous website: https://felt-tactile.github.io/.",
+          "url": "https://arxiv.org/abs/2607.20683v1",
+          "pdf_url": "https://arxiv.org/pdf/2607.20683v1",
+          "published": "2026-07-22T19:32:42Z",
+          "updated": "2026-07-22T19:32:42Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2607.16921v1",
           "title": "PREFAIL: Identifying Precursors to Failures in Robotic Lift-and-Place Tasks to Improve Task Execution Performance",
           "authors": [
@@ -4656,28 +4684,6 @@
           "updated": "2026-04-20T06:38:01Z",
           "categories": [
             "cs.RO"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2604.03552v1",
-          "title": "CRAFT: Video Diffusion for Bimanual Robot Data Generation",
-          "authors": [
-            "Jason Chen",
-            "I-Chun Arthur Liu",
-            "Gaurav Sukhatme",
-            "Daniel Seita"
-          ],
-          "abstract": "Bimanual robot learning from demonstrations is fundamentally limited by the cost and narrow visual diversity of real-world data, which constrains policy robustness across viewpoints, object configurations, and embodiments. We present Canny-guided Robot Data Generation using Video Diffusion Transformers (CRAFT), a video diffusion-based framework for scalable bimanual demonstration generation that synthesizes temporally coherent manipulation videos while producing action labels. By conditioning video diffusion on edge-based structural cues extracted from simulator-generated trajectories, CRAFT produces physically plausible trajectory variations and supports a unified augmentation pipeline spanning object pose changes, camera viewpoints, lighting and background variations, cross-embodiment transfer, and multi-view synthesis. We leverage a pre-trained video diffusion model to convert simulated videos, along with action labels from the simulation trajectories, into action-consistent demonstrations. Starting from only a few real-world demonstrations, CRAFT generates a large, visually diverse set of photorealistic training data, bypassing the need to replay demonstrations on the real robot (Sim2Real). Across simulated and real-world bimanual tasks, CRAFT improves success rates over existing augmentation strategies and straightforward data scaling, demonstrating that diffusion-based video generation can substantially expand demonstration diversity and improve generalization for dual-arm manipulation tasks. Our project website is available at: https://craftaug.github.io/",
-          "url": "https://arxiv.org/abs/2604.03552v1",
-          "pdf_url": "https://arxiv.org/pdf/2604.03552v1",
-          "published": "2026-04-04T02:36:54Z",
-          "updated": "2026-04-04T02:36:54Z",
-          "categories": [
-            "cs.RO",
-            "cs.AI",
-            "cs.CV",
-            "cs.LG"
           ],
           "primary_category": "cs.RO"
         }
@@ -5419,6 +5425,32 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2607.20683v1",
+          "title": "FELT: Generating Tactile Signals from Vision for Visuo-Tactile Manipulation",
+          "authors": [
+            "Zinan Li",
+            "Yiyang Ling",
+            "Yuming Gu",
+            "Binghao Huang",
+            "Chenhao Liang",
+            "Sharfin Islam",
+            "Hisham Bedri",
+            "John Chirikjian",
+            "Yunzhu Li",
+            "Stefanos Nikolaidis",
+            "Daniel Seita"
+          ],
+          "abstract": "The sense of touch is central to manipulation, especially when vision is occluded or ambiguous. Although combining vision and touch improves manipulation, learning robust visuo-tactile policies requires substantial tactile data. Such data remains scarcer than visual data, because tactile sensors are fragile, specialized, and hard to standardize. To address this, we present Feature-Extracted Latent Tactile (FELT), a learning-based framework that synthesizes per-finger pressure tactile images from RGB observations, reducing the need for tactile-equipped data collection. FELT uses a large frozen visual encoder and a lightweight query decoder to predict tactile signals in a single feed-forward pass. To respect the physical topology of dual-finger tactile sensors, FELT decodes the left and right tactile sensor panels through separate branches, capturing the asymmetric contact patterns during interactions such as wiping, insertion, and in-hand rotation. At inference time, FELT only requires RGB data, allowing us to augment existing vision-only data with tactile observations, either as generated tactile images or as latent tactile features. Experiments on four contact-rich manipulation tasks demonstrate that both generated tactile images and latent tactile features improve policy success over vision-only baselines, with latent feature requiring no real tactile sensor during policy training or deployment. Supplementary material is available on our anonymous website: https://felt-tactile.github.io/.",
+          "url": "https://arxiv.org/abs/2607.20683v1",
+          "pdf_url": "https://arxiv.org/pdf/2607.20683v1",
+          "published": "2026-07-22T19:32:42Z",
+          "updated": "2026-07-22T19:32:42Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2606.05602v1",
           "title": "Fix the Mind, Not the Move: Interpretable AI Assistance via Knowledge-Gap Localization",
           "authors": [
@@ -5513,26 +5545,6 @@
             "cs.RO"
           ],
           "primary_category": "cs.MA"
-        },
-        {
-          "id": "2601.01082v5",
-          "title": "Discount Model Search for Quality Diversity Optimization in High-Dimensional Measure Spaces",
-          "authors": [
-            "Bryon Tjanaka",
-            "Henry Chen",
-            "Matthew C. Fontaine",
-            "Stefanos Nikolaidis"
-          ],
-          "abstract": "Quality diversity (QD) optimization searches for a collection of solutions that optimize an objective while attaining diverse outputs of a user-specified, vector-valued measure function. Contemporary QD algorithms are typically limited to low-dimensional measures because high-dimensional measures are prone to distortion, where many solutions found by the QD algorithm map to similar measures. For example, the state-of-the-art CMA-MAE algorithm guides measure space exploration with a histogram in measure space that records so-called discount values. However, CMA-MAE stagnates in domains with high-dimensional measure spaces because solutions with similar measures fall into the same histogram cell and hence receive the same discount value. To address these limitations, we propose Discount Model Search (DMS), which guides exploration with a model that provides a smooth, continuous representation of discount values. In high-dimensional measure spaces, this model enables DMS to distinguish between solutions with similar measures and thus continue exploration. We show that DMS facilitates new capabilities for QD algorithms by introducing two new domains where the measure space is the high-dimensional space of images, which enables users to specify their desired measures by providing a dataset of images rather than hand-designing the measure function. Results in these domains and on high-dimensional benchmarks show that DMS outperforms CMA-MAE and other existing black-box QD algorithms.",
-          "url": "https://arxiv.org/abs/2601.01082v5",
-          "pdf_url": "https://arxiv.org/pdf/2601.01082v5",
-          "published": "2026-01-03T06:05:22Z",
-          "updated": "2026-04-30T18:02:08Z",
-          "categories": [
-            "cs.LG",
-            "cs.NE"
-          ],
-          "primary_category": "cs.LG"
         }
       ]
     },
@@ -5544,6 +5556,28 @@
       "website": "https://viterbischool.usc.edu/faculty/yue-wang/",
       "paper_count": 5,
       "papers": [
+        {
+          "id": "2607.21419v1",
+          "title": "PATS: Policy-Aware Training Scaffolding for Agentic Reinforcement Learning",
+          "authors": [
+            "Yipeng Shi",
+            "Zhipeng Ma",
+            "Yue Wang",
+            "Qitai Tan",
+            "Yang Li",
+            "Peng Chen",
+            "Zhengzhou Zhu"
+          ],
+          "abstract": "In long-horizon LLM agent reinforcement learning, weak policies often repeat similar failures, producing uninformative rollout trajectories and limiting effective policy optimization. Existing skill-centric methods improve exploration by optimizing, filtering, or internalizing reusable skills. However, they remain centered on the skills themselves rather than being designed as adaptive training-time support for the evolving policy. To address this, we propose a policy-centric training paradigm that reframes skills as a dynamic training scaffold. Our framework, Pats, converts rollout groups from the latest policy into evidence cards and uses task-specific evaluation to adjust the context used in subsequent rollouts. Concrete guidance helps weak policies to complete challenging tasks. As policy improves, redundant context is revised or removed to reduce reliance on explicit guidance while preserving useful rollout variation. The policy is optimized with environmental rewards using standard RLVR, and the training scaffold is discarded at deployment. On ALFWorld and WebShop, Pats improves over strong baselines by up to 18.6%. Across seven search-augmented QA benchmarks, it remains competitive while using 32.1% fewer prompt tokens than the baseline.",
+          "url": "https://arxiv.org/abs/2607.21419v1",
+          "pdf_url": "https://arxiv.org/pdf/2607.21419v1",
+          "published": "2026-07-23T15:24:35Z",
+          "updated": "2026-07-23T15:24:35Z",
+          "categories": [
+            "cs.AI"
+          ],
+          "primary_category": "cs.AI"
+        },
         {
           "id": "2607.17247v1",
           "title": "Distilled Reinforcement Learning for LLM Post-training",
@@ -5635,29 +5669,6 @@
             "cs.RO"
           ],
           "primary_category": "cs.RO"
-        },
-        {
-          "id": "2606.25407v1",
-          "title": "Teach-to-Reason: Competition-Guided Reasoning with a Self-Improving Teacher",
-          "authors": [
-            "Xiao Han",
-            "Hao Liu",
-            "Zhimin Bao",
-            "Jile Jiao",
-            "Yue Wang",
-            "Hui Guo",
-            "Xiaofeng Mou",
-            "Yi Xu"
-          ],
-          "abstract": "Chest X-ray visual question answering (CXR VQA) requires models not only to predict correct answers, but also to produce reliable medical reasoning. However, existing reinforcement-learning-based training typically relies on answer-level rewards, which are often too coarse to improve chain-of-thought (CoT) quality and can become ineffective when group-level advantages collapse to zero. We propose \\textbf{Teach-to-Reason (T2R)}, a framework that introduces comparison-based supervision into CoT optimization through a self-improving \\emph{Teacher} and a competition-guided \\emph{Reasoner}. As the Teacher is iteratively strengthened via self-competition, the Reasoner is optimized against progressively stronger Teacher-generated references. We further introduce a case-wise reward design that preserves the original reward-induced positive/negative partition when it is informative, and restores supervision from competition scores when the original reward signal degenerates. Experiments on multiple CXR open-ended VQA benchmarks show that T2R consistently outperforms strong baselines, indicating that comparison-based supervision, when integrated in a controlled and principled manner, provides a more effective training signal for reasoning optimization.",
-          "url": "https://arxiv.org/abs/2606.25407v1",
-          "pdf_url": "https://arxiv.org/pdf/2606.25407v1",
-          "published": "2026-06-24T05:07:41Z",
-          "updated": "2026-06-24T05:07:41Z",
-          "categories": [
-            "cs.CV"
-          ],
-          "primary_category": "cs.CV"
         }
       ]
     },

@@ -2,9 +2,182 @@
   "category": "biology",
   "name": "Biology Research",
   "description": "Quantitative Biology \u2014 Genomics, Biophysics, Neuroscience",
-  "scraped_at": "2026-07-23T10:31:16.709192+00:00",
+  "scraped_at": "2026-07-24T10:25:51.814209+00:00",
   "paper_count": 10,
   "papers": [
+    {
+      "id": "2607.21561v1",
+      "title": "Graph Learning on Ensembles of Cyclic Peptides: An Investigation of Molecular Ensemble Modeling",
+      "authors": [
+        "Aaron Feller",
+        "Kris Deibler",
+        "Maxim Secor"
+      ],
+      "abstract": "Molecular property prediction from structure often uses a single representative conformation, even though many molecules exist as conformational ensembles in solution. We introduce EnsembleEGNN, a molecular ensemble foundation model that encodes an ensemble by first encoding each conformer with shared Equivariant Graph Neural Network (EGNN) layers, then pooling the resulting conformer representations with a Set Attention Block. We pretrain the model on CREMP, a cyclic peptide ensemble dataset, using a multi-task self-supervised objective combining masked token recovery, noisy-coordinate reconstruction, and pairwise distance reconstruction. On the CREMP-CycPeptMPDB dataset, training EnsembleEGNN from scratch fails entirely ($R^2=0.005$). However, the pretrained model reaches $R^2=0.477$ and Pearson $r=0.699$, outperforming the sequence-only BERT baseline ($R^2=0.439$, Pearson $r=0.667$). When EnsembleEGNN is co-trained end-to-end with the BERT sequence encoder, the hybrid model improves further to $R^2=0.538$ and Pearson $r=0.737$. These results demonstrate that encoding conformational ensembles into a single thermodynamically informed embedding improves cyclic-peptide property prediction.",
+      "url": "https://arxiv.org/abs/2607.21561v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.21561v1",
+      "published": "2026-07-23T17:42:51Z",
+      "updated": "2026-07-23T17:42:51Z",
+      "categories": [
+        "cs.LG",
+        "q-bio.BM"
+      ],
+      "primary_category": "cs.LG"
+    },
+    {
+      "id": "2607.21249v1",
+      "title": "From Berg-Purcell precision bounds to clock-limited information capacity",
+      "authors": [
+        "Micha\u0142 Komorowski"
+      ],
+      "abstract": "Physical limits to chemical sensing are traditionally expressed as Berg-Purcell bounds on estimation accuracy. Whether these bounds also limit the total amount of information a molecular receptor can transmit has remained unclear, despite the fact that cellular signaling performance is naturally quantified in bits rather than precision alone. Here we derive an explicit link between Berg-Purcell-type sensing limits and the information capacity of a single two-state receptor, yielding a compact expression that separates contributions from concentration range, receptor copy number, and averaging time. We show that, in the ideal fixed-time occupancy model, diffusion-limited sampling alone does not define a finite global information bound: with a perfectly specified integration window and unbounded input range, information capacity grows without bound with dynamic range, albeit slowly. A finite saturation arises when time integration is treated as an explicit physical resource. Finite timing precision yields a clock-limited bound on information capacity, and in the high-occupancy regime information transmission crosses over from diffusion-limited to clock-limited behavior. Together, these results establish a receptor-level information bound in bits that is finite once constraints on timing precision are taken into account.",
+      "url": "https://arxiv.org/abs/2607.21249v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.21249v1",
+      "published": "2026-07-23T12:18:31Z",
+      "updated": "2026-07-23T12:18:31Z",
+      "categories": [
+        "q-bio.MN",
+        "cs.IT",
+        "stat.AP"
+      ],
+      "primary_category": "q-bio.MN"
+    },
+    {
+      "id": "2607.20915v1",
+      "title": "Evolutionary Le Chatelier's Principle: Phenotypic Plasticity and Genetic Assimilation via Timescale Separation in the Price Equation",
+      "authors": [
+        "Tetsuhiro S. Hatakeyama"
+      ],
+      "abstract": "Phenotypic plasticity and genetic assimilation play key roles in adaptive evolution, yet their underlying mechanism has lacked a unified physical description. A major theoretical difficulty lies in the fundamental difference in timescales, as phenotypic plasticity occurs rapidly within a generation whereas genetic changes accumulate slowly across generations. Here, we formalize these processes by bridging the continuous-time Price equation, a foundational equation of evolutionary dynamics, with the physical concept of timescale separation. A sudden environmental change induces a fast plastic displacement of the phenotype relative to the slow genotypic variable. Through genotype--phenotype coupling, this displacement generates an internal genetic stress. We demonstrate that genetic assimilation is a dynamical relaxation process in which the genotype evolves to resolve this self-generated stress. These evolutionary dynamics mathematically realize Le Chatelier's principle, where the slow genetic response naturally amplifies the initial plastic shift in the same direction. The theory predicts that a weaker restoring force, which can manifest as larger clonal phenotypic fluctuations, requires a longer evolutionary timescale for assimilation. In the ideal limit of cost-free, perfectly adaptive plasticity, the relaxation time diverges, so assimilation effectively stalls. This formulation provides a macroscopic physical mechanism for genetic assimilation, offering a universal response law for evolutionary systems in which rapid phenotypic responses precede slower genetic change.",
+      "url": "https://arxiv.org/abs/2607.20915v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.20915v1",
+      "published": "2026-07-23T04:49:46Z",
+      "updated": "2026-07-23T04:49:46Z",
+      "categories": [
+        "q-bio.PE",
+        "physics.bio-ph"
+      ],
+      "primary_category": "q-bio.PE"
+    },
+    {
+      "id": "2607.20896v1",
+      "title": "HierarchicalDAEW: Domain-Aware Edge-Weighted Graph Convolution with Evidential Uncertainty for Multi-Section Spatial Gene Expression Prediction from H&E Histology",
+      "authors": [
+        "Kritanu Chattopadhyay",
+        "Soumya Chatterjee",
+        "Ondrej Krejcar",
+        "Debotosh Bhattacharjee"
+      ],
+      "abstract": "Spatial transcriptomics assays remain costly and technically demanding, restricting transcriptome-wide profiling to specialist settings and preventing routine clinical deployment. Predicting spatially resolved gene expression from H&E histology could close this gap, yet current methods largely ignore the underlying tissue architecture and rarely quantify how their predictions can be trusted. We introduce HierarchicalDAEW, a dual-graph architecture that addresses both gaps. On the spot graph, a Domain-Aware Edge-Weighted convolutional operator learns separate projections for inter-domain, intra-domain, and boundary edges derived from Leiden clustering, allowing the model to treat tissue heterogeneity as an explicit structural signal rather than an implicit one. A second gene-level graph then fuses protein-protein interaction priors from STRING-DB with tissue-specific co-expression through learned attention gating, propagating predictions from a landmark gene set to a broader gene panel. Reliability is handled through evidential uncertainty estimation, which produces far better calibrated confidence intervals than Monte Carlo dropout under identical conditions. Across six human Visium sections spanning breast, colorectal, prostate, and cerebellar tissue, and against thirteen published baselines, HierarchicalDAEW achieves the strongest correlation with ground-truth expression, with gains that hold up under multi-seed reproducibility checks and negative controls that rule out positional shortcuts. Ablations further confirm that both the domain-aware edge typing and the hierarchical depth are necessary to this improvement, and calibrated uncertainty estimates identify low-confidence predictions for pathologist review before clinical action.",
+      "url": "https://arxiv.org/abs/2607.20896v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.20896v1",
+      "published": "2026-07-23T03:33:47Z",
+      "updated": "2026-07-23T03:33:47Z",
+      "categories": [
+        "cs.LG",
+        "q-bio.GN"
+      ],
+      "primary_category": "cs.LG"
+    },
+    {
+      "id": "2607.20823v1",
+      "title": "Fluctuation impossibility results for stochastic burst networks",
+      "authors": [
+        "David F. Anderson"
+      ],
+      "abstract": "Stochastic reaction networks often involve components at low copy number, where individual production and degradation events generate substantial fluctuations. Yan et al.\\ conjectured in 2019 that for networks with linear degradation and arbitrary cross-regulatory production rates, feedback cannot suppress the stationary fluctuations for each component below the fluctuations of its constant-rate counterpart. Their formulation allows random burst sizes $K_i$: the unit-birth case has $K_i\\equiv1$, the biologically important burst model takes $K_i$ to be geometrically distributed, but more general positive integer-valued burst laws are also permitted. The conjecture was recently proved for unit births, $K_i\\equiv1$. We show here that the conjecture is \\textit{false in general} by constructing a two-component network with bounded production rates and burst sizes in $\\{1,2\\}$ for which both stationary Fano factors lie below their common constant-rate baseline. We then prove the conjecture for positive geometric bursts, the canonical burst model in stochastic gene expression. For arbitrary regulatory architecture and nonlinear cross-regulatory production rates, we prove an exact weighted tradeoff that rules out simultaneous suppression of every component below its geometric-burst baseline. We also prove a complementary structural impossibility result for arbitrary positive integer-valued burst laws with finite second moments: if the activating and inhibiting interactions have a globally consistent sign structure, in the sense that every cycle of the regulatory interaction graph contains an even number of negative interactions, then every component individually satisfies $F_{X_i}\\ge B_i$, where $F_{X_i}$ is its stationary Fano factor and $B_i$ is its constant-rate burst baseline.",
+      "url": "https://arxiv.org/abs/2607.20823v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.20823v1",
+      "published": "2026-07-23T01:24:01Z",
+      "updated": "2026-07-23T01:24:01Z",
+      "categories": [
+        "math.PR",
+        "q-bio.MN",
+        "q-bio.QM"
+      ],
+      "primary_category": "math.PR"
+    },
+    {
+      "id": "2607.20744v1",
+      "title": "Analyzing \\b{eta}-Lactamase Evolution from the Principle of Least Action Perspective",
+      "authors": [
+        "Pablo Garay",
+        "Walter J. Lapadula",
+        "Maximiliano Juri Ayub",
+        "Jorge A. Vila"
+      ],
+      "abstract": "Protein sequences change over time due to the accumulation of mutations in the genes that encode them. Nonetheless, accurately identifying the most probable evolutionary pathways and more efficient trajectories between an ancestral and a derived sequence remains a challenge. This difficulty stems from a limited understanding of the critical factors that drive the evolutionary process. This study aims to address this issue by validating a newly proposed mechanistic model (grounded on the principle of least action) for analyzing protein evolution, using beta-lactamase as an empirically characterized evolutionary model. The initial findings indicate that, after accounting for how mutations and the context-dependent interactions between them (epistasis) affect protein stability and, hence, the kinetics of protein folding, a resort to the principle of least action allows us to simultaneously identify the most probable pathways and the most efficient trajectories swiftly and accurately. These findings also suggest that the most probable evolutionary protein pathways are the ones that exhibit the most efficient trajectories. All in all, our study addresses several unanswered questions regarding the main factors that govern how protein evolves at the molecular level (under constant selection pressure) and outlines directions for future research in key fields such as directed evolution and ancestral sequence reconstruction.",
+      "url": "https://arxiv.org/abs/2607.20744v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.20744v1",
+      "published": "2026-07-22T21:49:21Z",
+      "updated": "2026-07-22T21:49:21Z",
+      "categories": [
+        "q-bio.PE"
+      ],
+      "primary_category": "q-bio.PE"
+    },
+    {
+      "id": "2607.20720v1",
+      "title": "Transition-Related Potentials as Markers of Narrative Comprehension in Continuous EEG",
+      "authors": [
+        "B\u00e1lint Csan\u00e1dy",
+        "P\u00e9ter Vedres",
+        "Krist\u00f3f Zsolt Mak\u00f3",
+        "Orsolya Papp-Zipernovszky",
+        "M\u00e1rta Volosin",
+        "D\u00e1vid Apagyi",
+        "Andr\u00e1s Luk\u00e1cs",
+        "Andr\u00e1s B\u00e1lint Kov\u00e1cs",
+        "Zoltan Nadasdy"
+      ],
+      "abstract": "Harnessing the potential of electroencephalography (EEG) for brain research is fundamentally limited by intrinsic noise and the diffuse projection of brain-generated activity over the scalp. The standard event-related potential (ERP) paradigm addresses this limitation by relying on repeated independent trials, albeit at the cost of moving away from naturalistic experimental conditions. As a more naturalistic alternative, we collected continuous EEG while participants watched short films and extracted potentials aligned to sharp cinematic transitions (cuts). We demonstrate that such transition-related potentials (TRPs) exhibit canonical ERP-like temporal structure associated with significant information processing. By comparing coherent films with scene-scrambled versions containing matched post-cut sensory input, we find that these responses are systematically shaped by narrative context. We then show that the cut-related EEG signature can be recovered directly from group-averaged continuous recordings with a compact deep neural network (DNN). The detector generalized across films and subject groups, and the resulting TRPs reproduced the main context-dependent effects observed for manually annotated cuts. These results indicate that narrative context leaves a measurable signature in EEG responses, that this signature can be detected directly in continuous recordings, and that such detections provide a semi-automated framework for analyzing how viewers process and understand film narratives. We propose that the method outlined here can be adapted to parse EEG responses to other forms of continuous stimulation, providing a general tool for probing experimental conditions that are closer to natural human experience.",
+      "url": "https://arxiv.org/abs/2607.20720v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.20720v1",
+      "published": "2026-07-22T20:43:12Z",
+      "updated": "2026-07-22T20:43:12Z",
+      "categories": [
+        "q-bio.NC",
+        "cs.AI"
+      ],
+      "primary_category": "q-bio.NC"
+    },
+    {
+      "id": "2607.20708v1",
+      "title": "Perspective Latents as an Architectural Condition for Causal Emergence in Active Inference Agents",
+      "authors": [
+        "Hongju Pae"
+      ],
+      "abstract": "A recent line of work measures causal emergence in reinforcement learning agents through Integrated Information Decomposition, reporting that $\u03a6_r$ grows with training and tracks reward improvement. For active inference, this raises the question of how reward-free predictive organization relates to such information-theoretic signatures. I test this within an active inference agent whose architecture separates a fast perception latent $z$ from a slow global latent $g$, where $g$ is driven by prediction error and structurally decoupled from policy gradients. In a reward-free environmental regime-switching protocol, $\u03a6_r$ concentrates in $g$; its aggregate magnitude is largely architectural and decreases with training. The substantive effect of learning becomes legible only at the atom-compositional level: decoupling flips sign from negative to positive and becomes regime-invariant under environmental change, while downward causation carries the regime-dependent adjustment. These results identify $g$ as the architectural locus of $\u03a6_r$-relevant temporal organization in an active inference agent, and argue against reading scalar $\u03a6_r$ as a direct index of learned integration.",
+      "url": "https://arxiv.org/abs/2607.20708v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.20708v1",
+      "published": "2026-07-22T20:25:29Z",
+      "updated": "2026-07-22T20:25:29Z",
+      "categories": [
+        "cs.LG",
+        "q-bio.NC"
+      ],
+      "primary_category": "cs.LG"
+    },
+    {
+      "id": "2607.20699v1",
+      "title": "Spectral theory for population density dynamics of spiking neurons with refractoriness",
+      "authors": [
+        "Luca Falorsi",
+        "Gianni Valerio Vinci.",
+        "Maurizio Mattia"
+      ],
+      "abstract": "Incorporating an absolute refractory period into the population density approach for spiking neurons remains an open problem, despite evidence that refractoriness can strongly affect nonlinear transfer functions and network stability. We develop a rigorous operator-theoretic framework for neuronal population dynamics with a finite refractory time by augmenting the state space to include refractory history and formulating the problem as a non-self-adjoint boundary eigenvalue problem for the Fokker-Planck operator. This yields a complete spectral characterization of the generator, proves dissipativity and the existence of a contraction semigroup, and identifies defective eigenvalues as exceptional points where oscillatory modes emerge from coalescing relaxational modes. Within the framework of linear response theory, we also derive an exact transfer function that accounts for boundary conditions modulated by external input, correcting previous heuristic derivations and revealing additional threshold-noise contributions. Using this transfer function under a mean-field approximation, we further show that refractoriness in populations of interacting neurons can facilitate the onset of limit cycles, that is, stable oscillations in the firing rate. These results provide a rigorous foundation for spectral decomposition methods in computational neuroscience, opening the way to their further rigorous mathematical analysis.",
+      "url": "https://arxiv.org/abs/2607.20699v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.20699v1",
+      "published": "2026-07-22T20:11:37Z",
+      "updated": "2026-07-22T20:11:37Z",
+      "categories": [
+        "q-bio.NC",
+        "math-ph",
+        "math.SP"
+      ],
+      "primary_category": "q-bio.NC"
+    },
     {
       "id": "2607.20382v1",
       "title": "FMRP-LEAN: A HIPAA-Compliant AI-Augmented LIMS Architecture for End-to-End Clinical Assay Workflow Optimization",
@@ -26,173 +199,6 @@
         "q-bio.NC"
       ],
       "primary_category": "cs.HC"
-    },
-    {
-      "id": "2607.20323v1",
-      "title": "Multi-modal transformer for signal classification in nanopore blockade experiments",
-      "authors": [
-        "Sandro Kuppel",
-        "Julian Ho\u00dfbach",
-        "Samuel Tovey",
-        "Christian Holm"
-      ],
-      "abstract": "Nanopore devices have emerged as powerful tools for single-molecule sensing, with potential for rapid, portable diagnostics. They detect changes in ionic current as analytes enter nanometer-scale pores, providing a means of identifying diverse biomarkers from their characteristic signal patterns. However, these signals are highly complex, and reliably assigning them to specific molecules remains a major challenge. Here, we address this by introducing a multi-modal deep learning architecture that jointly processes multiple signal representations, including raw time-series data, wavelet-based images, and static feature vectors. Our approach surpasses existing methods by more than 10 percentage points on a 42-peptide benchmark and transfers to a 20-amino-acid dataset with near-perfect accuracy. The model integrates complementary information from these representations, with attention analysis showing that the time-series and wavelet-image inputs emphasize different features of the same event. Together, these results demonstrate the potential of machine learning to enable robust, high-accuracy molecular identification with nanopore sensors.",
-      "url": "https://arxiv.org/abs/2607.20323v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.20323v1",
-      "published": "2026-07-22T16:09:34Z",
-      "updated": "2026-07-22T16:09:34Z",
-      "categories": [
-        "cs.LG",
-        "physics.comp-ph",
-        "q-bio.BM"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2607.20310v1",
-      "title": "Capturing Inner Experience At Scale: An AI Interviewer Co-Developed with the Founder of a Landmark Phenomenological Method",
-      "authors": [
-        "Jona Carmon",
-        "Clara Bersch",
-        "Charles Fernyhough",
-        "Russell T. Hurlburt",
-        "Simone K\u00fchn"
-      ],
-      "abstract": "Subjective experience is central to psychological science, yet methods for studying it force a choice between depth and scale. Classical Experience sampling, as in ecological momentary assessments (EMA), captures experience as it occurs, but it confines participants to predetermined response formats that prescribe how experience is measured. Descriptive Experience Sampling (DES) instead investigates specific moments in depth through expert expositional interviews, but its reliance on scarce trained interviewers keeps samples small. Large language model (LLM) systems can scale qualitative interviewing. Some models operationalize established interviewing methods such as motivational interviewing, yet none is grounded in a method for apprehending inner experience. Here we present an AI interviewer that aspires to operationalize DES into an explicit, inspectable reasoning architecture. At each turn it appraises the participant's message across eleven quality dimensions, maintains a conservative account of what has been established, selects a stage-appropriate intervention, and composes a single non-leading query, always holding that temporal grounding precedes experiential content. It was derived from the full corpus of DES transcripts and refined with the method's originator Russell T. Hurlburt. To our knowledge it is the first AI interviewer grounded in an established method for studying inner experience. The interviewer runs inside Introscope, an application that delivers the beeps and conducts the interviews and a study platform that lets researchers run studies via shareable links and review the sampled experience. It is demonstrated in an accompanying video https://introscope.mpib-berlin.mpg.de/video. Pending validation studies, we will make it freely available to researchers and the public, for crowdsourced sampling and individual exploration of inner experience.",
-      "url": "https://arxiv.org/abs/2607.20310v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.20310v1",
-      "published": "2026-07-22T15:56:49Z",
-      "updated": "2026-07-22T15:56:49Z",
-      "categories": [
-        "q-bio.NC"
-      ],
-      "primary_category": "q-bio.NC"
-    },
-    {
-      "id": "2607.20307v1",
-      "title": "When to Smell in Stereo",
-      "authors": [
-        "Sina Tootoonian",
-        "Andreas T. Schaefer"
-      ],
-      "abstract": "Recent works have highlighted the use of dual nostril 'stereo' olfaction by a variety of animals. In this work we perform \"back of the envelope\" calculations to determine when stereo olfaction is useful compared to single nostril 'mono' olfaction. We find that stereo olfaction is advantageous when there are large relative changes in the odour concentration, and when the spatial length scales of correlations in air are large, such as in the boundary layer near surfaces. In other words, stereo olfaction is useful when animals are searching surfaces for olfactory edges, such as when tracking odour trails.",
-      "url": "https://arxiv.org/abs/2607.20307v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.20307v1",
-      "published": "2026-07-22T15:55:24Z",
-      "updated": "2026-07-22T15:55:24Z",
-      "categories": [
-        "q-bio.NC"
-      ],
-      "primary_category": "q-bio.NC"
-    },
-    {
-      "id": "2607.20306v1",
-      "title": "State-Dependent Observation Noise Reintroduces Epistemic Value in Linear-Gaussian Active Inference",
-      "authors": [
-        "Daniel Corva"
-      ],
-      "abstract": "Recent work established that under active inference, linear-Gaussian state-space models lose their epistemic drive (any incentive to act so as to gain information) \"under any circumstances\". The epistemic term of the Expected Free Energy becomes constant: the agent flattens to a Kalman filter whose gain sequence is fixed in advance, regardless of action. The minimal departure that restores the drive is unknown; the only established route is control entering the dynamics multiplicatively; the observation side of this boundary is unexplored. We show that state-dependent observation noise is such a departure: a covariance R(x) that varies with the state x, representing a sensor's accuracy degrading with range. The agent runs the standard first-order Gaussian filter of this literature, R evaluated at the predicted mean. Coupling R(x) to a controllable latent mean makes the posterior covariance, and hence the effective Kalman gain, depend on the action. Consequently, no fixed linear-Gaussian filter reproduces the agent and, under a mild rank condition on the observation map and a non-degeneracy condition on R(x), epistemic value is no longer constant; for scalar observations, reachable non-constancy alone is needed. This is a minimal constructive instance of the Bar-Shalom-Tse dual effect in the agent's maintained covariance: actions now influence the quality of future estimates, not merely the state. Our library cpomdp detects the incompatibility from model specification alone and raises a typed IncompatibleLinearizationError. The theorem ships with an executable witness: exhibiting any fixed filter that reproduced the agent's beliefs would refute both theorem and witness at once. Together this offers a precise, observation-side characterisation of curiosity in a Gaussian agent, bridging dual control and active inference.",
-      "url": "https://arxiv.org/abs/2607.20306v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.20306v1",
-      "published": "2026-07-22T15:53:52Z",
-      "updated": "2026-07-22T15:53:52Z",
-      "categories": [
-        "q-bio.NC",
-        "eess.SY"
-      ],
-      "primary_category": "q-bio.NC"
-    },
-    {
-      "id": "2607.20250v1",
-      "title": "A ProbLog program to infer individual genotypes from familial phenotypes in autosomal, X-linked, and Y-linked Mendelian disorders",
-      "authors": [
-        "Maxime Mahout"
-      ],
-      "abstract": "The automated reconstruction of patient family history is a common challenge in genetic counseling for disease prevention. Such a family history is usually determined for a particular subset of diseases that are Mendelian, i.e. monogenic, and classified into three categories depending on the chromosome the gene is located: autosomal, X-linked or Y-linked. Mendel's inheritance laws allow for simple probabilistic modeling of the genetic transmission of monogenic disorders. Genetic counsellors use knowledge about the patient's family history and Mendelian laws for assessing risks of transmitting or inheriting congenital conditions. We present mendelprob.pl, a probabilistic logic programming algorithm in ProbLog for deriving probabilities of inheritance of genotypes and phenotypes for genes with two alleles through multiple generations. In particular, the user can input genotypes and phenotypes for a patient and its family, and automatically determine the most probable genetic family history. We illustrate the ProbLog model on practical examples of patient pedigrees from the literature and from a genetic counseling handbook. We show that our method correctly infers probability of individual genotypes from knowledge about familial genotypes, yielding the same results as tool pedprobr. However, unlike pedprobr, our approach can exploit knowledge about familial phenotypes. It can also directly distinguish between autosomal, X-linked, and Y-linked disorders, using its intuitive logical modelling. We provide our ProbLog tool for free and open-source on GitHub, making it easily available for genetic counsellors. We conclude on the importance of providing explainable formal methods for a task that clinicians might want to perform using proprietary software.",
-      "url": "https://arxiv.org/abs/2607.20250v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.20250v1",
-      "published": "2026-07-22T15:09:38Z",
-      "updated": "2026-07-22T15:09:38Z",
-      "categories": [
-        "cs.LO",
-        "q-bio.PE"
-      ],
-      "primary_category": "cs.LO"
-    },
-    {
-      "id": "2607.20057v1",
-      "title": "Antigen-specific Antibody Multi-modal Foundation Model for Functional Antibody Design",
-      "authors": [
-        "Xiaoliang Shi",
-        "Zichen Wang",
-        "Runze Ma",
-        "Zhongyue Zhang",
-        "Shuangjia Zheng"
-      ],
-      "abstract": "Antibodies are essential proteins that play a central role in immune recognition by binding specific antigen molecules. Although recent protein language models have enabled progress in single-chain protein modeling and generation, they often fall short in antigen-specific antibody design, where effective modeling requires explicit pairing between antibody and antigen, particularly at the epitope level. To address these limitations, we introduce AAMFM, an Antigen-specific Antibody Multimodal Foundation Model that learns unified representations of antibody sequences and structures conditioned on antigen context. AAMFM incorporates rich antigen information including geometric interfaces and epitope annotations via a cross-modal adapter, enabling joint modeling of antibody-antigen interactions in a shared latent space. To further guide the model toward functional relevance, we fine-tune AAMFM using Calibrated Direct Preference Optimization (Cal-DPO), leveraging preference signals extracted from a strong structural prior to align learning with binding-specific objectives. Extensive experiments demonstrate that AAMFM achieves state-of-the-art performance in functional antibody design, revealing its potential for antigen-specific antibody engineering. Our code is available at https://github.com/XL-S224/AAMFM.",
-      "url": "https://arxiv.org/abs/2607.20057v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.20057v1",
-      "published": "2026-07-22T11:59:38Z",
-      "updated": "2026-07-22T11:59:38Z",
-      "categories": [
-        "q-bio.BM",
-        "cs.LG"
-      ],
-      "primary_category": "q-bio.BM"
-    },
-    {
-      "id": "2607.19990v1",
-      "title": "Why I don't like the logistic equation",
-      "authors": [
-        "Janusz Uchma\u0144ski"
-      ],
-      "abstract": "The logistic equation treats the definition of its variable freely. It is undoubtedly the population density. The logistic equation in the differential version requires continuity of processes occurring in the population. In the differential version, we do not know what happens to the population between time steps. When filling these gaps, models with features different from the logistic equation appear. If we have a micro-scale model describing the fate of individuals and interactions between them, then the macro description for this model is not the equation for population density (e.g. the logistic equation) but the model of matter circulation or energy flow through this system. We lack mathematics to describe purely biological processes.",
-      "url": "https://arxiv.org/abs/2607.19990v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.19990v1",
-      "published": "2026-07-22T10:21:43Z",
-      "updated": "2026-07-22T10:21:43Z",
-      "categories": [
-        "q-bio.PE"
-      ],
-      "primary_category": "q-bio.PE"
-    },
-    {
-      "id": "2607.19982v1",
-      "title": "Stability and feasibility of Microbial Consumer-Resource Model",
-      "authors": [
-        "Louis Faul",
-        "Xavier Richard",
-        "Jan Roelof van der Meer",
-        "Christian Mazza"
-      ],
-      "abstract": "Microbial communities are ubiquitous in nature but how they grow on available resources is still poorly understood. Communities are complex systems harboring thousands of microbial species that interact through resource competition. The classical MacArthur consumer-resource model has been shown to underestimate formed community biomass. A recent new microbial consumer-resource model (MiCRM) considers the inclusion of inter-specific interactions mediated by metabolite exchange (cross-feeding) where the various bacterial growth byproducts can be reused by other species for their own growth. We study persistence, feasibility and stability for MiCRM under some simplifying assumptions using slow-fast approximation. We show e.g. the non-persistence of the microbial community when the number of resource species M is smaller than the number of consumer species S. We then study the stability of the slow steady state when the number or survivors S is smaller than M, and show that such equilibria are generically stable. We finally propose a stochastic slow-fast version of the model having fast Poisson steady state and study related extinction events.",
-      "url": "https://arxiv.org/abs/2607.19982v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.19982v1",
-      "published": "2026-07-22T10:14:29Z",
-      "updated": "2026-07-22T10:14:29Z",
-      "categories": [
-        "q-bio.PE"
-      ],
-      "primary_category": "q-bio.PE"
-    },
-    {
-      "id": "2607.19973v1",
-      "title": "The Giant Hippocampus: From Structural Monoculture to a System of Systems",
-      "authors": [
-        "Jaeho Seol"
-      ],
-      "abstract": "AI researchers describe state-of-the-art models as one thing repeated at scale: the Transformer, wired identically for text, pixels, or speech. Neuroscientists describe the cortex as a mosaic - dense Layer 4 in visual cortex for spatial encoding, thick Layers 5/6 in motion cortex for temporal integration - different jobs solved by different structures. This paper argues the gap is a structural error, not a stylistic one, and is measurable. A century of cytoarchitecture, from Brodmann to single-cell Patch-seq, shows distinct cognitive functions are implemented by qualitatively different structures, not by rescaling one template. The convolutional neural network is the field's own proof: local receptive fields and hierarchical depth encoded this prior directly, reaching strong image recognition on far less data than later architectures needed. The paper traces how this lesson was discarded: the \"Hardware Lottery\" made the Transformer the path of least resistance, not the principled choice, and Mixture-of-Experts, often cited as diversity, in fact partitions parameters among identical experts. A functionalist analysis shows the Transformer is best understood as a functional analog of the hippocampal formation, not a general-purpose cortex - the same mistake as treating cortex as one giant Broca's area, except the field has now standardized on a giant hippocampus, applied to tasks it was never built for: audition, executive gating, working memory. The paper closes with an alternative: a Heterogeneous Topological Network, a System of Systems in which distinct modules keep the inductive bias their computation demands and communicate through standardized interfaces. This is a design discipline for AI architects, not cognitive science: specify modularity before training, using structural evidence as a design input rather than reverse-engineering architecture from a trained model's behavior.",
-      "url": "https://arxiv.org/abs/2607.19973v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.19973v1",
-      "published": "2026-07-22T09:55:25Z",
-      "updated": "2026-07-22T09:55:25Z",
-      "categories": [
-        "cs.AI",
-        "cs.LG",
-        "cs.NE",
-        "q-bio.NC"
-      ],
-      "primary_category": "cs.AI"
     }
   ]
 }
