@@ -2,9 +2,130 @@
   "category": "biology",
   "name": "Biology Research",
   "description": "Quantitative Biology \u2014 Genomics, Biophysics, Neuroscience",
-  "scraped_at": "2026-07-26T10:08:05.620935+00:00",
+  "scraped_at": "2026-07-27T11:33:28.592728+00:00",
   "paper_count": 10,
   "papers": [
+    {
+      "id": "2607.22397v1",
+      "title": "Universal BCI Personalization: One API for Frozen EEG Trunks and Foundation Models",
+      "authors": [
+        "Sergey Musienko"
+      ],
+      "abstract": "Frozen EEG encoders proliferate; per-model fine-tune defaults do not scale. We present Nimbus Personalizer: one contract encode to Bayesian head to BrainState (optional affine mid-tier) that sits on heterogeneous frozen trunks without a new personalization stack per architecture. Thesis (systems): the contribution is the trunk-agnostic API - not LDA-on-embeddings as an ML novelty - so OEMs integrate once and swap trunks. Evidence: the same surface runs on five classical trunks EEGNet, Shallow, Deep, Conformer, ATCNet x four MI datasets (18 cells) and on a foundation encoder (REVE) under the same Personalizer. Where embedding capacity exists, the head is a cheap default mid-point versus warm-start fine-tune or PEFT, costing orders of magnitude less adaptation wall time while recovering much of the fine-tune accuracy gain; calibration-only-when-clean holds in 12/18 cells. Head gains are supporting evidence that the API is useful where capacity exists. Subject-level confidence intervals identify the clearest dataset and span zero elsewhere. All results are exploratory (subject-level bootstrap, no confirmatory tests); the decision logic for when to escalate adaptation is addressed in our companion work on the control layer.",
+      "url": "https://arxiv.org/abs/2607.22397v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.22397v1",
+      "published": "2026-07-24T15:20:56Z",
+      "updated": "2026-07-24T15:20:56Z",
+      "categories": [
+        "cs.HC",
+        "cs.LG",
+        "q-bio.NC"
+      ],
+      "primary_category": "cs.HC"
+    },
+    {
+      "id": "2607.22318v1",
+      "title": "On a cross coupling of Rulkov neural maps",
+      "authors": [
+        "Stefano Disca"
+      ],
+      "abstract": "We introduce a novel coupling of Rulkov neural maps, proposing a heuristic biological interpretation for the transition to non-small values of the perturbations acting on the slow variables. We analytically prove that the coupling preserves boundedness of motion and the existence of a snap-back repeller (leading to Devaney chaos by the Marotto theorem), if they are associated to the original system. For the coupling of two standard chaotic Rulkov maps, we present numerical simulations for the orbits of the system showing the arising of a global strange attractor, whose fractal structure is strongly suggested by the computation of a non-integer Kaplan-Yorke dimension. Furthermore, we perform standard numerical studies concerning time series, Lyapunov exponents spectra, bifurcation diagrams and basins of attraction. Finally, we briefly propose a generalization of the coupling to an arbitrary number of neurons.",
+      "url": "https://arxiv.org/abs/2607.22318v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.22318v1",
+      "published": "2026-07-24T13:58:13Z",
+      "updated": "2026-07-24T13:58:13Z",
+      "categories": [
+        "nlin.CD",
+        "math.DS",
+        "q-bio.NC"
+      ],
+      "primary_category": "nlin.CD"
+    },
+    {
+      "id": "2607.22275v1",
+      "title": "NUMA balancing hampering performance of spiking network simulations",
+      "authors": [
+        "Melissa Lober",
+        "Alp Inangu",
+        "Gorka Peraza Coppola",
+        "Dennis Terhorst",
+        "Sebastian Gillessen",
+        "Jan Vogelsang",
+        "Hans Ekkehard Plesser",
+        "Brian Wylie",
+        "Benedikt Steinbusch",
+        "Guido Trensch",
+        "Susanne Kunkel",
+        "Markus Diesmann"
+      ],
+      "abstract": "Computing centers today mostly operate conventional CPU- and GPU-based systems, where the direct way of decreasing energy consumption is a reduction in the applications' runtime. Neuromorphic computing promises an alternative architecture with improved energy efficiency for artificial intelligence. In this endeavor, code for the simulation of large-scale spiking networks on conventional supercomputers is the reference. We show that turning off automatic NUMA balancing may reduce energy consumption by 30%. This dwarfs other attempts of increasing the energy efficiency of a computing center with respect to cost effectiveness. The memory access pattern of spiking network simulation code dynamically interacts with automatic NUMA balancing. This does not affect the correctness of simulation results and thus goes unnoticed in day-to-day neuroscience research. In performance analysis, however, time measurements fluctuate obstructing attempts to optimize simulation technology. A new time- and compute-node resolved performance display exposes the fine-grained temporal variability of distributed spiking network simulations. The analysis uncovers that automatic NUMA balancing is of disadvantage and affects the jemalloc library for thread-aware memory allocation in a transient manner. The method also allows developers to detect perturbations of the HPC system and target specific improvements to simulation technology. As a consequence, we have equipped our supercomputers with an option to turn on or off automatic NUMA balancing on a per-job basis on the user level. This gives researchers the opportunity to find the best setting for the application at hand. There are indications in the literature that the effect has been observed before, yet it does not seem common knowledge in scientific computing. It remains to be investigated how widespread the phenomenon is among scientific codes.",
+      "url": "https://arxiv.org/abs/2607.22275v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.22275v1",
+      "published": "2026-07-24T13:12:15Z",
+      "updated": "2026-07-24T13:12:15Z",
+      "categories": [
+        "cs.DC",
+        "q-bio.NC"
+      ],
+      "primary_category": "cs.DC"
+    },
+    {
+      "id": "2607.22180v1",
+      "title": "Cycles of Discourse, Speech Dysfluency, and Active Inference",
+      "authors": [
+        "Thomas Parr",
+        "Birtan Demirel",
+        "Youssuf Saleh",
+        "Sanjay Manohar"
+      ],
+      "abstract": "Speech is a complex motor and social act. We must not only produce and understand sequences of variable-length words formed of ordered syllables but also speak and listen in turn. This theoretical paper introduces a computational model of speech production and auditory segmentation based upon sequences of discrete phonemes. The purpose of this is to develop a vehicle to test (in silico) hypotheses about the mechanisms that govern loss of speech fluency, something that may happen transiently in people who stutter or progressively in various neurodegenerative conditions. The modelling here appeals to Partially Observable Markov Decision Processes that provide a useful generic formulation for specifying the internal model our brains might use to describe dynamic environments in which they can exert partial control and make partial observations. The core features of the specific model used here are: (1) a reciprocal mapping from words to sequences of varying numbers of phonemes (2) a common subset of states for both speech generation and speech perception. A further novel feature is a social component, in which one must infer who is speaking (self or other). We propose a series of hypotheses about the computational mechanisms that might underwrite speech breakdown. For example, we demonstrate that reducing the precision in the next word introduces pauses and start-of-word repetitions of the sort associated with stuttering. We examine the patterns of behaviour and belief-updating predicted by each of these hypotheses, with implications for both speaking and listening. Finally, we discuss plausible neural substrates for the underlying message passing that might be amenable to interrogation with functional imaging.",
+      "url": "https://arxiv.org/abs/2607.22180v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.22180v1",
+      "published": "2026-07-24T10:44:31Z",
+      "updated": "2026-07-24T10:44:31Z",
+      "categories": [
+        "q-bio.NC"
+      ],
+      "primary_category": "q-bio.NC"
+    },
+    {
+      "id": "2607.22097v1",
+      "title": "Enumerating monophyletic characters in mathematical phylogenetics",
+      "authors": [
+        "Mareike Fischer",
+        "Michael Hendriksen",
+        "Kristina Wicke"
+      ],
+      "abstract": "Grouping species according to their phylogenetic relationships often results in different groups than grouping them according to their shared traits. Monophyletic groups play an important role in this regard, as they are groups of species sharing the same trait and being uniquely defined by a joint phylogenetic subtree. This immediately leads to the question of how to identify possible monophyletic groups in characters, which assign each present-day species a certain trait and which are typically used for phylogenetic tree reconstruction. In our manuscript, we provide a general formula to quantify how many different characters are monophyletic on any given tree and provide simple formulae for binary characters and for certain tree shapes. We also investigate relations between monophyly and the well-known phylogenetic tree reconstruction criterion maximum parsimony by providing a linear-time algorithm which determines the parsimony score together with the monophyly type of a character on a tree.",
+      "url": "https://arxiv.org/abs/2607.22097v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.22097v1",
+      "published": "2026-07-24T08:47:49Z",
+      "updated": "2026-07-24T08:47:49Z",
+      "categories": [
+        "q-bio.PE",
+        "math.CO"
+      ],
+      "primary_category": "q-bio.PE"
+    },
+    {
+      "id": "2607.21884v1",
+      "title": "Model-based optimization of bacterial motility strategies for maximizing population yield",
+      "authors": [
+        "Peize Yu",
+        "Sohei Tasaki"
+      ],
+      "abstract": "Bacterial motility is a fundamental trait for territorial expansion and resource acquisition. While existing models of nutrient-dependent motility often do not explicitly account for the metabolic costs associated with motility, these costs become critical in nutrient-limited or closed systems. In this study, we developed a mathematical framework using partial differential equations (PDEs) that explicitly incorporates the energetic trade-offs of motility. By formulating an optimization problem focused on maximizing population yield---defined by the total cell count---we evaluated various motility strategies across different environmental contexts. Our results demonstrate that the optimal motility response is highly sensitive to resource distribution. Specifically, we show that in unpredictable environments, a non-monotonic motility response emerges as the optimal strategy, providing a robust theoretical explanation for dose-response curves observed in experimental microbiology. This framework serves as a powerful, interpretable tool for predicting bacterial behavior in resource-constrained ecosystems and offers new insights into how such adaptive strategies are shaped by environmental pressures.",
+      "url": "https://arxiv.org/abs/2607.21884v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.21884v1",
+      "published": "2026-07-24T01:14:45Z",
+      "updated": "2026-07-24T01:14:45Z",
+      "categories": [
+        "q-bio.PE",
+        "math.NA",
+        "math.OC"
+      ],
+      "primary_category": "q-bio.PE"
+    },
     {
       "id": "2607.21561v1",
       "title": "Graph Learning on Ensembles of Cyclic Peptides: An Investigation of Molecular Ensemble Modeling",
@@ -23,6 +144,25 @@
         "q-bio.BM"
       ],
       "primary_category": "cs.LG"
+    },
+    {
+      "id": "2607.21690v1",
+      "title": "From biodiversity modelling to conservation action: a spatial indicator for prioritising tropical forest protection, restoration, and management",
+      "authors": [
+        "Ma\u00efri Souza Oliveira",
+        "Maxime Lenormand",
+        "Sandra Luque"
+      ],
+      "abstract": "Tropical forests harbour exceptional biodiversity but are increasingly threatened by anthropogenic pressures, making their conservation central to achieving the Convention on Biological Diversity targets. However, national conservation planning is often constrained by heterogeneous monitoring frameworks and limited integration of biodiversity and anthropogenic pressures. We develop a synthetic spatial indicator that combines open-access biodiversity and land-use data to identify refuge and conflict areas between ecological potential and anthropogenic pressure. Using Costa Rica as a national-scale demonstrator, we assess its capacity to support conservation prioritisation and evaluate the current conservation network. Ecological potential was estimated using multi-species distribution models for 254 dominant canopy tree species, serving as an operational proxy for tropical forest biodiversity and ecological structure. We quantified anthropogenic pressure from land-use patterns and combined it with ecological potential to identify refuge and conflict areas. We then tested the spatial significance of these areas and evaluated their representation within the national conservation network. The indicator reveals a clear spatial organisation of biodiversity-pressure interactions: refuge areas coincide with large, continuous forest cores, whereas conflict areas are concentrated in fragmented landscapes and may extend into protected areas. Flexible and transferable, the framework distinguishes areas requiring strict protection from those where restoration, sustainable management, or pressure mitigation should be prioritised. Rather than prescribing conservation actions, the refuge-conflict indicator provides a practical decision-support tool to assess conservation networks, strengthen ecological connectivity, and guide national biodiversity planning.",
+      "url": "https://arxiv.org/abs/2607.21690v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.21690v1",
+      "published": "2026-07-23T16:12:23Z",
+      "updated": "2026-07-23T16:12:23Z",
+      "categories": [
+        "q-bio.QM",
+        "q-bio.PE"
+      ],
+      "primary_category": "q-bio.QM"
     },
     {
       "id": "2607.21249v1",
@@ -58,147 +198,6 @@
         "physics.bio-ph"
       ],
       "primary_category": "q-bio.PE"
-    },
-    {
-      "id": "2607.20896v1",
-      "title": "HierarchicalDAEW: Domain-Aware Edge-Weighted Graph Convolution with Evidential Uncertainty for Multi-Section Spatial Gene Expression Prediction from H&E Histology",
-      "authors": [
-        "Kritanu Chattopadhyay",
-        "Soumya Chatterjee",
-        "Ondrej Krejcar",
-        "Debotosh Bhattacharjee"
-      ],
-      "abstract": "Spatial transcriptomics assays remain costly and technically demanding, restricting transcriptome-wide profiling to specialist settings and preventing routine clinical deployment. Predicting spatially resolved gene expression from H&E histology could close this gap, yet current methods largely ignore the underlying tissue architecture and rarely quantify how their predictions can be trusted. We introduce HierarchicalDAEW, a dual-graph architecture that addresses both gaps. On the spot graph, a Domain-Aware Edge-Weighted convolutional operator learns separate projections for inter-domain, intra-domain, and boundary edges derived from Leiden clustering, allowing the model to treat tissue heterogeneity as an explicit structural signal rather than an implicit one. A second gene-level graph then fuses protein-protein interaction priors from STRING-DB with tissue-specific co-expression through learned attention gating, propagating predictions from a landmark gene set to a broader gene panel. Reliability is handled through evidential uncertainty estimation, which produces far better calibrated confidence intervals than Monte Carlo dropout under identical conditions. Across six human Visium sections spanning breast, colorectal, prostate, and cerebellar tissue, and against thirteen published baselines, HierarchicalDAEW achieves the strongest correlation with ground-truth expression, with gains that hold up under multi-seed reproducibility checks and negative controls that rule out positional shortcuts. Ablations further confirm that both the domain-aware edge typing and the hierarchical depth are necessary to this improvement, and calibrated uncertainty estimates identify low-confidence predictions for pathologist review before clinical action.",
-      "url": "https://arxiv.org/abs/2607.20896v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.20896v1",
-      "published": "2026-07-23T03:33:47Z",
-      "updated": "2026-07-23T03:33:47Z",
-      "categories": [
-        "cs.LG",
-        "q-bio.GN"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2607.20823v1",
-      "title": "Fluctuation impossibility results for stochastic burst networks",
-      "authors": [
-        "David F. Anderson"
-      ],
-      "abstract": "Stochastic reaction networks often involve components at low copy number, where individual production and degradation events generate substantial fluctuations. Yan et al.\\ conjectured in 2019 that for networks with linear degradation and arbitrary cross-regulatory production rates, feedback cannot suppress the stationary fluctuations for each component below the fluctuations of its constant-rate counterpart. Their formulation allows random burst sizes $K_i$: the unit-birth case has $K_i\\equiv1$, the biologically important burst model takes $K_i$ to be geometrically distributed, but more general positive integer-valued burst laws are also permitted. The conjecture was recently proved for unit births, $K_i\\equiv1$. We show here that the conjecture is \\textit{false in general} by constructing a two-component network with bounded production rates and burst sizes in $\\{1,2\\}$ for which both stationary Fano factors lie below their common constant-rate baseline. We then prove the conjecture for positive geometric bursts, the canonical burst model in stochastic gene expression. For arbitrary regulatory architecture and nonlinear cross-regulatory production rates, we prove an exact weighted tradeoff that rules out simultaneous suppression of every component below its geometric-burst baseline. We also prove a complementary structural impossibility result for arbitrary positive integer-valued burst laws with finite second moments: if the activating and inhibiting interactions have a globally consistent sign structure, in the sense that every cycle of the regulatory interaction graph contains an even number of negative interactions, then every component individually satisfies $F_{X_i}\\ge B_i$, where $F_{X_i}$ is its stationary Fano factor and $B_i$ is its constant-rate burst baseline.",
-      "url": "https://arxiv.org/abs/2607.20823v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.20823v1",
-      "published": "2026-07-23T01:24:01Z",
-      "updated": "2026-07-23T01:24:01Z",
-      "categories": [
-        "math.PR",
-        "q-bio.MN",
-        "q-bio.QM"
-      ],
-      "primary_category": "math.PR"
-    },
-    {
-      "id": "2607.20744v1",
-      "title": "Analyzing \\b{eta}-Lactamase Evolution from the Principle of Least Action Perspective",
-      "authors": [
-        "Pablo Garay",
-        "Walter J. Lapadula",
-        "Maximiliano Juri Ayub",
-        "Jorge A. Vila"
-      ],
-      "abstract": "Protein sequences change over time due to the accumulation of mutations in the genes that encode them. Nonetheless, accurately identifying the most probable evolutionary pathways and more efficient trajectories between an ancestral and a derived sequence remains a challenge. This difficulty stems from a limited understanding of the critical factors that drive the evolutionary process. This study aims to address this issue by validating a newly proposed mechanistic model (grounded on the principle of least action) for analyzing protein evolution, using beta-lactamase as an empirically characterized evolutionary model. The initial findings indicate that, after accounting for how mutations and the context-dependent interactions between them (epistasis) affect protein stability and, hence, the kinetics of protein folding, a resort to the principle of least action allows us to simultaneously identify the most probable pathways and the most efficient trajectories swiftly and accurately. These findings also suggest that the most probable evolutionary protein pathways are the ones that exhibit the most efficient trajectories. All in all, our study addresses several unanswered questions regarding the main factors that govern how protein evolves at the molecular level (under constant selection pressure) and outlines directions for future research in key fields such as directed evolution and ancestral sequence reconstruction.",
-      "url": "https://arxiv.org/abs/2607.20744v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.20744v1",
-      "published": "2026-07-22T21:49:21Z",
-      "updated": "2026-07-22T21:49:21Z",
-      "categories": [
-        "q-bio.PE"
-      ],
-      "primary_category": "q-bio.PE"
-    },
-    {
-      "id": "2607.20720v1",
-      "title": "Transition-Related Potentials as Markers of Narrative Comprehension in Continuous EEG",
-      "authors": [
-        "B\u00e1lint Csan\u00e1dy",
-        "P\u00e9ter Vedres",
-        "Krist\u00f3f Zsolt Mak\u00f3",
-        "Orsolya Papp-Zipernovszky",
-        "M\u00e1rta Volosin",
-        "D\u00e1vid Apagyi",
-        "Andr\u00e1s Luk\u00e1cs",
-        "Andr\u00e1s B\u00e1lint Kov\u00e1cs",
-        "Zoltan Nadasdy"
-      ],
-      "abstract": "Harnessing the potential of electroencephalography (EEG) for brain research is fundamentally limited by intrinsic noise and the diffuse projection of brain-generated activity over the scalp. The standard event-related potential (ERP) paradigm addresses this limitation by relying on repeated independent trials, albeit at the cost of moving away from naturalistic experimental conditions. As a more naturalistic alternative, we collected continuous EEG while participants watched short films and extracted potentials aligned to sharp cinematic transitions (cuts). We demonstrate that such transition-related potentials (TRPs) exhibit canonical ERP-like temporal structure associated with significant information processing. By comparing coherent films with scene-scrambled versions containing matched post-cut sensory input, we find that these responses are systematically shaped by narrative context. We then show that the cut-related EEG signature can be recovered directly from group-averaged continuous recordings with a compact deep neural network (DNN). The detector generalized across films and subject groups, and the resulting TRPs reproduced the main context-dependent effects observed for manually annotated cuts. These results indicate that narrative context leaves a measurable signature in EEG responses, that this signature can be detected directly in continuous recordings, and that such detections provide a semi-automated framework for analyzing how viewers process and understand film narratives. We propose that the method outlined here can be adapted to parse EEG responses to other forms of continuous stimulation, providing a general tool for probing experimental conditions that are closer to natural human experience.",
-      "url": "https://arxiv.org/abs/2607.20720v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.20720v1",
-      "published": "2026-07-22T20:43:12Z",
-      "updated": "2026-07-22T20:43:12Z",
-      "categories": [
-        "q-bio.NC",
-        "cs.AI"
-      ],
-      "primary_category": "q-bio.NC"
-    },
-    {
-      "id": "2607.20708v1",
-      "title": "Perspective Latents as an Architectural Condition for Causal Emergence in Active Inference Agents",
-      "authors": [
-        "Hongju Pae"
-      ],
-      "abstract": "A recent line of work measures causal emergence in reinforcement learning agents through Integrated Information Decomposition, reporting that $\u03a6_r$ grows with training and tracks reward improvement. For active inference, this raises the question of how reward-free predictive organization relates to such information-theoretic signatures. I test this within an active inference agent whose architecture separates a fast perception latent $z$ from a slow global latent $g$, where $g$ is driven by prediction error and structurally decoupled from policy gradients. In a reward-free environmental regime-switching protocol, $\u03a6_r$ concentrates in $g$; its aggregate magnitude is largely architectural and decreases with training. The substantive effect of learning becomes legible only at the atom-compositional level: decoupling flips sign from negative to positive and becomes regime-invariant under environmental change, while downward causation carries the regime-dependent adjustment. These results identify $g$ as the architectural locus of $\u03a6_r$-relevant temporal organization in an active inference agent, and argue against reading scalar $\u03a6_r$ as a direct index of learned integration.",
-      "url": "https://arxiv.org/abs/2607.20708v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.20708v1",
-      "published": "2026-07-22T20:25:29Z",
-      "updated": "2026-07-22T20:25:29Z",
-      "categories": [
-        "cs.LG",
-        "q-bio.NC"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2607.20699v1",
-      "title": "Spectral theory for population density dynamics of spiking neurons with refractoriness",
-      "authors": [
-        "Luca Falorsi",
-        "Gianni Valerio Vinci.",
-        "Maurizio Mattia"
-      ],
-      "abstract": "Incorporating an absolute refractory period into the population density approach for spiking neurons remains an open problem, despite evidence that refractoriness can strongly affect nonlinear transfer functions and network stability. We develop a rigorous operator-theoretic framework for neuronal population dynamics with a finite refractory time by augmenting the state space to include refractory history and formulating the problem as a non-self-adjoint boundary eigenvalue problem for the Fokker-Planck operator. This yields a complete spectral characterization of the generator, proves dissipativity and the existence of a contraction semigroup, and identifies defective eigenvalues as exceptional points where oscillatory modes emerge from coalescing relaxational modes. Within the framework of linear response theory, we also derive an exact transfer function that accounts for boundary conditions modulated by external input, correcting previous heuristic derivations and revealing additional threshold-noise contributions. Using this transfer function under a mean-field approximation, we further show that refractoriness in populations of interacting neurons can facilitate the onset of limit cycles, that is, stable oscillations in the firing rate. These results provide a rigorous foundation for spectral decomposition methods in computational neuroscience, opening the way to their further rigorous mathematical analysis.",
-      "url": "https://arxiv.org/abs/2607.20699v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.20699v1",
-      "published": "2026-07-22T20:11:37Z",
-      "updated": "2026-07-22T20:11:37Z",
-      "categories": [
-        "q-bio.NC",
-        "math-ph",
-        "math.SP"
-      ],
-      "primary_category": "q-bio.NC"
-    },
-    {
-      "id": "2607.20382v1",
-      "title": "FMRP-LEAN: A HIPAA-Compliant AI-Augmented LIMS Architecture for End-to-End Clinical Assay Workflow Optimization",
-      "authors": [
-        "Eva McCord",
-        "Ernest Pedapati",
-        "Zag ElSayed"
-      ],
-      "abstract": "Clinical biomarker workflows in translational research settings often rely on spreadsheet-driven tracking, manual quality control (QC) reconciliation, and loosely integrated systems, resulting in limited state visibility, delayed reporting, and increased operational risk. These challenges are particularly pronounced in multi-day assays such as Luminex-based quantification of Fragile X Messenger Ribonucleoprotein (FMRP), where HIPAA-compliant data governance, deterministic workflow progression, and coordinated communication across laboratory and clinical teams are required. This paper presents FMRP-LEAN, a HIPAA-compliant, AI-augmented Laboratory Information Management System (LIMS) architecture that formalizes biospecimen lifecycle management through a finite-state workflow model with explicit transition guards and dwell-time observability. The system integrates a self-hosted Supabase/PostgreSQL stack deployed within hospital-controlled infrastructure, hybrid edge-internal isolation with encrypted tunneling and loopback-only services, and bi-directional REDCap synchronization. A unified MRN-UUIDv7 identifier framework with QR-based tracking ensures traceable clinical-research linkage under PHI residency constraints. FMRP-LEAN incorporates automated statistical QC pre-screening and a governance-constrained AI operations module that operates exclusively on aggregate projections, with deterministic fallback guarantees. Deployment demonstrates improved workflow observability, reduced QC latency, and enhanced cross-role transparency between laboratory technicians, research coordinators, and patient-facing teams. The architecture provides a reproducible model for secure, state-explicit, and AI-augmented clinical research workflows in regulated healthcare environments.",
-      "url": "https://arxiv.org/abs/2607.20382v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.20382v1",
-      "published": "2026-07-22T17:11:52Z",
-      "updated": "2026-07-22T17:11:52Z",
-      "categories": [
-        "cs.HC",
-        "cs.AI",
-        "cs.ET",
-        "physics.med-ph",
-        "q-bio.NC"
-      ],
-      "primary_category": "cs.HC"
     }
   ]
 }
