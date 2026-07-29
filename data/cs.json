@@ -2,258 +2,210 @@
   "category": "cs",
   "name": "CS Research",
   "description": "Computer Science \u2014 AI, Machine Learning, NLP, Computer Vision",
-  "scraped_at": "2026-07-28T10:41:53.566984+00:00",
+  "scraped_at": "2026-07-29T10:45:56.906523+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2607.24744v1",
-      "title": "Data Pyramid for Embodied Manipulation",
+      "id": "2607.26057v1",
+      "title": "Pass the Baton: Trajectory-Relayed On-Policy Distillation",
       "authors": [
-        "Yifan Ye",
-        "Yankai Fu",
-        "Yaoxu Lv",
-        "Bohan Hou",
-        "Jun Cen",
-        "Lingdong Kong",
-        "Duo Zheng",
-        "Tianxing Chen",
-        "Jiaming Liu",
-        "Ziang Cao",
-        "Yunfan Lou",
-        "Wei Chow",
-        "Xian Sun",
-        "Yingshuo Wang",
-        "Kuangzhi Ge",
-        "Xiaowei Chi",
-        "Xidong Zhang",
-        "Zhibo Pang",
-        "Yiwu Zhong",
-        "Sirui Han",
-        "Zhihe Lu",
-        "Weihao Yuan",
-        "Qifeng Chen",
-        "Michael Yu Wang",
-        "Yao Mu",
-        "Ziwei Liu",
-        "Jianfei Yang",
-        "Ping Luo",
-        "Shanghang Zhang"
+        "Haolei Xu",
+        "Xiaowen Xu",
+        "Haiwen Hong",
+        "Zixuan Ni",
+        "Hongxing Li",
+        "Yiwen Qiu",
+        "Weiming Lu",
+        "Yongliang Shen"
       ],
-      "abstract": "Multimodal foundation models learned to see and to speak by consuming the whole internet. Embodied agents admit no such shortcut, since they require data that couple observations with physical states and actions. These signals can be provided, to varying degrees, by multiple data sources. In this work, we organize the embodied data ecosystem as a \"pyramid\" spanning five complementary sources: real-robot data, UMI-style data, egocentric and exocentric data, simulation data, and general vision-language data. We organize the pyramid around the tension between scalability and robot alignment, and further characterize each source in terms of data quality, diversity, reusability, and physical fidelity. We then analyze recent embodied foundation models through the lens of their data recipes, examining how different sources are selected, aligned, and mixed during pretraining. For embodied brain models, vision-language-action models, and world-action models alike, we relate data composition to capabilities in perception, reasoning, planning, action generation, and world prediction. We close by discussing six open challenges: building large-scale tactile datasets, collecting failure and recovery data, developing scalable data-collection pipelines, aligning actions across embodiments, leveraging egocentric data for dexterous manipulation, and designing principled data recipes for robot learning. We hope this work paves the foundation for the design of next-generation embodied systems.",
-      "url": "https://arxiv.org/abs/2607.24744v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.24744v1",
-      "published": "2026-07-27T17:59:58Z",
-      "updated": "2026-07-27T17:59:58Z",
+      "abstract": "On-policy distillation (OPD) grounds token-level supervision in the student's own trajectory, yet suffers from prefix failure: once the student commits to a wrong reasoning direction, all subsequent generation builds on this deviation, producing misdirected continuations that elicit unreliable supervision and waste compute. We identify a teacher-student continuation asymmetry on failed prefixes, where the teacher tends to redirect while the student continues along the original direction, and convert it into a label-free handoff trigger in Relay On-Policy Distillation (Relay-OPD). During training, Relay-OPD constructs relay trajectories by letting the teacher briefly take over at detected trigger points to produce a teacher leg, after which the student resumes and is optimized on the resulting trajectory. A limited relay budget concentrates intervention on critical early positions while limiting departure from the student policy. With a Qwen3-4B-Instruct-2507 teacher and Qwen3-0.6B/1.7B-Non-Thinking students on eight mathematical reasoning benchmarks, Relay-OPD achieves the best or second-best results on every benchmark, outperforming standard OPD by +5.73% and the strongest baseline FastOPD by +1.49% on average for 1.7B, with consistent gains at 0.6B. Training trajectory length is reduced by over 50%.",
+      "url": "https://arxiv.org/abs/2607.26057v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.26057v1",
+      "published": "2026-07-28T17:59:46Z",
+      "updated": "2026-07-28T17:59:46Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CL"
+    },
+    {
+      "id": "2607.26055v1",
+      "title": "$\u03c0\\mathbf{R}^2$: Reactive Real-time Flow Policies",
+      "authors": [
+        "Sungjae Park",
+        "Shubham Tulsiani"
+      ],
+      "abstract": "Generalist manipulation policies increasingly take the form of action-chunking flow policies built on large pretrained backbones. Such chunks run open-loop, so the policy cannot react to sensory input arriving mid-execution, sacrificing \\emph{reactivity}. Replanning more often would restore it, but the perception-to-action pipeline (a large backbone plus multiple denoising steps) is too slow: this \\emph{latency} forbids frequent replanning and leaves committed actions stale, making such policies ill-suited for dynamic, closed-loop control. We present $\u03c0\\mathbf{R}^2$, which makes these policies reactive and real-time while retaining large backbones, expressive multi-modal policies, and multi-action prediction. Built on the per-position noise schedule of diffusion forcing, $\u03c0\\mathbf{R}^2$ contributes two ideas. First, it splits conditioning into a fast channel (proprioception, fresh every tick) and an asynchronously updated slow channel (vision-language features), so the policy reacts to proprioception within a chunk while tolerating stale vision. Second, a latency-adaptive flow schedule treats in-flight actions as inpainting conditioning and emits actions in one denoising step per call, letting one trained model adapt to varying hardware latency. Requiring minimal modification to existing architectures, $\u03c0\\mathbf{R}^2$ can be finetuned from a pretrained policy: applied to GR00T-N1.7 on a real xArm6+XHand platform, it replans closed-loop roughly $4\\times$ faster than the base policy (~$25$Hz on an A5000 GPU), acting on a fresh observation every $40$ms. Across simulation and real-world manipulation tasks, $\u03c0\\mathbf{R}^2$ improves the success rate by up to $23\\%$ in simulation and $30\\%$ in the real world over the strongest baseline. Project page: https://pi-r2-flow.github.io/",
+      "url": "https://arxiv.org/abs/2607.26055v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.26055v1",
+      "published": "2026-07-28T17:59:31Z",
+      "updated": "2026-07-28T17:59:31Z",
       "categories": [
         "cs.RO",
-        "cs.CV"
+        "cs.AI",
+        "cs.LG"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2607.24743v1",
-      "title": "ClinFusion: A Vision-Centric Multimodal LLM System for Holistic Medical Understanding",
+      "id": "2607.26052v1",
+      "title": "Spend Experts Where You Are Unsure: Confidence-Adaptive Routing for Mixture-of-Experts LoRA",
       "authors": [
-        "Hangjie Yuan",
-        "Yichen Qian",
-        "Zhiwei Tang",
-        "Xianzhe Xu",
-        "Lirong Wu",
-        "Sicheng Yang",
-        "Jinwang Wang",
-        "Pengju Wang",
-        "Zhitao Zeng",
-        "Yizeng Han",
-        "Yan Xing",
-        "Shengxuan Luo",
-        "Tao Feng",
-        "Qing Xie",
-        "Weigen Yao",
-        "Yi Yang",
-        "Zuozhu Liu",
-        "Jiasheng Tang",
-        "Shaocheng Wang",
-        "Jitao Wang",
-        "Jiahong Dong",
-        "Weihua Chen",
-        "Feng Xu",
-        "Fan Wang"
+        "Tom Saliencro",
+        "Rohan Desai",
+        "Priya Nair",
+        "Maya Lindqvist",
+        "Daniel Whitmore"
       ],
-      "abstract": "Multimodal large language models (MLLMs) hold immense potential to revolutionize clinical practice, yet deploying them in the medical domain is fundamentally a vision-centric challenge: models must absorb knowledge from heterogeneous 2D and 3D medical images, and evaluation protocols must align with radiologists' clinical practice and provide an accurate, fine-grained and factualness-driven assessment. In this paper, we introduce ClinFusion, a vision-centric MLLM designed for holistic medical understanding that systematically addresses these limitations. We propose a compositional and cascaded vision encoder architecture featuring a Cascade Spatial-Aware Locality Fusion operator that unifies diverse 2D and native 3D medical image understanding within a fused encoder. We further introduce a vision-grounded evaluation framework, including MedIF-Bench for instruction-following assessment and a region-of-interest-grounded method for clinically aligned and factualness-driven report generation evaluation. We show that ClinFusion sets a new state-of-the-art across a comprehensive suite of 2D and 3D multimodal medical benchmarks---spanning visual question answering, report generation, and instruction following---as well as textual medical tasks, outperforming leading open-source medical MLLMs (\\textit{e.g.}, Hulu-Med, Lingshu) on 20 out of 24 benchmarks and demonstrating multimodal capabilities better than powerful proprietary models such as GPT-5.2 and Gemini-3-Flash on 13 out of 16 benchmarks, and can be further augmented with agentic tool use for retrieval-augmented and tool-assisted clinical workflows. A blinded evaluation by board-certified radiologists confirms that ClinFusion produces the highest-ranked reports, and validates our RoI-grounded metric as achieving the strongest correlation with expert judgment among all automatic evaluation metrics examined.",
-      "url": "https://arxiv.org/abs/2607.24743v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.24743v1",
-      "published": "2026-07-27T17:59:49Z",
-      "updated": "2026-07-27T17:59:49Z",
+      "abstract": "Mixture-of-Experts (MoE) variants of Low-Rank Adaptation (LoRA) route every token to a fixed number of experts $k$. Tokens differ in how uncertain the model is about them, so a single k over-spends on easy tokens and under-serves hard ones. We observe that the router's output distribution is already a per-token uncertainty signal: peaked mass indicates confidence, while a flat distribution indicates ambiguity. We introduce CARE (Confidence-Adaptive Routing of Experts), which admits experts in a nucleus fashion. Experts are activated in decreasing router weight until their cumulative mass reaches a threshold, with a small extension when the admitted experts disagree. A budget thermostat calibrates the threshold so that the average number of active experts matches any target. CARE is a drop-in, single-forward-pass rule with no extra parameters. Across eight commonsense benchmarks on LLaMA-3.1-8B and Qwen2.5-7B, as well as math, code, and knowledge tasks, CARE improves over fixed top-k MoE-LoRA at matched compute and matches the fixed-k=4 baseline while activating fewer experts. The same confidence and disagreement signals also improve out-of-distribution detection over MSP, entropy, and multi-pass proxies. We support the design with nucleus fidelity, budget optimality, and an epistemic reading of disagreement, and we release code.",
+      "url": "https://arxiv.org/abs/2607.26052v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.26052v1",
+      "published": "2026-07-28T17:59:16Z",
+      "updated": "2026-07-28T17:59:16Z",
       "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.CL"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2607.24741v1",
-      "title": "Certified Parallel-in-Time Sinkhorn for Dynamic Entropic Optimal Transport",
-      "authors": [
-        "Xinyang Wen"
-      ],
-      "abstract": "Dynamic applications, including optimal-transport Flow Matching, repeatedly solve related entropic optimal transport problems, yet conventional distributed Sinkhorn processes frames sequentially and synchronizes after every iteration. We present TemporalSinkhorn, a parallel-in-time executor that batches future candidates and their repairs without making output accuracy speculative. A centered, row-sharded certificate accepts only a deterministic safe prefix. The remaining candidates share packed Sinkhorn updates; an online projective forgetting rate places audit milestones, while a posteriori residual checks recover from every depth underestimate. Prediction can therefore change work placement but cannot authorize an inaccurate output. On 4 A100 GPUs, a 60-run, five-seed grid at n = 2048 shows that forgetting-guided milestones reduce wall time by 1.15x-1.47x relative to auditing every packed iteration in five statistically resolved regime cells. Against a sequential soft c-transform warm start, temporal execution is 1.42x-3.55x faster across six synthetic streams, with zero marginal-tolerance violations. On Flow Matching minibatch streams, temporal execution is 3.054x-3.632x faster than sequential carry at n = 2048, with no tolerance violations. A separate fixed-kernel test on an RTX 4060 Laptop GPU gives a 4.315x geometric-mean speedup. These are complementary deployment studies rather than a controlled hardware comparison. End-to-end Flow Matching integration, optimized-solver comparisons, and multi-node validation remain open.",
-      "url": "https://arxiv.org/abs/2607.24741v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.24741v1",
-      "published": "2026-07-27T17:59:36Z",
-      "updated": "2026-07-27T17:59:36Z",
-      "categories": [
-        "cs.DC",
         "cs.LG"
-      ],
-      "primary_category": "cs.DC"
-    },
-    {
-      "id": "2607.24732v1",
-      "title": "Learning Distributions from Multiple Data Providers",
-      "authors": [
-        "Jon Kleinberg",
-        "Amin Saberi",
-        "Xizhi Tan",
-        "Grigoris Velegkas"
-      ],
-      "abstract": "Motivated by learning from heterogeneous and overlapping data providers, we study a stylized model of distribution learning from restricted conditional samples. The goal is to learn an unknown distribution $p$ on a finite domain $[n]$. The learner is given a fixed family of queryable sets $\\mathscr{S} \\subseteq 2^{[n]}$, and each query to $S \\in \\mathscr{S}$ returns an independent sample from the conditional distribution $p(\\cdot \\mid S)$. Learnability is governed by the co-occurrence graph associated with $\\mathscr{S}$: two domain elements are adjacent if they appear together in some queryable set. Pointwise consistency is achievable when this graph is connected on the target support. PAC learning requires more: it is possible when the co-occurrence graph is complete. The optimal sample complexity of PAC learning ranges from nearly linear to quadratic. Every query family with complete co-occurrence graph admits sample complexity $\\widetilde O(n^2/\u03b5^2)$, and this bound is tight in the worst case. On the other hand, if $[n]$ is queryable then ordinary sampling improves the bound to $\u0398(n/\u03b5^2)$, and this cannot be improved further even if every set is queryable. More generally, we identify hierarchical comparabilityas a sufficient structural condition on $\\mathscr S$ under which the optimal complexity is nearly linear, $\\widetilde \u0398(n/\u03b5^2)$, with pairwise query families as a canonical example. Finally, the full range of polynomial rates between linear and quadratic is attainable: for every $\u03b1\\in (1,2)$, there exists a query family with optimal PAC rate $\\widetilde \u0398(n^\u03b1/\u03b5^2)$.",
-      "url": "https://arxiv.org/abs/2607.24732v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.24732v1",
-      "published": "2026-07-27T17:57:16Z",
-      "updated": "2026-07-27T17:57:16Z",
-      "categories": [
-        "cs.DS",
-        "cs.GT",
-        "cs.LG",
-        "stat.ML"
-      ],
-      "primary_category": "cs.DS"
-    },
-    {
-      "id": "2607.24731v1",
-      "title": "Rethinking Classifier-Free Guidance in On-Policy Diffusion Distillation",
-      "authors": [
-        "Bingnan Li",
-        "Haozhe Wang",
-        "Haozhong Xiong",
-        "Fangtai Wu",
-        "Jinpeng Yu",
-        "Yang Shi",
-        "Jiaming Liu",
-        "Ruihua Huang"
-      ],
-      "abstract": "On-policy distillation (OPD) adapts diffusion models by querying a teacher along trajectories generated by the current student, but how it should behave under classifier-free guidance (CFG), a default component of modern diffusion systems, remains poorly understood. Existing OPD methods naturally extend velocity matching to the CFG-composed prediction, directly matching teacher and student guided velocities. We show that this objective is under-identified at the branch level: positive- and negative-branch errors can compensate in the guided prediction. Through two contrasting cases, we find that naive matching remains effective under shared negative conditioning, where both branch errors decrease jointly. When the model's native CFG schema retains privileged information in the teacher's negative branch that is unavailable to the student, however, this joint reduction breaks down and the composed objective induces antagonistic branch-error dynamics, reducing the positive-branch error while increasing the negative-branch error. We term this failure mode Negative Branch Asymmetry (NBA). To address NBA, we introduce Positive--Direction Matching (PDM), a branch-aware OPD objective that separately constrains the positive prediction and the CFG conditional direction. We apply PDM to dense-to-sparse video control, where naive guided matching is highly sensitive to inference guidance scales, while branch-aware supervision enables more robust and effective knowledge transfer.",
-      "url": "https://arxiv.org/abs/2607.24731v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.24731v1",
-      "published": "2026-07-27T17:57:02Z",
-      "updated": "2026-07-27T17:57:02Z",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.LG"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2607.24730v1",
-      "title": "KANEx: Translating Kolmogorov-Arnold Networks' Interpretability to Medical Explainability",
-      "authors": [
-        "Krithi Shailya",
-        "Ananya Lakshmi Ravi",
-        "Venkatanathan K. V.",
-        "Sowmya S. Sundaram",
-        "Gokul S. Krishnan",
-        "Aditi Anand",
-        "Balaraman Ravindran"
-      ],
-      "abstract": "Computer vision models have become highly effective for medical applications, yet their black-box nature continues to undermine clinician trust. In clinical workflows, chest X-ray classifiers are increasingly paired with Vision-Language Models (VLMs) to generate natural-language explanations. However, these systems add linguistic fluency without addressing the underlying opacity of the visual model. With the emergence of Kolmogorov-Arnold Networks (KANs), whose spline-based components provide inherently interpretable functional units, we investigate whether this architectural transparency can be leveraged to produce more trustworthy textual explanations. We introduce KANEx, the first ever framework that leverages the symbolic transparency of KANs to ground VLM reasoning. This interpretability also made it possible to design KAN-Map, a novel heatmap generation method derived directly from KAN models rather than gradient approximations. We feed these grounded contexts into downstream VLMs for enhanced explainability. Benchmarked on the MIMIC-CXR dataset, we demonstrate that KAN-based architectures with ResNet/ViT baselines demonstrate improved semantic similarity while producing significantly more faithful saliency maps. KAN architectures improve visual localization and downstream reasoning quality by 10%. Our findings suggest that grounding linguistic explanations and visual attributions in mathematically interpretable units is a necessary step toward trustworthy medical AI.",
-      "url": "https://arxiv.org/abs/2607.24730v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.24730v1",
-      "published": "2026-07-27T17:57:02Z",
-      "updated": "2026-07-27T17:57:02Z",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2607.24729v1",
-      "title": "MicroZoom: Structure-Preserving Detail Synthesis at Extreme Scale",
-      "authors": [
-        "Huy Huynh",
-        "Jingwei Ma",
-        "Brian Curless",
-        "Ira Kemelmacher-Shlizerman",
-        "Steven M. Seitz"
-      ],
-      "abstract": "We introduce MicroZoom, a generative framework for gigapixel image synthesis at the microscopic scale. Given a standard photograph and a sparse set of consumer-grade microscope close-ups, MicroZoom synthesizes a seamless, gigapixel-resolution image grounded in the material character of the real references, enabling exploratory visualization of microscopic texture across the full spatial extent of an object. Our goal is plausible synthesis, not exact reconstruction. We focus on full-image, reference-based, extreme-scale super-resolution at magnification levels of up to 350x, a setting that introduces two major challenges: (1) recovering texture-specific detail from highly lossy inputs near ambiguous material boundaries, and (2) preserving correct large-scale pattern structure, such as the repeating geometry of a fabric weave, across millions of local predictions. We address these with a two-stage cascaded design, where the first stage recovers global pattern coherence and the second refines local texture detail, supplemented by a segmentation mask to guide synthesis at ambiguous boundaries. We verify our approach on a collection of self-captured everyday objects and demonstrate globally coherent, materially grounded gigapixel imagery.",
-      "url": "https://arxiv.org/abs/2607.24729v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.24729v1",
-      "published": "2026-07-27T17:57:00Z",
-      "updated": "2026-07-27T17:57:00Z",
-      "categories": [
-        "cs.CV"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2607.24727v1",
-      "title": "Infrared Imaging Empowered by Artificial Intelligence for Pediatric Skeletal Triage: A Narrative Review and Future Perspectives",
-      "authors": [
-        "Sajad Amiri",
-        "Pardis Afshar",
-        "Elham Anjomshoa"
-      ],
-      "abstract": "Background. Pediatric musculoskeletal trauma represents up to 18% of pediatric ED visits, yet diagnosis still depends on ionizing radiography. Cumulative low-dose radiation in early life raises lifetime leukemia and brain malignancy risk, motivating radiation-free triage alternatives. Objective. To synthesize evidence for a hybrid framework coupling broad-spectrum infrared (IR) imaging with deep-learning cross-modal translation to generate clinically interpretable synthetic-radiograph reconstructions from non-ionizing data. Approach. We review five IR spectral windows spanning 650 nm to 1 mm - NIR-I, NIR-II, SWIR, MIR/LWIR, and THz - and how dual-geometry (transmission/reflection) acquisition exploits wavelength-specific tissue depth and biochemical sensitivity. We summarize image-to-image translation networks (Pix2Pix, CycleGAN, Swin-Unet) and feature-matching algorithms (SuperPoint, SuperGlue, ALIKED, LightGlue) used to align and fuse IR data into radiograph-equivalent reconstructions. Implications. Pediatric anatomy - smaller cross-sections, thinner cortical bone - favors IR penetration, enabling compact, portable, non-ionizing triage hardware. Feasibility is grounded in fNIRS and transcranial photobiomodulation evidence: near-infrared light passes through skin, skull, and cortex with sufficient signal for hemodynamic monitoring - a longer, more attenuating path than through a pediatric forearm or distal leg. Key barriers: paired IR/X-ray dataset construction, AI-as-medical-device regulatory pathways, generalization across body habitus and skin pigmentation, and acquisition-protocol standardization. Conclusions. Integrated multi-spectral IR+AI imaging is a promising radiation-free complement to pediatric skeletal radiography. Progress requires multi-center paired datasets, externally validated models, and IR source safety qualification under IEC 60825-1.",
-      "url": "https://arxiv.org/abs/2607.24727v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.24727v1",
-      "published": "2026-07-27T17:56:53Z",
-      "updated": "2026-07-27T17:56:53Z",
-      "categories": [
-        "cs.CV"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2607.24726v1",
-      "title": "Global Convergence of DGM and PINN Algorithms for Solving Nonlinear PDEs",
-      "authors": [
-        "Justin Sirignano",
-        "Konstantinos Spiliopoulos",
-        "Samuel Cohen"
-      ],
-      "abstract": "The Deep Galerkin Method (DGM) and Physics Informed Neural Networks (PINNs) have become widely-used methods for solving partial differential equations (PDEs) in the rapidly growing field of scientific machine learning. In these methods, a neural network is trained to approximate the PDE solution by using (stochastic) gradient descent to minimize the PDE residual of the neural network. Due to the non-convexity of the PDE residual objective function, the trained neural network may, in principle, only converge to a local minimizer of the objective function (which would not be a solution of the PDE). Therefore, there is a longstanding question regarding the mathematical foundations of these algorithms, and it is highly valuable to establish that the trained neural network will converge to the PDE solution. For a class of semi-linear PDEs (nonlinear in the solution and its first derivative), we prove that neural networks trained with gradient descent to minimize the PDE residual objective function will converge to the PDE solution.",
-      "url": "https://arxiv.org/abs/2607.24726v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.24726v1",
-      "published": "2026-07-27T17:56:37Z",
-      "updated": "2026-07-27T17:56:37Z",
-      "categories": [
-        "cs.LG",
-        "math.NA"
       ],
       "primary_category": "cs.LG"
     },
     {
-      "id": "2607.24721v1",
-      "title": "DreamStyle3D: Efficient 3D Stylized Asset Generation via Dual-Attention Disentanglement",
+      "id": "2607.26043v1",
+      "title": "Re-thinking Mammography Transfer Learning: The Dataset-Informed Transfer Learning (DITL) Framework for Breast Cancer Screening and Lesion Diagnosis",
       "authors": [
-        "Kai Wang",
-        "Ziheng Ouyang",
-        "Xuying Zhang",
-        "Ming-Ming Cheng",
-        "Qibin Hou"
+        "Adarsh Bhandary Panambur",
+        "Siming Bayer",
+        "Andreas Maier"
       ],
-      "abstract": "With the growth of gaming, animation, and virtual reality industries, the demand for efficient generation of stylized 3D assets is rapidly increasing. However, existing approaches still struggle to jointly preserve style fidelity, geometric consistency, and generation efficiency, as most of them still rely on indirect 2D-to-3D stylization pipelines. This motivates a native 3D stylization framework that can explicitly disentangle style from geometry while remaining efficient. To this end, we propose DreamStyle3D, an efficient framework for stylized 3D asset generation built on a Decoupled Dual Cross-Attention mechanism. Our method explicitly separates geometric and stylistic features to enable efficient style injection while preserving structural consistency, and further adopts a lightweight training strategy to enhance style consistency and model generalization. In addition, we build an automated data pipeline and construct a dataset of about 15K content-style-stylized triplets for training and evaluation. Extensive experiments demonstrate that our DreamStyle3D can generate high-fidelity, geometrically consistent stylized 3D assets within 10 seconds, substantially improving efficiency while maintaining superior style quality and offering a new solution for 3D content creation. The code and data are available at https://github.com/HVision-NKU/DreamStyle3D.",
-      "url": "https://arxiv.org/abs/2607.24721v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.24721v1",
-      "published": "2026-07-27T17:55:21Z",
-      "updated": "2026-07-27T17:55:21Z",
+      "abstract": "Enhancing classification performance in mammography remains a persistent challenge across both small curated datasets and large-scale clinical cohorts. Conventional transfer learning approaches often neglect dataset-specific characteristics, while recent neighborhood-informed methods have been restricted to narrow tasks with rigid formulations, limiting their scalability to population-level datasets. To address these challenges, we propose the Dataset-Informed Transfer Learning (DITL) framework, which integrates dataset-derived difficulty signals with neighborhood-based triplet supervision in a unified objective. DITL introduces two adaptive components: (i) Adaptive Difficulty-Weighted Cross-Entropy (A-DWCE), which assigns per-sample weights based on k-nearest neighbor label purity in a self-supervised feature space, and (ii) Adaptive Neighborhood Representation Triplet (A-NR-Triplet), which enforces intra-class compactness and inter-class separation using a learnable margin. Unlike focal loss, DITL requires no hyperparameter tuning, removes heuristic weighting and fixed margins, and incurs negligible computational overhead, yielding a robust and scalable optimization strategy. On the large-scale VinDR-Mammo dataset, DITL achieves state-of-the-art performance for whole-image breast density classification, with significant improvements across accuracy, F1-score, and AUC (p < 0.0001). Beyond large cohorts, DITL also delivers consistent, statistically significant gains on small ROI datasets (p < 0.0001). By bridging small-scale lesion analysis with large-scale density estimation, DITL establishes a clinically relevant, scalable, and generalizable framework for mammography classification, spanning the full breast cancer screening-to-diagnosis spectrum.",
+      "url": "https://arxiv.org/abs/2607.26043v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.26043v1",
+      "published": "2026-07-28T17:52:36Z",
+      "updated": "2026-07-28T17:52:36Z",
       "categories": [
-        "cs.CV"
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG"
+    },
+    {
+      "id": "2607.26042v1",
+      "title": "VetClaw: An Edge-Cloud Multimodal Agentic System for Veterinary Disease Screening",
+      "authors": [
+        "Syed Mhamudul Hasan",
+        "Anas AlSobeh",
+        "Hussein Zangoti",
+        "Abdur R. Shahid"
+      ],
+      "abstract": "We present VetClaw, an edge-cloud multimodal agentic system for early veterinary disease screening. VetClaw uses a camera module as an edge sensing device and sends captured images, together with optional symptom descriptions, to a server-hosted vision-language model for zero-shot disease classification. The system separates agent interaction from workflow orchestration: OpenClaw provides scheduling, tool access, user interaction, and notification services on the edge device, while LangGraph manages the stateful screening workflow, including input validation, image transmission, model invocation, safety checks, conditional routing, failure handling, and structured logging. This design moves beyond static image classification by enabling the system to collect visual evidence, invoke external models, apply deterministic safety rules, and generate diagnostic-support alerts. Results show that image-only VLM prediction remains limited, whereas symptom-guided and multimodal inputs improve zero-shot classification performance. Thus, VetClaw transforms a static prediction model into a coordinated, safety-aware system that can use tools, manage workflows, handle failures, and escalate uncertain cases.",
+      "url": "https://arxiv.org/abs/2607.26042v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.26042v1",
+      "published": "2026-07-28T17:50:25Z",
+      "updated": "2026-07-28T17:50:25Z",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
       ],
       "primary_category": "cs.CV"
+    },
+    {
+      "id": "2607.26041v1",
+      "title": "Desktop-Delta Bench: Do Computer-Use Models Understand Desktop GUI Transitions?",
+      "authors": [
+        "Abhishek Pillai",
+        "Samir Kumar Nayak",
+        "Yuan Chen"
+      ],
+      "abstract": "Computer-use agents (CUAs) increasingly act through desktop GUIs to complete long-horizon tasks. Current benchmarks primarily measure end-task success or single-frame grounding. Neither isolates whether a model can reconstruct the causal, task-relevant transition produced by an action- crucial for rejecting stale observations, verifying progress, and recovering from failure. This is difficult because inference, remote input, app rendering, and screenshot capture are asynchronous: the next observation may be delayed, occluded, transient, or unrelated, then misread as progress and carried into subsequent planning. We introduce Desktop-Delta Bench (DDB), an offline step-level benchmark with 2,013 human-verified instances from novel, multi-app Linux trajectories across ~15 applications and 50 task domains. DDB trajectories targets 3 failure dimensions- state verification, source tracking, and context-aware control- through 2 complementary tasks: 463 3-frame temporal-ordering instances, including 105 with a cross-trajectory decoy, and 1,550 before-after pairs labeled from 5 actions + its payload. We evaluate 8 closed and open-source model families across 32 ordering and 16 single-action settings, observing consistent gaps. Ordering remains unsaturated: best non-decoy and decoy exact-match rates are 65.1% and 65.7%. Task context improves decoy identification by 6.9 percentage points but reduces non-decoy exact match by 2.2 points; error analysis reveals systematic copying of the presented A-B-C order. Single-action results show that inferring the action family is harder than locating it: click F1 is 0.96 vs, 0.76 for drag, while recognized drags are generally localized well. DDB, thus, complements end-to-end benchmarks by filling the missing diagnostic layer between GUI grounding and final task success, enabling targeted improvements to desktop CUA verification, reliability, and recovery.",
+      "url": "https://arxiv.org/abs/2607.26041v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.26041v1",
+      "published": "2026-07-28T17:49:51Z",
+      "updated": "2026-07-28T17:49:51Z",
+      "categories": [
+        "cs.AI",
+        "cs.CV"
+      ],
+      "primary_category": "cs.AI"
+    },
+    {
+      "id": "2607.26040v1",
+      "title": "Reinformed Dreamer: An Asymmetric World Model Efficiently Trained through Latent Guidance",
+      "authors": [
+        "Gaspard Lambrechts",
+        "Adrien Bolland",
+        "Daniel Ebi",
+        "Damien Ernst"
+      ],
+      "abstract": "Much like humans benefit from guidance while learning, reinforcement learning algorithms may benefit from additional supervision beyond rewards. Leveraging additional information during training to learn better representations and behaviors has been the focus of asymmetric reinforcement learning. This learning paradigm has proven effective under partial observability when additional state information is available, but also under full observability when more refined state information is available. Focusing on model-based reinforcement learning, we study the effect of asymmetric learning on observation representations and on privileged information representations. First, we identify a limitation in the privileged information representations learned by an asymmetric model-based algorithm known as the Informed Dreamer. Then, we propose a novel asymmetric representation learning objective using latent guidance, resulting in a new algorithm called the Reinformed Dreamer. Experiments across several benchmarks show a more consistent improvement over Dreamer than previous asymmetric approaches.",
+      "url": "https://arxiv.org/abs/2607.26040v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.26040v1",
+      "published": "2026-07-28T17:49:29Z",
+      "updated": "2026-07-28T17:49:29Z",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ],
+      "primary_category": "cs.LG"
+    },
+    {
+      "id": "2607.26037v1",
+      "title": "Wonder: Video World Model Done Better",
+      "authors": [
+        "Jiacong Xu",
+        "Hanwen Jiang",
+        "Zhixin Shu",
+        "Kalyan Sunkavalli",
+        "Vishal M. Patel",
+        "Yiqun Mei"
+      ],
+      "abstract": "We present Wonder, a general-purpose video world model for real-time, camera-controllable world exploration. Given an image or a conditional video, Wonder constructs a playable world where users can navigate interactively by moving the camera, discovering unseen regions, and revisiting previously observed areas in real time and over a long-term horizon. Achieving this capability requires a system-level co-design of control method, memory mechanism, and training strategy. We introduce a novel camera conditioning with a dense coordinate field whose renderings provide spatially aligned motion and orientation cues, allowing the model to interpret camera motion directly as visual evidence. To support fast and precise memory retrieval over a growing generation context, we propose an efficient sparse attention-based memory mechanism, enabling the model to selectively attend to a small set of relevant context tokens at inference time, regardless of actual context length. We further develop several techniques to rectify the self-forcing-style distillation pipeline, improving the student model's ability to respect control signals, as well as maintaining diverse generation modes and long-term memory from the teacher. Together, these components enable Wonder to synthesize diverse, minute-scale videos at 16 FPS while preserving coherent geometry, appearance, and dynamics across long rollouts. Beyond image-to-video generation, Wonder naturally supports video-conditioned generation, allowing existing dynamic scenes to be re-shot in real time.",
+      "url": "https://arxiv.org/abs/2607.26037v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.26037v1",
+      "published": "2026-07-28T17:45:25Z",
+      "updated": "2026-07-28T17:45:25Z",
+      "categories": [
+        "cs.CV",
+        "cs.GR"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2607.26034v1",
+      "title": "Falling Behind Drives Unsafe Development in an Idealised AI Race Experiment",
+      "authors": [
+        "Elias Fern\u00e1ndez Domingos",
+        "The Anh Han"
+      ],
+      "abstract": "Technological races create tension between speed and safety: actors may gain by moving faster than competitors, even when risky development is harmful. This is prominent in debates about artificial intelligence (AI), where competitive pressure is often argued to incentivise riskier, less safety-conscious development. We study this using a framed behavioural experiment based on an idealised AI race, in which paired participants repeatedly chose between Safe and Unsafe development under an uncertain time horizon. Unsafe development gave faster progress and higher immediate payoffs but accumulated private risk up to a treatment-specific maximum of 10\\%, 60\\%, or 90\\%; the race's competitive structure was held constant, and only this maximum risk varied. Neither the pre-registered comparison between risk levels nor the role of elicited risk preferences was supported by the data. Instead, exploratory analyses motivated by the task's repeated structure show that Unsafe behaviour is shaped less by risk preferences than by the evolving strategic state of the race: participants are more likely to choose Unsafe after their opponent does so, being ahead reduces Unsafe play while falling behind increases it, and first-round choices predict later behaviour. To interpret these effects we introduce a reduced evolutionary model with four strategies -- Always Safe, Always Unsafe, Conditionally Safe, and Conditionally Antisocial Safe -- which reproduces the treatment effect and shows how conditional Unsafe behaviour can be favoured by competitive race dynamics. Together, the experiment and model show that unsafe development can emerge from early behavioural momentum, opponent behaviour, and fear of falling behind, rather than from risk preferences alone, suggesting policy should focus on reducing competitive pressure and promoting cooperation in AI development rather than only individual risk.",
+      "url": "https://arxiv.org/abs/2607.26034v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.26034v1",
+      "published": "2026-07-28T17:44:03Z",
+      "updated": "2026-07-28T17:44:03Z",
+      "categories": [
+        "cs.AI",
+        "cs.CY",
+        "cs.GT",
+        "econ.GN"
+      ],
+      "primary_category": "cs.AI"
+    },
+    {
+      "id": "2607.26023v1",
+      "title": "CHARM: A Multimodal Graph Foundation Model with Hierarchical Context Modeling for Zero-Shot Transfer",
+      "authors": [
+        "Ankang Yang",
+        "Jitao Zhao",
+        "Di Jin",
+        "Yuxiao Huang",
+        "Dongxiao He"
+      ],
+      "abstract": "Graph foundation models (GFMs) have emerged as a promising paradigm for transferring knowledge across graph domains and tasks. Real-world graphs associate nodes with text, images, and other modalities, making multimodal graphs essential for representing complex entities and relations. Moreover, collecting labels and adapting models for every new graph domain is costly and often infeasible, motivating zero-shot transfer. Unfortunately, zero-shot transfer on multimodal graphs remains underexplored. Existing GNN-based graph foundation models typically require downstream adaptation, whereas LLM-based graph methods mainly address unimodal graphs or tasks within a single domain. This setting presents two key challenges. First, models must generalize knowledge from individual modalities while capturing transferable cross-modal relations. Second, without target-domain fine-tuning, node representations remain entangled with domain-specific structures and modality-specific characteristics, obscuring shared concepts in unseen domains. To address these challenges, we propose CHARM, a multimodal graph foundation model with hierarchical context modeling for zero-shot transfer. CHARM replaces isolated raw nodes with hierarchical graph contexts that capture multimodal semantics and cross-modal relations. These contexts map domain-specific node patterns to shared high-level concepts, reducing reliance on target-domain supervision or adaptation. A modality-aware graph context encoder integrates multimodal information with graph structure and converts the resulting representations into graph tokens for a large language model . Experiments show consistent improvements on zero-shot multimodal graph tasks.",
+      "url": "https://arxiv.org/abs/2607.26023v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.26023v1",
+      "published": "2026-07-28T17:35:26Z",
+      "updated": "2026-07-28T17:35:26Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI"
     }
   ]
 }
