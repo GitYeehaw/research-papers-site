@@ -2,236 +2,231 @@
   "category": "cs",
   "name": "CS Research",
   "description": "Computer Science \u2014 AI, Machine Learning, NLP, Computer Vision",
-  "scraped_at": "2026-08-05T10:43:25.160556+00:00",
+  "scraped_at": "2026-08-06T10:46:26.084388+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2608.04010v1",
-      "title": "ParVL: Parallel Scaling and Expandable Compute Allocation for Multimodal LLMs",
+      "id": "2608.05149v1",
+      "title": "CoCo-IR: Contextual Composed Image Retrieval",
       "authors": [
-        "Yang Yang",
-        "Qinyu Zhao",
-        "Mouxiang Chen",
-        "Xiaohui Li",
-        "Lixin Gu",
-        "Wenhai Wang",
-        "Hongjie Zhang",
-        "Wenwei Zhang"
+        "Shengcao Cao",
+        "Tanmaya Shekhar Dabral",
+        "Zhongli Ding",
+        "Madhuri Shanbhogue",
+        "Kaifeng Chen",
+        "Zhe Li",
+        "Mojtaba Seyedhosseini",
+        "Yu-Xiong Wang",
+        "Liang-Yan Gui"
       ],
-      "abstract": "Existing scaling strategies for Multimodal Large Language Models (MLLMs) typically expand either model parameters or sequential inference computation, incurring substantial memory or latency overhead. More importantly, most existing methods fail to alter the rigid, fixed computation allocation between the Vision Transformer and the Large Language Model components, limiting task-specific optimization. To address this, we introduce the Parallel Vision-Language (ParVL) scaling framework for MLLMs, which scales parallel computation by reusing the existing ViT and LLM backbone parameters across multiple vision and language branches. This framework raises a central question: given a fixed backbone parameter budget, how should additional shared-backbone computation be allocated between the vision and language modalities? We instantiate each parallel computational stream with branch-specific prefix parameters over a shared backbone, and train the entire model end-to-end via full-parameter supervised fine-tuning on roughly 13B tokens. We systematically study the computation-allocation trade-off between the ViT encoder and LLM decoder. ParVL improves overall multimodal performance over same-recipe single-branch baselines, and the best evaluated vision--language allocation varies across tasks. Code is available at https://github.com/YangYangGirl/ParVL.",
-      "url": "https://arxiv.org/abs/2608.04010v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.04010v1",
-      "published": "2026-08-04T17:59:58Z",
-      "updated": "2026-08-04T17:59:58Z",
-      "categories": [
-        "cs.CV",
-        "cs.CL"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2608.04009v1",
-      "title": "SocietyBench: Forecasting Counterfactual Social-World Evolution",
-      "authors": [
-        "Zhenran Wang",
-        "Zhonghan Bian",
-        "Jinsong Li",
-        "Zhangyang Qi"
-      ],
-      "abstract": "Large language models (LLMs), and the agents built on top of them, are now benchmarked heavily on whether they can finish a task -- fix a bug, drive a browser, operate a GUI. A complementary social ability, namely how well a model understands and forecasts the way real social events unfold, has barely been measured. We introduce SocietyBench, an end-to-end benchmark that takes a one-line event topic, collects Web news and social-media posts across five platforms, distills them into a date-indexed timeline that keeps factual events and a public-opinion layer separate, and then turns every cutoff date on that timeline into an audited bank of forecasting questions. Questions are scored on two orthogonal 100-point axes: probability calibration and temporal accuracy. Before any model sees a timeline, a three-phase procedure replaces every named entity and shifts every date by a per-event constant, turning a real arc into a counterfactual social world -- structurally identical to what happened, but stripped of the surface labels a model could match against pre-training memory. On five heterogeneous events and 125 prediction points in Chinese and English editions, the strongest of six frontier LLMs reaches only 75.0 out of 100, against a trivial anchor of 50. The two axes come apart: a model can be calibration-strong but time-weak, or the reverse. Three agent frameworks built on a shared base model fail to improve on that base, and two model-free heuristics trail every LLM. Per-event gaps reach 21.4 points on a single axis, which is our main argument for evaluating on several events rather than one. All anonymized timelines, question banks, ground truth, and scoring code are released.",
-      "url": "https://arxiv.org/abs/2608.04009v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.04009v1",
-      "published": "2026-08-04T17:59:56Z",
-      "updated": "2026-08-04T17:59:56Z",
-      "categories": [
-        "cs.CL"
-      ],
-      "primary_category": "cs.CL"
-    },
-    {
-      "id": "2608.04008v1",
-      "title": "WorldCup Arena: Prospective, Leakage-Free Evaluation of Frontier LLMs on a Live Tournament",
-      "authors": [
-        "Zhenran Wang",
-        "Zhonghan Bian",
-        "Jinsong Li",
-        "Zhangyang Qi"
-      ],
-      "abstract": "Benchmarks that measure the forecasting ability of large language models are almost always retrospective: the event has happened, the answer is somewhere on the Web, and the evaluation must defend itself against memorisation. We report the opposite design. Over the 39 days of the 2026 FIFA World Cup, six frontier LLMs -- all with extended thinking and native server-side web search -- were asked before every kickoff, one match at a time, to fill in a seven-market prediction card for all 104 matches, plus 12 group winners and a pre-tournament outright pool; no answer existed when the question was asked, so the evaluation is leakage-free by construction rather than by filtering, and the frozen archive holds 4,494 scored predictions. What the tournament establishes is a set of behaviours the six systems share. On match outcome they average 63.9%, level with backing the bookmaker's favourite -- which is in fact what they usually do. They agree with one another far more often than they are right, so a majority vote adds nothing. They under-commit to draws and to goals, and crowd their scoreline picks onto a single prototypical result. Accuracy tracks how lopsided a fixture is rather than how much is known about it: it collapses in the closest ties, where the dossiers are richest, while questions about the tournament as a whole are answered well. On this task the current generation of frontier systems is not sharply differentiated: the standings hold up at the top and the bottom across the run and churn in the middle, and the margins stay narrow throughout. The briefing dossiers, fixtures and official results are released as a benchmark, together with the scoring code.",
-      "url": "https://arxiv.org/abs/2608.04008v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.04008v1",
-      "published": "2026-08-04T17:59:55Z",
-      "updated": "2026-08-04T17:59:55Z",
-      "categories": [
-        "cs.CL"
-      ],
-      "primary_category": "cs.CL"
-    },
-    {
-      "id": "2608.04007v1",
-      "title": "TurnSight: Turn-Level Hindsight Self-Distillation for Tool-Integrated Reasoning",
-      "authors": [
-        "Changle Qu",
-        "Sunhao Dai",
-        "Hengyi Cai",
-        "Yuqi Zhou",
-        "Xinran Chen",
-        "Simon",
-        "Jun Xu"
-      ],
-      "abstract": "Tool-Integrated Reasoning (TIR) enables LLMs to solve complex tasks through iterative tool interactions. However, existing reinforcement learning methods often rely on trajectory-level supervision, limiting fine-grained credit assignment in long-horizon TIR scenarios. On-policy self-distillation offers denser signals through teacher branches with privileged context, but existing approaches typically derive such context from ground-truth answers or retrieved skills, which may not reflect the states actually visited by the agent. Moreover, token-level supervision fails to capture the turn-level structure of tool interactions. To address this, we propose TurnSight, a turn-level hindsight self-distillation framework that derives supervision directly from execution-conditioned hindsight. It then constructs multiple hindsight views with different lookahead horizons and selects reliable supervision through cross-horizon directional agreement. Finally, the selected hindsight signal is normalized across sibling rollouts and used to adaptively modulate RL advantages while preserving their original optimization direction. Extensive experiments on three benchmarks demonstrate the effectiveness of TurnSight. Our codes are available at https://github.com/quchangle1/TurnSight.",
-      "url": "https://arxiv.org/abs/2608.04007v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.04007v1",
-      "published": "2026-08-04T17:59:21Z",
-      "updated": "2026-08-04T17:59:21Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "primary_category": "cs.CL"
-    },
-    {
-      "id": "2608.04003v1",
-      "title": "PAST-Bench: Benchmarking the Foundations of Recursive Self-Improvement in Personal Agents",
-      "authors": [
-        "Shuhan Xue",
-        "Zixin Ding",
-        "Yichen Shen",
-        "Yinjie Wang",
-        "Zhenfei Yin",
-        "Yingcheng Wu",
-        "Yuxin Chen",
-        "Mengdi Wang",
-        "Ling Yang"
-      ],
-      "abstract": "Recursive self-improvement requires agents to turn accumulated experience into better future behavior. Personal AI agents offer a concrete setting for studying this capability because they retain preferences, task histories, tool routines, and learned skills across sessions. Yet whether retained experience actually improves them over time has not been systematically tested. We introduce PAST-Bench, a benchmark designed to isolate this question. Each agent runs through ordered sequences of fresh-session tasks under matched conditions that turn retained experience on and off. It spans 26 scenarios and 204 episodes across memory, procedural reuse, information gathering, and update. We report both later-task gains and whether those gains follow the intended save, retrieve, and update pathway. Across seven base models and four agent frameworks, improvement is real but uneven across capabilities. Agents with the same headline gain can differ markedly in whether that gain is supported by evidence of the intended pathway. Guided by these findings, we develop Hermes+, which extends Hermes with five targeted interventions across stages of the agent loop. Hermes+ raises the average gain from retained experience and provides clearer pathway evidence, with its strongest improvement on tasks requiring outdated state to be replaced, although the effect remains capability- and model-dependent. Together, PAST-Bench and Hermes+ provide an evaluation and diagnostic foundation for studying how persistent agents can progress from retaining experience to systematically improving through it. Code: https://github.com/Gen-Verse/PAST-Bench",
-      "url": "https://arxiv.org/abs/2608.04003v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.04003v1",
-      "published": "2026-08-04T17:58:05Z",
-      "updated": "2026-08-04T17:58:05Z",
-      "categories": [
-        "cs.CL"
-      ],
-      "primary_category": "cs.CL"
-    },
-    {
-      "id": "2608.04001v1",
-      "title": "Test-Time Scaling in Reasoning LLMs: Inference Regimes, Evaluation, and Reproducibility",
-      "authors": [
-        "Mohsen Hariri",
-        "Weicong Chen",
-        "Nahal Shahini",
-        "Vikash Singh",
-        "Kai Ye",
-        "Amirhossein Samandar",
-        "Debargha Ganguly",
-        "Sreehari Sankar",
-        "Yanyan Zhang",
-        "Shouren Wang",
-        "Jerry Peng",
-        "Biyao Zhang",
-        "Michael Hinczewski",
-        "Vipin Chaudhary"
-      ],
-      "abstract": "Large language models can solve substantially harder reasoning problems with more inference-time compute. The term \"test-time scaling,\" however, now covers diverse inference algorithms that extend deliberation along a single trajectory, sample completed candidates and aggregate them through voting or verification, or search over unfinished partial states. These algorithms differ in their statistical structure, compute accounting, and failure modes. Treating these procedures as interchangeable under a single scalar \"budget,\" or reporting accuracy without the inference protocol that produced it, makes results difficult to compare across studies. We develop a systematic account of test-time scaling along three axes. First, we formalize test-time scaling as budgeted inference over the implicit prefix tree of an autoregressive model and distinguish three structural regimes: single-trajectory sequential scaling, leaf-level scaling with terminal reduction, and prefix-level scaling. Second, we treat the evaluated object as the entire inference system and develop evaluation principles that separate end-to-end system performance from candidate-bank diagnostics. We introduce an evaluation profile whose coordinates and simple functionals recover or bound common repeated-sampling metrics, and prescribe protocol-matched reporting of compute and uncertainty. Third, we specify reproducibility requirements for inference protocols, distinguishing exact replay from distributional reproducibility and identifying the artifacts needed to support each. We also organize the open-weight reasoning ecosystem by model-side and interface mechanisms, apply these principles to broad-knowledge, symbolic-reasoning, and competition-mathematics benchmarks, and assemble over 2 billion full reasoning traces for release with progressively richer verifier and token-level signals.",
-      "url": "https://arxiv.org/abs/2608.04001v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.04001v1",
-      "published": "2026-08-04T17:57:20Z",
-      "updated": "2026-08-04T17:57:20Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2608.03999v1",
-      "title": "Agogic: Performance-Timed Music Tokens for LLM-Native Text-to-Symbolic-Music Generation",
-      "authors": [
-        "Junhao Chen",
-        "Mingjin Chen",
-        "Jingjia Mao",
-        "Lin Chen",
-        "Saining Zhang",
-        "Minglin Chen",
-        "Ruocheng Wu",
-        "Liaoyuan Fan",
-        "Wenyi Li",
-        "Mingju Gao",
-        "Henghaofan Zhang",
-        "Zhihao Li",
-        "Hao Zhao",
-        "Yufei Wang",
-        "Ruqi Huang"
-      ],
-      "abstract": "Text-to-music language models begin with a choice usually made by default: how to tokenize music. Normally entangled with backbone, data, and recipe, its effect has never been measured in isolation. We fix pretrained Qwen3.5 (0.8B-27B), data, budget, and decoding, and swap only the representation across seven tokenizations, anchoring texture metrics to each representation's model-free ceiling. The ordering is clean and surprising: representation, not model size, is the binding variable for distributional fidelity. Scaling the backbone 34x barely moves Frechet Music Distance (FMD), whereas switching representation halves it. PMT, a performance-resolution stream we release (10 ms timing, per-note velocity, multi-track texture; 609 symbols), reaches FMD 159 at 0.8B against 272-286 for beat grids (1.7-1.8x lower, up to 2.8x elsewhere; non-overlapping bootstrap CIs), so a 0.8B performance-resolution model beats a 27B beat grid. It reappears on a 26M from-scratch backbone and a second performance-resolution tokenizer: a property of the class, not one lucky vocabulary. Nor is it a finer-lattice artifact: snapping PMT's onsets to the beat grids' resolution still leaves it 67-129 FMD ahead of both (n=500). The effect is distributional; whether it is audible is a separate question, left open by our probe, with a human study pre-registered. Native caption adherence is weak but separable: a lightweight decode-time constraint doubles instrument-F1 (.28 to .60) and Correct-Key (.16 to .35) at no distributional cost. We release the harness, 25+ checkpoints, two corpora (86.6k aligned across caption/MIDI/ABC/audio; 6.25M captioned, the largest for music), and an imprinting diagnostic: published text-to-MIDI systems reproduce their training distribution near-invariant to the caption (72% vs. 71% chord-time on disjoint domains). The field's next representation claim can now be measured, not asserted.",
-      "url": "https://arxiv.org/abs/2608.03999v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.03999v1",
-      "published": "2026-08-04T17:56:49Z",
-      "updated": "2026-08-04T17:56:49Z",
-      "categories": [
-        "cs.SD",
-        "cs.CL"
-      ],
-      "primary_category": "cs.SD"
-    },
-    {
-      "id": "2608.03994v1",
-      "title": "When Attention Goes Blind: Numerical Failure in ALiBi Positional Encodings",
-      "authors": [
-        "Christopher Schr\u00f6der",
-        "Lukas Gienapp",
-        "Ferdinand Schlatt",
-        "Martin Potthast",
-        "Gerhard Heyer"
-      ],
-      "abstract": "We identify a previously overlooked failure mode of ALiBi positional encoding: its linear bias scaling underflows floating-point precision, which zeroes out a large fraction of attention weights and renders the affected attention heads partially blind. We analyze this failure mode, characterize its impact, and examine four mitigation strategies. We further demonstrate its occurrence in state-of-the-art pretrained models based on ALiBi. Comprehensive pretraining experiments with 148M-parameter decoder models help us to disentangle its effects from out-of-context degradation. We find that ALiBi's failure mode can substantially impair token retrieval while having only a minor effect on standard decoder benchmarks. We propose four training-time mitigation strategies and evaluate them individually and in combinations, finding that log-scaled distances yield the most consistent improvements in passkey retrieval. Despite this problem, default ALiBi slopes remain a surprisingly strong baseline, particularly for needle-in-a-haystack retrieval. Based on these findings we provide concrete recommendations on how to train models with ALiBi.",
-      "url": "https://arxiv.org/abs/2608.03994v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.03994v1",
-      "published": "2026-08-04T17:54:01Z",
-      "updated": "2026-08-04T17:54:01Z",
-      "categories": [
-        "cs.CL"
-      ],
-      "primary_category": "cs.CL"
-    },
-    {
-      "id": "2608.03991v1",
-      "title": "Perceptual Anchoring: Prototype-Guided Text Calibration for Training-free Open-Vocabulary Semantic Segmentation",
-      "authors": [
-        "Wanli Ma",
-        "Jiangwen Lu",
-        "Qinmu Peng",
-        "Xinge You"
-      ],
-      "abstract": "Training-free open-vocabulary semantic segmentation (OVSS) partitions an image into semantically distinct regions based on arbitrary text descriptions, without learning any additional parameters. However, existing methods typically focus on improving visual representations while treating text embeddings that encode only generic category concepts as fixed classification references. The resulting semantic gap between these generic concepts and the visual representations that capture the specific appearances of target instances often causes incomplete masks and erroneous predictions in non-target regions. Inspired by the symbol-percept correspondence underlying perceptual anchoring, we propose Prototype-Guided Text Calibration (PTC) for training-free OVSS. In the Perceiving stage, PTC selects reliable visual evidence based on initial matching scores to construct category-specific visual prototypes. In the Anchoring stage, PTC uses these prototypes to calibrate their corresponding text embeddings, with the calibration strength adaptively adjusted based on the amount of visual evidence. Consequently, the calibrated text embeddings align more accurately with instance-specific visual representations while preserving generic category semantics and open-vocabulary generalization. Moreover, PTC requires neither additional training nor external models and can serve as a plug-and-play module for existing methods. Extensive experiments across eight benchmarks show that PTC significantly enhances the performance of six representative methods and yields more complete and accurate segmentation results. These results validate PTC as a simple and effective approach to improving visual-text alignment.",
-      "url": "https://arxiv.org/abs/2608.03991v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.03991v1",
-      "published": "2026-08-04T17:52:13Z",
-      "updated": "2026-08-04T17:52:13Z",
+      "abstract": "Current instruction-based image retrieval systems are powerful but limited to single-turn interactions, failing to capture the iterative nature of complex, real-world visual searches. To overcome this limitation, we introduce Contextual Composed Image Retrieval (CoCo-IR), a novel task that enables users to progressively refine search results through interactions. We address this new task by proposing a new model based on a Large Multimodal Model (LMM) that functions as a context-aware reasoner for CoCo-IR. Our model interprets the entire interaction history to generate Transformable Image Embeddings (TIE) that evolve across turns. To fuel the model training without expensive human annotations, we develop a fully autonomous, scalable data engine that leverages LMMs to generate high-quality contextual retrieval data, and uses model-guided verification to mine challenging hard negatives. Extensive experiments demonstrate that our approach establishes new state-of-the-art performance: We achieve 39.4 mAP@5 on the challenging single-turn benchmark CIRCO; furthermore, on our new CoCo-IR benchmark, our model maintains robust performance with 44.1 R@1 on 4-turn dialogues, dramatically outperforming existing methods (28.2 4-turn R@1) that fail to handle multi-turn context. Project page: https://CoCo-IR.github.io.",
+      "url": "https://arxiv.org/abs/2608.05149v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.05149v1",
+      "published": "2026-08-05T17:59:57Z",
+      "updated": "2026-08-05T17:59:57Z",
       "categories": [
         "cs.CV"
       ],
       "primary_category": "cs.CV"
     },
     {
-      "id": "2608.03990v1",
-      "title": "Assessment of Conditional Diffusion Model for Synthetic Histopathology Image Generation",
+      "id": "2608.05148v1",
+      "title": "Reasoning Core: Designing Broad Procedural Data for Completion-Supervised Reasoning Training",
       "authors": [
-        "Seyed Kahaki",
-        "Shijie Li",
-        "Weijie Chen",
-        "Nicholas Petrick"
+        "Damien Sileo",
+        "Valentin Lacombe",
+        "Dimitri Kachler"
       ],
-      "abstract": "Synthetic histopathology image generation has emerged as an approach that may address data scarcity in computational pathology, yet current evaluation methodologies may not fully assess synthetic data quality for medical applications. This work investigates and addresses limitations in existing evaluation metrics, investigating an approach for assessing synthetic histopathology image quality through domain-specific metrics and downstream task validation. We show that conventional synthetic data evaluation metrics such as Frechet Inception Distance (FID) and Inception Score (IS) may have limitations when applied to histopathology images due to their reliance on ImageNet-pretrained feature extractors. To address these limitations, we propose for consideration modified FID and IS approaches utilizing foundation models pretrained on digital pathology datasets, supplemented by precision-recall based metrics as part of an additional quality assessment. Using conditional denoising diffusion models trained on four benchmark datasets, with a two-step training approach, we generated synthetic datasets with systematically varied quality characteristics. We also measured the correlation between the synthetic data quality metrics with downstream nuclei segmentation performance using common metrics including the aggregated Jaccard index (AJI+) and the Dice coefficient. The study results suggest that pathology-specific metrics may provide improved discriminative power. Specifically, the modified Inception Score indicates higher correlation with downstream task performance (r=0.6096 with AJI+, p=0.0122), compared to the original IS (r=0.0708, p=0.7944). Our observations indicate that increasing the variety of generated training data has a higher positive correlation with segmentation model performance than improving the visual fidelity of individual generated images.",
-      "url": "https://arxiv.org/abs/2608.03990v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.03990v1",
-      "published": "2026-08-04T17:51:40Z",
-      "updated": "2026-08-04T17:51:40Z",
+      "abstract": "Procedural generators produce useful verifiable reasoning problems at scale, but have received less attention as data for completion-supervised fine-tuning. We introduce Reasoning Core, a collection of 50 generators spanning mathematics, logic, planning, state tracking, formal languages, structured data, games, causality, and code, with semantic scorers, difficulty controls, and task evaluators. Under a matched completion-supervised protocol, we compare Reasoning Core with Procedural Warmup, Reasoning Gym, and SynLogic across four base-model settings and multiple training durations. In the primary 3B comparison, Reasoning Core achieves the highest mean scores on DROP, LogiQA, and ARC-Challenge, exceeding both the baseline without procedural data and all three alternative procedural collections. Task-level analyses show that semantic validity alone does not ensure training utility, highlighting compact targets and calibrated difficulty as important design factors. We ran audits combining model-assisted review, human adjudication, and regression testing. Applied throughout Reasoning Core development and to the other collections, they reveal subtle mismatches among generation, rendering, targets, and scoring, a reminder that procedural generation alone does not guarantee correctness. The library, generated datasets, and audit material are publicly available.",
+      "url": "https://arxiv.org/abs/2608.05148v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.05148v1",
+      "published": "2026-08-05T17:59:44Z",
+      "updated": "2026-08-05T17:59:44Z",
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL"
+    },
+    {
+      "id": "2608.05145v1",
+      "title": "Objects as Audio-Visual Modal Sound Fields",
+      "authors": [
+        "Zisen Shao",
+        "Zihao Wei",
+        "Derong Jin",
+        "Ruohan Gao"
+      ],
+      "abstract": "While modern 3D reconstruction excels at modeling object geometry and appearance, it largely ignores the rich acoustic cues revealed through physical interaction. Object impact sounds convey material, stiffness, and structural properties that complement vision, yet existing impact sound modeling approaches either rely on expensive physics-based simulation or require large datasets to generalize in a purely data-driven manner. We introduce Audio-Visual Modal Sound Field (AV-MSF), a novel object-level acoustic representation reconstructed from multi-view images and only a few impact sound recordings. AV-MSF builds on 3D Gaussian Splatting integrated with dense 3D visual feature to provide a strong geometry-aware prior, and represents the impact sound field using compact, physically meaningful modal parameters, enabling robust few-shot reconstruction. Experiments on two real-world datasets show that AV-MSF achieves state-of-the-art impact sound rendering, outperforming both physics-based and data-driven baselines. Furthermore, we demonstrate downstream applications enabled by our representation, including contact localization and object sound editing.",
+      "url": "https://arxiv.org/abs/2608.05145v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.05145v1",
+      "published": "2026-08-05T17:59:19Z",
+      "updated": "2026-08-05T17:59:19Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2608.05144v1",
+      "title": "Argus: A General-Purpose Agentic Runtime for Long-Horizon Reasoning",
+      "authors": [
+        "Boxiu Li",
+        "Zimo Wen",
+        "Yijia Fan",
+        "Junxiang Lei",
+        "Sufeng Guo",
+        "Jiaao Wu",
+        "Ruize Tang",
+        "Mukai Li",
+        "Yifei Shen",
+        "Xiaoyu Chen",
+        "Wanbo Zhang",
+        "Runjing Gu",
+        "Yifei Gao",
+        "Yuheng Wu",
+        "Xuyao Huang",
+        "Zelong Zhao",
+        "Jiachen Zhang",
+        "Shibo Hu",
+        "Hangxi Guo",
+        "Yilin Chen",
+        "Yuzhe Zhang",
+        "Fan Yang",
+        "Chuan Wen",
+        "Xian Zhang",
+        "Xuanhe Zhou",
+        "Zhijie Deng"
+      ],
+      "abstract": "Long-horizon reasoning requires an agentic runtime that can persist when evidence supports its current approach and pivot when measurements reveal failure, hidden constraints, or a misspecified objective. We present Argus, a persistent, self-evolving runtime in which Manager, Planner, Engineer, and Reviewer execute bounded missions over durable project state. Argus separates stable user intent from operational objectives, constraints, and verification criteria, and admits memories, skills, procedures, verifiers, routing decisions, and rejected routes only after role-owned review and, when available, task-native verification. Model weights remain fixed; self-evolution occurs through persistent runtime state and control policy, with autonomous execution between operator-owned escalation points. Across seven GPT-5.5 benchmark arenas, Argus achieves about 78% on SWE-Bench Pro versus 59% for Direct Copilot while using 1.41 times the aggregate tokens. After verification-gated self-evolution, mature SWE-Bench waves use 21% fewer solve-input tokens and 15% less active workflow time per task than startup waves, while recording 34 verifier recoveries and 22 strict review-loop rescues. Argus also reaches 76.8% on AARRI-Bench and a 28.0-point gap on mathematical data synthesis, with competitive GPU-kernel and language-model-training results. Beyond benchmarks, an optimized RWKV6 kernel was merged upstream; a multi-day mathematics campaign retained falsified routes and proof-backed frontier updates; and six paper pipelines completed 254 missions with 16 stage rollbacks. These results show that a fixed-weight, self-evolving harness can revise, recover, and accumulate verified approaches while producing structured trajectories for future supervised and reinforcement learning.",
+      "url": "https://arxiv.org/abs/2608.05144v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.05144v1",
+      "published": "2026-08-05T17:58:58Z",
+      "updated": "2026-08-05T17:58:58Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI"
+    },
+    {
+      "id": "2608.05141v1",
+      "title": "OctoLong: Mid-Training On Cross-Repository Code Contexts Enhances Long-Context Modeling",
+      "authors": [
+        "Indraneil Paul",
+        "Falko Helm",
+        "Goran Glava\u0161",
+        "Iryna Gurevych"
+      ],
+      "abstract": "Context lengths of language models (LMs) have dramatically increased, driven by the demands for in-context learning, self-improvement, and long-horizon agentic workflows. Existing long-context corpora, however, are dominated by books, academic articles, and code repositories, which are finite resources and often scarce in long-distance dependencies. In this work, we introduce OctoLong, a context engineering pipeline that instruments an AST parser, a language server backend, and a package manager to facilitate the recursive retrieval of code references, enabling the curation of dependency-rich code contexts of millions of tokens in length. We then train OctoLong-Instruct, a suite of capable long-context open LMs, derived from base models ranging in size from 600M to 14B parameters, via context-extension mid-training on a ~50B-token mixture containing ~6.2B tokens of OctoLong code contexts, followed by ~10B tokens of instruction tuning. Our training ablations and experimental evaluations against 18 state-of-the-art open-weight long-context LMs show that supplanting just 12% of traditional context-extension corpora with OctoLong data yields substantial gains in long-range retrieval, long-term state tracking, repository-level code understanding, and downstream agentic tasks, while also enhancing API usage in short-context coding scenarios.",
+      "url": "https://arxiv.org/abs/2608.05141v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.05141v1",
+      "published": "2026-08-05T17:58:15Z",
+      "updated": "2026-08-05T17:58:15Z",
+      "categories": [
+        "cs.AI",
+        "cs.LG",
+        "cs.SE"
+      ],
+      "primary_category": "cs.AI"
+    },
+    {
+      "id": "2608.05139v1",
+      "title": "Toward Skill-Native LLMs: Skill Entropy for Benchmarking and Training Long-Horizon Reasoning",
+      "authors": [
+        "Yinghui He",
+        "Ling Yang",
+        "Jiarui Liu",
+        "Yongjin Yang",
+        "Lechen Zhang",
+        "Yingcheng Wu",
+        "Zhenfei Yin",
+        "Mengdi Wang",
+        "Sanjeev Arora"
+      ],
+      "abstract": "Long-horizon reasoning in recent LLMs demands that the model switch between distinct skills inside a reasoning chain, such as first doing a math derivation, then using the result to plan a schedule. We call such problems cross-skill long-horizon tasks: multi-step tasks whose steps require different reasoning skills and depend on earlier outputs. Existing benchmarks often evaluate individual skills, lacking a principled way to measure how well a model switches between skills. We address this gap from both the evaluation and training sides. We introduce Skill Entropy, a measure of the difficulty of switching from one skill to another. We then propose Skill^2-Bench, a benchmark of cross-skill long-horizon tasks built over 558 skills across 9 verifiable and open-ended domains. Each task is assigned a task-level skill-entropy score and grouped into three difficulty levels. Evaluating 8 frontier and 4 open-source models on Skill^2-Bench reveals a skill-switching gap: accuracy decreases on higher-entropy tasks. We then turn skill entropy from a benchmark scale into a training signal. We propose Skill-Entropy RL, an RL framework where the model predicts not only the answer at each step but also the skill used to produce it. The reward combines step-level correctness with a skill-entropy reward that measures the alignment between the model-predicted skill sequence and the gold skill sequence. On Qwen3-4B-Instruct and Qwen3-1.7B, Skill-Entropy RL improves the Skill^2-Bench score from 34.4% to 68.4% and from 14.6% to 40.1%, respectively, outperforming competitive baselines. The same pipeline can be applied to off-the-shelf training data such as OpenR1-Math, indicating that skill entropy is a reusable training signal. Code available at: https://github.com/Gen-Verse/Skill-Entropy-RL",
+      "url": "https://arxiv.org/abs/2608.05139v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.05139v1",
+      "published": "2026-08-05T17:57:16Z",
+      "updated": "2026-08-05T17:57:16Z",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "primary_category": "cs.CL"
+    },
+    {
+      "id": "2608.05138v1",
+      "title": "Teaching Nemotron Greek: Mining a Corpus, Adapting Retrieval, and Grounding Generation for Modern Greek across Specialist Domains",
+      "authors": [
+        "Ayoub Kirouane",
+        "Christos Petrocheilos"
+      ],
+      "abstract": "Modern Greek is absent from NVIDIA's Nemotron retrieval models and from major multilingual retrieval benchmarks, despite being important for retrieval-augmented generation (RAG) in legal, energy, financial, and medical applications. We present an end-to-end adaptation of the Nemotron retrieval stack for Modern Greek, including corpus mining, synthetic supervision, retrieval model training, reranker adaptation, reader fine-tuning, and a new benchmark called HERA. Our study shows that a parameter-free BM25 baseline outperforms several off-the-shelf multilingual dense retrieval models on specialist Greek corpora. After fine-tuning on 65,773 Greek retrieval pairs, a Nemotron 1B embedder improves nDCG@10 from 0.362 to 0.835 and substantially outperforms its unadapted counterpart. The learned language competence transfers to general-domain Greek, although the advantage over BM25 remains domain-dependent. We further adapt a cross-encoder reranker and demonstrate consistent improvements across specialist domains. Finally, we LoRA-tune a Nemotron 30B-A3B mixture-of-experts reader for grounded generation, increasing judged answer correctness from 29.4% to 66.9% while significantly improving faithfulness and citation quality. We also introduce HERA, the first large-scale Greek benchmark for retrieval-augmented generation, and release our adapted models and benchmark to support future research on Greek-language RAG systems.",
+      "url": "https://arxiv.org/abs/2608.05138v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.05138v1",
+      "published": "2026-08-05T17:56:40Z",
+      "updated": "2026-08-05T17:56:40Z",
+      "categories": [
+        "eess.AS",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "primary_category": "eess.AS"
+    },
+    {
+      "id": "2608.05137v1",
+      "title": "SmartMage: Dynamic Modality Orchestration for 3D Scene Understanding",
+      "authors": [
+        "Yue Zhang",
+        "Yingzhao Jian",
+        "Yunqiu Xu",
+        "Xiaoxiao Sun",
+        "Hehe Fan"
+      ],
+      "abstract": "Understanding 3D scenes is fundamental to embodied intelligence, requiring joint reasoning over heterogeneous information from multiple modalities, including visual and geometric cues. However, the relevance of these modalities often varies across queries. Existing Multimodal Large Language Models (MLLMs) typically rely on fixed modality combinations, overlooking query-dependent modality needs. Such a rigid design can introduce semantic noise from irrelevant modalities while underutilizing more informative ones, leading to wasted computation and diluted reasoning. To address these challenges, this paper proposes SmartMage, a unified MLLM that dynamically orchestrates heterogeneous modalities for semantic-aware 3D scene understanding. Specifically, SmartMage incorporates: (1) a Semantic-guided Modality Adaptive RouTng (SMART) module that selects task-relevant modalities using semantic priors, text-modality alignment, and modality quality; and (2) a Modality-Aware Gating Expert (MAGE) module that leverages modality priors to guide expert activation, fostering adaptive specialization in multimodal reasoning. Empirically, SmartMage achieves state-of-the-art performance across five 3D scene understanding benchmarks, and attains competitive results on RGB-only video understanding benchmarks. In our diagnostic benchmark ScanFacet, tasks are divided into fine-grained semantic categories, enabling analysis of modality combinations preferred by each semantic type. The observed modality-semantic patterns provide further evidence of SmartMage's effectiveness. Project page: https://yuecheong.github.io/SmartMage/.",
+      "url": "https://arxiv.org/abs/2608.05137v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.05137v1",
+      "published": "2026-08-05T17:56:35Z",
+      "updated": "2026-08-05T17:56:35Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2608.05136v1",
+      "title": "The Loss Does Not See the Basis, but Adam Does",
+      "authors": [
+        "Devender Singh"
+      ],
+      "abstract": "Gradient descent on a factored model $W = UV^\\top$ is implicitly biased toward low-rank solutions, while Adam, starting from the same small initialization, is not. We trace the difference to the gauge symmetry of the loss, its invariance under $(U, V) \\mapsto (UQ, VQ)$. Gradient flow's low-rank mechanism is available to an optimizer only if that optimizer is gauge-equivariant, a condition necessary for the transfer but not sufficient for low-rank recovery. Gradient descent, momentum, \"shared-scalar\" Adam, Muon, and Shampoo satisfy it. Adam, RMSProp, and the other coordinate-wise methods do not. A structure theorem characterizes the memoryless equivariant rules as exactly the Gram-determined left preconditioners, and a transfer theorem carries gradient flow's pathwise properties to common-scalar flows. We then sort nine update rules on underdetermined matrix sensing by recovery error against the planted ground truth. A one-parameter family from coordinate-wise to shared-scalar preconditioning restores the bias monotonically, isolating anisotropy as the cause. A \"spectral schedule\" reconciles two opposing reports about Muon: equal-rate updates recover exactly low-rank targets but lose their edge as the spectral tail grows. In transformers, Adam separates two gauge-equivalent initializations at the first step, where the equivariant optimizers stay at float precision, and ends with the per-head invariants $W_Q^\\top W_K$ 56% apart in relative Frobenius distance, a gap no per-head rotation can close. On two hyperspectral datasets at matched training loss, gradient descent cuts held-out error by 43-44% at the lowest sampling density, and at lower effective rank. Basis choice is therefore not a tuning detail but a decision about which interpolant the optimizer selects.",
+      "url": "https://arxiv.org/abs/2608.05136v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.05136v1",
+      "published": "2026-08-05T17:56:26Z",
+      "updated": "2026-08-05T17:56:26Z",
       "categories": [
         "cs.LG"
       ],
       "primary_category": "cs.LG"
+    },
+    {
+      "id": "2608.05132v1",
+      "title": "Predicting Brain Morphometry with MT-GNN: Mesh Evolution in Continuous Time with Graph-Based Metric Tensor Embeddings",
+      "authors": [
+        "Hao Ding",
+        "Daniel Semchin",
+        "Paul M. Thompson",
+        "Boris Gutman"
+      ],
+      "abstract": "Predicting how a subcortical structure's shape will evolve from a few prior scans could support prognosis and clinical-trial enrichment. Existing longitudinal mesh predictors either extrapolate shape trajectories via high-dimensional embeddings or regress vertex deformations directly. We instead predict the surface's intrinsic geometry in continuous time: a single per-structure graph network predicts the future per-vertex first fundamental form (metric tensor) for an arbitrary causal multiple-visit history and an arbitrary prediction horizon, conditioned on a Fourier encoding of the lead time. The predicted metric is decoded into a surface by a differentiable As-Rigid-As-Possible solver, and the model is trained end-to-end on the rigid-aligned vertex error. Training through the reconstruction keeps the decoded prediction a valid surface and consistently improves it. On 14 subcortical structures from the ADNI dataset, the proposed mesh evolution model (MT-GNN) predicts best among the evaluated methods at every horizon ($-2.29\\%$ mean vertex error vs. the temporal mean, $p{=}6.1{\\times}10^{-5}$, beating it on 14/14 structures), ahead of geodesic shape regression (DCM, $-0.19\\%$) and a mesh transformer (TransforMesh, $-0.45\\%$; $p{=}1.2{\\times}10^{-4}$), with the lead widening as the horizon grows.",
+      "url": "https://arxiv.org/abs/2608.05132v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.05132v1",
+      "published": "2026-08-05T17:53:33Z",
+      "updated": "2026-08-05T17:53:33Z",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "primary_category": "cs.CV"
     }
   ]
 }
