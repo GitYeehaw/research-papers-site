@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-08-09T08:58:36.032143+00:00",
+  "scraped_at": "2026-08-10T09:47:47.746597+00:00",
   "researcher_count": 54,
   "researchers": [
     {
@@ -1336,6 +1336,26 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2608.06919v1",
+          "title": "Vernata: Self-Supervised Learning of LiDAR Point Representations",
+          "authors": [
+            "Oliver Lemke",
+            "Alexander Liniger",
+            "Abel Gawel",
+            "Marco Hutter"
+          ],
+          "abstract": "LiDAR serves as a primary sensing modality for robots operating in outdoor environments. However, the performance of deep learning models in this domain is severely limited by the scarcity of labeled data, a direct result of the high cost of 3D annotation. Self-supervised learning addresses this scarcity by learning general-purpose features from unlabeled data. In this work, we present a multi-modal, multi-teacher distillation framework for self-supervised learning on outdoor LiDAR point clouds. Building upon the Sonata architecture, we introduce Vernata, consisting of three extensions: sparse view augmentation to improve robustness against varying point densities, a memory bank mechanism to stabilize resource-constrained training, and cross-modal distillation utilizing dense, high-resolution 2D image features to enable fine-grained semantic guidance. We evaluate our method on the GrandTour, TartanGround, and Waymo datasets, as well as data collected from our own robotic platforms. Our experiments demonstrate a significant performance improvement over Sonata baselines, yielding mIoU scores of 54.7 on TartanGround (+5.9 points, +12.1%) and 57.1 on Waymo (+7.3 points, +14.7%). Finally, we show that the self-supervised approach maintains strong performance even in reduced-modality settings (lacking color or normals), achieving competitive mIoU scores of 49.4 and 50.2 on the respective datasets.",
+          "url": "https://arxiv.org/abs/2608.06919v1",
+          "pdf_url": "https://arxiv.org/pdf/2608.06919v1",
+          "published": "2026-08-07T07:51:39Z",
+          "updated": "2026-08-07T07:51:39Z",
+          "categories": [
+            "cs.CV",
+            "cs.RO"
+          ],
+          "primary_category": "cs.CV"
+        },
+        {
           "id": "2608.06170v1",
           "title": "Prior-SG: Task and Prior Driven Region Segmentation for Scene Graphs in Arbitrarily-Structured Environments",
           "authors": [
@@ -1428,27 +1448,6 @@
             "cs.CV"
           ],
           "primary_category": "cs.RO"
-        },
-        {
-          "id": "2607.01454v1",
-          "title": "SE(2) Navigation Mesh",
-          "authors": [
-            "Shuyang Shi",
-            "Kaixian Qu",
-            "Changan Chen",
-            "Ines Kast",
-            "Yuntao Ma",
-            "Marco Hutter"
-          ],
-          "abstract": "Global navigation for ground robots in complex multi-level environments requires representations that accurately capture traversable regions while enabling efficient path planning. Current approaches present key limitations: Point clouds and volumetric occupancy maps lack explicit surface structure for traversability estimation, whereas direct pathfinding on dense triangle meshes is computationally prohibitive. Navigation meshes mitigate these challenges through polygonal abstraction of the underlying mesh, but assume yaw-invariant traversability, rendering them unsuitable for non-circular robots in constrained spaces. We propose SE(2) Navigation Mesh (SE(2) NavMesh), a polygonal representation of traversable regions that encodes yaw-dependent traversability. Our method evaluates traversability using footprint masks and constructs a graph over yaw-specific layers with explicit translational and rotational connectivity. Grounded in this representation, we develop an A*-String Pulling-A* (ASA) pathfinding strategy that hierarchically optimizes robot position and heading. We also present an online method that incrementally updates the SE(2) NavMesh from streaming point clouds during concurrent geometry reconstruction. In simulation, the SE(2) NavMesh captures over 50% more traversable area than classical NavMeshes, and the SE(2) NavMesh + ASA pipeline consistently outperforms sampling-based baselines in constrained environments. Extensive real-world experiments on a physical robot validate real-time online generation and successful navigation across multiple environments.",
-          "url": "https://arxiv.org/abs/2607.01454v1",
-          "pdf_url": "https://arxiv.org/pdf/2607.01454v1",
-          "published": "2026-07-01T20:21:02Z",
-          "updated": "2026-07-01T20:21:02Z",
-          "categories": [
-            "cs.RO"
-          ],
-          "primary_category": "cs.RO"
         }
       ]
     },
@@ -1460,6 +1459,34 @@
       "website": "https://people.csail.mit.edu/rus/",
       "paper_count": 5,
       "papers": [
+        {
+          "id": "2608.06650v1",
+          "title": "SoRoMoX: Fast, Differentiable, and Parallelizable Soft Robot Models",
+          "authors": [
+            "Maximilian St\u00f6lzle",
+            "Solange Gribonval",
+            "Daniel Feliu-Talegon",
+            "Vito Daniele Perfetta",
+            "Michele Martini",
+            "Chuhan Zhang",
+            "Kiwan Wong",
+            "Mohammed Tarnini",
+            "Anup Teejo Mathew",
+            "Federico Renda",
+            "Daniela Rus",
+            "Cosimo Della Santina"
+          ],
+          "abstract": "Reduced-order models based on Cosserat-rod theory are now well established, and modeling theory is no longer the primary bottleneck in soft-robot control. Their implementations, however, do not support the differentiable, GPU-parallel, and control-oriented workflows that underpin advanced rigid-robotics applications. Here, we fill this gap with SoRoMoX (Soft Robot Models in JAX), a fully numerical, JIT-compilable Python/JAX framework. SoRoMoX implements articulated, Piecewise Constant Strain, and Variable Strain models through a unified, control-ready interface that provides inertia matrices, gravitational and elastic forces, Jacobians, and their derivatives. To our knowledge, it is the first rod/strain-based soft-robot modeling framework that runs directly on GPUs and is end-to-end differentiable with respect to states, inputs, and parameters. Sequential CPU rollouts are up to 18.1x faster than state-of-the-art alternatives, while GPU-parallel rollouts increase throughput by up to 234.6x. This performance enables workflows that were previously impractical or impossible: static-equilibrium system identification with 66% lower marker RMSE; residual-force learning with a further 64% reduction; computed-torque tracking with RMSE reduced by a factor of approximately 500 relative to model-free PD; control-gain optimization with up to 62% lower loss than untuned gains; safety-constrained control using high-order control barrier functions to keep the peak contact force within a prescribed 5 N bound, compared with 33.5 N without the safety constraint; and reinforcement-learning policy training up to 7x faster than a CPU PyElastica discrete-rod baseline through massively parallel rollouts.",
+          "url": "https://arxiv.org/abs/2608.06650v1",
+          "pdf_url": "https://arxiv.org/pdf/2608.06650v1",
+          "published": "2026-08-06T23:31:47Z",
+          "updated": "2026-08-06T23:31:47Z",
+          "categories": [
+            "cs.RO",
+            "cs.AI"
+          ],
+          "primary_category": "cs.RO"
+        },
         {
           "id": "2608.02834v1",
           "title": "Biconvex Optimization for Smooth Minimum-Time Trajectories around Convex Obstacles",
@@ -1542,26 +1569,6 @@
             "cs.RO"
           ],
           "primary_category": "cs.RO"
-        },
-        {
-          "id": "2605.16048v1",
-          "title": "Looped SSMs: Depth-Recurrence and Input Reshaping for Time Series Classification",
-          "authors": [
-            "M\u00f3nika Farsang",
-            "Ramin Hasani",
-            "Daniela Rus",
-            "Radu Grosu"
-          ],
-          "abstract": "State Space Models (SSMs) are inherently recurrent along the sequence dimension, yet depth-recurrence - reusing the same block repeatedly across layers, as recently applied in looped transformers - has not been explored in this model family. We show that a looped SSM with $k$ parameters iterated $L$ times consistently closely matches or outperforms a standard SSM with $k \\cdot L$ independent parameters across four architectures (LRU, S5, LinOSS, LrcSSM) and six time series classification benchmarks, despite operating within a strictly smaller hypothesis space, as we formally establish. Since the larger model contains the looped model as a special case, this dominance cannot be explained by expressivity and instead points to parameter sharing across depth as a beneficial inductive bias that simplifies optimization. These results demonstrate that depth-recurrence is orthogonal to sequence-recurrence and independently beneficial. We further show that input reshaping is an equally neglected design axis: concatenating timesteps for low-dimensional inputs, or flattening and rechunking the joint feature-time dimension for high-dimensional ones, yields accuracy gains of 1-6% across all models, confirmed over 5 random seeds. Both techniques provide standalone improvements that compound when combined, suggesting that depth and input reshaping are two independent and underexplored design axes for SSMs on time series.",
-          "url": "https://arxiv.org/abs/2605.16048v1",
-          "pdf_url": "https://arxiv.org/pdf/2605.16048v1",
-          "published": "2026-05-15T15:18:12Z",
-          "updated": "2026-05-15T15:18:12Z",
-          "categories": [
-            "cs.LG",
-            "cs.AI"
-          ],
-          "primary_category": "cs.LG"
         }
       ]
     },
@@ -5576,6 +5583,45 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2608.07333v1",
+          "title": "When GNNs Fail: Quantifying and Overcoming Temporal Correlation Volatility in Time Series",
+          "authors": [
+            "Chen Shao",
+            "Yue Wang",
+            "Zhenyi Zhu",
+            "Zhanbo Huang",
+            "Tobias K\u00e4fer",
+            "Zonghan Wu",
+            "Danai Koutra"
+          ],
+          "abstract": "Modeling multivariate time series by representing them as graphs, where individual series act as nodes and pairwise temporal corre- lations serve as edges, has gained significant traction. Recent advances in Graph Neural Networks (GNNs) have demonstrated strong perfor- mance by assuming a static graph topology and aggregating information from neighboring series. In this work, we investigate the representa- tional power of GNNs for forecasting under both static and dynamic settings (i.e., when pairwise correlations evolve drastically over time) and identify critical limitations in current architectures. To formalize this, we first propose Temporal Correlation Volatility (TCV), a model- agnostic metric designed to quantify the distributional evolution of these latent structures. We establish a clear connection between TCV and performance degradation, demonstrating that many popular models, including Transformers, generalize poorly in high-TCV settings and are often outperformed by simple structure-agnostic baselines. To address these limitations, we propose Graph Layer for Inference in Dynamic En- vironments (GLIDE), a novel GNN layer enhanced by two theoretically grounded design mechanisms: (D1) Path-based Message Passing, which captures path-based neighborhoods and (D2) Static and Dynamic Propagation Separation, which identifies optimal dynamics via local static approximation. These components significantly improve learning under dynamic topology while preserving robustness in static scenarios. Ex- tensive experiments on synthetic and real-world benchmarks show that GLIDE improves average performance by up to 45.6% across static and dynamic settings, with the largest gain reaching 85.7%. The source code is available at https://github.com/ChenS676/GLIDE.",
+          "url": "https://arxiv.org/abs/2608.07333v1",
+          "pdf_url": "https://arxiv.org/pdf/2608.07333v1",
+          "published": "2026-08-07T15:28:45Z",
+          "updated": "2026-08-07T15:28:45Z",
+          "categories": [
+            "cs.LG"
+          ],
+          "primary_category": "cs.LG"
+        },
+        {
+          "id": "2608.06520v1",
+          "title": "Online Security Learning in Cooperative Multi-Agent Systems under Hidden Byzantine Attacks",
+          "authors": [
+            "Ximing Sun",
+            "Yue Wang"
+          ],
+          "abstract": "We study online cooperative control of a multi-agent system under Byzantine attacks. Namely, an unknown, fixed subset of agents are Byzantine comprised and can stealthily overwrite its own coordinates of the team's planned joint action after observing that plan. The learner observes planned actions, public rewards, and public states, but neither the overwrite nor the executed joint action. Our objective is security: to optimize the team performance against the worst overwrites and achieve the optimal security value. We first show that the attacker's information determines the geometry. An attacker that observes the planned action induces an exact $(s,a)$-rectangular robust Markov decision process (MDP) whose rows are convex hulls of overwrite-induced public-outcome laws, whereas a blind attacker induces an $s$-rectangular model. We then identify the information-theoretic limit of security learning, showing that the security regret decomposes exactly into return regret against the response generating the data and a cumulative response gap $D_K$. Two indistinguishable horizon-one instances force $\u03a9(K)$ expected security regret while return regret is zero, showing that dependence on $D_K$ is unavoidable. Finally, we develop a stage-tied robust estimation-to-decisions learner and prove a regret bound of $\\widetilde{\\mathcal O}\\!\\left(H^2S\\sqrt{AK}\\right)+\\mathbb E[D_K]$. Our studies thus provide comprehensive theoretical and algorithmic foundations of reliable multi-agent systems under Byzantine attacks.",
+          "url": "https://arxiv.org/abs/2608.06520v1",
+          "pdf_url": "https://arxiv.org/pdf/2608.06520v1",
+          "published": "2026-08-06T19:03:49Z",
+          "updated": "2026-08-06T19:03:49Z",
+          "categories": [
+            "cs.LG"
+          ],
+          "primary_category": "cs.LG"
+        },
+        {
           "id": "2608.01898v1",
           "title": "Understanding and Correcting Low-Frequency Bias in EEG Foundation Model",
           "authors": [
@@ -5662,52 +5708,6 @@
             "cs.AI"
           ],
           "primary_category": "cs.CV"
-        },
-        {
-          "id": "2607.25294v1",
-          "title": "CLBench-V: Evaluating Multimodal Context Learning from Grounding to Knowledge Acquisition",
-          "authors": [
-            "Lai Wei",
-            "Chengqi Li",
-            "Jiapeng Li",
-            "Ruina Hu",
-            "Yue Wang",
-            "Weiran Huang"
-          ],
-          "abstract": "Real-world tasks often require models to learn from task-specific context rather than relying only on pre-trained knowledge. While recent work has highlighted this capability as context learning, existing evaluations mainly focus on textual contexts. In many practical settings, however, the context to be learned from is multimodal: scientific findings are conveyed through figures and tables, financial indicators are scattered across converted reports, and spatial decisions depend on maps, scenes, or web pages. We introduce CLBench-V, a benchmark for multimodal context learning that addresses the difficulty of localizing where context use breaks down by organizing tasks around three dimensions: context grounding, new information application, and new knowledge learning. CLBench-V combines converted public benchmarks with newly constructed datasets spanning domains such as science, finance, long-document understanding, spatial reasoning, and web-based visual question answering. To reduce the cost of constructing domain-specific context-learning tasks, we further use automated construction and filtering procedures for our newly built datasets. Across 3,443 instances and six recent multimodal models, the best overall score is only 0.2847, indicating that multimodal context learning remains far from saturated. Moreover, InternVL3.5-30B-A3B performs best on context grounding and new knowledge learning, while Qwen3.5-Plus performs best on new information application. We further analyze judge reliability, context length, image count, and representative failure cases. Code is available at https://github.com/IamLihua/CLBench-V.",
-          "url": "https://arxiv.org/abs/2607.25294v1",
-          "pdf_url": "https://arxiv.org/pdf/2607.25294v1",
-          "published": "2026-07-28T05:06:43Z",
-          "updated": "2026-07-28T05:06:43Z",
-          "categories": [
-            "cs.CV",
-            "cs.AI",
-            "cs.CL",
-            "cs.LG"
-          ],
-          "primary_category": "cs.CV"
-        },
-        {
-          "id": "2607.21419v2",
-          "title": "PATS: Policy-Aware Training Scaffolding for Agentic Reinforcement Learning",
-          "authors": [
-            "Yipeng Shi",
-            "Zhipeng Ma",
-            "Yue Wang",
-            "Qitai Tan",
-            "Yang Li",
-            "Peng Chen",
-            "Zhengzhou Zhu"
-          ],
-          "abstract": "In long-horizon LLM agent reinforcement learning, weak policies often repeat similar failures, producing uninformative rollout trajectories and limiting effective policy optimization. Existing skill-centric methods improve exploration by optimizing, filtering, or internalizing reusable skills. However, they remain centered on the skills themselves rather than being designed as adaptive training-time support for the evolving policy. To address this, we propose a policy-centric training paradigm that reframes skills as a dynamic training scaffold. Our framework, PATS, converts rollout groups from the latest policy into evidence cards and uses task-specific evaluation to adjust the context used in subsequent rollouts. Concrete guidance helps weak policies to complete challenging tasks. As policy improves, redundant context is revised or removed to reduce reliance on explicit guidance while preserving useful rollout variation. The policy is optimized with environmental rewards using standard RLVR, and the training scaffold is discarded at deployment. Across ALFWorld, WebShop, and seven search-augmented QA benchmarks, PATS achieves performance competitive with SOTA baselines while using 25%-50% fewer tokens.",
-          "url": "https://arxiv.org/abs/2607.21419v2",
-          "pdf_url": "https://arxiv.org/pdf/2607.21419v2",
-          "published": "2026-07-23T15:24:35Z",
-          "updated": "2026-07-30T03:55:54Z",
-          "categories": [
-            "cs.AI"
-          ],
-          "primary_category": "cs.AI"
         }
       ]
     },
