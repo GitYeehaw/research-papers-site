@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-08-18T08:51:46.818592+00:00",
+  "scraped_at": "2026-08-19T08:51:51.538920+00:00",
   "researcher_count": 54,
   "researchers": [
     {
@@ -1721,6 +1721,24 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2608.17896v1",
+          "title": "Dynamic Compression in Recurrent Networks",
+          "authors": [
+            "Jyothish Pari",
+            "Ryan Bahlous-Boldi",
+            "Pulkit Agrawal"
+          ],
+          "abstract": "Recurrent models process long contexts efficiently by compressing their history into a fixed-size state, but modern architectures typically do so in a single causal pass over the sequence. Each input must therefore be compressed before the model knows how it will later be used, forcing a limited state to compromise across possible future demands. We introduce dynamic compression, which allows a recurrent model to selectively revisit past tokens and revise its fixed-size state through additional recurrent updates. The model need not preserve every part of the history at uniformly high fidelity in its recurrent state, because lower-fidelity information can be revisited from the retained raw sequence when it becomes relevant. We study this in a controlled setting where the model first learns multiple functions in-context and, later in the same sequence, encounters a series of few-shot tasks that each require it to identify and reuse one of those functions. A single-pass model must preserve every function at sufficient fidelity for any future task, whereas selective re-scanning allows the model to revisit and refine only the function currently needed. We find that dynamic compression substantially reduces the recurrent state required for accurate reuse and scales more favorably as the number of stored functions grows. These results demonstrate a computation--memory tradeoff in which recurrent models can spend more computation revisiting their history to make more effective use of a fixed-size state.",
+          "url": "https://arxiv.org/abs/2608.17896v1",
+          "pdf_url": "https://arxiv.org/pdf/2608.17896v1",
+          "published": "2026-08-18T15:29:18Z",
+          "updated": "2026-08-18T15:29:18Z",
+          "categories": [
+            "cs.LG"
+          ],
+          "primary_category": "cs.LG"
+        },
+        {
           "id": "2607.09042v1",
           "title": "Learning More from Less: Reinforcement Learning from Hindsight",
           "authors": [
@@ -1815,33 +1833,6 @@
             "cs.AI"
           ],
           "primary_category": "cs.DC"
-        },
-        {
-          "id": "2605.22817v1",
-          "title": "Vector Policy Optimization: Training for Diversity Improves Test-Time Search",
-          "authors": [
-            "Ryan Bahlous-Boldi",
-            "Isha Puri",
-            "Idan Shenfeld",
-            "Akarsh Kumar",
-            "Mehul Damani",
-            "Sebastian Risi",
-            "Omar Khattab",
-            "Zhang-Wei Hong",
-            "Pulkit Agrawal"
-          ],
-          "abstract": "Language models must now generalize out of the box to novel environments and work inside inference-scaling search procedures, such as AlphaEvolve, that select rollouts with a variety of task-specific reward functions. Unfortunately, the standard paradigm of LLM post-training optimizes a pre-specified scalar reward, often leading current LLMs to produce low-entropy response distributions and thus to struggle at displaying the diversity that inference-time search will require. We propose Vector Policy Optimization (VPO), an RL algorithm that explicitly trains policies to anticipate diverse downstream reward functions and to produce diverse solutions. VPO exploits that rewards are often vector-valued in practice, like per-test-case correctness in code generation or, say, multiple different user personas or reward models. VPO is essentially a drop-in replacement for the GRPO advantage estimator, but it trains the LLM to output a set of solutions where individual solutions specialize to different trade-offs in the vector reward space. Across four tasks, VPO matches or beats the strongest scalar RL baselines on test-time search (e.g. pass@k and best@k), with the gap widening as the search budget grows. For evolutionary search, VPO models unlock problems that GRPO models cannot solve at all. As test-time search becomes more standardized, optimizing for diversity may need to become the default post-training objective.",
-          "url": "https://arxiv.org/abs/2605.22817v1",
-          "pdf_url": "https://arxiv.org/pdf/2605.22817v1",
-          "published": "2026-05-21T17:59:26Z",
-          "updated": "2026-05-21T17:59:26Z",
-          "categories": [
-            "cs.LG",
-            "cs.AI",
-            "cs.CL",
-            "cs.NE"
-          ],
-          "primary_category": "cs.LG"
         }
       ]
     },
@@ -3066,6 +3057,26 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2608.17163v1",
+          "title": "Q-Learning With World Models",
+          "authors": [
+            "Perry Dong",
+            "Yueru Jia",
+            "Chelsea Finn",
+            "Dorsa Sadigh"
+          ],
+          "abstract": "Off-policy reinforcement learning (RL) has become increasingly sample-efficient, enabling applications such as RL fine-tuning of Vision-Language-Action models into reliable, high-performing policies. World models offer a further lever for sample efficiency, as they predict state changes rather than actions alone, but their success has largely been confined to supervised policy learning. Prior model-based RL methods often optimize the policy or value function directly on imagined rollouts, which is prone to compounding bias and struggles to scale to large, high-dimensional problems such as real-world robotics, a problem that worsens with task horizon and visual complexity. In this work, we instead ask whether we can leverage world models directly on top of standard Q-learning to improve performance, while remaining trained and grounded in the real, online setting. We propose QWM, a framework that leverages world models to perform test-time search over imagined trajectories on top of Q-learning to select high-value actions during both online rollouts and evaluation. Since the policy and value function are trained only on real transitions, QWM avoids compounding model bias while still gaining the sample-efficiency benefits of predictive search. On challenging manipulation benchmarks Robomimic and LIBERO, QWM significantly outperforms strong prior state-of-the-art methods on both sample efficiency and performance.",
+          "url": "https://arxiv.org/abs/2608.17163v1",
+          "pdf_url": "https://arxiv.org/pdf/2608.17163v1",
+          "published": "2026-08-17T22:00:42Z",
+          "updated": "2026-08-17T22:00:42Z",
+          "categories": [
+            "cs.LG",
+            "cs.AI"
+          ],
+          "primary_category": "cs.LG"
+        },
+        {
           "id": "2608.15917v1",
           "title": "Pre-training Visual Dexterity in Simulation",
           "authors": [
@@ -3155,27 +3166,6 @@
             "cs.RO"
           ],
           "primary_category": "cs.AI"
-        },
-        {
-          "id": "2606.32027v3",
-          "title": "Freeform Preference Learning for Robotic Manipulation",
-          "authors": [
-            "Marcel Torne",
-            "Anubha Mahajan",
-            "Abhijnya Bhat",
-            "Chelsea Finn"
-          ],
-          "abstract": "Reward design remains a central bottleneck for autonomous robot policy improvement, especially in long-horizon manipulation tasks where sparse success labels provide too little signal and binary preferences collapse many competing notions of quality into one ambiguous signal. We introduce Freeform Preference Learning (FPL), a method for learning robot policies from freeform human preferences. Rather than asking annotators which of two trajectories is better overall, FPL lets them define natural-language preference axes, such as speed, safety, quality of placement, or carefulness, and provide pairwise preferences along each axis. These annotations are used to learn a language-conditioned reward model that maps a trajectory and preference label to an axis-specific reward. We use this model to train a reward-conditioned policy that optimizes across the multiple human-specified dimensions. Across four real-world and two simulated long-horizon manipulation tasks, FPL improves over sparse-reward and binary-preference methods by 38 percentage points. Beyond improved performance, FPL learns dense progress signals without explicit subtask segmentation, shows compositionality of behavior not present in the data, and allows users to steer the policy towards different behaviors at test time without retraining. Blog post with videos available at https://freeform-pl.github.io/fpl.website/",
-          "url": "https://arxiv.org/abs/2606.32027v3",
-          "pdf_url": "https://arxiv.org/pdf/2606.32027v3",
-          "published": "2026-06-30T17:54:02Z",
-          "updated": "2026-08-01T01:25:23Z",
-          "categories": [
-            "cs.RO",
-            "cs.AI",
-            "cs.LG"
-          ],
-          "primary_category": "cs.RO"
         }
       ]
     },
@@ -5619,6 +5609,24 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2608.17496v1",
+          "title": "Calibrated Predictive Safety for Heterogeneous Robots: An Action-Conditioned JEPA Framework with Model-Based Safety Shields",
+          "authors": [
+            "Kaiming Zhong",
+            "Tianhua Liu",
+            "Yue Wang"
+          ],
+          "abstract": "Vision-language-action policies generalize broadly but provide no execution-time guarantees; classical model-based planners respect kinematic and geometric constraints but generalize poorly. We study whether an action-conditioned Joint-Embedding Predictive Architecture (JEPA) world model can predict, before execution, both task progress and physical risk for candidate action chunks, and whether coupling these predictions to an embodiment-specific model-based safety shield yields a deployable pipeline for heterogeneous robots. We propose a receding-horizon decision pipeline: (1) a proposer produces K candidate action chunks; (2) an action-conditioned JEPA rolls each candidate forward in a frozen-encoder latent space conditioned on an embodiment embedding; (3) calibrated risk and progress heads score each rollout and report uncertainty; (4) a deterministic per-embodiment safety shield filters inadmissible candidates; (5) a fallback ladder handles empty-admissible-set cases. The learned ranking only reorders admissible candidates; enforcement guarantees come from the deterministic shield and fallback ladder. We evaluate with a pre-registered protocol in simulation (LIBERO-Long). In 600-episode configurations the full framework improved success over a shield-only baseline and reduced collision false negatives at matched recall. Deployment-efficiency measurements on target on-robot and edge accelerators are included. Real-robot experiments and an offline reranking significance test remain future work; see the paper for disclosures.",
+          "url": "https://arxiv.org/abs/2608.17496v1",
+          "pdf_url": "https://arxiv.org/pdf/2608.17496v1",
+          "published": "2026-08-18T08:24:08Z",
+          "updated": "2026-08-18T08:24:08Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2608.07333v1",
           "title": "When GNNs Fail: Quantifying and Overcoming Temporal Correlation Volatility in Time Series",
           "authors": [
@@ -5714,36 +5722,6 @@
             "cs.CV"
           ],
           "primary_category": "cs.AI"
-        },
-        {
-          "id": "2607.27670v2",
-          "title": "JigShape: Evaluating Visual-Geometric Reasoning in VLMs through Jigsaw Puzzles",
-          "authors": [
-            "Shawn Li",
-            "Wei Yang",
-            "Jike Zhong",
-            "Jiate Li",
-            "Jiawei Yang",
-            "You Qin",
-            "Ryan Rossi",
-            "Franck Dernoncourt",
-            "Roger Zimmermann",
-            "Yue Wang",
-            "Zhengzhong Tu",
-            "Vicente Ordonez",
-            "Mohit Bansal",
-            "Yue Zhao"
-          ],
-          "abstract": "Jigsaw puzzle solving requires jointly reasoning about visual content and geometric constraints, yet existing benchmarks use rectangular cuts that create ambiguous ground truth in texture-repeated regions. We introduce \\textit{\\ours{}}, a benchmark with tab-and-blank interlocking pieces where geometric constraints provide strong local compatibility requirements that, combined with visual content, yield unambiguous ground truth. Across 95K instances at four grid densities (4$\\times$4 to 16$\\times$16), we find that \\textbf{zero-shot VLMs largely lack geometric reasoning}: only one of five frontier models (GPT-5.5) exceeds random baseline on 4$\\times$4 puzzles, while all others perform at chance level. While supervised fine-tuning achieves $>$97\\% on 4$\\times$4, \\textbf{all models collapse on larger grids}: GPT-5.5 drops from 70\\% to near-random on 8$\\times$8, and even fine-tuned models fall below 5\\% on 12$\\times$12. This ``scaling cliff'' suggests current architectures cannot maintain consistent constraint satisfaction as the number of pieces increases. \\ours{} establishes scalable geometric reasoning as an open challenge for vision-language models.",
-          "url": "https://arxiv.org/abs/2607.27670v2",
-          "pdf_url": "https://arxiv.org/pdf/2607.27670v2",
-          "published": "2026-07-30T04:34:27Z",
-          "updated": "2026-08-04T01:34:33Z",
-          "categories": [
-            "cs.CV",
-            "cs.AI"
-          ],
-          "primary_category": "cs.CV"
         }
       ]
     },

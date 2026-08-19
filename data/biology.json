@@ -2,9 +2,159 @@
   "category": "biology",
   "name": "Biology Research",
   "description": "Quantitative Biology \u2014 Genomics, Biophysics, Neuroscience",
-  "scraped_at": "2026-08-18T08:46:42.963178+00:00",
+  "scraped_at": "2026-08-19T08:46:49.192241+00:00",
   "paper_count": 10,
   "papers": [
+    {
+      "id": "2608.17955v1",
+      "title": "Mathematical modelling of immune persistence and relapse pathways in CAR T-cell therapy for B-ALL",
+      "authors": [
+        "Alexis Farman",
+        "Benjamin J. Walker",
+        "Martin A. Pule",
+        "Karen M. Page"
+      ],
+      "abstract": "Chimeric antigen receptor (CAR) T-cell therapy has transformed the treatment of B-cell acute lymphoblastic leukaemia (B-ALL). Despite high initial response rates, a substantial fraction of patients relapse, often due to loss of CAR T-cell persistence, antigen escape, or immune-privileged sites that shield tumour cells. Prolonged CAR T-cell persistence is clinically associated with durable remission, but why it is required remains poorly understood. To address this, we develop and analyse the BEAM (Blast, Effector, Activated, Memory) model of CAR T-cell dynamics in B-ALL. BEAM extends predator--prey models with three CAR T-cell states (memory, activated, effector) coupled to a logistic growth equation for the blasts, calibrated against the FELIX trial of obecabtagene autoleucel in adult B-ALL. We find that both memory and effector persistence prevent relapse, but for distinct reasons: memory persistence sustains surveillance against low-burden or slowly proliferating residual disease, while effector persistence clears isolated blasts emerging from immune-privileged sites. The model further predicts a trade-off between immediate cytotoxicity and durable surveillance, and identifies initial tumour burden as a key modifiable factor for reducing antigen-negative relapse. Together, these results offer a framework for designing more durable, individually tailored CAR T-cell therapies.",
+      "url": "https://arxiv.org/abs/2608.17955v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.17955v1",
+      "published": "2026-08-18T16:09:02Z",
+      "updated": "2026-08-18T16:09:02Z",
+      "categories": [
+        "q-bio.PE"
+      ],
+      "primary_category": "q-bio.PE"
+    },
+    {
+      "id": "2608.17759v1",
+      "title": "Recovering protein conformations from single-particle cryo-EM data via indirect shape matching gradient flows",
+      "authors": [
+        "Erik Jansson",
+        "Jonathan Krook",
+        "Ozan \u00d6ktem",
+        "Carola-Bibiane Sch\u00f6nlieb"
+      ],
+      "abstract": "Single-particle cryo-electron microscopy images a macromolecule as many noisy tomographic projections of its electrostatic potential. We reconstruct the protein backbone directly from such projections, as an atomic point cloud, without the intermediate step of reconstructing the 3D electrostatic potential map. We formulate this as an indirect shape matching problem: a point-cloud template of the backbone is deformed until its simulated projections agree with the data, with the structure observed only through the imaging operator. The deformation is computed via a gradient flow on a Lie group, and we derive the resulting framework in a general geometric setting before adapting it for single-particle cryo-electron microscopy. On synthetic data, we recover single- and multichain proteins and capture conformational transitions.",
+      "url": "https://arxiv.org/abs/2608.17759v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.17759v1",
+      "published": "2026-08-18T13:22:09Z",
+      "updated": "2026-08-18T13:22:09Z",
+      "categories": [
+        "q-bio.BM",
+        "math.DG",
+        "math.OC"
+      ],
+      "primary_category": "q-bio.BM"
+    },
+    {
+      "id": "2608.17699v1",
+      "title": "An information-theoretic perspective on feed-forward loop abundances in transcriptional networks",
+      "authors": [
+        "Mintu Nandi",
+        "Sudip Chattopadhyay",
+        "Suman K Banik"
+      ],
+      "abstract": "Biological networks feature recurring motifs, but their uneven abundance remains poorly understood. Feed-forward loops (FFLs) are important motifs in the transcriptional networks of \\textit{Escherichia coli} and \\textit{Saccharomyces cerevisiae}, yet their eight types appear in highly unequal frequencies. This study presents an information-theoretic framework that decomposes input-output mutual information into pathway and interference components. The interference mutual information (IMI) quantifies the joint influence of direct and indirect regulatory pathways on information transmission. Our results show that IMI closely follows the observed abundance patterns in both organisms, whereas the input-output mutual information and the pathway component do not. We also trace the IMI hierarchy to the strength of pathway-interference interactions and local pathway sensitivities. Notably, a stronger IMI is also associated with reduced robustness to parameter variation, suggesting a trade-off between information processing and resilience in gene regulatory circuits. Our results, thus, identify a topology-dependent information-theoretic feature that relates to the abundance patterns.",
+      "url": "https://arxiv.org/abs/2608.17699v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.17699v1",
+      "published": "2026-08-18T12:19:16Z",
+      "updated": "2026-08-18T12:19:16Z",
+      "categories": [
+        "physics.bio-ph",
+        "cond-mat.stat-mech",
+        "q-bio.MN"
+      ],
+      "primary_category": "physics.bio-ph"
+    },
+    {
+      "id": "2608.17381v1",
+      "title": "Leveraging generative hallucination and biophysics-informed modeling for unified biomolecular sequence-structure co-design",
+      "authors": [
+        "Xuefeng Liu",
+        "Mingxuan Cao",
+        "Xiao Luo",
+        "Songhao Jiang",
+        "Tobin Sosnick",
+        "Jinbo Xu",
+        "Louis Maher",
+        "Rick Stevens"
+      ],
+      "abstract": "Biomolecular design underpins applications from molecular recognition to therapeutics and synthetic biology, yet de novo interaction design remains challenging-especially for DNA/RNA, underexplored non-protein modalities with scarce, heterogeneous complex data and sharper geometric and chemical constraints. We introduce MCTH (Monte Carlo Tree Hallucination), an inference-only framework that casts all-atom sequence-structure co-design as uncertainty-aware planning over hallucinated states from pretrained folding and inverse-folding models, with optional biophysical control within the same decision loop. MCTH treats these models as frozen black-box operators and uses Monte Carlo Tree Search to allocate a fixed inference budget across competing design trajectories, incorporating model confidence and uncertainty, as well as cross-expert consensus/disagreement when multiple predictors are available. Across protein-RNA, protein-DNA, protein-protein, and protein-ligand design, matched-budget experiments show that adaptive search improves over simpler sampling and cycling strategies, while held-out AlphaFold3 and Chai-1 evaluations demonstrate transfer beyond the search-time oracle. MCTH provides a shared planning layer across modalities while allowing task-specific folding, inverse-folding, and biophysical modules, requiring no fine-tuning or backpropagation through component models.",
+      "url": "https://arxiv.org/abs/2608.17381v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.17381v1",
+      "published": "2026-08-18T05:16:41Z",
+      "updated": "2026-08-18T05:16:41Z",
+      "categories": [
+        "q-bio.QM",
+        "cs.AI",
+        "cs.LG",
+        "q-bio.BM"
+      ],
+      "primary_category": "q-bio.QM"
+    },
+    {
+      "id": "2608.17228v1",
+      "title": "scDNM-VAE enables directly inspectable deep clustering of single-cell RNA-seq data through signed dendritic gating",
+      "authors": [
+        "Melih Agraz",
+        "Deniz Karapinar",
+        "Aysel Topsir",
+        "Qianying Cao",
+        "Erol Egrioglu",
+        "Gaurav Choudhary"
+      ],
+      "abstract": "Deep clustering models for single-cell RNA sequencing often assign cells through latent or centroid-based mechanisms that are difficult to inspect. We introduce scDNM-VAE (single-cell Dendritic Neuron Model Variational Autoencoder), a deep clustering framework that combines a variational autoencoder with a dendritic neuron-inspired head. Cluster assignments are governed by learnable signed synaptic weights and thresholds: the weight sign determines the direction of a gate's response to a latent coordinate, its magnitude controls steepness, and the weight-threshold pair determines the transition location. The trained clustering function can therefore be inspected directly without fitting a post-hoc explanation model. We benchmark scDNM-VAE on four datasets spanning immune, cortical, cardiac, and hematopoietic cells against scVI followed by KMeans and an MLP-DEC ablation. scDNM-VAE performs better than scVI on PBMC3k, comparably on the Human Heart Cell Atlas and Paul15, and worse on Zeisel, while producing biologically coherent marker-gene signatures. Ablating each cluster's three highest-magnitude synaptic dimensions causes numerically greater reassignment than random-dimension ablation across all datasets, but the margins are modest and negligible on Zeisel. These results show that signed dendritic gating supports competitive clustering with a parameter-inspectable decision function, while indicating that decision-relevant information is distributed across the latent space.",
+      "url": "https://arxiv.org/abs/2608.17228v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.17228v1",
+      "published": "2026-08-18T00:33:42Z",
+      "updated": "2026-08-18T00:33:42Z",
+      "categories": [
+        "q-bio.QM",
+        "q-bio.GN"
+      ],
+      "primary_category": "q-bio.QM"
+    },
+    {
+      "id": "2608.17196v1",
+      "title": "Phase-based spatial ordinal patterns for characterizing oscillatory dynamics",
+      "authors": [
+        "Robison J. Santos-Silva",
+        "Bruno R. R. Boaretto",
+        "Thiago L. Prado",
+        "Roberto C. Budzinski"
+      ],
+      "abstract": "The emergence of organized spatiotemporal patterns is ubiquitous in oscillatory systems, from neural populations to engineered networks. Identifying these patterns and tracking how they evolve over time remains challenging, particularly when systems exhibit transient dynamics. Here, we introduce a framework based on spatial ordinal patterns to characterize the spatiotemporal dynamics of oscillatory systems. Our approach acts directly on the phase rather than the amplitude, with additional patterns introduced to account for near-equal phases. This symbolic representation encodes local spatial ordering relations, capturing both phase gradients and synchronized clusters within a single framework. From this construction, we define a spatial permutation entropy that quantifies the diversity of spatiotemporal patterns at each point in time, enabling the detection of transient dynamics and regime transitions as they occur. We show that this approach distinguishes phase-locked states with identical levels of global synchronization but distinct spatial organization and also characterizes partially synchronized states. We demonstrate the method on synthetic oscillator networks across multiple spatiotemporal regimes, and on resting-state EEG recordings from human volunteers, where it distinguishes different conditions within individual volunteers.",
+      "url": "https://arxiv.org/abs/2608.17196v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.17196v1",
+      "published": "2026-08-17T23:20:05Z",
+      "updated": "2026-08-17T23:20:05Z",
+      "categories": [
+        "nlin.AO",
+        "q-bio.NC"
+      ],
+      "primary_category": "nlin.AO"
+    },
+    {
+      "id": "2608.17179v1",
+      "title": "Dormancy stabilizes non-transitive competitive dynamics",
+      "authors": [
+        "Jos\u00e9 Chac\u00f3n",
+        "Adri\u00e1n Gonz\u00e1lez-Casanova",
+        "Imanol Nu\u00f1ez",
+        "Rafael Pe\u00f1a-Miller",
+        "Jos\u00e9 Luis P\u00e9rez",
+        "Johnny Yang"
+      ],
+      "abstract": "Competitive interactions can maintain diversity, yet coexistence is often fragile in well-mixed populations, where stochastic fluctuations can lead to extinction. This is the case in non-transitive systems, such as rock-paper-scissors dynamics, where no single type dominates globally. While spatial structure can stabilize these systems by providing refuges in space, it remains unclear whether analogous mechanisms can operate in time in well-mixed environments. Here, we develop a population-genetic framework showing that dormancy can act as a temporal refuge, preserving lineages and preventing collapse to fixation under interaction-driven fluctuations. We introduce a discrete-time Wright-Fisher model that combines generalized seed-banks with frequency-dependent interactions, allowing individuals to inherit their type from potential parents sampled across multiple past generations. This construction provides a tractable framework in which dormancy stores and later reintroduces lost types. In the case of either weak or moderate selection, we prove a multidimensional diffusion limit for the resulting type-frequency process and use it to analyze complex selective interactions. In non-transitive systems, dormancy stabilizes trajectories that would otherwise collapse through stochastic extinction, extends fixation times, and sustains coexistence. These effects cannot be explained solely by an increase in effective population size. Our results show that dormancy introduces temporal memory that qualitatively alters competitive dynamics, stabilizing otherwise fragile systems and enabling long-term coexistence.",
+      "url": "https://arxiv.org/abs/2608.17179v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.17179v1",
+      "published": "2026-08-17T22:41:51Z",
+      "updated": "2026-08-17T22:41:51Z",
+      "categories": [
+        "q-bio.PE",
+        "math.PR"
+      ],
+      "primary_category": "q-bio.PE"
+    },
     {
       "id": "2608.16845v1",
       "title": "Complete characterization of the sign of the wave speed in the symmetric Lotka-Volterra system under strong competition",
@@ -56,144 +206,6 @@
         "q-bio.NC"
       ],
       "primary_category": "q-bio.NC"
-    },
-    {
-      "id": "2608.16134v1",
-      "title": "Multi-Feature Riemannian Hypergraph for Online Test-Time Adaptation of Motor Imagery Brain-Computer Interface",
-      "authors": [
-        "Siqi Li",
-        "Zhi Li",
-        "Tong Liu",
-        "Shuai Zhang",
-        "Yanfei Jia",
-        "Zhiqiang Yi",
-        "Jue Xie",
-        "Ni Ji"
-      ],
-      "abstract": "In clinical motor imagery brain-computer interface (MI-BCI) decoding, cross-day transferability and online operation remain two critical challenges. Hypergraphs can improve transferability by capturing higher-order sample relationships, yet existing hypergraph-based methods for online emotion recognition neglect the cross-day benefits of Riemannian geometry widely adopted in EEG transfer learning. To bridge this gap, we propose the Multi-feature Riemannian Hypergraph (MRieHy), a framework tailored for online test-time adaptation in MI-BCI decoding that leverages Riemannian geometry to strengthen cross-day transferability. MRieHy first computes Riemannian means of covariance matrices from cross-day training data to align multi-day distributions. It then constructs a hypergraph over covariance matrices using Riemannian distance, complemented by a second hypergraph over deep features built with cosine similarity. The two hypergraphs are fused via adaptively learned combination weights, jointly optimized with the label projection matrices. During online testing, MRieHy maintains a first-in-first-out buffer of recent samples, performs Riemannian alignment on the buffered data, and decodes with the learned hypergraph. Extensive experiments on a private four-class ECoG dataset and two public four-class EEG datasets validate that MRieHy achieves notable performance gains over state-of-the-art baselines.",
-      "url": "https://arxiv.org/abs/2608.16134v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.16134v1",
-      "published": "2026-08-17T05:41:34Z",
-      "updated": "2026-08-17T05:41:34Z",
-      "categories": [
-        "cs.LG",
-        "cs.HC",
-        "eess.SP",
-        "q-bio.NC"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2608.15926v1",
-      "title": "A Control-Theoretic Formulation of Global Workspace Theory",
-      "authors": [
-        "Ryota Kanai"
-      ],
-      "abstract": "Global workspace theory explains conscious access as the broadcasting of selected information to the rest of the network, but it lacks a formal criterion for identifying the mechanism that enables this access. We propose that a global workspace is a mediator, namely, a subnetwork that receives activity from distributed systems, transforms it through internal modes, and returns differentiated effects to the broader network. We formalize this claim as the Global Mediation Workspace (GMW), a control-theoretic formulation in which a candidate subnetwork is treated as an open system embedded in the remainder of the network. In this framework, reachability characterizes how the remainder can drive the candidate, observability characterizes how candidate states affect the remainder, and a boundary Hankel operator identifies the internal modes linking the two directions. The resulting signature quantifies mediation capacity, input-output alignment, effective dimensionality, and routed source-target breadth, each of which characterizes different components of global workspace. In synthetic benchmarks, we tested whether the signature can distinguish a planted differentiated mediator from dense hubs, one-sided receivers or broadcasters, and a split read/write aggregate with no common internal route. A nonlinear extension characterizes mediation through trajectory-conditioned differential operators, finite-amplitude response profiles, and state-dependent coalitions. As a preliminary application, we estimated the signature from ECoG recordings in four macaques under ketamine anesthesia. We found that input-output alignment was reduced during unconsciousness whereas potential capacity was increased. The GMW thus provides a formal and testable criterion for locating candidate global workspaces in neural recordings and for asking which aspects of mediation is crucial for conscious access.",
-      "url": "https://arxiv.org/abs/2608.15926v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.15926v1",
-      "published": "2026-08-16T20:39:20Z",
-      "updated": "2026-08-16T20:39:20Z",
-      "categories": [
-        "q-bio.NC",
-        "cs.NE"
-      ],
-      "primary_category": "q-bio.NC"
-    },
-    {
-      "id": "2608.15449v1",
-      "title": "The effect of the excitatory feedback in anticipated synchronization and phase bistability regimes in neuronal populations",
-      "authors": [
-        "Julio N. Machado",
-        "Joana M. G. L. Silva",
-        "Katiele V. Brito",
-        "Rodrigo Pena",
-        "Fernanda Selingardi Matias"
-      ],
-      "abstract": "Anticipated synchronization (AS), in which the receiver leads the sender and the phase lag is negative, can emerge in unidirectionally coupled dynamical systems when the receiver has faster internal dynamics than the sender. In cortical-like population models, AS and bistability between AS and delayed synchronization (DS) have been reported mainly in unidirectional motifs and have been proposed as possible explanations for phase relations observed in electrophysiological recordings. Because cortical areas are often connected bidirectionally, it is important to understand how excitatory feedback from the receiver to the sender affects the emergence and persistence of anticipatory synchronization and phase-bistable regimes. Here, we investigate the effect of the excitatory feedback on the phase relations between two cortical-like neuronal populations. We show that AS and phase bistability are not restricted to strictly unidirectional architectures, but remain robust in the presence of reciprocal coupling. In addition, we find that the transition from AS to DS can occur through different routes within the same motif, either via a bistable regime or via zero-lag synchronization, depending on the inhibitory coupling. More generally, the model exhibits a rich repertoire of phase relations, including: positive, negative, and zero-lag phase-lockings, as well as phase bistability, and phase-drift regimes. These results are consistent with the diversity of phase relations reported in electrophysiological experiments and suggest that fixed structural connectivity may support rapid reconfiguration of functional dynamics without requiring structural rewiring.",
-      "url": "https://arxiv.org/abs/2608.15449v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.15449v1",
-      "published": "2026-08-15T23:45:10Z",
-      "updated": "2026-08-15T23:45:10Z",
-      "categories": [
-        "q-bio.NC",
-        "physics.bio-ph"
-      ],
-      "primary_category": "q-bio.NC"
-    },
-    {
-      "id": "2608.15418v1",
-      "title": "Head Impact Characterization and Cellular Response of a Live-neuron cell-integrated Biomechanical Full-body Surrogate Model",
-      "authors": [
-        "Raisa Akhtaruzzaman",
-        "Mohammad Ibrahim Hossain",
-        "Rahid Zaman",
-        "Ashfaq Adnan"
-      ],
-      "abstract": "In this study, we develop a novel integrated framework that links the impact response with cellular dynamics using a live-neuron cell-integrated biomechanical full-body surrogate model. The impact event is simulated by allowing the surrogate model to fall from controlled seated release angles of 30-degree, 60-degree, and 90-degree. Three vertically stacked cell-culture Petri dishes, each containing live SH-SY5Y neuroblastoma cells, were placed inside the head of a commercially available surrogate model. The dynamic response of the impact event was evaluated using acceleration measurements from six accelerometers, comprising three sensors mounted on the head surface and three embedded in series with the cell stacks, along with kinematic measurements of the fall and deformation of the head model. In parallel, an OpenSim-based modified musculoskeletal model was used to simulate the fall experiment. We found that variation in contact stiffness produced the largest change in the predicted head acceleration in the simulation. When the cellular response and the measured accelerations are compared, oxidative stress and cell viability showed trends consistent with the regional acceleration and angle of fall. At the 90-degree fall, where median peak linear accelerations ranged from 170-258g, and the maximum headform deformation was approximately 9.4 mm, oxidative stress increased to approximately twice that of the control sample. We also quantified the cellular drift of SH-SY5Y cells, which is focal in nature for the 90-degree impact condition. The corresponding fall scenarios were also simulated in OpenSim and a preliminary calibration relationship was developed to compare the kinematic responses of the physical surrogate and musculoskeletal model. Finally, the framework provides a basis for relating experimental surrogate measurements to human head-neck response during impact.",
-      "url": "https://arxiv.org/abs/2608.15418v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.15418v1",
-      "published": "2026-08-15T21:37:30Z",
-      "updated": "2026-08-15T21:37:30Z",
-      "categories": [
-        "q-bio.TO",
-        "q-bio.NC"
-      ],
-      "primary_category": "q-bio.TO"
-    },
-    {
-      "id": "2608.15356v1",
-      "title": "Stochastic Pharmacokinetic Escape: A Field-Theoretic Approach to Fluctuation-Induced Tumor Relapse",
-      "authors": [
-        "Jose de Jesus Bernal-Alvarado",
-        "David Delepine",
-        "Georges Delepine"
-      ],
-      "abstract": "Classical mathematical oncology employs deterministic mean-field models predicting that sufficiently high chemotherapy doses drive tumor density to zero. We show that this apparent cure is an artifact of neglecting demographic fluctuations. We construct a nonequilibrium stochastic PK-PD field theory combining a two-compartment pharmacokinetic model with a stochastic tumor-immune sector in the Doi-Peliti formalism, then map it to coupled multiplicative Langevin equations via the Martin-Siggia-Rose/Janssen-De Dominicis approach. In immune-depleted sanctuary sites, the dynamics reduce to a time-dependent Feller diffusion whose Fokker-Planck equation yields an analytical survival functional: demographic noise implies a strictly nonzero relapse probability for tumor micro-clusters under high-dose chemotherapy. Standard bolus administration acts as a nonselective annihilation process, driving immune fields into an absorbing state and creating a spatially immune-depleted vacuum that enables fluctuation-induced relapse -- Stochastic Pharmacokinetic Escape. We derive quantitative conditions under which metronomic dosing and adjuvant immunotherapy suppress this stochastic window of vulnerability. A model-agnostic analysis of 1461 longitudinal patient records shows that the majority of evaluable lesions exhibit a nadir followed by measurable regrowth rather than monotonic elimination; fitting the model's drift functional to these trajectories reproduces this pattern quantitatively, and a direct test of the predicted demographic-noise scaling law reveals size-dependent noise largest at the smallest observed tumor volumes, consistent with the proposed mechanism.",
-      "url": "https://arxiv.org/abs/2608.15356v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.15356v1",
-      "published": "2026-08-15T18:24:15Z",
-      "updated": "2026-08-15T18:24:15Z",
-      "categories": [
-        "q-bio.PE",
-        "q-bio.QM"
-      ],
-      "primary_category": "q-bio.PE"
-    },
-    {
-      "id": "2608.15320v1",
-      "title": "Growth-Induced Transitions in Viscoelastic Matter",
-      "authors": [
-        "Valentin Slepukhin",
-        "Oskar Hallatschek"
-      ],
-      "abstract": "Growth is a fundamental process in living systems. Although the stress-deformation response of growing materials is often described as either purely elastic or purely viscous, many biological tissues, from biofilms to tumors, exhibit both elastic and viscous behavior. Here, we show that this viscoelastic response can crucially control the mechanics of proliferating matter when the growth rate becomes comparable to the rate of stress relaxation. Focusing first on the prototypical case of a growing elastic beam, we find that the dynamics are governed by a single dimensionless parameter, $g \u03c4$, where $g$ is the growth rate and $\u03c4$ is the viscoelastic relaxation time. While the limits $g \u03c4\\to 0$ and $g \u03c4\\to \\infty$ recover purely viscous and purely elastic behavior, respectively, the intermediate regime is not merely a smooth crossover between them. Instead, qualitatively new dynamics emerge at $g \u03c4\\sim 1$, including rapid transitions between metastable states that occur in neither limiting regime. We then develop a general, growth-compatible theoretical framework in which unconstrained growth is intrinsically stress-free, extending the analysis to other prototypical geometries and enabling simulations of more realistic growing biological materials. Within this framework, sharp mechanical transitions arise when stress generated by exponential growth accumulates faster than it can be dissipated by viscoelastic relaxation.",
-      "url": "https://arxiv.org/abs/2608.15320v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.15320v1",
-      "published": "2026-08-15T16:56:35Z",
-      "updated": "2026-08-15T16:56:35Z",
-      "categories": [
-        "cond-mat.soft",
-        "q-bio.PE"
-      ],
-      "primary_category": "cond-mat.soft"
-    },
-    {
-      "id": "2608.15278v1",
-      "title": "Phylogeny-based metrics of biodiversity: concepts and methods",
-      "authors": [
-        "Kristina Wicke",
-        "Arne Mooers"
-      ],
-      "abstract": "The concept of valuing evolutionary history has a long tradition and was formalized by several research groups in the early 1990s, each aiming to capture the products of evolution more comprehensively than species richness alone. Preserving the \"Tree of Life\" has since become a central, if sometimes contested, goal in conservation biology. Faith's phylogenetic diversity (PD), defined as the sum of the edge lengths of a rooted tree connecting a set of focal entities, is the most widely used metric in this context and underpins an extensive methodological framework. This framework includes widely used species-specific indices such as EDGE, as well as approaches that quantify expected species-specific contributions to PD such as EDGE2. This chapter focuses on the development of this framework of phylogeny-based conservation metrics. We review the development of species-specific indices, highlighting their strengths and limitations, and trace their progression from simple formulations to game-theoretic approaches and more abstract generalizations. We also discuss how these indices are applied in conservation practice, with particular emphasis on the EDGE framework. We further discuss the relationship between the edge lengths of a phylogeny and the evolutionary features they are intended to represent. Finally, we highlight recent advances in the field and identify areas for future research.",
-      "url": "https://arxiv.org/abs/2608.15278v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.15278v1",
-      "published": "2026-08-15T15:20:24Z",
-      "updated": "2026-08-15T15:20:24Z",
-      "categories": [
-        "q-bio.PE"
-      ],
-      "primary_category": "q-bio.PE"
     }
   ]
 }
