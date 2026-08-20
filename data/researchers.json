@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-08-19T08:51:51.538920+00:00",
+  "scraped_at": "2026-08-20T08:53:50.123240+00:00",
   "researcher_count": 54,
   "researchers": [
     {
@@ -1845,7 +1845,7 @@
       "paper_count": 5,
       "papers": [
         {
-          "id": "2608.15938v1",
+          "id": "2608.15938v2",
           "title": "Revisiting Open-Loop Execution in Robotics: Toward Reactive, Higher-Performing Policies",
           "authors": [
             "Michael Zeng",
@@ -1856,10 +1856,10 @@
             "Russ Tedrake"
           ],
           "abstract": "Action chunking --- the practice of predicting a sequence of actions and executing a prefix open-loop --- has emerged as a key enabler of recent progress in imitation learning for robotic manipulation. However, executing long open-loop prefixes reduces reactivity, limiting policies' ability to correct for errors. Further, the mechanisms underlying these performance benefits remain poorly understood: prior works cite mitigating compounding errors, absorbing inference latency, or smoothing motions, but provide limited controlled evidence or guidance for preserving reactivity. In this work, we argue that long open-loop execution primarily helps short-context policies imitate \"non-Markovian demonstrations\". Across four simulation and two real-world tasks, we show that expert non-Markovianity strongly shapes the relationship between task success and open-loop execution horizon. Further, we investigate the impact of compounding errors --- the prevailing explanation for long open-loop execution in prior work --- and find that while they matter, expert non-Markovianity has a much stronger impact in our experimental setting. Finally, we show that when policies are provided with a sufficiently long context, open-loop execution is no longer beneficial and the most reactive, closed-loop policies perform best. While imitation learning has seen great success using long open-loop execution, our findings motivate long-context, reactive policies as a more principled and performant paradigm.",
-          "url": "https://arxiv.org/abs/2608.15938v1",
-          "pdf_url": "https://arxiv.org/pdf/2608.15938v1",
+          "url": "https://arxiv.org/abs/2608.15938v2",
+          "pdf_url": "https://arxiv.org/pdf/2608.15938v2",
           "published": "2026-08-16T21:49:07Z",
-          "updated": "2026-08-16T21:49:07Z",
+          "updated": "2026-08-19T16:19:18Z",
           "categories": [
             "cs.RO"
           ],
@@ -3840,6 +3840,24 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2608.18227v1",
+          "title": "Revisiting the \"Push-T\" Robot Manipulation Task with Agentic Robotics",
+          "authors": [
+            "Shuangyu Xie",
+            "Kaiyuan Chen",
+            "Ken Goldberg"
+          ],
+          "abstract": "Push-T is an iconic benchmark for learning manipulation policies from human demonstrations. The robot must use a single point of contact to push a T-shaped block into a target pose. In this short paper, we revisit the Push-T task in the context of emerging advances in Agentic Robotics where an LLM coding agent -- Claude Code with Fable 5 -- is prompted to create an algorithmic solution that does not require any demonstration data. We study how effective the agentic coding loop can solve the Push-T task, and compare the resulting code as policy with the visuomotor imitation learning policy. Results suggest that the agent found the 2D gym simulation online, and used sim experiments to learn push mechanics, iteratively optimizing to achieve 100% success rate using 46% fewer steps than the best diffusion policy trained with 200 human demonstrations. The coding agent also solve extensions from T to the full alphabet (Push-A to Push-Z) using a self generated curriculum and generated simulation code for the Franka and UR5 robot arms in 3D cross-embodiment simulations with visual feedback. Videos, policies and details will be posted online.",
+          "url": "https://arxiv.org/abs/2608.18227v1",
+          "pdf_url": "https://arxiv.org/pdf/2608.18227v1",
+          "published": "2026-08-18T18:16:15Z",
+          "updated": "2026-08-18T18:16:15Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2607.05369v1",
           "title": "GaP: A Graph-as-Policy Multi-Agent Self-Learning Harness For Variational Automation Tasks",
           "authors": [
@@ -3962,38 +3980,6 @@
             "cs.RO"
           ],
           "primary_category": "cs.RO"
-        },
-        {
-          "id": "2606.19980v1",
-          "title": "ENPIRE: Agentic Robot Policy Self-Improvement in the Real World",
-          "authors": [
-            "Wenli Xiao",
-            "Jia Xie",
-            "Tonghe Zhang",
-            "Haotian Lin",
-            "Letian \"Max\" Fu",
-            "Haoru Xue",
-            "Jalen Lu",
-            "Yi Yang",
-            "Cunxi Dai",
-            "Zi Wang",
-            "Jimmy Wu",
-            "Guanzhi Wang",
-            "S. Shankar Sastry",
-            "Ken Goldberg",
-            "Linxi \"Jim\" Fan",
-            "Yuke Zhu",
-            "Guanya Shi"
-          ],
-          "abstract": "Achieving dexterous robotic manipulation in the real world heavily relies on human supervision and algorithm engineering, which becomes a central bottleneck in the pursuit of general physical intelligence. Although emerging coding agents can generate code to automate algorithm search, their successes remain largely confined in digital environments. We conjecture that the missing abstraction to automate robotics research is a repeatable feedback loop for real-world policy improvement: reset the scene, execute a policy, verify the outcome, and refine the next iteration. To bridge this gap, we introduce ENPIRE, a harness framework for coding agents that instantiates this physical feedback routine with four core modules: an Environment module (EN) for automatic reset and verification, a Policy Improvement module (PI) that launches policy refinement, a Rollout module (R) to evaluate policies with one or multiple physical robots operating in parallel, and an Evolution module (E) in which coding agents analyze logs, consult literature, improve training infrastructure and algorithm code to address failure modes. This closed-loop system transforms real-world manipulation learning into a controllable optimization procedure, minimizing human effort while allowing fair ablations across training recipe and agent variants. Powered by ENPIRE, frontier coding agents can autonomously train a policy to achieve a 99% success rate on challenging, dexterous manipulation tasks, such as organizing a pin box, fastening a zip tie, and tool use, a process that further accelerates when we dispatch an agent team on a robot fleet. Our results suggest a practical and scalable path toward deploying coding agents to autonomously advancing robotics in the physical world.",
-          "url": "https://arxiv.org/abs/2606.19980v1",
-          "pdf_url": "https://arxiv.org/pdf/2606.19980v1",
-          "published": "2026-06-18T09:21:27Z",
-          "updated": "2026-06-18T09:21:27Z",
-          "categories": [
-            "cs.AI"
-          ],
-          "primary_category": "cs.AI"
         }
       ]
     },
@@ -5609,6 +5595,32 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2608.18836v1",
+          "title": "Verifiable abstention makes AI leak diagnosis accountable in water distribution networks",
+          "authors": [
+            "Tianwei Mu",
+            "Yue Wang",
+            "Mingzhe Yuan",
+            "Manhong Huang",
+            "Wenhong Wang",
+            "Xuerui Yin",
+            "Qing Luo",
+            "Min Xiao",
+            "Hui Yang",
+            "Jun Li",
+            "Dan Xue"
+          ],
+          "abstract": "Utilities lose a substantial share of treated water to leakage, yet rarely trust artificial-intelligence localizers to dispatch crews: guessing everywhere cannot justify excavation. The gap is accountability, not accuracy: no method proves when it should not act. Here we recast leak localization as decision-making under verifiable abstention. A physics-grounded executor agent falsifies hypotheses (leak, demand, sensor, valve) against a digital twin; an independent supervisor agent, with a large-language-model (LLM) auditor, checks evidence against a code-verifiable contract, then certifies a dispatch, requests evidence or abstains. Under field-grade noise, a 32% forced baseline becomes 96% decision precision on acted events. On an independently generated benchmark it acts on only 4 of 33 leaks, all correct. A 194-event register of audited real leak locations with twin-simulated pressures and flows yields five excavation dispatches, three correct, and 44% survey recovery at full district precision. Accountable abstention offers a defensible route to autonomous water-infrastructure operation.",
+          "url": "https://arxiv.org/abs/2608.18836v1",
+          "pdf_url": "https://arxiv.org/pdf/2608.18836v1",
+          "published": "2026-08-19T11:54:27Z",
+          "updated": "2026-08-19T11:54:27Z",
+          "categories": [
+            "cs.AI"
+          ],
+          "primary_category": "cs.AI"
+        },
+        {
           "id": "2608.17496v1",
           "title": "Calibrated Predictive Safety for Heterogeneous Robots: An Action-Conditioned JEPA Framework with Model-Based Safety Shields",
           "authors": [
@@ -5690,38 +5702,6 @@
             "cs.LG"
           ],
           "primary_category": "cs.LG"
-        },
-        {
-          "id": "2607.28227v1",
-          "title": "Qwen-UI-Agent Technical Report: Toward Next-Generation Real-World Centric Foundation GUI Agents",
-          "authors": [
-            "Hanzhang Zhou",
-            "Panrong Tong",
-            "Xu Zhang",
-            "Quyu Kong",
-            "Chenglin Cai",
-            "Tianyu Xia",
-            "Gongjie Zhang",
-            "Jianan Zhang",
-            "Long Li",
-            "Long Chen",
-            "Lei Wang",
-            "Gaole Dai",
-            "Pengxiang Li",
-            "Liangyu Chen",
-            "Yue Wang",
-            "Steven Hoi"
-          ],
-          "abstract": "GUI agents have the potential to become a general purpose executor over existing digital devices. To advance them toward real-world use, we envision agents that operate reliably on real devices, execute workflows across platforms, combine GUI interaction with CLI execution, complete long-horizon tasks, proactively initiate useful services, and autonomously improve their capabilities with minimal human effort. Guided by this vision, we present Qwen-UI-Agent, a real-world centric foundation GUI agent spanning mobile, computer-use, web, and DeepSearch environments. Qwen-UI-Agent combines diverse sandbox environments with a large-scale real-device mobile runtime. Its unified action space interleaves GUI operations with CLI execution and generates batched actions in a single model turn. An AutoResearch-style data flywheel uses agents to construct tasks and environments, diagnose failures, and plan subsequent iterations. Online RL supports training on trajectories exceeding 100 turns, with over 10,000 concurrent environments accelerating rollout. A lightweight harness layer supports proactive service initiation and stateful workflows across mobile and computer. Across a broad suite of evaluations, Qwen-UI-Agent sets state-of-the-art performance on mobile-use benchmarks while delivering competitive performance on computer- and browser-use tasks against frontier models, including Opus 4.8, Gemini 3.1 Pro, and GPT-5.6 Sol. On mobile use, it achieves 82.1% on MobileWorld, 92.2% on MobileWorld-Real, and 97.5% on AndroidDaily. On computer use, it achieves 79.5% on OSWorld-Verified and a 40.0% partial-progress score on OSWorld-v2. On browser use and GUI grounding, it achieves 73.6% on WebArena and 81.5% on ScreenSpot-Pro, respectively.",
-          "url": "https://arxiv.org/abs/2607.28227v1",
-          "pdf_url": "https://arxiv.org/pdf/2607.28227v1",
-          "published": "2026-07-30T13:58:41Z",
-          "updated": "2026-07-30T13:58:41Z",
-          "categories": [
-            "cs.AI",
-            "cs.CV"
-          ],
-          "primary_category": "cs.AI"
         }
       ]
     },
