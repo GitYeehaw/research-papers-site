@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-08-23T08:44:06.968686+00:00",
+  "scraped_at": "2026-08-24T09:02:00.242282+00:00",
   "researcher_count": 54,
   "researchers": [
     {
@@ -3467,6 +3467,26 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2608.20518v1",
+          "title": "FL-MAESTRO: Multi-Agent LLM Orchestration for Resource-Constrained Federated Learning",
+          "authors": [
+            "Jiajun Wu",
+            "Zirui Wang",
+            "Jiayu Zhou",
+            "Qiang Ye",
+            "Steve Drew"
+          ],
+          "abstract": "In Federated Learning (FL), the communication topology is a runtime variable rather than a fixed design choice, since links and edge devices drop in and out during training. Each round, the server must commit three coupled decisions, namely the communication topology, per-client resource allocation, and the aggregation rule for combining local updates. Recent agentic systems have begun bringing large language models (LLM) into FL, but the existing line of work either operates at setup time or handles a single runtime dimension such as client selection. We propose FL-MAESTRO, a multi-agent orchestrator that makes the joint runtime FL decision directly through three specialist LLM agents, one per decision dimension. A coordinator combines their analyses into a single decision, and a non-LLM feasibility check confirms it before the round executes. Because the orchestrator consumes the server's predicted-failure list, it withholds clients whose updates would never be aggregated, which removes the dominant source of wasted round energy in classical FL on volatile edge networks. Because client state is read as natural-text profiles, the same orchestrator extends to heterogeneous device classes without per-class energy models. On a non-IID CIFAR-10 benchmark, FL-MAESTRO matches the accuracy of the strongest energy-aware baseline while cutting wasted round energy from over a third to near zero. Code is available at https://github.com/denoslab/FL-MAESTRO.",
+          "url": "https://arxiv.org/abs/2608.20518v1",
+          "pdf_url": "https://arxiv.org/pdf/2608.20518v1",
+          "published": "2026-08-20T19:27:52Z",
+          "updated": "2026-08-20T19:27:52Z",
+          "categories": [
+            "cs.AI"
+          ],
+          "primary_category": "cs.AI"
+        },
+        {
           "id": "2607.19343v1",
           "title": "Masked Visual Actions for Unified World Modeling",
           "authors": [
@@ -3557,38 +3577,6 @@
             "cs.AI",
             "cs.LG",
             "cs.RO"
-          ],
-          "primary_category": "cs.CV"
-        },
-        {
-          "id": "2606.27187v1",
-          "title": "HarmVideoBench: Benchmarking Harmful Video Understanding in Large Multimodal Models",
-          "authors": [
-            "Jiajun Wu",
-            "Haoyu Kang",
-            "Yining Sun",
-            "Jiacheng Hou",
-            "Heng Zhang",
-            "Danyang Zhang",
-            "Zhenjun Zhao",
-            "Haochi Zhang",
-            "Leixin Sun",
-            "Eric Hanchen Jiang",
-            "Yushan Li",
-            "Ruiyu Li",
-            "Mengkai Huang",
-            "Yan Gao",
-            "Xu Zhang",
-            "Guancheng Wan"
-          ],
-          "abstract": "Large vision-language models (LVLMs) have recently shown immense potential in automated content moderation, sparking growing interest in developing harmful-video benchmarks. However, we identify two primary limitations in existing works: 1) The multi-layered characteristics of harmful videos are overlooked. Existing benchmarks predominantly formulate evaluation as a binary classification task, failing to capture implicit or deep contextual harms. 2) Explanatory rationales are completely absent. Current frameworks measure exclusively whether a model flags a video correctly rather than explaining why, turning evaluation into a black box where models can succeed through superficial shortcuts. To address these problems, we present HarmVideoBench, a multi-layered diagnostic benchmark comprising 1,379 videos paired with 4,137 multiple-choice questions. HarmVideoBench benchmarks three hierarchical dimensions: Observable Evidence, Clip-Internal Meaning, and Beyond-Clip Reasoning, aiming to evaluate models' deep understanding beyond surface cues with carefully balanced and curated samples. We evaluate 19 leading models on HarmVideoBench to assess their multidimensional understanding of harmful videos. Moreover, we introduce BCR, a benchmark-aligned method that predicts reasoning boundaries and dynamically retrieves context only when needed. Experimental results show that BCR substantially improves the base model's performance in harmful video understanding, raising the macro average from 61.7 percent to a state-of-the-art 84.4 percent.",
-          "url": "https://arxiv.org/abs/2606.27187v1",
-          "pdf_url": "https://arxiv.org/pdf/2606.27187v1",
-          "published": "2026-06-25T15:50:33Z",
-          "updated": "2026-06-25T15:50:33Z",
-          "categories": [
-            "cs.CV",
-            "cs.CL"
           ],
           "primary_category": "cs.CV"
         }
@@ -5598,6 +5586,28 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2608.20556v1",
+          "title": "Logic-VLA: A Temporal Logic Conditioned Vision-Language-Action Model",
+          "authors": [
+            "Celina Shiyu Wang",
+            "Yiqi Zhao",
+            "Junjie Ye",
+            "Yue Wang",
+            "Jyotirmoy V. Deshmukh"
+          ],
+          "abstract": "Vision-language-action (VLA) models can follow natural-language (NL) task instructions, but such instructions may not precisely specify safety-critical or spatiotemporal requirements on the resulting behavior. We introduce Logic-VLA, a formal-requirement-aware VLA that conditions on Signal Temporal Logic (STL) specifications supplied at inference time. Logic-VLA uses a syntax-graph-based STL encoder pre-trained to capture temporal logic semantics. Policy adaptation proceeds in two stages: STL-conditioned supervised fine-tuning on satisfying demonstrations is followed by trajectory-level preference optimization over matched satisfying-violating rollout pairs using a flow-matching surrogate for Identity Preference Optimization. This formulation improves formal requirement satisfaction while preserving the nominal NL task. We evaluate Logic-VLA in closed-loop quadcopter navigation simulation across randomized photorealistic environments and test generalization to STL formulas unseen during training. Across the evaluation benchmarks, Logic-VLA improves STL satisfaction rate over an STL-blind base policy by 24.8 to 40.7 percentage points (pp) while reducing nominal NL task success by at most 1.8 pp, showing that a single VLA can adapt its behavior to varying formal requirements without requiring a separate policy for each specification.",
+          "url": "https://arxiv.org/abs/2608.20556v1",
+          "pdf_url": "https://arxiv.org/pdf/2608.20556v1",
+          "published": "2026-08-20T20:35:07Z",
+          "updated": "2026-08-20T20:35:07Z",
+          "categories": [
+            "cs.RO",
+            "cs.LO",
+            "eess.SY"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2608.19901v1",
           "title": "MaliciousSkillBench: A Comprehensive Benchmark for Malicious Agent Skill Detection",
           "authors": [
@@ -5681,23 +5691,6 @@
           "pdf_url": "https://arxiv.org/pdf/2608.07333v1",
           "published": "2026-08-07T15:28:45Z",
           "updated": "2026-08-07T15:28:45Z",
-          "categories": [
-            "cs.LG"
-          ],
-          "primary_category": "cs.LG"
-        },
-        {
-          "id": "2608.06520v1",
-          "title": "Online Security Learning in Cooperative Multi-Agent Systems under Hidden Byzantine Attacks",
-          "authors": [
-            "Ximing Sun",
-            "Yue Wang"
-          ],
-          "abstract": "We study online cooperative control of a multi-agent system under Byzantine attacks. Namely, an unknown, fixed subset of agents are Byzantine comprised and can stealthily overwrite its own coordinates of the team's planned joint action after observing that plan. The learner observes planned actions, public rewards, and public states, but neither the overwrite nor the executed joint action. Our objective is security: to optimize the team performance against the worst overwrites and achieve the optimal security value. We first show that the attacker's information determines the geometry. An attacker that observes the planned action induces an exact $(s,a)$-rectangular robust Markov decision process (MDP) whose rows are convex hulls of overwrite-induced public-outcome laws, whereas a blind attacker induces an $s$-rectangular model. We then identify the information-theoretic limit of security learning, showing that the security regret decomposes exactly into return regret against the response generating the data and a cumulative response gap $D_K$. Two indistinguishable horizon-one instances force $\u03a9(K)$ expected security regret while return regret is zero, showing that dependence on $D_K$ is unavoidable. Finally, we develop a stage-tied robust estimation-to-decisions learner and prove a regret bound of $\\widetilde{\\mathcal O}\\!\\left(H^2S\\sqrt{AK}\\right)+\\mathbb E[D_K]$. Our studies thus provide comprehensive theoretical and algorithmic foundations of reliable multi-agent systems under Byzantine attacks.",
-          "url": "https://arxiv.org/abs/2608.06520v1",
-          "pdf_url": "https://arxiv.org/pdf/2608.06520v1",
-          "published": "2026-08-06T19:03:49Z",
-          "updated": "2026-08-06T19:03:49Z",
           "categories": [
             "cs.LG"
           ],
@@ -5826,6 +5819,31 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2608.20740v1",
+          "title": "VisTa3D: A Dataset and Benchmark for Thin Object Reconstruction from Vision, Tactile, and 3D Point Clouds",
+          "authors": [
+            "Shania Guo",
+            "Yeongsik Seo",
+            "Andrew Fu",
+            "Mei Hao",
+            "Iris Xia",
+            "Jiwon Jenny Lee",
+            "Xinyi Mary Xie",
+            "Hyoungseob Park",
+            "Aaron Dollar",
+            "Alex Wong"
+          ],
+          "abstract": "State-of-the-art 3D reconstruction models, whether from visual, range, or both, tend to underperform on thin objects. This is partially due to the small amount of space such objects occupy in RGB images and in 3D point clouds. To test the extent of their errors, we collected the first thin object dataset comprising of synchronized RGB images, depth maps, and tactile response maps, where each frame is associated with inertial measurements, camera pose and calibration, and groundtruth depth and segmentation maps obtained from laser scanning of thin objects. We hypothesize that tactile data can aid in the reconstruction of thin objects as their response maps provide local shape and deformation information. Our dataset, termed VisTa3D, comprises of 387 scenes covering 70 thin objects over 17 environments. We benchmarked current 3D reconstruction models on VisTa3D and found that, indeed, they exhibit low fidelity on thin objects. To test if tactile data can help, we introduce the first visual-range-tactile 3D reconstruction model as a baseline. Code and data: https://huggingface.co/datasets/shaniaguo/VisTa3D.",
+          "url": "https://arxiv.org/abs/2608.20740v1",
+          "pdf_url": "https://arxiv.org/pdf/2608.20740v1",
+          "published": "2026-08-21T05:00:20Z",
+          "updated": "2026-08-21T05:00:20Z",
+          "categories": [
+            "cs.CV"
+          ],
+          "primary_category": "cs.CV"
+        },
+        {
           "id": "2607.22864v1",
           "title": "Spatial-IQ: Deconstructing Spatial Intelligence via Hierarchical Capability Tests",
           "authors": [
@@ -5918,27 +5936,6 @@
           "categories": [
             "cs.CV",
             "cs.CL"
-          ],
-          "primary_category": "cs.CV"
-        },
-        {
-          "id": "2603.28896v2",
-          "title": "Fisheye3R: Adapting Unified 3D Feed-Forward Foundation Models to Fisheye Lenses",
-          "authors": [
-            "Ruxiao Duan",
-            "Erin Hong",
-            "Dongxu Zhao",
-            "Eric Turner",
-            "Alex Wong",
-            "Yunwen Zhou"
-          ],
-          "abstract": "Feed-forward foundation models for multi-view 3-dimensional (3D) reconstruction have been trained on large-scale datasets of perspective images; when tested on wide field-of-view images, e.g., from a fisheye camera, their performance degrades. This degradation arises from changes in spatial arrangements of pixels induced by the non-linear projection model that maps 3D points onto the 2D image plane. While one may surmise that training on fisheye images would resolve this problem, there are far fewer fisheye images with ground truth than perspective images, which limits generalization. To enable inference on imagery exhibiting high radial distortion, we propose \\textit{Fisheye3R}, a novel adaptation framework that extends these multi-view 3D reconstruction foundation models to natively accommodate fisheye inputs without performance regression on perspective images. To address the scarcity of fisheye images and ground truth, we introduce flexible learning schemes that support self-supervised adaptation using only unlabeled perspective images and supervised adaptation without any fisheye training data. Extensive experiments across three foundation models, including VGGT, $\u03c0^3$, and MapAnything, demonstrate that our approach consistently improves camera pose, depth, point map, and field-of-view estimation on fisheye images. Code is available at https://github.com/android-xr/fisheye3r.",
-          "url": "https://arxiv.org/abs/2603.28896v2",
-          "pdf_url": "https://arxiv.org/pdf/2603.28896v2",
-          "published": "2026-03-30T18:18:56Z",
-          "updated": "2026-07-01T20:30:45Z",
-          "categories": [
-            "cs.CV"
           ],
           "primary_category": "cs.CV"
         }
