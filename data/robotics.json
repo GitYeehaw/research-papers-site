@@ -2,209 +2,232 @@
   "category": "robotics",
   "name": "Robotics Research",
   "description": "Robotics \u2014 Motion Planning, Control Systems, Human-Robot Interaction, Autonomous Systems",
-  "scraped_at": "2026-08-25T08:52:01.802628+00:00",
+  "scraped_at": "2026-08-26T08:53:25.212115+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2608.23491v1",
-      "title": "Stochastic Dynamics of Low Earth Orbit Near Full Capacity",
+      "id": "2608.24885v1",
+      "title": "Do Robotic World Models Really Follow Actions? Diagnosing and Aligning Action-Conditioned Generation for Policy Learning",
       "authors": [
-        "Priyank Behera",
-        "Aditya S. Gopalan",
-        "Harsha Honnappa"
-      ],
-      "abstract": "The capacity of Low Earth Orbit (LEO) to sustain space operations is under mounting pressure from megaconstellations, legacy fragmentation debris, and new payload classes. Existing assessments of orbital capacity and debris evolution are largely deterministic, tracking mean populations of intact satellites and fragments with ordinary differential equations; they cannot capture the inherent randomness of collisions, breakup sizes, and launch schedules. We develop a stochastic extension of the two-species Lotka--Volterra model of Bradley and Wein, formulated as a density-dependent Markov chain, and study its deterministic and stochastic scaling limits. Because intacts and fragments differ by many orders of magnitude, these limits emerge on distinct time-scales, and different pathways to a collisional Kessler cascade become visible only on the appropriate time horizon. On a fast intact time-scale we obtain an ODE approximation and a Gaussian SDE approximation; on an intermediate fragment time-scale we obtain an ODE approximation, a Gaussian SDE approximation, and the critical Kessler threshold, above which the ODE approximation runs away in Kessler syndrome. Crucially, on a third, slow time-scale at the critical threshold, the fragment count converges to a Feller diffusion, in which runaway is triggered purely by fluctuations rather than by the drift---an effect the ODE approximations and their Gaussian SDE approximations cannot see. Debris runaway may occur sooner, and with higher probability, than deterministic models predict: the intact population can appear well-behaved while fragments quietly accumulate risk. Constellation deployment, debris-removal investment, and slot allocation should account for these stochastic effects, and planning for runaway must depend on the variance of the collision dynamics, not on the mean alone.",
-      "url": "https://arxiv.org/abs/2608.23491v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.23491v1",
-      "published": "2026-08-24T16:54:26Z",
-      "updated": "2026-08-24T16:54:26Z",
-      "categories": [
-        "math.PR",
-        "eess.SY",
-        "physics.space-ph"
-      ],
-      "primary_category": "math.PR"
-    },
-    {
-      "id": "2608.23486v1",
-      "title": "GeoWAM: Visual Geometry World Action Models for Autonomous Driving",
-      "authors": [
-        "Yiren Lu",
-        "Xin Ye",
+        "Sixiang Chen",
         "Jiaming Liu",
-        "Jin Yao",
-        "Yi-chung Chen",
-        "Liam Merino",
-        "Dhruva Dixith Kurra",
-        "Min Cai",
-        "Tom Lampo",
-        "Yu Yin",
-        "Danhua Guo",
-        "Burhan Yaman"
+        "Jixian Wu",
+        "Yichen Guo",
+        "Tinghao Wang",
+        "Siyuan Qian",
+        "Hao Chen",
+        "Jiajun Cao",
+        "Jian Tang",
+        "Shanghang Zhang"
       ],
-      "abstract": "World action models (WAMs) have recently gained increasing attention as a framework for jointly modeling scene evolution and ego actions in autonomous driving. Most existing WAMs learn scene dynamics in pixel space by combining a video-generation backbone for future-observation prediction with an action head for ego-trajectory prediction. Pixels, however, provide only an indirect representation of these dynamics: they entangle geometry and motion with appearance, texture, and illumination, forcing the model to infer three-dimensional transformations from two-dimensional observations. We argue that geometry, represented by point clouds, offers a more natural state space for driving because it explicitly captures spatial structure and the rigid and non-rigid transformations that govern scene evolution while directly aligning with the space in which driving actions are executed. Building on this insight, we introduce \\textbf{GeoWAM}, a visual geometry world action model for autonomous driving. Rather than predicting future images, GeoWAM is pretrained to forecast future scene geometry, yielding representations that jointly encode spatial structure and temporal evolution. A geometry-conditioned action head then leverages these learned geometric dynamics to predict future ego trajectories. Extensive open-loop and closed-loop evaluations show that visual geometry world modeling yields substantially stronger driving policies than image-based alternatives, establishing future-geometry prediction as an effective pretraining objective for autonomous driving.",
-      "url": "https://arxiv.org/abs/2608.23486v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.23486v1",
-      "published": "2026-08-24T16:49:53Z",
-      "updated": "2026-08-24T16:49:53Z",
-      "categories": [
-        "cs.CV",
-        "cs.RO"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2608.23478v1",
-      "title": "Act with Intent: Distilling Behavior Intent for Vision-Language-Action Models",
-      "authors": [
-        "Sangoh Lee",
-        "Sangwoo Mo",
-        "Wook-Shin Han"
-      ],
-      "abstract": "Vision-Language-Action (VLA) models can turn multimodal context into robot actions, but their action decoders are still trained largely by behavior cloning. This supervises which motor command was demonstrated while leaving implicit the local objective served by the behavior under the instruction. Future-based supervision enriches action learning with frames, latent observations, trajectories, or motion representations, but these signals capture particular realizations of what may happen rather than the shared semantic objective of the forthcoming behavior. We propose Intention Distillation (INDI), which distills behavior-level intent into the action decoder. During training, a frozen teacher VLM interprets a demonstrated segment from the current observation, instruction, coarse action summary, and corresponding execution video. From its standard inputs, the deployed VLA recovers the resulting multimodal intent representation at an intermediate decoder layer and uses it to organize action prediction together with representations of how the behavior unfolds and what it achieves. On SimplerEnv-Bridge, INDI improves GR00T-N1.7 from 64.3% to 84.7%, and on RoboCasa Kitchen it improves the controlled GR00T-N1.7 baseline from 64.1% to 70.3%, with consistent gains on $\u03c0_{0.5}$ across both benchmarks. In real-world tasks, INDI improves average success from 62.0% to 68.7%, with gains of up to 12.0 pp on longer-horizon tasks. Further analyses show that the recovered latent is used by the decoder, captures behavior objective and execution progress, and organizes downstream predictions in an objective-dependent manner. These results show that action decoders benefit from explicitly modeling the semantic objective of the behavior they generate.",
-      "url": "https://arxiv.org/abs/2608.23478v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.23478v1",
-      "published": "2026-08-24T16:42:49Z",
-      "updated": "2026-08-24T16:42:49Z",
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.CV"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2608.23452v1",
-      "title": "Reward-Free Continual Adaptation for Resilient Space Robots",
-      "authors": [
-        "Andrej Orsula",
-        "Miguel Olivares-Mendez",
-        "Carol Martinez"
-      ],
-      "abstract": "Space robots operate in extreme environments where hardware degradation can critically compromise traditional control strategies. While continual reinforcement learning offers a promising mechanism for online adaptation, it inherently requires access to a reward signal during deployment. However, precise reward computation in space is often infeasible due to the lack of external tracking systems and the overall complexity of the environment. To address the challenge of unobservable rewards, we introduce a reward-free continual learning framework that leverages latent-state world models. By pre-training a model-based agent across diverse simulations, the world model learns a robust predictor of the reward structure within its latent space. Upon deployment to an environment with severe hardware degradation, we freeze the observation encoder and reward predictor to update only the transition dynamics of the world model through unsupervised rollouts. By training the policy entirely on imagined trajectories generated by this updated world model, the agent adapts to altered dynamics without receiving new rewards. We demonstrate our approach across simulated planetary traversal, orbital navigation, and precision assembly tasks subjected to severe morphological failures.",
-      "url": "https://arxiv.org/abs/2608.23452v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.23452v1",
-      "published": "2026-08-24T16:23:36Z",
-      "updated": "2026-08-24T16:23:36Z",
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.LG"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2608.23444v1",
-      "title": "Fair Dynamic Operating Envelopes using Distributed Multi-Period Optimal Power Flow and Jain Index for Active Distribution Networks",
-      "authors": [
-        "Pedro Salom\u00e3o Quessongo",
-        "Daniel Gebbran",
-        "Clodomiro Unsihuay-Vila"
-      ],
-      "abstract": "Dynamic operating envelopes (DOEs) are increasingly used to publish time-varying export limits that keep distribution networks within operational limits. Purely technical DOE allocation, however, can systematically privilege electrically favorable prosumers, while embedding fairness directly into a single-period optimal power flow (OPF) objective mixes network feasibility, equity and efficiency in a way that obscures the cost of fairness. This paper proposes a two-stage, multi-period framework that addresses both of these. Initially, a technical distributed OPF computes network-feasible export envelopes. The subsequent stage then applies a dynamic aggregate export budget and redistributes capacity through cumulative proportional fairness, limiting the additional curtailment by an admissible efficiency budget. The resulting fair DOEs are treated as first-stage decisions, while battery storage provides scenario-dependent recourse under demand and renewable uncertainty. The operational problem is solved by a calibrated regional alternating direction method of multipliers (ADMM) on a lossless LinDistFlow model and independently validated using AC power flow. On the IEEE 33-bus feeder over a 24-hour horizon, the technical benchmark yields 2.1097 MWh of renewable curtailment, whereas the fairness-constrained allocation increases curtailment to 5.7216 MWh but caps the maximum cumulative curtailment ratio at 11.20% and raises Jain fairness indices close to unity, with AC voltage deviations below 0.01 p.u. and no voltage or thermal violations under the adopted 0.90-1.05 p.u. limits. Results show that considering both storage (which alleviates curtailment impact) and multi-period fairness (which increases curtailment) is an interesting approach for modern DOE design, which in turn requires a multi-period, co-designed approach.",
-      "url": "https://arxiv.org/abs/2608.23444v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.23444v1",
-      "published": "2026-08-24T16:15:23Z",
-      "updated": "2026-08-24T16:15:23Z",
-      "categories": [
-        "eess.SY"
-      ],
-      "primary_category": "eess.SY"
-    },
-    {
-      "id": "2608.23440v1",
-      "title": "Temporal Property-driven Design Space Exploration with Reinforcement Learning for Cyber-Physical Systems",
-      "authors": [
-        "Tagir Fabarisov",
-        "Maxime Cordy"
-      ],
-      "abstract": "Design-space exploration of configurable Cyber-Physical Systems (CPS) requires executable evaluation when design choices affect timing, fault propagation, recovery behavior, and temporal-property satisfaction. Repeated stochastic executions make exhaustive exploration impractical for large design spaces. This paper presents a temporal-property-driven CPS design workflow using Reinforcement Learning (RL). At design time, the RL agent selects subsystem alternatives to assemble a candidate system model. The model is then evaluated through simulation, during which online temporal-property monitors observe runtime traces and produce functional-property violation indicators. These indicators are combined with evaluated non-functional terms for budget, recoverability, sustained compliance, and operational use to calculate the reward used for subsequent candidate selection. The workflow is evaluated on a methane-sensitive mine-pump CPS. The corresponding executable case-study model is provided as additional contribution. RL-guided search identifies the highest-reward design observed in the experiments after 26 episodes (corresponds to 130 executable simulations). These designs were reached with fewer simulations than surrogate-guided Bayesian Optimization and population-based Genetic Algorithm baselines under the same executable model and reward formulation. Ablation study results indicate that value-based feedback and reuse of previous simulation traces contribute to this reduction.",
-      "url": "https://arxiv.org/abs/2608.23440v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.23440v1",
-      "published": "2026-08-24T16:13:00Z",
-      "updated": "2026-08-24T16:13:00Z",
-      "categories": [
-        "eess.SY"
-      ],
-      "primary_category": "eess.SY"
-    },
-    {
-      "id": "2608.23414v1",
-      "title": "Graph-Native Attention Acceleration for Attack Detection in Cyber-Physical Systems",
-      "authors": [
-        "Zhenan Feng",
-        "Ehsan Nekouei"
-      ],
-      "abstract": "Cyber-physical systems (CPSs) consist of sensors, controllers, and actuators through communication and physical interactions, making them vulnerable to attacks on measurements, control logic, and equipment operation. Graph-based attack detectors, especially graph attention models, can localize such attacks by learning edge-adaptive interactions over communication and physical interaction graphs. However, their computational cost grows rapidly with neighborhood size, and their inference latency can reach tens to hundreds of milliseconds in large-scale or densely connected graphs, delaying time-critical alarm generation. To enable real-time deployment of graph attention mechanisms for attack detection, we propose GraphGHHA, a graph-native attention acceleration layer designed as a replacement for graph attention layers in attack detection units. GraphGHHA combines (i) a graph-local sparse attention branch that is constrained by the adjacency matrix of the CPS, and (ii) a global linear mixing branch to retain system-wide information. A learnable gate combines the two branches node-wise, preserving detection accuracy under strict latency constraints. We evaluate GraphGHHA on a networked heating, ventilation, and air conditioning (HVAC) cyber-physical system under representative attack scenarios and demonstrate up to an eight-fold reduction in detection latency while maintaining high detection accuracy. These results indicate that GraphGHHA enables practical, real-time alarm generation for large-scale CPS monitoring.",
-      "url": "https://arxiv.org/abs/2608.23414v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.23414v1",
-      "published": "2026-08-24T15:57:35Z",
-      "updated": "2026-08-24T15:57:35Z",
-      "categories": [
-        "eess.SY"
-      ],
-      "primary_category": "eess.SY"
-    },
-    {
-      "id": "2608.23412v1",
-      "title": "Data-Driven Synthesis of Robust Positively Invariant Sets: From State Feedback to Output Feedback",
-      "authors": [
-        "Zhijie Ning"
-      ],
-      "abstract": "This paper develops a direct data-driven framework for robust positively invariant (RPI) set synthesis for unknown linear time-invariant systems under state-feedback and observer-based output-feedback scenarios. The feedback and observer gains, along with the RPI sets, are directly synthesized from noisy offline data by solving semidefinite programs (SDPs), avoiding intermediate model identification or explicit model-uncertainty set construction. In the state-feedback case, a linear-quadratic (LQ)-type feedback gain is first computed, and an ellipsoidal RPI set is then synthesized for the resulting closed-loop dynamics. In the observer-based output-feedback case, offline data are used to compute the observer gain and the corresponding RPI set for the system state through an augmented-state formulation. This design provides a unified method for invariant-set computation in both scenarios, and the direct data-driven formulation avoids the explicit construction and propagation of an intermediate model-uncertainty set. Numerical examples illustrate the effectiveness of the proposed method.",
-      "url": "https://arxiv.org/abs/2608.23412v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.23412v1",
-      "published": "2026-08-24T15:55:54Z",
-      "updated": "2026-08-24T15:55:54Z",
-      "categories": [
-        "eess.SY"
-      ],
-      "primary_category": "eess.SY"
-    },
-    {
-      "id": "2608.23405v1",
-      "title": "MomADv2: Reliable Temporal Memory for End-to-End Autonomous Driving",
-      "authors": [
-        "Ziying Song",
-        "Shengkai Zhang",
-        "Lin Liu",
-        "Peiliang Wu",
-        "Lei Yang",
-        "Dongyang Xu",
-        "Bin Sun",
-        "Li Wang",
-        "Shaoqing Xu",
-        "Caiyan Jia",
-        "Yadan Luo"
-      ],
-      "abstract": "Long-horizon planning is critical for safe autonomous driving in complex scenarios. Existing methods improve planning continuity with temporal memory, but such memory may become invalid and mislead decisions when the driving command changes. Thus, selectively leveraging useful history while suppressing command-inconsistent memory remains a key challenge. To address this issue, we propose MomADv2, a reliable state-space memory framework for long-horizon end-to-end autonomous driving. At its core, MomADv2 introduces a Selective State-Space Planning Memory Query Module, which filters historical planning queries based on temporal continuity and command consistency, selects planning modes relevant to the current command, and models the evolution of planning intentions through a selective state-space mechanism. To further alleviate local trajectory deviations and error accumulation in long-horizon planning, we design a Flow-Matching Trajectory Residual Refiner. It learns a continuous residual correction field from the refined planning output to the expert trajectory, enabling fine-grained trajectory refinement while preserving the stability of anchor-based planning. Extensive experiments on closed-loop NAVSIM and Bench2Drive, as well as open-loop nuScenes, demonstrate that MomADv2 improves long-horizon planning consistency and reduces the average collision rate by 15.6% over MomAD under 6-second planning.",
-      "url": "https://arxiv.org/abs/2608.23405v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.23405v1",
-      "published": "2026-08-24T15:51:07Z",
-      "updated": "2026-08-24T15:51:07Z",
-      "categories": [
-        "cs.CV",
-        "cs.RO"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2608.23354v1",
-      "title": "OptiSight: Bridging Semantic Reasoning and Geometric Control for Embodied Navigation",
-      "authors": [
-        "Alperen Avan",
-        "Jordi Sanchez-Riera"
-      ],
-      "abstract": "Autonomous indoor navigation requires both semantic understanding and precise geometric control. We propose OptiSight, a hybrid framework that combines Vision-Language Model reasoning with deterministic visual servoing through a finite-state Chain-of-Thought architecture. Grounded-SAM localizes open-vocabulary targets, while camera projection geometry converts visual observations into navigation commands without requiring dense mapping. The VLM is queried only at key decision points, reducing computational overhead while geometric control handles continuous navigation. Experiments in AI Habitat demonstrate reliable zero-shot navigation across diverse indoor scenarios, including obstacle avoidance and semantic ambiguity, while operating within an 8~GB VRAM budget. The source code is available at https://github.com/avanalperen/OptiSight-Python-Multimodal-CoT-for-Visual-Reasoning.",
-      "url": "https://arxiv.org/abs/2608.23354v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.23354v1",
-      "published": "2026-08-24T15:02:17Z",
-      "updated": "2026-08-24T15:02:17Z",
+      "abstract": "Action-conditioned world models are increasingly used as learned simulators for policy evaluation and improvement, yet their effectiveness rests on an unverified assumption: generated futures faithfully reflect arbitrary valid actions. Existing benchmarks are typically confined to expert demonstrations, leaving off-expert action following inadequately evaluated. To address this gap, we introduce WorldEcho, which probes action following over a broader action distribution using visual integrity and SE(3) trajectory alignment. Our diagnosis shows that current world models reasonably execute expert actions but struggle with diverse off-expert trajectories, either ignoring the commanded actions or producing visually invalid rollouts. We further propose WorldSync, which strengthens action following along three complementary axes: distributional coverage, representational grounding, and intervention-effect alignment. It broadens the training distribution over action consequences, grounds intermediate video representations in action-induced robot dynamics through an Action-Forcing Expert, and aligns predicted changes under action interventions with the corresponding changes in ground-truth futures. Experiments on RoboTwin benchmarks and real-robot tasks show that WorldSync improves WorldEcho metrics and serves as a more reliable simulator for iterative policy improvement, enabling policies to achieve higher success rates.",
+      "url": "https://arxiv.org/abs/2608.24885v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.24885v1",
+      "published": "2026-08-25T17:59:49Z",
+      "updated": "2026-08-25T17:59:49Z",
       "categories": [
         "cs.RO",
         "cs.CV"
       ],
       "primary_category": "cs.RO"
+    },
+    {
+      "id": "2608.24882v1",
+      "title": "Latent Action as Intention Enables Efficient Future Imagination for World Action Models",
+      "authors": [
+        "Xiang Li",
+        "Yupeng Zheng",
+        "Songen Gu",
+        "Huailiang Ma",
+        "Feng Yu",
+        "Xian Nie",
+        "Shanshuai Yuan",
+        "Yujie Zang",
+        "Weize Li",
+        "Shuai Tian",
+        "Moyang Liu",
+        "Ya-Qin Zhang",
+        "Wenchao Ding"
+      ],
+      "abstract": "World action models (WAMs) improve robot control by modeling how observations evolve, but generating future observations at test time incurs substantial latency. Fast-WAM removes this process for efficiency; however, our matched implementations show lower generalization for Fast-WAM than for future-aware alternatives, especially with scarce robot demonstrations and in out-of-distribution scenarios. To bridge this gap, we introduce **LAWA**, a WAM architecture that uses compact latent actions as an operational representation of future intentions, enabling efficient test-time future imagination without generating future observations. Specifically, a discrete tokenizer enhanced by action-free pre-training produces manipulation-centric codebook targets. LAWA jointly denoises a continuous latent state anchored to these targets with executable action chunks while omitting the future-video branch at inference. On RoboCasa, LAWA achieves state-of-the-art average success rates of 65.6% and 80.8% in the few-shot and full data settings, improving over the matched Fast-WAM baseline by 9.6 and 4.5 points, respectively. It also preserves the performance level of the matched Joint-WAM variant while requiring 42.9% lower inference latency. LAWA also demonstrates competitive zero-shot robustness on LIBERO-Plus and superior performance on real-world tasks. These results show that future imagination need not be discarded: retaining it with compact latent actions yields an effective trade-off among performance, generalization, and latency. Code and models will be released.",
+      "url": "https://arxiv.org/abs/2608.24882v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.24882v1",
+      "published": "2026-08-25T17:59:03Z",
+      "updated": "2026-08-25T17:59:03Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2608.24841v1",
+      "title": "Next-generation O-RAN Edge: Energy-aware Joint Placement and Migration of Cloud-Native Functions",
+      "authors": [
+        "Nguyen Phuc Tran",
+        "Brigitte Jaumard",
+        "Oscar Delgado"
+      ],
+      "abstract": "The transition toward Open Radio Access Networks (O-RANs) is reshaping how cellular infrastructure is deployed, managed, and optimized. This paper investigates the energy-aware joint placement and migration of cloud-native functions (CNFs) in an O-RAN edge cloud. We consider both a Single-CU-UP association model and a slice-aware Multi-CU-UP relaxation, in which distinct slice-flow groups of the same distributed unit (DU) may be assigned to different Centralized Unit User Plane (CU-UP) processing targets under one Centralized Unit Control Plane (CU-CP). For brevity, these scenarios are referred to as Single-CU and Multi-CU, respectively; Multi-CU never denotes multiple CU-CP associations. We formulate the problem as a Mixed-Integer Linear Program (MILP) that minimizes server, transmission, wake-up, and migration energy while satisfying server-resource capacities and one-way delay requirements over the F1 user-plane interface (F1-U) between each DU and its selected CU-UP in a fat-tree edge data center. To improve computational scalability, we also develop a deterministic k-means-based heuristic that approximates the MILP decisions without requiring repeated exact optimization. Over the evaluated 24-hour workload, the theoretical Multi-CU relaxation reduces modeled energy consumption by 5.7% relative to the Single-CU baseline. For the Multi-CU case, the proposed heuristic remains within approximately 9.7% of the proposed MILP, demonstrating a favorable trade-off between energy efficiency and computational tractability.",
+      "url": "https://arxiv.org/abs/2608.24841v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.24841v1",
+      "published": "2026-08-25T17:30:46Z",
+      "updated": "2026-08-25T17:30:46Z",
+      "categories": [
+        "cs.IT",
+        "cs.DC",
+        "cs.ET",
+        "cs.PF",
+        "eess.SY"
+      ],
+      "primary_category": "cs.IT"
+    },
+    {
+      "id": "2608.24743v1",
+      "title": "$(\\text{DNN})^2$: Doubly Non-Negative Relaxations for Deep Neural Networks",
+      "authors": [
+        "Hanna Jiamei Zhang",
+        "Alan Papalia",
+        "Michael Everett",
+        "David M. Rosen"
+      ],
+      "abstract": "Existing linear program (LP) and semidefinite program (SDP) relaxations for rectified linear unit (ReLU) neural network (NN) verification yield overly-conservative safety guarantees due to significant relaxation gaps. While the completely positive program (CPP) formulation closes this gap, it is NP-hard to solve. Its cheapest tractable relaxation, the doubly non-negative program (DNN), retains critical constraints as an SDP, but one whose size exceeds the reach of interior-point methods at practical scale. While Burer-Monteiro (BM) factorization has been applied to make SDP-based verification scalable, no such result exists for the strictly tighter DNN formulation. A key obstacle is that additional non-negativity constraints in the DNN cause dual multipliers for optimality certification to be non-unique, making standard certification methods inapplicable. We propose a novel eigenvalue maximization procedure that searches the non-unique multiplier space for a valid certificate, i.e. a global optimality guarantee. Experiments demonstrate that our approach $(\\text{DNN})^2$ produces bounds consistently tighter than the standard SDP method, often matching the exact solution, and that our certification procedure confirms global optimality when a valid certificate exists. These results are a key step toward providing tight, certifiable, and computationally scalable verification guarantees needed to deploy neural network controllers and perception modules in safety-critical autonomous systems.",
+      "url": "https://arxiv.org/abs/2608.24743v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.24743v1",
+      "published": "2026-08-25T15:48:32Z",
+      "updated": "2026-08-25T15:48:32Z",
+      "categories": [
+        "cs.LG",
+        "cs.RO",
+        "eess.SY"
+      ],
+      "primary_category": "cs.LG"
+    },
+    {
+      "id": "2608.24741v1",
+      "title": "One-Shot Learning from Demonstration of Contact-Rich Robotic Manipulation by Identifying Physical Interactions",
+      "authors": [
+        "A. H. G. Overbeek",
+        "H. van der Kooij",
+        "M. Vlutters"
+      ],
+      "abstract": "Learning from Demonstration (LfD) allows robots to learn manipulation tasks directly from humans, thereby supporting the versatile application of robots. Most LfD methods do not explicitly model the physical interactions between a robot and its environment, such as the making and breaking of contact, while these are crucial during manipulation tasks. Because the same basic physical interactions recur often, they can be a basis for robust, generalizable, and adaptive task reproduction. We propose an LfD method that explicitly uses what physical interactions take place where and when. Using that information, a hybrid position-force controller tracks demonstrated trajectories until contact-based transition conditions from the demonstrations are met. We evaluate our method in real robot experiments consisting of opening doors and locks, bolt picking and screwing, dislodging, and surface contouring. We show that explicitly modeling physical interactions benefits LfD in four ways. First, by allowing reproduction of complex, sequential, and contact-rich manipulation tasks using only a single demonstration and no prior knowledge of the task. Second, by facilitating robustness to unknown geometric variations in the environment. Third, by facilitating generalization when geometric variations are known. Fourth, by facilitating online adaptation using geometric information explored during task reproduction. We discuss how robustness, generalization, and adaptivity can be explicitly implemented, which is generally lacking in the LfD literature. Thereby, our work aims to close a gap in interpretable few-shot LfD of robotic manipulation.",
+      "url": "https://arxiv.org/abs/2608.24741v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.24741v1",
+      "published": "2026-08-25T15:48:03Z",
+      "updated": "2026-08-25T15:48:03Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2608.24735v1",
+      "title": "Meta$^n$: Recursive Self-Improvement through Emergent Depth",
+      "authors": [
+        "Zae Myung Kim",
+        "Young-Jun Lee",
+        "Seungyeon Jwa",
+        "Dongyeop Kang"
+      ],
+      "abstract": "Self-improving LLM agents refine answers, not the process that produces those answers. Systems that add a meta-level hold that level fixed, and those that edit themselves must leave part of their own editing machinery untouched to stay stable, capping the meta-depth they realize at roughly two. We present Meta$^n$, which keeps the meta-operation fixed and recurses on its input instead. That operation, $\u03a9$, is applied repeatedly to its own products, reading the traces of the solver stack below together with the code that produced them, then writing the next layer as a strategic pre-process and a library of callable helpers. Because $\u03a9$ never changes, it cannot destabilize the system, and because its input strictly grows, each layer reasons from a higher vantage than the last. Depth is set by convergence rather than fixed in advance, and an evolutionary archive searches over layer chains. Across two backbones, Meta$^n$ outperforms prior self-improving agents on all eight benchmark families. The sharpest case is ARC-AGI-2, built to resist skill memorization, where it alone scores above zero. Ablations indicate that most of the gain from recursion comes from the conditioning each layer passes to the next, and distinct layer roles emerge with depth although no prompt prescribes them. Code available at https://github.com/minnesotanlp/meta-n",
+      "url": "https://arxiv.org/abs/2608.24735v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.24735v1",
+      "published": "2026-08-25T15:44:25Z",
+      "updated": "2026-08-25T15:44:25Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "eess.SY"
+      ],
+      "primary_category": "cs.AI"
+    },
+    {
+      "id": "2608.24724v1",
+      "title": "Fiber Bragg Grating Whiskers for Bioinspired Hydrodynamic Perception on Underwater Robots",
+      "authors": [
+        "Hao Li",
+        "Tianyu Tu",
+        "Siyue Yao",
+        "Ziyang Chang",
+        "Juhyun Jung",
+        "Xiaochi Xie",
+        "Long Yin Chung",
+        "Tian-Ao Ren",
+        "Genliang Chen",
+        "Mark Cutkosky"
+      ],
+      "abstract": "Harbor seals track hydrodynamic trails with their vibrissae, enabling passive perception of moving targets in dark or turbid water. Inspired by this capability, we present compact fiber Bragg grating (FBG) whiskers for underwater robots. Like seal whiskers, they have a non-uniform taper and elliptical cross-section. Controlled towing experiments show a monotonic relative-flow response from 0.1 to 0.6 m/s, a strong reduction of self-induced oscillation relative to a cylindrical baseline, and a pronounced dependence on angle of attack. Experiments with a pitching foil show that the whiskers can detect the characteristic vortices shed by a stationary or moving source, detectable several seconds after the source has passed. Using this information, a single front-mounted whisker enabled a small underwater robot to distinguish between continuing straight and executing a turn, selecting the correct branch in 17 of 20 trials (85.0%) from whisker signals alone. These results connect bioinspired hydrodynamic sensing to robot action and suggest the utility of whiskers for tracking underwater objects.",
+      "url": "https://arxiv.org/abs/2608.24724v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.24724v1",
+      "published": "2026-08-25T15:37:33Z",
+      "updated": "2026-08-25T15:37:33Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2608.24714v1",
+      "title": "GaussianWAM: Distilling Geometry and Semantics from 3D Gaussian Fields into World-Action Models",
+      "authors": [
+        "Zijian Zhang",
+        "Yuqing Jiang",
+        "Weitao Zhou",
+        "Minglei Li",
+        "Jinhao Zhang",
+        "Yao Mu",
+        "Xiaofan Li",
+        "Hao Zhao",
+        "Haibao Yu"
+      ],
+      "abstract": "World-Action Models (WAMs) jointly learn future visual prediction and action generation, using video dynamics as a representation-learning signal for robotic manipulation. However, their video latents are primarily optimized for visual prediction and are not explicitly encouraged to preserve cross-view geometric structure or spatially localized, object-relevant semantics. We propose \\textbf{GaussianWAM}, a training-time representation-enhancement framework that organizes geometric and semantic supervision through a 3D Gaussian field. Given synchronized multi-view observations, frozen geometry and vision foundation models provide depth, camera parameters, and dense semantic features. GaussianWAM binds these heterogeneous signals to shared Gaussian primitives and renders spatially aligned semantic, depth, and coverage targets, which are distilled into the current-observation representations of the WAM. All teacher models, Gaussian components, and auxiliary prediction heads are removed after training, leaving the original WAM inference path without additional modules or forward computation. On LIBERO-Plus, GaussianWAM improves FastWAM from 52.05\\% to 71.29\\% and Cosmos Policy from 71.52\\% to 77.30\\%. Direct CLIP and VGGT distillation already establishes a strong FastWAM baseline of 69.37\\%, while Gaussian-field unification further improves it to 71.29\\%, supporting the benefit of spatially organizing heterogeneous teacher signals. GaussianWAM also improves performance on standard LIBERO and shows positive transfer trends on RoboTwin and real-world manipulation. These results suggest that training-time Gaussian distillation provides a practical way to inject geometry- and semantics-related supervision into WAM representations without changing their deployment architecture.",
+      "url": "https://arxiv.org/abs/2608.24714v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.24714v1",
+      "published": "2026-08-25T15:34:13Z",
+      "updated": "2026-08-25T15:34:13Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2608.24709v1",
+      "title": "Bounded Linear Programs for Data-Driven Optimal Control via Moment-Matching",
+      "authors": [
+        "Andrea Martinelli",
+        "Lucia Pezzetti",
+        "Niklas Schmid",
+        "Florian Dorfler",
+        "John Lygeros"
+      ],
+      "abstract": "Linear programming (LP) formulations offer a conceptually elegant approach to infinite-horizon, model-free nonlinear optimal control in continuous spaces. However, in addition to the curse of dimensionality, their practical use is limited by the difficulty of consistently obtaining bounded solutions. In this work, we use moment-matching techniques to derive sufficient boundedness conditions in terms of the available dataset and the cost vector of the LP. Moreover, we discuss practical design methods for nonlinear systems and polynomial features.",
+      "url": "https://arxiv.org/abs/2608.24709v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.24709v1",
+      "published": "2026-08-25T15:27:19Z",
+      "updated": "2026-08-25T15:27:19Z",
+      "categories": [
+        "math.OC",
+        "eess.SY"
+      ],
+      "primary_category": "math.OC"
+    },
+    {
+      "id": "2608.24699v1",
+      "title": "DeepONet-LSTM Neural Operator for Output Feedback Control of Reaction Diffusion PDEs",
+      "authors": [
+        "Jing Zhang",
+        "Jie Qi",
+        "Linglong Jiang"
+      ],
+      "abstract": "This paper presents a neural operator-based approach for the output feedback boundary stabilization of reaction diffusion PDEs. The classical output feedback backstepping design requires solving control and observer kernel equations for each reaction coefficient. To avoid computing these kernel functions, the output feedback control law is reformulated as a causal boundary operator that maps the reaction coefficient and the boundary measurement to the boundary control input. A hybrid DeepONet-LSTM neural operator is proposed to approximate this causal operator, where DeepONet encodes the spatial coefficient and LSTM captures the temporal dependence of the measurement history. We analyze the Lipschitz continuity of the boundary operator and prove the closed-loop practical stability with the learned controller. A modified loss is also introduced to improve the temporal regularity of the learned boundary input. Numerical results illustrate that the proposed neural operator controller effectively stabilizes the system.",
+      "url": "https://arxiv.org/abs/2608.24699v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.24699v1",
+      "published": "2026-08-25T15:23:19Z",
+      "updated": "2026-08-25T15:23:19Z",
+      "categories": [
+        "eess.SY"
+      ],
+      "primary_category": "eess.SY"
     }
   ]
 }
