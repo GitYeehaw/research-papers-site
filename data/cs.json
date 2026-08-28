@@ -2,315 +2,241 @@
   "category": "cs",
   "name": "CS Research",
   "description": "Computer Science \u2014 AI, Machine Learning, NLP, Computer Vision",
-  "scraped_at": "2026-08-27T19:01:21.931296+00:00",
+  "scraped_at": "2026-08-28T20:09:25.791213+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2608.26105v1",
-      "title": "VBVR-Pro: A Scalable and Verifiable Suite for Native Visual Reasoning",
+      "id": "2608.27456v1",
+      "title": "UrbanGround: From Local Perception to Spatial Agency in a Real-Scale City",
       "authors": [
-        "Junxiang Xu",
-        "Ruisi Wang",
-        "Fanyi Pu",
-        "Maijunxian Wang",
-        "Ran Ji",
-        "Tongxi Zhou",
-        "Chenyang Gu",
-        "Jing Zuo",
-        "Hongcan Xiao",
-        "Yimeng Geng",
-        "Wanqi Yin",
-        "Wei Chen",
-        "Oscar Qian",
-        "Zhengan Yan",
-        "Ziqi Huang",
-        "Haiwen Diao",
-        "Liang Pan",
-        "Bo Li",
-        "Xiangyu Fan",
-        "Dezhi Luo",
-        "Fengyuan Yu",
-        "Zehong Zhao",
-        "Qingying Gao",
-        "Tinghui Zhu",
-        "Yilan Zhang",
-        "Jingqi Tong",
-        "Pinyuan Feng",
-        "Zhengze Jiang",
-        "Letian Wang",
-        "Ziyu Guo",
-        "Renrui Zhang",
-        "Jieneng Chen",
-        "Sonia Joseph",
-        "Constantin Venhoff",
-        "Saman Motamed",
-        "Mengyue Yang",
-        "Chandra Sripada",
-        "Alan Yuille",
-        "Philip Torr",
-        "Lvmin Zhang",
-        "Vikash Kumar",
-        "Daniel Khashabi",
-        "Nikolaus Kriegeskorte",
-        "Rapha\u00ebl Milli\u00e8re",
-        "Vincent C. M\u00fcller",
-        "Anyi Rao",
-        "Quan Wang",
-        "Ziwei Liu",
-        "Dahua Lin",
-        "Lei Yang",
-        "Hokin Deng",
-        "Zhongang Cai"
+        "Tianjie Ju",
+        "Zheng Wu",
+        "Yueqing Sun",
+        "Yuhan Cui",
+        "Bobo Li",
+        "Shengqiong Wu",
+        "Pengzhou Cheng",
+        "Haodong Zhao",
+        "Zongru Wu",
+        "Xinbei Ma",
+        "Doris Zhang",
+        "Kunling Li",
+        "Mong-Li Lee",
+        "Wynne Hsu",
+        "Hao Fei",
+        "Qi Gu",
+        "Gongshen Liu",
+        "Zhuosheng Zhang"
       ],
-      "abstract": "Native visual reasoning treats visual generation as the medium of reasoning itself: visual states (i.e. images and videos) are not merely inputs to be understood or outputs to be rendered, but first-class substrates for problem solving beyond language. Yet progress remains bottlenecked by the lack of scalable training tasks, reliable feedback, and controlled comparisons across generative substrates. In this work, we introduce VBVR-Pro, a closed-loop testbed that makes native visual reasoning through generation trainable, verifiable, optimizable, and experimentally controllable. 1) Task scaling. VBVR-Pro turns visual reasoning into a controlled task space of 300 procedurally generated tasks. Models trained on VBVR-Pro show strong transfer beyond the proposed suite across seven external visual reasoning benchmarks such as RISE-Video, MME-CoF-Pro, and BabyVision. 2) Verifiable rewards. VBVR-Pro provides verifiable reward scorers for task-grounded evaluation. Through a systematic study of leading MLLMs as judges, we identify recurring failure modes of the prevalent VLM-as-a-judge paradigm. In contrast, the proposed scorers are grounded in deterministic, task-specific rules, achieve fine-grained alignment with human judgments. Importantly, they serve as reliable reward signals for large-scale multi-task reinforcement learning and demonstrate stronger post-RL performance across visual reasoning tasks. 3) Mechanism study. VBVR-Pro enables controlled modality studies across more than 30 image, video, and interleaved generators. Our analysis shows that video generation remains strongest for tasks requiring persistent spatiotemporal state tracking, while interleaved generation provides a compute-efficient alternative. Critically, ablations and probing suggest the presence of vision-native trajectories that are crucial to visual reasoning. We release all data, models, scorers, and code.",
-      "url": "https://arxiv.org/abs/2608.26105v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.26105v1",
-      "published": "2026-08-26T17:59:51Z",
-      "updated": "2026-08-26T17:59:51Z",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.LG",
-        "cs.MM",
-        "cs.RO"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2608.26103v1",
-      "title": "Zero-WAM: In-Context World-Action Modeling from Human Videos for Open-Ended Task Generalization",
-      "authors": [
-        "Jiaming Zhou",
-        "Qihang Zhang",
-        "Gangwei Xu",
-        "Cunxin Fan",
-        "Yujie Zhao",
-        "Ruilin Wang",
-        "Yiming Luo",
-        "Shuai Yang",
-        "Xing Zhu",
-        "Yujun Shen",
-        "Junwei Liang",
-        "Yinghao Xu"
-      ],
-      "abstract": "Zero-shot cross-task generalization, where a policy must execute manipulation tasks never seen during training, remains a central challenge in robot learning. In large language models, a novel task can be performed simply by specifying it in the context, without any parameter update. This form of in-context learning (ICL) turns generalization into a problem of task specification. To achieve cross-task generalization, we bring this paradigm to robotic manipulation, and argue that the natural task specification for manipulation is a human video: unlike language, it provides rich visual cues about the intended task evolution. We present Zero-WAM, a causal video-action model that executes unseen tasks by following in-context human video guidance. To address the scarcity of task-rich paired human-robot data, we propose an automatic pipeline that converts task-sampled robot trajectories into semantically matched human videos, yielding HumanGen, a dataset of 74.2K human-robot ICL pairs across 8.6K tasks. For model training, we further introduce an in-context future chunk prediction (IFP) objective that suppresses shortcuts learned from seen tasks and forces the policy to draw task information from the video prompt. On seven unseen tasks in RoboTwin 2.0 simulation, Zero-WAM achieves a 47.0% average success rate, an absolute improvement of 29.5 percentage points over the strongest video-action baseline. In real-world evaluations, it follows human video guidance to generalize to unseen task configurations involving multi-object scenes, long-horizon manipulation, and fine-grained insertion.",
-      "url": "https://arxiv.org/abs/2608.26103v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.26103v1",
-      "published": "2026-08-26T17:59:34Z",
-      "updated": "2026-08-26T17:59:34Z",
-      "categories": [
-        "cs.RO",
-        "cs.CV"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2608.26101v1",
-      "title": "RefVideo-6M: A Reliable Reference-Based Dataset for Instructional Video Editing",
-      "authors": [
-        "Bojia Zi",
-        "Xiaoyan Yang",
-        "Yu Zhou",
-        "Ruijie Sun",
-        "Lihan Zhang",
-        "Bin Liang",
-        "Kam-Fai Wong",
-        "Haibin Huang",
-        "Chi Zhang",
-        "Xuelong Li"
-      ],
-      "abstract": "Recent advances in video editing have been largely driven by large-scale instruction-based datasets. However, existing datasets still suffer from two critical limitations. First, target videos are commonly produced by automatic editing models, which may introduce visible artifacts and unreliable supervision signals. Second, most public datasets rely primarily on textual instructions, while lacking visual references that are crucial for precise, identity-preserving, and controllable editing. To address these limitations, we introduce RefVideo-6M, a large-scale reference-guided editing dataset containing 5 million video editing samples and 1 million image editing samples. To ensure reliable supervision, our dataset uses a construction pipeline that treats artifact-free real videos as editing targets and generates quality-filtered input conditions with multiple editing experts. In addition, it provides approximately 6 million visual references, covering diverse reference types and editing scenarios, thereby enabling models to learn fine-grained visual correspondence beyond text-only instructions. Based on RefVideo-6M, we further train a reference-guided video editing model, Ref-MoT, to evaluate the effectiveness and scalability of the proposed dataset. Extensive experiments demonstrate that RefVideo-6M provides substantially more reliable supervision than existing datasets and enables the training of powerful editing models with improved visual quality, controllability, and reference consistency. The open-source dataset is available at https://huggingface.co/datasets/RefVideo6M/RefVideo6M.",
-      "url": "https://arxiv.org/abs/2608.26101v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.26101v1",
-      "published": "2026-08-26T17:59:19Z",
-      "updated": "2026-08-26T17:59:19Z",
+      "abstract": "Multimodal large language models (MLLMs) can interpret a street view, but urban agency depends on whether such local evidence remains useful after the agent starts to move. In this paper, we investigate how far current MLLM agents can turn local urban perception into reliable action in a complicated real-scale city. We propose UrbanGround, the first sandbox to make this question testable in a physically constrained replica of Hong Kong built from territory-wide 3D geospatial data. UrbanGround supports closed-loop interaction from a first-person view and provides an interactive map for navigation. Agents can directly enter the 3D city and explore from a first-person view. Our analysis follows the growth of the spatial problem through three research questions. We first test whether an agent can ground a local scene well enough to answer spatial questions after active observation. Then we ask whether that grounding supports navigation as destinations become farther away and less explicit. Finally, we examine whether the resulting behavior survives changes in route availability and pedestrian motion. Contemporary MLLM agents usually show useful atomic abilities in visual recognition and short-range spatial reasoning, while orientation and pedestrian-aware movement remain unreliable. Their central failure emerges over extended exploration, where local abilities do not compose into sustained goal-directed behavior and errors accumulate without effective correction. We hope UrbanGround will support broader study of how far current MLLM agents can explore reliably in complex, open-ended urban environments.",
+      "url": "https://arxiv.org/abs/2608.27456v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27456v1",
+      "published": "2026-08-27T17:59:33Z",
+      "updated": "2026-08-27T17:59:33Z",
       "categories": [
         "cs.CV"
       ],
       "primary_category": "cs.CV"
     },
     {
-      "id": "2608.26095v1",
-      "title": "A Visual Dependence-Aware Framework for Multimodal Unsupervised Continual Post-Training",
+      "id": "2608.27455v1",
+      "title": "CritICL: Inference-Time Weak-to-Strong Generalization from Small Language Model Failure Modes",
       "authors": [
-        "Kaichen Li",
-        "Zhilin Zhu",
-        "Jianhao Huang",
-        "Zhengqin Lai",
-        "Baochen Xiong",
-        "Zibo Shao",
-        "Yaguang Song",
-        "Linhui Xiao",
-        "Xiaoshan Yang",
-        "Changsheng Xu"
+        "Yufan Wu",
+        "Yinghui He",
+        "Zhengyi Hu",
+        "Lang Wei",
+        "Ruichen Li",
+        "Qifan Yang",
+        "Ting Zhu"
       ],
-      "abstract": "In this paper, we explore a novel task of Multimodal Unsupervised Continual Post-Training (MU-CPT), enabling deployed MLLMs to continually evolve from streaming unlabeled data. Existing unsupervised post-training methods for MLLMs typically optimize target tokens uniformly, overlooking their heterogeneous visual dependence (VD). However, we reveal that token-level VD is crucial for MU-CPT. Specifically, its structural distortion serves as an indicator of cross-modal catastrophic forgetting, and its inherent heterogeneity acts as a compass to guide new-task learning. Leveraging this property, we propose a Visual Dependence-Aware (VDA) framework with two main components. First, Visually Constrained Optimal Transport (VC-OT) formulates the VD structural distortion of old-task VD during new-task learning as an optimal transport problem to mitigate cross-modal forgetting. By designing a region-aware ground cost and a dependence-stratified transport penalty, it prevents global shifts in visual focus while strictly prohibiting visual reliance from degenerating into language bias. Second, Visually Modulated Adaptation (VMA) exploits VD heterogeneity to emphasize visually grounded new-task learning, promoting new-task plasticity. Together, our method simultaneously maintains old-task stability and new-task plasticity during challenging MU-CPT. Extensive experiments under our MU-CPT setting validate the effectiveness of VDA.",
-      "url": "https://arxiv.org/abs/2608.26095v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.26095v1",
-      "published": "2026-08-26T17:57:04Z",
-      "updated": "2026-08-26T17:57:04Z",
+      "abstract": "Recent advances in inference-time scaling have significantly improved the reasoning performance of large language models (LLMs). However, these methods typically rely on repeated generation or external verification. To address this limitation, we introduce CritICL, a novel inference-time framework that improves reasoning while maintaining high efficiency. Our key insight is that LLM failure modes exhibit structured patterns across model scales within the same family. Instead of treating failures as undesirable outputs, CritICL leverages them as a source of guidance. Specifically, we utilize failure modes derived from weaker models and incorporate them into inference through critique-based in-context examples. We propose two variants: CritICL-dynamic, which adaptively predicts input-specific failure modes and retrieves critiques, and CritICL-static, which uses a global failure mode profile to provide stable guidance. Experimental results show that CritICL consistently outperforms standard in-context learning and achieves performance competitive with or superior to test-time scaling methods, while requiring significantly fewer generations and lower token cost. Code available at: https://github.com/umwyf/CRITICL",
+      "url": "https://arxiv.org/abs/2608.27455v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27455v1",
+      "published": "2026-08-27T17:59:30Z",
+      "updated": "2026-08-27T17:59:30Z",
       "categories": [
-        "cs.CV",
-        "cs.AI"
+        "cs.CL"
       ],
-      "primary_category": "cs.CV"
+      "primary_category": "cs.CL"
     },
     {
-      "id": "2608.26094v1",
-      "title": "MyoMechanix: Biomechanically-Grounded Compositional Skilled Activity Understanding and Coaching",
+      "id": "2608.27454v1",
+      "title": "WikiSkill: Compiling Agent Experience into Persistent Knowledge for Skill Evolution",
       "authors": [
-        "Hao Yin",
-        "Paritosh Parmar",
-        "Lijun Gu",
-        "Lin Xu",
-        "Tianxiao Guo",
-        "Xiujin Liu",
-        "Tianyou Zheng",
-        "Yang Zhang",
-        "Weiwei Fu"
+        "Liyan Tang",
+        "Cyrus Rashtchian",
+        "Chun-Sung Ferng",
+        "Andrew Tomkins",
+        "Da-Cheng Juan",
+        "Tu Vu"
       ],
-      "abstract": "Existing action quality assessment (AQA) datasets and methods rely primarily on visual inputs such as RGB and pose, overlooking physiological dynamics such as muscle mechanics and often modeling actions as monolithic patterns. These limitations hinder fine-grained, biomechanically grounded feedback. We introduce MyoMechanix, a multimodal ecosystem for weight-loaded actions that aligns motion with muscle activity. Expert-annotated, it contains 7,500+ samples of 20 actions from 38 subjects, with synchronized multiview RGB video, 3D pose, sEMG, and additional physiological signals, forming the largest multimodal AQA benchmark to date. We further construct the Fitness Knowledge Graph (FKG), which organizes expert annotations into structured relationships among actions, phases, key steps, errors, and corrective feedback, enabling compositional scoring and interpretable assessment. Building on these representations, we develop CUBIST (Compositional Ontological Reasoning Engine), which performs decomposition-analysis-recomposition for fine-grained error attribution and feedback generation. We also establish MyoMechanix-AQA, MyoMechanix-VideoQA, and a novel MyoMechanix-Video2EMG task. Experiments show that multimodal sensing and structured representations improve performance, interpretability, and error attribution, with CUBIST achieving state-of-the-art results; VideoQA enhances language-grounded action understanding; and Video2EMG suggests video-based alternatives to costly EMG sensing. MyoMechanix advances skilled activity understanding toward biomechanically grounded, multimodal, and compositional reasoning for Physical AI applications in fitness, rehabilitation, healthcare, and machine learning. Project page: https://haoyin116.github.io/MyoMechanix/",
-      "url": "https://arxiv.org/abs/2608.26094v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.26094v1",
-      "published": "2026-08-26T17:56:33Z",
-      "updated": "2026-08-26T17:56:33Z",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.ET",
-        "cs.HC",
-        "cs.LG"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2608.26093v1",
-      "title": "Agentic Autoresearch for Cell-Edge Power Control: Radically Redefining the Researcher's Role",
-      "authors": [
-        "Ahmad Khan",
-        "Akram Bin Sediq",
-        "Sara Azadegi Naeini",
-        "Raviraj S. Adve"
-      ],
-      "abstract": "Designing machine learning algorithms for wireless resource management is labour-intensive: the architecture, the loss function and the training recipe are all specified by hand. We demonstrate that this design layer can be surrendered to an autonomous agent in its entirety. We adopt the autoresearch protocol, in which an AI coding agent edits a training script, runs a fixed-budget experiment, and retains or discards the change according to a single immutable metric. We grant the agent authority over the architecture family, the input representation, the output parameterization, the loss function and the task-sampling law, and set it a target chosen for its difficulty: sum-least-percentile-rate power control across a multicell network. The formulation targets cell-edge throughput and is non-convex, non-smooth and strongly NP-hard away from its max-min vertex. Safeguards render the results trustworthy: a hash-pinned evaluator, an enforced inference contract and a pre-registered falsifier per experiment. In eighty-one unattended experiments over twenty-six hours, the agent reached $99.5\\%$ of a converged minorization-maximization reference in one fixed-cost inference pass, at roughly $600\\times$ lower inference cost, closing $94\\%$ of the gap from its first working architecture, with one parameter set serving every network size and percentile target. It recovered provable structure rather than tuned constants: the output parameterization it discovered reproduces the exact max-min-optimal allocation at the minimum percentile, for every value of the trained weights.",
-      "url": "https://arxiv.org/abs/2608.26093v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.26093v1",
-      "published": "2026-08-26T17:56:00Z",
-      "updated": "2026-08-26T17:56:00Z",
-      "categories": [
-        "cs.LG",
-        "cs.IT",
-        "eess.SY"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2608.26091v1",
-      "title": "PlanSightRAG: A Visual-First Multimodal RAG for Automating Question Answering and Compliance Checking for Civil Standard Plans",
-      "authors": [
-        "Nabaraj Subedi",
-        "Shuvo Dip Datta",
-        "Ahmed Abdelaty",
-        "Shivanand Venkanna Sheshappanavar"
-      ],
-      "abstract": "Civil infrastructure compliance checking has long relied on engineers manually reading legacy 2D plans; however, OCR-based automation strips away the geometry and layout essential for interpreting these plans. We present a Visual-First Multimodal Retrieval-Augmented Generation (RAG) framework called PlanSightRAG. It indexes and reasons directly over plan imagery, integrates a ColNomic-3B multi-vector retrieval, an agentic Planner-Retriever-Auditor-Synthesizer, and MaxSim heatmaps as an evidence trail. We introduce a 4,056-pair benchmark from five state Departments of Transportation (DOT) standard plans (1,898 pages). PlanSightRAG achieves 91.47% Recall@5 on zero-shot retrieval, while on a held-out Michigan DOT corpus, it achieves 91.40%. On synthetic, parametrically-generated compliance drawings, our Qwen2.5-VL-72B pipeline reaches 100% verdict accuracy only when supplied a pre-resolved rule threshold, a controlled ceiling that a non-VLM OCR baseline already reaches at 76.4%. Finally, we demonstrate autonomous visual rule-grounding by extracting numeric limits directly from a specification corpus without any human-supplied rules.",
-      "url": "https://arxiv.org/abs/2608.26091v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.26091v1",
-      "published": "2026-08-26T17:54:24Z",
-      "updated": "2026-08-26T17:54:24Z",
-      "categories": [
-        "cs.IR",
-        "cs.CL",
-        "cs.CV"
-      ],
-      "primary_category": "cs.IR"
-    },
-    {
-      "id": "2608.26090v1",
-      "title": "Finding and using interpretable latents in a neutrino foundation model with sparse autoencoders",
-      "authors": [
-        "Rapha\u00ebl Bonnet-Guerrini",
-        "Johann Ioannou-Nikolaides",
-        "Inar Timiryasov",
-        "Vincenzo Piuri"
-      ],
-      "abstract": "We present a first application of sparse-autoencoder-based mechanistic interpretability to particle physics. Studying a neutrino foundation model pretrained on IceCube data and fine-tuned for direction reconstruction, we identify a validated atlas of physical concepts in the model representation, using a strict validation protocol consisting of held-out tests, matched nuisance controls, and replication across independent dictionary trainings. Causal interventions show that the direction head barely draws on this atlas. Motivated by this underused information, we train an uncertainty head on the same event-level representation to predict the model's angular reconstruction error. Unlike the direction head, it depends causally on quality and brightness features from the atlas. At $20\\%$ selection efficiency, this interpretable estimator improves the median angular resolution from $20.2^\\circ$ to $3.2^\\circ$. These results suggest that mechanistic interpretability can reveal learned latent physics encoded within a model's internal representation and help design downstream tasks that exploit it.",
-      "url": "https://arxiv.org/abs/2608.26090v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.26090v1",
-      "published": "2026-08-26T17:53:00Z",
-      "updated": "2026-08-26T17:53:00Z",
-      "categories": [
-        "astro-ph.HE",
-        "cs.AI",
-        "cs.LG",
-        "hep-ex"
-      ],
-      "primary_category": "astro-ph.HE"
-    },
-    {
-      "id": "2608.26088v1",
-      "title": "Planetary Prediction Engine: Autonomous Geospatial Prediction via Intelligent Data Selection and Foundation Model Embeddings",
-      "authors": [
-        "Evelyn Ma",
-        "Rama Kumar Pasumarthi",
-        "Kishwar Shafin",
-        "Mandar Sharma",
-        "Mimi Sun",
-        "Hamed Sadeghi",
-        "Dav M. Ebengo",
-        "Mbulayi Onesime",
-        "Rouslan Solomakhin",
-        "John Wamburu",
-        "William Ogallo",
-        "Aisha Walcott-Bryant",
-        "Sanxing Chen",
-        "Arbaaz Muslim",
-        "Yael Mayer",
-        "Ronald Ho",
-        "Roy Lee",
-        "Ruth Alcantara",
-        "Abdoulaye Diack",
-        "Monica Bharel",
-        "Lambert Rosique",
-        "Jeremy Amez-Droz",
-        "Christopher Haire",
-        "James Manyika",
-        "Yossi Matias",
-        "Niv Efron",
-        "Gautam Prasad",
-        "Shravya Shetty"
-      ],
-      "abstract": "Addressing critical global challenges, from food security and disaster risk to disease outbreaks and socio-economic vulnerability, demands high-fidelity geospatial modeling. However, building predictive planetary models remains bottlenecked by a fragmented data ecosystem, requiring manual data retrieval, multimodal data curation and fusion along with iterative model selection. We present the Planetary Prediction Engine (PPE), an autonomous AI system that executes this end-to-end workflow directly from natural-language queries. PPE synthesizes multimodal datasets on the fly, retrieving spatiotemporally relevant covariates across open-web and Earth observation platforms (Data Commons, Google Earth Engine) and fusing them with geospatial foundation model embeddings (PDFM, AlphaEarth). Simultaneously, it searches over task-tailored model architecture families with automated overfitting guards. Across diverse tasks, geographies, and scientific domains, PPE consistently outperforms state-of-the-art or manually tuned expert baselines. For US spatial regression, PPE improves mean $R^2$ across 21 CDC health indicators (76.8% vs. 60.0%), FEMA national risk indices (64.9% vs. 60.0%), and the Social Vulnerability Index (66.2% vs. 58.6%). For spatial downscaling in data-scarce settings, PPE integrates localized proxies to double baseline accuracy in Nigerian food security indicators ($R^2$ of 66.1% vs. 31.5%). For epidemiological nowcasting of the 2026 DRC Bundibugyo Ebola outbreak, PPE achieves a Recall@10 of 83.3% (identifying 15 of 18 newly invaded health zones across five weekly forecasts), a +10.3 percentage-point improvement over the public state-of-the-art modeling (~73%). By combining autonomous multimodal planetary data discovery with targeted model optimization, PPE lowers the technical barrier to planetary-scale analytics, enabling rapid, customized, expert-level deployment.",
-      "url": "https://arxiv.org/abs/2608.26088v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.26088v1",
-      "published": "2026-08-26T17:50:52Z",
-      "updated": "2026-08-26T17:50:52Z",
+      "abstract": "Agent skills package specialized knowledge and workflows into reusable resources that extend AI agent capabilities. Recent work automatically discovers such skills from agent experience, which enables agents to progressively adapt through interaction. However, the insights that guide skill development typically remain scattered across optimization histories, limiting their systematic reuse across iterations. We introduce WikiSkill, a framework that co-evolves agent skills with a persistent knowledge base (wiki). At a high level, WikiSkill separates raw execution experience, accumulated knowledge, and executable skills, while continuously consolidating experience into the wiki, which subsequent skill updates can build on. Across diverse benchmarks and models, WikiSkill consistently outperforms state-of-the-art skill-evolution methods and improves over no-skill baselines in most model-benchmark settings. We find that skill evolution complements model scaling: larger models generally benefit more from evolved skills, while smaller models with skills can outperform substantially larger models without them. We also find that evolved skills transfer effectively across models and model families, and skills evolved by other models can outperform self-evolved skills. Finally, our ablation studies confirm that persistent knowledge accumulation in the wiki is critical for effective skill evolution. These results demonstrate the benefits of systematically accumulating and refining agent experience for developing reusable and transferable skills.",
+      "url": "https://arxiv.org/abs/2608.27454v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27454v1",
+      "published": "2026-08-27T17:59:11Z",
+      "updated": "2026-08-27T17:59:11Z",
       "categories": [
         "cs.AI",
-        "cs.LG"
+        "cs.CL"
       ],
       "primary_category": "cs.AI"
     },
     {
-      "id": "2608.26086v1",
-      "title": "TraceML: An Empirical Analysis of Human-Agent Planning in Machine Learning Development",
+      "id": "2608.27451v1",
+      "title": "Tacet: A Language and Type System for Automatic Statistical Validity Accounting",
       "authors": [
-        "Jiarui Yan",
-        "Weiwei Sun",
-        "Sijie Li",
-        "Wenhan Li",
-        "Yiming Yang"
+        "Chik\u00e9 Abuah"
       ],
-      "abstract": "Large language models write correct code for isolated problems but remain far weaker at autonomous machine-learning development, where an agent must revise data pipelines, models, and validation over hours of feedback, and on most competitions still finishes below strong human competitors. Outcome-based benchmarks record this gap but not its cause, because they grade the final submission and discard the development process behind it. We introduce TraceML, which pairs human and agent work on the same competitions under one version-level schema: 4,465 human Kaggle trajectories across 134 competitions, seven of which are also worked by two agent scaffolds, giving 430 paired human and 207 agent trajectories. Every code version carries its score, its timestamp, and labels for the action taken, its intent, the edit size, and the score effect. Read this way, the gap becomes concrete. Experts alternate data work, validation, model changes, and ensembling, and return to approaches they had set aside. Each agent scaffold instead collapses into a narrow loop: Codex spends its steps re-weighting ensembles and tuning submissions, MLEvolve mutates its model in place, and neither pivots at the human rate nor reopens abandoned work. A short planning prompt distilled from human practice moves the behaviors it names toward the human profile and lifts scores, but the effort profile stays agent-shaped: instruction closes only the part of the gap that reduces to instructions. We release the corpus, the schema, the labelers, and the extraction pipeline at https://huggingface.co/datasets/jerryyan/TraceML.",
-      "url": "https://arxiv.org/abs/2608.26086v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.26086v1",
-      "published": "2026-08-26T17:50:13Z",
-      "updated": "2026-08-26T17:50:13Z",
+      "abstract": "Empirical comparisons between systems are a standard form of evidence in computer science research, but few are checked for statistical validity: most are never framed as statistical tests at all. Existing multiple-comparison procedures could control the resulting error, but need inputs (what an analysis examined, and how its observations are arranged) that are not recoverable from a list of p-values. We introduce Tacet, a language in which an analysis declares what it generated, states what it expects to find, and is refused any claim it cannot afford or cannot properly test. Its core calculus T pairs a free estimation sublanguage, carrying a reported footprint and a purity bit that records whether any outcome was consulted in building a value, with a priced claim sublanguage, carrying a wealth transformer, connected only by a mechanism that prices a comparison. A sample selected by reading outcomes sets the purity bit and is recorded as having examined everything it read, permanently, so it can never be granted a one-sided or confirmatory price, without the system ever asking whether the analyst intended to cherry-pick. Whether a comparison is paired or clustered is computed statically from the artifact schema, from declared functional dependencies between key fields alone and before any data is read, and a mechanism that assumes that structure away is refused rather than priced. Because the wealth transformer is antitone in the realized p-value, affordability can be checked before the analysis runs too, turning pre-registration into a typing rule. We prove the metatheory machine-checked in Lean 4 with no admitted gaps, and demonstrate the approach on a reference implementation and two case studies on published artifacts, the SWE-bench Verified leaderboard and BIG-Bench Hard.",
+      "url": "https://arxiv.org/abs/2608.27451v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27451v1",
+      "published": "2026-08-27T17:59:01Z",
+      "updated": "2026-08-27T17:59:01Z",
       "categories": [
-        "cs.LG",
+        "cs.PL",
+        "cs.SE"
+      ],
+      "primary_category": "cs.PL"
+    },
+    {
+      "id": "2608.27449v1",
+      "title": "SWE-Prime: Fewer Trajectories, Better Performance",
+      "authors": [
+        "Dewu Zheng",
+        "Ruizhe Ye",
+        "Yanlin Wang",
+        "Yang Ye",
+        "Hongyu Zhang",
+        "Ensheng Shi",
+        "Xilin Liu",
+        "Yuchi Ma",
+        "Jianxing Yu",
+        "Zibin Zheng"
+      ],
+      "abstract": "To improve large language models' ability to resolve real-world software issues, prior work has focused on constructing large-scale agent trajectory datasets and performing supervised fine-tuning (SFT) on successful trajectories. However, task success does not guarantee high-quality supervision: successful trajectories may still contain ineffective, redundant, or risky steps. Directly using such trajectories for SFT can introduce noisy supervision and encourage models to imitate undesirable problem-solving behaviors. Therefore, we propose SWE-Prime, a multi-granularity, two-stage SFT data selection method that progressively filters training data at the trajectory and segment levels. Specifically, the first stage performs trajectory-level screening based on process quality, result quality, and data representativeness, selecting a high-quality and representative subset of successful trajectories. The second stage performs segment-level selection by grouping consecutive steps into semantic segments and assessing each segment based on its contribution to the final solution, learnability, and potential risks. During SFT, all segments remain in the sequence to preserve context, while only selected segments contribute to the loss computation. Experiments on SWE-Bench Pro and SWE-Bench Verified show that training on the 10% trajectory subset selected by SWE-Prime outperforms training on the full resolved dataset, yielding relative performance gains of up to 12.2% and 24.2%, respectively.",
+      "url": "https://arxiv.org/abs/2608.27449v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27449v1",
+      "published": "2026-08-27T17:58:10Z",
+      "updated": "2026-08-27T17:58:10Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "primary_category": "cs.SE"
+    },
+    {
+      "id": "2608.27448v1",
+      "title": "TTPO: Test-Time Policy Optimization",
+      "authors": [
+        "Aozhe Wang",
+        "Zhengxi Lu",
+        "Jianze Wang",
+        "Shangke Lv",
+        "Ying Liu",
+        "Weiming Lu",
+        "Jun Xiao",
+        "Yueting Zhuang",
+        "Hua Yang",
+        "Qianglong Chen",
+        "Yongliang Shen"
+      ],
+      "abstract": "Recent prominent post-training methods, such as Reinforcement Learning (RL) and On-Policy Self-Distillation (OPSD), have driven rapid progress in mathematical reasoning for large language models, yet their reliance on ground-truth labels precludes test-time training (TTT). Replacing ground truth with majority-vote pseudo-labels is a natural alternative, yet it is fragile: an incorrect vote corrupts the teacher and misleads every token. We observe that this failure mode is asymmetric: rollouts that disagree with the pseudo-label are typically wrong regardless of whether the vote itself is correct. Building on this observation, we propose Test-Time Policy Optimization (TTPO), an asymmetric objective that distills agreeing rollouts via OPSD and penalizes disagreeing rollouts with Grouped RL. Token-level selection further refines both branches: distillation down-weights already-converged positions, while RL penalizes only confident errors. Both updates remain well-grounded even under frequent pseudo-label errors, and majority-vote routing yields tighter self-supervision as the model improves. Without any labels, TTPO matches label-supervised OPSD on five competition-level benchmarks, raises Qwen3-1.7B from 38.0% to 45.2% in TTT, yields +25.2% to +36.4% without thinking, and shows strong cross-task generalization.",
+      "url": "https://arxiv.org/abs/2608.27448v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27448v1",
+      "published": "2026-08-27T17:58:10Z",
+      "updated": "2026-08-27T17:58:10Z",
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL"
+    },
+    {
+      "id": "2608.27442v1",
+      "title": "From Static to Dynamic: Benchmarking Real-World Code Review with MCR-Bench",
+      "authors": [
+        "Dewu Zheng",
+        "Yanlin Wang",
+        "Xiwen Wang",
+        "Kefeng Duan",
+        "Hongyu Zhang",
+        "Xilin Liu",
+        "Yuchi Ma",
+        "Zibin Zheng"
+      ],
+      "abstract": "In real-world software development, code review typically involves iterative interactions between developers and reviewers to improve software quality, making the process costly and time-consuming. Although recent work explores large language models (LLMs) for automated code review, most approaches oversimplify code review into a single-round, static decision task, which fails to capture the multi-round interactive nature and the complex problem-solving processes inherent in realistic review scenarios. To bridge this gap, we introduce MCR-Bench, the first defect state-aware benchmark designed for realistic multi-round code review. MCR-Bench covers five commonly-used programming languages and consists of 2,269 real-world multi-round code review tasks, each of which is annotated with fine-grained defect information and cross-round state labels. Each task in MCR-Bench is equipped with fine-grained defect metadata (e.g., description, type, severity) alongside dynamic state annotations, capturing the complete evolutionary trajectory of a defect throughout the multi-round process. We obtain several findings through extensive experiments on MCR-Bench with mainstream LLMs. (1) Limited overall capability: experiments reveal that mainstream LLMs exhibit limited overall performance in defect detection and defect lifecycle state tracking, with performance degrading significantly as the number of interaction rounds increases; (2) Defect-sensitive performance: LLMs' performance varies substantially across different defect types and severity levels, with semantically complex or low-salience defects being significantly more likely to be missed; (3) Underlying Failure Mechanisms: our in-depth error analysis dissects the distinct drivers of false positives and false negatives, revealing critical weaknesses such as cross-round temporal misalignment and inadequate long-range memory.",
+      "url": "https://arxiv.org/abs/2608.27442v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27442v1",
+      "published": "2026-08-27T17:56:24Z",
+      "updated": "2026-08-27T17:56:24Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "primary_category": "cs.SE"
+    },
+    {
+      "id": "2608.27439v1",
+      "title": "RedEvoAgent: Automatic Red-Teaming Agent with Experience-Driven Skill Evolution",
+      "authors": [
+        "Junjie Zhang",
+        "Hui Liu",
+        "Kecheng Chen",
+        "Xianbo Mo",
+        "Changsheng Chen",
+        "Haoliang Li"
+      ],
+      "abstract": "LLM-based agents are increasingly deployed in product-level execution harnesses, where jailbreaks can trigger harmful tool use and persistent state changes, creating greater risks than unsafe text generation alone. Existing automatic red-teaming methods often rely on fixed attacks, while recent agentic attackers coordinate multiple jailbreak tools and show stronger potential through trajectory-based retrieval. However, such retrieval can reuse misleading experiences due to retrieval bias and unclear tool credit, and full trajectories add context overhead while reducing interpretability. We propose RedEvoAgent, a black-box red-teaming agent that distills cross-case attack trajectories into a concise, human-readable attack skill. The attack skill adaptively evolves through tool-effectiveness profiling and Deciding-Tool Attribution for skill updates, and a validation ratchet that retains only updates improving validation performance. Experiments on multiple benchmarks, target models, and target execution harnesses show that RedEvoAgent outperforms fixed and agentic baselines, improves tool efficiency, and transfers across attacker models and target execution harnesses.",
+      "url": "https://arxiv.org/abs/2608.27439v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27439v1",
+      "published": "2026-08-27T17:55:33Z",
+      "updated": "2026-08-27T17:55:33Z",
+      "categories": [
+        "cs.CR",
         "cs.AI"
       ],
-      "primary_category": "cs.LG"
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2608.27429v1",
+      "title": "Mechanistic Reaction Prediction via Discrete Flow Matching on Graph-Structured Electron Occupation",
+      "authors": [
+        "Nguyen Xuan-Vu",
+        "Octavian Susanu",
+        "Daniel Armstrong",
+        "Philippe Schwaller"
+      ],
+      "abstract": "Chemical reactions are fundamentally transformations in electron space, yet most machine learning approaches model them either through \\textit{de novo} generation of product molecules or through heuristic graph edits that operate directly on molecular topology. We introduce MAELLE (\\textbf{M}ech\\textbf{A}nistic \\textbf{E}dit f\\textbf{L}ow-matching on e\\textbf{L}ectron r\\textbf{E}arrangements), which instead models reactions as discrete flow matching over electron occupation vectors. Concretely, we formulate the reactant-to-product mapping as a Continuous-time Markov Chain (CTMC) over the graph-structured integer-valued electron occupation space defined on all bonding, non-bonding, and hydrogen sites. To construct the intermediate edit trajectories, we generalize the discrete flow matching mixture path to discrete electron rearrangements using Optimal Transport, yielding a sequence of mechanistically interpretable edit moves without requiring elementary step annotations. MAELLE achieves competitive performance on the USPTO-480K benchmark compared with leading reaction prediction models. Beyond in-distribution accuracy, we evaluate robustness across two out-of-distribution settings - structural complexity and reaction type - and find that MAELLE maintains strong performance where existing methods degrade. Finally, because the learned flow operates over the full electron redistribution, MAELLE naturally recovers mechanistic trajectories that align with known chemistry and can predict side products of a reaction.",
+      "url": "https://arxiv.org/abs/2608.27429v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27429v1",
+      "published": "2026-08-27T17:50:44Z",
+      "updated": "2026-08-27T17:50:44Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI"
+    },
+    {
+      "id": "2608.27428v1",
+      "title": "Stochastic Estimation of Transduced Language Models",
+      "authors": [
+        "V\u00e9steinn Sn\u00e6bjarnarson",
+        "Samuel Kiegeland",
+        "Manuel de Prada Corral",
+        "Ryan Cotterell",
+        "Tim Vieira"
+      ],
+      "abstract": "Transduced language models (TLMs) compose a pretrained \\emph{source} language model with a functional finite-state transducer to induce a language model over \\emph{target} strings. Computing the probability of a target prefix under a TLM amounts to summing the source-model probabilities of all source strings that the transducer maps to target strings beginning with that prefix. This set can be exponentially large or infinite. Prior work uses a computational shortcut based on source prefix probabilities, then approximates the resulting sum with threshold-pruned beam summing. This produces a lower bound with unknown error. Instead, we resample source prefixes without replacement and reweight each selected prefix by the inverse of its inclusion probability. We show that applying this correction recursively gives an unbiased estimator of the target prefix probability and lets us estimate the mass lost by threshold pruning. Our beam-summing algorithm extends the retained source prefixes and samples which prefixes to keep, reducing their number as more probability mass is added to the running estimate. This can save computation and guarantees that the run halts with probability one. We evaluate the method on encyclopedic text and DNA against sequential Monte Carlo baselines that resample with replacement. It achieves a better compute--variance tradeoff on text and lower error at the same maximum number of particles on DNA. On a DNA-to-amino-acid transduction, it reduces runtime by several orders of magnitude relative to threshold-pruned beam summing and makes estimating prefix probabilities for long target strings feasible. Replacing threshold pruning with unbiased sampling in a published reading-time analysis substantially lowers the estimated corpus surprisal but leaves the published conclusions unchanged.",
+      "url": "https://arxiv.org/abs/2608.27428v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27428v1",
+      "published": "2026-08-27T17:50:21Z",
+      "updated": "2026-08-27T17:50:21Z",
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL"
     }
   ]
 }
