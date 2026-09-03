@@ -2,23 +2,116 @@
   "category": "biology",
   "name": "Biology Research",
   "description": "Quantitative Biology \u2014 Genomics, Biophysics, Neuroscience",
-  "scraped_at": "2026-09-02T12:42:42.477608+00:00",
+  "scraped_at": "2026-09-03T12:45:50.812429+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2609.01357v1",
-      "title": "PopPert: Population-level Joint-Distribution Modeling for Single-Cell Perturbation Prediction",
+      "id": "2609.02887v1",
+      "title": "A Common Measure of Communication for Speech Brain-Computer Interfaces",
       "authors": [
-        "Handong Wang",
-        "Jiaxin Qi",
-        "Haochen Feng",
-        "Baisheng Lai"
+        "Dulhan Jayalath",
+        "Benjamin Ballyk",
+        "Oiwi Parker Jones"
       ],
-      "abstract": "Predicting transcriptional responses to specific perturbations is critical for understanding cellular regulatory mechanisms and accelerating drug discovery. Single-cell RNA sequencing destroys each measured cell, yielding only unpaired populations of control and perturbed cells. However, existing methods typically model perturbation prediction at the single-cell level and assume cell-to-cell correspondence, which conflicts with the unpaired nature of the observed data. To address this challenge, we propose PopPert, a framework that explicitly parameterizes population-level joint gene expression distributions for collective transcriptional state modeling. Given a control population distribution and a perturbation condition, PopPert predicts perturbation-induced changes in distribution parameters, eliminating the need for cell-level correspondence and reducing sensitivity to single-cell noise. To effectively capture gene co-expression patterns, PopPert leverages a low-rank Gaussian Copula to model cross-gene statistical dependencies and construct the joint gene expression distribution, additionally allowing sampling of synthetic perturbed single-cell profiles. Across multiple single-cell benchmarks spanning both genetic and chemical perturbations, PopPert achieves superior overall performance in differential expression recovery, perturbation effect estimation, and population-level distribution matching. These results establish population-level joint distribution learning as an effective paradigm for predicting transcriptional responses from unpaired single-cell populations. Code for PopPert is publicly available at https://github.com/whd1125/PopPert.",
-      "url": "https://arxiv.org/abs/2609.01357v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.01357v1",
-      "published": "2026-09-01T14:59:03Z",
-      "updated": "2026-09-01T14:59:03Z",
+      "abstract": "Speech brain-computer interfaces (speech BCIs) translate neural activity into language, offering a path towards restoring speech for people with paralysis and, more broadly, enabling new forms of natural human-computer interaction. Despite this promise, the field lacks a common measure of progress because systems use different datasets, recording methods, types of speech, and vocabularies, so their reported scores are rarely comparable. Underlying this measurement problem are two unresolved questions: (i) what distribution of words should a speech BCI enable a user to communicate, and (ii) how much information from this distribution can a system convey. We address both by deriving open-vocabulary mutual information (OVMI), an information-theoretic quantity that measures the information conveyed by a decoder relative to a reference distribution over the words a user may wish to communicate. This allows capabilities measured under different conditions, such as distinct vocabularies, to be evaluated on a common communication scale. We show that ordinarily reported accuracy, word error rate (WER), and other metrics computed only over the words a system supports can overstate how much of a user's intended speech the system can communicate. We then use OVMI to compare existing systems, expose trade-offs between how much of the user's language a system supports and how accurately it decodes those words, show that these comparisons depend on what the user is expected to communicate, and demonstrate that selecting a vocabulary to maximise OVMI yields up to 16.3% relative improvement in accuracy across three speech domains. OVMI therefore provides the speech BCI community with a principled way to compare heterogeneous systems, improve vocabulary design, and measure progress in the field.",
+      "url": "https://arxiv.org/abs/2609.02887v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.02887v1",
+      "published": "2026-09-02T17:59:46Z",
+      "updated": "2026-09-02T17:59:46Z",
+      "categories": [
+        "cs.LG",
+        "q-bio.NC"
+      ],
+      "primary_category": "cs.LG"
+    },
+    {
+      "id": "2609.02739v1",
+      "title": "Prediction emerges in RNNs trained for perception",
+      "authors": [
+        "Akanksha Gupta",
+        "Alejandro Tabas"
+      ],
+      "abstract": "The brain is highly proficient at making sense of noisy and ambiguous sensory inputs. Predictive processing hypothesises that this ability relies on prediction. However, it is unclear why the brain would have evolved to predict the sensory world, a computationally expensive process, in order to aid perception. Here we use simulations to argue that prediction naturally emerges in systems optimised for perception. We train recurrent neural networks (RNNs) to denoise a tokenised version of Bach's compositions at a range of noise levels. Afterwards, we enquire whether the states of the networks contain predictive information about the next token. We test this by freezing the RNN weights and training a linear readout from its states on prediction. We compare the performance of the linear readout with that of an independently trained linear benchmark model. The results show that the linear readout from the RNNs outperforms the benchmark model at moderate levels of noise, indicating that the networks rely on a predictive mechanism to support perception. We further show that the responses of the RNNs to sensory inputs are proportional to prediction error. Together, the results demonstrate that neural signatures of predictive processing emerge, without any further training constraints, from optimisation of perception.",
+      "url": "https://arxiv.org/abs/2609.02739v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.02739v1",
+      "published": "2026-09-02T15:46:36Z",
+      "updated": "2026-09-02T15:46:36Z",
+      "categories": [
+        "q-bio.NC"
+      ],
+      "primary_category": "q-bio.NC"
+    },
+    {
+      "id": "2609.02445v1",
+      "title": "An adaptive time-tree transition kernel for Bayesian phylogenetic inference",
+      "authors": [
+        "Marius Brusselmans",
+        "Guy Baele",
+        "Samuel L. Hong",
+        "Jiansi Gao",
+        "Marc A. Suchard",
+        "Andrew Rambaut",
+        "Luiz Max Carvalho"
+      ],
+      "abstract": "Bayesian phylogenetic and phylodynamic analyses can be very time-consuming, owing to the combination of complex models that are used to estimate key parameters from increasingly large genomic data sets and their associated metadata. The use of high-performance computer hardware can -- to a certain extent -- alleviate the computational burden and markedly decrease the time to results. Still, even converging to the posterior can be a lengthy endeavour, with the burn-in aspect of such analyses potentially taking days or even weeks for large data sets. One of the key aspects that hampers performance in Bayesian phylogenetic inference is the efficiency with which tree topology proposals explore tree space. We here propose a novel adaptive tree transition kernel, which we call `subTreeLeap' (STL), which involves modifying the phylogeny by walking along patristic distance paths in the tree according to an adaptable radius parameter. STL is a general proposal, which can be used with contemporaneous or time-calibrated sequence data, being particularly suited to the latter due to respecting temporal precedence constraints. We carefully assess its impact on convergence and statistical mixing of the exploration of posterior tree space, by comparison to replicate ``golden runs'' obtained from lengthy analyses of empirical data under standard tree transition kernels. We find that STL successfully explores the same posterior tree space as standard kernels, but often does so in a more efficient manner. We discuss limitations as well as future potential improvements to STL that could substantially increase the speed at which Bayesian phylogenetic inferences are obtained.",
+      "url": "https://arxiv.org/abs/2609.02445v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.02445v1",
+      "published": "2026-09-02T11:08:34Z",
+      "updated": "2026-09-02T11:08:34Z",
+      "categories": [
+        "q-bio.PE",
+        "q-bio.QM"
+      ],
+      "primary_category": "q-bio.PE"
+    },
+    {
+      "id": "2609.02365v1",
+      "title": "Beyond species area curves: a theoretical approach to the relationship between diversity and area",
+      "authors": [
+        "Hwai-Ray Tung",
+        "Simon A Levin"
+      ],
+      "abstract": "Species area curves, which describe the number of species present as a function of area, have long been used to understand biodiversity and inform conservation efforts. While understanding the number of species is important, it leaves out information about the population sizes of each species. In this work, we examine the relationship between the effective number of species from different diversity indices, like Simpson's index and the Shannon index, and area. These effective number of species are also referred to as Hill numbers. Using a spatial and neutral model that has previously been used to understand species area curves, we show through a combination of theory and simulations that the relationship between the effective number of species and area is linear when the area is sufficiently large and resembles a power law for smaller areas.",
+      "url": "https://arxiv.org/abs/2609.02365v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.02365v1",
+      "published": "2026-09-02T09:35:43Z",
+      "updated": "2026-09-02T09:35:43Z",
+      "categories": [
+        "q-bio.PE"
+      ],
+      "primary_category": "q-bio.PE"
+    },
+    {
+      "id": "2609.02345v1",
+      "title": "Fungal Memory and Minimal Cognition",
+      "authors": [
+        "Kristina \u0160ekrst"
+      ],
+      "abstract": "This paper argues that fungal mycelial networks exhibit minimal cognition through memory-integrated adaptive regulation. Drawing on cybernetic and enactivist frameworks, I develop a non-representational account of memory as the organism's capacity to modulate behavior based on temporally extended environmental coupling. I propose four operational criteria for minimal cognition: feedback-guided regulation of behavior, maintenance of internal viability conditions, structural modulation based on past environmental interactions, and plasticity across time scales that supports anticipatory adaptivity. Empirical evidence demonstrates that fungi meet all four criteria through distributed memory mechanisms: fungal networks exhibit directional regrowth toward previously encountered resources even after spatial displacement; stress priming persists across multiple cell divisions; Spitzenk\u00f6rper-mediated directional persistence in constrained environments; and transgenerational memory through spore imprinting. These findings challenge representationalist assumptions in cognitive science by showing that memory and cognition can emerge from morphodynamic, biochemical, and electrophysiological processes without necessary neural substrates or symbolic representations. Fungal cognition demonstrates that the organizational principles underlying cognition - feedback-driven adaptation, norm-preservation, and historical coupling - can be realized in radically different material substrates, expanding our understanding of what counts as a cognitive system.",
+      "url": "https://arxiv.org/abs/2609.02345v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.02345v1",
+      "published": "2026-09-02T09:21:02Z",
+      "updated": "2026-09-02T09:21:02Z",
+      "categories": [
+        "q-bio.NC"
+      ],
+      "primary_category": "q-bio.NC"
+    },
+    {
+      "id": "2609.02344v1",
+      "title": "Subcellularly Resolved Single-Cell Embedding Learning with Transcriptomic data, Protein Structure and Localization Information",
+      "authors": [
+        "Zhen Zhou",
+        "Jiachen Li",
+        "Yuan Liu",
+        "Xiaoyong Pan",
+        "Hong-Bin Shen"
+      ],
+      "abstract": "Existing cell embedding methods predominantly rely on transcriptomic or proteomic measurements and represent each cell as a holistic entity, thereby overlooking the subcellular localization of individual molecules. Moreover, they rarely incorporate protein structural information, despite its fundamental role in determining molecular interactions and functions. In this work, we propose a multimodal framework for learning subcellularly resolved cell embeddings by jointly leveraging RNA expression profiles, protein sequence representations, and protein structural information. Specifically, we employ a cross-attention architecture to integrate transcriptomic, sequence, and structural modalities and model their interactions within distinct subcellular compartments. The resulting embeddings represent each cell through its fine-grained subcellular organization, capturing both molecular expression patterns and the functional properties of the associated proteins. By learning cell representations at subcellular resolution, our framework preserves spatially organized biological information while integrating complementary signals across multiple molecular levels. To the best of our knowledge, this is the first framework that produces subcellularly resolved cell embeddings by jointly incorporating transcriptomic information, protein sequence representations, and protein structural knowledge within a unified cross-modal learning paradigm.",
+      "url": "https://arxiv.org/abs/2609.02344v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.02344v1",
+      "published": "2026-09-02T09:20:48Z",
+      "updated": "2026-09-02T09:20:48Z",
       "categories": [
         "q-bio.GN",
         "cs.AI"
@@ -26,182 +119,80 @@
       "primary_category": "q-bio.GN"
     },
     {
-      "id": "2609.01132v1",
-      "title": "From static structures to dynamic landscapes: cryo-EM redefines RNA biology",
+      "id": "2609.02243v1",
+      "title": "Mus siliconus: A Neuro-Musculoskeletal Digital Twin of the Mouse Integrating Neural Dynamics, Biomechanics, and Tactile Sensing",
       "authors": [
-        "Shekhar Jadhav",
-        "Spandan Saha",
-        "Qingbin Shang",
-        "Marco Marcia"
+        "Satoshi Oota",
+        "Hideo Yokota",
+        "Hiroki Mori"
       ],
-      "abstract": "RNA molecules perform diverse biological functions by dynamically exploring multiple conformational states rather than adopting a single static structure. Capturing these ensembles is a challenge in molecular biology. Recent advances in cryoEM are now transforming this landscape by enabling the visualization of RNA molecules across a broad spectrum of functionally relevant conformations at near atomic resolution. Here, we examine how cryoEM is reshaping RNA structural biology changing focus from the analysis of static structures to dynamic conformational landscapes. Through 8 representative case studies we illustrate how cryoEM has revealed previously inaccessible mechanisms of RNA motion, including folding processes, ligand-dependent switching, and cooperative assembly. We specifically discuss emerging experimental and computational approaches that address and overcome the challenges associated with studying dynamic RNAs, particularly in construct design, sample preparation, vitrification, and data analysis. These novel methods resolve conformational variability and enable the reconstruction of discrete and continuous RNA conformational landscapes from cryoEM data, highlighting how structural heterogeneity can be harnessed to extract functional insights. Looking forward, the integration of cryoEM with complementary biophysical techniques and time resolved methodologies promises to bridge structural and temporal resolution, to routinely derive experimental molecular movies of RNA in action. These advances will not only deepen our understanding of RNA biology but also provide new opportunities for RNA targeted therapeutics and the rational design of dynamic RNA-based nanodevices. By connecting structural snapshots into coherent dynamic models, cryoEM is establishing a framework for quantitative descriptions of RNA energy landscapes and their functional roles.",
-      "url": "https://arxiv.org/abs/2609.01132v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.01132v1",
-      "published": "2026-09-01T12:08:09Z",
-      "updated": "2026-09-01T12:08:09Z",
+      "abstract": "Digital twin technologies could transform neuroscience and biomedicine by creating predictive computational representations of living organisms. However, most animal digital twins model neural circuits, anatomy, or biomechanics separately rather than integrating the processes that generate behavior. We argue that animal digital twins should instead be conceived as embodied dynamical systems that unify neural activity, body mechanics, sensory feedback, and environmental interactions. We propose a neuro-musculoskeletal digital twin of the mouse that combines multimodal anatomical reconstruction from X-ray CT, high-resolution white-light sections, and Scx-GFP imaging with biomechanical simulation, Bonhoeffer--van der Pol neural dynamics, and tactile feedback. This framework forms a closed sensorimotor loop in which behavior emerges through continuous interactions among the nervous system, musculoskeletal system, and environment. The Bonhoeffer--van der Pol model provides a computationally tractable dynamical foundation for large-scale simulation of these interactions. Neuro-musculoskeletal digital twins could provide a convergence point for computational neuroscience, biomechanics, artificial intelligence, and robotics. When coupled with adaptive learning and autonomous experimentation, they may develop from passive simulations into active scientific instruments that generate hypotheses, predict interventions, and guide experiments. Such embodied digital twins could advance the study of biological intelligence and support new adaptive biomedical and robotic systems.",
+      "url": "https://arxiv.org/abs/2609.02243v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.02243v1",
+      "published": "2026-09-02T07:49:38Z",
+      "updated": "2026-09-02T07:49:38Z",
       "categories": [
-        "q-bio.BM"
-      ],
-      "primary_category": "q-bio.BM"
-    },
-    {
-      "id": "2609.01055v1",
-      "title": "Active Visual Semantics: A large-scale MEG and eye-tracking dataset for understanding visual intelligence in action",
-      "authors": [
-        "Philip Sulewski",
-        "Carmen Amme",
-        "Peter K\u00f6nig",
-        "Martin N. Hebart",
-        "Tim C. Kietzmann"
-      ],
-      "abstract": "Here we present the Active Visual Semantics (AVS) dataset, a large-scale collection of magnetoencephalography (MEG) and eye-tracking data recorded while five participants freely explored 4,080 natural scenes over 10 sessions each, yielding more than 200,000 fixation epochs in total. Unlike existing neuroimaging datasets that rely on passive viewing with enforced central fixation, AVS captures brain activity during active scene exploration, including self-generated saccades and fixations. A semantic captioning task on 25% of the trials provides behavioural measures linking gaze to scene understanding and memory. In addition to neural and behavioural data, AVS includes per-fixation object category labels, human-rated annotations of the appearance of fixation targets in the scene captioning task and pupil dynamics. Individual head stabilisation casts were used during MEG data collection, which alongside with structural MRI scans, enabled precise cross-session source reconstruction. Using artificial neural network (ANN) encoding models we demonstrate that individual fixation-aligned MEG epochs hold visual content-specific signal, despite the challenges that active scene viewing poses for MEG signal quality. Further, we use fixation-aligned representation similarity analysis (RSA) and demonstrate that we can derive fixation object category averages that yield representational geometries which are highly reliable across participants. Both in MEG sensor and source space this structure is validated by its robust alignment with ANN object-level representational geometry. Taken together, AVS provides a rich resource for investigating a large variety of questions regarding the neural mechanisms of active vision, object recognition and scene captioning during natural viewing, and the relationship between gaze behaviour and memory encoding.",
-      "url": "https://arxiv.org/abs/2609.01055v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.01055v1",
-      "published": "2026-09-01T10:51:05Z",
-      "updated": "2026-09-01T10:51:05Z",
-      "categories": [
-        "q-bio.NC"
+        "q-bio.NC",
+        "q-bio.TO"
       ],
       "primary_category": "q-bio.NC"
     },
     {
-      "id": "2609.00831v1",
-      "title": "FLaG: Frequency-Domain Latent-attention Gated Pooling for Token Aggregation",
+      "id": "2609.02195v1",
+      "title": "Memory as an Energy Landscape---Hopfield",
       "authors": [
-        "Kewei Li",
-        "Rongying Zhang",
-        "Xueli Wang",
-        "Xiwen Gong",
-        "Zhongjian Wang",
-        "Qiuchen Zhao",
-        "Lan Huang",
-        "Ruochi Zhang",
-        "Fengfeng Zhou"
+        "Nima Dehghani"
       ],
-      "abstract": "Token aggregation converts token-level representations into fixed-dimensional sample representations, but most pooling methods operate only in the original token space. We introduce Frequency-Domain Latent-attention Gated Pooling (FLaG), a plug-in aggregation module that re-expresses encoder outputs in the Fourier domain before final pooling. FLaG represents the nonredundant rFFT spectrum through concatenated real and imaginary components, summarizes spectral tokens with learnable latent queries, derives a sample-conditioned channel gate, and reconstructs modulated token representations for downstream aggregation. We evaluate the same architecture across ESM2-based antimicrobial peptide (AMP) activity prediction, ResNet18 image classification on CIFAR-10 and CIFAR-100, and three RoBERTa-based language tasks. FLaG achieves the best macro-averaged Spearman correlation coefficient, RMSE, and Recall@50 across four AMP backbone-species settings and the highest top-1 accuracy on CIFAR 10. It also achieves the best mean results on five of seven language metrics, although mean pooling remains strongest on STSBenchmark. AMP-side mechanistic analyses reveal low-frequency prediction sensitivity across most encoder layers, with increased relative high-frequency sensitivity in the final layer, and pronounced peptide-specific positional responses. The residual gate broadly amplifies spectral channels while preserving the low-frequency-dominated energy profile, whereas latent cross-attention exhibits sample- and species-specific spectral allocation. Overall, FLaG provides a transferable frequency-domain aggregation bias across protein, visual, and textual representations, with benefits that depend on the backbone and downstream task. Supplementary materials, source code, and data are available at https://www.healthinformaticslab.org/supp/ and https://github.com/Kewei2023/AMPCliff/tree/FLaG.",
-      "url": "https://arxiv.org/abs/2609.00831v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.00831v1",
-      "published": "2026-09-01T07:32:44Z",
-      "updated": "2026-09-01T07:32:44Z",
+      "abstract": "This chapter reconstructs the Hopfield network as a physical theory of memory rather than merely an early neural-network algorithm. It begins with the problem as it stood before 1982-threshold logic, Hebbian association, correlation memories, and recurrent binary networks-and isolates what Hopfield's synthesis added: a dynamical definition of content-addressable memory, a symmetric recurrent architecture with a Lyapunov function, a Hebbian embedding of patterns in its couplings, and a physical account of basins, robustness, and graceful degradation. The binary and graded-response energy functions are derived in full, together with the signal-crosstalk decomposition governing pattern stability, the mean-field theory of retrieval at extensive load, and the zero-temperature retrieval spinodal at (alpha 0.138) established by Amit, Gutfreund, and Sompolinsky. The energy-based program is then followed through analog optimization networks, polynomial dense associative memories, exponential interactions, and modern continuous Hopfield updates, including the precise conditions under which the update becomes scaled dot-product attention. Throughout, capacity claims are tied to their disorder ensemble, scaling limit, and success criterion, showing why numerically different storage limits need not conflict. A closing assessment distinguishes established results from surviving principles, assumption-bound limitations, and open problems, treating the Hopfield network as an effective theory whose symmetry, locality, and point-neuron assumptions delimit its biological reach. Fixed-seed numerical experiments expose the mechanisms discussed but do not substitute for analytical results.",
+      "url": "https://arxiv.org/abs/2609.02195v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.02195v1",
+      "published": "2026-09-02T07:00:01Z",
+      "updated": "2026-09-02T07:00:01Z",
       "categories": [
-        "cs.AI",
-        "q-bio.BM"
+        "cs.NE",
+        "cond-mat.dis-nn",
+        "nlin.AO",
+        "physics.bio-ph",
+        "q-bio.NC"
       ],
-      "primary_category": "cs.AI"
+      "primary_category": "cs.NE"
     },
     {
-      "id": "2609.00809v1",
-      "title": "Temporally constraining source imaging estimates in an underdetermined neural system with eigenmodes of cortical geometry",
+      "id": "2609.02183v1",
+      "title": "Neural Logic, Invariance, and the Retina---McCulloch and Pitts",
       "authors": [
-        "Pok Him Siu",
-        "Philippa J. Karoly",
-        "Artemio Soto-Breceda",
-        "Mark J. Cook",
-        "David B. Grayden"
+        "Nima Dehghani"
       ],
-      "abstract": "Geometric eigenmodes provide a compact and biologically grounded representation of large-scale neural activity. Previous work demonstrated that they can mitigate the underdetermined nature of electroencephalographic (EEG) and magnetoencephalographic (MEG) source localisation, an ill-posed inverse problem in which neural activity is reconstructed from non-invasive recordings. Beyond their spatial structure, neural field theory predicts the temporal evolution of eigenmodes through analytically derived transfer functions. Motivated by this framework, the present work investigates whether these transfer functions can be used to introduce temporal constraints into EEG source imaging. The approach is evaluated using simulated seizure dynamics generated by coupled Epileptor neural mass models. Transfer functions derived directly from neural field theory were found to be generally ineffective as temporal constraints for source localisation, primarily because they neglect cross-eigenmode coupling. Incorporating empirically estimated coupling terms substantially improves localisation performance, particularly in noisy conditions. Although estimating these eigenmode coupling interactions from experimental data remains challenging, the findings motivate dynamical source-imaging approaches that combine spatial eigenmode structure with empirically informed cross-modal dynamics.",
-      "url": "https://arxiv.org/abs/2609.00809v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.00809v1",
-      "published": "2026-09-01T07:04:50Z",
-      "updated": "2026-09-01T07:04:50Z",
+      "abstract": "This chapter reconstructs the McCulloch-Pitts program as a physics of neural computation rather than the familiar cartoon of a binary neuron. The 1943 logical calculus is developed in both directions: given a net, characterize the propositions realized by its activity; given an admissible logical expression, construct a net that realizes it. We recover the original distinction between thresholded excitatory summation and absolute inhibitory veto-one the weighted-threshold form cannot preserve for arbitrarily large excitatory inputs-and read unit-time delay as the physical realization of logical depth. Recurrence is treated exactly: an autonomous, deterministic network of finitely many binary units has a finite state space, so every trajectory eventually enters a periodic orbit-a fact about finite-state dynamics, not unbounded Turing computation. A single threshold element realizes only linearly separable Boolean functions, whereas finite feedforward networks of them synthesize any Boolean function on a finite domain. We then follows McCulloch and Pitts beyond threshold logic. The 1945 heterarchy paper turns cyclic preference into an obstruction to representation by a scalar utility. The 1947 work on universals asks how a physical network can identify inputs related by nuisance transformations, developed here via group averaging and feedback canonicalization. The 1959 frog-retina study makes the adequate-stimulus question experimental, revealing parallel invariant operations before the brain proper. Spike-triggered analysis shows how a nonlinearly driven neuron can have a vanishing first-order average while second-order statistics recover its hidden selectivity: methodological failure can masquerade as physiological absence. Modern mathematical tools are used without projecting their notation onto the historical papers, and limitations of the idealization are stated explicitly.",
+      "url": "https://arxiv.org/abs/2609.02183v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.02183v1",
+      "published": "2026-09-02T06:47:06Z",
+      "updated": "2026-09-02T06:47:06Z",
       "categories": [
         "q-bio.NC",
+        "cond-mat.dis-nn",
+        "cs.FL",
+        "cs.NE",
         "physics.bio-ph"
       ],
       "primary_category": "q-bio.NC"
     },
     {
-      "id": "2609.00725v1",
-      "title": "Efficiently classifying shocks in complex systems requires dormant reporters",
+      "id": "2609.02086v1",
+      "title": "Mutation--selection balance on an infinite trait space: confinement, drift and equilibrium",
       "authors": [
-        "David A. Brewster",
-        "Philippe Cluzel"
+        "Phil. Pollett"
       ],
-      "abstract": "Many natural and engineered systems are large complex networks of interacting components, and external perturbations drive them along different dynamical paths. Identifying which perturbation occurred matters for diagnosis, control, and prediction. Yet often times only a few components can be jointly monitored. Which components should be monitored? Experimental practice usually favors placing reporters at the most sensitive sites, where perturbations produce the largest effects. Using a simple dynamical model for complex systems with heterogeneous connectivity, we ask how sparse reporter panels should be chosen to classify shocks from partial trajectories when repeated trials only approximately reproduce an ideal initial condition. Once that reproduction is imperfect, sensitivity ranked panels fall far short of optimal, and the shortfall grows with the noise. We find that the best panels mix two kinds of reporters. A promiscuous reporter responds to most shocks, so it separates them mainly by degree, and degree fluctuates from trial to trial. A dormant reporter responds to only a few shocks but strongly, and its answers do not scatter as much between trials. As noise grows, the cost of losing a dormant reporter rises to meet the cost of losing a promiscuous one. Panels of either kind alone classify worse than the mixture, and no property of the members collected individually explains the ordering. Most of all, we find that only a minuscule number of reporters are needed on a panel to accurately identify which shock hit the system. We implement an efficient algorithm to assemble such a panel. Together these results provide a low cost practical design principle for monitoring large complex dynamical systems.",
-      "url": "https://arxiv.org/abs/2609.00725v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.00725v1",
-      "published": "2026-09-01T05:00:05Z",
-      "updated": "2026-09-01T05:00:05Z",
+      "abstract": "We study a trait-structured population model incorporating mutation, selection and density-dependent regulation on a countably infinite trait space. The underlying stochastic process is a continuous-time Markov chain in which individuals reproduce at a trait-independent rate, offspring traits are determined by a mutation kernel on $\\mathbb Z$, mortality depends on trait, and births are progressively suppressed as the population approaches a fixed population ceiling. Using results for density-dependent Markov population processes with countably many types, we derive a deterministic approximation in the form of an infinite system of nonlinear differential equations. We establish existence and positive invariance of solutions, and investigate the equilibrium structure of the deterministic system. A fundamental distinction emerges between bounded and confining mortality profiles. When mortality remains bounded, mutation may continually transport mass through the trait space and a stationary trait distribution need not exist. In contrast, when mortality increases without bound as the absolute value of the trait index becomes large, the operator $L=D^{-1}P$, where $P$ and $D$ govern mutation and mortality, is compact. By combining compactness with Kre\u012dn-Rutman theory for compact positive operators on Banach lattices, we show that $L$ has an algebraically simple principal eigenvalue with a strictly positive eigenvector, and we derive a threshold condition for the existence of a non-zero equilibrium. In this regime the equilibrium is unique, and its trait distribution is determined by the principal eigenvector of $L$. Numerical experiments support the theoretical results and illustrate the contrasting behaviours associated with bounded and confining mortality profiles.",
+      "url": "https://arxiv.org/abs/2609.02086v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.02086v1",
+      "published": "2026-09-02T04:20:23Z",
+      "updated": "2026-09-02T04:20:23Z",
       "categories": [
-        "q-bio.QM",
-        "cond-mat.dis-nn",
-        "nlin.AO",
-        "physics.soc-ph",
-        "q-bio.MN"
-      ],
-      "primary_category": "q-bio.QM"
-    },
-    {
-      "id": "2609.00614v1",
-      "title": "BME-like Quartet Weights for Phylogenetic Trees",
-      "authors": [
-        "Peter J. Waddell"
-      ],
-      "abstract": "Like pairwise distances, quartets can be highly redundant and correlated on a phylogenetic tree, and their number grows on the order of n^4 rather than n^2. I explore BME-like weights for reweighting quartet scores before summing them to score a full tree. Three weights are considered on an unrooted binary tree: w_ext(q)=2^(-I_ext(q)), w_int(q)=2^(-I_int(q)), and w_tot(q)=2^(-I_tot(q))=w_ext(q)w_int(q), where the exponents count specified internal nodes in the minimal connecting subtree of a quartet. Exact tree-shape counts, total quartet-weight sums, and internal-edge crossing sums are calculated for all unlabeled unrooted binary tree shapes on 6-10 taxa. For w_ext, the total quartet weight is tree-shape-invariant and the edge-crossing sum depends only on split size. For any n-leaf tree, we prove sum_q w_ext(q)=(n-2)(n-3)/8, and the sum over quartets crossing an internal edge with split a|b equals (a-1)(b-1)/4. Exact tree-shape-specific normalizers are also derived for w_int and w_tot. A degree-corrected hard-polytomy extension is given for multifurcating trees, and a conditional consistency result shows that these positive weights preserve consistency when the underlying quartet estimates are themselves consistent for the true induced quartet states. These results provide a mathematical foundation for evaluating and applying BME-like quartet weights to reduce redundancy with the particular aim of improving statistical efficiency with finite data.",
-      "url": "https://arxiv.org/abs/2609.00614v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.00614v1",
-      "published": "2026-09-01T02:58:19Z",
-      "updated": "2026-09-01T02:58:19Z",
-      "categories": [
-        "q-bio.PE"
+        "q-bio.PE",
+        "math.PR"
       ],
       "primary_category": "q-bio.PE"
-    },
-    {
-      "id": "2609.00520v1",
-      "title": "A distributed-delay Wilson-Cowan model of sleep-related rhythms in the corticothalamic system",
-      "authors": [
-        "Eva Kaslik",
-        "Anca Radulescu",
-        "Anca Stanoev"
-      ],
-      "abstract": "The corticothalamic circuit supports rhythms with timescales that differ by orders of magnitude: sleep spindles, the sigma-band events of non-rapid-eye-movement (NREM) sleep, and infra-slow fluctuations near 0.02Hz that organize when spindles occur. Because the anatomy is the same in both cases, architecture alone cannot determine which rhythm the circuit expresses. We ask whether the temporal structure of the circuit's own feedback can. In a four-population Wilson--Cowan model comprising cortical excitatory and inhibitory populations, thalamic relay cells, and the thalamic reticular nucleus (TRN), we first establish how connectivity controls access to oscillatory behavior, and then introduce temporal coupling as either a weak Gamma distributed delay or a discrete delay. We investigate three distinct connectivity levels: recurrent cortical excitation gates whether the circuit can oscillate at all, the reciprocal relay-TRN pair determines where the oscillation lies and how it is configured, sustained, and terminated, and reticular self-inhibition limits its extent. We then examine how these connectivity-dependent regimes are affected by delayed coupling. Although delay does not change the equilibria themselves, it can substantially alter their stability and the organization of the resulting oscillatory dynamics. Under weak Gamma integration, short delays support spindle-compatible oscillations in the sigma band, while longer delays give rise to a much slower regime near 0.02Hz. The discrete-delay formulation produces a qualitatively different and more complex bifurcation structure. Together, these results show that the dynamics of the corticothalamic circuit depend not only on its connectivity, but also on the temporal organization of interactions within the circuit.",
-      "url": "https://arxiv.org/abs/2609.00520v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.00520v1",
-      "published": "2026-09-01T00:39:55Z",
-      "updated": "2026-09-01T00:39:55Z",
-      "categories": [
-        "q-bio.NC"
-      ],
-      "primary_category": "q-bio.NC"
-    },
-    {
-      "id": "2609.00518v1",
-      "title": "Learning Task-Specific Antibody Representations via Function-Aware Masking",
-      "authors": [
-        "Ayan Goel",
-        "Thomas A. Walton",
-        "Amirali Aghazadeh"
-      ],
-      "abstract": "Antibody-specific language models pretrained via masked language modeling (MLM) learn representations that are critical for downstream sequence design and property prediction tasks. Yet, the corruption process itself is rarely leveraged as a source of inductive bias during pretraining. While preferentially masking complementarity-determining regions (CDRs) improves binding-related predictions, antibodies possess diverse biological priors over a variety of functions. Herein, we introduce function-aware masking, a family of pretraining algorithms that align mask placement with specific functional priors (e.g., from IMGT annotations or structure predictions) to shape the learned representation space. We show that these specialist masking strategies significantly improve performance on their respective objectives, yielding up to a 14% gain on structure-related tasks and up to a 5.9x improvement on CDR-related tasks. To further improve performance across multiple functional axes, we develop hybrid masking strategies that integrate multiple priors, balancing reconstruction over binding, structural, and biophysical objectives. Our results demonstrate that informed mask placement provides a parameter-free mechanism for imposing functional inductive biases in antibody language model training.",
-      "url": "https://arxiv.org/abs/2609.00518v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.00518v1",
-      "published": "2026-09-01T00:37:56Z",
-      "updated": "2026-09-01T00:37:56Z",
-      "categories": [
-        "cs.LG",
-        "q-bio.BM"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2608.31004v1",
-      "title": "Storage-Centric System Designs for Enabling Fast, Efficient, and Low-Cost Genomic and Metagenomic Analyses",
-      "authors": [
-        "Nika Mansouri Ghiasi"
-      ],
-      "abstract": "Genomic and metagenomic analyses play critical roles in many fields, such as precision medicine, urgent clinical settings, discovering early warnings of communicable diseases, ensuring food safety through pathogen monitoring, agriculture, and scientific discovery. Due to the challenges of analyzing and storing massive volumes of genomic and metagenomic sequence data, significant efforts have been made to accelerate (meta)genomic analyses and store sequence data compressed. Despite the benefits of these techniques, we identify two major outstanding problems in accessing stored sequence data and supplying it to the analysis units: (i) the data movement bottleneck due to moving large amounts of low-reuse data from storage and the unnecessary burden on the rest of the system, and (ii) the data preparation bottleneck, where compressed sequence data needs to be first decompressed and formatted before analysis. In this dissertation, we present customized storage-centric systems, which efficiently (i) analyze (meta)genomic data inside the storage system, and (ii) enable highly-compressed storage and high-performance access of large-scale sequence data, thereby alleviating the overheads of data movement, computation, and data preparation. We demonstrate that the proposed systems significantly improve system performance, energy efficiency, and system cost-efficiency of (meta)genomic analysis. We hope that the storage-centric systems proposed in this dissertation facilitate the broader adoption of (meta)genomic analyses and inspire future research to fundamentally improve the performance, energy efficiency, and cost-effectiveness of other data-intensive application domains related to health and life sciences.",
-      "url": "https://arxiv.org/abs/2608.31004v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.31004v1",
-      "published": "2026-08-31T15:55:06Z",
-      "updated": "2026-08-31T15:55:06Z",
-      "categories": [
-        "cs.AR",
-        "cs.DC",
-        "q-bio.GN",
-        "q-bio.QM"
-      ],
-      "primary_category": "cs.AR"
     }
   ]
 }
