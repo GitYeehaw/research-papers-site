@@ -2,212 +2,223 @@
   "category": "robotics",
   "name": "Robotics Research",
   "description": "Robotics \u2014 Motion Planning, Control Systems, Human-Robot Interaction, Autonomous Systems",
-  "scraped_at": "2026-09-08T12:49:13.046067+00:00",
+  "scraped_at": "2026-09-09T12:54:17.348711+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2609.05406v1",
-      "title": "Beyond Scalar Flexibility: From Eligible AI Workloads to Dependable Load Relief",
+      "id": "2609.09158v1",
+      "title": "TANGO: Humanoid Navigation in Cluttered Environments with a Whole-Body Vision-Language-Action Model",
       "authors": [
-        "Meiyi Li"
+        "Anqi Li",
+        "Yuxin Chen",
+        "Zhaobo Li",
+        "Zhuo Cao",
+        "Junli Ren",
+        "Masayoshi Tomizuka",
+        "Dhruv Shah"
       ],
-      "abstract": "Grid studies often represent data-center flexibility as a fixed percentage of load, although no public production trace has shown how much eligible load persists across event durations or co-moves across clusters. We reconstruct 4,439 hourly power observations from a 185-day trace of 155,410 GPUs and derive a workload-semantic flexibility envelope. The fleet's time-averaged Monte Carlo median facility demand is 55.8 MW, while immediate eligible curtailment averages 3.55 MW after retaining allocated-GPU idle power: 12.1% of workload power and 6.35% of median facility power. Under full realization of that eligibility, 95%-available relief falls from 2.51 MW for one hour to 2.32 MW for four hours and 1.95 MW for 24 hours; a common realizable fraction q scales every value exactly by q. A mean-calibrated scalar overstates these quantities by 17%, 25%, and 47%, while a scalar tail-calibrated at four hours understates the one-hour product by 6% and overstates the 24-hour product by 17%; the share that reproduces the surface varies by a factor of 1.6 across durations and reliability levels. Aggregating 13 clusters raises four-hour firmness from 0.38 to 0.66, but cross-cluster covariance limits the gain. The production scheduler exposes almost no additional delay-based capacity: newly deferrable arrivals average 0.008 MW and have zero 95%-available capacity. These results replace an assumed flexibility percentage with duration, reliability, portfolio, and realizability terms that can be written into interconnection and demand-response contracts.",
-      "url": "https://arxiv.org/abs/2609.05406v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.05406v1",
-      "published": "2026-09-04T17:52:50Z",
-      "updated": "2026-09-04T17:52:50Z",
-      "categories": [
-        "eess.SY",
-        "cs.DC"
-      ],
-      "primary_category": "eess.SY"
-    },
-    {
-      "id": "2609.05401v1",
-      "title": "Same Trajectory, Contradictory Rewards (ROBORMBENCH): Paraphrase Fragility in Vision Language Reward Models",
-      "authors": [
-        "Wonje Jeung",
-        "Sangyeon Yoon",
-        "Hyesoo Hong",
-        "Yoonjun Cho",
-        "Dongjae Jeon",
-        "Bumjun Kim",
-        "Jean Oh",
-        "Youngjae Yu",
-        "Albert No"
-      ],
-      "abstract": "Vision-language models are increasingly used as reward functions for robotic learning, but this role requires paraphrase invariance: the same trajectory should receive the same reward under semantically equivalent goal descriptions. We show that current VLM reward models often violate this property. Paraphrasing the instruction alone can substantially change predicted progress scores, and can even flip identical robot behavior between failure and success. To measure this failure mode, we introduce ROBORMBENCH, a benchmark with 2,390 real-robot trajectories, ground-truth progress labels, and 21,673 verified paraphrases spanning lexical, syntactic, and action-goal rewrites. Across proprietary and open-source VLMs, paraphrase-induced instability is widespread and severe, grows under more divergent rewrites, and is not reliably reduced by scale or explicit reasoning. Dedicated reward models trained with trajectory-grounded supervision are substantially more stable. These results show that paraphrase robustness is a core requirement for reliable VLM-based reward modeling in robotics.",
-      "url": "https://arxiv.org/abs/2609.05401v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.05401v1",
-      "published": "2026-09-04T17:47:58Z",
-      "updated": "2026-09-04T17:47:58Z",
+      "abstract": "We study the problem of navigating cluttered indoor environments with a humanoid robot. Unlike conventional methods that model navigation as a 2D path planning problem, humanoid traversal in cluttered environments requires continuous geometry-aware whole-body adaptation, including coordinated arm placement, torso adjustment, and gait modulation for collision-free movement through complex 3D spaces. We introduce TANGO, the first whole-body vision-language navigation framework for language-conditioned humanoid traversal in cluttered environments. Given a natural-language instruction and egocentric RGB observations, TANGO directly predicts 29-DoF joint-space actions for downstream whole-body control. We train TANGO entirely in simulation by synthesizing diverse collision-free traversal behaviors via global path planning, kinematic whole-body motion generation, obstacle-aware motion editing, and RL-based tracking. This pipeline provides dynamically feasible action supervision for learning language-conditioned whole-body policies. In extensive simulation experiments, TANGO demonstrates state-of-the-art performance in vision-language navigation, while outperforming strong modular baselines in navigating challenging scenes requiring obstacle negotiation. Lastly, we deploy TANGO zero-shot on a Unitree G1 humanoid robot, and observe robust language-guided traversal in cluttered real-world scenes without training on any real-world navigation data.",
+      "url": "https://arxiv.org/abs/2609.09158v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.09158v1",
+      "published": "2026-09-08T17:59:55Z",
+      "updated": "2026-09-08T17:59:55Z",
       "categories": [
         "cs.RO",
-        "cs.CL"
+        "cs.AI"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2609.05397v1",
-      "title": "CrossDepth: Geometry-Constrained Attention for Generalizable Multi-View Surround Depth Estimation",
+      "id": "2609.09148v1",
+      "title": "Proxy Policy Steering",
       "authors": [
-        "Samer Abualhanud",
-        "Max Mehltretter"
+        "Chuanruo Ning",
+        "Tianrui Wang",
+        "Wei-Chiu Ma",
+        "Kuan Fang"
       ],
-      "abstract": "Reliable 3D understanding of the surrounding environment is a core requirement for autonomous driving. Multi-view surround camera rigs provide broad scene coverage, but the spatially adjacent images typically overlap only minimally. Consequently, the depth of most pixels must be inferred from monocular appearance cues. These cues can appear differently across images and may therefore be interpreted differently by the depth estimation model. We target two main sources of cross-image inconsistency: differences in camera intrinsics and the limited receptive field of each image. We address the former by conditioning the features on per-pixel camera-aware ray embeddings, enabling the network to account for camera-dependent variations in monocular cues. We address the latter by extending each pixel's context beyond its own image through cross-image attention constrained to geometrically plausible regions, derived from the calibrated rig setup. The model is trained in a fully self-supervised manner based on photometric consistency. Evaluations on DDAD and nuScenes show improved overall depth accuracy and cross-image depth consistency over state-of-the-art self-supervised methods under in-domain and cross-domain evaluation. Code is available at https://abualhanud.github.io/CrossDepthPage/.",
-      "url": "https://arxiv.org/abs/2609.05397v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.05397v1",
-      "published": "2026-09-04T17:45:06Z",
-      "updated": "2026-09-04T17:45:06Z",
+      "abstract": "Generalist robot policies carry broad manipulation priors from large-scale data, but specializing them to a new task remains the deployment bottleneck. This requires eliciting task-specific behavior from limited demonstrations without degrading their broad capabilities. We introduce Proxy Policy Steering (PPS), an inference-time adaptation method that resolves this challenge by training two lightweight proxy policies whose calibrated velocity-space difference steers the frozen base sampler. A reference proxy models the frozen base's behavior on target-task observations, and a task proxy, initialized from the reference, captures how this behavior changes under task supervision. Their difference forms a calibrated velocity-space residual that steers the frozen base sampler at every denoising step. We identify the conditions under which this residual isolates the change induced by task supervision, and validate them empirically. Because the base is never directly modified, its broad capabilities remain available at inference, including behaviors such as recovery from failure that the demonstrations themselves do not exercise. Adaptation requires only forward velocity predictions from the base, making PPS lightweight to train and applicable even without access to the base's parameters. On 8 real-world and 4 simulation manipulation tasks, PPS lifts the state-of-the-art pi 0.5 base policy by 53% absolute success rate on average, with zero-to-one gains on tasks the base never solves, while preserving the base's broad capabilities. PPS outperforms LoRA fine-tuning, from-scratch specialists, residual policies, and prior inference-time steering methods.",
+      "url": "https://arxiv.org/abs/2609.09148v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.09148v1",
+      "published": "2026-09-08T17:59:03Z",
+      "updated": "2026-09-08T17:59:03Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2609.09119v1",
+      "title": "DeCAL: Towards Physically-Grounded Dexterous Vision-Language-Action Models via Contact-Aware Latent Co-Imagination",
+      "authors": [
+        "Yankai Fu",
+        "Ning Chen",
+        "Junkai Zhao",
+        "Heng Zhang",
+        "Guocai Yao",
+        "Pengwei Wang",
+        "Zhongyuan Wang",
+        "Shanghang Zhang"
+      ],
+      "abstract": "Dexterous manipulation involves contact-rich and fine-grained interactions with the physical world, posing significant challenges for existing vision-language-action (VLA) models due to severe visual occlusions and complex contact dynamics. While recent works have incorporated tactile sensing into robotic manipulation, most approaches still rely on homogeneous multimodal fusion, lacking adaptive tactile integration and explicit modeling of physical dynamics. In this work, we present DeCAL, a physically-grounded dexterous vision-language-action model that unifies understanding, imagination and action generation for contact-rich dexterous manipulation. Built upon a Mixture-of-Transformers (MoT) architecture, DeCAL leverages specialized experts for each capability while enabling efficient information flow among them. To effectively leverage tactile information, we introduce Adaptive Visuo-Tactile Fusion that dynamically regulates tactile interactions via a contact-aware gating strategy. Furthermore, we propose Visuo-Tactile Latent Co-Imagination to jointly model visual and tactile dynamics, equipping the policy with implicit physical world knowledge. Experimental results show that DeCAL consistently achieves state-of-the-art performance across all tasks, attaining a 71% average success rate and an 83.4% progress success rate, while also demonstrating strong generalization to unseen scenarios. The website is available at https://aureleopku.github.io/DeCAL.",
+      "url": "https://arxiv.org/abs/2609.09119v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.09119v1",
+      "published": "2026-09-08T17:47:43Z",
+      "updated": "2026-09-08T17:47:43Z",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2609.09073v1",
+      "title": "Online, Reachability-Aware, Sampling-Based Motion Planning",
+      "authors": [
+        "Brendan Gould",
+        "Zhiyuan Zhang",
+        "Panagiotis Tsiotras",
+        "Samuel Coogan"
+      ],
+      "abstract": "Sampling-Based Model-Predictive Control (MPC) algorithms are a flexible class of controllers used for navigation on a wide range of robotic systems. Historically, such approaches have lacked hard safety guarantees, a shortcoming which we remedy in this work by computing guaranteed reachable-set overapproximations online with a fast, interval-based pipeline. We show that our method achieves similar performance to a state-of-the-art reachability-based planner without the need for the expensive pre-computation step, and can be scaled to systems that are infeasible using existing approaches. Finally, we demonstrate that our technique reduces safety violations by over 99% in a racing simulation and successfully controls a model racecar on real hardware experiments without crashes.",
+      "url": "https://arxiv.org/abs/2609.09073v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.09073v1",
+      "published": "2026-09-08T17:27:25Z",
+      "updated": "2026-09-08T17:27:25Z",
+      "categories": [
+        "cs.RO",
+        "eess.SY"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2609.09069v1",
+      "title": "Rethinking Learned Occupancy in Autonomous Active Mapping with Observation-Gated Filtering",
+      "authors": [
+        "Jiahui Zhang",
+        "Bonian Han",
+        "Gongbo Liang",
+        "Yu Zhang"
+      ],
+      "abstract": "Autonomous 3D active mapping requires a space robot to choose where to sense while building the geometry needed for navigation. Learned occupancy completion extends spatial context beyond the current field of view, but one predicted map often serves two planning roles: it scores expected surface gain and constrains collision-free motion. Unsupported occupancy can therefore distort both where the robot looks and where it believes it can travel. We study this coupled interface in a controlled closed-loop benchmark by holding the active-mapping system fixed and varying only its planner-facing occupancy across observation-only, learned, oracle-corrected, and ground-truth conditions. Improving occupancy accuracy does not monotonically improve closed-loop coverage: across 25 starts, planning with ground-truth occupancy reaches 70% of the learned baseline's final coverage 12.7 steps earlier on average, while increasing final coverage by only 0.031. Guided by this diagnosis, we introduce an observation-gated filter that retains completion in insufficiently observed regions and suppresses predictions only after repeated frustum exposure without nearby RGB-D support. The filter improves both targeted failure-prone starts without retraining or ground truth. These results motivate online revision of planner-facing geometry during autonomous intervals between communication windows. The current study assumes benchmark RGB-D observations and sufficiently accurate pose estimates; planetary sensing conditions and accumulated localization drift remain to be evaluated.",
+      "url": "https://arxiv.org/abs/2609.09069v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.09069v1",
+      "published": "2026-09-08T17:23:37Z",
+      "updated": "2026-09-08T17:23:37Z",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2609.09066v1",
+      "title": "A Distributed Consensus Particle Filter for Target Tracking using Autonomous Surface Vessels",
+      "authors": [
+        "Carter Noh",
+        "Kyle Crandall",
+        "Connor Yates",
+        "Corbin Wilhelmi"
+      ],
+      "abstract": "Maritime target tracking over large distances often requires multi-agent teams without centralized coordination, and intermittent communication. Each agent must maintain an independent estimate that can take advantage of opportunistic communications availability when possible. This can lead to overly confident local estimates in the absence of external data. In this work, we propose an augmentation to a classical particle filter implementation that accounts for this potential source of error by forcing particles to spread strategically in the absence of informative updates from other sensor nodes. We demonstrate our method using Unmanned Surface Vessels (USVs) on a lake, and show that our augmentations do not deteriorate nominal performance, and provide an advantage in some specific edge cases.",
+      "url": "https://arxiv.org/abs/2609.09066v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.09066v1",
+      "published": "2026-09-08T17:20:07Z",
+      "updated": "2026-09-08T17:20:07Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2609.09060v1",
+      "title": "Efficient Quantile-Resolved Hosting Capacity Assessment on Nodal Level for Low-Voltage Grids",
+      "authors": [
+        "Maximilian K\u00f6hler",
+        "Edwin Mora",
+        "Mathias Duckheim",
+        "Stefan Niessen"
+      ],
+      "abstract": "Hosting capacity - the maximum additional capacity a network can accommodate without violating operational limits - is a key metric in distribution system planning and operation. Decisions on grid reinforcements and the deployment of flexibility management require not only the worst-case HC but also an understanding of the distribution of HC under different likelihoods in load and generation patterns. Quantile-resolved HC distributions provide this view by expressing HC as a function of an acceptable operational limit exceedance likelihood. Monte Carlo sampling is the established approach for computing such distributions but demands large computational resources. Approximations sacrifice either accuracy, the ability to capture uncertainty correlations, or scalability when assessing real-world networks. This paper introduces a computationally efficient method for calculating distributions for quantile-resolved HC. It uses a representation of load samples as multivariate normal distribution, propagated through a linearized power flow model. This allows for leveraging a re-parametrized AC-OPF problem for each hosting capacity quantile. Benchmarking against Monte Carlo-based methods on realistic LV networks demonstrates that the proposed method achieves comparable accuracy with a mean deviation of approx. 3%, while reducing computational time by orders of magnitude. For the exemplary networks the computational time decreases from 11 min to 2 s, and 38 h to 50 s, respectively. The method's scalability is also suitable for recalculation in 15-minute cycles encountered in DSO practice for e.g., real-time grid management.",
+      "url": "https://arxiv.org/abs/2609.09060v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.09060v1",
+      "published": "2026-09-08T17:16:23Z",
+      "updated": "2026-09-08T17:16:23Z",
+      "categories": [
+        "eess.SY"
+      ],
+      "primary_category": "eess.SY"
+    },
+    {
+      "id": "2609.09056v1",
+      "title": "Time-Varying Data as Sheaves: an Invitation to Narratives",
+      "authors": [
+        "Wilmer Leal",
+        "Benjamin Merlin Bumpus",
+        "Jana K. Nickel",
+        "Johan Garc\u00eda",
+        "James Fairbanks",
+        "Warren Dixon"
+      ],
+      "abstract": "Modern science and engineering increasingly rely on time-varying data, yet the mathematical tools used to model temporal phenomena are often developed within separate disciplines, obscuring common principles and limiting the transfer of ideas across fields. This chapter presents the theory of narratives, an abstract framework for time-varying objects of any mathematical kind that supports both theoretical investigations and applications. To illustrate this perspective, the chapter develops three vignettes, each illustrating a different research direction. The first addresses a general concern: What information loss can occur when switching between different representations of temporal data? The second concerns structural and algorithmic approaches: How can we systematically decompose time-varying data into simple pieces and obtain invariants describing its structural complexity? The third is an application to control theory: How can we model multi-agent systems with switching communication topologies? More important than any individual vignette, the central message of this invitation is that a suitable abstract perspective can organize and guide research across remarkably diverse mathematical and scientific domains.",
+      "url": "https://arxiv.org/abs/2609.09056v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.09056v1",
+      "published": "2026-09-08T17:12:24Z",
+      "updated": "2026-09-08T17:12:24Z",
+      "categories": [
+        "cs.AI",
+        "cs.MA",
+        "eess.SY",
+        "math.CT"
+      ],
+      "primary_category": "cs.AI"
+    },
+    {
+      "id": "2609.09023v1",
+      "title": "DYAD: A Multimodal Dataset of Co-Located Human Assistance",
+      "authors": [
+        "Akhil Ajikumar",
+        "Mahya Qorbani",
+        "Sakib Reza",
+        "Sean Andrist",
+        "Mohsen Moghaddam"
+      ],
+      "abstract": "An embodied assistant working beside a person must track task state, recognize help seeking, choose how to intervene, and produce an appropriate response. Existing procedural datasets richly describe individual execution, while interactive datasets capture remote verbal instruction or undifferentiated co-working. They do not jointly link a co-located helper's verbal and physical interventions to performer requests, task state, assistance triggers, and outcomes. We introduce DYAD (DYadic Assistance Dataset), a synchronized multimodal record of human-human assistance during gearbox assembly. Across 20 sessions, one trained helper follows a guidance-first policy while assisting HoloLens 2 wearers. DYAD links 528 task-step intervals and 611 performer requests with 851 valid assistance records spanning verbal and physical help. DYAD's annotations span the assistance process; three reference tasks evaluate selected components rather than an end-to-end system: causal step understanding, pre-onset mode anticipation, and instructor response generation. On 829 eligible mode events, the strongest four-seed RGB mean is 0.548 +/- 0.007 macro-F1; causal metadata reaches 0.624 and a privileged trigger mapping 0.915, revealing information not recovered from pre-onset RGB. DYAD's contribution is not scale, but a linked interaction structure spanning help seeking, intervention choice, execution, and outcome under egocentric and workspace sensing.",
+      "url": "https://arxiv.org/abs/2609.09023v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.09023v1",
+      "published": "2026-09-08T16:53:15Z",
+      "updated": "2026-09-08T16:53:15Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2609.09012v1",
+      "title": "Spheriverse: 3D Scene Understanding from Spherical Observations in the Wild",
+      "authors": [
+        "Fei Teng",
+        "Sheng Wu",
+        "Mengfei Duan",
+        "Guoqiang Zhao",
+        "Junhui Ma",
+        "Kai Luo",
+        "Siyu Li",
+        "Hao Shi",
+        "Zhiyong Li",
+        "Kailun Yang"
+      ],
+      "abstract": "Spherical observations provide global visual context for 3D scene understanding. However, visual information is encoded in an angular domain, whereas the physical world is represented in Cartesian coordinates. This cross-space representation gap complicates geometric correspondence and semantic evidence aggregation. To delve into this challenge, we introduce Spheriverse, comprising $64,400$ temporally aligned spherical image-LiDAR pairs organized into 644 sequences. The dataset spans diverse scenes, illumination, and weather conditions, with fine-grained semantic classes. We further establish benchmarks for semantic occupancy prediction, semantic mapping, and 3D object detection, evaluating 30+ methods through overall and scene-wise comparisons. For dense prediction, we propose SphereOcc, an occupancy framework that couples spherical geometry modeling with semantic evidence retrieval. Cartesian-Spherical Representation Remodeling (CSRR) incorporates spherical range-azimuth geometry into Cartesian voxel features through region-wise modulation. Spherical Evidence Re-querying (SER) then conditions queries on voxel content and range-height-azimuth geometry to adaptively retrieve relevant semantic evidence from source spherical image features. SphereOcc achieves 13.91% mIoU and 24.65% GeoIoU, outperforming the respective best-performing methods, TPVFormer and SurroundOcc, by 1.70 and 2.10 percentage points. It also ranks first in both metrics across all five scenes, with consistent advantages across the evaluated spatial partitions and reduced fields of view. The established benchmark and source code will be available at https://feit-feiteng.github.io/Spheriverse.",
+      "url": "https://arxiv.org/abs/2609.09012v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.09012v1",
+      "published": "2026-09-08T16:47:25Z",
+      "updated": "2026-09-08T16:47:25Z",
       "categories": [
         "cs.CV",
-        "cs.RO"
+        "cs.RO",
+        "eess.IV"
       ],
       "primary_category": "cs.CV"
-    },
-    {
-      "id": "2609.05378v1",
-      "title": "Full-field laser-Doppler-vibrometry FRF dataset for a four-bolt aluminum plate under bolt-torque variation",
-      "authors": [
-        "Berkay Kullukcu",
-        "Dina Hannebauer"
-      ],
-      "abstract": "The dataset described in this article was constructed using the results of laser Doppler vibrometry experiments conducted on an aluminum plate having four bolts. The database captures the variation in the vibration characteristics of the plate as a function of changes in tightening torque on the bolts. In total, there were 18 different states for the tightening torque, ranging from a situation where all bolts are tightened to all bolts being loose. Other possible combinations include states with varying torque applied to just one bolt, and those involving multiple loose bolts. Data consist of 1,836 files exported from Polytec PSV-500, categorized as amplitude and phase data, for frequency ranges spanning 1 Hz to 51,200 Hz at intervals of 1 Hz. The identified zones were analyzed at 51 scan points for all states of torque. Supporting documents included specifications of the test plate, scan point and torque state information, selected resonance peaks tables, measured frequencies for seven resonance groups, correlation values for all FRF, visualizations, and code scripts.",
-      "url": "https://arxiv.org/abs/2609.05378v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.05378v1",
-      "published": "2026-09-04T17:28:51Z",
-      "updated": "2026-09-04T17:28:51Z",
-      "categories": [
-        "eess.SP",
-        "eess.SY"
-      ],
-      "primary_category": "eess.SP"
-    },
-    {
-      "id": "2609.05376v1",
-      "title": "What Matters, When? Diagnosing and Improving Conditional Visual Grounding in Visuomotor Imitation Policies",
-      "authors": [
-        "Vivek Chavan",
-        "Pengtao Xie",
-        "Yahuan Shi",
-        "Oliver Heimann",
-        "Kevin Haninger",
-        "J\u00f6rg Kr\u00fcger"
-      ],
-      "abstract": "Visuomotor imitation policies can achieve high performance under in-distribution visual conditions yet fail when visually similar objects or receptacles are introduced. We study this behavior as a problem of conditional visual grounding: the visual target required for successful control changes with the manipulation phase and, in more complex tasks, with the observed task state. Using Action Chunking with Transformers (ACT), we systematically introduce distractor objects and receptacles with controlled color and shape similarity and localize failures to picking and placement. We find that distractor sensitivity is specific to both the type of visual similarity and the manipulation stage. Guided by this diagnosis, we evaluate distractor augmentation, phase-dependent attention regularization, and appearance-based visual prompting as complementary interventions for improving target selection while preserving spatial information required for control. These interventions substantially improve robustness in simulation and on a physical UR3e. We further examine the same failure pattern in a pretrained vision-language-action policy on a state-conditioned instrument-handling task, where the observed state of a medical instrument determines the correct destination. Together, the results show that visual distractors can cause incorrect object or destination selection even when the underlying manipulation skill remains intact, and that explicitly improving target selection can substantially recover performance across distinct visuomotor policy-learning regimes.",
-      "url": "https://arxiv.org/abs/2609.05376v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.05376v1",
-      "published": "2026-09-04T17:27:35Z",
-      "updated": "2026-09-04T17:27:35Z",
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.CV"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2609.05369v1",
-      "title": "Towards Neuro-Symbolic Procedural Reasoning for Long-Horizon Vision-Language-Action Manipulation",
-      "authors": [
-        "Vivek Chavan",
-        "Yahuan Shi",
-        "Oliver Heimann",
-        "Kevin Haninger",
-        "J\u00f6rg Kr\u00fcger"
-      ],
-      "abstract": "Vision-language-action (VLA) models can execute short manipulation skills, but remain brittle in long-horizon procedures requiring persistent task state, dependency-aware reasoning, conditional decisions, and reliable grounding. We investigate a neuro-symbolic framework that combines learned VLA control with explicit task graphs and multimodal procedural memory. Task graphs encode action dependencies, valid transitions, and branch conditions, while memory maintains the active step, completed actions, textual context, and task-relevant visual evidence. Together, these structures guide object selection, destination grounding, subgoal dispatch, and verification of expected state transitions. Human demonstrations provide additional spatial and temporal guidance through gaze or saliency cues. To isolate their effect on policy learning, our initial study bypasses cross-view gaze transfer and directly annotates pseudo-gaze in robot-view teleoperation videos. The resulting guidance is used during VLA fine-tuning and inference. We study two long-horizon manipulation domains, workspace clearing and surgical-instrument handling, which require ordered execution, visually grounded decisions, and conditional branching. We evaluate correct-object and destination selection, subtask completion, task progress, step-order consistency, complete-task success, and procedural or execution mistakes. This work positions structured symbolic reasoning and demonstration-derived visual guidance as complementary mechanisms for reliable long-horizon VLA manipulation.",
-      "url": "https://arxiv.org/abs/2609.05369v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.05369v1",
-      "published": "2026-09-04T17:14:50Z",
-      "updated": "2026-09-04T17:14:50Z",
-      "categories": [
-        "cs.RO",
-        "cs.CV"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2609.05361v1",
-      "title": "Development of a Humanoid Robot Prototype for Multimodal Human-Robot Interaction",
-      "authors": [
-        "Thang Tran Viet",
-        "Thanh Nguyen Canh",
-        "Huy Uong Gia",
-        "Phuc Dinh Van",
-        "Son Tran Duc",
-        "Ngoc Minh Do",
-        "Xiem HoangVan"
-      ],
-      "abstract": "Human-robot interaction (HRI) enables intuitive and intelligent collaboration between humans and robots in real-world environments. This paper introduces a humanoid robot prototype designed as a flexible testbed for developing and integrating artificial intelligence (AI) modules in HRI tasks. The system features a 12 degree-of-freedom (DOFs) dual-arm mechanism and a 2 DOFs head with an expressive LCD screen to express facial emotions. All hardware components are controlled by a custom-designed controller board with real-time AI processing supported by an onboard Jetson module. The system incorporates three AI modules: (1) gesture recognition using MediaPipe Pose and an LSTM classifier, (2) object detection with YOLO and 3D localization, and (3) voice-command processing through speech recognition and large language model(LLM)-based semantic parsing. The platform is validated through experiments on positioning accuracy, with results showing average manipulation errors of approximately 1.83 cm. To demonstrate its versatility, experimental results show over 90% task accuracy, with gesture recognition reaching 96%, speech recognition reaching 92%. The results confirm the effectiveness of the proposed system as a reproducible and accessible humanoid platform for research and prototyping in HRI.",
-      "url": "https://arxiv.org/abs/2609.05361v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.05361v1",
-      "published": "2026-09-04T17:06:47Z",
-      "updated": "2026-09-04T17:06:47Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2609.05356v1",
-      "title": "Data-Driven Generator Transient Prediction for Digital Twin Decision Support",
-      "authors": [
-        "Emad Sadeghi",
-        "Emerson Miller",
-        "Kerry Sado",
-        "Adel Nasiri"
-      ],
-      "abstract": "This paper develops a calibrated transient forecasting surrogate model for generator digital twin (DT) decision support that evaluates planned active- and reactive power load commands before they are applied. The proposed event-conditioned Hankel Dynamic Mode Decomposition with Control (Hankel-DMDc) model combines delay-coordinate lifting, command-event memory features, and an event-weighted Hankel basis so that sparse load-transition dynamics influence the reduced representation and fitted dynamics. This design targets intervals where voltage/frequency deviations and recovery behavior determine whether a candidate load command keeps the system within acceptable limits. To provide operator-facing confidence information, a split-conformal calibration layer is applied to the frozen surrogate model to form event-conditioned joint prediction bands for voltage and frequency. The experimental results show event-window root-mean-square errors of 1.058 V and 0.155 Hz. For a nominal 90% target, the bands attain 90.17% pointwise joint voltage-frequency coverage, with mean band widths of 3.55 V and 0.566 Hz. A 50-s open-loop rollout is computed in 181 ms on a single CPU core, approximately 280 times faster than real time, with forecast accuracy evaluated over horizons up to 5 s. These results demonstrate a computationally efficient advisory framework for generator DTs that combines transient prediction with calibrated uncertainty.",
-      "url": "https://arxiv.org/abs/2609.05356v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.05356v1",
-      "published": "2026-09-04T17:02:26Z",
-      "updated": "2026-09-04T17:02:26Z",
-      "categories": [
-        "eess.SY",
-        "eess.SP"
-      ],
-      "primary_category": "eess.SY"
-    },
-    {
-      "id": "2609.05332v1",
-      "title": "Headroom-Aware Stochastic Adaptive Model Predictive Control for Load Frequency Control in Microgrids",
-      "authors": [
-        "Erfan Mehdipour Abadi",
-        "Shuo Yuan",
-        "Le Yi Wang",
-        "Caisheng Wang",
-        "Feng Lin"
-      ],
-      "abstract": "As the penetration of inverter-based resources (IBRs) increases in microgrids, they are increasingly expected to play a greater role in load frequency control (LFC). Model predictive control (MPC) is attractive for LFC because it incorporates system dynamics and operational constraints. However, most MPC-based LFC formulations rely on fixed reserve headroom based on forecasted renewable availability or storage systems. Under short-term renewable intermittency, IBR headroom is stochastic and time-varying, causing optimal control commands to exceed the physically deliverable regulation capability and cause stochastic saturation. This control-actuator mismatch degrades LFC performance. Accordingly, this study develops two headroom-aware strategies for PV-dominated microgrids. First, stochastic headroom constrained MPC (SHCMPC) incorporates headroom predictions through time-varying input constraints to enforce control feasibility. Second, stochastic adaptive MPC (SAMPC) embeds headroom awareness into the MPC objective function by adaptively penalizing control actions based on predicted headroom, reducing reliance on units with limited headroom without hard time-varying constraints. Simulation results show that stochastic saturation degrades conventional MPC-based LFC, particularly under tight reserve margins. Both strategies improve regulation performance. SHCMPC eliminates saturation events, while SAMPC achieves substantial saturation mitigation with lower computational effort, offering a computationally efficient alternative for real-time LFC under stochastic renewable availability.",
-      "url": "https://arxiv.org/abs/2609.05332v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.05332v1",
-      "published": "2026-09-04T16:36:51Z",
-      "updated": "2026-09-04T16:36:51Z",
-      "categories": [
-        "eess.SY"
-      ],
-      "primary_category": "eess.SY"
-    },
-    {
-      "id": "2609.05331v1",
-      "title": "Adaptation Needs in Robotic Systems: Assessing Behavior Trees and Their Enhancement",
-      "authors": [
-        "Mehran Rostamnia",
-        "Gianluca Filippone",
-        "Ricardo Caldas",
-        "Patrizio Pelliccione"
-      ],
-      "abstract": "Robotic systems increasingly operate in dynamic, uncertain, and open-ended environments, where design-time assumptions may no longer hold, and adaptation becomes necessary to maintain effective and safe operation. Behavior Trees (BTs) are widely used in robotic control architectures due to their modularity, readability, and reactivity. This raises a central question: are BTs sufficient to meet the adaptation needs of modern robotic systems? This paper investigates this question through a literature-driven study complemented by empirical validation. First, we derive a classification of robotic adaptation needs from the literature, organizing them into six categories: Knowledge, Perception, Actuation, System, Mission, and Environment. Then, we analyze the capabilities and limitations of classical BTs with respect to these needs. Then, we characterize BT-based approaches for adaptation from the existing literature and organize them into four primary families, i.e., generation, extension, evolution, and refinement, including approaches that combine multiple families. Our analysis shows that the modularity, flexibility, and reactivity of classical BTs are insufficient for adaptation needs involving runtime restructuring, reasoning under uncertainty, mission reinterpretation, learning, or integration with external knowledge and planning mechanisms. Enhanced BT approaches address several of these limitations, but to different extents and often with limitations of their own. Our findings relate adaptation needs to both the capabilities and limitations of classical and enhanced BTs, providing guidance on when classical BTs are sufficient, when enhanced mechanisms are needed, and which challenges remain or emerge for adaptive robotic control architectures.",
-      "url": "https://arxiv.org/abs/2609.05331v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.05331v1",
-      "published": "2026-09-04T16:36:28Z",
-      "updated": "2026-09-04T16:36:28Z",
-      "categories": [
-        "cs.RO",
-        "cs.SE"
-      ],
-      "primary_category": "cs.RO"
     }
   ]
 }
