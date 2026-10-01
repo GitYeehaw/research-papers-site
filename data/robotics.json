@@ -2,23 +2,74 @@
   "category": "robotics",
   "name": "Robotics Research",
   "description": "Robotics \u2014 Motion Planning, Control Systems, Human-Robot Interaction, Autonomous Systems",
-  "scraped_at": "2026-09-30T14:50:41.866553+00:00",
+  "scraped_at": "2026-10-01T15:21:39.931133+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2609.38178v1",
-      "title": "Skill-Space Shooting for Autonomous Robot Policy Improvement",
+      "id": "2609.40353v1",
+      "title": "AssemblyWorld: Rethinking 3D Assembly with General-Purpose Agents",
       "authors": [
-        "Zihang Rui",
-        "Renhao Wang",
-        "Haoxu Huang",
-        "Yang Gao"
+        "Jiahao Zhang",
+        "Yeying Fan",
+        "Moitreya Chatterjee",
+        "Suhas Lohit",
+        "Bernhard Egger",
+        "Tim K. Marks",
+        "Anoop Cherian",
+        "Stephen Gould"
       ],
-      "abstract": "Robots deployed in the physical world must be able to improve beyond their initial training as they encounter new situations and failures. For this improvement to scale across tasks, it must make effective use of experience without requiring human demonstration of each correction. Recent agentic systems offer a way to reduce this reliance on human effort by using foundation models to autonomously compose learned behaviors to complete tasks. Yet completing tasks this way does not itself teach a task policy to overcome its own failures; that requires turning these behaviors into learnable corrections for the policy. Our insight is that many such corrections are familiar short behaviors, or skills: they recur across tasks and describe actions that foundation models can reason about from a scene. We introduce skill-space shooting, which uses foundation model guidance to explore corrections through these reusable skills and turn successful trials into policy improvement. Real-world experiments show repeated improvement in policies acting autonomously, while skills can also be shared to reduce the teaching needed to improve on new tasks. By making reusable skills a source of corrective supervision, skill-space shooting enables scalable and generalizable policy improvement within and across tasks. Additional results and videos at https://skill-space-shooting.github.io.",
-      "url": "https://arxiv.org/abs/2609.38178v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.38178v1",
-      "published": "2026-09-29T17:59:55Z",
-      "updated": "2026-09-29T17:59:55Z",
+      "abstract": "The task of 3D assembly requires translating an understanding of parts and their relationships into precise spatial arrangements. Can pretrained general-purpose agents assemble objects through visual interaction without additional assembly-specific fine-tuning? To investigate this question, we introduce AssemblyWorld, an interactive 3D environment in which agents inspect rendered views and manipulate supplied rigid parts, guided by images or assembly manuals when available. Agents perceive part geometry through 2D views rather than direct access to mesh vertices or faces, while their resulting assemblies are evaluated geometrically. Building on this environment, we construct AssemblyWorldBench, comprising 100 assembly tasks across 80 objects spanning furniture, industrial assembly, and fracture reassembly. Evaluating eight agent systems reveals substantial differences in their capabilities. The strongest system achieves 80.9% part accuracy but 59.4% complete-assembly success. The evaluated open-source systems lag substantially behind their stronger closed-source peers in both execution reliability and assembly accuracy. Analyses of visual references, interaction trajectories, and failures show how agents revise assemblies while leaving residual positioning errors. AssemblyWorld provides a common setting for both assessing the capabilities of interactive assembly agents and characterizing the gap between approximate structure recovery and precise reconstruction.",
+      "url": "https://arxiv.org/abs/2609.40353v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.40353v1",
+      "published": "2026-09-30T17:59:14Z",
+      "updated": "2026-09-30T17:59:14Z",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2609.40341v1",
+      "title": "Ego4WAM: What Matters When Scaling Egocentric Human Data for Robot Learning?",
+      "authors": [
+        "Zhihao Sun",
+        "Liu Liu",
+        "Xinjiang Wang",
+        "Haoyi Jiang",
+        "Wei Feng",
+        "Huiqiang Zhang",
+        "Xiaosong Jia",
+        "Zhizhong Su",
+        "Zuxuan Wu"
+      ],
+      "abstract": "Egocentric human data provides a scalable source of experience for robot learning, but varies substantially in human-robot alignment, behavioral coverage, and available supervision. Existing work shows favorable scaling with increasing human data, but it remains unclear which data properties drive downstream robot gains and how to use such data throughout the training pipeline. We present a systematic study of egocentric human data with different alignment and supervision under a unified world-action model framework. With the model backbone fixed, we disentangle the effects of human-robot alignment, data duration and task diversity, action supervision, and data usage strategies. We find that aligned human demonstrations substantially improve out-of-distribution generalization and reduce target-task robot data requirements; data duration and task diversity affect downstream capabilities differently; and video-only supervision remains effective without action labels, providing a strong foundation for subsequent video-action training. We validate these findings through closed-loop policy evaluation on both real robots and RoboDojo. Rather than treating data duration as the sole scaling axis, Ego4WAM shows how alignment, task diversity, available supervision, and usage strategy jointly shape the value of egocentric human data for robot learning.",
+      "url": "https://arxiv.org/abs/2609.40341v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.40341v1",
+      "published": "2026-09-30T17:58:35Z",
+      "updated": "2026-09-30T17:58:35Z",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2609.40306v1",
+      "title": "DynaHarness: A Dynamic Physical Harness for Self-Evolving Robot Agents",
+      "authors": [
+        "Haoyuan Deng",
+        "Jiebin Liu",
+        "Tengxiao Zhang",
+        "Langning Yan",
+        "Hongye Cao",
+        "Ziwei Wang"
+      ],
+      "abstract": "Pretrained robot policies provide useful action priors, but long-horizon manipulation still requires coordination between semantic reasoning and physical execution. Semantic reasoning operates at a coarser timescale than physical interaction, while episode-level failures provide limited guidance on which system component should be revised. We propose DynaHarness, a dynamic physical harness that couples semantic reasoning with physical governance through a shared execution contract and turns failure evidence into validated capability revisions. To be more specific, the slow brain proposes capabilities and symbolic arguments, while the fast brain grounds and monitors commands, refuses unresolved actions, substitutes capabilities, and requests replans when needed. The physical execution contract bounds each accepted command and records execution evidence across analytic skills, recovery skills, and the frozen VLA. Failure attribution localizes faults in these records and directs targeted revisions of reusable capabilities or execution mechanisms. Paired regression checks govern admission or rejection, closing the self-evolution loop. On LIBERO-Pro, DynaHarness achieves 75.2% on 800 newly sampled initial states, compared with 17.5% for the frozen policy. With the same capability library, full dynamic execution reaches 74.0% versus 63.9% under nominal one-step replanning. This demonstrates the value of DynaHarness as a dynamic physical harness that governs how existing capabilities are grounded, monitored, and coordinated during execution. Our project page is at https://denghaoyuan123.github.io/Dynaharness_page/.",
+      "url": "https://arxiv.org/abs/2609.40306v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.40306v1",
+      "published": "2026-09-30T17:52:09Z",
+      "updated": "2026-09-30T17:52:09Z",
       "categories": [
         "cs.RO",
         "cs.AI",
@@ -27,113 +78,103 @@
       "primary_category": "cs.RO"
     },
     {
-      "id": "2609.38173v1",
-      "title": "In-context Robot Learning Made Simple: A Democratized Recipe for Manipulation Tasks",
+      "id": "2609.40297v1",
+      "title": "GPU-Accelerated Path-Dependent Marginal Information Gain for Autonomous Exploration",
       "authors": [
-        "Minxing Li",
-        "Minghao Han",
-        "Weizhi Zhao",
-        "Hanwen Wang",
-        "Xiangshuo Liu",
-        "Shuyao Shang",
-        "Jingxiang Zhou",
-        "Mingchao Sun",
-        "Hongyu Pan",
-        "Mu Xu",
-        "Yu Liu",
-        "Lue Fan",
-        "Zhaoxiang Zhang"
+        "Jo\u00e3o F\u00e9lix Mendes",
+        "Rodrigo Ventura",
+        "Meysam Basiri"
       ],
-      "abstract": "We study robotic in-context learning (ICL), an emerging paradigm that enables robots to infer and execute tasks from visual demonstrations. Despite its growing promise, the problem itself remains under-defined: a visual demonstration simultaneously conveys action trajectories, object semantics, manipulation affordances, spatial relations, and task goals, making it unclear what information the robot is actually expected to follow. In this work, we first provide a clear problem definition of robot ICL that explicitly defines its learning target and resolves this fundamental prompt ambiguity. Building on this definition, we develop a minimalist and reproducible ICL framework (SimpleICL) with a visual prompt encoder and a low-cost data collection protocol. Without massive pre-training or specialized data infrastructure, our framework achieves strong performance in both simulation and real-world environments. Extensive experiments further reveal several key properties of robot ICL, including action, semantic, composition, and affordance discrimination. We will fully open-source our data and training pipeline to facilitate systematic and reproducible research on robot ICL. The project page can be found at https://simpleicl.github.io/simpleicl.",
-      "url": "https://arxiv.org/abs/2609.38173v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.38173v1",
-      "published": "2026-09-29T17:59:45Z",
-      "updated": "2026-09-29T17:59:45Z",
+      "abstract": "Autonomous exploration demands that robots continuously evaluate candidate viewpoints based on their expected information gain and execution cost. Sampling-based planners estimate this gain by volumetric raycasting and, due to its computational cost, evaluate candidates under an assumption of mutual independence, ignoring the overlap between viewpoints along the same path. This work presents a GPU-accelerated method for computing path-dependent marginal information gain, where instead of storing and merging the observed unknown voxels along each candidate path, previous observations are represented using depth buffers. Candidate rays are projected into the depth buffers of their ancestors to identify observation overlap and exclude regions expected to be observed. The planning tree is evaluated in depth order to maintain the dependency between viewpoints and their optimized yaws, while candidate nodes and rays at each level are processed in parallel on the GPU. The proposed method stays within 5-10% of the exact marginal gain computed using voxel hash maps, with speed-ups of up to 118x on a desktop GPU and 28x on an NVIDIA Jetson Orin NX. The method was integrated into two sampling-based exploration planners and evaluated in three simulation environments, where marginal gain reduced the time to 95% coverage in five of the six evaluated planner-environment combinations. Real-world experiments also showed a 30% reduction in the time to 95% coverage, as well as earlier exploration termination times.",
+      "url": "https://arxiv.org/abs/2609.40297v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.40297v1",
+      "published": "2026-09-30T17:50:30Z",
+      "updated": "2026-09-30T17:50:30Z",
       "categories": [
         "cs.RO"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2609.38172v1",
-      "title": "Counterfactual Video Generation Enables Scalable Humanoid Loco-Manipulation",
+      "id": "2609.40272v1",
+      "title": "Skill-Based AI Agents for Power-System Studies",
       "authors": [
-        "Zihan Wang",
-        "Zhen Wu",
-        "Pieter Abbeel",
-        "Rocky Duan",
-        "Jitendra Malik",
-        "Carmelo Sferrazza",
-        "C. Karen Liu",
-        "Guanya Shi",
-        "Angjoo Kanazawa"
+        "Pavel Etingov",
+        "Shuchismita Biswas"
       ],
-      "abstract": "Teaching humanoids loco-manipulation skills, such as carrying diverse objects, via visual imitation is a promising path toward generalist robots. However, collecting diverse, high-quality interaction videos, such as clips that clearly show a person's full body and unoccluded interactions with objects, poses a practical barrier to scaling this approach. We propose PRISM, a real-to-sim-to-real framework that overcomes this limitation by amplifying a handful of real videos into a large, diverse training set. PRISM first generates hundreds of diverse \"counterfactual\" human-object interaction videos via video-to-video (V2V) generation from a few exemplar real videos. Our contact-anchored real-to-sim pipeline then reconstructs both human and object motions, retargeting this imperfect video data into physically plausible trajectories. The intra-class variability across these counterfactual videos lets us train a single policy that generalizes to unseen objects within each category. We demonstrate the full pipeline by deploying this policy on a real robot without any real-world fine-tuning. Using only onboard depth observations, our humanoid picks up, carries, and drops objects, including boxes, barrels, bins, and balls, across novel instances, sizes, and initial configurations.",
-      "url": "https://arxiv.org/abs/2609.38172v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.38172v1",
-      "published": "2026-09-29T17:59:45Z",
-      "updated": "2026-09-29T17:59:45Z",
+      "abstract": "This paper describes a skill-based agentic framework for power-system studies using Model Context Protocol (MCP)-connected engineering tools. A custom MCP server was developed to expose Siemens PTI PSSE functions for power-flow analysis, dynamic simulation, result extraction, and model-validation workflows. Two implementation pathways built on a programmable OpenAI Agents software development kit (SDK) and a Claude Code command-line interface (CLI) were evaluated, both using reusable skills, subagents, MCP tools, data-repository connections, and local shell/Python execution. Both frontier-model-based implementations successfully executed representative study tasks. Success was evaluated based on task completion, output accuracy, and the need for human expert interventions. Results based on public datasets show that agentic systems can greatly accelerate power system dynamic simulation process for transmission planning studies leveraging industry-grade simulation platforms. This points toward a shift in transmission planning practice, where agentic systems could handle routine simulation setup and result extraction, allowing engineers to focus expert judgment on scenario design and interpretation rather than tool operation.",
+      "url": "https://arxiv.org/abs/2609.40272v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.40272v1",
+      "published": "2026-09-30T17:44:35Z",
+      "updated": "2026-09-30T17:44:35Z",
+      "categories": [
+        "eess.SY"
+      ],
+      "primary_category": "eess.SY"
+    },
+    {
+      "id": "2609.40269v1",
+      "title": "Belief-Aware Multi-Agent Path Finding under Map Uncertainty",
+      "authors": [
+        "Viraj Parimi",
+        "Shao-Hung Chan",
+        "Han Zhang",
+        "Jingkai Chen",
+        "Brian Williams"
+      ],
+      "abstract": "Multi-Agent Path Finding (MAPF) aims to find collision-free paths for multiple agents in a shared environment. Classical MAPF assumes that all static obstacles are known in advance, but real-world environments can change unexpectedly due to fallen objects, spills, or other local disturbances. When such changes are spatially correlated, an observation can inform traversability estimates beyond the observed location. Prior approaches address uncertainty in traversability through contingent plans or replanning based on direct observations, but do not leverage this spatial dependence to infer the traversability of nearby unobserved locations. As a result, they cannot use one observation to anticipate nearby unobserved obstacles that may cause costly rerouting later. We focus on Belief-Aware MAPF, where map discrepancies are fixed during execution but initially unknown, and observations can be informative beyond the observed location. We propose Multi-Agent Gaussian belief Inference for Coordination (MAGIC), a framework that updates a shared belief about traversability online based on agents' observations. MAGIC uses a Gaussian Markov Random Field and Gaussian Belief Propagation to approximately infer traversability and construct detour-aware costs for standard MAPF planners. Our experiments on MAPF benchmarks show that MAGIC reduces the executed sum of costs compared to existing approaches on 96.3% of instances, across several planner families and teams of up to 800 agents, demonstrating its applicability to large-scale MAPF problems.",
+      "url": "https://arxiv.org/abs/2609.40269v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.40269v1",
+      "published": "2026-09-30T17:44:19Z",
+      "updated": "2026-09-30T17:44:19Z",
+      "categories": [
+        "cs.AI",
+        "cs.MA",
+        "cs.RO"
+      ],
+      "primary_category": "cs.AI"
+    },
+    {
+      "id": "2609.40245v1",
+      "title": "STARS: From Spatiotemporal Dynamics to Social Representations in Human-Robot Interaction",
+      "authors": [
+        "Nathan Tsoi",
+        "Michael J. Munje",
+        "Tejas Oberoi",
+        "Rishab Maheshwari",
+        "Pengen Zheng",
+        "Tanush Chauhan",
+        "Peter Stone",
+        "Joydeep Biswas"
+      ],
+      "abstract": "Robot navigation in dynamic, human-centered environments requires socially-compliant decisions grounded in robust scene understanding. Recent Vision-Language Models (VLMs) exhibit promising capabilities such as object recognition, common-sense reasoning, and contextual understanding, capabilities that align with the nuanced requirements of social robot navigation. However, it remains unclear whether VLMs can accurately understand complex social navigation scenes (e.g., inferring the spatial-temporal relations among agents and human intentions), which is essential for safe and socially compliant robot navigation. While some recent works have explored the use of VLMs in social robot navigation, no existing work systematically evaluates their ability to meet these necessary conditions. In this paper, we introduce the Social Navigation Scene Understanding Benchmark (SocialNav-SUB), a Visual Question Answering (VQA) dataset and benchmark designed to evaluate VLMs for scene understanding in real-world social robot navigation scenarios. SocialNav-SUB provides a unified framework for evaluating VLMs against human and rule-based baselines across VQA tasks requiring spatial, spatiotemporal, and social reasoning in social robot navigation. Through experiments with state-of-the-art VLMs, we find that while the best-performing VLM achieves an encouraging probability of agreeing with human answers, it still underperforms simpler rule-based approach and human consensus baselines, indicating critical gaps in social scene understanding of current VLMs. Our benchmark sets the stage for further research on foundation models for social robot navigation, offering a framework to explore how VLMs can be tailored to meet real-world social robot navigation needs. An overview of this paper along with the code and data can be found at https://larg.github.io/socialnav-sub.",
+      "url": "https://arxiv.org/abs/2609.40245v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.40245v1",
+      "published": "2026-09-30T17:35:08Z",
+      "updated": "2026-09-30T17:35:08Z",
       "categories": [
         "cs.RO",
-        "cs.CV",
-        "cs.GR"
+        "cs.LG"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2609.38164v1",
-      "title": "Rho: A Foundation for Efficiently Adaptable VLA Models",
+      "id": "2609.40244v1",
+      "title": "StreamRig: Exploiting Intra-Rig Geometry for Streaming Multi-Camera Odometry",
       "authors": [
-        "Rho Team",
-        "Simran Bagaria",
-        "Daphne Chen",
-        "Dean Fortier",
-        "Jianlong Fu",
-        "Michael Harrison",
-        "Tess Hellebrekers",
-        "Neel Joshi",
-        "Andrey Kolobov",
-        "Dalton Moore",
-        "Galen Mullins",
-        "Michael Murray",
-        "Eduardo Salinas",
-        "Reuben Tan"
+        "Yufei Wei",
+        "Shuhao Ye",
+        "Qi Wang",
+        "Xin Zheng",
+        "Qing Huang",
+        "Rong Xiong",
+        "Yue Wang"
       ],
-      "abstract": "General-purpose physical AI models must combine broad visual and linguistic capabilities with precise control across robot embodiments and efficient adaptation to downstream tasks. We introduce Rho, a family of open-weights VLA models for bimanual manipulation designed for data-light task adaptation on 3 embodiments representative of dual-arm robots across research labs and the industry -- YAM Box, UR AI Trainer, and FR3 Duo. We systematically ablate Rho's action-expert architecture and training recipe, and show in controlled simulation and physical-robot experiments that embodiment midtraining improves downstream adaptation. The resulting Rho variants for YAM Box, UR AI Trainer, and FR3 Duo match or outperform existing open-weights VLAs and achieve the strongest overall performance across the tasks, embodiments, and baselines evaluated in this report. We further demonstrate the Rho model family's built-in capacity for online adaptation: an internal latent policy learns from corrective feedback to select observation-conditioned noise inputs for the frozen flow-matching action expert. With as few as 15 corrected episodes, adapting this lightweight module enables Rho to handle task situations at the fringe of its offline finetuning distribution. Together, these results position Rho as both a strong general-purpose robotic manipulation model and a practical foundation for adaptation. We release the base Rho model and the embodiment-specific checkpoints to facilitate Rho's deployment in research experiments and practical industrial use cases.",
-      "url": "https://arxiv.org/abs/2609.38164v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.38164v1",
-      "published": "2026-09-29T17:59:28Z",
-      "updated": "2026-09-29T17:59:28Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2609.38163v1",
-      "title": "Rethinking Representations for World-Action Modeling",
-      "authors": [
-        "Haoyi Jiang",
-        "Liu Liu",
-        "Xinjiang Wang",
-        "Zhihao Sun",
-        "Zequn Chen",
-        "Sen Wang",
-        "Xinjie Wang",
-        "Xia Chen",
-        "Jingfeng Yao",
-        "Weiheng Zhao",
-        "Shanglin Yuan",
-        "Zhizhong Su",
-        "Wei Sui",
-        "Wenyu Liu",
-        "Xinggang Wang"
-      ],
-      "abstract": "World-action models jointly learn robot policies and predict future observations, making the representation space an interface between control and prediction. We study the design of this space through controlled comparisons, finding that neither reconstruction fidelity nor pre-trained perceptual features alone ensure effective policy learning. These findings motivate ReWAM, a representation-centric world-action model built on pre-trained DINO features. Feature Calibration and a Temporal Representation Bottleneck organize these features into compact world states suited to dynamics modeling. Action-Grounded Representation Shaping routes only action-loss gradients to the bottleneck, thereby letting the policy shape what the representation encodes while the world model learns how it evolves. Without generative video pre-training, ReWAM achieves 93.6% success on RoboTwin 2.0. On RoboDojo, it achieves an average score of 12.29 and a success rate of 8.28% using approximately 600 hours of embodied pre-training data.",
-      "url": "https://arxiv.org/abs/2609.38163v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.38163v1",
-      "published": "2026-09-29T17:59:22Z",
-      "updated": "2026-09-29T17:59:22Z",
+      "abstract": "Mobile robots and vehicles carry synchronized multi-camera rigs, yet many streaming 3D foundation models are designed for monocular input, leaving efficient use of rig geometry a challenge. We present StreamRig, a freeze-and-stream framework that builds causal streaming odometry for calibrated rigs on a frozen multi-view 3D foundation model. The frozen front-end jointly perceives the synchronized views using rig calibration. A Rig-Resampler compresses their features, a CausalBridge applies causal attention with a key-value cache, and a lightweight head regresses rig poses. A periodic re-anchoring protocol supports stable pose estimation over long sequences. Only these modules are trained, 74.6M parameters in total, with relative poses as the sole supervision. Our two-stage training strategy combines group relocalization pretraining with causal rig training to transfer the geometric priors of the frozen front-end and the alignment ability of the pretrained modules to streaming odometry. We evaluate on NCLT, TartanGround, KITTI-360, and our self-collected humanoid-robot dataset ZJH, where training uses only simulation and real-world evaluation is zero-shot. Across all four datasets, StreamRig achieves lower translation and rotation drift than the evaluated non-oracle monocular streaming and rig-aware offline models, while maintaining low inference cost. Ablations and controlled camera-count experiments identify the sources of these gains. We further examine how longer training windows affect inference over longer horizons. Code has been released at https://github.com/WeiYuFei0217/StreamRig.",
+      "url": "https://arxiv.org/abs/2609.40244v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.40244v1",
+      "published": "2026-09-30T17:34:58Z",
+      "updated": "2026-09-30T17:34:58Z",
       "categories": [
         "cs.CV",
         "cs.RO"
@@ -141,111 +182,41 @@
       "primary_category": "cs.CV"
     },
     {
-      "id": "2609.38133v1",
-      "title": "Multi-Agent Flow Matching with Decoupled Generative Guidance",
+      "id": "2609.40208v1",
+      "title": "Centralized Multi-UAV Exploration and 3D Reconstruction Using Single-UAV Planners",
       "authors": [
-        "Ruoyu Lin",
-        "Magnus Egerstedt",
-        "Fabio Pasqualetti"
+        "Jo\u00e3o F\u00e9lix Mendes",
+        "Meysam Basiri",
+        "Rodrigo Ventura"
       ],
-      "abstract": "Generative modeling is widely used for producing diverse objects from complex, multimodal distributions. However, its expressivity does not, in general, come with formal guarantees that the generated objects satisfy hard constraints or requirements. In multi-agent generation, this problem becomes more challenging because a hard requirement can depend on multiple agents, while each agent may need to determine its own guidance input without relying on the simultaneously computed guidance inputs of other agents. To this end, we introduce DeGG-Flow, a general framework for multi-agent flow matching with decoupled generative guidance. By representing the generative process as a control-affine dynamical system, we develop guidance conditions for two classes of coupled requirements: shared requirements whose satisfaction depends on multiple agents together, and private requirements associated with each individual agent dependent on its neighbors. For both classes, we establish feasibility conditions and finite-horizon convergence guarantees. We further derive a Wasserstein bound that characterizes the distributional deviation induced by the guidance. We demonstrate DeGG-Flow on multi-robot collaboration for crossing a spatial gap by reconfiguring the environment, and on multi-object scene generation with affordance requirements. Across both applications, DeGG-Flow directly generates objects that satisfy all corresponding hard requirements, including at team sizes unseen during training.",
-      "url": "https://arxiv.org/abs/2609.38133v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.38133v1",
-      "published": "2026-09-29T17:54:07Z",
-      "updated": "2026-09-29T17:54:07Z",
+      "abstract": "Extending single Unmanned Aerial Vehicles (UAVs) exploration methods to multi-UAV teams can improve coverage speed and robustness, but introduces challenges such as consistent mapping, safe navigation, and deployment strategy. In this work, we present a centralized multi-UAV exploration framework that enables the use of existing single-UAV sampling-based planners in a multi-UAV setting. The proposed architecture allows multiple UAVs to collaboratively explore unknown environments using a shared global Truncated Signed Distance Field (TSDF) map and centralized planning. Building on the voxblox library, we adapt its mapping pipeline to support real-time fusion of depth measurements from multiple UAVs into a common TSDF representation. In addition, inter-UAV collision avoidance and robot self-filtering mechanisms are integrated into the system to ensure safe navigation and prevent reconstruction of other UAVs as static obstacles. The framework is evaluated in simulation using four sampling-based exploration planners - RH-NBVP, KRH-NBVP, AEP, and KAEP - whose core sampling logic is preserved, with only system-level adaptations for multi-UAV operation. Experiments are conducted across multiple environments and under two deployment configurations: Joint Start (JS), where UAVs are initialized in close proximity, and Separated Start (SS), where UAVs are initialized in distinct locations. Results show that SS deployments consistently achieve faster exploration and improved coverage across all planners, highlighting the importance of the deployment strategy in multi-UAV exploration performance.",
+      "url": "https://arxiv.org/abs/2609.40208v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.40208v1",
+      "published": "2026-09-30T17:19:03Z",
+      "updated": "2026-09-30T17:19:03Z",
       "categories": [
-        "cs.LG",
-        "cs.MA",
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2609.40178v1",
+      "title": "Non-Invasive Inspection of Water Canals Using Dronar",
+      "authors": [
+        "Michael Zielinski",
+        "Zhizhan Wang",
+        "Benjamin Dymond",
+        "Reza Razavian",
+        "Zhongwang Dou"
+      ],
+      "abstract": "Open concrete canals play a vital role in water transportation, serving as primary water infrastructure for millions of people across the Phoenix, Arizona, metro area. Over time, the concrete canals can experience a range of issues, including canal lining deformation, cracked concrete, and sediment buildup on the canal floor. Identifying such critical issues is a resource-intensive process, which currently happens only during four-year dry-up cycles. This prevents the maintenance crew from prioritizing operations on the most affected canal segments. To address this issue, the research team has developed and verified an easily deployable and non-invasive method to inspect canal beds without draining the water. This inspection system integrates affordable, off-the-shelf drone and sonar technology (termed dronar). This dronar system includes a consumer-grade sonar system integrated into an unmanned surface vehicle (USV) that carries the sonar transducer just under the surface of the canal water. This paper presents a proof-of-concept demonstration of the dronar system across three field tests on the Arizona Canal in Phoenix. DownScan depth profiles from the sedimented canal segment were consistently shallower than profiles from the same segment after cleaning, with offsets of up to 15 cm observed along the track. Repeated runs over the clean segment produced closely overlapping DownScan depth profiles, confirming that the dronar yields repeatable measurements across the natural variation of the canal bed. These results establish the dronar as a viable proof-of-concept tool for non-invasive canal bed inspection.",
+      "url": "https://arxiv.org/abs/2609.40178v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.40178v1",
+      "published": "2026-09-30T17:03:32Z",
+      "updated": "2026-09-30T17:03:32Z",
+      "categories": [
         "cs.RO",
-        "math.OC"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2609.38120v1",
-      "title": "Stochastic World Models for Verifying Vision-Based Neural Feedback Systems",
-      "authors": [
-        "I. Samuel Akinwande",
-        "Mykel J. Kochenderfer",
-        "Clark Barrett"
-      ],
-      "abstract": "Verifying a vision-based neural feedback system requires a model of the observations its controller acts upon. Such a model must capture the variation the sensor produces, while remaining tractable for closed-loop analysis. Generative adversarial networks (GANs) have served as perception surrogates, but they are large, reproduce complex scenes poorly, and are hard to verify. We explore stochastic world models as a richer class of perception surrogates. We train a world model with physically grounded latents, built from operations that standard verifiers bound. It reproduces held-out frames more faithfully than GAN surrogates with up to 130 times as many parameters. To verify these surrogates, we develop a procedure that combines falsification, adaptive refinement, symbolic, and backward analyses. On an emergency braking benchmark with a GAN surrogate, our procedure resolves the entire state space, 38% of which the state-of-the-art verifier left unresolved. On the RGB version of the benchmark, where no verification results have previously been reported, our procedure resolves over 80% of the state space with a world model surrogate.",
-      "url": "https://arxiv.org/abs/2609.38120v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.38120v1",
-      "published": "2026-09-29T17:50:40Z",
-      "updated": "2026-09-29T17:50:40Z",
-      "categories": [
-        "cs.AI",
-        "eess.SY"
-      ],
-      "primary_category": "cs.AI"
-    },
-    {
-      "id": "2609.38105v1",
-      "title": "FORM: Robot Manipulation through Direct Material Law Identification",
-      "authors": [
-        "Stepan Tretiakov",
-        "Ruihan Zhao",
-        "Cheng-Hsi Hsiao",
-        "Xingjian Li",
-        "Adam Thorpe",
-        "Hassan Iqbal",
-        "Sandeep Chinchali",
-        "Ufuk Topcu",
-        "Krishna Kumar"
-      ],
-      "abstract": "When interacting with an unfamiliar deformable material, a robot lacks prior knowledge of its physical properties and how it will respond to applied forces and motion. Rapid online identification is therefore essential for reliable manipulation. We present FORM (From Observed Response to Material laws), which identifies material properties from a single robot interaction and reuses the recovered model to plan manipulation under new actions and geometries. We use weak-form momentum balance to convert observed material motion and contact forces into linear equations in the unknown material parameters. These equations are assembled using the same material point method discretization as the forward simulator, so identification reduces to linear least-squares solves whose solutions can be used directly for prediction without refitting or conversion. Across four material classes, FORM reduces identification time from roughly 10--25 minutes for iterative baselines to 2--5 seconds, while maintaining competitive accuracy on new motions, initial conditions, and geometries. We demonstrate our approach in simulation and on hardware across four manipulation tasks: elastic rod insertion, golf putting with an elastic club, elastoplastic shaping, and target-volume pouring. In each task, the model identified from a single interaction is reused to plan new motions or manipulate a different geometry. FORM estimates elastic properties within 3.4% and elastoplastic properties within 2%, achieves 72.4--77.8% IoU in dough shaping, and keeps mean pouring error at 3.8 mL across target volumes of 60--160 mL.",
-      "url": "https://arxiv.org/abs/2609.38105v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.38105v1",
-      "published": "2026-09-29T17:46:40Z",
-      "updated": "2026-09-29T17:46:40Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2609.38087v1",
-      "title": "CrossBFM: Distilling a Shared Latent Behavior Space Across Humanoid Embodiments",
-      "authors": [
-        "Tan-Dzung Do",
-        "Tuan Dat Phuong",
-        "Nico Bohlinger",
-        "Cuc T. Trinh",
-        "Siwei Ju",
-        "Vien Anh Ngo",
-        "Jan Peters",
-        "Xinchao Wang",
-        "An T. Le"
-      ],
-      "abstract": "Behavior Foundation Models (BFMs) give humanoids a promptable policy over a latent behavior space, enabling one single vector to represent a motion to imitate, a pose to reach, or a reward to maximize. Forward-Backward representations successfully produce such spaces, but at the cost of hundreds of GPU-hours for a single robot. Moreover, when the training process is repeated for a second robot, it produces a second space unrelated to the first, resulting in embodiment-specific latents that do not unify or transfer. We address these problems with CrossBFM, treating the latent space as the transferable asset for various embodiments. As retargeting provides frame-level cross-embodiment correspondence, we propose a unified encoder architecture with no robot-specific parameters for distilling the behavior space to address all training embodiments simultaneously in less than a GPU-hour. Following this encoder, latent-conditioned trackers turn the distilled latent into whole-body control in a conventional PPO training manner in just 10 more GPU-hours. On three distilled humanoids, all three prompting modes transfer: motion tracking with latent-conditioned policy losing only $0.025$ rad to its joint-conditioned counterpart, smooth goal reaching between poses with no falls, and reward optimization for all $41$ reward prompts. Our experiments further reveal that 1) regressing the encoder on a quarter of the motion corpus costs only $5\\%$ of tracking performance and 2) training the encoder on a subset of robots and evaluating on an unseen one recovers up to $89\\%$ of the tracking performance of seen robots, demonstrating cross-embodiment generalization to morphologically similar robots. We also verify the pipeline on real robots across all three prompting modes and with flow-based generated latents. Project website: https://dotandung.github.io/crossbfm/",
-      "url": "https://arxiv.org/abs/2609.38087v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.38087v1",
-      "published": "2026-09-29T17:40:11Z",
-      "updated": "2026-09-29T17:40:11Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2609.38078v1",
-      "title": "MotorMind: Scaffolding General Vision Language Models for Zero-Shot Robot Manipulation",
-      "authors": [
-        "Bingxuan Li",
-        "Siqi Song",
-        "Yizhuo Wu",
-        "Jiarui Yao",
-        "Tong Zhang",
-        "Huan Zhang"
-      ],
-      "abstract": "Vision-language-action (VLA) models have advanced robotic manipulation, but their zero-shot generalization in new tasks and environments remains limited, and their reliance on specialized training keeps them from benefiting directly from rapidly advancing general-purpose vision-language models (VLMs). In parallel, recent agentic robotic systems leverage VLMs for high-level reasoning or coding agents for robot control, but often depend on extensive external models and tools, introducing additional complexity and cost. This motivates us to ask: Can a general-purpose VLM itself operate a robot more like the human teleoperator by reasoning directly from observations, issuing actions, and continuously adapting to execution feedback, without relying on external models such as learned action experts, coding agents or grounding tools like SAM3? In this work, we introduce MotorMind, a robot manipulation harness that connects VLM-proposed mid-level actions to deterministic robot control and feedback, with asynchronous monitoring and background memory updates. Without task-specific policy training, coding agents, or additional grounding tools such as SAM3, MotorMind achieves 66.7% success on the base LIBERO-PRO suites and 53.8% under perturbations, compared with at most 13.3% and 19.2%, respectively, for the prior zero-shot methods we evaluate. The same interface reaches 95% average success on a real xArm6 robot across direct manipulation and human-perturbation settings. Replacing the backbone with a stronger VLM further improves performance, while the remaining failures - primarily due to visual grounding, embodied reasoning, and action knowledge - decrease as VLM capability improves. These results show that a general-purpose VLM, when equipped with an appropriate mid-level action representation and asynchronous execution harness, can perform effective zero-shot robotic manipulation.",
-      "url": "https://arxiv.org/abs/2609.38078v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.38078v1",
-      "published": "2026-09-29T17:36:40Z",
-      "updated": "2026-09-29T17:36:40Z",
-      "categories": [
-        "cs.RO"
+        "eess.SP"
       ],
       "primary_category": "cs.RO"
     }

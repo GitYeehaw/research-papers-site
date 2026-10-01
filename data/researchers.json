@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-09-30T14:55:29.650113+00:00",
+  "scraped_at": "2026-10-01T15:26:44.966594+00:00",
   "researcher_count": 54,
   "researchers": [
     {
@@ -888,7 +888,7 @@
           "primary_category": "cs.CV"
         },
         {
-          "id": "2606.22303v1",
+          "id": "2606.22303v2",
           "title": "FlowDPG: Deterministic Policy Gradient on Flow Matching Policies for Real-World Manipulation",
           "authors": [
             "Kexin Shi",
@@ -900,11 +900,11 @@
             "Shikhar Bahl",
             "Deepak Pathak"
           ],
-          "abstract": "Real-world reinforcement learning for robotic manipulation remains challenging, and this difficulty is amplified for flow matching policies: applying policy gradient methods to these policies is fundamentally limited by the need to backpropagate through time(BPTT) along the multi-step ODE that maps noise to actions, which is computationally prohibitive and numerically fragile. We propose FlowDPG, a DDPG-style method specifically designed for flow matching policies that distills the critic gradient into the velocity field at training time, bypassing BPTT entirely. Intuitively, FlowDPG combines two complementary vectors: the demonstration-driven velocity that keeps the action feasible, and the critic-driven correction that steers it toward higher value. Our contributions are threefold: (1) a BPTT-free distillation framework that enables stable DDPG-style policy improvement on flow matching policies, (2) a formal connection between the FlowDPG update direction and vanilla Deterministic Policy Gradient via three explicit approximations, and (3) real-world validation on a long-horizon, multi-stage, dual-arm AirPods assembly task, where FlowDPG attains a 92% end-to-end success rate, substantially outperforming recent RL methods spanning value-conditioning, auxiliary-module adaptation, and adjoint-based critic-gradient approaches. Videos and more results are provided on the project page https://flowdpg.github.io.",
-          "url": "https://arxiv.org/abs/2606.22303v1",
-          "pdf_url": "https://arxiv.org/pdf/2606.22303v1",
+          "abstract": "Real-world reinforcement learning for robotic manipulation remains challenging, and this difficulty is amplified for flow matching policies: policy gradients must be backpropagated through time (BPTT) along the multi-step ODE that maps noise to actions, which is computationally prohibitive and numerically fragile. We propose FlowDPG, a DDPG-style method for flow matching policies that bypasses BPTT entirely. FlowDPG evaluates the critic gradient at a one-step estimate of the clean action and distills the resulting correction into the velocity field at training time, leaving multi-step inference unchanged. Intuitively, it combines two complementary vectors: the demonstration-driven velocity that keeps the action feasible, and the critic-driven correction that steers it toward higher value. Our contributions are threefold: (1) a BPTT-free distillation framework for stable DDPG-style improvement of flow matching policies, (2) a formal connection between the FlowDPG update and the vanilla deterministic policy gradient via three explicit approximations, and (3) real-world validation on two long-horizon tasks on different robots. FlowDPG reaches 92% end-to-end success on dual-arm AirPods assembly with Franka arms and an 86% rubric score on scrambled-egg cooking with YAM arms, substantially outperforming recent RL methods. Videos and more results: https://flowdpg.github.io.",
+          "url": "https://arxiv.org/abs/2606.22303v2",
+          "pdf_url": "https://arxiv.org/pdf/2606.22303v2",
           "published": "2026-06-21T02:10:21Z",
-          "updated": "2026-06-21T02:10:21Z",
+          "updated": "2026-09-30T08:21:44Z",
           "categories": [
             "cs.RO"
           ],
@@ -1136,7 +1136,7 @@
           "primary_category": "cs.LG"
         },
         {
-          "id": "2607.19046v1",
+          "id": "2607.19046v2",
           "title": "Contrastive On-Policy Distillation",
           "authors": [
             "Jiacheng Ruan",
@@ -1148,11 +1148,11 @@
             "Zhibo Yang",
             "Yuzhuo Fu"
           ],
-          "abstract": "On-policy Distillation (OPD) supervises a student model on trajectories sampled from its own policy by minimizing the divergence between the output distributions of the teacher and student at each token position, thereby providing dense token-level supervision. Although existing OPD methods have demonstrated strong performance in improving the reasoning ability of student models, their objectives fundamentally rely on token-level distribution matching. Consequently, they lack an explicit signal for comparing a token's relative compatibility across reasoning modes and thus do not directly model preferences between these modes. To address this limitation, we propose COPD, a contrastive OPD framework. Specifically, for each token generated by the student model, a frozen teacher model scores the same student state under two contrasting instructions that elicit light and heavy reasoning. The difference between the resulting log probabilities serves as a token-level advantage signal to guide the OPD update. Rather than merely imitating a single teacher distribution, COPD directly encourages the student model to learn more concise and efficient reasoning strategies. We conduct experiments on nine multimodal benchmarks covering both reasoning and understanding tasks. The results show that COPD substantially reduces reasoning length without compromising model performance and consistently improves efficiency across different tasks and model scales. Furthermore, the contrastive formulation can be seamlessly integrated into the On-policy Self-distillation (OPSD) framework, where self-contrastive supervision is constructed without an additional teacher model, thereby enabling the model to distill itself toward lightweight reasoning.",
-          "url": "https://arxiv.org/abs/2607.19046v1",
-          "pdf_url": "https://arxiv.org/pdf/2607.19046v1",
+          "abstract": "On-policy distillation (OPD) trains a student model on trajectories sampled from its own policy, providing dense token-level supervision by minimizing the divergence between the teacher's and student's output distributions at each token. Although existing OPD approaches effectively distill strong reasoning capabilities into student models, they inherently inherit uncurated chain-of-thought traces, exacerbating overthinking and reasoning redundancy. To address this limitation, we introduce COPD, a contrastive OPD framework. Specifically, for each token generated by the student, a frozen teacher evaluates the current student state under two contrasting prompts that induce low and high reasoning effort, respectively. The resulting difference in log-probabilities serves as a token-level advantage signal to guide the policy update. Rather than merely mimicking a single teacher distribution, COPD guides the student model toward acquiring concise and efficient reasoning strategies. We evaluate COPD across 9 multimodal benchmarks covering both reasoning and understanding tasks. Empirical results show that COPD substantially reduces reasoning length without hurting task performance, consistently improving efficiency across different tasks and model scales. In addition, this contrastive paradigm extends naturally to on-policy self-distillation (OPSD), establishing self-contrastive supervisory signals that enable a single model to compress its own reasoning without an external teacher.",
+          "url": "https://arxiv.org/abs/2607.19046v2",
+          "pdf_url": "https://arxiv.org/pdf/2607.19046v2",
           "published": "2026-07-21T12:35:04Z",
-          "updated": "2026-07-21T12:35:04Z",
+          "updated": "2026-09-30T07:06:28Z",
           "categories": [
             "cs.CV"
           ],
@@ -1711,7 +1711,7 @@
       "paper_count": 5,
       "papers": [
         {
-          "id": "2609.20820v2",
+          "id": "2609.20820v3",
           "title": "Workspace Models: Lightweight Robotic Memory via Saliency-Driven Supervision",
           "authors": [
             "Nitish Dashora",
@@ -1721,11 +1721,11 @@
             "Pulkit Agrawal",
             "Max Simchowitz"
           ],
-          "abstract": "Complex robotic manipulation tasks frequently require a long-term memory of past events and actions. As conditioning on full histories renders policies prone to spurious correlations and degrades performance, many approaches to policy memory involve compressing historical information through expensive VLM queries in-the-loop to process only task-salient information. In this paper, we propose an alternative approach in which computationally intensive VLM queries are made during train-time to learn a lightweight latent memory that can be efficiently queried at deployment time. Our representation, which we call the \\textbf{workspace token}, is trained by (1) using a VLM to identify current and historical information necessary for completing a task, then (2) distilling these into the workspace token using a set-reconstruction decoder loss. In both simulation and hardware, we show that the workspace token can be used as a drop-in replacement for observations during deployment, enabling policies to solve memory-intensive tasks without the need for VLM reasoning in-the-loop, in effect serving as a \\textbf{latent harness} for distilling a stronger reasoning models ability to solve long-horizon tasks to a reactive robotic policy. We further demonstrate that the workspace tokens are not only more lightweight, but also lead to better policy performance compared to conditioning policies on explicit modalities like curated past image frames, motivating a ``latent'' approach to history curation and reasoning model harnesses more broadly.",
-          "url": "https://arxiv.org/abs/2609.20820v2",
-          "pdf_url": "https://arxiv.org/pdf/2609.20820v2",
+          "abstract": "Complex robotic manipulation tasks frequently require a long-term memory of past events and actions. As conditioning on full histories renders policies prone to spurious correlations and degrades performance, many approaches to policy memory involve compressing historical information through expensive VLM queries in-the-loop to process only task-salient information. In this paper, we propose an alternative approach in which computationally intensive VLM queries are made during train-time to learn a lightweight latent memory that can be efficiently queried at deployment time. Our representation, which we call the workspace token, is trained by (1) using a VLM to identify current and historical information necessary for completing a task, then (2) distilling these into the workspace token using a set-reconstruction decoder loss. In both simulation and hardware, we show that the workspace token can be used as a drop-in replacement for observations during deployment, enabling policies to solve memory-intensive tasks without the need for VLM reasoning in-the-loop, in effect serving as a latent harness for distilling a stronger reasoning models ability to solve long-horizon tasks to a reactive robotic policy. We further demonstrate that the workspace tokens are not only more lightweight, but also lead to better policy performance compared to conditioning policies on explicit modalities like curated past image frames, motivating a latent approach to history curation and reasoning model harnesses more broadly.",
+          "url": "https://arxiv.org/abs/2609.20820v3",
+          "pdf_url": "https://arxiv.org/pdf/2609.20820v3",
           "published": "2026-09-17T17:59:53Z",
-          "updated": "2026-09-29T01:47:35Z",
+          "updated": "2026-09-30T04:31:22Z",
           "categories": [
             "cs.RO",
             "cs.AI"
@@ -3398,6 +3398,26 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2609.38340v1",
+          "title": "CARAT: Do Materials LLMs Reason or Recite?",
+          "authors": [
+            "Jiajun Wu",
+            "Jian Yang",
+            "Zixiang Ni",
+            "Zhenzhu Li",
+            "Bin Chong"
+          ],
+          "abstract": "When a materials LLM answers a question about crystal structure, does it reason from the structure or copy an answer already printed in its input? Accuracy cannot tell: a structural description often prints the very field it is scored against. CARAT holds question and gold answer fixed across eight matched views, names each structural relation separately in GraphSpace, and adds matched fine-tuning, answer masking, evidence injection, paired inference, and a rule that can withhold claims. First, on the benchmark's hardest families the grounded view is worth 17.3 points over formula inputs. Second, we turn that scrutiny on ourselves. GraphSpace beats a plain periodic graph by 19.3 points, but that margin is two effects at once: where the plain rendering carries everything the question needs it is 1.96 points, and where it omits those fields entirely, 46.7 points. The headline mostly measures what the baseline lacked, not how evidence is presented. Third, we attack our own benchmark. A rule that skips the link and reads the list directly answers four of seven hardened families, so we rebuilt it until eleven such shortcuts sat near chance. The frozen model quotes that link yet answers the same when we redirect it, on 95.6% of paired cases: it repeats the relation without using it. After matched supervision it reaches 99.8%, and deleting the link drops it to 23.4%, below the 27.0% the best shortcut reaches: both steps are learnable.",
+          "url": "https://arxiv.org/abs/2609.38340v1",
+          "pdf_url": "https://arxiv.org/pdf/2609.38340v1",
+          "published": "2026-09-29T18:06:07Z",
+          "updated": "2026-09-29T18:06:07Z",
+          "categories": [
+            "cs.AI"
+          ],
+          "primary_category": "cs.AI"
+        },
+        {
           "id": "2609.36720v1",
           "title": "T$^2$Mem: Learning Test-Time Memory for Robotics",
           "authors": [
@@ -3487,35 +3507,6 @@
             "cs.CV"
           ],
           "primary_category": "cs.CV"
-        },
-        {
-          "id": "2609.11900v1",
-          "title": "MindTopo: Can Foundation Models Reason in Topological Space?",
-          "authors": [
-            "Yunfei Ge",
-            "Anbang Liu",
-            "Qineng Wang",
-            "Johnalbert Garnica",
-            "Jianwen Lyu",
-            "Zihan Wang",
-            "Reuben Tan",
-            "Jianfeng Gao",
-            "Ruohan Zhang",
-            "Yining Hong",
-            "Jiajun Wu",
-            "Manling Li"
-          ],
-          "abstract": "Spatial reasoning depends not only on metric properties such as distance, angle, and shape, but also on topological relations that remain invariant under continuous deformation. Cognitive science identifies these relations as foundational to spatial understanding, yet foundation-model evaluations largely focus on metric or viewpoint-dependent relations. We introduce MindTopo, a benchmark of topological intuition across five properties grounded in cognitive science and formal topology: continuity, separation, order, enclosure, and knots. MindTopo evaluates each property at two cognitive levels. Reasoning asks a model to identify topological relations or infer how they change. Planning instantiates a foundation model as a closed-loop agent whose policy selects environment actions. MindTopo contains 11,030 instances across 13 procedurally generated task types with controllable difficulty. We benchmark 14 MLLMs and study agent configurations augmented with image and video generation, including 3 video generative models in planning settings. Every MLLM performs better on reasoning than on planning, and the best-performing model remains far below observed human performance. On Qwen3-VL-2B-Instruct, supervised fine-tuning and reinforcement learning improve reasoning more than planning. Generated observations retain local cues and reach plausible endpoints, but audited rollouts do not reliably follow environment dynamics or preserve topology across transitions. Our website is at https://mind-topo.github.io/",
-          "url": "https://arxiv.org/abs/2609.11900v1",
-          "pdf_url": "https://arxiv.org/pdf/2609.11900v1",
-          "published": "2026-09-10T17:54:32Z",
-          "updated": "2026-09-10T17:54:32Z",
-          "categories": [
-            "cs.AI",
-            "cs.CL",
-            "cs.CV"
-          ],
-          "primary_category": "cs.AI"
         }
       ]
     },
@@ -3902,6 +3893,29 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2609.40134v1",
+          "title": "Tactile Curiosity Drives Robot Interaction",
+          "authors": [
+            "Klemens Iten",
+            "Alexander Proshkin",
+            "Bhavya Sukhija",
+            "Stelian Coros",
+            "Andreas Krause",
+            "Pieter Abbeel",
+            "Carmelo Sferrazza"
+          ],
+          "abstract": "Mastering robot manipulation skills via reinforcement learning (RL) remains largely sample-inefficient. The most common RL algorithms rely on random action sampling to discover new strategies, resulting in agents that allocate most of their training budget to motions in free space, away from the contacts from which manipulation skills emerge. Existing intrinsic motivation methods based on model disagreement or epistemic uncertainty improve on isotropic noise, but they can also reward uncertainty in functionally irrelevant transitions, such as erratic motions in free space. In this work, we argue that tactile feedback provides a natural signal for exploration, and introduce TacEx, a framework that incorporates touch into epistemic uncertainty-driven exploration by decomposing model uncertainty across sensory modalities and directing curiosity toward the tactile channel. By anchoring curiosity to the sense of touch, TacEx drives the robot to discover complex contact dynamics, learning to manipulate and grasp objects without task rewards or expert demonstrations during exploration. The interaction-dense dataset collected through this tactile-driven curiosity supports offline learning of downstream pick-and-place policies without additional environment interaction. We further use tactile-driven exploration to post-train vision-language-action (VLA) models. Although the VLAs are initially pre-trained without tactile feedback, post-training with TacEx substantially improves downstream performance while remaining highly sample-efficient.",
+          "url": "https://arxiv.org/abs/2609.40134v1",
+          "pdf_url": "https://arxiv.org/pdf/2609.40134v1",
+          "published": "2026-09-30T16:49:40Z",
+          "updated": "2026-09-30T16:49:40Z",
+          "categories": [
+            "cs.RO",
+            "cs.AI"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2609.38172v1",
           "title": "Counterfactual Video Generation Enables Scalable Humanoid Loco-Manipulation",
           "authors": [
@@ -4010,28 +4024,6 @@
           "updated": "2026-06-25T17:59:57Z",
           "categories": [
             "cs.RO"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2606.19333v1",
-          "title": "Do as I Do: Dexterous Manipulation Data from Everyday Human Videos",
-          "authors": [
-            "Bhawna Paliwal",
-            "Haritheja Etukuru",
-            "William Liang",
-            "Pieter Abbeel",
-            "Nur Muhammad Mahi Shafiullah",
-            "Jitendra Malik"
-          ],
-          "abstract": "How can we scalably generate data for robotic manipulation, especially on human-like platforms such as dexterous multi-fingered hands? Learning from human videos has recently emerged as a likely answer to this question. However, difficulties in estimating hand-object interaction and crossing the human-to-robot embodiment gap have hindered the adoption of abundant monocular RGB-only human videos as the primary source of robot manipulation data. In this work, we present DO AS I DO, an algorithm to reconstruct and retarget monocular RGB human videos to multi-fingered dexterous robotic hands. DO AS I DO reconstructs hand-object interactions from various egocentric and exocentric in-the-wild video sources. The algorithm then retargets these hand-object interaction estimates into a sequence of actions executable in the real world, yielding robot-complete manipulation data from disparate human videos. Overall, DO AS I DO outperforms previous state of the art in estimating hand-object interactions and extracting dexterous manipulation trajectories from RGB videos, as we show in experiments on datasets with ground truths and on a dataset of video clips collected online. Our experiments enable us to propose an efficacy playbook for practitioners collecting human data for manipulation.",
-          "url": "https://arxiv.org/abs/2606.19333v1",
-          "pdf_url": "https://arxiv.org/pdf/2606.19333v1",
-          "published": "2026-06-17T17:57:34Z",
-          "updated": "2026-06-17T17:57:34Z",
-          "categories": [
-            "cs.RO",
-            "cs.CV"
           ],
           "primary_category": "cs.RO"
         }
@@ -4179,6 +4171,26 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2609.38418v1",
+          "title": "PneuTac: Tactile Manipulation with Soft Pneumatic Robots via Unified MPM-Gaussian Splatting Simulation",
+          "authors": [
+            "Shaohong Zhong",
+            "Marco Pontin",
+            "Joe Watson",
+            "Perla Maiolino",
+            "Ingmar Posner"
+          ],
+          "abstract": "Soft robots and tactile sensors have demonstrated great potential in delicate manipulation tasks. Soft pneumatic robots enable safe contact through compliance, and vision-based tactile sensors offer high-resolution touch perception. However, learning tactile manipulation with compliant robots has been challenging, bottlenecked by the lack of efficient simulation. Existing simulators typically model them in isolation, and exhibit large calibration gaps that are difficult to overcome efficiently. We present PneuTac, a unified framework for tactile-feedback manipulation with soft pneumatic robots. We leverage the material point method (MPM) for modelling the dynamics of the soft robot and the deformable tactile membrane, and 3D Gaussian splatting (3DGS) for rendering. Real-to-sim modelling is done with a simple vision-based method, to then train action and perception networks for efficient simulation with surrogate models. We use the framework to drive a tactile-guided pipeline to collect demonstrations in simulation. Through experiments on a custom-designed pneumatic soft finger with a tactile sensing tip, together with additional cross-device evaluations, we show that PneuTac is capable of accurately modelling soft robots with tactile sensors, and that policies trained with simulation-augmented demonstrations outperform baselines trained on the same real data on three real-world contact-rich compliant manipulation tasks, making it a practical framework for tactile manipulation on compliant hardware.",
+          "url": "https://arxiv.org/abs/2609.38418v1",
+          "pdf_url": "https://arxiv.org/pdf/2609.38418v1",
+          "published": "2026-09-29T19:12:12Z",
+          "updated": "2026-09-29T19:12:12Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2609.22055v1",
           "title": "Benchmarking World Models for Continual Learning on Compositional Tasks",
           "authors": [
@@ -4253,25 +4265,6 @@
           "pdf_url": "https://arxiv.org/pdf/2606.02194v1",
           "published": "2026-06-01T12:49:14Z",
           "updated": "2026-06-01T12:49:14Z",
-          "categories": [
-            "cs.LG"
-          ],
-          "primary_category": "cs.LG"
-        },
-        {
-          "id": "2605.22248v1",
-          "title": "No Epoch Like the Present: Robust Climate Emulation Requires Out-of-Distribution Generalisation",
-          "authors": [
-            "Bradley Stanley-Clamp",
-            "Anson Lei",
-            "Hannah M. Christensen",
-            "Ingmar Posner"
-          ],
-          "abstract": "Climate emulation is an out-of-distribution (OOD) projection task. This is precisely the challenge where modern Machine Learning (ML) methods are most prone to failure. Consequently, while current ML emulators trained on present climate achieve high in-distribution performance, their future reliability under the inevitable distribution shifts of a changing climate remains a critical, poorly understood blind spot. Addressing this challenge requires a fundamental shift in how we understand, evaluate, and design climate emulators. In this work, we first confirm that climate change drives a statistically significant and progressively growing shift in atmospheric state distributions, rendering standard evaluation protocols insufficient. We empirically establish that seasonal variation serves as an effective proxy for these long-term climate shifts, providing access to $\\textit{real-world}$ distribution shifts without recourse to heuristics like synthetic perturbations. Motivated by this link, we introduce a novel evaluation framework that leverages seasonal shifts as a rigorous, zero-overhead testbed for emulator robustness. Our systematic characterisation confirms that current state-of-the-art hybrid-ML emulators degrade significantly under these realistic shifts. Finally, we chart a path forward by identifying compositional generalisation, the ability to form novel combinations from observed elementary components, as a principled route towards robust climate emulation. We demonstrate that physically motivated decompositions substantially improve OOD performance with only modest trade-offs against in-distribution performance, providing an avenue towards ML-driven climate emulators robust to an unknown future.",
-          "url": "https://arxiv.org/abs/2605.22248v1",
-          "pdf_url": "https://arxiv.org/pdf/2605.22248v1",
-          "published": "2026-05-21T09:54:57Z",
-          "updated": "2026-05-21T09:54:57Z",
           "categories": [
             "cs.LG"
           ],
@@ -4396,6 +4389,26 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2609.38418v1",
+          "title": "PneuTac: Tactile Manipulation with Soft Pneumatic Robots via Unified MPM-Gaussian Splatting Simulation",
+          "authors": [
+            "Shaohong Zhong",
+            "Marco Pontin",
+            "Joe Watson",
+            "Perla Maiolino",
+            "Ingmar Posner"
+          ],
+          "abstract": "Soft robots and tactile sensors have demonstrated great potential in delicate manipulation tasks. Soft pneumatic robots enable safe contact through compliance, and vision-based tactile sensors offer high-resolution touch perception. However, learning tactile manipulation with compliant robots has been challenging, bottlenecked by the lack of efficient simulation. Existing simulators typically model them in isolation, and exhibit large calibration gaps that are difficult to overcome efficiently. We present PneuTac, a unified framework for tactile-feedback manipulation with soft pneumatic robots. We leverage the material point method (MPM) for modelling the dynamics of the soft robot and the deformable tactile membrane, and 3D Gaussian splatting (3DGS) for rendering. Real-to-sim modelling is done with a simple vision-based method, to then train action and perception networks for efficient simulation with surrogate models. We use the framework to drive a tactile-guided pipeline to collect demonstrations in simulation. Through experiments on a custom-designed pneumatic soft finger with a tactile sensing tip, together with additional cross-device evaluations, we show that PneuTac is capable of accurately modelling soft robots with tactile sensors, and that policies trained with simulation-augmented demonstrations outperform baselines trained on the same real data on three real-world contact-rich compliant manipulation tasks, making it a practical framework for tactile manipulation on compliant hardware.",
+          "url": "https://arxiv.org/abs/2609.38418v1",
+          "pdf_url": "https://arxiv.org/pdf/2609.38418v1",
+          "published": "2026-09-29T19:12:12Z",
+          "updated": "2026-09-29T19:12:12Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2609.31008v1",
           "title": "Quadruped Obstacle Avoidance and Footstep Planning with Distributed Low-cost Time-of-Flight Sensors",
           "authors": [
@@ -4475,25 +4488,6 @@
           "pdf_url": "https://arxiv.org/pdf/2601.13250v1",
           "published": "2026-01-19T17:36:28Z",
           "updated": "2026-01-19T17:36:28Z",
-          "categories": [
-            "cs.RO"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2510.10804v1",
-          "title": "Representing Data in Robotic Tactile Perception -- A Review",
-          "authors": [
-            "Alessandro Albini",
-            "Mohsen Kaboli",
-            "Giorgio Cannata",
-            "Perla Maiolino"
-          ],
-          "abstract": "Robotic tactile perception is a complex process involving several computational steps performed at different levels. Tactile information is shaped by the interplay of robot actions, the mechanical properties of its body, and the software that processes the data. In this respect, high-level computation, required to process and extract information, is commonly performed by adapting existing techniques from other domains, such as computer vision, which expects input data to be properly structured. Therefore, it is necessary to transform tactile sensor data to match a specific data structure. This operation directly affects the tactile information encoded and, as a consequence, the task execution. This survey aims to address this specific aspect of the tactile perception pipeline, namely Data Representation. The paper first clearly defines its contributions to the perception pipeline and then reviews how previous studies have dealt with the problem of representing tactile information, investigating the relationships among hardware, representations, and high-level computation methods. The analysis has led to the identification of six structures commonly used in the literature to represent data. The manuscript provides discussions and guidelines for properly selecting a representation depending on operating conditions, including the available hardware, the tactile information required to be encoded, and the task at hand.",
-          "url": "https://arxiv.org/abs/2510.10804v1",
-          "pdf_url": "https://arxiv.org/pdf/2510.10804v1",
-          "published": "2025-10-12T20:48:35Z",
-          "updated": "2025-10-12T20:48:35Z",
           "categories": [
             "cs.RO"
           ],
@@ -4749,6 +4743,25 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2609.38570v1",
+          "title": "Data-Efficient Adaptation of a Driving VLA to Class 8 Trucks",
+          "authors": [
+            "Satyajeet Das",
+            "Aaron Buxbaum",
+            "Niels Joubert",
+            "Gaurav S. Sukhatme"
+          ],
+          "abstract": "Class 8 trucks differ from passenger cars in geometry, dynamics, and maneuvering requirements. As a result, vision-language-action (VLA) models trained for passenger vehicles do not readily transfer to Class 8 trucks, particularly in unstructured scenarios such as accident scenes and construction zones. Rather than training a truck-driving VLA from scratch, we propose an adapt-then-steer strategy that adapts an off-the-shelf VLA to generate trajectories for Class-8 trucks in these challenging scenarios. In the adapt stage, we use NVIDIA's Alpamayo 1.5 as the base model, fine-tuning only its action-generation stack on a few hundred real-world construction and accident-related highway scenarios. In the steer stage, we introduce Flow Velocity Steering (FVS) to further refine the model's predictions while holding the adapted VLA fixed. FVS is a compact, flow-time-conditioned residual module that adds learned corrections to the action-space flow velocity used to update the action sequence at each generation step. In open-loop evaluation on a scenario-disjoint held-out set, targeted fine-tuning more than halves single-candidate average displacement error (ADE) and final displacement error (FDE) over the entire 6.4 s horizon compared to the base model. Using the same targeted demonstrations, FVS further reduces the fine-tuned model's full-horizon ADE and FDE by 13.9% and 16.5%, respectively. At matched data budgets, targeted supervision yields 19-26% lower full-horizon ADE than general truck-driving supervision, while the targeted model remains competitive with a model fine-tuned on approximately 65 times as many general truck-driving scenarios. These results support adapt-then-steer for data-efficient vehicle-domain transfer to Class 8 trucks. Our project website is available at https://truckvla.github.io.",
+          "url": "https://arxiv.org/abs/2609.38570v1",
+          "pdf_url": "https://arxiv.org/pdf/2609.38570v1",
+          "published": "2026-09-29T21:28:32Z",
+          "updated": "2026-09-29T21:28:32Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2609.30951v1",
           "title": "Bundled Contact Gradients: Stabilizing Differentiable Simulation for Deployable Dynamic Tasks",
           "authors": [
@@ -4831,27 +4844,6 @@
           "pdf_url": "https://arxiv.org/pdf/2609.21167v1",
           "published": "2026-09-18T00:21:05Z",
           "updated": "2026-09-18T00:21:05Z",
-          "categories": [
-            "cs.RO"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2607.12050v1",
-          "title": "EFLUX: Elastic Multi-Robot Formation Navigation and Adaptation with Agentic LLMs",
-          "authors": [
-            "Jinyuan Zhang",
-            "Yuwei Wu",
-            "Guangyao Shi",
-            "Jonathan Diller",
-            "Gaurav S. Sukhatme",
-            "Vijay Kumar"
-          ],
-          "abstract": "Multi-robot teams operating in confined or cluttered environments must adapt both their formation geometry and group topology to navigate through complex obstacles. This adaptation requires two complementary behaviors: deformation, where the team continuously reshapes its geometry while remaining connected, and reconfiguration, where robots split into subgroups or merge back into a single formation. Existing methods often model these behaviors independently, connect them through handcrafted rules, or lack explicit geometric criteria for determining when each behavior should be invoked. However, challenging environments may require online changes in formation shape, connectivity, and effective team composition, making decoupled or rule-based approaches prone to suboptimal trajectories and deadlock. We propose EFLUX, a geometry-grounded LLM agentic framework for automatic and elastic multi-robot formation navigation. EFLUX extracts a structured scene representation and uses an LLM to reason jointly over both deformation actions, such as scaling and shearing, and reconfiguration actions, such as splitting and merging. These strategies are then translated into executable per-robot waypoints through a closed-loop generation, verification, and correction pipeline. Simulation and hardware experiments show that EFLUX enables safe, continuous, and elastic formation navigation in constrained environments, reducing deadlock and navigation failures compared with baselines while maintaining coherent multi-robot coordination.",
-          "url": "https://arxiv.org/abs/2607.12050v1",
-          "pdf_url": "https://arxiv.org/pdf/2607.12050v1",
-          "published": "2026-07-13T18:08:57Z",
-          "updated": "2026-07-13T18:08:57Z",
           "categories": [
             "cs.RO"
           ],
@@ -5489,6 +5481,75 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2609.40244v1",
+          "title": "StreamRig: Exploiting Intra-Rig Geometry for Streaming Multi-Camera Odometry",
+          "authors": [
+            "Yufei Wei",
+            "Shuhao Ye",
+            "Qi Wang",
+            "Xin Zheng",
+            "Qing Huang",
+            "Rong Xiong",
+            "Yue Wang"
+          ],
+          "abstract": "Mobile robots and vehicles carry synchronized multi-camera rigs, yet many streaming 3D foundation models are designed for monocular input, leaving efficient use of rig geometry a challenge. We present StreamRig, a freeze-and-stream framework that builds causal streaming odometry for calibrated rigs on a frozen multi-view 3D foundation model. The frozen front-end jointly perceives the synchronized views using rig calibration. A Rig-Resampler compresses their features, a CausalBridge applies causal attention with a key-value cache, and a lightweight head regresses rig poses. A periodic re-anchoring protocol supports stable pose estimation over long sequences. Only these modules are trained, 74.6M parameters in total, with relative poses as the sole supervision. Our two-stage training strategy combines group relocalization pretraining with causal rig training to transfer the geometric priors of the frozen front-end and the alignment ability of the pretrained modules to streaming odometry. We evaluate on NCLT, TartanGround, KITTI-360, and our self-collected humanoid-robot dataset ZJH, where training uses only simulation and real-world evaluation is zero-shot. Across all four datasets, StreamRig achieves lower translation and rotation drift than the evaluated non-oracle monocular streaming and rig-aware offline models, while maintaining low inference cost. Ablations and controlled camera-count experiments identify the sources of these gains. We further examine how longer training windows affect inference over longer horizons. Code has been released at https://github.com/WeiYuFei0217/StreamRig.",
+          "url": "https://arxiv.org/abs/2609.40244v1",
+          "pdf_url": "https://arxiv.org/pdf/2609.40244v1",
+          "published": "2026-09-30T17:34:58Z",
+          "updated": "2026-09-30T17:34:58Z",
+          "categories": [
+            "cs.CV",
+            "cs.RO"
+          ],
+          "primary_category": "cs.CV"
+        },
+        {
+          "id": "2609.39866v1",
+          "title": "Preemptive LLM Unlearning against Forbidden Capability Acquisition via Gradient Sealing",
+          "authors": [
+            "Kemou Li",
+            "Qizhou Wang",
+            "Yue Wang",
+            "Fengpeng Li",
+            "Zhuan Shi",
+            "Negar Rostamzadeh",
+            "Golnoosh Farnadi",
+            "Masashi Sugiyama",
+            "Jiantao Zhou"
+          ],
+          "abstract": "Open-weight LLMs are released not only as fixed products but also as substrates for downstream fine-tuning. This openness, however, creates legal and ethical risks because users may misuse fine-tuning to instill illicit knowledge or enable hostile operations. Model providers therefore need apre-release defense against such acquisition, motivating the problem of preemptive unlearning. Unlike retrospective unlearning, which removes capabilities already present in a fixed model, preemptive unlearning seeks to prevent their acquisition under unseen attack data and future fine-tuning procedures. Despite its practical importance, this setting remains largely unexplored, presents distinct challenges, and is therefore the central focus of our work. We first verify that existing retrospective methods provide insufficient pre-release protection. Even when forbidden capabilities are suppressed in current outputs, forbidden-domain data can still induce gradients through internal pathways, enabling later acquisition. Motivated by this finding, we propose a gradient-sealing principle that blocks these pathways by pushing relevant pre-activations into the negative region, where ReLU-family activations exhibit zero or near-zero derivatives. Experiments across multiple LLM families demonstrate our stronger resistance to downstream acquisition than retrospective baselines, validating gradient sealing as an effective mechanism for pre-release protection.",
+          "url": "https://arxiv.org/abs/2609.39866v1",
+          "pdf_url": "https://arxiv.org/pdf/2609.39866v1",
+          "published": "2026-09-30T14:48:36Z",
+          "updated": "2026-09-30T14:48:36Z",
+          "categories": [
+            "cs.LG"
+          ],
+          "primary_category": "cs.LG"
+        },
+        {
+          "id": "2609.38443v1",
+          "title": "BIND: Binding 3D Robot Actions to 2D Image Features",
+          "authors": [
+            "Cameron Smith",
+            "Arsh Tangri",
+            "Vitor Guizilini",
+            "Yue Wang",
+            "Zubair Irshad",
+            "Sergey Zakharov"
+          ],
+          "abstract": "We introduce BIND, a new action representation for visuomotor robot policies that binds 3D robot actions to their corresponding 2D image features, yielding strong data efficiency gains and robustness to out-of-distribution object positions and camera viewpoints. The action heads of current robot policies are typically formulated as an MLP regression from a single global feature vector produced by a pre-trained vision encoder. This global formulation requires the policy network to discover, from demonstrations alone, the relationship between target robot actions and the image features they project onto. The consequence is that although modern image features are semantically descriptive, spatially robust, and even multiview-consistent, the policies built on them are brittle to subtle changes in camera viewpoint and object placement--and surprisingly data-inefficient. BIND closes this gap by supplying the action-feature relationship through camera geometry rather than learning: it discretizes a volume of candidate end effector positions, attaches each candidate to the pre-trained features at its projection in each camera view, and selects actions by scoring each candidate's position and image-bound feature combination. On a real robot, we study data efficiency and out-of-distribution robustness to unseen object positions and camera viewpoints, as well as general long-horizon task execution and dexterity. We find BIND to be highly data-efficient and robust: it achieves near-perfect success on tasks with as few as 5 demonstrations, and degrades gracefully under steep camera-viewpoint shifts and held-out object positions where coordinate-regression baselines completely fail.",
+          "url": "https://arxiv.org/abs/2609.38443v1",
+          "pdf_url": "https://arxiv.org/pdf/2609.38443v1",
+          "published": "2026-09-29T19:36:19Z",
+          "updated": "2026-09-29T19:36:19Z",
+          "categories": [
+            "cs.RO",
+            "cs.CV"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2609.37970v1",
           "title": "PhysWAM: Physically Consistent World Action Model for Autonomous Driving",
           "authors": [
@@ -5536,111 +5597,6 @@
             "cs.CV"
           ],
           "primary_category": "cs.CV"
-        },
-        {
-          "id": "2609.35409v1",
-          "title": "AwarenessBench: Assessing Cognitive Capabilities of Language Models",
-          "authors": [
-            "Xiaojian Li",
-            "Rongwu Xu",
-            "Tianyun Zhang",
-            "Yue Wang",
-            "Shuo Chen",
-            "Qiner Lyu",
-            "Briana Zhang",
-            "Peiran Yang",
-            "Kyle Xue Chen",
-            "Haoyuan Shi",
-            "Yu Wang",
-            "Wei Xu"
-          ],
-          "abstract": "As language models (LMs) exhibit increasingly consciousness-like behaviors, evaluating their cognitive abilities becomes essential. We introduce AwarenessBench, the first comprehensive benchmark for assessing the cognitive abilities of LMs in four dimensions: metacognition, self-awareness, social awareness, and situational awareness, covering 15 cognitive functions and 14,381 samples. Evaluating 18 state-of-the-art LMs, we find that all consistently surpass random baselines, with more advanced models performing better. We further compare LMs with human performance across three demographic groups, where the best-performing model surpasses human averages overall, but most still fall markedly short in metacognition and self-awareness. Finally, we show that awareness is a distinct capability: progress in language modeling or reasoning does not necessarily translate into improved cognition.",
-          "url": "https://arxiv.org/abs/2609.35409v1",
-          "pdf_url": "https://arxiv.org/pdf/2609.35409v1",
-          "published": "2026-09-28T15:28:27Z",
-          "updated": "2026-09-28T15:28:27Z",
-          "categories": [
-            "cs.CL",
-            "cs.AI"
-          ],
-          "primary_category": "cs.CL"
-        },
-        {
-          "id": "2609.35031v1",
-          "title": "PEAR: Progressive Evidence-Based AutoResearch for Industrial Search Systems",
-          "authors": [
-            "Yifan Wang",
-            "Shipeng Zhu",
-            "Fei Xiong",
-            "Yuqin Yang",
-            "Yonghui Huang",
-            "Kunyao Wu",
-            "Yue Wang",
-            "Weichao Meng",
-            "Yu Gong"
-          ],
-          "abstract": "AutoResearch improves systems through iterative experimentation: agents propose candidate modifications, evaluate them, and use the results to guide subsequent exploration. Applying this paradigm to industrial search presents two challenges. (1) Common AutoResearch approaches follow a keep-if-better rule, retaining the highest-scoring candidate for subsequent experiments. Under non-stationary traffic, transient gains may be mistaken for persistent improvements, impairing reliable accumulation of search knowledge. (2) Candidate modifications can be evaluated at multiple fidelity levels, from low-cost proxies to online validation, differing in cost, objective alignment, and statistical reliability. Existing methods rely on individual signals or task-specific procedures, lacking a unified basis for using evidence across levels to guide search. We introduce Progressive Evidence-Based AutoResearch (PEAR) with two complementary components. Evidence-driven AutoResearch maintains an independent, hypothesis-guided research state for each strategy task within a predefined objective and intervention scope. Each state evolves through a Plan-Execute-Evaluate-Update transition that links experimentation to context-aware evidence interpretation and hypothesis revision. Confidence-Gated Verifier Ladder organizes evaluation into four levels of increasing fidelity: Offline Replay, Shadow-Traffic Evaluation, Rapid Online Evaluation, and Decision-Grade Online Evaluation. A unified confidence-based gate promotes candidates only when evidence supports a statistically significant positive effect, enabling broad low-cost exploration while reserving costly online experiments for promoted candidates. In a real-world industrial search system, strategies optimized with PEAR significantly increased Main Order/DAU by 2.7336% and 3.2957% relative to their respective baselines in two A/B experiments.",
-          "url": "https://arxiv.org/abs/2609.35031v1",
-          "pdf_url": "https://arxiv.org/pdf/2609.35031v1",
-          "published": "2026-09-28T12:30:00Z",
-          "updated": "2026-09-28T12:30:00Z",
-          "categories": [
-            "cs.IR",
-            "cs.AI"
-          ],
-          "primary_category": "cs.IR"
-        },
-        {
-          "id": "2609.33757v1",
-          "title": "YuE2: Unifying Symbolic and Audio Music Generation at Frontier Quality",
-          "authors": [
-            "Ruibin Yuan",
-            "Jiahao Pan",
-            "Junyan Jiang",
-            "Zhiyue Wu",
-            "Ziya Zhou",
-            "Jiankai Sun",
-            "Yizhi Li",
-            "Ge Zhang",
-            "Yicheng Gu",
-            "Zeyue Tian",
-            "Junyu Dai",
-            "Hanfeng Lin",
-            "Kai Li",
-            "Shangda Wu",
-            "Xuanjie Liu",
-            "Jiaming Wang",
-            "Zihan Liu",
-            "Yue Wang",
-            "Yinghao Ma",
-            "Hanzhi Yin",
-            "Kangrui Chen",
-            "Xinyue Zhang",
-            "Ziyang Ma",
-            "Mengqi Liao",
-            "Hejia Zhao",
-            "Guowei Huang",
-            "Chao Yan",
-            "Lei Ke",
-            "Jianwei Yu",
-            "Bei Liu",
-            "Joe Guo",
-            "Liumeng Xue",
-            "Gus Xia",
-            "Wei Xue",
-            "Yike Guo"
-          ],
-          "abstract": "Symbolic models make melody, harmony, rhythm, and form explicit but typically stop before a finished recording; audio models produce complete songs while leaving composition implicit. We introduce YuE2, which unifies symbolic and audio music generation at frontier quality through symbolic planning. A single AR-NAR Mixture-of-Transformers (MoT) first writes a readable score specifying melody and harmony, expands it into semantic music tokens, and realizes it as full-song audio. In comparisons using the same checkpoint, experts prefer symbolic planning for overall quality and musicality, with 49.3% of overall preferences versus 34.6% without planning. Experts also favor the unified model over a separate language model and diffusion Transformer. On WildSongBench, YuE2 scores 6.73 on SongBench Global Avg, exceeding all evaluated public baselines. Selecting from eight candidates (best-of-8), YuE2 reaches 6.96, the highest observed mean among all evaluated systems. Expert listening further establishes its competitiveness with proprietary song generators, favoring best-of-8 over Suno v4.5 and yielding nearly balanced preferences against Suno v5. To learn this generation process from recordings without aligned scores, we introduce MERT2 and SheetSage2 to supply semantic and symbolic supervision. MERT2 sets a new state of the art in music representation learning, surpassing previous best results on 14 of 15 MARBLE metrics; SheetSage2 leads 12 of 15 benchmark-metric pairs in our lead-sheet transcription comparison. The same checkpoint follows score edits while largely preserving unedited musical content and generates zero-shot covers without cover-specific training. Its readable score also enables agentic music editing, with external language models translating user feedback into revisions of the composition.",
-          "url": "https://arxiv.org/abs/2609.33757v1",
-          "pdf_url": "https://arxiv.org/pdf/2609.33757v1",
-          "published": "2026-09-27T16:55:13Z",
-          "updated": "2026-09-27T16:55:13Z",
-          "categories": [
-            "eess.AS",
-            "cs.LG",
-            "cs.SD"
-          ],
-          "primary_category": "eess.AS"
         }
       ]
     },
