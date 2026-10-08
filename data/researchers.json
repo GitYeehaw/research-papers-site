@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-10-07T15:33:17.705783+00:00",
+  "scraped_at": "2026-10-08T15:34:16.865579+00:00",
   "researcher_count": 54,
   "researchers": [
     {
@@ -10,6 +10,30 @@
       "website": "https://ames.caltech.edu/",
       "paper_count": 5,
       "papers": [
+        {
+          "id": "2610.08970v1",
+          "title": "HULK: Learning Whole-Body Forceful Loco-Manipulation for Humanoids",
+          "authors": [
+            "An Dang",
+            "Arturo Flores Alvarez",
+            "Yu-Ming Chen",
+            "Conor Mc Gartoll",
+            "Helen Sun",
+            "Aaron Ames",
+            "Nima Fazeli",
+            "Manikantan Nambi"
+          ],
+          "abstract": "Humanoid loco-manipulation of large, heavy objects demands forceful interaction across the entire body. However, such payloads shift a humanoid's center of mass and impose sustained loads across the upper body, challenging balance and command tracking. We present HULK, a whole-body control framework for forceful loco-manipulation. Using model predictive control (MPC) to guide reinforcement learning with predictions of the loaded dynamics, we train two teachers: one tracks arm motions under wrist forces, and the other locomotes while holding large objects against the body. A capture-point control barrier function augments the wrist-force teacher during training to improve balance under load. We distill both teachers into a single policy. Evaluation spans simulation and the Unitree G1. In simulation, the teacher with the barrier function achieves the lowest forward and lateral velocity tracking errors at 10 kg per arm among evaluated controllers and reduces aggregate divergent component of motion (DCM) excursion magnitude by 35.7% relative to MPC-guided reinforcement learning alone. Our wrist-force teacher withstands torso push disturbances of up to 130 N.",
+          "url": "https://arxiv.org/abs/2610.08970v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.08970v1",
+          "published": "2026-10-06T18:33:11Z",
+          "updated": "2026-10-06T18:33:11Z",
+          "categories": [
+            "cs.RO",
+            "cs.LG"
+          ],
+          "primary_category": "cs.RO"
+        },
         {
           "id": "2610.07409v1",
           "title": "RACER: Residual-Adaptive Closed-Loop Estimation for Sampling-Based Planning in Wheeled-Quadruped Racing",
@@ -82,27 +106,6 @@
           "pdf_url": "https://arxiv.org/pdf/2609.22462v1",
           "published": "2026-09-18T18:22:12Z",
           "updated": "2026-09-18T18:22:12Z",
-          "categories": [
-            "cs.RO"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2609.22075v1",
-          "title": "LIMBO: Learning and Internalizing Model-Free Barrier Objectives for Agile and Safe Whole-Body Control",
-          "authors": [
-            "Jake Gonzales",
-            "Arturo Flores Alvarez",
-            "Yu-Ming Chen",
-            "Aaron D. Ames",
-            "Lillian J. Ratliff",
-            "Manikantan Nambi"
-          ],
-          "abstract": "Safe whole-body control requires coordinating collision avoidance and balance under high-dimensional, nonlinear dynamics--making safety certificates difficult to design and reuse across behaviors. We present LIMBO, a framework for synthesizing a state-action control barrier function and distilling its safety structure into a task policy. LIMBO learns the safety certificate from black-box transitions and a state-based failure specification over residual actions around a frozen base controller, making Q-CBF synthesis tractable in the full control dimension while placing the certificate in the task policy's control space. During synthesis, the learned safety value drives risk-guided sampling near the estimated boundary of recoverability; during task learning, it serves as a teacher that provides action-level safety feedback, yielding a robust task policy and alleviating the need for an online safety filter at deployment. We demonstrate LIMBO on a 29-degree-of-freedom humanoid performing dodgeball avoidance and locomotion beneath low obstacles. Beyond scaling learned Q-CBFs to whole-body control, we show that risk-guided boundary sampling provides a theoretically grounded way to explore the edge of recoverability. Under the same safety specification, ceteris paribus, varying the sampling concentration produces strategies ranging from crouching to a novel backward-leaning limbo maneuver. In both settings, the learned policies transfer to hardware without online safety filtering, showing that learned safety synthesis scales to agile whole-body control.",
-          "url": "https://arxiv.org/abs/2609.22075v1",
-          "pdf_url": "https://arxiv.org/pdf/2609.22075v1",
-          "published": "2026-09-18T17:57:56Z",
-          "updated": "2026-09-18T17:57:56Z",
           "categories": [
             "cs.RO"
           ],
@@ -3179,6 +3182,30 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2610.09254v1",
+          "title": "RoboRender: Robot-Oriented Video Generation for Visual Sim-to-Real Transfer",
+          "authors": [
+            "Huang Huang",
+            "Wensi Ai",
+            "Ziyu Chen",
+            "Youhui Wang",
+            "Zijian Du",
+            "Yang Liu",
+            "Jiaolong Yang",
+            "Li Fei-Fei",
+            "Jiajun Wu"
+          ],
+          "abstract": "Simulation enables large-scale, low-cost robot data generation, but policies trained in simulation often fail to transfer to the real world due to the sim-to-real visual discrepancies. Existing approaches often rely on intermediate representations, which can discard rich semantic information or require additional perception modules at deployment. We address this visual sim-to-real gap with RoboRender, a framework that converts simulated trajectories into photorealistic RGB videos for policy learning. RoboRender trains a robot-oriented video generation model conditioned on simulated depth videos, language instructions, and robot RGB mask videos, preserving simulator geometry, robot motion, and action labels while synthesizing realistic textures, backgrounds, and distractors. The generated RGB videos are paired with simulator-provided states and actions to train policies for zero-shot real-world deployment. On robot video test sets, our video model outperforms depth-conditioned video generation baselines in generation quality. In real-world experiments across pick-and-place, articulated-object manipulation, and mobile manipulation tasks, policies trained on RoboRender-generated data achieve a 71% average success rate, outperforming raw simulation renderings and conventional visual domain randomization by approximately 7.1x and 3.6x, respectively. We further show that policy performance improves with more generated videos per simulation trajectory, increasing opening-task success by 65 percentage points. These results demonstrate that generative video rendering mitigates the visual sim-to-real gap for zero-shot policy transfer. Project website: https://robo-render.github.io/.",
+          "url": "https://arxiv.org/abs/2610.09254v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.09254v1",
+          "published": "2026-10-07T00:39:56Z",
+          "updated": "2026-10-07T00:39:56Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2610.07922v1",
           "title": "OpenWAM: An Open Framework for Composable World-Action Models",
           "authors": [
@@ -3272,28 +3299,6 @@
             "cs.RO"
           ],
           "primary_category": "cs.RO"
-        },
-        {
-          "id": "2609.01938v2",
-          "title": "One Demonstration, Many Objects: Generalizing Manipulation via Local Contact Geometry",
-          "authors": [
-            "Satvik Sharma",
-            "Samrat Sahoo",
-            "Huang Huang",
-            "Fei-Fei Li",
-            "Jiajun Wu",
-            "Dorsa Sadigh",
-            "Jeannette Bohg"
-          ],
-          "abstract": "Dexterous manipulation with multi-fingered robot hands promises human-level dexterity, but collecting large-scale dexterous robot hand data remains difficult. Learning from human demonstrations has emerged as a scalable alternative to robot teleoperation, providing strong priors on object interaction and contact strategies. Recent sim-to-real RL methods incorporate such priors, but often (i) omit rewards that explicitly incentivize precise contact, yielding weak real-world performance, and/or (ii) generalize poorly to unseen object instances. We propose DemoMimic (Dexterous Motion Mimic), a policy that manipulates objects by focusing on their geometry local to the contact points. Its contact-centric rewards encourage precise contact and improve sim-to-real consistency, yielding a single real-world policy that transfers across objects of varying shape, scale, mass, and friction wherever local contact structure is preserved. Real-world ablations show that DemoMimic achieves 71% success across 16 objects, four tasks, and two robot-hand embodiments, with the smallest sim-to-real drop compared to baselines.",
-          "url": "https://arxiv.org/abs/2609.01938v2",
-          "pdf_url": "https://arxiv.org/pdf/2609.01938v2",
-          "published": "2026-09-01T23:04:35Z",
-          "updated": "2026-09-03T16:45:27Z",
-          "categories": [
-            "cs.RO"
-          ],
-          "primary_category": "cs.RO"
         }
       ]
     },
@@ -3305,6 +3310,34 @@
       "website": "https://web.stanford.edu/~bohg/",
       "paper_count": 5,
       "papers": [
+        {
+          "id": "2610.10515v1",
+          "title": "RoboJEPA: Scaling Robotic Latent World Models",
+          "authors": [
+            "Artem Zholus",
+            "Nicolas Beltran-Velez",
+            "Jianhao Yuan",
+            "Sarath Chandar",
+            "Tushar Nagarajan",
+            "Daniel Severo",
+            "Koustuv Sinha",
+            "Michal Drozdzal",
+            "Adriana Romero Soriano",
+            "Jeannette Bohg",
+            "Nicolas Ballas",
+            "Mahmoud Assran"
+          ],
+          "abstract": "Latent world models have shown a remarkable ability to predict future states and to plan in the real world. In practice, however, we lack a principled way to estimate how their capabilities scale with model size, data, and compute, an open problem that slows progress in the field. In this work we present RoboJEPA, a world model based on the Joint Embedding Predictive Architecture (JEPA) and trained on a large-scale dataset spanning 12 robotic embodiments. We show that RoboJEPA's imagination error, the error of its latent rollouts, follows a second-order power law in compute, allowing us to predict model quality well beyond the scale at which the law is fit. We further show that downstream robotic planning performance improves predictably with compute, and that imagination error is strongly correlated with it, making it a reliable proxy for real-robot evaluation. Finally, we demonstrate that latent world models can be deployed zero-shot as robotic agents, planning toward a single goal image to solve tasks requiring long-horizon planning on real hardware. We release all model checkpoints together with our training and robot deployment code. To our knowledge, this is the first work to establish scaling laws for multi-embodiment robotic world models trained on real robot data, and RoboJEPA, at 8B parameters, is the largest JEPA predictor model trained to date.",
+          "url": "https://arxiv.org/abs/2610.10515v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.10515v1",
+          "published": "2026-10-07T17:54:42Z",
+          "updated": "2026-10-07T17:54:42Z",
+          "categories": [
+            "cs.AI",
+            "cs.RO"
+          ],
+          "primary_category": "cs.AI"
+        },
         {
           "id": "2610.07681v1",
           "title": "EigenDEXplore: Structured Exploration for Dexterous Manipulation with Human Priors",
@@ -3395,27 +3428,6 @@
             "cs.RO"
           ],
           "primary_category": "cs.RO"
-        },
-        {
-          "id": "2608.01402v1",
-          "title": "Demystifying When and Why VLAs Fail in Contact-Rich Tasks and How to Fix Them",
-          "authors": [
-            "Carlota Par\u00e9s-Morlans",
-            "Nils Kuhn",
-            "Isabel Liu",
-            "Alberta Longhini",
-            "Jeannette Bohg"
-          ],
-          "abstract": "We address the problem of understanding when and why Vision-Language-Action models struggle with contact-rich manipulation tasks that require precise physical interaction. Prior work has primarily focused on addressing contact failures through force-augmented architectures and training-time regularizers, yet the root causes of these failures remain underexplored. We identify two distinct failure modes underlying this gap. Precision failures are rooted in a flow-matching policy training mismatch, and force failures arise from the distinctive structure of force signals. We address each failure mode with a targeted mechanism and combine them into FACT, which achieves 66% average success rate across five contact-rich tasks against 41% for the best prior baseline, in an evaluation spanning almost 2,500 real-world rollouts.",
-          "url": "https://arxiv.org/abs/2608.01402v1",
-          "pdf_url": "https://arxiv.org/pdf/2608.01402v1",
-          "published": "2026-08-02T17:34:19Z",
-          "updated": "2026-08-02T17:34:19Z",
-          "categories": [
-            "cs.RO",
-            "cs.AI"
-          ],
-          "primary_category": "cs.RO"
         }
       ]
     },
@@ -3427,6 +3439,53 @@
       "website": "https://jiajunwu.com/",
       "paper_count": 5,
       "papers": [
+        {
+          "id": "2610.09254v1",
+          "title": "RoboRender: Robot-Oriented Video Generation for Visual Sim-to-Real Transfer",
+          "authors": [
+            "Huang Huang",
+            "Wensi Ai",
+            "Ziyu Chen",
+            "Youhui Wang",
+            "Zijian Du",
+            "Yang Liu",
+            "Jiaolong Yang",
+            "Li Fei-Fei",
+            "Jiajun Wu"
+          ],
+          "abstract": "Simulation enables large-scale, low-cost robot data generation, but policies trained in simulation often fail to transfer to the real world due to the sim-to-real visual discrepancies. Existing approaches often rely on intermediate representations, which can discard rich semantic information or require additional perception modules at deployment. We address this visual sim-to-real gap with RoboRender, a framework that converts simulated trajectories into photorealistic RGB videos for policy learning. RoboRender trains a robot-oriented video generation model conditioned on simulated depth videos, language instructions, and robot RGB mask videos, preserving simulator geometry, robot motion, and action labels while synthesizing realistic textures, backgrounds, and distractors. The generated RGB videos are paired with simulator-provided states and actions to train policies for zero-shot real-world deployment. On robot video test sets, our video model outperforms depth-conditioned video generation baselines in generation quality. In real-world experiments across pick-and-place, articulated-object manipulation, and mobile manipulation tasks, policies trained on RoboRender-generated data achieve a 71% average success rate, outperforming raw simulation renderings and conventional visual domain randomization by approximately 7.1x and 3.6x, respectively. We further show that policy performance improves with more generated videos per simulation trajectory, increasing opening-task success by 65 percentage points. These results demonstrate that generative video rendering mitigates the visual sim-to-real gap for zero-shot policy transfer. Project website: https://robo-render.github.io/.",
+          "url": "https://arxiv.org/abs/2610.09254v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.09254v1",
+          "published": "2026-10-07T00:39:56Z",
+          "updated": "2026-10-07T00:39:56Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2610.09228v1",
+          "title": "Co-Evolving Robot Orchestrators and Policies through Deployment",
+          "authors": [
+            "Xilun Zhang",
+            "Maggie Wang",
+            "Erik Bauer",
+            "Hong-Xing Yu",
+            "Huang Huang",
+            "Jiajun Wu",
+            "Marco Pavone"
+          ],
+          "abstract": "Vision-language-action (VLA) policies trained on large datasets are capable within their training domains, yet they still fail to generalize to the variety of situations a robot meets in real-world deployment. Agentic robot systems complement the policy with a vision-language model (VLM) orchestrator that learns when to call the policy, how to instruct it, and when to use scripted skills instead. However, because the harness is built around a frozen policy that has limited language steerability, the orchestrator can avoid the policy's failures but never overcome them. The policy becomes the bottleneck of the whole system. Fine-tuning the policy can remove this bottleneck, but updating it alone decouples it from an orchestrator tuned to its old behavior. We propose Robo-COP, in which the orchestrator and policy co-evolve during deployment. Robo-COP curates skill demonstrations from its own executions, fine-tunes the policy when this data can address recurring failures, and adopts each new policy only after it improves the skills it was trained for. Across ten simulated RoboLab tasks, Robo-COP raises mean held-out success from 64.8% to 73.8% over the same harness with a frozen policy, while fine-tuning on a fixed schedule without verification reaches only 65.8%. On three real-world tasks, Robo-COP raises held-out success from 38.3% to 50.0%. Robo-COP turns deployment into a self-improving flywheel in which robots learn by doing, with each improvement in execution producing better data for the next round of learning. Videos and code are available at https://robo-cop.pages.dev/.",
+          "url": "https://arxiv.org/abs/2610.09228v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.09228v1",
+          "published": "2026-10-06T23:44:35Z",
+          "updated": "2026-10-06T23:44:35Z",
+          "categories": [
+            "cs.RO",
+            "eess.SY"
+          ],
+          "primary_category": "cs.RO"
+        },
         {
           "id": "2610.07922v1",
           "title": "OpenWAM: An Open Framework for Composable World-Action Models",
@@ -3504,52 +3563,6 @@
           "categories": [
             "cs.RO",
             "cs.AI"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2610.03715v1",
-          "title": "4DCodeBench: Benchmarking Agents on Inverse Graphics of Dynamic Scenes",
-          "authors": [
-            "Ruihong Shen",
-            "\u017diga Kova\u010di\u010d",
-            "Peter Kulits",
-            "Xingrui Wang",
-            "Zizhang Li",
-            "Joshua B. Tenenbaum",
-            "Alan Yuille",
-            "Jieneng Chen",
-            "Jiajun Wu"
-          ],
-          "abstract": "We introduce 4DCodeBench, a benchmark for 4D inverse graphics through code generation, in which agents reconstruct dynamic scenes from video as executable graphics programs. To accomplish this, agents must translate visual observations into compact representations of scene structure and dynamics, by implementing abstractions such as physical simulations to reproduce complex behavior. To evaluate this capability, we curate a set of real-world videos and construct synthetic scenes spanning diverse physical phenomena, including deformation, fluid flow, and fracture. We perform extensive benchmarking of frontier models, finding that strong static reconstruction capabilities do not yet translate into reliable reconstruction of complex dynamics. 4DCodeBench provides a testbed for tracking progress toward agents that can interpret the dynamics of the world through code. Our benchmark is available at https://github.com/4DCodeBench/4DCodeBench",
-          "url": "https://arxiv.org/abs/2610.03715v1",
-          "pdf_url": "https://arxiv.org/pdf/2610.03715v1",
-          "published": "2026-10-02T17:58:49Z",
-          "updated": "2026-10-02T17:58:49Z",
-          "categories": [
-            "cs.CV",
-            "cs.AI",
-            "cs.GR"
-          ],
-          "primary_category": "cs.CV"
-        },
-        {
-          "id": "2610.00801v1",
-          "title": "ECoMEM: Explicit Concept Memory for Memory-Dependent Robot Control",
-          "authors": [
-            "Yize Liu",
-            "Ke Wang",
-            "Mac Schwager",
-            "Yiqing Xu",
-            "Jiajun Wu"
-          ],
-          "abstract": "A robot may lose sight of an object it must later retrieve, need to recall what a person demonstrated earlier, or track which steps of a task it has already completed. Current vision-language-action (VLA) policies often fail once the information needed for action disappears from the current observation, making memory critical for long-horizon robot behavior. Existing approaches typically provide longer histories or learn implicit memory from observation-action trajectories. But action supervision tells a policy how to act, not what to remember: it does not specify which past facts should persist or how they should change as new evidence arrives. We therefore separate maintaining an evidence-grounded account of the past from learning how to act on it. This insight motivates Explicit Concept Memory (ECoMEM), which represents task-relevant history with a reusable library of grounded concepts. An evidence-based Writer selects and updates these records, while a learned Reader turns them into memory tokens that directly condition the VLA. Across 16 RoboMME tasks, ECoMEM leads the evaluated robot policies on 15 tasks. On two new real-robot tasks, the same memory library either transfers directly or requires only one new concept, achieving 86.1% success versus 8.6% for a no-memory VLA. These results show that explicit concepts provide a reusable and extensible memory interface for robot control. Project website: https://ecomem.github.io/",
-          "url": "https://arxiv.org/abs/2610.00801v1",
-          "pdf_url": "https://arxiv.org/pdf/2610.00801v1",
-          "published": "2026-09-30T22:54:28Z",
-          "updated": "2026-09-30T22:54:28Z",
-          "categories": [
-            "cs.RO"
           ],
           "primary_category": "cs.RO"
         }
@@ -3933,6 +3946,29 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2610.09117v1",
+          "title": "Workhorse: Learning Robust Whole-Body Humanoid Loco-Manipulation from Human Data",
+          "authors": [
+            "Songbo Hu",
+            "Qiayuan Liao",
+            "Yufeng Chi",
+            "Kevin Zakka",
+            "Yakun Sophia Shao",
+            "Pieter Abbeel",
+            "Koushil Sreenath"
+          ],
+          "abstract": "Humanoid robots still struggle to plan contact-rich whole-body manipulation from egocentric RGB and proprioception. Workhorse learns such manipulation from robot-free human demonstrations. A visual planner predicts five-link targets: the poses of the torso, both wrists, and both feet. A reinforcement-learning whole-body tracker follows them on the robot. Both policies train separately on the same recorded human poses, without retargeting. We augment the training data of each policy to imitate the errors that the other makes at deployment. On a real Unitree G1, Workhorse sorts boxes with its hands and a kick, catches a thrown box, and topples and climbs a suitcase. During box sorting, we show recoveries after a person pushes the robot or takes the box away. In a simulated copy of the demonstration room, the system completes box sorting in 77% of episodes, and in 64% under 40 N.s pushes. With both policies retrained from the same demonstrations, a simulated second humanoid completes box sorting in 83% of episodes without pushes.",
+          "url": "https://arxiv.org/abs/2610.09117v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.09117v1",
+          "published": "2026-10-06T21:06:56Z",
+          "updated": "2026-10-06T21:06:56Z",
+          "categories": [
+            "cs.RO",
+            "cs.LG"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2610.08789v1",
           "title": "QF3: Fast Flow RL with Filtered Q-Gradients",
           "authors": [
@@ -4029,32 +4065,6 @@
           "categories": [
             "cs.RO",
             "cs.AI"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2609.38172v1",
-          "title": "Counterfactual Video Generation Enables Scalable Humanoid Loco-Manipulation",
-          "authors": [
-            "Zihan Wang",
-            "Zhen Wu",
-            "Pieter Abbeel",
-            "Rocky Duan",
-            "Jitendra Malik",
-            "Carmelo Sferrazza",
-            "C. Karen Liu",
-            "Guanya Shi",
-            "Angjoo Kanazawa"
-          ],
-          "abstract": "Teaching humanoids loco-manipulation skills, such as carrying diverse objects, via visual imitation is a promising path toward generalist robots. However, collecting diverse, high-quality interaction videos, such as clips that clearly show a person's full body and unoccluded interactions with objects, poses a practical barrier to scaling this approach. We propose PRISM, a real-to-sim-to-real framework that overcomes this limitation by amplifying a handful of real videos into a large, diverse training set. PRISM first generates hundreds of diverse \"counterfactual\" human-object interaction videos via video-to-video (V2V) generation from a few exemplar real videos. Our contact-anchored real-to-sim pipeline then reconstructs both human and object motions, retargeting this imperfect video data into physically plausible trajectories. The intra-class variability across these counterfactual videos lets us train a single policy that generalizes to unseen objects within each category. We demonstrate the full pipeline by deploying this policy on a real robot without any real-world fine-tuning. Using only onboard depth observations, our humanoid picks up, carries, and drops objects, including boxes, barrels, bins, and balls, across novel instances, sizes, and initial configurations.",
-          "url": "https://arxiv.org/abs/2609.38172v1",
-          "pdf_url": "https://arxiv.org/pdf/2609.38172v1",
-          "published": "2026-09-29T17:59:45Z",
-          "updated": "2026-09-29T17:59:45Z",
-          "categories": [
-            "cs.RO",
-            "cs.CV",
-            "cs.GR"
           ],
           "primary_category": "cs.RO"
         }
@@ -5503,6 +5513,29 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2610.09563v1",
+          "title": "EvoSignal: LLM-Guided Evolutionary Design of Modular Traffic Signal Control Programs",
+          "authors": [
+            "Leizhen Wang",
+            "Peibo Duan",
+            "Zhenlin Qin",
+            "Yancheng Ling",
+            "Jian Xu",
+            "Yue Wang",
+            "Hao Wang",
+            "Zhenliang Ma"
+          ],
+          "abstract": "Effective traffic signal control (TSC) requires policies that respond to changing traffic demand and network conditions while meeting different control objectives. However, adapting existing strategies often involves repeated manual design and adjustment, making it difficult to systematically explore better control rules for a target network. Large language models (LLMs) can automate this process, but directly using them to select signal phases leaves decision rules embedded in black-box models and incurs recurring inference costs and latency. This paper formulates TSC as a modular program design problem and proposes EvoSignal, an LLM-guided evolutionary framework using traffic knowledge and performance feedback. The modular representation separates traffic feature extraction, local phase prioritization, and optional network-based priority adjustment. Starting from several established strategies, EvoSignal improves programs through feedback on congestion and signal operation, retaining strategies with different performance trade-offs. The resulting programs operate without online LLM inference. Simulation experiments across five scenarios on two real-world road networks show that the selected default EvoSignal program reduces waiting time by 16.8--49.2\\% relative to the lowest waiting time achieved by the 20 conventional, reinforcement learning-based, and LLM-based baselines in each scenario. A program prioritizing travel time and queue length outperforms all 20 baselines on all three metrics in the search scenario and remains among the top three on each metric when transferred unchanged to the other four scenarios. These findings support automated design of inspectable control programs that transfer across the evaluated road networks and traffic demands.Code is available at https://github.com/georgewanglz2019/EvoSignal.",
+          "url": "https://arxiv.org/abs/2610.09563v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.09563v1",
+          "published": "2026-10-07T07:04:22Z",
+          "updated": "2026-10-07T07:04:22Z",
+          "categories": [
+            "cs.LG"
+          ],
+          "primary_category": "cs.LG"
+        },
+        {
           "id": "2610.06958v1",
           "title": "Learning Modular Policy for Multi-Floor Object Navigation:A Factorized Framework for Diagnostic Study",
           "authors": [
@@ -5589,30 +5622,6 @@
             "cs.RO"
           ],
           "primary_category": "cs.CV"
-        },
-        {
-          "id": "2609.39866v1",
-          "title": "Preemptive LLM Unlearning against Forbidden Capability Acquisition via Gradient Sealing",
-          "authors": [
-            "Kemou Li",
-            "Qizhou Wang",
-            "Yue Wang",
-            "Fengpeng Li",
-            "Zhuan Shi",
-            "Negar Rostamzadeh",
-            "Golnoosh Farnadi",
-            "Masashi Sugiyama",
-            "Jiantao Zhou"
-          ],
-          "abstract": "Open-weight LLMs are released not only as fixed products but also as substrates for downstream fine-tuning. This openness, however, creates legal and ethical risks because users may misuse fine-tuning to instill illicit knowledge or enable hostile operations. Model providers therefore need apre-release defense against such acquisition, motivating the problem of preemptive unlearning. Unlike retrospective unlearning, which removes capabilities already present in a fixed model, preemptive unlearning seeks to prevent their acquisition under unseen attack data and future fine-tuning procedures. Despite its practical importance, this setting remains largely unexplored, presents distinct challenges, and is therefore the central focus of our work. We first verify that existing retrospective methods provide insufficient pre-release protection. Even when forbidden capabilities are suppressed in current outputs, forbidden-domain data can still induce gradients through internal pathways, enabling later acquisition. Motivated by this finding, we propose a gradient-sealing principle that blocks these pathways by pushing relevant pre-activations into the negative region, where ReLU-family activations exhibit zero or near-zero derivatives. Experiments across multiple LLM families demonstrate our stronger resistance to downstream acquisition than retrospective baselines, validating gradient sealing as an effective mechanism for pre-release protection.",
-          "url": "https://arxiv.org/abs/2609.39866v1",
-          "pdf_url": "https://arxiv.org/pdf/2609.39866v1",
-          "published": "2026-09-30T14:48:36Z",
-          "updated": "2026-09-30T14:48:36Z",
-          "categories": [
-            "cs.LG"
-          ],
-          "primary_category": "cs.LG"
         }
       ]
     },
