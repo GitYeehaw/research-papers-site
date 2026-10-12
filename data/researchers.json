@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-10-11T14:56:27.747697+00:00",
+  "scraped_at": "2026-10-12T17:47:38.317025+00:00",
   "researcher_count": 54,
   "researchers": [
     {
@@ -1495,6 +1495,27 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2610.12575v1",
+          "title": "Mind the Temporal Gap: Evaluating Video Models for Temporal Understanding in Driving",
+          "authors": [
+            "Shiva Sreeram",
+            "Erfan Aasi",
+            "Tsun-Hsuan Wang",
+            "Alaa Maalouf",
+            "Daniela Rus"
+          ],
+          "abstract": "Modern video-language models are increasingly treated as general-purpose video reasoners, yet it remains unclear whether they robustly capture temporal dynamics in safety-critical settings such as driving. We study this question through controlled ego-motion tasks that require identifying actions from driving videos. Across video-language models, we find that standard prompting, visual prompting, few-shot prompting, and chain-of-thought prompting remain unreliable and highly task- and model-dependent, with persistent class biases, although newer models show substantial task-specific few-shot gains. In contrast, lightweight LoRA finetuning and simple probes trained on intermediate visual features recover strong motion-discriminative performance, indicating that motion-relevant cues are often present inside the models but are not reliably used by the final video-to-language pathway. These results suggest that, in driving, current video-language models remain unreliable temporal reasoners and often behave more like frame-level, bias-driven recognizers than dependable temporal world models.",
+          "url": "https://arxiv.org/abs/2610.12575v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.12575v1",
+          "published": "2026-10-08T18:02:22Z",
+          "updated": "2026-10-08T18:02:22Z",
+          "categories": [
+            "cs.CV",
+            "cs.RO"
+          ],
+          "primary_category": "cs.CV"
+        },
+        {
           "id": "2610.07382v1",
           "title": "Toward Trustworthy Physical AI for Human Interaction",
           "authors": [
@@ -1579,27 +1600,6 @@
             "cs.AI"
           ],
           "primary_category": "cs.LG"
-        },
-        {
-          "id": "2609.24062v1",
-          "title": "Safety Control of a Hyper-redundant Robot via Adaptive Weighted Control Barrier Functions",
-          "authors": [
-            "Zijian Cai",
-            "Kiwan Wong",
-            "Wenci Xin",
-            "Wei Xiao",
-            "Daniela Rus",
-            "Cecilia Laschi"
-          ],
-          "abstract": "Hyper-redundant robots are well suited for confined-space manipulation due to their high dexterity, but safe operation in cluttered environments remains challenging. In addition, their slender structures often lead to uneven load distributions and nonuniform tracking errors along the body. To address these issues, this work proposes a weighted control barrier functions (W-CBFs) framework that enforces safety constraints while reducing tracking errors caused by uneven loading. The proposed controller was first evaluated on a circular path-following task under different obstacle configurations. With fixed weights, compared to the non-weighted method, the maximum reduction in root-mean-square (RMS) tracking error was 59.6\\% in simulation and 87.7\\% in physical experiments. An adaptive weighting strategy was then investigated based on the discrepancy between simulated and experimental performance under different mapping functions. The RMS errors were further reduced by 21.9\\% and 8.5\\%, respectively, although the error increases when obstacles were located close to the robot body. Finally, the robot was evaluated in a cleaning task requiring coverage of a rectangular area and compared with manual teleoperation. Although the controller was not explicitly optimized for area coverage, the autonomous strategy achieved comparable or better coverage performance while avoiding collisions with the surrounding frame, whereas collisions occurred during manual operation.",
-          "url": "https://arxiv.org/abs/2609.24062v1",
-          "pdf_url": "https://arxiv.org/pdf/2609.24062v1",
-          "published": "2026-09-21T03:38:43Z",
-          "updated": "2026-09-21T03:38:43Z",
-          "categories": [
-            "cs.RO"
-          ],
-          "primary_category": "cs.RO"
         }
       ]
     },
@@ -3710,6 +3710,49 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2610.13929v1",
+          "title": "Chronos Policy: Learning Robot Policies on Physical Time",
+          "authors": [
+            "Changhao Wang",
+            "Jaden Clark",
+            "Shuran Song"
+          ],
+          "abstract": "Robot policies often convert sensing and control into fixed-rate observation-action sequences, leaving physical time implicit in sequence position. This assumption breaks when observation rates or delays vary, or when inference latency changes. We introduce Chronos Policy, which makes physical time explicit by conditioning on observation capture times and desired action execution times. We study two ways to incorporate time into a diffusion transformer: adding timestamp embeddings to token features, or encoding physical time in positional encoding through time-aware rotary positional encodings (time-aware RoPE). We find that time-aware RoPE is more robust, allowing attention to depend directly on physical time while keeping token content unchanged. During training, we temporally randomize which observations are sampled and when the action chunk begins, exposing the policy to a wider range of sensing and execution schedules that may occur during deployments. This also enables learning from asynchronous, multi-rate data without forcing all measurements onto a fixed temporal grid. Across simulation and real-world experiments, Chronos Policy improves performance on dynamic tasks, where observation-to-action timing is critical, and on multisensory tasks, where the relative timing between observations matters. On standard quasi-static tasks, it preserves nominal performance while improving robustness to changes in sensing and inference timing.",
+          "url": "https://arxiv.org/abs/2610.13929v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.13929v1",
+          "published": "2026-10-09T17:55:20Z",
+          "updated": "2026-10-09T17:55:20Z",
+          "categories": [
+            "cs.RO",
+            "cs.CV"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2610.12558v1",
+          "title": "PanTact: Teaching Whole-Body Dexterity with a Wearable Contact Interface",
+          "authors": [
+            "Xiaomeng Xu",
+            "Han Zhang",
+            "Zhian Ruan",
+            "Xiaofeng Guo",
+            "Jinkun Cao",
+            "Ruihan Yang",
+            "Carmelo Sferrazza",
+            "Shuran Song",
+            "Guanya Shi"
+          ],
+          "abstract": "Humanoid robots have many degrees of freedom and contact surfaces, yet most loco-manipulation research restricts manipulation to the hands and avoids other body contacts with the environment. To extend manipulation beyond the hands, we present PanTact, a system that learns humanoid whole-body dexterity, the capability to manipulate with any suitable body surface, directly from robot-free human demonstrations. Our key idea is to use contact as manipulation-centric information that transfers across embodiments. Contact locations and timing specify the interactions needed to accomplish a task, while the robot chooses how to coordinate its body to realize them within its own physical constraints. Specifically, PanTact captures, learns, and executes whole-body contact via: 1) a wearable, robot-free data collection interface that augments egocentric vision and bimanual UMI grippers with whole-body modular contact patches to record body contact locations and states; 2) a visuomotor policy that mitigates the egocentric observation gap and predicts whole-body contact goals; and 3) contact-aware whole-body control formulations that realize active contact goals using suitable robot surfaces. We deploy PanTact on a Unitree G1 humanoid without additional body contact sensors, demonstrating whole-body dexterity involving body support, pushing, sweeping, and load-sharing. Website: https://pantact.github.io",
+          "url": "https://arxiv.org/abs/2610.12558v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.12558v1",
+          "published": "2026-10-08T18:00:02Z",
+          "updated": "2026-10-08T18:00:02Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2610.07681v1",
           "title": "EigenDEXplore: Structured Exploration for Dexterous Manipulation with Human Priors",
           "authors": [
@@ -3773,46 +3816,6 @@
           "categories": [
             "cs.RO",
             "cs.LG"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2610.02339v1",
-          "title": "NEEDLEWORK: Offline Rewriting of Robot Data with Verified Local Stitches",
-          "authors": [
-            "Juntao Ren",
-            "Yifan Hou",
-            "Shuran Song"
-          ],
-          "abstract": "Robot demonstrations may contain useful behavior even when individual episodes are inefficient or unsuccessful. Trajectory stitching offers a way to compose these behaviors into improved training data, but identifying useful connections and verifying their feasibility is difficult in high-dimensional robot data, where many prior methods rely on low-dimensional state representations. We introduce NEEDLE, an offline dataset-augmentation algorithm that addresses these challenges by adding short, verified action bridges between recorded observations in high-dimensional robot demonstrations. First, NEEDLE identifies and creates connections that bypass suboptimal detours, broaden action coverage, and augment the original dataset with failed trajectories, using only RGB images, proprioception, and episode-level outcomes, without new environment interaction or privileged object state. Next, we present a sampling technique that incorporates accepted bridges into policy training without synthesizing intermediate images or discarding the original demonstrations, allowing policies to learn alternative actions while retaining the original dataset's coverage. On real-robot tasks, NEEDLE improves success rate over the strongest baseline on each task by an average of 21 percentage points. Videos and supplementary materials are on https://needle-work.github.io/.",
-          "url": "https://arxiv.org/abs/2610.02339v1",
-          "pdf_url": "https://arxiv.org/pdf/2610.02339v1",
-          "published": "2026-10-01T18:11:32Z",
-          "updated": "2026-10-01T18:11:32Z",
-          "categories": [
-            "cs.RO",
-            "cs.LG"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2608.26545v1",
-          "title": "Memory Anchors for Continual Robot Learning",
-          "authors": [
-            "Maximilian Du",
-            "Zhanyi Sun",
-            "Chen Xu",
-            "Paarth Shah",
-            "Masha Itkina",
-            "Shuran Song"
-          ],
-          "abstract": "Robot policies deployed in the wild should have the capability to continually learn new tasks without forgetting existing behaviors. A common approach to combat such catastrophic forgetting is to train on new task data with a replay buffer of previously learned task data. Although this buffer is commonly sampled randomly from all prior experiences, we show that a small set of these experiences contributes greatly in anchoring past performance. We call these experiences Memory Anchors. We identify Memory Anchors in regions where representations of new-task observations collapse onto those of old-task observations even though the tasks require conflicting actions, like when a familiar object must be manipulated in a new way. Rehearsing old data in this region plays a key role in preventing destructive overwriting of past task knowledge, serving as this critical Memory Anchor role. Excluding only 10% Memory Anchors before sampling the buffer leads to more than a 4.5x increase in catastrophic forgetting on the LIBERO benchmark suites. Conversely, enriching the replay buffer with Memory Anchors can decrease high-conflict task forgetting by 63% and enables successful continual learning of two task sequences on a real robot. Videos and additional visualizations can be found at https://robot-adaptation.github.io/MemoryAnchors",
-          "url": "https://arxiv.org/abs/2608.26545v1",
-          "pdf_url": "https://arxiv.org/pdf/2608.26545v1",
-          "published": "2026-08-27T02:36:21Z",
-          "updated": "2026-08-27T02:36:21Z",
-          "categories": [
-            "cs.RO"
           ],
           "primary_category": "cs.RO"
         }
@@ -3959,7 +3962,7 @@
       "paper_count": 5,
       "papers": [
         {
-          "id": "2610.09117v1",
+          "id": "2610.09117v2",
           "title": "Workhorse: Learning Robust Whole-Body Humanoid Loco-Manipulation from Human Data",
           "authors": [
             "Songbo Hu",
@@ -3970,11 +3973,11 @@
             "Pieter Abbeel",
             "Koushil Sreenath"
           ],
-          "abstract": "Humanoid robots still struggle to plan contact-rich whole-body manipulation from egocentric RGB and proprioception. Workhorse learns such manipulation from robot-free human demonstrations. A visual planner predicts five-link targets: the poses of the torso, both wrists, and both feet. A reinforcement-learning whole-body tracker follows them on the robot. Both policies train separately on the same recorded human poses, without retargeting. We augment the training data of each policy to imitate the errors that the other makes at deployment. On a real Unitree G1, Workhorse sorts boxes with its hands and a kick, catches a thrown box, and topples and climbs a suitcase. During box sorting, we show recoveries after a person pushes the robot or takes the box away. In a simulated copy of the demonstration room, the system completes box sorting in 77% of episodes, and in 64% under 40 N.s pushes. With both policies retrained from the same demonstrations, a simulated second humanoid completes box sorting in 83% of episodes without pushes.",
-          "url": "https://arxiv.org/abs/2610.09117v1",
-          "pdf_url": "https://arxiv.org/pdf/2610.09117v1",
+          "abstract": "Humanoid robots still struggle to plan contact-rich whole-body manipulation from egocentric RGB and proprioception. Workhorse learns such manipulation from robot-free human demonstrations. A visual planner predicts five-link targets: the poses of the torso, both wrists, and both feet. A reinforcement-learning whole-body tracker follows them on the robot. Both policies train separately on the same recorded human poses, without retargeting. We augment the training data of each policy to imitate the errors that the other makes at deployment. On a real Unitree G1, Workhorse transport boxes with its hands and a kick, catches a thrown box, and topples and climbs a suitcase. During box transport, we show recoveries after a person pushes the robot or takes the box away. In a simulated copy of the demonstration room, the system completes box transport in 77% of episodes, and in 64% under 40 N.s pushes. With both policies retrained from the same demonstrations, a simulated second humanoid completes box transport in 83% of episodes without pushes.",
+          "url": "https://arxiv.org/abs/2610.09117v2",
+          "pdf_url": "https://arxiv.org/pdf/2610.09117v2",
           "published": "2026-10-06T21:06:56Z",
-          "updated": "2026-10-06T21:06:56Z",
+          "updated": "2026-10-08T18:00:54Z",
           "categories": [
             "cs.RO",
             "cs.LG"
@@ -4008,7 +4011,7 @@
           "primary_category": "cs.RO"
         },
         {
-          "id": "2610.03861v1",
+          "id": "2610.03861v2",
           "title": "GOTT: Object-centric Dexterous Manipulation with a Reusable Cross-Embodiment Primitive",
           "authors": [
             "Yulin Liu",
@@ -4020,10 +4023,10 @@
             "Haozhi Qi"
           ],
           "abstract": "Foundation models and large-scale human data provide rich sources of manipulation intent, but translating this intent into multi-fingered robot behavior remains difficult. Dexterous hands still lack a reusable low-level primitive that reliably establishes contact across tasks and embodiments. We propose GOTT, a reach-acquire-move framework built around a single cross-embodiment contact-acquisition primitive. Given a robot-agnostic object trajectory and a reach specification, GOTT first brings the hand near a task-relevant contact region. The shared closed-loop primitive then establishes stable contact from this approximate initialization, and a pose-conditioned controller tracks the desired object motion. Reach specifications may come from future-aware planning, external models, or human demonstrations, while the primitive and tracking backend remain unchanged. Simulation and real-world experiments show that GOTT is able to establish robust contact across diverse objects, arm-hand platforms, and seen and unseen hand morphologies. It also consistently improves end-to-end task success over open-loop grasp execution.",
-          "url": "https://arxiv.org/abs/2610.03861v1",
-          "pdf_url": "https://arxiv.org/pdf/2610.03861v1",
+          "url": "https://arxiv.org/abs/2610.03861v2",
+          "pdf_url": "https://arxiv.org/pdf/2610.03861v2",
           "published": "2026-10-02T17:58:42Z",
-          "updated": "2026-10-02T17:58:42Z",
+          "updated": "2026-10-08T23:54:24Z",
           "categories": [
             "cs.RO",
             "cs.AI",
@@ -4091,6 +4094,28 @@
       "website": "https://people.eecs.berkeley.edu/~svlevine/",
       "paper_count": 5,
       "papers": [
+        {
+          "id": "2610.13002v1",
+          "title": "Scaling Empowered Agents",
+          "authors": [
+            "Catherine Ji",
+            "Vivek Myers",
+            "Joshua Lin",
+            "Alexandra Wingate",
+            "Sergey Levine",
+            "Benjamin Eysenbach"
+          ],
+          "abstract": "Empowerment measures the capacity of an agent to actively control its environment. In this work, we explain the connection between skill learning and empowerment. While skill learning is not empowerment, we introduce a simple scalable recipe for empowerment maximization: empowerment corresponds to the number of executable skills from a state, so maximizing empowerment corresponds to reaching states that are good starting points for many skills. Our recipe applies to arbitrary underlying skill learning methods. Whereas most prior work on empowerment looks at tabular settings, this recipe enables us to study empowerment at a scale where we can realize theoretically-predicted but empirically-elusive properties of empowerment (e.g., gathering resources, environment modification, survival). Experiments show that empowerment maximization unlocks interesting emergent properties, such as building a house in Crafter. Website and code at \\href{https://empowerment-geometry.github.io/scaling-empowerment/}{this https url}.",
+          "url": "https://arxiv.org/abs/2610.13002v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.13002v1",
+          "published": "2026-10-09T05:04:30Z",
+          "updated": "2026-10-09T05:04:30Z",
+          "categories": [
+            "cs.AI",
+            "cs.LG"
+          ],
+          "primary_category": "cs.AI"
+        },
         {
           "id": "2610.07796v2",
           "title": "The Geometry of Empowerment",
@@ -4184,33 +4209,6 @@
             "cs.LG"
           ],
           "primary_category": "cs.RO"
-        },
-        {
-          "id": "2608.12253v2",
-          "title": "One Frozen Simulator Is Not Enough: Simulator Collapse in Multi-Agent RL",
-          "authors": [
-            "Simon Yu",
-            "Nicholas Tomlin",
-            "Marwa Abdulhai",
-            "Ximing Lu",
-            "Derek Chong",
-            "Abe Hou",
-            "Dilara Soylu",
-            "Sergey Levine",
-            "Christopher D. Manning",
-            "Weiyan Shi"
-          ],
-          "abstract": "Multi-agent reinforcement learning for human-AI interaction typically relies on a single large language model to simulate user behavior. We show that this approach systematically fails to generalize, and trace the failure to simulator collapse: because the simulator LLM is mode-collapsed, an LLM policy trained against it overfits to narrow strategies that exploit the simulator's dominant mode, and such a policy transfers poorly to unseen simulators and real users. We formalize this collapse theoretically and propose two complementary solutions, one at inference time and one at training time. The inference-time solution, Verbalized Sampling, broadens the simulator's behavior by sampling from a verbalized response distribution, reducing mode collapse. The training-time solution, Co-Training, jointly optimizes the policy against a population of trainable simulators, preventing it from overfitting to any single simulator's mode. We validate both solutions on three multi-turn benchmarks: Persuasion for Good, $\u03c4^2$-bench, and CooperBench. Verbalized Sampling improves held-out success by up to 9% over single-simulator RL, and Co-Training pushes gains further to 14%; the human study shows similar gain on real users. Both solutions preserve the policy diversity that collapses under single-simulator RL. To support further work in this direction, we release SCOPE, an open-source framework for Population Co-Training multi-agent RL. More broadly, our results suggest that the diversity of the training environment, not only the policy, is critical to the generalization of multi-turn RL to real-world deployment.",
-          "url": "https://arxiv.org/abs/2608.12253v2",
-          "pdf_url": "https://arxiv.org/pdf/2608.12253v2",
-          "published": "2026-08-12T16:55:50Z",
-          "updated": "2026-08-17T17:48:56Z",
-          "categories": [
-            "cs.CL",
-            "cs.AI",
-            "cs.LG"
-          ],
-          "primary_category": "cs.CL"
         }
       ]
     },
@@ -4554,6 +4552,27 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2610.12734v1",
+          "title": "StereoEngine: Scaling Stereo Bimanual Robot Data without Stereo Cameras",
+          "authors": [
+            "Jason Chen",
+            "I-Chun Arthur Liu",
+            "Gaurav Sukhatme",
+            "Daniel Seita"
+          ],
+          "abstract": "Stereo vision is increasingly used for robotic manipulation, with a growing body of work incorporating it into Vision-Language-Action (VLA) models. However, the scarcity of large-scale, real-world stereo datasets remains a fundamental bottleneck for scaling such policies. Recent generative monocular-to-stereo methods target settings such as VR content and autonomous driving. No prior work produces realistic synthetic stereo data for robotic manipulation, where stereo supervision has come predominantly from simulation. We propose StereoEngine, which introduces two complementary methods to synthesize stereo data for robotic manipulation. In the first, we warp a monocular (left) video into the right view using estimated depth and inpaint the disoccluded regions with a video diffusion model, lifting monocular demonstrations into stereo pairs without training on real stereo. In the second, we render a stereo pair in simulation and jointly generate both photorealistic views, producing consistent left-right data without any real video as input. StereoEngine outperforms existing baselines in generated stereo quality, and using its synthetic data for policy mid-training or task-specific fine-tuning substantially improves downstream bimanual manipulation. Project website: https://stereoengine.github.io",
+          "url": "https://arxiv.org/abs/2610.12734v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.12734v1",
+          "published": "2026-10-08T21:28:58Z",
+          "updated": "2026-10-08T21:28:58Z",
+          "categories": [
+            "cs.RO",
+            "cs.CV",
+            "cs.LG"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2610.04805v1",
           "title": "ExStereo: Lifting 2D Vision-Language-Action Models to 3D with Explicit Stereo Representations",
           "authors": [
@@ -4634,27 +4653,6 @@
           "updated": "2026-07-22T19:32:42Z",
           "categories": [
             "cs.RO"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2607.16921v1",
-          "title": "PREFAIL: Identifying Precursors to Failures in Robotic Lift-and-Place Tasks to Improve Task Execution Performance",
-          "authors": [
-            "Zeyu Shangguan",
-            "Rajas Chitale",
-            "Rutvik Patel",
-            "Satyandra K. Gupta",
-            "Daniel Seita"
-          ],
-          "abstract": "Non-prehensile manipulation enables flexible material handling with part carriers, but friction-based support makes high-speed motions failure-prone, while slower operation increases cycle time. Proactive failure prediction is therefore essential for efficient and reliable performance, yet existing approaches remain limited by key constraints, including sensitivity to dynamic actions and high dependence on known policy structures. Furthermore, existing methods and datasets lack a precise characterization of the latest intervention time, leaving it unclear whether a detected failure can still be prevented through timely intervention. In this paper, we investigate lift-and-place tasks for non-prehensile material handling manipulation and propose a more effective approach to predicting precursors to failures (PREFAIL) by analyzing the relative motion of target objects with respect to the carrier. We further introduce a dataset that precisely identifies the latest intervention time for risky manipulations, enabling rigorous evaluation of whether a failure prediction is actionable. We validate our approach on both simulation and real-world datasets. Our experimental results demonstrate that PREFAIL substantially improves both the accuracy and timeliness of responses to failure precursors.",
-          "url": "https://arxiv.org/abs/2607.16921v1",
-          "pdf_url": "https://arxiv.org/pdf/2607.16921v1",
-          "published": "2026-07-18T18:25:58Z",
-          "updated": "2026-07-18T18:25:58Z",
-          "categories": [
-            "cs.RO",
-            "cs.AI"
           ],
           "primary_category": "cs.RO"
         }
@@ -4788,6 +4786,48 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2610.13049v1",
+          "title": "Failure-Resilient Multi-Robot Coordination with $k$-Connectivity Constrained Submodular Maximization",
+          "authors": [
+            "Yoonjae Hwang",
+            "Hojune Kim",
+            "Ellen Novoseller",
+            "Guangyao Shi",
+            "Gaurav S. Sukhatme"
+          ],
+          "abstract": "Multi-robot coordination is essential in applications such as coverage, target tracking, and information gathering, where robots must jointly select actions to maximize team performance. Submodular maximization provides an effective framework for such coordination, and resilient variants further account for robot failures or adversarial removals. However, existing methods typically overlook the impact of robot loss on the communication network, which may disconnect the surviving team and prevent continued coordination. To address this issue, we introduce Resilient $k$-Connected Submodular Maximization, which jointly considers task performance, resilience, and communication connectivity. The resulting feasible family is not a matroid, preventing the direct application of classical curvature-greedy guarantees. We overcome this challenge through a Menger-based connectivity reduction, a connectivity-aware greedy algorithm with a feasibility-preserving fallback, and a new curvature-based analysis that captures the cost of enforcing connectivity through a single factor $\u03c1$. Our method achieves a worst-case post-failure objective within a factor of $[\\max(1-\u03bd_f(\\mathcal{I}),h(N,\u03b2))]^2 \u03c1\\frac{1}{\u03ba_f}(1-e^{-\u03ba_f})$ of the optimal connectivity-respecting resilient assignment, while recovering the classical unconstrained guarantee in the appropriate limits. Experiments on multi-robot target tracking validate the proposed method and characterize the practical impact of connectivity constraints.",
+          "url": "https://arxiv.org/abs/2610.13049v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.13049v1",
+          "published": "2026-10-09T06:04:45Z",
+          "updated": "2026-10-09T06:04:45Z",
+          "categories": [
+            "cs.RO",
+            "cs.MA"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2610.12734v1",
+          "title": "StereoEngine: Scaling Stereo Bimanual Robot Data without Stereo Cameras",
+          "authors": [
+            "Jason Chen",
+            "I-Chun Arthur Liu",
+            "Gaurav Sukhatme",
+            "Daniel Seita"
+          ],
+          "abstract": "Stereo vision is increasingly used for robotic manipulation, with a growing body of work incorporating it into Vision-Language-Action (VLA) models. However, the scarcity of large-scale, real-world stereo datasets remains a fundamental bottleneck for scaling such policies. Recent generative monocular-to-stereo methods target settings such as VR content and autonomous driving. No prior work produces realistic synthetic stereo data for robotic manipulation, where stereo supervision has come predominantly from simulation. We propose StereoEngine, which introduces two complementary methods to synthesize stereo data for robotic manipulation. In the first, we warp a monocular (left) video into the right view using estimated depth and inpaint the disoccluded regions with a video diffusion model, lifting monocular demonstrations into stereo pairs without training on real stereo. In the second, we render a stereo pair in simulation and jointly generate both photorealistic views, producing consistent left-right data without any real video as input. StereoEngine outperforms existing baselines in generated stereo quality, and using its synthetic data for policy mid-training or task-specific fine-tuning substantially improves downstream bimanual manipulation. Project website: https://stereoengine.github.io",
+          "url": "https://arxiv.org/abs/2610.12734v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.12734v1",
+          "published": "2026-10-08T21:28:58Z",
+          "updated": "2026-10-08T21:28:58Z",
+          "categories": [
+            "cs.RO",
+            "cs.CV",
+            "cs.LG"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2610.04805v1",
           "title": "ExStereo: Lifting 2D Vision-Language-Action Models to 3D with Explicit Stereo Representations",
           "authors": [
@@ -4843,54 +4883,6 @@
           "pdf_url": "https://arxiv.org/pdf/2609.30951v1",
           "published": "2026-09-25T08:02:29Z",
           "updated": "2026-09-25T08:02:29Z",
-          "categories": [
-            "cs.RO"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2609.30247v2",
-          "title": "Rolling-WAM: World Action Models with Rolling Imagination",
-          "authors": [
-            "Yinghua Zhou",
-            "Junjie Ye",
-            "Yiqi Zhao",
-            "Hao Dong",
-            "Celina Shiyu Wang",
-            "Ruohai Ge",
-            "Tingyi Yang",
-            "Basile Van Hoorick",
-            "Gaurav Sukhatme",
-            "Vitor Guizilini",
-            "Yue Wang"
-          ],
-          "abstract": "World Action Models (WAMs) couple action generation with future visual prediction for robotic manipulation. However, completing the joint video-action denoising process at each replanning cycle incurs substantial latency, delaying action updates and limiting closed-loop responsiveness. We present Rolling-WAM, a formulation that distributes joint denoising across successive replanning cycles. Our method maintains a sliding window of video-action chunks at staggered noise levels. At each step, a rolling noise schedule fully denoises the imminent action chunk for execution, while partially refining farther-future chunks. As the window advances with new camera observations, the retained future chunks continue their denoising process. This distributes the computational cost over time while carrying an evolving visual-action context across chunk boundaries. Evaluations on LIBERO, RoboTwin, and a real-world Unitree G1 humanoid show that Rolling-WAM achieves competitive manipulation performance. By removing the need to denoise the entire prediction horizon from scratch, it delivers a 4.5x steady-state replanning speedup over standard joint WAMs.",
-          "url": "https://arxiv.org/abs/2609.30247v2",
-          "pdf_url": "https://arxiv.org/pdf/2609.30247v2",
-          "published": "2026-09-24T17:58:03Z",
-          "updated": "2026-10-05T17:15:08Z",
-          "categories": [
-            "cs.RO",
-            "cs.AI",
-            "cs.CV"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2609.24952v1",
-          "title": "Learning to Drive on Mars: Visual Multimodal Traversability Estimation for Off-World Navigation",
-          "authors": [
-            "Darren Chiu",
-            "Cole Wilson",
-            "Andrei Tumbar",
-            "Gaurav S. Sukhatme",
-            "Steven Myint"
-          ],
-          "abstract": "Autonomous navigation on Mars requires vehicles to distinguish between traversable terrains across diverse and visually challenging environments. However, progress in learning-based navigation for off-world environments has been limited by the lack of large-scale datasets. Since landing in Jezero Crater, the Mars 2020 Perseverance rover has traversed terrain ranging from sandy dunes, rocky patches, and flat bedrocks. As a result, this paper presents a dataset spanning 500 sols and 45km of trajectories driven by both human operators and the onboard planner, ENav. Our dataset contains grayscale stereo image pairs, poses, accelerometer readings, rocker-bogie angles, and estimates of tilt and wheel slip. Building on this dataset, we introduce an uncertainty-aware traversability-estimation framework that learns terrain representations from multimodal driving experience. We compare our proposed method against existing approaches on the Mars 2020 dataset and show that our method achieves an AUROC of 0.874 and an F1 score of 0.758, outperforming the strongest baseline by 0.058 and 0.156, respectively, while also achieving the highest average precision and recall. Finally, we show that the visual representations can be integrated into path planners, such as ENav, on a physical rover test bed. Videos, code, and the M2020 dataset will be available at https://darren-chiu.github.io/learning-to-drive-on-mars.",
-          "url": "https://arxiv.org/abs/2609.24952v1",
-          "pdf_url": "https://arxiv.org/pdf/2609.24952v1",
-          "published": "2026-09-21T17:45:18Z",
-          "updated": "2026-09-21T17:45:18Z",
           "categories": [
             "cs.RO"
           ],
@@ -5526,6 +5518,30 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2610.12772v1",
+          "title": "Reflex: Visually Grounded Reactive Humanoid Control",
+          "authors": [
+            "Taoyang Jia",
+            "Weikai Huang",
+            "Linxin Song",
+            "Jared Darlington",
+            "Jieyu Zhao",
+            "Yue Wang",
+            "Jiafei Duan",
+            "Zhongzheng Ren",
+            "Ranjay Krishna"
+          ],
+          "abstract": "Humans effortlessly react to the world; they adeptly return a tennis shot, catch a falling cup, step aside from a passing cart, or pass a box tossed during truck unloading. These everyday actions require anticipating a moving target and reflexively responding with the whole body within about a second. Such visual reactive whole-body control remains challenging for humanoids, which must (1) coordinate whole-body control, (2) react to object dynamics in real time, and (3) ground perception in egocentric vision. We study catching thrown boxes as a representative task that demands all three capabilities; existing systems cover only part of it, relying on end-effectors, motion capture, or marked objects. We present Reflex, a three-stage framework that learns these capabilities stage by stage while connecting them through a compact representation of object dynamics. First, a state-based policy learns whole-body catching with reinforcement learning. Second, the policy learns to infer the dynamics of a moving box from delayed and incomplete observations. Third, an egocentric RGB-D encoder learns to recover this dynamics representation directly from visual observations while keeping the whole-body controller fixed. This decomposition provides each capability with a direct training signal and makes visual learning substantially more scalable. In simulation, Reflex achieves 85.7% catch success from egocentric RGB-D, compared with 87.9% when given privileged box observations. Temporal visual history is critical: removing it reduces success by 35.6 and 39.8 points on centered and laterally offset throws. On a real Unitree G1, Reflex catches human-thrown boxes with 65% and 40% success at 2.5 and 5 m, reaching 76% and 59% of human catchers' success at the same distances.",
+          "url": "https://arxiv.org/abs/2610.12772v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.12772v1",
+          "published": "2026-10-08T22:24:03Z",
+          "updated": "2026-10-08T22:24:03Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2610.11854v1",
           "title": "GRPODropout: Less is More for Online Reinforcement Learning Rollouts",
           "authors": [
@@ -5631,29 +5647,6 @@
             "cs.AI"
           ],
           "primary_category": "cs.AI"
-        },
-        {
-          "id": "2610.11373v1",
-          "title": "From a Prompt to Repertoires: Evolving Functional REpertoires Enable LLM Continual Learning",
-          "authors": [
-            "Fengyuan Liu",
-            "Yue Wang",
-            "Hangxi Guo",
-            "Fengyuan Liu",
-            "Chenxu Wu",
-            "Yanguang Liu",
-            "Mengnan Du"
-          ],
-          "abstract": "Continual learning remains challenging for large language models, which must enable models to acquire new skills and knowledge without degrading existing capabilities. Existing approaches typically address this challenge by carefully designing how model parameters are updated. In contrast, prompt optimization avoids costly parameter updates while achieving competitive or even superior performance to reinforcement learning methods such as GRPO on individual knowledge-intensive and reasoning tasks. This raises a natural question: \\textit{Can prompt optimization, as an efficient adaptation approach, be directly applied to continual learning?} Our analysis shows that, under sequential task adaptation, it suffers from catastrophic forgetting, while optimized prompts accumulate rules that overfit to local task distributions. To address these limitations, we propose \\emph{Evolving Functional REpertoires} (EFRE), which replaces a single prompt with a repertoire of functions that evolves as new tasks arrive: compatible updates refine existing functions, while conflicting updates trigger the emergence of new ones. On a three-task continual-learning stream, EFRE achieves a final average performance 7.50 percentage points higher than GRPO. Moreover, after adaptation to the Bio task, its performance on FinQA decreases by only 1.56 percentage points, compared with 25.10 percentage points for the base prompt optimization method. We further instantiate EFRE in a minimal agent system and observe consistent improvements across different backbone models. Overall, these results demonstrate EFRE's strong performance in continual learning for large language models and highlight its substantial potential for continual learning in advanced agent systems.",
-          "url": "https://arxiv.org/abs/2610.11373v1",
-          "pdf_url": "https://arxiv.org/pdf/2610.11373v1",
-          "published": "2026-10-08T07:06:52Z",
-          "updated": "2026-10-08T07:06:52Z",
-          "categories": [
-            "cs.LG",
-            "cs.CL"
-          ],
-          "primary_category": "cs.LG"
         }
       ]
     },

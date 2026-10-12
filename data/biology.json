@@ -2,264 +2,203 @@
   "category": "biology",
   "name": "Biology Research",
   "description": "Quantitative Biology \u2014 Genomics, Biophysics, Neuroscience",
-  "scraped_at": "2026-10-11T14:51:14.763761+00:00",
+  "scraped_at": "2026-10-12T17:42:29.233141+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2610.12426v1",
-      "title": "Lyapunov spectrum of random neural networks",
+      "id": "2610.13918v1",
+      "title": "DyssomniaNN: Multi-Scale Spiking Neural Modeling of Human Sleep Disorders and Perceived Restedness",
       "authors": [
-        "David G. Clark"
+        "Daniel Szelogowski"
       ],
-      "abstract": "The Lyapunov spectrum of a nonlinear recurrent neural network with random asymmetric couplings is calculated in the limit $N\\to\\infty$. The calculation is based on a finite-$N$ identity that expresses the cumulative distribution of Lyapunov exponents as a response function of the tangent-space dynamics, with the tangent trajectory selected by a minimum-norm condition rather than by an initial condition. A cavity method then determines this response function at large $N$ through a self-consistent single-site problem. This result establishes that the chaos in this network is extensive and gives access to diffeomorphism-invariant properties of the dynamics. This work was done in collaboration with the AI models GPT-6 Astra and Claude Opus 5.5.",
-      "url": "https://arxiv.org/abs/2610.12426v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.12426v1",
-      "published": "2026-10-08T17:55:14Z",
-      "updated": "2026-10-08T17:55:14Z",
+      "abstract": "Clinical sleep medicine repeatedly documents profound divergences between objective sleep duration and subjective daytime impairment, notably exemplified by sleep state misperception in paradoxical insomnia and boundary instability in narcolepsy type 1. Here, we present DyssomniaNN: a multi-scale biophysical computational framework coupling Borb\u00e9ly's two-process regulation of sleep homeostasis and circadian drive with Saper's hypothalamic reciprocal flip-flop circuit and a recurrent corticothalamic leaky integrate-and-fire spiking neural network. We formalize five clinical cohorts across an identical 72-hour photoperiod: healthy control, circadian rhythm sleep-wake disorder (delayed-phase), chronic insomnia, paradoxical insomnia, and narcolepsy type 1. The synthetic local field potential converges closely with empirical human electroencephalography spectra from the PhysioNet Sleep-EDF database across all canonical frequency bands (spectral mean absolute error of 0.33--0.35). Furthermore, we introduce the Well-Rested Index to quantify restorative efficacy. Simulations reveal that sleep duration fails to predict restorative recovery: paradoxical insomnia achieves normal total sleep time (21.15 h) yet yields low restoration (37.6%) from unsuppressed cortical beta-band intrusion, whereas hypocretin deficiency in narcolepsy produces severe nocturnal fragmentation (781 min of wake after sleep onset) and 35 sleep-onset rapid eye movement periods. DyssomniaNN provides an in silico platform for mechanistic sleep research and virtual neuropharmacology.",
+      "url": "https://arxiv.org/abs/2610.13918v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13918v1",
+      "published": "2026-10-09T17:52:23Z",
+      "updated": "2026-10-09T17:52:23Z",
       "categories": [
-        "cond-mat.dis-nn",
+        "cs.NE",
+        "cs.ET",
+        "cs.LG",
         "q-bio.NC"
       ],
-      "primary_category": "cond-mat.dis-nn"
+      "primary_category": "cs.NE"
     },
     {
-      "id": "2610.12319v1",
-      "title": "A minimal model for rate-induced tipping to extinction",
+      "id": "2610.13917v1",
+      "title": "Designing Protein Structures from Natural Language",
       "authors": [
-        "Brian Hennessy",
-        "Nikola Popovi\u0107",
-        "Zak Sattar"
+        "Joseph Lee",
+        "Yanjing Li",
+        "Bo Qiang",
+        "Gregory Lau",
+        "Allyson Ettinger",
+        "Noah A. Smith",
+        "Rory Donovan-Maiye",
+        "David Baker",
+        "Hanna Hajishirzi",
+        "Pang Wei Koh"
       ],
-      "abstract": "Rate-induced tipping (\"R-tipping\") in ecological modelling is characterised by too-rapid change of an environmental parameter causing collapse of a population without any bifurcation being crossed (\"B-tipping\"). A well-known example of a slow-fast predator-prey model in which R-tipping is observed [Vanselow, Wieczorek, Feudel, Journal of Theoretical Biology, 479, 64-72 (2019)] suffers from unecological \"resurgence\", whereby populations driven to functional extinction recover towards stable coexistence. We propose an analytically tractable model, incorporating a strong Allee effect into the prey dynamics in a slow-fast Lotka-Volterra-type predator-prey system, which induces bistability and thus renders the extinction state a genuine attractor. Applying geometric singular perturbation theory (GSPT), we describe the dynamics of the extended model that is obtained by \"ramping\" of the inverse prey carrying capacity. We show the presence of a parabolic-shaped, folded critical manifold which admits a folded saddle singularity, the strong canard of which separates solutions that track the moving coexistence state from those that tip to extinction. The analytical simplicity of our model allows us to derive explicit expressions for the critical rate that separates \"tracking\" from \"tipping\" dynamics. Finally, we argue that our system represents a minimal model for rate-induced tipping to extinction, in that it incorporates three essential ingredients: bistability, a folded critical manifold, and a folded-saddle-type canard.",
-      "url": "https://arxiv.org/abs/2610.12319v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.12319v1",
-      "published": "2026-10-08T17:02:26Z",
-      "updated": "2026-10-08T17:02:26Z",
+      "abstract": "A central challenge in de novo protein design is generating proteins with desired structural and functional properties. Existing design models typically require a dedicated input representation for each property, limiting the design objectives they support. We develop Prompteina, the first all-atom structure generation model that supports new and broader design objectives specified in natural language, analogous to text-to-image generation. To train Prompteina, we construct Prompteina-Data, a paired text--protein structure dataset of 1.8M structures and 50M+ captions describing global and residue-specific structural and functional properties. We adapt Proteina-Complexa, a pretrained structure generation model, through text-conditioned pretraining and finetuning that aligns residues with their corresponding text. Prompteina outperforms baselines on 15 of 18 structural properties and generates proteins that more closely match descriptions of their intended functions. In binder design, it leads baselines on at least 13 of 20 targets and improves interface confidence by 14\\% over the strongest baseline. With iterative in silico feedback, Prompteina's gain over non-iterative generation is 57\\% larger than the next-best baseline on the hardest targets. Finally, we experimentally validate Prompteina designs against GM2A, a target with no reported de novo binders. We identify nine binders, with the strongest at an apparent $K_{\\mathrm{D}}$ of 107 nM. These results establish natural language as an effective and powerful conditioning interface for protein structure generation.",
+      "url": "https://arxiv.org/abs/2610.13917v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13917v1",
+      "published": "2026-10-09T17:51:55Z",
+      "updated": "2026-10-09T17:51:55Z",
       "categories": [
-        "q-bio.PE",
-        "math.DS"
+        "cs.LG",
+        "q-bio.BM"
+      ],
+      "primary_category": "cs.LG"
+    },
+    {
+      "id": "2610.13721v1",
+      "title": "Artificial Intelligence-Assisted Systems Biology Reconstruction of Diabetic Bone Marrow Dysfunction",
+      "authors": [
+        "Paolo Madeddu"
+      ],
+      "abstract": "This study aimed to reconstruct a regulatory network suitable for systems biology analysis of diabetic bone marrow. Three artificial intelligence large language models independently analysed 18 Discovery and 43 Validation publications. Investigator guided integration produced a frozen network of 62 biological entities and 79 directed interactions. Open source software Gephi created a visual representation before and after main node removal. The plausibility of the reconstructed interactions was tested against independent curated knowledge resources, including the Kyoto Encyclopedia of Genes and Genomes, connectomeDB2025, Reactome, and Gene Ontology. Further analysis examined physiological correspondence, missing edge sensitivity, and graph constrained interrogation. Functional modules encompassed endothelial perivascular support, stem cell retention and trafficking, neural circadian regulation, inflammatory myelopoiesis, metabolic stress, and epigenetic regulation. They intersected through shared effects on endothelial function and stem cell behaviour. The endothelium was the principal connecting node. Computational removal of the endothelial node increased network fragmentation and diameter, while average directed path length remained essentially unchanged. External resources supported 60/79 interactions (75.9%); 19 remained unresolved, with none classified as contradictory. Complementary assessments supported biological plausibility and faithful interrogation of the reconstructed network. This investigator led dialogue with artificial intelligence provides a foundation for a systems level understanding of diabetic bone marrow dysfunction. The approach may facilitate the generation of testable hypotheses and the identification of mechanistic targets for coordinated restoration of disrupted niche interactions.",
+      "url": "https://arxiv.org/abs/2610.13721v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13721v1",
+      "published": "2026-10-09T15:19:24Z",
+      "updated": "2026-10-09T15:19:24Z",
+      "categories": [
+        "q-bio.MN"
+      ],
+      "primary_category": "q-bio.MN"
+    },
+    {
+      "id": "2610.13567v1",
+      "title": "Leaky protection reveals three patterns in the relative advantages of vaccination strategies across transmission intensity",
+      "authors": [
+        "Yiwen Xing",
+        "Jianyi Zhang",
+        "Haoliang Cui",
+        "Zijie Yang",
+        "Qianning Wang",
+        "Lang Qin",
+        "Zheqi Wang",
+        "Zhongwei Jia"
+      ],
+      "abstract": "Targeted vaccination often prioritizes individuals who contribute most to transmission. However, this rationale may change under leaky protection, whereby vaccination reduces susceptibility at each exposure rather than fully preventing infection. Here, we use a survey-derived individual-level exposure framework for 2,279 residents to simulate infection dynamics across ranges of transmission intensity and vaccine efficacy. We compare two vaccination strategies: the high-exposure strategy (prioritizing highly exposed individuals) and the oldest-first strategy (prioritizing older individuals). As transmission intensity changes, we identify three patterns in the relative advantages of these two strategies. At low transmission, the high-exposure strategy outperforms the oldest-first strategy in reducing both epidemic peak size and final infection proportion. At intermediate transmission, it lowers epidemic peak size but increases final infection proportion, revealing a trade-off between these metrics. At high transmission, differences between the strategies narrow, and the oldest-first strategy has a slight advantage for both metrics. Overall, our findings highlight the importance of considering vaccine failure mode when evaluating vaccination policies under different transmission dynamics.",
+      "url": "https://arxiv.org/abs/2610.13567v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13567v1",
+      "published": "2026-10-09T13:20:11Z",
+      "updated": "2026-10-09T13:20:11Z",
+      "categories": [
+        "q-bio.PE"
       ],
       "primary_category": "q-bio.PE"
     },
     {
-      "id": "2610.12281v1",
-      "title": "Unlocking the Regulatory Genome by ARGUS: An Evidence-Constrained Agentic Framework for Interpreting Single Nucleotide Variants",
+      "id": "2610.13419v1",
+      "title": "EEG Entrainment to Non-Speech Rhythmic Patterns Associated with Dimensions of Language Performance",
       "authors": [
-        "Pratik Dutta",
-        "Matthew B. Obusan",
-        "Max Chao",
-        "Rekha Sathian",
-        "Nimisha Papineni",
-        "Ramana V. Davuluri"
+        "Francisco J. Mart\u00ednez-Murcia",
+        "Nicol\u00e1s J. Gallego-Molina",
+        "Marco A. Formoso",
+        "Andr\u00e9s Ortiz"
       ],
-      "abstract": "Over 90% of disease-associated variants from genome-wide association studies fall in noncoding regulatory regions, yet their functional interpretation remains a central open problem in genomic medicine. Large language models prompted to interpret such variants routinely hallucinate transcription factor (TF) binding changes, fabricate experimental support, and assign biological significance to statistically negligible signals. We present ARGUS (Agentic Regulatory Genomics for an Uncertainty-aware Scientist), which strictly separates deterministic biological computation from LLM-mediated reasoning. ARGUS wraps 458 DNABERT-based TF binding models in a hypothesis-directed investigation loop where a planner selects evidence sources based on current uncertainty, a verifier deterministically interprets each observation, and intermediate results change the investigation path. On variant rs6983267 at the 8q24 cancer risk locus, the same planner produces four divergent trajectories for four TFs. FOXA1 is rescued in 3 steps when real ADASTRA allele-specific binding data (15 experiments, FDR = 0.030) reveals a model false negative masked by saturation. KLF6 traverses 8 steps across ADASTRA, JASPAR motif analysis, and ENCODE cCRE regulatory annotation before abstaining due to mixed indirect evidence. RAD21 abstains in 8 steps after ADASTRA returns a coverage-qualified but nonsignificant allelic test (5 experiments, FDR = 0.65), and SP1, which shares FOXA1's saturated retained prediction, abstains because no direct experimental evidence exists at this locus. All observations come from real ADASTRA, JASPAR, and ENCODE cCRE queries; none are simulated. A comparison of fixed-priority and LLM-mediated planning shows that the LLM planner reaches identical verdicts with fewer tool calls by declining evidence that cannot resolve the claim under test.",
-      "url": "https://arxiv.org/abs/2610.12281v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.12281v1",
-      "published": "2026-10-08T16:38:32Z",
-      "updated": "2026-10-08T16:38:32Z",
+      "abstract": "Developmental dyslexia (DLX) affects 5-12% of the global population and impairs learning to read. Its biological basis, particularly the difficulties observed in oral phonological tasks, remains debated. Entrainment, the coupling of brain oscillations to speech rhythms, is essential for encoding phonological representations. We investigated whether brain entrainment to non-speech rhythms could predict DLX in 48 participants listening to white noise amplitude-modulated at rates matching Spanish speech units. Phase-amplitude coupling (PAC) analysis of electroencephalography (EEG) signals yielded accurate DLX prediction for the 40 Hz stimulus using the Heights Ratio PAC measure (balanced accuracy 0.929, p = 0.0069, in the best case), indicating a stronger phonemic entrainment deficit in dyslexic individuals. Regression analysis in control (CTL) participants showed a strong dependence between reading performance scores and greater entrainment in language-associated brain regions. In particular, participants with poorer phonemic awareness, reading comprehension, or rapid automatized naming showed greater right-hemisphere entrainment to the 40 Hz stimulus. This finding adds evidence for the hemispheric compensatory mechanisms hypothesized in the literature. In conclusion, our methodology identifies dyslexia-specific entrainment patterns near language-associated brain regions, together with compensatory entrainment in right-hemisphere areas.",
+      "url": "https://arxiv.org/abs/2610.13419v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13419v1",
+      "published": "2026-10-09T11:25:45Z",
+      "updated": "2026-10-09T11:25:45Z",
       "categories": [
-        "q-bio.GN",
-        "cs.AI",
-        "cs.LG"
-      ],
-      "primary_category": "q-bio.GN"
-    },
-    {
-      "id": "2610.12236v1",
-      "title": "La-Ribo: RNA Co-Design via Geometry-Latent Flow Matching",
-      "authors": [
-        "Runze Ma",
-        "Will Hua",
-        "Shuangjia Zheng"
-      ],
-      "abstract": "RNA function arises from the coupling of nucleotide sequence and three-dimensional structure, motivating their joint design. Coordinating global folding with nucleotide-level detail remains challenging under limited structural supervision. We introduce La-Ribo, a generative framework for RNA sequence-structure co-design via geometry-latent flow matching. La-Ribo retains a sparse phosphate-sugar--base scaffold and encodes nucleotide identity and local conformation in residue-wise latents. A shared flow network generates both jointly, and an RNA-specific decoder then reconstructs all heavy atoms. To expand supervision, we construct a quality-controlled corpus of 168,561 RNA structures, integrating experimental data with predictions from three folding models, including 10,631 MSA-supported structures generated in this work. La-Ribo improves designability and codesignability over the evaluated baselines across sampling budgets and two refolding models, and the same prior supports scaffold-conditioned inverse folding without additional training.",
-      "url": "https://arxiv.org/abs/2610.12236v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.12236v1",
-      "published": "2026-10-08T16:19:07Z",
-      "updated": "2026-10-08T16:19:07Z",
-      "categories": [
-        "q-bio.BM",
-        "cs.AI"
-      ],
-      "primary_category": "q-bio.BM"
-    },
-    {
-      "id": "2610.11923v1",
-      "title": "Neural Decoding as Cognitive Inference",
-      "authors": [
-        "Yi Guo",
-        "Changhong Jing",
-        "Yong Hu",
-        "Yan Liu",
-        "Michael K. P. Ng",
-        "Shanshan Wang",
-        "Shuqiang Wang"
-      ],
-      "abstract": "The brain maintains stable cognition despite continuously changing neural activity. How to extract stable cognitive states from variable neural observations remains a central problem in neural decoding. Existing neural decoding methods map neural observations to predefined external labels based on the stimulus-response principle, often capturing recording-specific spurious correlations. Inspired by how the brain infers the world, and specifically by Bayesian brain theory, we recast neural decoding as cognitive inference constrained by brain-intrinsic priors, yielding high-level meta-neural semantic representations. In decoding experiments spanning five neural recording modalities and three cognitive domains (motor, perception and internal mentation), our cognitive inference method reorganized the geometry of neural observation representations, yielding meta-neural semantic representations that exhibited consistent geometric relationships across cognitive tasks and enabled the recovery of stable cognitive states from variable neural observations. Our work provides an account of how the brain maintains relatively stable cognition despite continual changes in the external environment. Cognitive stability is sustained through cognitive inference from changing neural activity, without requiring fixed neural activity patterns.",
-      "url": "https://arxiv.org/abs/2610.11923v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.11923v1",
-      "published": "2026-10-08T13:19:57Z",
-      "updated": "2026-10-08T13:19:57Z",
-      "categories": [
-        "q-bio.NC",
-        "cs.AI"
+        "q-bio.NC"
       ],
       "primary_category": "q-bio.NC"
     },
     {
-      "id": "2610.11729v1",
-      "title": "Three-dimensional imaging of isolated membrane-protein complexes in vacuo with an X-ray laser",
+      "id": "2610.13312v1",
+      "title": "Beyond Anxiety and Avoidance: A Dynamic Feedback-Regulation Framework for Adult Romantic Attachment",
       "authors": [
-        "Kartik Ayyer",
-        "Tej Varma Yenupuri",
-        "Johan Bielecki",
-        "Lutz A. Eichacker",
-        "J. Domingo Meza-Aguilar",
-        "Louise J. Persson",
-        "Lena Worbs",
-        "Patrick Adams",
-        "Roberto Alvarez",
-        "Adil Ansari",
-        "Alfredo Bellisario",
-        "Rebecca Boll",
-        "Carl Caleman",
-        "Sebastian Cardoch",
-        "Andrea Castoldi",
-        "Joe P. J. Chen",
-        "Cyril Danilevski",
-        "Merle Dechering",
-        "Simon Dold",
-        "Armando D. Estillore",
-        "Alberto De Fanis",
-        "Lukas V. Haas",
-        "Patrick Konold",
-        "David Lomitze",
-        "Abhishek Mall",
-        "Dimitra Manatou",
-        "I\u00f1aki de Diego Martinez",
-        "Parichita Mazumder",
-        "Andrew J. Morgan",
-        "Anna Munke",
-        "Yevheniy Ovcharenko",
-        "Matteo Porro",
-        "Safi Rafie-Zinedine",
-        "Amit K. Samanta",
-        "Christina Schmidt",
-        "Arezu Sehati",
-        "Jonas A. Sellberg",
-        "Bj\u00f6rn Senfftleben",
-        "Carolin Seuring",
-        "Zhou Shen",
-        "Nicusor Timneanu",
-        "Sergey Usenko",
-        "Daniel Westphal",
-        "August Wollter",
-        "Tamme Wollweber",
-        "Paul Lourdu Xavier",
-        "Henry N. Chapman",
-        "Janos Hajdu",
-        "Richard A. Kirian",
-        "Jochen K\u00fcpper",
-        "Erik G. Marklund",
-        "Petra Fromme",
-        "Michael Meyer",
-        "Filipe R. N. C. Maia"
+        "Mateusz Pomianek"
       ],
-      "abstract": "The prospect of imaging single biomolecules, viruses and cells with intense, ultrashort X-ray pulses has driven the development of X-ray free-electron lasers (XFELs). However, the weak scattering from small particles is easily swamped by background from residual gas, which has so far limited applications to strongly scattering targets such as viruses, cell organelles and cells. Here we report a three-dimensional (3D) reconstruction of an isolated 1-MDa membrane-protein complex, photosystem I (PS I), from single-particle diffraction data. PS I trimers were aerosolised by charge-reduction electrospray ionisation and injected into the European XFEL beam, with partial helium gas exchange reducing background scattering by 80%. From 32 788 diffraction patterns of single trimers in random orientations, we reconstructed the 3D electron density to a resolution of 3.8 nm, limited by the detector geometry. The disc-shaped density, about 22 nm across and 10 nm thick, matches the size of a PS I trimer in a detergent micelle and is consistent with the compaction predicted by molecular dynamics simulations of the complex in vacuo and observed in native mass spectrometry. These results show that membrane-protein complexes can be imaged in vacuo with X-ray lasers, an important step towards ultrafast diffractive imaging of single macromolecules.",
-      "url": "https://arxiv.org/abs/2610.11729v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.11729v1",
-      "published": "2026-10-08T11:26:14Z",
-      "updated": "2026-10-08T11:26:14Z",
+      "abstract": "Adult attachment is commonly represented by attachment anxiety and avoidance, but these person-level dimensions do not by themselves specify how momentary relational conditions are perceived, compared with desired conditions, translated into action, and updated after interpersonal feedback. We present the Attachment Regulation and Control (ARC) framework as an integrative feedback-regulation account that makes these temporal assumptions explicit and empirically testable. In ARC, control refers to feedback-based regulation toward relational goals in the control-theoretic sense, not interpersonal dominance, coercion, or a generalized need for control. ARC does not claim a novel control-system architecture. Instead, it synthesizes established control-theoretic attachment ideas, secure-base representations, perceived partner responsiveness, relational discrepancy, dyadic regulation, and recovery into a parsimonious sequence for adult romantic relationships: perceived relational state, desired relational state, discrepancy, regulatory action, partner feedback, state updating, and recovery. The framework treats the discrepancy score itself as a falsifiable modeling restriction by comparing it with perceived-state-only, unconstrained perceived-plus-desired-state, and asymmetric discrepancy alternatives. Attachment anxiety and avoidance form core regulation moderators. Secure-base representation is a candidate requiring incremental prediction of recovery outcomes. Mentalized affectivity and regulation flexibility remain optional moderators, while adult disorganization is an independent extension outcome.",
+      "url": "https://arxiv.org/abs/2610.13312v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13312v1",
+      "published": "2026-10-09T09:55:41Z",
+      "updated": "2026-10-09T09:55:41Z",
       "categories": [
-        "physics.bio-ph",
-        "physics.ins-det",
-        "physics.optics",
-        "q-bio.BM"
-      ],
-      "primary_category": "physics.bio-ph"
-    },
-    {
-      "id": "2610.11679v1",
-      "title": "Persistence of bounded trajectories in positively transverse reaction networks",
-      "authors": [
-        "Elisenda Feliu"
-      ],
-      "abstract": "We introduce positively transverse reaction networks and show that, with mass-action kinetics, no bounded trajectory with positive initial condition has a boundary omega-limit point. These networks are characterized by a geometric property of a collection of polytopes defined by a subset of complexes of the network.",
-      "url": "https://arxiv.org/abs/2610.11679v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.11679v1",
-      "published": "2026-10-08T10:53:02Z",
-      "updated": "2026-10-08T10:53:02Z",
-      "categories": [
-        "math.DS",
-        "q-bio.MN"
-      ],
-      "primary_category": "math.DS"
-    },
-    {
-      "id": "2610.11627v1",
-      "title": "Beyond Action Entropy: Quotient-Space Exploration for Genome-Scale Metabolic Model Repair",
-      "authors": [
-        "Xuan Gong",
-        "Hanbo Huang",
-        "Wenbin Dai",
-        "Jing Wang",
-        "Lei Bai",
-        "Xiang Xiao",
-        "Weishu Zhao",
-        "Shiyu Liang"
-      ],
-      "abstract": "Repairing scientific models from functional observations differs fundamentally from supervised prediction: feedback may certify a solution without revealing which structural correction is responsible. We study this setting for genome-scale metabolic model (GEM) repair, where multiple reaction edits can explain the same phenotypes and many apparently distinct edits correspond to the same biological mechanism. This many-to-one structure creates a hidden failure mode for conventional exploration: diversity in the output space need not translate into diversity of scientific hypotheses. We introduce QuotientPO, which collapses equivalent repairs into canonical mechanisms and optimizes exploration directly over the resulting quotient space. To make quotient exploration informative under finite rollouts, we derive a kernelized R\u00e9nyi estimator that resolves graded crowding among distinct repair cores beyond coarse exact-match counts. On 2,212 held-out GEMs, QuotientPO improves Success@32 from 17.93% to 20.10% (+12.1% relative) while consistently increasing distinct successful-core discovery under the same sampling budget. These results establish quotient-space exploration as a principled approach to mechanism-level discovery under verifier-induced equivalence.",
-      "url": "https://arxiv.org/abs/2610.11627v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.11627v1",
-      "published": "2026-10-08T10:05:57Z",
-      "updated": "2026-10-08T10:05:57Z",
-      "categories": [
-        "cs.LG",
-        "q-bio.MN"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2610.11222v1",
-      "title": "Cross-species representation learning aligns mouse and human neural dynamics and tracks clinical drug efficacy",
-      "authors": [
-        "Marko Tvrdic",
-        "Justin Richmond Domingo",
-        "Jae Ann Buenaluz",
-        "Jydell Ashley Palomo Penollar",
-        "Edmayelle Villavicencio Alforja",
-        "Jobi Fallaeria Subosa",
-        "Gabriel Ocana-Santero"
-      ],
-      "abstract": "Preclinical models poorly predict human drug efficacy, particularly in neurological disorders. Neural activity offers a uniquely rich source of translational information because it captures high-dimensional variation in nervous-system function that can be measured in both animals and humans. However, its high dimensionality makes it difficult to distinguish conserved disease-related features from variation arising from species, recording modality and experimental context. Here, we test whether shared neural dynamics can be identified directly from electrophysiology data by learning representations organized by biological state rather than species. We develop a dual-rule contrastive learning framework that aligns corresponding mouse and human states while preserving separation between distinct phenotypes. This framework recovered conserved sensory-response structure across species and, in epilepsy, resolved distinct relationships between three mouse models and heterogeneous human patient populations. When treated animals were projected into a frozen cross-species representation, drug-induced movement towards the human-aligned healthy state retrospectively tracked known clinical efficacy across ten model-drug combinations including a disease-specific detrimental effect. The framework also identified shared disease-associated neural dynamics between Fmr1-knockout mice and human 16p11.2 copy-number variant carriers despite differences in genetic aetiology and recording modality. Together, these findings show the potential of cross-species neural representation learning to map heterogeneous human disease onto experimentally tractable preclinical states and assess whether interventions restore human-relevant circuit function.",
-      "url": "https://arxiv.org/abs/2610.11222v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.11222v1",
-      "published": "2026-10-08T04:19:41Z",
-      "updated": "2026-10-08T04:19:41Z",
-      "categories": [
-        "q-bio.QM",
-        "cs.LG",
         "q-bio.NC"
       ],
-      "primary_category": "q-bio.QM"
+      "primary_category": "q-bio.NC"
     },
     {
-      "id": "2610.11185v1",
-      "title": "Predictive Multiplicity in Cell-Fate Assignment: Label-Free Rashomon Sets and the Limits of Per-Cell Certification",
+      "id": "2610.13305v1",
+      "title": "MORAD: Reinforcement Learning with Multi-Objective Rewards for RNA Inverse Design",
       "authors": [
-        "Arjun Bhupatiraju",
-        "Abhiram Bhupatiraju"
+        "Jixin Tang",
+        "Ji Guo",
+        "Jun Zhao"
       ],
-      "abstract": "Single-cell trajectory inference maps transcriptomic measurements onto developmental continua, yet configurations that fit the data equally well can assign conflicting cell fates. FateMultiplicity is a label-free framework that constructs a statistically admissible model set, or Rashomon set, without lineage labels, by evaluating model discrepancy on cross-fitted held-out genes under non-inferiority testing calibrated against random-seed variation. Multiplicity is large and depends more on the diversity of the model space than its size: twelve configurations of a second algorithm expose 20.0% of cells where twenty-four of the first expose 3.8%. Whether the per-cell certified fate margin FM yields more reliable assignments than the fitted model already provides is then tested, and it does not. On simulation ground truth, on the same cells, FM discriminates misassignment at AUC 0.682, against 0.965 for the baseline configuration's own decision margin (p = 0.003) and 0.854 for a seed-dispersion baseline. Informativeness is governed by the breadth of the admitted set, not its cardinality: at cardinality four, seed refits give 0.933 and hyperparameter-perturbed sets 0.701. Relaxing the infimum to a q-quantile recovers discrimination but converges toward the single model's own confidence; the supremum reaches 0.973 because theta*'s membership bounds it from below, while the infimum is unanchored. Multiplicity in trajectory inference is worth measuring and reporting, but per-cell certification over a label-free Rashomon set is not a route to more reliable fate calls. Two constructions survive: a margin-erosion ratio separates real from spurious branch points in simulation (AUC 0.890, untested on real data), and against clonally observed fate, uncertified cells disagree with their clone's outcome 16.4 percentage points more often than certified cells (p < 0.001).",
-      "url": "https://arxiv.org/abs/2610.11185v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.11185v1",
-      "published": "2026-10-08T03:43:28Z",
-      "updated": "2026-10-08T03:43:28Z",
+      "abstract": "We introduce MORAD, an online reinforcement learning framework for backbone-conditioned RNA diffusion models that trains a single shared policy across diverse target backbones. Structure-conditioned RNA inverse design seeks nucleotide sequences compatible with a target three-dimensional backbone, yet existing reinforcement learning approaches either optimize a separate policy for each target backbone or rely on offline preference optimization, leaving online post-training of a reusable backbone-conditioned model largely unexplored. MORAD combines backbone-conditioned group sampling, group-relative reward normalization, and a forward-process diffusion objective. Beyond existing RL rewards that primarily target tertiary structural quality, MORAD jointly optimizes six measurements spanning tertiary geometry, base pairing, ensemble behavior, and sequence composition. To aggregate these heterogeneous objectives despite differences in scale and optimization direction, MORAD maps each measurement to a bounded desirability score and combines them with a weighted geometric mean. Compared with a tertiary-structure-only reward, this multi-objective formulation improves 10 of the 11 evaluation metrics that have a preferred direction. Applied to pretrained RIDE, MORAD improves GDT-TS by 16.0% (from 0.3300 to 0.3827) and pairing MCC by 19.4% (from 0.6110 to 0.7295), while reducing normalized ensemble defect by 27.5% (from 0.3906 to 0.2830). On the test set, MORAD outperforms RiboDiffusion, gRNAde, and RDesign across tertiary structural accuracy, secondary-structure pairing, and thermodynamic quality, establishing a new state of the art in structure-conditioned RNA inverse design.",
+      "url": "https://arxiv.org/abs/2610.13305v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13305v1",
+      "published": "2026-10-09T09:50:55Z",
+      "updated": "2026-10-09T09:50:55Z",
       "categories": [
         "cs.LG",
-        "q-bio.GN"
+        "q-bio.BM"
       ],
       "primary_category": "cs.LG"
+    },
+    {
+      "id": "2610.13275v1",
+      "title": "Excitability across scales: a unifying EI model",
+      "authors": [
+        "Thomas S. J. Burger",
+        "Rodolphe Sepulchre"
+      ],
+      "abstract": "Neuronal excitability is commonly modeled using different principles at the cellular and population scales, making it difficult to study how microscopic mechanisms shape macroscopic activity. We introduce a spatiotemporal excitatory-inhibitory (EI) model that unifies these scales through a common mixed-feedback architecture. The model retains the conductance-based circuit structure of Hodgkin-Huxley models and describes intrinsic and synaptic currents through memductances whose temporal and spatial voltage dependence encodes dynamics at the relevant scale. In its minimal form, temporal excitability arises from fast excitatory feedback opposed by slower inhibitory feedback, while spatial excitability arises from short-range excitation opposed by longer-range inhibition, recovering the core lateral-inhibition motif of Amari neural fields. We show that combining these mechanisms gives rise to population excitability in strongly heterogeneous populations. In particular, the model generates population spikes that are localized in both space and time and possess population-level scales distinct from those of individual neuronal spikes, despite substantial cell-to-cell parameter variability. We then show that both intrinsic temporal excitability and spatial synaptic feedback are required for coherent mean-field events and robust spatiotemporal population rhythms. Finally, selective modulation of memductances in a subset of the population tunes the frequency of the population rhythm, illustrating how changes at the cellular scale can shape macroscopic dynamics. By separating circuit architecture from modeling scale, the proposed framework provides a physically interpretable approach to analyzing and designing neuronal excitability across scales.",
+      "url": "https://arxiv.org/abs/2610.13275v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13275v1",
+      "published": "2026-10-09T09:27:19Z",
+      "updated": "2026-10-09T09:27:19Z",
+      "categories": [
+        "q-bio.NC",
+        "eess.SY"
+      ],
+      "primary_category": "q-bio.NC"
+    },
+    {
+      "id": "2610.13073v1",
+      "title": "Double-Take: Improving Capacity, Binding, and Selectivity In Long-Context Within Bidirectional Memory",
+      "authors": [
+        "Vakul Raghavan",
+        "Utkarsh Grover",
+        "Mingyang Mao",
+        "Chengwen Wang",
+        "Xiaomin Lin"
+      ],
+      "abstract": "Processing a long sequence does not guarantee that distant information remains usable. As context grows, a fixed-size memory must retain many associations, connect information across positions, and preserve relevant structure without being overwhelmed by everything it observes. These are distinct requirements: a memory may store more information without representing the relationships needed for retrieval, and it may transport those relationships without preserving the ones that matter. Thus, the challenge is not simply extending context length, but constructing a memory that remains usable as context grows. We study this problem in large-chunk test-time training (TTT) and identify two basic failures: single-step writes accumulate interference, limiting capacity, while self-associative writes cannot form cross-position bindings. We introduce Double-Take (DT), which repairs these failures with multi-step unpinned updates and cross-position mixing, and adds bidirectional change-sensitive writes for selective retention. Capacity alone leaves end-to-end recall at the $0.10$ chance floor; adding binding raises it to $0.92$. Trained only on $32\\,\\mathrm{kb}$ genomic contexts, DT reaches $0.927$ AUROC at $131\\,\\mathrm{kb}$ and $0.856$ near $1\\,\\mathrm{Mb}$, while transferring zero-shot from human to mouse. Together, these results identify capacity, binding, and selectivity as three requirements for usable long-range memory.",
+      "url": "https://arxiv.org/abs/2610.13073v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13073v1",
+      "published": "2026-10-09T06:31:57Z",
+      "updated": "2026-10-09T06:31:57Z",
+      "categories": [
+        "cs.LG",
+        "q-bio.GN",
+        "q-bio.QM"
+      ],
+      "primary_category": "cs.LG"
+    },
+    {
+      "id": "2610.13018v1",
+      "title": "FlyHack: Stress-Testing Mechanistic Claims in a Connectome-Constrained Visual Model",
+      "authors": [
+        "Aashish Dhawan"
+      ],
+      "abstract": "Connectome-constrained neural networks make biological components directly accessible to intervention, but their mechanistic conclusions can still depend on the comparison model, intervention, circuit representation and trained solution. We stress-test these dependencies in flyvis, a \\emph{Drosophila} motion-vision model, using its 50-model ensemble, task-matched causal CNN controls and replicated interventions. At the level of model behaviour, three-level reverse-phi reversal in flyvis is strongly period- and velocity-dependent and also appears in task-matched CNNs; neither family reproduces the fly's stationary-sawtooth response. Adversarial direction reversal requires a perturbation bound of 0.21--0.27 times stimulus contrast in flyvis versus 0.13--0.25 in CNNs, but the gap over a parameter-matched CNN largely closes for larger CNNs. At the level of mechanism, matching attribution to the intervention matters: for held-out-mean replacement, first-order edge attribution patching reaches pooled AUROC 0.970 and Spearman 0.872, versus 0.933 and 0.126 when its zero-aligned score is evaluated against the same ground truth. Circuit conclusions also vary with representation and ensemble member. Greedy cell-type sets meet a model-relative T4/T5 tuning criterion in 25 of 50 models, while T4/T5 output silencing reduces the tested optic-flow behaviour to at most two of eight clips in 40. In six models where the cell-type search first succeeds, the corresponding connection sets can be pruned to 13--31 added classes; under an additional two-sided response-amplitude check, only two of those six first-success cell-type sets still meet the tuning threshold. These results support a narrower use of connectome-constrained models: they make mechanistic hypotheses directly testable, but the resulting claims must be scoped to the model family, intervention, representation and trained solution.",
+      "url": "https://arxiv.org/abs/2610.13018v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13018v1",
+      "published": "2026-10-09T05:20:38Z",
+      "updated": "2026-10-09T05:20:38Z",
+      "categories": [
+        "q-bio.NC",
+        "cs.CV"
+      ],
+      "primary_category": "q-bio.NC"
     }
   ]
 }
