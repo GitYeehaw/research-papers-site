@@ -2,25 +2,57 @@
   "category": "robotics",
   "name": "Robotics Research",
   "description": "Robotics \u2014 Motion Planning, Control Systems, Human-Robot Interaction, Autonomous Systems",
-  "scraped_at": "2026-10-13T15:50:42.790800+00:00",
+  "scraped_at": "2026-10-14T13:34:57.292073+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2610.13945v1",
-      "title": "Splat2Act: From Captured Scenes to Personalized VLA Manipulation",
+      "id": "2610.18874v1",
+      "title": "ChunkAct: Action Chunking for Agentic Robotics",
       "authors": [
-        "Xiaomeng Ye",
-        "Krishna Jaganathan",
-        "Gyubeum Lim",
-        "Gunjan Chhablani",
-        "Muhammad Zubair Irshad",
-        "Zsolt Kira"
+        "Bingxin Xu",
+        "Wenrui Bao",
+        "Xinxin Liu",
+        "Jiawei Zhou",
+        "Yuzhang Shang",
+        "Emilio Ferrara"
       ],
-      "abstract": "A user who brings a generalist manipulation policy into their home or office wants it to pick up their objects from their shelves, counters, and tables. Yet even a strong generalist like $\u03c0_{0.5}$ achieves 0% pickup success in our captured deployment scenes without adaptation, and collecting real demonstrations in every user's environment is prohibitively expensive. We present Splat2Act, an automated real-to-sim-to-real pipeline that personalizes a pretrained vision-language-action (VLA) policy to a specific scene and object set using only a handheld phone scan and images of the user's objects. Unlike prior real-to-sim work that reconstructs individual tabletops, Splat2Act operates on building-scale indoor environments: it builds a photorealistic digital twin with 3D Gaussian Splatting and collision geometry, automatically discovers tabletop and non-tabletop receptacles, constructs feasible pickup tasks, and generates successful demonstrations with a privileged simulation oracle, with only scene and object capture required from a human. Applied to 101 scanned campus environments with a median navigable area of 104.87 m$^2$ and 7 receptacles, the pipeline yields 852 receptacles and over 68,000 pickup demonstrations. We fine-tune $\u03c0_{0.5}$ in two stages: Stage 1 adapts to hundreds of public object assets, drawn either from the deployment scene alone or from all 101 scenes; Stage 2 personalizes to the user's own objects on the deployment scene's receptacles. Our strongest personalized policy reaches 62.5% aggregate pickup success in the target scene. Deployed on a real Stretch 3, the same policy achieves 63.9% success on a 12-task subset, closely tracking its 66.7% simulated success on those tasks. These results suggest that automated real-to-sim-to-real training can personalize VLA manipulation policies using only simulation-oracle data.",
-      "url": "https://arxiv.org/abs/2610.13945v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.13945v1",
-      "published": "2026-10-09T17:59:06Z",
-      "updated": "2026-10-09T17:59:06Z",
+      "abstract": "Agentic robotics places a large language model (LLM) agent in the robot control loop, where it composes perception, motion, and vision-language-action (VLA) tools under the guidance of a memory and thereby generalizes to new tasks without retraining. This generality comes at a steep price in efficiency. Every primitive requires a round of LLM reasoning over the full interaction history, so the cost of an episode grows with the number of primitives. We find this reasoning largely redundant: once a sub-goal is chosen, its primitives follow a routine already prescribed by memory. We present ChunkAct, which introduces action chunking to agentic robotics. Online, a single call launches a chunk of chained primitives, which executes autonomously and returns control only upon failure. Offline, ChunkAct compiles the memory into these chunks, so execution is memory-free at test time and the planner is reserved for decisions that require reasoning. LLM computation therefore scales with the number of decisions rather than the number of primitives. On LIBERO-Pro, ChunkAct improves task success by 5.0 points over the state of the art in agentic robotics while requiring 2.9x fewer LLM calls, 4.4x fewer input tokens, and 2.3x fewer output tokens.",
+      "url": "https://arxiv.org/abs/2610.18874v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.18874v1",
+      "published": "2026-10-13T17:59:57Z",
+      "updated": "2026-10-13T17:59:57Z",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CL",
+        "cs.CV"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2610.18873v1",
+      "title": "LoopWAM: Closed-Loop Generalist Policy Improvement from Deployment Rollouts",
+      "authors": [
+        "Wenxuan Guo",
+        "Yingping Liang",
+        "Zhaoguo Wang",
+        "Ziyuan Li",
+        "Angyuan Ma",
+        "Zhenyu Wu",
+        "Chengkun Wang",
+        "Bingyao Yu",
+        "Ze Chen",
+        "Borui Zhang",
+        "Xiuwei Xu",
+        "Meng Zhang",
+        "Erjin Zhou",
+        "Jiwen Lu"
+      ],
+      "abstract": "Scaling expert demonstrations alone does not enable generalist robot policies to improve from deployment. Real-world rollouts contain successes, suboptimal behavior, and failures: imitating every recorded action can reinforce poor behavior, while filtering out failures discards evidence of physical interactions and their consequences. We introduce \\textbf{LoopWAM}, a closed-loop world-action model that learns directly from this full quality spectrum, using rollouts from both itself and other deployed policies. Source-dependent noise sampling unifies behavior learning and action-conditioned world modeling, while quality steering and quality-weighted supervision retain full video supervision across qualities and regulate action imitation. Video and action tokens interact throughout parallel denoising, allowing learned consequences to inform action generation directly. On RoboChallenge Table30-V2, three deployment-and-training rounds raise success from 23.67\\% to 43.33\\%, a 19.7-percentage-point gain, with a final score of 56.80. LoopWAM also achieves 94.5\\% average success on RoboTwin~2.0 and 49.5\\% overall success on RoboCasa365 without additional embodied pretraining, obtaining the best overall results among the compared methods across all three benchmarks. On challenging shirt folding task, two rounds of deployment-driven improvement after single-task post-training raise success from 13.20\\% to 55.56\\%. These results demonstrate closed-loop improvement from mixed-quality experience under both multi-task learning and single-task post-training. \\href{https://loop-wam.github.io/}{\\textcolor{orange}{Project Page}}",
+      "url": "https://arxiv.org/abs/2610.18873v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.18873v1",
+      "published": "2026-10-13T17:59:56Z",
+      "updated": "2026-10-13T17:59:56Z",
       "categories": [
         "cs.RO",
         "cs.CV"
@@ -28,40 +60,29 @@
       "primary_category": "cs.RO"
     },
     {
-      "id": "2610.13943v1",
-      "title": "Noise Space Learning for VLA Adaptation",
+      "id": "2610.18872v1",
+      "title": "EgoExplorer: A Vision-Motion-Touch Observatory for Human Loco-Manipulation In Situ",
       "authors": [
-        "Junjie Lu",
-        "Chuheng Zhang",
-        "Yucen Wang",
-        "Yuhua Jiang",
-        "Xinyao Qin",
-        "Min Xu",
-        "Li Zhao"
+        "Yunsong Zhou",
+        "Xuekun Jiang",
+        "Haiqi Shen",
+        "Hangxu Liu",
+        "Chaojian Shi",
+        "Yujie Liu",
+        "Jingyuan Li",
+        "Haoran Yang",
+        "Jiafei Cao",
+        "Dongzhan Zhou",
+        "Dong Wang",
+        "Yao Mu",
+        "Chunhua Shen",
+        "Weinan Zhang"
       ],
-      "abstract": "Pretrained vision-language-action (VLA) models encode broad manipulation priors, yet adapting them to specific tasks requires balancing limited robot interaction, computational resources, and safety constraints. Noise space learning (NSL) adapts flow-matching-based VLAs by learning a context-conditioned distribution over noise while keeping the pretrained VLA fixed. Building on prior noise-steering methods, we formulate NSL as an interface for VLA adaptation that accommodates different learning algorithms and instantiate it with PPO, SAC, and AWR. Theoretically, we provide an information-theoretic analysis of how NSL enables efficient adaptation. Empirically, we study these NSL algorithms on LIBERO, RoboTwin, and four real-robot manipulation tasks under interaction, computation, and execution constraints. Across these settings, we develop a suite of effective NSL variants and derive practical recommendations for choosing among them under different resource and deployment regimes.",
-      "url": "https://arxiv.org/abs/2610.13943v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.13943v1",
-      "published": "2026-10-09T17:58:50Z",
-      "updated": "2026-10-09T17:58:50Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2610.13929v1",
-      "title": "Chronos Policy: Learning Robot Policies on Physical Time",
-      "authors": [
-        "Changhao Wang",
-        "Jaden Clark",
-        "Shuran Song"
-      ],
-      "abstract": "Robot policies often convert sensing and control into fixed-rate observation-action sequences, leaving physical time implicit in sequence position. This assumption breaks when observation rates or delays vary, or when inference latency changes. We introduce Chronos Policy, which makes physical time explicit by conditioning on observation capture times and desired action execution times. We study two ways to incorporate time into a diffusion transformer: adding timestamp embeddings to token features, or encoding physical time in positional encoding through time-aware rotary positional encodings (time-aware RoPE). We find that time-aware RoPE is more robust, allowing attention to depend directly on physical time while keeping token content unchanged. During training, we temporally randomize which observations are sampled and when the action chunk begins, exposing the policy to a wider range of sensing and execution schedules that may occur during deployments. This also enables learning from asynchronous, multi-rate data without forcing all measurements onto a fixed temporal grid. Across simulation and real-world experiments, Chronos Policy improves performance on dynamic tasks, where observation-to-action timing is critical, and on multisensory tasks, where the relative timing between observations matters. On standard quasi-static tasks, it preserves nominal performance while improving robustness to changes in sensing and inference timing.",
-      "url": "https://arxiv.org/abs/2610.13929v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.13929v1",
-      "published": "2026-10-09T17:55:20Z",
-      "updated": "2026-10-09T17:55:20Z",
+      "abstract": "Learning humanoid loco-manipulation from human demonstrations rests on observing how locomotion, posture, and object interaction evolve together as tasks unfold. Scaling collection across diverse environments, in turn, favors lightweight, portable capture systems. Yet, existing datasets provide only partial views of this coordination. Thus, we introduce EgoExplorer, a 100-hour vision-motion-touch observatory of human loco-manipulation built with a wearable system. With an emphasis on professional activities, its continuous recordings align egocentric video with reconstructed whole-body motion, fine-grained finger articulation, and tactile observations, accompanied by step-level descriptions. To achieve this coverage with sparse body sensing, we develop the Calibrate-Complete-Constrain pipeline. Concretely, reusable calibration fixes participant geometry and sensor attachments before motion inference to disentangle mounting offsets from articulation. A temporal prior then completes unobserved joint motion, while layered constraints promote measurement agreement, temporal continuity, and geometric consistency, properties that motion plausibility alone does not guarantee. Against tracker-fitted references, the method reduces body-point error by 71.9% relative to the strongest baseline; matched evaluations also show gains in hand stability and contact estimation. Preliminary studies explore multimodal generation and conditioning alongside humanoid retargeting with whole-body control in simulation.",
+      "url": "https://arxiv.org/abs/2610.18872v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.18872v1",
+      "published": "2026-10-13T17:59:55Z",
+      "updated": "2026-10-13T17:59:55Z",
       "categories": [
         "cs.RO",
         "cs.CV"
@@ -69,137 +90,200 @@
       "primary_category": "cs.RO"
     },
     {
-      "id": "2610.13923v1",
-      "title": "Goal-Oriented Bundle Management and Flow Control for Deep-Space Communications via Reinforcement Learning",
+      "id": "2610.18869v1",
+      "title": "What Matters in Quality-Aware VLA Pretraining: A Benchmark and Empirical Study",
       "authors": [
-        "Sajjad Baghaeea",
-        "Aimin Lib",
-        "Shanmugarajan Balasubramanian",
-        "Elif Uysal"
+        "Mingxuan Yan",
+        "Litian Gong",
+        "Dihong Huang",
+        "Zhixu Li",
+        "Tianyu Zhang",
+        "Wenqian Zhang",
+        "Hefeifei Jiang",
+        "Peihao Li",
+        "Jian Zhang",
+        "Mengfei Zhao",
+        "Yikai Tang",
+        "Hai Zhai",
+        "Zehao Wang",
+        "Ruijian Liang",
+        "Yanjia Huang",
+        "Lin Shao",
+        "Changliu Liu",
+        "Kaiyu Hang",
+        "Zhiwen Fan",
+        "Masayoshi Tomizuka",
+        "Jianfei Yang",
+        "Jiachen Li"
       ],
-      "abstract": "Deep-space communications operate under intermittent connectivity, long propagation delays, and relay storage constraints. In such networks, the Bundle Protocol enables store-carry-forward communication, requiring relay nodes to manage limited storage and scarce contact opportunities. Relay-side scheduling and dropping decisions are inherently goal-oriented: transmission resources should be allocated to bundles most valuable to downstream mission objectives. Conventional schedulers, such as FIFO, do not explicitly optimize task utility and may provide unfair service across heterogeneous planetary sources. This paper presents a closed-loop modeling and learning framework for relay-side bundle and flow management in a contact-driven deep-space network, where lunar and Martian updates are forwarded through a shared-buffer relay to Earth. We quantify destination-side information freshness using excess age $\u0394_i^e(t)=[\u0394_i(t)-d_i(t)]^+$, where $\u0394_i(t)$ denotes the Age of Information of source $i$ and $d_i(t)$ is a source-dependent delay baseline. Based on this metric, we define a goal-oriented loss that supports source-dependent nonlinear penalties, allowing prioritization according to mission relevance. We formulate relay control as a constrained semi-Markov decision process (CSMDP) and solve it using masked Lagrangian Proximal Policy Optimization (PPO). Feasibility-aware action masking restricts transmissions to bundles that can complete within the remaining contact window. DTNSim simulations indicate improved age-based utility and inter-flow fairness compared with baseline schedulers. The proposed framework jointly optimizes relay-side bundle scheduling, dropping, and flow control under contact-driven dynamics with explicit fairness considerations across heterogeneous sources.",
-      "url": "https://arxiv.org/abs/2610.13923v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.13923v1",
-      "published": "2026-10-09T17:53:46Z",
-      "updated": "2026-10-09T17:53:46Z",
+      "abstract": "How should demonstration quality be used during vision-language-action (VLA) pretraining to improve performance after target-task fine-tuning? We compare weighting, filtering, and conditioning across reward definitions and label granularities using 5,000 naturally suboptimal human demonstrations and 24 target tasks. Within each VLA, we match demonstrations and training budgets. Additional comparisons examine pretraining data size and the roles of quality tags during fine-tuning and inference. Across three VLAs, we find that approach-aware episode conditioning improves mean success over plain behavioral cloning; conditioning and filtering favor episode and chunk labels, respectively, on average, with model-dependent reversals; and constant-tag fine-tuning improves mean success after conditioned pretraining with either tagged or untagged inference. We introduce AXIS-Bench to support these controlled comparisons. Built on crowdsourced simulation demonstrations, it provides recorded object and contact states for recomputing quality labels on shared trajectories. Replayable trajectories support workspace-aligned rendering and user-defined real-world target tasks. In our real-world experiment, simulation pretraining raises success from 9.6\\% to 31.7\\%. Project page: https://axis-bench.github.io/.",
+      "url": "https://arxiv.org/abs/2610.18869v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.18869v1",
+      "published": "2026-10-13T17:59:52Z",
+      "updated": "2026-10-13T17:59:52Z",
       "categories": [
-        "cs.NI",
-        "cs.LG",
-        "eess.SY"
+        "cs.RO",
+        "cs.AI",
+        "cs.LG"
       ],
-      "primary_category": "cs.NI"
+      "primary_category": "cs.RO"
     },
     {
-      "id": "2610.13893v1",
-      "title": "Information-Weighted Distributed Kalman Filter for Multi-Target Tracking over Switching Sensor Networks",
+      "id": "2610.18867v1",
+      "title": "EmbodiedEvo: Self-improving Coding Agents for Physical Intelligence",
       "authors": [
-        "Tirthankar Chakraborty",
-        "Arnab Maity"
+        "Wenyi Li",
+        "Yizhe Chi",
+        "Youjie Zheng",
+        "Chunyu Liu",
+        "Xiaoqiu Wang",
+        "Mingju Gao",
+        "Zheng Jiang",
+        "Deyao Hong",
+        "Calvin Xiao",
+        "Kaisen Yang",
+        "Qinhuai Na"
       ],
-      "abstract": "Target tracking over wide areas using a network of sensor agents is a challenging problem when agents have limited sensing coverage and communication topologies vary over time. Existing distributed filtering approaches commonly assume that each agent, or at least one of its neighbors, can directly observe the target, and further rely on fixed network topologies, global network parameters, or multiple consensus rounds per time step. These requirements limit their applicability in wide-area network deployments. In this paper, we propose an Information-Weighted Distributed Kalman Filter (IWDKF) that relaxes these assumptions through a weighted-consensus mechanism applicable to arbitrary switching topologies satisfying joint connectivity. The proposed approach requires no prior knowledge of global network properties and limits communication overhead to a single consensus exchange per time step, while enabling information fusion even when some agents lack direct target measurements. The weighted-consensus covariance matrix is shown to remain positive definite, and the resulting consensus update is proven to maintain estimate consistency. It is also established that the proposed weighting strategy preserves the asymptotic agreement property of the underlying consensus protocol under joint connectivity. Numerical simulations of a multi-target tracking scenario involving a network of sensor agents demonstrate the improved estimation accuracy of the proposed IWDKF under both fixed and switching network topologies. The performance of the proposed filter is close to that of the centralized Kalman filter, and is compared with three existing distributed filters.",
-      "url": "https://arxiv.org/abs/2610.13893v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.13893v1",
-      "published": "2026-10-09T17:39:22Z",
-      "updated": "2026-10-09T17:39:22Z",
-      "categories": [
-        "eess.SY"
-      ],
-      "primary_category": "eess.SY"
-    },
-    {
-      "id": "2610.13891v1",
-      "title": "Beyond the Snowflakes: Disentangling Weather Effects from Confounding Meta-Factors in LiDAR Object Detection",
-      "authors": [
-        "Yiming Yang",
-        "Jeremy P. Bos"
-      ],
-      "abstract": "Light Detection and Ranging (LiDAR) is critical for autonomous perception, yet its performance is known to degrade in adverse weather. While existing literature models snow as atmospheric noise that degrades performance, our granular evaluation on the WADS-3D and CADC datasets reveals a counter-intuitive phenomenon: detection accuracy consistently improves as snow intensity increases. Through ablation study and meta-information analysis, we reconcile this by confirming that while falling snow acts as noise, its negative impact is outweighed by a dominant, concurrent factor: significantly increased object point count. We hypothesize that this object point count boost acts as a geometric enhancement, driven by snow accumulation increasing vehicle surface area and a shift from specular to diffuse reflectance. Our findings demonstrate that evaluating perception systems using broad weather-severity bins without accounting for correlated object-level data can lead to misleading conclusions about detector robustness. We conclude that accurate evaluation requires decoupling atmospheric noise from surface accumulation effects and outline future research to validate these physical models. The WADS-3D dataset is available at: https://digitalcommons.mtu.edu/wads-3d/.",
-      "url": "https://arxiv.org/abs/2610.13891v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.13891v1",
-      "published": "2026-10-09T17:38:30Z",
-      "updated": "2026-10-09T17:38:30Z",
-      "categories": [
-        "cs.CV",
-        "cs.RO"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2610.13872v1",
-      "title": "Tracking the Invisible: Self-Supervised Wheel Track Detection with Thermal-RGB Fusion",
-      "authors": [
-        "Yiming Yang",
-        "Jeremy P. Bos"
-      ],
-      "abstract": "Accurate detection of drivable area is essential for autonomous driving and advanced driver assistance systems. While state-of-the-art methods focus on general traversability estimation, they prove inadequate for snow-covered roads where following existing wheel tracks offers crucial advantages: improved traction, predictable vehicle dynamics, and verified path stability. To address this, we propose a low-cost, self-supervised approach detecting safety-critical wheel tracks using synchronized RGB-I (RGB + Long-Wave Infrared) imagery. Our method automatically generates training labels by projecting future wheel trajectories from recorded GNSS data. A neural network is designed to identify wheel tracks with the 4-channel RGB-I images from challenging, white-out road surfaces. Experimental results demonstrate the effectiveness of our approach in visually monotonous and featureless adverse environment, offering a robust and cost-effective alternative for winter autonomy. The newly introduced ThermalTrack dataset is available at: https://digitalcommons.mtu.edu/thermaltrack/.",
-      "url": "https://arxiv.org/abs/2610.13872v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.13872v1",
-      "published": "2026-10-09T17:21:28Z",
-      "updated": "2026-10-09T17:21:28Z",
-      "categories": [
-        "cs.CV",
-        "cs.RO"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2610.13862v1",
-      "title": "BT-Agent: Deploying Onboard Robot Agents with Behavior Trees and Multi-Fidelity Evaluation",
-      "authors": [
-        "Fabio H\u00fcbel",
-        "Adam Lilja",
-        "Yue Yin",
-        "Siming He",
-        "Claire Tomlin",
-        "Shankar Sastry",
-        "Jonas Frey",
-        "Marco Pavone"
-      ],
-      "abstract": "Deploying language-model agents onboard mobile robots requires task reasoning and responsive execution within limited compute and memory. We propose BT-Agent, an onboard architecture combining LLM-driven task decisions with predefined behavior-tree (BT) skills. These skills enforce execution conditions and return structured failure feedback. We demonstrate fully onboard operation with a 9B model on a quadruped across five task categories. Intervention tests show that local checks stop ongoing navigation without waiting for another model decision, while the agent remains active to retry or report constraints. To compare agent designs efficiently, we introduce a 161-task multi-fidelity benchmark, evaluated in text on all tasks and in Habitat on 39. Text supports 10.9$\\times$ higher evaluation throughput, while simulation reveals how perception and motion failures change task outcomes. BT-Agent's largest success gains over the strongest Act/ReAct baseline occur at 4B and 9B: approximately 10 and 5 percentage points. Ablations identify structured tool calls and informative failure feedback as the most useful components.",
-      "url": "https://arxiv.org/abs/2610.13862v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.13862v1",
-      "published": "2026-10-09T17:08:45Z",
-      "updated": "2026-10-09T17:08:45Z",
+      "abstract": "Bringing general-purpose agents into the physical world calls for an executable representation of physical intelligence. Compared with vision-language-action (VLA) models, which map observations and language instructions directly to actions, code makes control logic explicit and reusable. Code can serve not only as a policy representation but also as the workspace in which the agent solves a task. Rather than following a prescribed workflow of planning, execution, and verification, the agent can autonomously inspect the state, revise and execute code, and use feedback to choose the next step. The success of this SWE-style loop in digital environments motivates its extension to physical tasks. Yet physical execution remains prone to recurring failures. To retain and refine experience for later scenes, we introduce EmbodiedEvo, where a coding agent evolves reusable Skills and Lessons through feedback on a single Playground scene, then freezes the resulting harness for diverse new scenes. On RoboDojo-Sim, EmbodiedEvo achieves an average score of 44.48 and a success rate of 37.82\\%, surpassing all officially verified results. Paired tests show the largest gains on memory-dependent tasks and successful reuse of coordinated procedures, while fine contact control remains difficult. Experience from stronger models also improves weaker executors: Astra's experience raises Sol and Luna's success rates by 8.86 and 5.50 percentage points over no experience. Compared with raw interaction history, Skills and Lessons achieve comparable task performance at 53.0\\% lower execution cost.",
+      "url": "https://arxiv.org/abs/2610.18867v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.18867v1",
+      "published": "2026-10-13T17:59:51Z",
+      "updated": "2026-10-13T17:59:51Z",
       "categories": [
         "cs.RO"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2610.13849v1",
-      "title": "HorizonNav: Geometry-Guided Video Diffusion for Anticipatory 3D Robot Navigation",
+      "id": "2610.18866v1",
+      "title": "AutoAgent0: An Agentic Runtime for Safe Closed-Loop Driving",
       "authors": [
-        "Hajira Amjad",
-        "Valerii Serpiva",
-        "Viacheslav Liubimov",
-        "Didar Seyidov",
-        "Dzmitry Tsetserukou"
+        "Jiageng Liu",
+        "Seth Z. Zhao",
+        "Zewei Zhou",
+        "Alejandro Huerta",
+        "Aidan Bayer-Calvert",
+        "Yuxin Bao",
+        "Haotian Lin",
+        "Robert Spataru",
+        "Zijun Cui",
+        "Yining Hong",
+        "Bolei Zhou",
+        "Jiaqi Ma"
       ],
-      "abstract": "We present HorizonNav, a video diffusion-based framework for anticipatory robot navigation that transforms a single RGB image and a text prompt into a geometrically aligned representation of plausible surrounding 3D space. Given the initial observation and a textual description of the reconstruction objective, a vision-language model, guided by designed instructions, interprets the scene and constructs structured prompts for a video diffusion model. The resulting video sequence provides plausible future observations of the environment, which are subsequently processed using monocular ORB-SLAM3 for camera pose estimation and Video Depth Anything for dense depth prediction. Our central contribution is a geometry-guided depth alignment stage that combines the estimated camera poses with triangulated visual landmarks to constrain dense depth predictions across multiple views. This alignment improves the geometric consistency of the reconstructed 3D environment, addressing inconsistencies that temporal coherence of the generated video alone cannot resolve. The experimental evaluation of navigation in imagined 3D environment shows that across a 19-scene horizon study, planning-feasible scenes increase from 13/19 at P20 to 15/19 at P81, while successful RRT trials increase from 62/90 to 75/90. In a separate corridor study, 6 of 25 evaluable generated-camera trajectories violate the reconstructed collision constraints; RRT planner recovers feasible alternatives in 5 of those 6 cases. A larger archive contains 58 usable reconstructions from 67 attempted cases, of which 36 support a downstream plan and 22 do not, exposing reconstruction and free-space failure modes rather than hiding them without lidar. Across 15 corridor reconstructions, the mean reconstruction error is approximately 0.30 m at matched structural landmarks.",
-      "url": "https://arxiv.org/abs/2610.13849v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.13849v1",
-      "published": "2026-10-09T16:57:08Z",
-      "updated": "2026-10-09T16:57:08Z",
+      "abstract": "Safe autonomous driving requires more than accurate planning at a single frame: it demands reliable closed-loop execution in dynamic environments. Although end-to-end driving policies have advanced rapidly, the accumulated closed-loop errors, especially in unseen scenarios, can push vehicles into states from which the same policy struggles to recover. We address the challenge by treating closed-loop driving safety as a test-time execution problem. We introduce AutoAgent0, an agentic runtime and harness framework that augments existing driving experts with complementary detection skills, rule-based action verification, and feedback-driven recovery. To address inaccurate scene perception, an independent detection module constructs scene context using complementary perception skills, and a rule-based verifier checks proposed trajectories against this context before execution. When the nominal trajectories are unreliable, the orchestrator of the runtime activates Recovery Planning, where an agentic loop constructs alternative action proposals from action primitives and iteratively refines them using verification feedback. This design combines independent scene assessment with feasibility checks and online recovery, addressing both perception errors and the limited recovery capabilities of individual experts. Evaluations on Fail2Drive and NavSafe-$\\infty$ demonstrate improved closed-loop robustness over single-expert execution in long-tail and safety-critical scenarios. These results demonstrate that runtime supervision can improve closed-loop robustness across multiple driving experts without retraining the underlying policies.",
+      "url": "https://arxiv.org/abs/2610.18866v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.18866v1",
+      "published": "2026-10-13T17:59:50Z",
+      "updated": "2026-10-13T17:59:50Z",
       "categories": [
         "cs.RO"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2610.13838v1",
-      "title": "Mapless, Stabilizing, and Anti-Stuck Flipper Control for Articulated Tracked Robots",
+      "id": "2610.18855v1",
+      "title": "Interaction Latents as Actions for Contact-Rich Manipulation",
       "authors": [
-        "Valent\u00fdn \u010c\u00edhala",
-        "Pavel Sarga",
-        "Martin Pecka",
-        "Tom\u00e1\u0161 Svoboda",
-        "Karel Zimmermann"
+        "Yuhang Zheng",
+        "Yujie Zang",
+        "Yuchen Liu",
+        "Yupeng Zheng",
+        "Zhennan Jiang",
+        "Zebin Xing",
+        "Shuai Tian",
+        "Songen Gu",
+        "Jingxiang Guo",
+        "Chen Gao",
+        "Zhongpu Xia",
+        "Shuicheng Yan"
       ],
-      "abstract": "Nearly every autonomous or semi-autonomous flipper controller assumes access to an elevation map of the terrain under and in front of the robot. The terrain beneath the chassis is occluded in the sensors, so the map is remembered through odometry integration, whose drift corrupts it. We present Stabilizing Anti-Stuck (SAS), a mapless controller that combines a stabilization term for body roll and pitch with an anti-stuck term that frees the robot when it gets stuck. As input, SAS uses the IMU, the flipper joint angles, and a motion cue that only tells whether the robot is moving. The cue is computed over a short window and never accumulated, so SAS does not inherit the odometry-integration drift that corrupts the map. We deploy SAS on a tracked robot with four flippers and evaluate it against manual teleoperation and prior flipper controllers in a large comparison, both in simulation and on a real obstacle. In simulation and on the real robot, SAS achieves traversal quality comparable to state-of-the-art map-based controllers. On a log hidden in tall grass, invisible to the LiDAR, the best map-based controller gets stuck while SAS traverses the hidden obstacle without a problem.",
-      "url": "https://arxiv.org/abs/2610.13838v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.13838v1",
-      "published": "2026-10-09T16:48:23Z",
-      "updated": "2026-10-09T16:48:23Z",
+      "abstract": "Contact-rich manipulation requires robots to coordinate not only where to move, but also how contact and force should evolve throughout an interaction. Yet most robot policies represent actions primarily as motion trajectories, using tactile signals as inputs or auxiliary prediction targets without explicitly encoding contact dynamics in the action representation. We propose ILA (Interaction Latents as Actions), which uses decodable interaction latents that jointly capture the evolution of motion, contact, and force application as policy action units, providing a shared representation for action generation, evaluation, and offline improvement. We learn these latents through visually conditioned joint action-tactile reconstruction with a time-conditioned implicit decoder. Using them as flow-matching generation targets supports post-training of pretrained vision-language-action models (VLAs) and world action models (WAMs), as well as training flow-matching policies from scratch. A shared decoder maps generated latents to executable actions. For offline improvement, we learn a tactile-conditioned expert reference model from interaction latents encoded from expert demonstrations. The resulting expert-consistency rewards guide weighted learning from successful rollouts, while observation-compatible expert references guide correction of low-reward predictions from failed rollouts. Across three policy families, ILA improves success rates averaged over four real-world tasks by 21.0-36.5 percentage points relative to tactile-conditioned direct-action baselines. Ablations highlight the benefit of encoding contact evolution in action targets beyond tactile conditioning, while the same latent space supports expert-guided offline improvement. Project website: https://mrsecant.github.io/ILA/.",
+      "url": "https://arxiv.org/abs/2610.18855v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.18855v1",
+      "published": "2026-10-13T17:59:16Z",
+      "updated": "2026-10-13T17:59:16Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2610.18852v1",
+      "title": "ForceWAM: Decoupling Future and Response Learning from Demo and Play Data for Contact-Rich Manipulation",
+      "authors": [
+        "Zijun Xu",
+        "Wendi Chen",
+        "Xinkai Wang",
+        "Jiachen Zou",
+        "Hongjin Chen",
+        "Hairuo Liu",
+        "Bokai Lin",
+        "Shihao Ma",
+        "Ke Ma",
+        "Zhiwei Zhang",
+        "Zhuohao Yan",
+        "Ke Wu",
+        "Haoming Song",
+        "Xueqi Li",
+        "Chuan Wen",
+        "Jieru Zhao",
+        "Wenchao Ding",
+        "Cewu Lu",
+        "Lixin Yang"
+      ],
+      "abstract": "Expert demonstrations show how to complete contact-rich tasks, but provide limited coverage of how interaction forces respond to different actions. Task-agnostic play provides broader experience of contact dynamics without specifying task goals. To fully leverage these two types of data, we introduce ForceWAM, a force world action model that decouples knowledge of task-compatible interaction outcomes from knowledge of how local actions change contact. A world model learns from successful demonstrations to jointly predict future video and six-axis force/torque trajectories. Together, these futures describe the expected evolution of motion and contact during the task. A separate inverse dynamics model (IDM) learns from both task and play, mapping current observations and recorded visual-wrench futures to their associated robot actions. Play data thus provide knowledge of force responses for goal-directed execution. At deployment, the IDM reactively translates generated futures into actions, reusing them with fresh wrench feedback between world-model updates. Across real-robot force-regulated sliding, box flipping with and without disturbances, and ring placement, ForceWAM achieves $85$-$95\\%$ mean success, surpassing world-modeling and reactive baselines. Our experiments further show that adding task-agnostic play data improves success by $15$-$45$ percentage points, demonstrating its value for learning contact-rich execution. Project page and code are available at https://force-wam.github.io/.",
+      "url": "https://arxiv.org/abs/2610.18852v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.18852v1",
+      "published": "2026-10-13T17:58:44Z",
+      "updated": "2026-10-13T17:58:44Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2610.18850v1",
+      "title": "Collaborative Planning for UAV-UGV Teams under Operational Constraints via Masked Error-bounded Neuro-Symbolic Diffusion",
+      "authors": [
+        "Zihao Deng",
+        "Qianhuang Li",
+        "Maggie Wigness",
+        "John Rogers",
+        "Donghyun Kim",
+        "Hao Zhang"
+      ],
+      "abstract": "Collaborative planning under operational constraints is essential for heterogeneous robot teams in large-scale missions. Unmanned Aerial Vehicles (UAVs) provide rapid area coverage but are limited by onboard energy, while Unmanned Ground Vehicles (UGVs) can serve as mobile recharging stations yet are constrained by road-network traversability. Effective collaboration must enforce operational constraints during execution while enabling parallel, coordinated actions. Masked Diffusion Models (MDMs) have shown promise through token unmasking but have two key limitations: entropy-guided scheduling assumes distributional alignment and reliance on differentiable constraints for diffusion-time optimization. We propose Masked Error-bounded Neuro-Symbolic Diffusion (MEND), which formulates collaborative planning as a conditional masked generative process to generate context-aware action sequences for UAV-UGV teams. MEND introduces a neuro-symbolic diffusion paradigm that constrains conditional masked diffusion policies at execution by reweighting the learned action distribution with a logic-induced admissibility indicator, thereby enforcing compliance with operational constraints. MEND introduces an error-bounded inference scheduling at execution that constructs the unmasking schedule by selecting positions with minimal predictive entropy over the constraint-aware action distribution, enhancing collaborative planning optimality under operational constraints. Extensive experimental results in simulation, on real-world maps, and with physical robot teams demonstrate that MEND advances UAV-UGV collaborative planning under operational constraints.",
+      "url": "https://arxiv.org/abs/2610.18850v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.18850v1",
+      "published": "2026-10-13T17:58:37Z",
+      "updated": "2026-10-13T17:58:37Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2610.18848v1",
+      "title": "Contact Trajectory Prompting: In-Context Transfer of Contact-Rich Behaviors from a Single Demonstration",
+      "authors": [
+        "Xian Nie",
+        "Yujie Zang",
+        "Yuhang Zheng",
+        "Yupeng Zheng",
+        "Songen Gu",
+        "Wendi Chen",
+        "Chuan Wen",
+        "Cewu Lu",
+        "Wenchao Ding",
+        "Junchi Yan",
+        "Shuicheng Yan"
+      ],
+      "abstract": "In-context robot learning enables robots to acquire new behaviors from demonstrations without test-time parameter updates. However, visual and kinematic specifications alone may not distinguish contact-rich behaviors that share similar motions but require different interaction intensities or patterns. We propose Contact Trajectory Prompting (CTP), a framework for one-shot transfer of contact-rich manipulation behaviors. CTP encodes motion and contact information from a single demonstration into an ordered contact trajectory prompt that captures their temporal evolution and specifies the desired physical interaction behavior. During execution, the policy uses online sensory feedback to retrieve interaction-relevant information from the prompt, conditioning closed-loop action generation on the demonstrated contact behavior. Across real-world wiping, rotation, and insertion tasks on objects excluded from training, CTP achieves 78.7% overall success, outperforming the strongest evaluated baseline by 13.0 percentage points. Changing only the reference demonstration enables CTP to follow contact specifications for both intensity and direction, including an intermediate wiping force level and clockwise or counterclockwise cap rotation. These results demonstrate that contact trajectories serve as effective behavioral specifications, extending in-context robot learning beyond motion imitation to physical interaction transfer. Project website: https://ctp-robotics.github.io/project_page.",
+      "url": "https://arxiv.org/abs/2610.18848v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.18848v1",
+      "published": "2026-10-13T17:58:08Z",
+      "updated": "2026-10-13T17:58:08Z",
       "categories": [
         "cs.RO"
       ],
