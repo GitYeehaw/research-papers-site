@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-10-16T13:15:20.763222+00:00",
+  "scraped_at": "2026-10-17T12:18:53.704445+00:00",
   "researcher_count": 54,
   "researchers": [
     {
@@ -119,112 +119,8 @@
       "field": "Robotics, kinematics, manipulation, motion planning",
       "institution": "California Institute of Technology",
       "website": "https://www.me.caltech.edu/people/joel-burdick",
-      "paper_count": 5,
-      "papers": [
-        {
-          "id": "2610.17337v1",
-          "title": "Filtering for Liveness: Recurrence via Backup Reachability Control Barrier Functions",
-          "authors": [
-            "David E. J. van Wijk",
-            "Pio Ong",
-            "Aaron D. Ames",
-            "Joel W. Burdick"
-          ],
-          "abstract": "Liveness requires a dynamical system to repeatedly accomplish a desired objective over time. In this work, we consider a particular form of liveness known as recurrence, which requires the closed-loop trajectory to regularly revisit a prescribed set, with no more than a specified amount of time between visits. Inspired by the control barrier function (CBF) safety-filter paradigm, we develop a controller-filtering framework that makes adjustments to a nominal controller only when necessary to guarantee recurrence. Unlike conventional CBF methods, which enforce set forward invariance, our framework allows the trajectory to leave the set while guaranteeing its timely return. To achieve this, our framework combines two components: a backup reachability CBF that preserves the ability to return to the prescribed set within the allowable time, and a timing-based mechanism that invokes a reaching controller only when the nominal behavior would otherwise fail to meet the return-time requirement. The resulting framework guarantees recurrence while preserving the nominal behavior when possible, enabling control objectives that require temporary excursions from the set, such as traversal between disjoint regions. Our method is successfully utilized in a drone racing example with a recurrence constraint on beacon visibility.",
-          "url": "https://arxiv.org/abs/2610.17337v1",
-          "pdf_url": "https://arxiv.org/pdf/2610.17337v1",
-          "published": "2026-10-12T19:44:55Z",
-          "updated": "2026-10-12T19:44:55Z",
-          "categories": [
-            "eess.SY",
-            "cs.RO"
-          ],
-          "primary_category": "eess.SY"
-        },
-        {
-          "id": "2610.14379v1",
-          "title": "OATH: Object-Agnostic Tracking for Dexterous Hands, Enabling Rapid Physics-based Retargeting",
-          "authors": [
-            "Solvin Sigurdson",
-            "Prasanna Sriganesh",
-            "Juan Borbon",
-            "Joel Burdick",
-            "Dingqi Zhang",
-            "Jiuguang Wang"
-          ],
-          "abstract": "Retargeting human demonstrations into dynamically feasible dexterous hand trajectories requires resolving complex contact physics, yet current methods either omit physical constraints or rely on computationally expensive sampling-based optimization in simulation. Reinforcement learning has previously been used to achieve planning and control through contact dynamics; however, standard policies require object-specific training and fail to generalize across arbitrary geometries. This work reframes physics-based retargeting as a residual learning problem, where we demonstrate that zero-shot generalization across objects relies on structured state representations. Specifically, formulating the observation space to include a localized contact-error signal guiding each robot link to its target coordinate on the object surface enables a single, unified residual policy to successfully grasp novel, unseen object geometries. Rolling out this policy in simulation on a kinematic reference trajectory yields a physics-based retargeter, OATH. Operating at 0.4 seconds of compute per second of reference, OATH achieves 2.4x faster-than-real-time performance and a 60-350x reduction in computational cost compared to sampling-based methods. The system recovers 58% of held-out and 54% of unseen-object DexYCB trajectories while maintaining a sub-2 cm tracking error.",
-          "url": "https://arxiv.org/abs/2610.14379v1",
-          "pdf_url": "https://arxiv.org/pdf/2610.14379v1",
-          "published": "2026-10-09T22:55:25Z",
-          "updated": "2026-10-09T22:55:25Z",
-          "categories": [
-            "cs.RO"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2609.22462v1",
-          "title": "VLPSA: Vision-Language-Poisson-Safe Actions for Full-Body Safety of Learned Policies",
-          "authors": [
-            "Meg Wilkinson",
-            "Emily Fourney",
-            "Joel W. Burdick",
-            "Aaron D. Ames"
-          ],
-          "abstract": "Vision-language-action (VLA) models enable increasingly general-purpose robotic manipulation, but such learned policies do not provide safety guarantees for collision avoidance---especially in environments outside of training distributions. This work presents Vision-Language-Poisson-Safe Actions (VLPSA), a safety filtering framework that provides full-body safety for VLA policies in cluttered and dynamic environments without retraining. VLPSA synthesizes Poisson Safety Functions (PSF) online from perception data, yielding a Control Barrier Function (CBF) that is enforced through a CBF-QP safety filter over the full body and any grasped object, treated as an extension of the final robot link. To enable real-time deployment while maintaining fine spatial resolution in critical task regions, VLPSA combines dual resolutions of this PSF using Boolean CBF compositions. We evaluate VLPSA on SafeLIBERO against safety-filtering baselines, where it achieves the highest collision avoidance rate among the evaluated methods, increasing collision avoidance from 23.1% for the base $\u03c0_{0.5}$ policy to 91.2% while surpassing its task success rate. We further deploy VLPSA on a Franka FR3 in cluttered scenes with dynamic obstacles and human interference, demonstrating real-time full-body safety during manipulation tasks.",
-          "url": "https://arxiv.org/abs/2609.22462v1",
-          "pdf_url": "https://arxiv.org/pdf/2609.22462v1",
-          "published": "2026-09-18T18:22:12Z",
-          "updated": "2026-09-18T18:22:12Z",
-          "categories": [
-            "cs.RO"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2608.03116v1",
-          "title": "Shooting for Contact: Contact-Implicit Multiple Shooting for Dynamic Motion Retargeting",
-          "authors": [
-            "Sergio A. Esteban",
-            "Jason H. K. Siu",
-            "Derrick Mach",
-            "Junheng Li",
-            "Vince Kurtz",
-            "Joel W. Burdick",
-            "Aaron D. Ames"
-          ],
-          "abstract": "Motion retargeting approaches often prioritize kinematic similarity over whole-body dynamics, contact consistency, and actuation limits, yielding references that are difficult for reinforcement learning (RL) policies to reproduce, particularly for contact-rich behaviors. We present a contact-implicit, direct simulation-based multiple shooting (DSMS) framework that transforms kinematically feasible references into dynamically feasible whole-body trajectories. By embedding a differentiable simulator within a nonlinear program, DSMS resolves contact, friction, impacts, self-collision, and joint limits internally while enforcing tracking, actuation, and task constraints without prescribing a contact schedule or introducing explicit contact constraints. Compared with existing retargeting methods, DSMS accelerates motion-imitation RL training and yields policies with high success rates and low tracking error. We further demonstrate zero-shot sim-to-real transfer on the Unitree G1 through command-conditioned contact-rich crawling and a highly dynamic 180-degree jump-turn.",
-          "url": "https://arxiv.org/abs/2608.03116v1",
-          "pdf_url": "https://arxiv.org/pdf/2608.03116v1",
-          "published": "2026-08-04T04:38:34Z",
-          "updated": "2026-08-04T04:38:34Z",
-          "categories": [
-            "cs.RO",
-            "eess.SY"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2607.20842v1",
-          "title": "Robust Adaptive Backup Control Barrier Functions",
-          "authors": [
-            "Ersin Da\u015f",
-            "David E. J. van Wijk",
-            "Tamas G. Molnar",
-            "Aaron D. Ames",
-            "Joel W. Burdick"
-          ],
-          "abstract": "We propose a notion of robust adaptive backup control barrier functions for nonlinear control affine systems with parametric uncertainty in both the drift dynamics and actuation matrix. Backup control barrier functions guarantee safety by predicting the system's trajectory under a pre-certified safe controller. However, these predictions rely on the model and can be inaccurate when the system contains unknown parameters. To address this issue, we estimate the unknown parameters using element-wise certified adaptive estimators that provide a parameter adaptation law and component-wise estimation error bounds. We compute the backup flow using the estimated model and tighten the safety conditions using these certified bounds. The resulting safety conditions account for the sensitivity of the predicted flow to parameter estimation errors. Moreover, to handle uncertainty in the actuation matrix, we use a duality-based reformulation that enables the use of a computationally efficient quadratic-program-based safety filter. We prove that controllers satisfying the proposed robust adaptive backup control barrier function constraints guarantee safety under parametric uncertainty and input constraints.",
-          "url": "https://arxiv.org/abs/2607.20842v1",
-          "pdf_url": "https://arxiv.org/pdf/2607.20842v1",
-          "published": "2026-07-23T02:05:33Z",
-          "updated": "2026-07-23T02:05:33Z",
-          "categories": [
-            "eess.SY"
-          ],
-          "primary_category": "eess.SY"
-        }
-      ]
+      "paper_count": 0,
+      "papers": []
     },
     {
       "id": "chung_s",
