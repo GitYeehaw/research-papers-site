@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-10-18T12:38:47.852659+00:00",
+  "scraped_at": "2026-10-19T15:34:51.669371+00:00",
   "researcher_count": 54,
   "researchers": [
     {
@@ -1708,6 +1708,25 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2610.23849v1",
+          "title": "Blind Precise Assembly: Proprioceptive Sim-to-Real Peg-in-Hole for Diverse Parts",
+          "authors": [
+            "Antonia Bronars",
+            "Younghyo Park",
+            "Kushal Kedia",
+            "Pulkit Agrawal"
+          ],
+          "abstract": "Every robot already carries high-resolution contact sensors: its own joints. Legged robots and humanoids exploit them to walk, run, and track whole-body motions without vision, but there the contacts are large and forceful. Is joint sensing also enough for precise, contact-rich assembly, where the robot must find a millimeter-scale opening, mesh gear teeth, or catch a thread through light contact? We study this question by training blind assembly policies that observe only a short history of joint positions, velocities, and their own actions, without visual, force, torque, or tactile sensing. The poses of both the fixture and the part are unknown to the policy, and the grasp is randomized substantially. The policy must therefore assemble the parts through contact, sensed exclusively through its own proprioception. Trained with reinforcement learning entirely in simulation over randomized parts, grasps, and contacts, such policies learn peg insertion, gear meshing, and nut threading. The peg insertion policy transfers zero-shot to the real world and inserts pegs of different shapes and sizes in 73% of trials. Controlled comparisons with matched visual policies in simulation show that blind policies generalize far better to unseen part shapes and sizes, though they can be slower. Training such policies needs thousands of different assemblies, each simulated with its clearance intact, so we also release an open-source generator that builds them procedurally from exact convex pieces for MuJoCo; it is more accurate and faster than convex decomposition or MuJoCo's signed-distance collision. Videos and interactive simulations are at https://younghyopark.me/blind-proprioceptive-assembly/.",
+          "url": "https://arxiv.org/abs/2610.23849v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.23849v1",
+          "published": "2026-10-16T17:58:48Z",
+          "updated": "2026-10-16T17:58:48Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2610.22119v1",
           "title": "Compliant GMT: Making General Motion Tracking Compliant via Residual Reference Adaptation",
           "authors": [
@@ -1788,24 +1807,6 @@
             "cs.AI"
           ],
           "primary_category": "cs.CL"
-        },
-        {
-          "id": "2608.17896v1",
-          "title": "Dynamic Compression in Recurrent Networks",
-          "authors": [
-            "Jyothish Pari",
-            "Ryan Bahlous-Boldi",
-            "Pulkit Agrawal"
-          ],
-          "abstract": "Recurrent models process long contexts efficiently by compressing their history into a fixed-size state, but modern architectures typically do so in a single causal pass over the sequence. Each input must therefore be compressed before the model knows how it will later be used, forcing a limited state to compromise across possible future demands. We introduce dynamic compression, which allows a recurrent model to selectively revisit past tokens and revise its fixed-size state through additional recurrent updates. The model need not preserve every part of the history at uniformly high fidelity in its recurrent state, because lower-fidelity information can be revisited from the retained raw sequence when it becomes relevant. We study this in a controlled setting where the model first learns multiple functions in-context and, later in the same sequence, encounters a series of few-shot tasks that each require it to identify and reuse one of those functions. A single-pass model must preserve every function at sufficient fidelity for any future task, whereas selective re-scanning allows the model to revisit and refine only the function currently needed. We find that dynamic compression substantially reduces the recurrent state required for accurate reuse and scales more favorably as the number of stored functions grows. These results demonstrate a computation--memory tradeoff in which recurrent models can spend more computation revisiting their history to make more effective use of a fixed-size state.",
-          "url": "https://arxiv.org/abs/2608.17896v1",
-          "pdf_url": "https://arxiv.org/pdf/2608.17896v1",
-          "published": "2026-08-18T15:29:18Z",
-          "updated": "2026-08-18T15:29:18Z",
-          "categories": [
-            "cs.LG"
-          ],
-          "primary_category": "cs.LG"
         }
       ]
     },
@@ -2495,7 +2496,7 @@
           "primary_category": "cs.AI"
         },
         {
-          "id": "2605.14344v2",
+          "id": "2605.14344v3",
           "title": "CrystalReasoner: Reasoning and RL for Property-Conditioned Crystal Structure Generation",
           "authors": [
             "Yuyang Wu",
@@ -2504,10 +2505,10 @@
             "Sherry Yang"
           ],
           "abstract": "Generative modeling has emerged as a promising approach for crystal structure discovery. However, existing LLM-based generative models struggle with low-level atomic precision, while diffusion-based methods fall short in integrating high-level scientific knowledge. As a result, generated structures are often invalid, unstable, or do not possess desirable properties. To address this gap, we propose CrystalReasoner (CrysReas), an end-to-end LLM framework that generates crystal structures from natural language instructions through reasoning and alignment. CrysReas introduces physical priors as thinking tokens, which include crystallographic symmetry, local coordination environments and predicted physical properties before generating atomic coordinates. This bridges the gap between natural language and 3D structures. CrysReas then employs reinforcement learning (RL) with a multi-objective, dense reward function to align generation with physical validity, chemical consistency, and thermodynamic stability. For property-conditioned tasks, we design task-specific reward functions and train specialized models for discrete constraints (e.g., space group) and continuous properties (e.g., elasticity, thermal expansion). Empirical results demonstrate that compared to prior works and baselines without thinking traces or RL, CrysReas obtains better performance on diverse metrics, triples S.U.N. ratio, and achieves better performance for property conditioned generation. CrysReas also exhibits adaptive reasoning, increasing reasoning lengths as the number of atoms increases. Our work demonstrates the potential of leveraging thinking traces and RL for generating valid, stable, and property-conditioned crystal structures.",
-          "url": "https://arxiv.org/abs/2605.14344v2",
-          "pdf_url": "https://arxiv.org/pdf/2605.14344v2",
+          "url": "https://arxiv.org/abs/2605.14344v3",
+          "pdf_url": "https://arxiv.org/pdf/2605.14344v3",
           "published": "2026-05-14T04:08:51Z",
-          "updated": "2026-05-15T13:35:45Z",
+          "updated": "2026-10-16T13:54:43Z",
           "categories": [
             "cs.AI"
           ],
@@ -2547,6 +2548,26 @@
       "website": "https://www.proroklab.org/",
       "paper_count": 5,
       "papers": [
+        {
+          "id": "2610.23662v1",
+          "title": "Learning Robot Metareasoning: Adaptive Computation Budgets for Real-Time Control",
+          "authors": [
+            "Lorenzo Magnino",
+            "Antonio Marino",
+            "Michael Amir",
+            "Daigo Shishika",
+            "Amanda Prorok"
+          ],
+          "abstract": "Planning while moving faces an historical trade-off between deliberation and reactivity. A planner running concurrently with execution needs time to compute, so the robot must commit to an open-loop action chunk for that duration: a longer commitment buys a better plan at the cost of feedback frequency. Existing controllers fix this action commitment, and consequently the computation budget, before deployment. However, the optimal computation time is highly state-dependent (due to factors such as unmodeled dynamics, safety constraints, and marginal optimisation gains), i.e. dynamic, therefore offline static tuning risks leaving systems blind during critical maneuvers or unable to find global effective solutions. We cast the identification of the optimal computation budget as a semi-Markov decision process (SMDP) in which a single decision defines both the robot action commitments and the time allocated to the solver. To solve this, we train a reinforcement-learning policy conditioned on the current state, the executing plan, and inexpensive planner statistics. Across ground-robot navigation, agile quadrotor flight, and contact-rich manipulation, the learned policy changes its budget with the demands of the scenario, discovering efficient reasoning patterns that outperform fixed-budget baselines. https://lorenzomagnino.github.io/learning-robot-metareasoning-review/",
+          "url": "https://arxiv.org/abs/2610.23662v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.23662v1",
+          "published": "2026-10-16T15:55:39Z",
+          "updated": "2026-10-16T15:55:39Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
         {
           "id": "2610.06290v1",
           "title": "GAMBIT: Learning to Plan Continuous Multi-Robot Trajectories",
@@ -2633,26 +2654,6 @@
             "cs.MA"
           ],
           "primary_category": "cs.RO"
-        },
-        {
-          "id": "2605.31318v1",
-          "title": "Generalized Intention Modeling in Multi-Agent Reinforcement Learning",
-          "authors": [
-            "Mateusz Odrowaz-Sypniewski",
-            "Jasmine Bayrooti",
-            "Ajay Shankar",
-            "Amanda Prorok"
-          ],
-          "abstract": "Modeling an opponent's intent is critical for effective decision-making in non-cooperative, competitive, and general-sum multi-agent reinforcement learning. Existing opponent modeling methods encode intent using an embedding derived from episode information chosen a priori, such as the opponent's next action or a future environment state, and use this to guide the ego-agent's behavior. These approaches assume that the chosen information is universally representative of intent; however, we show empirically that this is not the case as intentions are often task- and environment-dependent. To address this, we introduce a task-adaptive opponent modeling framework that learns a performance-driven mixture of multiple intent representations. We further introduce a new intention representation that maximizes mutual information with the ego-agent's future returns, thereby capturing opponent information that is most directly relevant to performance. Our approach consistently matches or exceeds the performance of state-of-the-art baselines across diverse tasks and yields insights into when and why different opponent modeling strategies succeed.",
-          "url": "https://arxiv.org/abs/2605.31318v1",
-          "pdf_url": "https://arxiv.org/pdf/2605.31318v1",
-          "published": "2026-05-29T13:48:18Z",
-          "updated": "2026-05-29T13:48:18Z",
-          "categories": [
-            "cs.LG",
-            "cs.MA"
-          ],
-          "primary_category": "cs.LG"
         }
       ]
     },
@@ -2901,6 +2902,27 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2610.23173v1",
+          "title": "Structural Affinity: An Algorithm for Coherent Cage-Based Shape Design",
+          "authors": [
+            "Aviraj Newatia",
+            "Shengan Yang",
+            "Hantao Zhong",
+            "Rika Antonova"
+          ],
+          "abstract": "Cage-based deformation (CBD) parametrises 3D geometry through a small set of control handles, effectively enabling a variety of tasks from animation and interactive modelling to tool-based co-design, neural deformation transfer, and aerodynamic shape optimization. Many optimization approaches relying on CBD employ regularisation strategies to reduce the distortion of the deformed mesh by encouraging smooth, regular cage deformations. These techniques offer soft guidance to an optimization algorithm towards desirable deformations, but compete with the task objective rather than changing the deformation parameterization itself. In this work we introduce Structural Affinity for CBD, an explicit regularisation method which enables smooth deformations through control cages by exploiting a two-cage structure to couple cage-handle motion directly. Structural Affinity precomputes an affinity matrix using mean-value coordinates, binding the inner control-cage to a coarser outer-cage. This matrix defines how much a cage handle displacement propagates to neighbouring handles which substantially decreases and often eliminates cage self-intersections, reduces mesh distortion, and adds linear overhead at deformation time. Across robotic control--morphology co-design, source-to-target neural deformation transfer, and aerodynamic wing shape optimization, Structural Affinity produces more regular deformations and substantially reduces reliance on hand-designed structural loss terms. We report consistent gains on three complementary diagnostics: the cotangent Laplacian, a proxy for surface smoothness; cage distortion, capturing whether control handles move coherently; and surface roughness, which measures undesirable oscillation in wing geometry.",
+          "url": "https://arxiv.org/abs/2610.23173v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.23173v1",
+          "published": "2026-10-16T09:10:31Z",
+          "updated": "2026-10-16T09:10:31Z",
+          "categories": [
+            "cs.LG",
+            "cs.GR",
+            "cs.RO"
+          ],
+          "primary_category": "cs.LG"
+        },
+        {
           "id": "2610.02366v1",
           "title": "Co-design Gym: A Unified Benchmark for Embodiment-Policy Co-optimization",
           "authors": [
@@ -3001,35 +3023,6 @@
             "cs.GR"
           ],
           "primary_category": "cs.RO"
-        },
-        {
-          "id": "2603.08721v2",
-          "title": "KernelCraft: Benchmarking for Agentic Close-to-Metal Kernel Generation on Emerging Hardware",
-          "authors": [
-            "Jiayi Nie",
-            "Haoran Wu",
-            "Yao Lai",
-            "Zeyu Cao",
-            "Cheng Zhang",
-            "Binglei Lou",
-            "Erwei Wang",
-            "Jianyi Cheng",
-            "Timothy M. Jones",
-            "Robert Mullins",
-            "Rika Antonova",
-            "Yiren Zhao"
-          ],
-          "abstract": "New AI accelerators with novel instruction set architectures (ISAs) often require developers to manually craft low-level kernels, a time-consuming and error-prone process that does not scale across hardware targets. This delays emerging hardware platforms from reaching the market. While prior LLM-based code generation has shown promise in mature GPU ecosystems, it remains unclear whether agentic LLM systems can quickly produce valid and efficient kernels for emerging hardware with new ISAs. We present KernelCraft: the first benchmark for evaluating an LLM agent's ability to generate and optimize low-level kernels for customized accelerators through a function-calling, feedback-driven workflow. We evaluate agent performance across three emerging accelerators on more than 20 machine-learning tasks, each with five diverse task configurations. Across four leading reasoning models, the strongest agents generate functionally correct kernels for unseen ISAs within a few refinement steps and produce optimized kernels that match or outperform compiler baselines. These results demonstrate KernelCraft's potential to accelerate the accelerator chip development cycle. KernelCraft is available at https://kernelcraft-cam.github.io/.",
-          "url": "https://arxiv.org/abs/2603.08721v2",
-          "pdf_url": "https://arxiv.org/pdf/2603.08721v2",
-          "published": "2026-02-10T14:52:02Z",
-          "updated": "2026-05-29T10:02:49Z",
-          "categories": [
-            "cs.AR",
-            "cs.LG",
-            "cs.SE"
-          ],
-          "primary_category": "cs.AR"
         }
       ]
     },
@@ -3041,6 +3034,24 @@
       "website": "https://ai.stanford.edu/~cbfinn/",
       "paper_count": 5,
       "papers": [
+        {
+          "id": "2610.22497v1",
+          "title": "Generative Value Classifier",
+          "authors": [
+            "Alexander Swerdlow",
+            "Perry Dong",
+            "Chelsea Finn"
+          ],
+          "abstract": "Q-learning is premised on learning a function to predict the value of a state-action pair, with the goal of using such a function to guide policy improvement. Most approaches learn this function from scratch using scalar or distributional return targets. This discriminative approach leaves another source of supervision for learning representations unused: the actions themselves. Rather than directly predict the return of a state-action pair, we ask the reverse question: how likely is the action under each possible return? This perspective provides a critic whose generative component is a return-conditioned policy, which can share the actor's architecture. Training this policy supervises the critic with every action rather than with returns alone, and a squared-error loss anchors the critic's Q-value to the bootstrapped target. We evaluate our approach on both offline and online RL tasks and show gains over leading discriminative methods, including distributional RL methods.",
+          "url": "https://arxiv.org/abs/2610.22497v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.22497v1",
+          "published": "2026-10-15T18:00:30Z",
+          "updated": "2026-10-15T18:00:30Z",
+          "categories": [
+            "cs.LG"
+          ],
+          "primary_category": "cs.LG"
+        },
         {
           "id": "2610.22273v1",
           "title": "Librarian Agents: Training LLMs to Curate Long-Context Workspaces that Anticipate Future Queries",
@@ -3137,27 +3148,6 @@
             "cs.LG"
           ],
           "primary_category": "cs.RO"
-        },
-        {
-          "id": "2609.00196v1",
-          "title": "WHALE: A Simple Recipe for Joint Harness-Weight Optimization",
-          "authors": [
-            "Haechan Kim",
-            "Yoonho Lee",
-            "Gisang Lee",
-            "Chelsea Finn",
-            "Kangwook Lee"
-          ],
-          "abstract": "Agent performance depends jointly on the model parameters and the executable harness code that manages context and control flow. Optimizing either component in isolation can leave the system bottlenecked by its frozen counterpart: weight updates can change which harness is effective, while harness updates can change which model capabilities are exposed. Existing joint-adaptation methods optimize weights and textual prompts but leave the broader harness fixed. We propose Weight-Harness Alternating LEarning (WHALE), a simple recipe that alternates two phases: updating the model under the current harness, then searching for a better harness under the updated model. We instantiate these two phases with online rejection-sampling fine-tuning and Meta-Harness, respectively. When to switch is a key design choice: to separate real improvements from noise without over-optimizing against a changing counterpart, WHALE uses either fixed phase durations or an adaptive patience rule over training signals. Using Qwen3.5-2B/4B agents across three domains (search question answering, mathematical reasoning, and chess puzzles), WHALE outperforms weight-only, harness-only, and Fast-Slow Training by 4.15-24.38 percentage points in best mean@8 accuracy. Either component can be the bottleneck: harness search matches peak weight-only accuracy with far fewer rollouts in SearchQA, but improves math accuracy only after a weight update. Small interleaved updates also outperform stagewise weight-then-harness optimization in accuracy and rollout cost. The code is available at https://github.com/krafton-ai/WHALE.",
-          "url": "https://arxiv.org/abs/2609.00196v1",
-          "pdf_url": "https://arxiv.org/pdf/2609.00196v1",
-          "published": "2026-08-31T18:12:55Z",
-          "updated": "2026-08-31T18:12:55Z",
-          "categories": [
-            "cs.LG",
-            "cs.AI"
-          ],
-          "primary_category": "cs.LG"
         }
       ]
     },
@@ -3169,6 +3159,29 @@
       "website": "https://profiles.stanford.edu/fei-fei-li",
       "paper_count": 5,
       "papers": [
+        {
+          "id": "2610.23653v1",
+          "title": "A Language-Informed Loss for Visual Generation",
+          "authors": [
+            "Suchir Agarwal",
+            "Keshigeyan Chandrasegaran",
+            "Ziyu Chen",
+            "Kyle Sargent",
+            "Juan Carlos Niebles",
+            "Li Fei-Fei",
+            "Jiajun Wu"
+          ],
+          "abstract": "End-to-end visual generation with pixel-space loss has recently achieved competitive performance without the need for learned image tokenizers. In this work, we study whether language-informed supervision can provide a richer training signal than pixel loss for visual generation. We introduce LILIE (pronounced \"lily\"), a Language-Informed and Lossless Image Encoder. LILIE is an invertible image transform trained such that a vision-language model can recover captions from noised features. The encoder uses a normalizing flow transformer trained jointly with a vision-language model via next token prediction. We then use the encoder to extract a simple language-informed loss for text-to-image generation. We train JiT models with LILIE loss, reducing gFD by 14 points (66.84 $\\to$ 53.01) against a pixel-only baseline on the GPIC dataset. Our code, encoders, and generative models are available at https://suchiragarwal.com/lilie.",
+          "url": "https://arxiv.org/abs/2610.23653v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.23653v1",
+          "published": "2026-10-16T15:49:12Z",
+          "updated": "2026-10-16T15:49:12Z",
+          "categories": [
+            "cs.CV",
+            "cs.LG"
+          ],
+          "primary_category": "cs.CV"
+        },
         {
           "id": "2610.22364v1",
           "title": "T2-z: Test-Time Optimization of Environment Latents for Robotic World Models",
@@ -3270,32 +3283,6 @@
           "updated": "2026-10-13T20:21:52Z",
           "categories": [
             "cs.RO"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2610.17748v1",
-          "title": "I3L: Iterative Interactive Imitation Learning for Whole-Body Mobile Manipulation",
-          "authors": [
-            "Wensi Ai",
-            "Christopher Luey",
-            "Karthik Dharmarajan",
-            "Evans Han",
-            "Yunfan Jiang",
-            "Stef Ren",
-            "Jianwen Xie",
-            "Jiajun Wu",
-            "Li Fei-Fei",
-            "Ruohan Zhang"
-          ],
-          "abstract": "Policies trained offline from teleoperated demonstrations can degrade outside their training distribution. This gap is particularly acute in long-horizon whole-body mobile manipulation, where long horizons amplify compounding errors and coordinated arm, torso, and base motion makes exhaustive demonstration coverage impractical. We introduce I3L, an integrated hardware and learning system that combines whole-body correction with iterative policy refinement to address this last-mile reliability gap. Its low-cost, open-source JoyLo+ interface uses policy-tracking leader arms and touch-triggered takeover to enable coordinated corrections across the body parts, while iterative deployment and retraining allow operators to target failures of the updated policy. We evaluate I3L across three robot embodiments and eight simulated and real-world tasks, including four long-horizon whole-body mobile manipulation tasks. Controlled simulation experiments show that four-round HG-DAgger achieves the highest final success on both tasks. Under this protocol, I3L improves autonomous success over the base policies by an average of 68.3 percentage points and achieves at least 90% success on every task, outperforming demonstration-only training by 35.6 percentage points on average with the same number of training trajectories. Averaged across tasks, takeover duration per episode decreases by 72% over four rounds. Together, these results show that I3L helps close the last-mile gap between offline training and reliable deployment and provides practical insights into collecting and using corrections for long-horizon whole-body mobile manipulation. Videos, visualizations, and appendix are at https://i-3l.github.io/.",
-          "url": "https://arxiv.org/abs/2610.17748v1",
-          "pdf_url": "https://arxiv.org/pdf/2610.17748v1",
-          "published": "2026-10-13T05:28:59Z",
-          "updated": "2026-10-13T05:28:59Z",
-          "categories": [
-            "cs.RO",
-            "cs.AI"
           ],
           "primary_category": "cs.RO"
         }
@@ -3442,6 +3429,29 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2610.23653v1",
+          "title": "A Language-Informed Loss for Visual Generation",
+          "authors": [
+            "Suchir Agarwal",
+            "Keshigeyan Chandrasegaran",
+            "Ziyu Chen",
+            "Kyle Sargent",
+            "Juan Carlos Niebles",
+            "Li Fei-Fei",
+            "Jiajun Wu"
+          ],
+          "abstract": "End-to-end visual generation with pixel-space loss has recently achieved competitive performance without the need for learned image tokenizers. In this work, we study whether language-informed supervision can provide a richer training signal than pixel loss for visual generation. We introduce LILIE (pronounced \"lily\"), a Language-Informed and Lossless Image Encoder. LILIE is an invertible image transform trained such that a vision-language model can recover captions from noised features. The encoder uses a normalizing flow transformer trained jointly with a vision-language model via next token prediction. We then use the encoder to extract a simple language-informed loss for text-to-image generation. We train JiT models with LILIE loss, reducing gFD by 14 points (66.84 $\\to$ 53.01) against a pixel-only baseline on the GPIC dataset. Our code, encoders, and generative models are available at https://suchiragarwal.com/lilie.",
+          "url": "https://arxiv.org/abs/2610.23653v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.23653v1",
+          "published": "2026-10-16T15:49:12Z",
+          "updated": "2026-10-16T15:49:12Z",
+          "categories": [
+            "cs.CV",
+            "cs.LG"
+          ],
+          "primary_category": "cs.CV"
+        },
+        {
           "id": "2610.22364v1",
           "title": "T2-z: Test-Time Optimization of Environment Latents for Robotic World Models",
           "authors": [
@@ -3534,29 +3544,6 @@
             "cs.RO"
           ],
           "primary_category": "cs.RO"
-        },
-        {
-          "id": "2610.15582v1",
-          "title": "Inverse Garment Design with Visual Agents",
-          "authors": [
-            "Nanxiang Jiang",
-            "Yunuo Chen",
-            "Zeng Tao",
-            "Zizhang Li",
-            "Qi Guo",
-            "Jiajun Wu",
-            "Yin Yang",
-            "Chenfanfu Jiang"
-          ],
-          "abstract": "We study the problem of inverse garment design, reconstructing simulation-ready 3D outfits with arbitrary layers from a single image, with visual agents. Unlike differentiable optimization that is time-consuming, or feed-forward methods limited by training data, we introduce DressAgent, a hierarchical agentic system that recovers garment sewing patterns through planning and closed-loop refinement grounded in physical simulation. To this end, we first present an enhanced representation based on GarmentCode for diverse styles and arbitrary dressing layers, and build the first multi-layer sewing pattern dataset with over 15K outfits for supervision and benchmarking. Inverse design then proceeds coarse to fine: In layer planning and coarse estimation, agents infer layer order and relations, peel each layer into its own view, and estimate coarse patterns. In fine-grained refinement, an agentic trio of Tailor, Critic, and Orchestrator refines patterns in a closed loop of editing, simulating, and judging against the reference with visual and measured evidence. Carefully designed tools and an evolving memory make this refinement converge on the target geometry. We also design an agentic generation method for high-fidelity textures. DressAgent outperforms feed-forward methods by a large margin, surpasses or matches differentiable optimization in a fraction of the time, and generalizes to complex layering, diverse poses, and body shapes.",
-          "url": "https://arxiv.org/abs/2610.15582v1",
-          "pdf_url": "https://arxiv.org/pdf/2610.15582v1",
-          "published": "2026-10-11T12:55:06Z",
-          "updated": "2026-10-11T12:55:06Z",
-          "categories": [
-            "cs.AI"
-          ],
-          "primary_category": "cs.AI"
         }
       ]
     },
@@ -3947,6 +3934,64 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2610.23841v1",
+          "title": "StopWatch: Goal Grounding for Object-goal Navigation",
+          "authors": [
+            "Xinhao Liu",
+            "Yunsheng Tian",
+            "Yuheng Qiu",
+            "Pieter Abbeel",
+            "Xi Chen",
+            "Guanya Shi",
+            "Chen Feng"
+          ],
+          "abstract": "Pretrained VLMs bring rich world knowledge and semantic priors to object-goal navigation, and fine-tuning a VLM into a navigation policy has become a common recipe. Despite this progress, success rates remain low, and it is unclear which capability these fine-tuned policies lack. Our diagnosis identifies goal grounding as the dominant failure. These policies explore well, yet often fail to notice that the goal is already in view or to estimate how far away it is. To address this failure, we ground the goal explicitly. Explicit grounding substantially improves success and reaches state-of-the-art results on six benchmarks across three scene collections. We also correct annotation defects in these benchmarks, so that future methods are evaluated more faithfully. Our analysis on the clean benchmarks shows that, with ground-truth grounding, our policy nearly matches the expert that generated its demonstrations, leaving the headroom in perception rather than policy learning. Our work points to goal grounding as a missing piece of object-goal navigation and offers a simple and effective solution to the task.",
+          "url": "https://arxiv.org/abs/2610.23841v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.23841v1",
+          "published": "2026-10-16T17:57:05Z",
+          "updated": "2026-10-16T17:57:05Z",
+          "categories": [
+            "cs.CV",
+            "cs.RO"
+          ],
+          "primary_category": "cs.CV"
+        },
+        {
+          "id": "2610.22496v1",
+          "title": "Scaling Online Exploration for Robot Agents",
+          "authors": [
+            "Runhan Huang",
+            "Xiangcheng Zhang",
+            "Haoyu Chen",
+            "Yitong Li",
+            "Yen-Jen Wang",
+            "Bohan Lyu",
+            "Haotian Ye",
+            "Chuye Hong",
+            "Yixuan Wang",
+            "Chloe Su",
+            "Haoyu Xiong",
+            "Yangzhen Wu",
+            "Enze Xie",
+            "Travis Manderson",
+            "Stefano Ermon",
+            "Pieter Abbeel",
+            "Antonio Torralba",
+            "Dawn Song",
+            "Weirui Ye",
+            "Yilun Du"
+          ],
+          "abstract": "Robot learning has advanced by scaling demonstration datasets and model capacity; however, deploying a new robot embodiment or task typically necessitates a dedicated teleoperation corpus. The resulting policies remain bounded by their imitation distributions, limiting generalization and continual self-improvement. We introduce RAX (Robot Agent eXploration), an open-source framework for robot agents centered on scaling exploration: enabling agents to improve by acquiring online experience and synthesizing executable programs. In RAX, a general-purpose coding agent generates robot control code, operating without action demonstration data, hand-engineered action primitives, or value-function guidance. Through online exploration, the agent identifies decision sequences that achieve task goals and compiles them into modular programs encapsulating the full perception-planning-control loop. Using RAX, we present a systematic multi-embodiment study on scaling online exploration across precision and long-horizon manipulation tasks using single-arm, bimanual, dexterous, mobile, and humanoid systems in simulation and on real robots. Generalization performance on unseen environments improves consistently as exploration scales. In simulation, RAX outperforms top baseline models by +37.4% on average. On real robots, RAX autonomously learns memory-dependent, articulated, high-precision, deformable, and long-horizon mobile manipulation tasks without human demonstrations, continually improving performance by composing verified skills from prior exploration sessions. As exploration scales, we observe emergent capabilities including active perception, error recovery, safety guardrails, and human-robot collaboration. We open-source RAX as a generalist robot-agent platform in which new robot embodiments are integrated through their APIs alone, without teleoperated data collection or policy training.",
+          "url": "https://arxiv.org/abs/2610.22496v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.22496v1",
+          "published": "2026-10-15T18:00:28Z",
+          "updated": "2026-10-15T18:00:28Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2610.09117v2",
           "title": "Workhorse: Learning Robust Whole-Body Humanoid Loco-Manipulation from Human Data",
           "authors": [
@@ -4016,56 +4061,6 @@
             "cs.RO",
             "cs.AI",
             "cs.CV"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2610.02204v1",
-          "title": "Reconstruct, Practice, Go Real: Guided Self-Improvement for Embodied Agents",
-          "authors": [
-            "Yen-Jen Wang",
-            "Haozhe Jiang",
-            "Shuying Deng",
-            "Haoru Xue",
-            "Weirui Ye",
-            "Rocky Duan",
-            "Nika Haghtalab",
-            "S. Shankar Sastry",
-            "Pieter Abbeel",
-            "Haozhi Qi"
-          ],
-          "abstract": "Building reliable robot capabilities across diverse tasks requires substantial human effort to develop and maintain skills, design rewards, and integrate perception with control. We present Reconstruct, Practice, Go Real (RPG), a framework for autonomous improvement of robot execution systems without updating model weights. RPG identifies manipulation capabilities in an offline dataset and constructs related practice tasks in simulation. During practice, RPG uses execution feedback, privileged simulator state, and available dataset videos to diagnose failures. It develops new reusable symbolic skills, refines existing skills, and revises the system prompt based on these diagnoses. Cross-task evaluation tests individual candidate changes and merged revisions before they are retained for reuse. At test time, a multimodal LLM uses the resulting system prompt and skill library to coordinate perception and robot control. On held-out initializations of 22 manipulation tasks, RPG improves task success from 28.6% after the first practice round to 95.0% after 15 rounds, outperforming all evaluated baselines, including ASPIRE (75.5%) and CaP-Agent0 powered by GPT-6 Astra Pro (60.0%). After a common calibration and hardware-adaptation procedure, the frozen system succeeds in all 30 physical trials, with ten trials on each of three tasks. Project Website: https://rpg-robot.github.io/",
-          "url": "https://arxiv.org/abs/2610.02204v1",
-          "pdf_url": "https://arxiv.org/pdf/2610.02204v1",
-          "published": "2026-10-01T17:59:50Z",
-          "updated": "2026-10-01T17:59:50Z",
-          "categories": [
-            "cs.RO",
-            "cs.AI",
-            "eess.SY"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2609.40134v3",
-          "title": "Tactile Curiosity Drives Robot Interaction",
-          "authors": [
-            "Klemens Iten",
-            "Alexander Proshkin",
-            "Bhavya Sukhija",
-            "Stelian Coros",
-            "Andreas Krause",
-            "Pieter Abbeel",
-            "Carmelo Sferrazza"
-          ],
-          "abstract": "Mastering robot manipulation skills via reinforcement learning (RL) remains largely sample-inefficient. The most common RL algorithms rely on random action sampling to discover new strategies, resulting in agents that allocate most of their training budget to motions in free space, away from the contacts from which manipulation skills emerge. Existing intrinsic motivation methods based on model disagreement or epistemic uncertainty improve on isotropic noise, but they can also reward uncertainty in functionally irrelevant transitions, such as erratic motions in free space. In this work, we argue that tactile feedback provides a natural signal for exploration, and introduce TacEx, a framework that incorporates touch into epistemic uncertainty-driven exploration by decomposing model uncertainty across sensory modalities and directing curiosity toward the tactile channel. By anchoring curiosity to the sense of touch, TacEx drives the robot to discover complex contact dynamics, learning to manipulate and grasp objects without task rewards or expert demonstrations during exploration. The interaction-dense dataset collected through this tactile-driven curiosity supports offline learning of downstream pick-and-place policies without additional environment interaction. We further use tactile-driven exploration to post-train vision-language-action (VLA) models. Although the VLAs are initially pre-trained without tactile feedback, post-training with TacEx substantially improves downstream performance while remaining highly sample-efficient.",
-          "url": "https://arxiv.org/abs/2609.40134v3",
-          "pdf_url": "https://arxiv.org/pdf/2609.40134v3",
-          "published": "2026-09-30T16:49:40Z",
-          "updated": "2026-10-13T13:22:48Z",
-          "categories": [
-            "cs.RO",
-            "cs.AI"
           ],
           "primary_category": "cs.RO"
         }
@@ -5225,6 +5220,25 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2610.23007v1",
+          "title": "A Minimal ReLU Classifier on Non-Linearly Separable Data: Convergence and Implicit Bias at and beyond the Edge of Stability",
+          "authors": [
+            "Quan Nguyen",
+            "Robin Yadav",
+            "Param Mody",
+            "Mark Schmidt"
+          ],
+          "abstract": "Gradient descent (GD) with large learning rates can successfully optimize neural networks even though classical smoothness-based learning rate conditions are violated. Yet theory for this regime largely covers linear models or linearly separable data. We analyze a minimal setting outside both regimes. Specifically, a two-neuron ReLU network trained with logistic loss on 1D non-linearly separable data. The objective is nonconvex and nonsmooth, and GD exhibits edge-of-stability (EoS) behavior. We identify an active cone in parameter space that contains every perfect classifier, where the problem becomes piecewise logistic regression with a varying effective dataset. Within this cone, we prove a finite-time loss bound for constant learning rates and show that GD converges in direction to an explicit max-margin vector, while the orthogonal component converges to the unique minimizer of a non-strongly convex potential. We further establish catapult results where exponentially small loss is reached after a single loss spike. Furthermore, we propose an adaptive schedule that lets learning rates grow to infinity without leaving the active cone. We prove that this schedule achieves a loss rate of $O(1/(T\\log{T})$, which is faster than the standard $O(1/T)$ rate. Our theoretical results extend to local convergence on more general network and are validated on MNIST dataset. Overall, we show that this setup provides a tractable neural-network model for studying large and adaptive step sizes beyond linear predictors and separable data.",
+          "url": "https://arxiv.org/abs/2610.23007v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.23007v1",
+          "published": "2026-10-16T06:31:59Z",
+          "updated": "2026-10-16T06:31:59Z",
+          "categories": [
+            "cs.LG"
+          ],
+          "primary_category": "cs.LG"
+        },
+        {
           "id": "2610.05664v1",
           "title": "StageVLN: Spatial and Trajectory Auxiliary Guidance for Efficient Vision-Language Navigation",
           "authors": [
@@ -5309,30 +5323,6 @@
             "cs.RO"
           ],
           "primary_category": "cs.RO"
-        },
-        {
-          "id": "2609.29157v1",
-          "title": "OREN-X: Octree Residual Network for Real-Time Multi-Modal Mapping",
-          "authors": [
-            "Zhirui Dai",
-            "Qihao Qian",
-            "Dinh Minh Nguyen",
-            "Quan-Dung Pham",
-            "Kiana Bronder",
-            "Carlos Nieto-Granda",
-            "Yiyu Chen",
-            "Quan Nguyen",
-            "Nikolay Atanasov"
-          ],
-          "abstract": "To achieve general-purpose autonomy over long horizons, a robot needs to maintain spatial environment information that supports a variety of tasks: geometry for planning and control, radiance for rendering and relocalization, and vision-language features for open-vocabulary grounding. Existing methods represent and estimate each modality separately, multiplying memory and compute cost while forgoing potential synergy among the representations. We develop OREN-X, an online mapping method that uses an octree in 3D space as a shared data structure for indexing and storing a multi-modal field, capturing geometric, radiance, and vision-language information. OREN-X provides efficient unified storage and retrieval of these data in explicit/implicit and full/compressed form. Our unified representation yields cross-modality synergy: SDF estimates are sharpened by occupancy and radiance, while GPU-based ray-octree traversal and octree query enable real-time rendering. We also use online dictionary learning to compress the vision-language features, shrinking them 3.7x below full per-vertex storage while raising the query accuracy. On Replica, OREN-X maps in real time (80+ fps for SDF and 30+ fps for all four modalities), improves near-surface SDF accuracy by 33% over single-modality baselines, and improves mean open-vocabulary 3D mIoU by 71% and mean accuracy by 61% over the best prior method.",
-          "url": "https://arxiv.org/abs/2609.29157v1",
-          "pdf_url": "https://arxiv.org/pdf/2609.29157v1",
-          "published": "2026-09-24T07:33:28Z",
-          "updated": "2026-09-24T07:33:28Z",
-          "categories": [
-            "cs.RO"
-          ],
-          "primary_category": "cs.RO"
         }
       ]
     },
@@ -5370,7 +5360,7 @@
           "primary_category": "cs.RO"
         },
         {
-          "id": "2607.20683v1",
+          "id": "2607.20683v2",
           "title": "FELT: Generating Tactile Signals from Vision for Visuo-Tactile Manipulation",
           "authors": [
             "Zinan Li",
@@ -5385,11 +5375,11 @@
             "Stefanos Nikolaidis",
             "Daniel Seita"
           ],
-          "abstract": "The sense of touch is central to manipulation, especially when vision is occluded or ambiguous. Although combining vision and touch improves manipulation, learning robust visuo-tactile policies requires substantial tactile data. Such data remains scarcer than visual data, because tactile sensors are fragile, specialized, and hard to standardize. To address this, we present Feature-Extracted Latent Tactile (FELT), a learning-based framework that synthesizes per-finger pressure tactile images from RGB observations, reducing the need for tactile-equipped data collection. FELT uses a large frozen visual encoder and a lightweight query decoder to predict tactile signals in a single feed-forward pass. To respect the physical topology of dual-finger tactile sensors, FELT decodes the left and right tactile sensor panels through separate branches, capturing the asymmetric contact patterns during interactions such as wiping, insertion, and in-hand rotation. At inference time, FELT only requires RGB data, allowing us to augment existing vision-only data with tactile observations, either as generated tactile images or as latent tactile features. Experiments on four contact-rich manipulation tasks demonstrate that both generated tactile images and latent tactile features improve policy success over vision-only baselines, with latent feature requiring no real tactile sensor during policy training or deployment. Supplementary material is available on our anonymous website: https://felt-tactile.github.io/.",
-          "url": "https://arxiv.org/abs/2607.20683v1",
-          "pdf_url": "https://arxiv.org/pdf/2607.20683v1",
+          "abstract": "Tactile sensing can improve performance in contact-rich robot manipulation. However, learning policies that use real tactile feedback typically requires demonstrations collected with tactile-equipped hardware. We present Feature-Extracted Latent Tactile (FELT), a framework that uses existing paired visuo-tactile data to learn contact-aware representations from RGB observations. FELT provides these representations to downstream policies through two interfaces: generated tactile images and contact-aware features. FELT combines a frozen visual encoder with separate query decoders for the left and right finger, reflecting the spatial organization of dual-finger tactile arrays. The two branches exchange information through gated connections, and a convolutional readout produces spatial contact representations for the downstream interfaces. For downstream manipulation, the image interface decodes these spatial representations into tactile images, allowing policies trained with either real or generated tactile observations to use generated images at deployment. Alternatively, the feature interface feeds these representations directly to the policy during both training and deployment, without real tactile observations. Experiments on four contact-rich real-robot tasks show that both interfaces achieve higher success rates than vision-only policies. Directly incorporating learned contact-aware features into the policy improves success by 15-22.5 percentage points across the four tasks.",
+          "url": "https://arxiv.org/abs/2607.20683v2",
+          "pdf_url": "https://arxiv.org/pdf/2607.20683v2",
           "published": "2026-07-22T19:32:42Z",
-          "updated": "2026-07-22T19:32:42Z",
+          "updated": "2026-10-16T05:01:07Z",
           "categories": [
             "cs.RO"
           ],
@@ -5479,6 +5469,26 @@
       "website": "https://viterbischool.usc.edu/faculty/yue-wang/",
       "paper_count": 5,
       "papers": [
+        {
+          "id": "2610.23550v1",
+          "title": "Reason-guided Human Reward Modeling for Preference-based Reinforcement Learning",
+          "authors": [
+            "Anshul Nayak",
+            "Shahil Shaik",
+            "Jonathan Smereka",
+            "Yue Wang"
+          ],
+          "abstract": "Reinforcement learning (RL) policies optimized for task rewards may produce behaviors that are efficient but misaligned with human expectations, safety preferences, or intent. This paper presents a reason-guided preference-based reinforcement learning (PbRL) framework that learns a human reward model from trajectory-level feedback. In addition to preference labels, the framework incorporates reason tags explaining why a behavior is preferred, enabling the learned reward to capture both human choices and their underlying rationale. Compared with preference-only reward learning, the reason-guided formulation provides additional supervision for learning human-aligned rewards and improves the interpretability of the resulting policy. The learned human reward is combined with the environment reward during policy optimization, allowing the agent to improve task performance while producing more interpretable, human- aligned, and preference-sensitive behavior",
+          "url": "https://arxiv.org/abs/2610.23550v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.23550v1",
+          "published": "2026-10-16T14:41:13Z",
+          "updated": "2026-10-16T14:41:13Z",
+          "categories": [
+            "cs.RO",
+            "cs.AI"
+          ],
+          "primary_category": "cs.RO"
+        },
         {
           "id": "2610.22364v1",
           "title": "T2-z: Test-Time Optimization of Environment Latents for Robotic World Models",
@@ -5589,30 +5599,6 @@
             "cs.LG"
           ],
           "primary_category": "cs.CL"
-        },
-        {
-          "id": "2610.12772v1",
-          "title": "Reflex: Visually Grounded Reactive Humanoid Control",
-          "authors": [
-            "Taoyang Jia",
-            "Weikai Huang",
-            "Linxin Song",
-            "Jared Darlington",
-            "Jieyu Zhao",
-            "Yue Wang",
-            "Jiafei Duan",
-            "Zhongzheng Ren",
-            "Ranjay Krishna"
-          ],
-          "abstract": "Humans effortlessly react to the world; they adeptly return a tennis shot, catch a falling cup, step aside from a passing cart, or pass a box tossed during truck unloading. These everyday actions require anticipating a moving target and reflexively responding with the whole body within about a second. Such visual reactive whole-body control remains challenging for humanoids, which must (1) coordinate whole-body control, (2) react to object dynamics in real time, and (3) ground perception in egocentric vision. We study catching thrown boxes as a representative task that demands all three capabilities; existing systems cover only part of it, relying on end-effectors, motion capture, or marked objects. We present Reflex, a three-stage framework that learns these capabilities stage by stage while connecting them through a compact representation of object dynamics. First, a state-based policy learns whole-body catching with reinforcement learning. Second, the policy learns to infer the dynamics of a moving box from delayed and incomplete observations. Third, an egocentric RGB-D encoder learns to recover this dynamics representation directly from visual observations while keeping the whole-body controller fixed. This decomposition provides each capability with a direct training signal and makes visual learning substantially more scalable. In simulation, Reflex achieves 85.7% catch success from egocentric RGB-D, compared with 87.9% when given privileged box observations. Temporal visual history is critical: removing it reduces success by 35.6 and 39.8 points on centered and laterally offset throws. On a real Unitree G1, Reflex catches human-thrown boxes with 65% and 40% success at 2.5 and 5 m, reaching 76% and 59% of human catchers' success at the same distances.",
-          "url": "https://arxiv.org/abs/2610.12772v1",
-          "pdf_url": "https://arxiv.org/pdf/2610.12772v1",
-          "published": "2026-10-08T22:24:03Z",
-          "updated": "2026-10-08T22:24:03Z",
-          "categories": [
-            "cs.RO"
-          ],
-          "primary_category": "cs.RO"
         }
       ]
     },
