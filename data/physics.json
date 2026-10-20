@@ -2,51 +2,92 @@
   "category": "physics",
   "name": "Physics Research",
   "description": "Physics \u2014 Quantum Physics, High Energy Theory, General Relativity",
-  "scraped_at": "2026-10-19T15:29:55.769433+00:00",
+  "scraped_at": "2026-10-20T13:30:01.224655+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2610.23840v1",
-      "title": "Demonstration of Logical Error Suppression in a Surface Code Memory on a Cloud-Accessible IBM Superconducting Processor",
+      "id": "2610.26859v1",
+      "title": "Boundary-Sensitive Quantum Order on Non-Amenable Lattices",
       "authors": [
-        "Shuwen Kan",
-        "Aaron Hoyt",
-        "Sean Garner",
-        "Ethan Vo",
-        "Adrian Harkness",
-        "Rod Rofougaran",
-        "Zefan Du",
-        "Chenxu Liu",
-        "Norm Tubman",
-        "Ying Mao",
-        "Samuel Stein"
+        "Xingzhi Wang",
+        "Zohar Nussinov",
+        "Gerardo Ortiz"
       ],
-      "abstract": "Quantum error correction can suppress logical errors exponentially with code distance when physical noise is below threshold. Realizing this on hardware requires tight coordination among quantum gates, mid-circuit measurements, and qubit coherence. Device variation, noise asymmetry, and correlations across space and time complicate the translation of these capabilities into logical error suppression. Here, we study rotated surface-code memory on an IBM Nighthawk r2 processor. Performance varies across tested processor placements, which we attribute to differences in qubit quality. We optimize the code by combining short readout, fused measurement and reset, and an XX echo on data qubits during ancilla readout. Compared with standard readout without reset or echo, the optimized syndrome extraction circuit reduces the median per-round logical error rate by factors of 3.8 in the X basis and 1.4 in the Z basis. In memory experiments of up to 150 rounds, the distance advantage weakens, alongside long-lived correlations that may reflect a persistent error component. Under our optimization recipe, increasing the protected distance from 3 to 6 while holding the other distance fixed reduces the per-round logical error rate from 0.53% to 0.24% in Z memory and from 0.52% to 0.22% in X memory. The corresponding error-suppression factors under maximum-likelihood decoding are 1.68 and 1.85. These results connect circuit compilation and optimization to surface-code memory performance and limitations, and motivate QPU and QEC circuit codesign for fault-tolerant quantum computing primitives on current cloud hardware.",
-      "url": "https://arxiv.org/abs/2610.23840v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.23840v1",
-      "published": "2026-10-16T17:56:53Z",
-      "updated": "2026-10-16T17:56:53Z",
+      "abstract": "We show that quantum systems on non-amenable lattices, whose boundaries constitute an extensive fraction of the system, host novel forms of bulk ordering with no Euclidean counterpart. Combining boundary-retaining iDMRG with an exact symmetry-fixing duality, we investigate $p<5$ state clock models on the coordination-3 infinite Cayley tree. We find that between the ordered and disordered phases lies an emergent intermediate phase with bulk order induced by an arbitrarily weak boundary field rather than by conventional spontaneous symmetry-breaking. This establishes boundary-sensitive order as a distinct quantum ordering mechanism defying Landau's spontaneous symmetry-breaking paradigm. The intermediate phase realizes a bulk-boundary correspondence in which the unpolarized boundary selects a specific ordered bulk state.",
+      "url": "https://arxiv.org/abs/2610.26859v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.26859v1",
+      "published": "2026-10-19T17:59:58Z",
+      "updated": "2026-10-19T17:59:58Z",
       "categories": [
+        "cond-mat.stat-mech",
+        "cond-mat.mes-hall",
+        "cond-mat.other",
+        "hep-th",
         "quant-ph"
+      ],
+      "primary_category": "cond-mat.stat-mech"
+    },
+    {
+      "id": "2610.26843v1",
+      "title": "Quantum algorithms for optimal control: large-scale finite-horizon linear-quadratic regulation",
+      "authors": [
+        "Xiajie Huang",
+        "Cristina \u00c1lvarez Yuste",
+        "Nikita Guseynov",
+        "Nana Liu",
+        "Javier Gonz\u00e1lez-Conde"
+      ],
+      "abstract": "We develop quantum algorithms for optimal control over a prescribed finite time interval (finite horizon), focusing on continuous-time linear-quadratic regulation (LQR). This foundational control problem often requires solving a nonlinear matrix Riccati equation, which can be costly for large systems and long control durations on conventional classical solvers. We instead work directly with the state-costate optimality equations, reformulating the LQR problem as a multiple-shooting linear system. Importantly, we prove a condition-number bound for the system that is independent of the horizon, under stabilizability and detectability assumptions. By incorporating the initial and final conditions into a single linear system, we can solve the subsequent linear system more efficiently with a quantum linear systems subroutine. For a given initial state, our quantum algorithms return classical estimates of the optimal cost and the optimal control inputs at a selected time, without constructing a Riccati solution operator. Given sparse-matrix block-encodings, an initial-state preparation oracle and a fixed number of control inputs, the query and gate complexities scale polylogarithmically with system size and control duration, provided that sparsity, relevant norms, and stability parameters are bounded. The dependence on the target error is inverse-linear up to logarithmic factors. We establish the required bounds uniformly in system size and duration for a family of damped mass-spring chains with two endpoint controls. Numerical experiments support the analysis.",
+      "url": "https://arxiv.org/abs/2610.26843v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.26843v1",
+      "published": "2026-10-19T17:58:57Z",
+      "updated": "2026-10-19T17:58:57Z",
+      "categories": [
+        "quant-ph",
+        "math.OC"
       ],
       "primary_category": "quant-ph"
     },
     {
-      "id": "2610.23834v1",
-      "title": "Task-aligned spectral inductive biases in parameterized quantum circuits",
+      "id": "2610.26838v1",
+      "title": "Field theory guides Monte Carlo in the one-dimensional long-range Ising model",
       "authors": [
-        "Felix Frohnert",
-        "Adri\u00e1n P\u00e9rez-Salinas",
-        "Sebastian Lange",
-        "Marcus Schwaebisch",
-        "Evert van Nieuwenburg",
-        "Vedran Dunjko"
+        "Ant\u00f3nio Antunes",
+        "Jos\u00e9 Matos"
       ],
-      "abstract": "Parameterized quantum circuits are widely investigated in quantum machine learning, yet how their architecture can provide task-aligned inductive biases remains poorly understood. We study data reuploading quantum circuits with two distinct inputs: a signal that varies between samples and a fixed, task-defined spectral query that specifies how the signal should be probed. We show that encoding the query can change the circuit's hypothesis class over the signal by modulating how its existing signal frequencies are combined, without introducing new sample-dependent information. This mechanism matches tasks built on nonuniform Fourier transforms, whose evaluation frequencies specify the query and whose sampling positions guide its encoding. We examine this connection in a classification task inspired by synthetic aperture radar, where acquisition geometry determines a query for classifying unfocused spectral patches before image formation. Across small-scale spectral and radar-like tasks, aligned queries improve learning from limited data over parameter-matched circuits with mismatched or absent queries. These results provide a route from known spectral task structure to the design and validation of inductive biases in parameterized quantum circuits.",
-      "url": "https://arxiv.org/abs/2610.23834v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.23834v1",
-      "published": "2026-10-16T17:53:19Z",
-      "updated": "2026-10-16T17:53:19Z",
+      "abstract": "The statistical long-range Ising (LRI) model in one dimension provides a family of some of the simplest non-exactly solvable critical points. These critical points are described by long-range conformal field theories (CFTs) that are well understood analytically with perturbative expansions and some exact results. Guided by this, we revisit the Monte Carlo (MC) approach to the corresponding lattice model which has many favorable features compared to other systems studied with MC methods. In particular, with very modest computational cost, we are able to estimate scaling dimensions of leading and subleading operators as well as the associated three-point functions, and even certain four-point functions. These results help highlight the fact that 1d LRI CFTs are a phenomenal playground to more generally test non-perturbative methods and ideas for strongly coupled CFTs.",
+      "url": "https://arxiv.org/abs/2610.26838v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.26838v1",
+      "published": "2026-10-19T17:58:25Z",
+      "updated": "2026-10-19T17:58:25Z",
+      "categories": [
+        "hep-th",
+        "cond-mat.stat-mech",
+        "hep-lat"
+      ],
+      "primary_category": "hep-th"
+    },
+    {
+      "id": "2610.26833v1",
+      "title": "Supervised Learning with Quantum Hamiltonian Embeddings",
+      "authors": [
+        "Riccardo Molteni",
+        "Minjun Jeon",
+        "Paolo Braccia",
+        "Abhinav Deshpande",
+        "Vedran Dunjko",
+        "Liang Jiang",
+        "Su-un Lee",
+        "Swarnadeep Majumder",
+        "Javier Robledo Moreno",
+        "Parthasarathy Suryanarayanan",
+        "Kunal Sharma"
+      ],
+      "abstract": "Machine learning is widely regarded as a promising application in which quantum computing could offer a computational advantage. However, general quantum machine learning models with provable guarantees on performance, trainability, and efficient inference remain limited. In this work, we introduce quantum Hamiltonian embeddings, a supervised learning framework in which a classical training dataset is encoded into a single effective, parameterized Hamiltonian. Training optimizes the parameters of this data-dependent Hamiltonian, whose approximate ground state defines the classification rule. Once the ground state has been approximated using a quantum algorithm, inference can be performed either classically using a classical representation of the learned state, or with a quantum representation of the state. We establish efficient methods for gradient estimation and prove favorable generalization guarantees. Furthermore, under standard cryptographic assumptions, we show that Hamiltonian embeddings can realize hypothesis functions beyond the reach of efficient classical algorithms. We then demonstrate the framework at scale on IBM Heron processors using a standard benchmark dataset. Together, these results establish Hamiltonian embeddings as a new framework for quantum machine learning, combining theoretical guarantees with a path for experimental investigations at scale on quantum hardware.",
+      "url": "https://arxiv.org/abs/2610.26833v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.26833v1",
+      "published": "2026-10-19T17:56:44Z",
+      "updated": "2026-10-19T17:56:44Z",
       "categories": [
         "quant-ph",
         "cs.LG"
@@ -54,171 +95,117 @@
       "primary_category": "quant-ph"
     },
     {
-      "id": "2610.23832v1",
-      "title": "Leveraging verifiable structure in quantum circuits to find more efficient compilations with agentic AI",
+      "id": "2610.26822v1",
+      "title": "Mechanical angular momentum loss at $\\mathcal{O}(G^4)$ from static and radiative gravitons",
       "authors": [
-        "Tanuj Khattar",
-        "Nicholas C. Rubin",
-        "Craig Gidney",
-        "Michael Broughton",
-        "Guang Hao Low",
-        "Ryan Babbush"
+        "Lara Bohnenblust",
+        "Carl Jordan Eriksen",
+        "Gustav Uhre Jakobsen",
+        "Kathrin Stoldt",
+        "Andrii Yanovets"
       ],
-      "abstract": "We discuss an effective paradigm of utilizing AI agents to better compile quantum circuits when one can constrain bottleneck subroutines to have some form of classically verifiable structure. For example, when critical subroutines are composed exclusively of reversible classical logic, phasing operations, and measurement based uncomputation, one can efficiently simulate execution for classical inputs. This property facilitates efficient certification of approximate circuit synthesis via a form of fuzz testing, provided suitable assumptions on the input distribution. While this pattern was recently exploited to improve quantum cryptanalysis circuits, here we highlight the flexibility of the broader approach by discussing three important applications. (1) The computation of $1/\\sqrt{x}$ that bottlenecks real space simulations of the Coulomb operator such as those important for modeling inertial confinement fusion reactors. (2) The decoding of Reed-Solomon codes which bottlenecks the decoded quantum interferometry algorithm when used to approximately solve the optimal polynomial intersection problem. And (3) the quantum look-up tables and controlled application of Givens rotations that bottleneck the most performant quantum algorithms for simulating chemistry in second quantization. We discuss reference implementations of these algorithms and how they can be constrained and verified in the interest of seeding a Kaggle competition designed to accelerate AI-based research into the optimization of their compilation.",
-      "url": "https://arxiv.org/abs/2610.23832v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.23832v1",
-      "published": "2026-10-16T17:53:07Z",
-      "updated": "2026-10-16T17:53:07Z",
+      "abstract": "We determine the loss of mechanical angular momentum $L^\u03bc_{\\rm loss}$ of two gravitationally scattering bodies at $\\mathcal{O}(G^4)$ using worldline quantum field theory (WQFT). The gravitational memory effect, a phenomenon of the early- and late-time behaviour of the gravitational field, leads to static contributions to $L^\u03bc_{\\rm loss}$. We illuminate how these arise: the linear memory contributes through so-called static correlators, while the nonlinear memory vanishes at this order due to symmetry considerations. The computation of the remaining, dynamical part resembles that of the $\\mathcal{O}(G^4)$ impulse. We generate its integrand using a reformulation of the WQFT Feynman rules that conserves four-momentum at every vertex and plainly exhibits the classical loops. The three-loop integrals are reduced to master integrals, whose differential equations and boundary matching in the post-Newtonian limit we describe in some detail. In contrast to conservative effects at this order, only polylogarithms appear. While individual contributions to the dynamical part are divergent, these cancel in $L^\u03bc_{\\rm loss}$. The quadratic-in-radiation part of our result reproduces earlier results, while the complete result agrees with existing post-Newtonian results.",
+      "url": "https://arxiv.org/abs/2610.26822v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.26822v1",
+      "published": "2026-10-19T17:54:15Z",
+      "updated": "2026-10-19T17:54:15Z",
       "categories": [
-        "quant-ph"
-      ],
-      "primary_category": "quant-ph"
-    },
-    {
-      "id": "2610.23827v1",
-      "title": "Quality-of-Transmission Estimation in Quantum Networks: Compute, Simulate, or Learn?",
-      "authors": [
-        "Anis Bekri",
-        "Amar Abane",
-        "Van Sy Mai",
-        "Abdella Battou",
-        "Saddek Bensalem"
-      ],
-      "abstract": "Future quantum networks will rely on control-plane decisions such as routing, scheduling, entanglement provisioning, purification, and memory allocation. Each decision depends on a timely and reliable estimate of the quality of the entanglement that a candidate path can deliver, with end-to-end fidelity as a central metric. Inspired by the optical-networking experience with quality-of-transmission (QoT) estimation, this article asks when a quantum controller should compute fidelity analytically, simulate it, or learn a surrogate model. The optical analogy is useful but incomplete: optical QoT estimation often predicts a scalar transmission margin, whereas quantum QoT estimation must account for probabilistic entanglement generation, random memory waiting times, decoherence, state consumption, and measurement constraints that can make fidelity a stochastic target. We propose a compute/simulate/learn framework for quantum QoT estimation and illustrate it with a simulation-based proof of concept. Our study shows that analytical composition can be sufficient in simple regimes, that simulation becomes necessary when stochastic memory effects shape the delivered fidelity distribution, and that lightweight learned surrogates can approximate simulator labels at much lower runtime cost for online control. We close with open challenges for deployment, including stochastic targets, sim-to-real transfer, data-generation cost, physics-informed learning, and generalization beyond individual paths to full network topologies.",
-      "url": "https://arxiv.org/abs/2610.23827v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.23827v1",
-      "published": "2026-10-16T17:49:43Z",
-      "updated": "2026-10-16T17:49:43Z",
-      "categories": [
-        "quant-ph",
-        "cs.LG",
-        "cs.NI"
-      ],
-      "primary_category": "quant-ph"
-    },
-    {
-      "id": "2610.23815v1",
-      "title": "Anyonic Neural Network Wavefunctions",
-      "authors": [
-        "Andres Perez Fadon",
-        "Pok Man Tam",
-        "Leyna Shackleton"
-      ],
-      "abstract": "The macroscopic behavior of a non-interacting gas of Abelian anyons has remained unsettled for many decades. Prior numerical methods employing exact diagonalization in the continuum and on the plane have been limited to small system sizes, at most $N = 4$ anyons. Using the rapidly developing technology of neural network wavefunctions, we develop variational ansatze appropriate for studying continuum models of the Abelian anyon gas. The neural network architecture, which we call \"AnyNet\", is capable of exactly enforcing the non-analytic short-distance behavior induced by the anyonic statistics. We demonstrate excellent agreement with exact diagonalization for $N=4$ anyons, obtain accurate results up to $N = 16$ for intermediate statistics, and study up to $N=20$ for almost-fermionic anyons, matching perturbative results within a 0.4% discrepancy. We use this methodology to study anyons in a harmonic trap, and anyonic atoms as a model for anyon binding to impurities. We study the structure of anyonic wavefunctions as the statistics parameter is varied. We focus on the single-particle density, the pair density, the angular momentum, and the scaling of the wavefunction as multiple anyons coalesce. This work opens doors to understanding the macroscopic behavior of anyons, for which rich phases have been predicted theoretically.",
-      "url": "https://arxiv.org/abs/2610.23815v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.23815v1",
-      "published": "2026-10-16T17:39:06Z",
-      "updated": "2026-10-16T17:39:06Z",
-      "categories": [
-        "cond-mat.str-el",
-        "cond-mat.mes-hall",
-        "cond-mat.quant-gas",
         "hep-th",
-        "quant-ph"
-      ],
-      "primary_category": "cond-mat.str-el"
-    },
-    {
-      "id": "2610.23810v1",
-      "title": "Experimental Demonstration of a Balanced Travelling Wave Parametric Amplifier",
-      "authors": [
-        "Nikita Klimovich",
-        "Peter K. Day",
-        "Henry G. Leduc",
-        "Boon-Kok Tan"
-      ],
-      "abstract": "Superconducting travelling-wave parametric amplifiers (TWPAs) provide broadband gain, low added noise, and high dynamic range, making them attractive for applications requiring wide instantaneous bandwidth. This is crucial for amplifying multiplexed narrow band signals spread over a wide frequency range, such as qubit resonator arrays, or amplifying inherently wide band signals, such as in spectrometers or radiometers. In many cases, however, the useful bandwidth of a TWPA is limited by the production of the idler tone at an image frequency. For three-wave-mixing (3WM) TWPAs, for example, an input signal at $f_s$ is indistinguishable from one at $f_p - f_s$, which can produce spectral ambiguity when the input spectrum is broadband or not known in advance. We experimentally demonstrate a balanced architecture that doubles the instantaneous image-rejected bandwidth available to a 3WM TWPA by spatially separating the amplified signal from the output pump and generated idler, which resolves the sideband degeneracy. The architecture consists of two amplifiers connected between a pair of 180$^{\\circ}$ hybrid couplers, with the signal and pump injected and output through the sum and difference ports, respectively. Using two kinetic-inductance TWPAs, we demonstrate approximately 20 dB of signal gain across nearly an octave of bandwidth, together with pump rejection below --20 dB and an average image rejection of approximately --15 dB over the operating band. These results establish balanced TWPAs as a practical approach to broadband parametric amplification, enabling improved contamination free bandwidth and eliminating the need for complex filtering.",
-      "url": "https://arxiv.org/abs/2610.23810v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.23810v1",
-      "published": "2026-10-16T17:33:48Z",
-      "updated": "2026-10-16T17:33:48Z",
-      "categories": [
-        "physics.ins-det",
-        "cond-mat.supr-con",
-        "quant-ph"
-      ],
-      "primary_category": "physics.ins-det"
-    },
-    {
-      "id": "2610.23806v1",
-      "title": "Clustering of JWST LRDs. Implications for PBHs and other early-forming seeds",
-      "authors": [
-        "Gert H\u00fctsi"
-      ],
-      "abstract": "We use the observed abundance and spatial clustering of JWST little red dots (LRDs) over z = 4--8 to confront two formation scenarios: the standard picture in which LRDs form in virialized dark-matter halos, and one in which they are seeded by a dynamically subdominant population of primordial black holes (PBHs). The halo formation scenario accounts for both observables naturally and without fine-tuning. In the PBH scenario, matching the observed LRD abundance requires a negligibly small PBH mass fraction, and a power-spectrum analysis shows that such a Poisson isocurvature component predicts a clustering signal far below what is observed. The same conclusion holds for any population of dynamically subdominant early-forming seeds, unless their initial clustering is finely tuned or their activity is tied to massive host halos. We conclude that the spatial clustering of JWST LRDs strongly favours the standard halo formation picture and disfavours PBHs, or similar early-forming seeds, as a randomly activated LRD population; PBHs remain viable as seeds only if their activity is governed by massive host halos, in which case clustering alone cannot distinguish them from astrophysical seeds.",
-      "url": "https://arxiv.org/abs/2610.23806v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.23806v1",
-      "published": "2026-10-16T17:30:38Z",
-      "updated": "2026-10-16T17:30:38Z",
-      "categories": [
-        "astro-ph.CO",
-        "astro-ph.GA",
-        "astro-ph.HE",
         "gr-qc"
       ],
-      "primary_category": "astro-ph.CO"
+      "primary_category": "hep-th"
     },
     {
-      "id": "2610.23781v1",
-      "title": "Transport and thermalization under noncommuting localized constraints",
+      "id": "2610.26814v1",
+      "title": "R\u00e9nyi Multi-entropy for Stabilizer States: A Finite Field Gauss Sum Problem",
       "authors": [
-        "Amir Nesturov",
-        "Attila Tak\u00e1cs",
-        "Lenart Zadnik"
+        "Bartlomiej Czech",
+        "Yichen Feng",
+        "Jonathan Harper",
+        "Xin-Xiang Ju",
+        "Yang Zhao"
       ],
-      "abstract": "We investigate the effects of spatially localized conserved quantities on transport and thermalization in quantum and classical many-body systems. We consider several related models: the integrable quantum Volterra model, its nonintegrable classical limit, and two cellular automata derived from the latter. Although localized constraints are often associated with lattice gauge theories, our models do not admit such an interpretation. In systems with discrete degrees of freedom, these constraints induce uniform fragmentation of the Hilbert or configuration space. In the quantum Volterra model, we derive an exact mapping of the dynamics within each Hilbert-space fragment onto a quantum chiral Potts chain. We find that energy transport is ballistic, with identical transport coefficients across all fragments. In the nonintegrable classical limit, energy transport is diffusive, and we similarly find the diffusion constant to be independent of whether or not the constraints are fixed (resolved). Finally, in the cellular automata, we show that, despite leaving transport unaffected, localized constraints lead to a strong breakdown of local ergodicity.",
-      "url": "https://arxiv.org/abs/2610.23781v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.23781v1",
-      "published": "2026-10-16T17:15:04Z",
-      "updated": "2026-10-16T17:15:04Z",
+      "abstract": "R\u00e9nyi multi-entropy probes multi-partite structure beyond bipartite spectra, but its behavior in general quantum states and the entanglement structure it captures remain poorly understood. We develop a finite field Gauss sum framework for calculating it in stabilizer states. Within this framework, the replica contraction reduces to a quadratic Gauss sum if and only if the state is locally unitarily equivalent to a stabilizer state. We obtain analytic expressions for the R\u00e9nyi multi-entropy of all tree graph states and large families of loop graph states. In contrast to their flat bipartite R\u00e9nyi spectra, stabilizer states generically have nonflat R\u00e9nyi multi-entropy spectra.",
+      "url": "https://arxiv.org/abs/2610.26814v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.26814v1",
+      "published": "2026-10-19T17:51:08Z",
+      "updated": "2026-10-19T17:51:08Z",
       "categories": [
-        "cond-mat.stat-mech",
+        "hep-th"
+      ],
+      "primary_category": "hep-th"
+    },
+    {
+      "id": "2610.26786v1",
+      "title": "Fast Hubbard-Thouless Pumping with Local Counterdiabatic Driving",
+      "authors": [
+        "Alexander Chansky"
+      ],
+      "abstract": "Counterdiabatic (CD) driving suppresses the excitations of fast protocols by adding an auxiliary Hamiltonian, but in many-body and topological systems the exact CD term is generally non-local and multi-body. We study this obstruction for Thouless pumping in the Rice-Mele model, first without and then with interactions. For noninteracting fermions, the exact CD term of the pump is non-local, but the variational framework of Sels and Polkovnikov yields accurate nearest-neighbor approximations. For the spinful Rice-Mele chain with onsite and nearest-neighbor repulsion, in the regime where the competition of the two interactions stabilizes quantized pumping, this approach fails: the infinite-temperature variational action only penalizes the CD amplitudes, and the resulting two-parameter nearest-neighbor term does not prevent the pump from breaking down when the cycle time is reduced from $50/t$ to $2/t$. We trace the failure to the structure of the exact many-body gauge potential, whose amplitude for each hop depends on the interaction energy that the hop costs. Resolving the nearest-neighbor currents by this energy, and fixing the coefficients with a ground-state-weighted action, gives a local ansatz with 14 coefficients that keeps the interacting pump quantized for cycle times $T=2/t$ and $T=1/t$, with an accuracy per site that does not degrade between rings of 8 and 12 sites.",
+      "url": "https://arxiv.org/abs/2610.26786v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.26786v1",
+      "published": "2026-10-19T17:37:29Z",
+      "updated": "2026-10-19T17:37:29Z",
+      "categories": [
         "quant-ph"
       ],
-      "primary_category": "cond-mat.stat-mech"
+      "primary_category": "quant-ph"
     },
     {
-      "id": "2610.23770v1",
-      "title": "Scaling of entanglement with distance between subsystems: detection of phase transitions in the $t'$-$\u03c0$-flux model",
+      "id": "2610.26785v1",
+      "title": "Correlated decoding loses the surface code's effective distance below threshold",
       "authors": [
-        "Maksim Ulybyshev",
-        "Gerg\u0151 Ro\u00f3sz",
-        "Gabriele Bellomia",
-        "Karsten Held",
-        "Fakher Assaad",
-        "Frederic Bippus"
+        "C\u00e9sar Hernando de la Fuente",
+        "Joonas Majaniemi",
+        "Evert van Nieuwenburg",
+        "Felix Frohnert"
       ],
-      "abstract": "The system-size scaling of bipartite entanglement can be used to detect phase transitions. We develop a related approach for strongly correlated electron models where large density matrices or large system size scaling are inaccessible. To this end, we demonstrate that phase transitions of various kinds are signaled by a sharp signature in the first- or second-order logarithmic derivatives of the negativity measuring entanglement between small clusters at varying distances. Crucially, we show how to mitigate the effect of quantum Monte Carlo noise at large distances when computing the negativity. Our focus is on the $t'$-$\u03c0$-flux Hubbard model using auxiliary-field quantum Monte Carlo simulations. It has the particular advantage of showing three distinct phase transitions in a single model: semimetal to band insulator, semimetal to antiferromagnetic Mott insulator, and a magnetic order-disorder transition belonging to the Gaussian, Gross-Neveu, and O(3) Wilson-Fisher universality classes, respectively.",
-      "url": "https://arxiv.org/abs/2610.23770v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.23770v1",
-      "published": "2026-10-16T17:08:03Z",
-      "updated": "2026-10-16T17:08:03Z",
+      "abstract": "Correlated decoding improves matching and clustering surface-code decoders by reweighting one decoding subgraph conditioned on the other's correction. We show that standard reweighting can cause correlated decoders to fail on size-$(d-1)/2$ fault configurations that a distance-$d$ code should correct, reducing error suppression deep below threshold. Under circuit-level noise, a single first-pass edge can discount several correlated edges, even though their joint occurrence requires additional independent faults, so the decoder favors an over-discounted correction. Regularizing the reweighting rule restores the nominal distance scaling and a clear correlated-decoding advantage.",
+      "url": "https://arxiv.org/abs/2610.26785v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.26785v1",
+      "published": "2026-10-19T17:35:59Z",
+      "updated": "2026-10-19T17:35:59Z",
       "categories": [
-        "cond-mat.str-el",
-        "cond-mat.stat-mech",
         "quant-ph"
       ],
-      "primary_category": "cond-mat.str-el"
+      "primary_category": "quant-ph"
     },
     {
-      "id": "2610.23752v1",
-      "title": "Spectral networks, finite webs, and the $T_3$ cubic differential",
+      "id": "2610.26784v1",
+      "title": "High-Accuracy Propagation-Assisted Local Decoding for Fast Transversal Clifford Circuits",
       "authors": [
-        "Omar Kidwai",
-        "Guillaume Tahar"
+        "Mark Webber",
+        "Simanraj Sadana",
+        "Matthew A. Lane",
+        "Lucy Jade Robson",
+        "Anthony O'Rourke"
       ],
-      "abstract": "We describe spectral networks for cubic differentials on $\\mathbf{P}^1$ with exactly three poles all of order two, following observations of Hollands-Neitzke. To do so, we give a precise definition and establish some basic properties of a class of finite webs (corresponding to BPS states in physics) in the cubic differential setting, including their non-vanishing central charge. Turning to the example, we prove that at rational angles the network is totally degenerate; the number of walls and Stokes regions is explicitly computed and depends on an arithmetic criterion. At all other angles, the spectral network is dense in the surface and contains no finite webs, as expected. Physically, this example corresponds to a fundamental building block for a large class of four-dimensional $\\mathcal{N}=2$ QFTs with gauge group $\\mathrm{SU}(3)$.",
-      "url": "https://arxiv.org/abs/2610.23752v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.23752v1",
-      "published": "2026-10-16T16:57:34Z",
-      "updated": "2026-10-16T16:57:34Z",
+      "abstract": "We benchmark the Iterative Redecode Scheme (IRS) on fast transversal Clifford circuits, achieving high-accuracy correlated decoding using local memory-style detectors and decoders. On a deep random Clifford benchmark, IRS yields approximately $4\\times$ lower logical failure rates than the ghost protocol at $d=11$ with matched buffers, and $15\\times$ lower rates than logical observable matching (LOM). In three-block GHZ preparation, IRS achieves $2\\times$ lower logical error rates than reliable logical Pauli-product decoding with matched initialisation, improving to $25\\times$ at $d=19$ with $\\lceil d/2\\rceil$ full initialisation rounds. We place IRS, which builds on Wan et al.'s scheme, within a broader propagation-assisted local (PAL) framework, where local decoders exchange messages rather than decoding a global hypergraph. IRS alternates local minimum-weight perfect matching (MWPM) on memory-equivalent detector error models (DEMs) with Pauli-frame propagation and detector updates across transversal CNOT layers, seeking local error estimates consistent with the global detector record. Prior-informed DEMs account for probabilities of propagated errors missing from the memory-equivalent model, improving initial decoding and reducing logical error rates. Zero-weight physical Pauli mechanisms enable inference and propagation of initially indeterminate stabilizer outcomes. Error rates saturate after a few iterations even for deep, adversarial alternating-tCNOT circuits, allowing iteration caps with negligible loss of accuracy. We find syndrome-extraction buffers of order $\\lfloor d/4\\rfloor$ sufficient for distance-dependent error suppression in the demanding regimes studied. The approach extends to other local decoders and CSS codes; for repeated logical $S$ gates, IRS achieves approximately $4$ to $10\\times$ lower logical error rates than LOM, depending on initialisation.",
+      "url": "https://arxiv.org/abs/2610.26784v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.26784v1",
+      "published": "2026-10-19T17:35:34Z",
+      "updated": "2026-10-19T17:35:34Z",
       "categories": [
-        "math.AG",
-        "hep-th",
-        "math-ph",
-        "math.DG"
+        "quant-ph"
       ],
-      "primary_category": "math.AG"
+      "primary_category": "quant-ph"
+    },
+    {
+      "id": "2610.26783v1",
+      "title": "PPT-assisted capacities of bosonic Gaussian channels",
+      "authors": [
+        "Matthew Barber",
+        "Stefano Pirandola"
+      ],
+      "abstract": "We determine the exact quantum communication and entanglement-distribution capacities of three fundamental bosonic channels, namely thermal loss, thermal amplification and additive Gaussian noise, assisted by operations that completely preserve positive partial transpose (PPT). These operations are more powerful than local operations and classical communication (LOCC), but cannot generate distillable entanglement on their own. For thermal loss, the unconstrained capacity coincides with the Pirandola-Laurenza-Ottaviani-Banchi (PLOB) bound throughout the non-entanglement-breaking regime. The corresponding upper bounds are also attained for thermal amplification and additive noise. We extend these results to energy-constrained communication, establishing exact capacities for all three channels at every prescribed mean input energy. Our results solve a class of bosonic capacity problems under PPT assistance and establish exact benchmarks for determining whether the same communication rates can be achieved via LOCC alone.",
+      "url": "https://arxiv.org/abs/2610.26783v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.26783v1",
+      "published": "2026-10-19T17:35:29Z",
+      "updated": "2026-10-19T17:35:29Z",
+      "categories": [
+        "quant-ph"
+      ],
+      "primary_category": "quant-ph"
     }
   ]
 }
