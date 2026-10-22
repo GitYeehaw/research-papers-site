@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-10-21T13:44:58.750339+00:00",
+  "scraped_at": "2026-10-22T13:46:37.988639+00:00",
   "researcher_count": 54,
   "researchers": [
     {
@@ -359,6 +359,26 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2610.28943v1",
+          "title": "Multi-Objective Protein Optimization via Modular Diffusion Steering",
+          "authors": [
+            "Meir Roketlishvili",
+            "Felix Huber",
+            "Wenda Chu",
+            "Yisong Yue",
+            "Raul Astudillo"
+          ],
+          "abstract": "Protein engineering often requires improving several properties simultaneously, motivating the search for high-performing sequences that represent useful fitness tradeoffs. Discovering these sequences is challenging because the design space is combinatorially large and experimental campaigns often permit only a few rounds of batched measurements. We introduce \\textit{MODS}, a modular framework for multi-objective protein optimization via inference-time diffusion steering. For each proposal, MODS samples augmented Chebyshev scalarization weights and a fitness-surrogate ensemble member to define a scalar steering reward. Varying the weights directs generation toward different objective tradeoffs, while varying ensemble members diversifies the predictions used for guidance. Because MODS expresses multi-objective acquisition through scalar rewards, it can be paired with different diffusion models and compatible steering procedures. After each evaluation batch, MODS updates the surrogates without retraining the generative model. We evaluate MODS on six protein optimization tasks using predictive oracles trained on experimental assay data, with two diffusion models and two steering procedures. MODS achieves competitive final hypervolume across all six tasks with both diffusion models, and substantially outperforms the best evaluated baseline on several tasks. Our results demonstrate a flexible and effective approach to multi-objective protein optimization with limited feedback.",
+          "url": "https://arxiv.org/abs/2610.28943v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.28943v1",
+          "published": "2026-10-20T21:36:35Z",
+          "updated": "2026-10-20T21:36:35Z",
+          "categories": [
+            "cs.LG"
+          ],
+          "primary_category": "cs.LG"
+        },
+        {
           "id": "2609.36118v1",
           "title": "The Layer Mystery of VLA: An Information-Theoretical Analysis of VLA Latent Interface",
           "authors": [
@@ -456,32 +476,6 @@
             "cs.MA"
           ],
           "primary_category": "cs.AI"
-        },
-        {
-          "id": "2607.02834v1",
-          "title": "On the Design Space of Discrete Diffusion Online Adaptation for Molecular Optimization",
-          "authors": [
-            "Trevor Chen",
-            "Ariel Dai",
-            "Jason Yang",
-            "Riccardo De Santi",
-            "Daniel Khalil",
-            "Wenda Chu",
-            "Nate Gruver",
-            "Pranav Murugan",
-            "Alexander F. G. Goldberg",
-            "Maruan Al-Shedivat",
-            "Yisong Yue"
-          ],
-          "abstract": "Molecular optimization often starts from a pretrained generative model that captures a broad prior over valid molecular structures. At test time, however, the goal is not to sample from this prior, but to use a limited oracle budget to shift generation toward task-specific high-reward molecules. We study this adaptation problem for discrete diffusion models. Each online round couples several choices. The loop must decide which candidates to evaluate, how rewards become model updates, which feedback to reuse, and how far to move beyond the pretrained prior. These choices have mostly been studied in isolation, leaving open whether they complement one another, become redundant, or interfere inside a full online adaptation loop. We conduct controlled studies across six small-molecule binding-affinity tasks and three protein-fitness tasks. We find that acquisition, reward shaping, and model debiasing provide complementary routes to higher reward, especially for small molecules. Replay further stabilizes learning, while validity penalties keep small-molecule exploration on the valid molecular manifold. Together, these findings point to a practical recipe for feedback-efficient molecular optimization: online fine-tuning with acquisition, reward shaping, debiasing, replay, and validity control. This recipe outperforms offline fine-tuning and inference-time search baselines under matched oracle-call budgets and GPU-hour accounting. The gains are largest when high-reward candidates require larger shifts from the pretrained prior.",
-          "url": "https://arxiv.org/abs/2607.02834v1",
-          "pdf_url": "https://arxiv.org/pdf/2607.02834v1",
-          "published": "2026-07-03T00:06:31Z",
-          "updated": "2026-07-03T00:06:31Z",
-          "categories": [
-            "cs.LG"
-          ],
-          "primary_category": "cs.LG"
         }
       ]
     },
@@ -816,6 +810,28 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2610.28948v1",
+          "title": "COWBOY: A Scalable Sim-to-Real Framework for Learning Contextual Whole-Body Manipulation",
+          "authors": [
+            "Jiahui Yang",
+            "Jason Jingzhou Liu",
+            "Ray Muxin Liu",
+            "Andrew E. Wang",
+            "Kenneth Shaw",
+            "Deepak Pathak",
+            "Ruslan Salakhutdinov"
+          ],
+          "abstract": "Mobile manipulators must adapt not only to objects, but also to the spatial context in which they appear: where to position the base, how to manipulate, and where to look while navigating surrounding scene geometry. To address this, we present COWBOY, a scalable sim-to-real framework for learning such contextual whole-body manipulation. On whole-body dexterous grasping, COWBOY transfers zero-shot to hundreds of objects and diverse in-the-wild scenes, spanning cluttered tabletops, shelves, drawers, and other unstructured settings. Rather than learning scene adaptation directly with RL in simulation, a vectorized environment-aware whole-body controller (WBC) handles reaching in thousands of scenes by coordinating base-arm motion, collision avoidance, and active vision. Then, local RL experts are trained in local scenes for object interaction and can be reused across thousands of full-scene layouts. We distill these composed WBC-RL teachers into a single vision policy that controls the mobile base, arm, dexterous hand, and actuated camera from point-cloud observations. The resulting policy exhibits contextual whole-body behavior, automatically adapting base placement, camera viewpoint, arm trajectory, and grasp strategy to observed scene and object geometry. Videos are available at https://cowboy-manip.com",
+          "url": "https://arxiv.org/abs/2610.28948v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.28948v1",
+          "published": "2026-10-20T21:59:10Z",
+          "updated": "2026-10-20T21:59:10Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2609.19463v1",
           "title": "ParticleSplat: Self-supervised Object-centric Latent Particle Splatting",
           "authors": [
@@ -906,30 +922,6 @@
             "cs.RO"
           ],
           "primary_category": "cs.RO"
-        },
-        {
-          "id": "2606.19451v1",
-          "title": "3D-DLP: Self-Supervised 3D Object-Centric Scene Representation Learning",
-          "authors": [
-            "Ellina Zhang",
-            "Madhaven Iyengar",
-            "Amir Zadeh",
-            "Chuan Li",
-            "Deepak Pathak",
-            "David Held",
-            "Tal Daniel"
-          ],
-          "abstract": "We introduce 3D-DLP, a self-supervised object-centric representation learning model that decomposes scene-level RGB-D or voxel observations into a set of 3D latent particles. Building on the Deep Latent Particles (DLP) framework, each particle encodes disentangled attributes, including 3D keypoint position, bounding box dimensions, and appearance features, and represents a distinct entity in the scene. The model learns interpretable per-particle segmentation maps through an end-to-end self-supervised reconstruction objective. We demonstrate on both simulated and real-world datasets that the learned latent space is interpretable and controllable: by manipulating particle positions and decoding, we can generate novel scene configurations. Furthermore, we show that leveraging these compact 3D latent particles for downstream robotic manipulation improves performance over baselines that either lack explicit 3D information or rely on memory-intensive dense 3D inputs without object-centric structure. Code and videos are available at https://eubooks3003.github.io/3d-dlp.",
-          "url": "https://arxiv.org/abs/2606.19451v1",
-          "pdf_url": "https://arxiv.org/pdf/2606.19451v1",
-          "published": "2026-06-17T18:00:08Z",
-          "updated": "2026-06-17T18:00:08Z",
-          "categories": [
-            "cs.LG",
-            "cs.CV",
-            "cs.RO"
-          ],
-          "primary_category": "cs.LG"
         }
       ]
     },
@@ -1383,6 +1375,69 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2610.29845v1",
+          "title": "RangeNav: Task-Aligned LiDAR Range-Image Pretraining for Robot Navigation",
+          "authors": [
+            "Samuel Foo Enze",
+            "Manthan Patel",
+            "Fan Yang",
+            "Linus Kramer",
+            "Pascal Roth",
+            "Marco Hutter",
+            "Cesar Cadena"
+          ],
+          "abstract": "Autonomous mobile robots operating in dense crowds and cluttered sites require $360^\\circ$ perception to react to surrounding hazards. While panoramic LiDAR offers full-surround coverage, learning representations within reinforcement learning (RL) is sample-inefficient under sparse rewards, and existing 3D pretrained point-cloud encoders are too memory-heavy for massively parallel RL simulation. We present RangeNav, a compact (183k parameters) LiDAR range-image encoder pretrained entirely on synthetic data. RangeNav uses anisotropic convolutions and circular padding to handle the extreme aspect ratio and azimuthal seam of range images. We pretrain the network using a navigation-aligned objective combining range reconstruction, semantic segmentation, and bird's-eye-view (BEV) prediction, then freeze it for policy learning. In simulation, adding semantic and BEV supervision increases success rates over a reconstruction-only baseline by an average of 32.03 and 23.73 percentage points (pp) in procedurally generated training and out-of-distribution realistic test environments, respectively. Zero-shot real-world deployments on a Unitree B2-W quadruped demonstrate robust navigation through dense crowds, low-light settings, and construction zones where limited-field-of-view depth policies struggle. Code and models will be open-sourced.",
+          "url": "https://arxiv.org/abs/2610.29845v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.29845v1",
+          "published": "2026-10-21T15:06:08Z",
+          "updated": "2026-10-21T15:06:08Z",
+          "categories": [
+            "cs.RO",
+            "cs.LG"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2610.29612v1",
+          "title": "Watch Your Step: Anticipated Perception for Humanoid Locomotion",
+          "authors": [
+            "Matthias Heyrman",
+            "Chenhao Li",
+            "Ioannis Dadiotis",
+            "Marco Hutter"
+          ],
+          "abstract": "Perceptive locomotion policies typically observe a dense robot-centric elevation map, although only the terrain beneath and around the next footsteps informs the control decision. Learned encoders compress the whole visual input, leaving the policy to work out which inputs matter while learning the baseline locomotion task. Learning both at once slows training and, without computationally expensive attention mechanisms, makes generalization to new terrain harder. We instead remove redundant inputs from the elevation map before the policy sees it. A lightweight foothold prediction model (FPM) predicts future footholds from proprioception and the velocity command alone, and we sample the elevation map only in small patches around these predicted footholds. We train the prediction model alongside the locomotion policy, periodically retraining it on new policy rollouts as the robot's gait matures. This allows the perception to anticipate where the policy will step, while the policy learns to leverage terrain information around those steps. With the proposed lightweight preprocessing, the policy reaches a given terrain difficulty in roughly a third of the training iterations required with the complete map. It outperforms policies that observe the complete map where footholds are sparse, including in narrow walled corridors, and on unseen terrain, and it matches an attention-based encoder trained at several times the cost. The policy transfers zero-shot to a Unitree G1 humanoid traversing various obstacles, stairs, gaps, and step-downs beyond the training distribution in both indoor and outdoor environments.",
+          "url": "https://arxiv.org/abs/2610.29612v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.29612v1",
+          "published": "2026-10-21T11:52:29Z",
+          "updated": "2026-10-21T11:52:29Z",
+          "categories": [
+            "cs.RO",
+            "cs.LG"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2610.29586v1",
+          "title": "End-to-End Reinforcement Learning for Quadrupedal Jumping in Lunar Gravity",
+          "authors": [
+            "Levin M\u00fcller",
+            "Oliver Fischer",
+            "Marco Trentini",
+            "Yusuke Tanaka",
+            "Marco Hutter"
+          ],
+          "abstract": "Legged robots can extend planetary exploration to rugged and discontinuous terrain that is inaccessible to conventional rovers. In lunar gravity, jumping further expands this mobility by enabling robots to cross obstacles and gaps that cannot be traversed by walking alone. We present a multistage reinforcement-learning approach that produces a single end-to-end control policy for commanded point-to-point jumping under lunar gravity. The resulting policy has a simple architecture and relies exclusively on mission-compatible onboard sensing, making its deployment on a real lunar mission plausible. In simulation, the learned policy performs accurate point-to-point jumps with landing errors smaller than the robot's body size. We analyze the torque and power demands of lunar jumping and characterize performance degradation under extreme outlier events, including control-update freezes of up to \\SI{1}{s} during flight. Hardware transfer demonstrates that the policy can successfully execute a vertical jump under lunar-gravity offloading. Furthermore, the measured torque and power profiles are consistent with the simulation results and remain within the robot's hardware limits.",
+          "url": "https://arxiv.org/abs/2610.29586v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.29586v1",
+          "published": "2026-10-21T11:27:05Z",
+          "updated": "2026-10-21T11:27:05Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2610.25288v1",
           "title": "Vision as Proprioception: Estimating Humanoid Robot Pose from Video",
           "authors": [
@@ -1421,71 +1476,6 @@
           "pdf_url": "https://arxiv.org/pdf/2610.24610v1",
           "published": "2026-10-17T10:32:21Z",
           "updated": "2026-10-17T10:32:21Z",
-          "categories": [
-            "cs.RO"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2610.18147v1",
-          "title": "Walk Like This: Stylized Locomotion for Physics-Based Characters through Example-Driven Diffusion",
-          "authors": [
-            "Joshua Aurand",
-            "Agon Serifi",
-            "Sammy Christen",
-            "Ruben Grandia",
-            "Espen Knoop",
-            "Marco Hutter",
-            "Moritz B\u00e4cher"
-          ],
-          "abstract": "We present a real-time framework for expressive legged locomotion that enables independent control over velocity and style. Unlike existing data-driven controllers, which typically require explicit style labels for training, our method efficiently leverages large-scale unstructured motion data and generalizes to unseen styles. We disentangle style from functional locomotion through a tailored sampling strategy used to train a style encoder whose output conditions an autoregressive diffusion model. During inference, the user provides a style reference clip and a joystick velocity command. The diffusion model then generates a kinematic reference tracked by a reinforcement learning controller. To improve user controllability and stylization strength, we propose an attention biasing mechanism and a velocity command correction strategy. We demonstrate our method on a physics-based humanoid character in simulation and on a physical robot, showcasing robust real-time control and continuous style modulation. The results can be best seen in our supplemental video (https://www.youtube.com/watch?v=roFnS6N7nJ4).",
-          "url": "https://arxiv.org/abs/2610.18147v1",
-          "pdf_url": "https://arxiv.org/pdf/2610.18147v1",
-          "published": "2026-10-13T10:53:25Z",
-          "updated": "2026-10-13T10:53:25Z",
-          "categories": [
-            "cs.RO"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2610.12276v1",
-          "title": "Toward Lunar Legged Robots: Field Deployment Lessons at LUNA",
-          "authors": [
-            "Adrian Fuhrer",
-            "Joseph Church",
-            "Oliver Fischer",
-            "William Talbot",
-            "Nicolas Faesch",
-            "Yannic Hofmann",
-            "Hendrik Kolvenbach",
-            "Yusuke Tanaka",
-            "Marco Hutter"
-          ],
-          "abstract": "Legged robots are promising candidates for future lunar surface missions because they can traverse steep, loose, and obstacle-rich terrain that challenges conventional wheeled rovers. However, readiness for lunar deployment is limited by uncertainties in foot-regolith interaction, dust generation, illumination-driven perception degradation, and operational constraints. This paper reports lessons from the 2025 LUNA analogue campaign, where ANYmal-D and Magnecko traversed loose regolith simulant and crater-like terrain and collected long-horizon navigation and visual-inertial data under challenging lighting. We show that quadrupedal robots can traverse regolith simulant, but performance is affected by sinkage and slip, dust-generating contacts, and perception failures caused by overexposure, shadows, and low-texture regions. These results motivate tighter integration of regolith-aware locomotion policies, illumination-robust perception, repeatable analogue testing, and mission-level operational validation for future lunar legged robots.",
-          "url": "https://arxiv.org/abs/2610.12276v1",
-          "pdf_url": "https://arxiv.org/pdf/2610.12276v1",
-          "published": "2026-10-08T16:37:09Z",
-          "updated": "2026-10-08T16:37:09Z",
-          "categories": [
-            "cs.RO"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2610.08003v1",
-          "title": "Reactive Task-Oriented Robot-Human Handovers via Generative Hypothesis Selection",
-          "authors": [
-            "Carmen Scheidemann",
-            "Andreea Tulbure",
-            "Pascal Burkhardt",
-            "Marco Hutter"
-          ],
-          "abstract": "When humans hand each other objects, they incorporate both geometric and semantic information into this process. For example, passing a knife with the handle towards the recipient, rather than the blade, is both more ergonomic and safer. Recent state-of-the-art methods for task-oriented robot-human handovers have progressed from modeling object geometry to incorporating object affordances. However, they often forgo predicting the explicit, task-specific hand poses a human selects to utilize an object. Since many objects support multiple interaction modalities, e.g., a claw hammer used to strike or pull nails, this variability must be modeled to achieve robust task-oriented handovers. To tackle this, we propose a novel approach, GENESIS-Handover (GENErative HypotheSIS), which leverages VLM image generation to produce a variety of task-specific hand-object interaction hypotheses. These hypotheses are matched in real time to the observed human hand pose, enabling inference of the most suitable handover configuration. By leveraging VLMs as priors of plausible hand-object interactions, the method produces task-conditioned handover strategies for previously unseen object-task pairs. We evaluate the standalone interaction proposal module before deploying the full system on a mobile manipulator. In a user study with 12 participants across five task-object pairs, 83.3% perceived our method to have better task understanding than the previous state of the art.",
-          "url": "https://arxiv.org/abs/2610.08003v1",
-          "pdf_url": "https://arxiv.org/pdf/2610.08003v1",
-          "published": "2026-10-06T09:01:10Z",
-          "updated": "2026-10-06T09:01:10Z",
           "categories": [
             "cs.RO"
           ],
@@ -1728,6 +1718,26 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2610.29172v1",
+          "title": "Conditional Flow Models Convert Epistemic Uncertainty into Apparent Aleatoric Variance",
+          "authors": [
+            "Navodita Sharma",
+            "Abhishek Shetty",
+            "Max Simchowitz",
+            "Pulkit Agrawal"
+          ],
+          "abstract": "Conditional Flow Models (CFMs) are increasingly being used in place of deterministic predictors across machine learning, including for tasks that were classically formulated as regression. Given their success in such tasks, we ask the question: what useful information do the conditional distributions produced by CFMs carry beyond what a point predictor would provide? We identify a systematic phenomenon: in many natural regimes, CFM samples routinely have larger variance than the true conditional distribution, even in nearly deterministic regression problems. This effect is most pronounced where the model has not resolved the dependence on the conditioning variable, and thus the additional variance can be viewed as converting epistemic uncertainty in fitting the ground truth conditional distribution into apparent aleatoric variance in the generated samples. Through controlled synthetic and real-data experiments, and comparisons with explicit smoothing estimators, we show that the induced variance tracks model underfitting of complex or hard-to-fit targets, and decreases with additional training or data. We provide a theoretical account of the phenomenon in a simplified setting and demonstrate a consequent practical use-case of conditional flow-matching: designing high-coverage predictive sets that cover the ground-truth regression target.",
+          "url": "https://arxiv.org/abs/2610.29172v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.29172v1",
+          "published": "2026-10-21T04:02:35Z",
+          "updated": "2026-10-21T04:02:35Z",
+          "categories": [
+            "cs.LG",
+            "cs.AI"
+          ],
+          "primary_category": "cs.LG"
+        },
+        {
           "id": "2610.23849v1",
           "title": "Blind Precise Assembly: Proprioceptive Sim-to-Real Peg-in-Hole for Diverse Parts",
           "authors": [
@@ -1806,27 +1816,6 @@
             "cs.AI"
           ],
           "primary_category": "cs.RO"
-        },
-        {
-          "id": "2609.22241v1",
-          "title": "H2LooP Telecom Model v1: From Telecom Comprehension to Autonomous Issue and PR Resolution",
-          "authors": [
-            "Amit Singh",
-            "Vedant Nipane",
-            "Mayank Goel",
-            "Pulkit Agrawal",
-            "Sairanjan Mishra"
-          ],
-          "abstract": "We present H2LooP Telecom Model v1, a domain-specialized large language models fine-tuned for the telecommunications industry. We release two domain-adapted model variants serving complementary use cases: a comprehension-focused variant for telecom domain question answering and reasoning, and an agentic variant for autonomous telecom code generation, pull request resolution, and code commits on production repositories. H2LooP Telecom achieves strong results on the GSMA Open Telecom Lite (OT-Lite) benchmark and a proprietary telecom code generation benchmark, outperforming frontier closed-source models such as GPT-5 and Claude Opus on independent leaderboard evaluation, while preserving general-purpose capabilities. The Comprehension variant achieves 81.8% weighted average on OT-Lite Pass@3, and, independently, ranks 5th overall on the official community-run Open Telco AI Leaderboard* at only 31B parameters-ahead of frontier closed-source systems including Claude Opus 4.6, GPT-5, Gemini 3 Flash, Grok-4-fast, and Kimi K2.5. Our agentic variant obtains a relative improvement of +8.8% in AST Similarity and +20.0% in Location IoU over the base model on telecom code generation, while maintaining identical MMLU (74.0%) and BFCL v3 multi-turn function calling (79.0%) performance, indicating zero catastrophic forgetting. Domain specialization on curated telecom corpora, spanning 3GPP standards, O-RAN specifications, network telemetry, and real repository commits, yields substantial improvements over general-purpose models of equivalent scale, approaches frontier closed-source models on domain-specific evaluation, and is independently corroborated by our official leaderboard standing.",
-          "url": "https://arxiv.org/abs/2609.22241v1",
-          "pdf_url": "https://arxiv.org/pdf/2609.22241v1",
-          "published": "2026-09-04T13:27:17Z",
-          "updated": "2026-09-04T13:27:17Z",
-          "categories": [
-            "cs.CL",
-            "cs.AI"
-          ],
-          "primary_category": "cs.CL"
         }
       ]
     },
@@ -1959,7 +1948,7 @@
       "paper_count": 5,
       "papers": [
         {
-          "id": "2610.25600v1",
+          "id": "2610.25600v2",
           "title": "Vector-Quantized World Model: Latent Feedback Motion Planning for Robot Manipulation",
           "authors": [
             "Xuezhou Xu",
@@ -1968,10 +1957,10 @@
             "Benjamin Riviere"
           ],
           "abstract": "Visual world models have shown strong potential for robot planning, yet long-horizon manipulation remains challenging due to compounding prediction errors, large search complexity, and latent plans that the low-level controller cannot reliably reach. In this work, we introduce Vector-Quantized World Model (VQ-WM), a latent feedback motion planning framework that integrates discrete long-horizon search with continuous visual feedback control: a discrete latent predictor models transitions between vector-quantized latent states, allowing the planner to look far ahead and find a shortest path to the goal through discrete search and a continuous learned controller sequentially reaches the planned states through visual feedback, correcting deviations to mitigate compounding errors. Whereas most vector quantization uses Euclidean distance, we use a novel estimator of the first-passage-time as a quasi-metric, which aligns the planning abstraction with the controller's capabilities. We evaluate on the physical robot manipulation of the Tower of Hanoi puzzle: whereas existing state-of-the-art foundation models (VLAs, WAMs) only succeed when the solution trace in their training dataset, our method achieves 100\\% success rate with only short-play data, demonstrate its ability to compose long-horizon solutions beyond the short demonstrated trajectories and execute them reliably. Our solution also outperforms strongest world-models by 13.3--85.3 percentage points on simulation benchmarks spanning manipulation and locomotion, demonstrating consistent progress and new capabilities.",
-          "url": "https://arxiv.org/abs/2610.25600v1",
-          "pdf_url": "https://arxiv.org/pdf/2610.25600v1",
+          "url": "https://arxiv.org/abs/2610.25600v2",
+          "pdf_url": "https://arxiv.org/pdf/2610.25600v2",
           "published": "2026-10-19T00:06:44Z",
-          "updated": "2026-10-19T00:06:44Z",
+          "updated": "2026-10-20T20:08:37Z",
           "categories": [
             "cs.RO"
           ],
@@ -2458,6 +2447,33 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2610.28801v1",
+          "title": "JUICE: Unified Multimodal Modeling in Pretrained Representation Spaces",
+          "authors": [
+            "Jiahan Li",
+            "Huangyuan Su",
+            "Shengbang Tong",
+            "Shusheng Yang",
+            "Ruihan Guo",
+            "Suozhi Huang",
+            "Hexu Zhao",
+            "Pratyusha Sharma",
+            "Sherry Yang",
+            "Jiatao Gu",
+            "Rob Fergus",
+            "Kyunghyun Cho"
+          ],
+          "abstract": "Most unified multimodal models treat images and text asymmetrically: a pretrained language model generates text, an attached diffusion head generates images, and outputs that contain both are produced in a fixed order, so the first output cannot adapt to the second. We ask whether both modalities can instead be generated by one process that is trained on them jointly from scratch. Pretrained encoder spaces hold both modalities in one continuous form and carry knowledge learned at scale, and recent work finds them effective as generative targets for vision and language. We therefore model the joint distribution directly in these spaces. We introduce JUICE (Joint Unified multimodal modeling In Continuous Encoder spaces), a single flow matching Transformer over frozen image and text representations, in which each modality has its own noise level. Which modalities are clean and which are generated then decides the task: image generation, captioning, visual question answering, or joint generation. Controlled pretraining runs test each design choice. At equal guidance, generating text as continuous states leaves image generation intact (48.41 GenEval, against 47.86 for a model trained only for text-to-image generation), while captions lose some exact wording. Training on joint and conditional denoising together beats either alone, and semantic encoder spaces beat VAE latents and raw pixels as targets. At 2.1B parameters, with no language model initialization and at 224x224, JUICE reaches up to 0.88 on GenEval and 73.1 on VQAv2. By sampling both modalities from the joint distribution (coupled sampling), it can also draw a route on a map while writing out the matching moves. On mazes with several valid solutions, joint success rises from 54.6% with independent sampling to 93.7%, and no modality has to go first. On visual spatial planning, JUICE solves 99.8% of maps at its training sizes.",
+          "url": "https://arxiv.org/abs/2610.28801v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.28801v1",
+          "published": "2026-10-20T18:25:09Z",
+          "updated": "2026-10-20T18:25:09Z",
+          "categories": [
+            "cs.CV"
+          ],
+          "primary_category": "cs.CV"
+        },
+        {
           "id": "2610.20998v1",
           "title": "MoCaP: Mobile Code-as-Policies for Zero-Shot Mobile Manipulation from Passive Human Videos",
           "authors": [
@@ -2537,30 +2553,6 @@
             "cs.AI"
           ],
           "primary_category": "cs.AI"
-        },
-        {
-          "id": "2604.09793v1",
-          "title": "GIANTS: Generative Insight Anticipation from Scientific Literature",
-          "authors": [
-            "Joy He-Yueya",
-            "Anikait Singh",
-            "Ge Gao",
-            "Michael Y. Li",
-            "Sherry Yang",
-            "Chelsea Finn",
-            "Emma Brunskill",
-            "Noah D. Goodman"
-          ],
-          "abstract": "Scientific breakthroughs often emerge from synthesizing prior ideas into novel contributions. While language models (LMs) show promise in scientific discovery, their ability to perform this targeted, literature-grounded synthesis remains underexplored. We introduce insight anticipation, a generation task in which a model predicts a downstream paper's core insight from its foundational parent papers. To evaluate this capability, we develop GiantsBench, a benchmark of 17k examples across eight scientific domains, where each example consists of a set of parent papers paired with the core insight of a downstream paper. We evaluate models using an LM judge that scores similarity between generated and ground-truth insights, and show that these similarity scores correlate with expert human ratings. Finally, we present GIANTS-4B, an LM trained via reinforcement learning (RL) to optimize insight anticipation using these similarity scores as a proxy reward. Despite its smaller open-source architecture, GIANTS-4B outperforms proprietary baselines and generalizes to unseen domains, achieving a 34% relative improvement in similarity score over gemini-3-pro. Human evaluations further show that GIANTS-4B produces insights that are more conceptually clear than those of the base model. In addition, SciJudge-30B, a third-party model trained to compare research abstracts by likely citation impact, predicts that insights generated by GIANTS-4B are more likely to lead to higher citations, preferring them over the base model in 68% of pairwise comparisons. We release our code, benchmark, and model to support future research in automated scientific discovery.",
-          "url": "https://arxiv.org/abs/2604.09793v1",
-          "pdf_url": "https://arxiv.org/pdf/2604.09793v1",
-          "published": "2026-04-10T18:13:55Z",
-          "updated": "2026-04-10T18:13:55Z",
-          "categories": [
-            "cs.CL",
-            "cs.AI"
-          ],
-          "primary_category": "cs.CL"
         }
       ]
     },
@@ -3584,6 +3576,28 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2610.28880v1",
+          "title": "Real2Sem2Real: 3D Semantic Augmentations for Robot Learning from a Single Human RGB Demonstration",
+          "authors": [
+            "Matthew Strong",
+            "Ankush K. Dhawan",
+            "Julien Poffet",
+            "Giuse Pham",
+            "Jinho So",
+            "Monroe Kennedy"
+          ],
+          "abstract": "Human video scales easily and does not need robot hardware, but existing methods require depth sensing, overlay the robot onto 2D video, or generate data only for the demonstrated objects. We present Real2Sem2Real (R2Sem2R), a real-to-semantic-to-real pipeline that turns one monocular RGB video of a human demonstration into thousands of robot demonstrations across the semantic object instances of a category. R2Sem2R tracks the SE(3) pose of each object with DINOv3-distilled Gaussian splats, outperforming existing methods and FoundationPose with estimated metric depth. R2Sem2R then aligns digital cousins, each generated from one or a few photographs, to the demonstrated objects with a semantic alignment. This alignment matches whole objects and the functional regions of target objects, such as a coffee machine's tray. R2Sem2R maps the human hand to a feasible robot grasp that extends to the cousins. Robot demonstrations are generated either in IsaacSim, for photorealistic rendering, or MuJoCo, for contact physics, and R2Sem2R can generate over 2,000 episodes in about two hours. On two real robots and four tasks, we train a vision-language-action policy on data from one human video per task, and policies trained on our data match or exceed policies trained on teleoperation across diverse object instances. The project page is available at https://real2sem2real.github.io/.",
+          "url": "https://arxiv.org/abs/2610.28880v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.28880v1",
+          "published": "2026-10-20T19:59:24Z",
+          "updated": "2026-10-20T19:59:24Z",
+          "categories": [
+            "cs.RO",
+            "cs.CV"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2609.37971v1",
           "title": "Comparing Utility of Inertial, Occupancy, Semantic, and Intent Information in Human Motion Prediction During Daily Tasks",
           "authors": [
@@ -3668,28 +3682,6 @@
             "cs.RO",
             "cs.CV",
             "cs.GR"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2604.00416v1",
-          "title": "Learning Humanoid Navigation from Human Data",
-          "authors": [
-            "Weizhuo Wang",
-            "Yanjie Ze",
-            "C. Karen Liu",
-            "Monroe Kennedy"
-          ],
-          "abstract": "We present EgoNav, a system that enables a humanoid robot to traverse diverse, unseen environments by learning entirely from 5 hours of human walking data, with no robot data or finetuning. A diffusion model predicts distributions of plausible future trajectories conditioned on past trajectory, a 360 deg visual memory fusing color, depth, and semantics, and video features from a frozen DINOv3 backbone that capture appearance cues invisible to depth sensors. A hybrid sampling scheme achieves real-time inference in 10 denoising steps, and a receding-horizon controller selects paths from the predicted distribution. We validate EgoNav through offline evaluations, where it outperforms baselines in collision avoidance and multi-modal coverage, and through zero-shot deployment on a Unitree G1 humanoid across unseen indoor and outdoor environments. Behaviors such as waiting for doors to open, navigating around crowds, and avoiding glass walls emerge naturally from the learned prior. We will release the dataset and trained models. Our website: https://egonav.weizhuowang.com",
-          "url": "https://arxiv.org/abs/2604.00416v1",
-          "pdf_url": "https://arxiv.org/pdf/2604.00416v1",
-          "published": "2026-04-01T02:59:42Z",
-          "updated": "2026-04-01T02:59:42Z",
-          "categories": [
-            "cs.RO",
-            "cs.AI",
-            "cs.CV",
-            "cs.LG"
           ],
           "primary_category": "cs.RO"
         }
@@ -3824,6 +3816,39 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2610.30136v1",
+          "title": "Agentic World Action Models",
+          "authors": [
+            "Zhuoyang Liu",
+            "Dantong Niu",
+            "Botong Zhang",
+            "Boning Shao",
+            "Jing Wang",
+            "Ruijie Zheng",
+            "Yuvan Sharma",
+            "Runyu Lu",
+            "Jiaming Liu",
+            "Renrui Zhang",
+            "Roei Herzig",
+            "Yutong Bai",
+            "Ken Goldberg",
+            "Danfei Xu",
+            "Yuke Zhu",
+            "Guanzhi Wang",
+            "Linxi \"Jim\" Fan",
+            "Trevor Darrell"
+          ],
+          "abstract": "Recent world action models provide visual foresight and future prediction for robot manipulation, but lack explicit mechanisms for compositional skill reuse. Agentic robotics combines code-based planning and reasoning with reusable skills, but often lacks predictive grounding in physical dynamics. We introduce AW-0, an agentic world action model framework that integrates code-based planning with joint video and action prediction. We jointly model code, future video, and robot actions as three coupled generative streams within a unified mixture-of-transformers architecture. Within this architecture a code expert generates parameterized skill routines and control logic while video and action experts generate future visual states and low-level motor commands. Code serves two complementary roles: it structures multi-step prediction and control within the world model and represents skills as reusable programs for subsequent agentic execution. We further introduce an automated curation pipeline that labels robot and human video trajectories with aligned programs and consolidates recurring routines into reusable skill libraries. Evaluations on RoboTwin 2.0 and physical bimanual manipulation tasks show improved task performance over VLA and WAM baselines, alongside gains in language following, semantic reasoning and robustness, demonstrating that agentic code enables connection between planning, prediction and execution within WAMs.",
+          "url": "https://arxiv.org/abs/2610.30136v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.30136v1",
+          "published": "2026-10-21T17:59:56Z",
+          "updated": "2026-10-21T17:59:56Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2610.18835v2",
           "title": "RoboSimStudio: An Interactive Toolkit for Human and Agent Rapid Real2Sim of Robot Manipulation Tasks",
           "authors": [
@@ -3926,30 +3951,6 @@
             "cs.RO"
           ],
           "primary_category": "cs.RO"
-        },
-        {
-          "id": "2609.29103v1",
-          "title": "TRACE: Interactive Bi-Directional Tracing of Monochrome Cables Amid Clutter",
-          "authors": [
-            "Nidhya Shivakumar",
-            "Ethan Ransing",
-            "Josh Zhang",
-            "Shamak Gowda",
-            "Kevin Yang",
-            "Miles Hua",
-            "Anika Agrawal",
-            "Justin Yu",
-            "Ken Goldberg"
-          ],
-          "abstract": "Accurate state estimation (tracing) of Deformable Linear Objects (DLOs) such as cables is a critical challenge for data centers, manufacturing, construction, homes, and surgery, where precise cable management directly impacts operational safety and efficiency. However, resolving the state of multiple monochrome cables amid foreground and background clutter poses challenges due to occlusions, overlap, and ambiguous crossings. We present Two-way Routing And Cable Estimation (TRACE), which combines bi-directional cable tracing with interactive perception primitives-Divergence Push and Cluster Dilation-to actively resolve ambiguities. Evaluation with 110 physical experiments suggests that TRACE can increase the percentage of cable length correctly traced in complex scenarios (with up to 4 cables and 40 crossings) from ~60% with the strongest prior method, HANDLOOM 2.0, to ~90%, outperforming RT-DLO, Nano Banana Pro, and ChatGPT 5.2 as well. For a trial run on a workstation with an NVIDIA GeForce RTX 4090 GPU, the average computation time is 0.4 seconds per cable. Project website: https://trace-paper.github.io/.",
-          "url": "https://arxiv.org/abs/2609.29103v1",
-          "pdf_url": "https://arxiv.org/pdf/2609.29103v1",
-          "published": "2026-09-24T06:33:23Z",
-          "updated": "2026-09-24T06:33:23Z",
-          "categories": [
-            "cs.RO"
-          ],
-          "primary_category": "cs.RO"
         }
       ]
     },
@@ -3984,8 +3985,8 @@
           "primary_category": "cs.RO"
         },
         {
-          "id": "2610.25988v1",
-          "title": "Self-Supervised Inertial Odometry",
+          "id": "2610.25988v2",
+          "title": "SSIO: Self-Supervised Inertial Odometry",
           "authors": [
             "Yuheng Qiu",
             "Yutian Chen",
@@ -4001,11 +4002,11 @@
             "Sebastian Scherer",
             "Guanya Shi"
           ],
-          "abstract": "Learning inertial odometry for a new platform usually requires ground-truth trajectories. We show that an inertial odometry model can instead be trained from scratch by a myopic teacher that integrates the IMU over each short window independently, a scheme we call integration self-supervision.Interestingly, although supervised only by short-window velocity changes, the student learns to directly predict velocity, and does so more accurately than its integration teacher. Pose graph distillation then refines the model with sequence-consistent targets from a pose graph over many windows. Training on a new platform therefore no longer requires collecting ground-truth trajectories, but only calibrating the IMU and recording data during normal operation. Across six datasets spanning pedestrians, drones, quadrupeds, and a humanoid, the same recipe with no velocity or position labels trains models that come within $0.07$~m/s average velocity error of a same-architecture supervised baseline.",
-          "url": "https://arxiv.org/abs/2610.25988v1",
-          "pdf_url": "https://arxiv.org/pdf/2610.25988v1",
+          "abstract": "Learning inertial odometry for a new platform usually requires ground-truth trajectories. We show that an inertial odometry model can instead be trained from scratch by a myopic teacher that integrates the IMU over each short window independently, a scheme we call integration self-supervision. Interestingly, although supervised only by short-window velocity changes, the student learns to directly predict velocity, and does so more accurately than its integration teacher. Pose graph distillation then refines the model with sequence-consistent targets from a pose graph over many windows. Training on a new platform therefore no longer requires collecting ground-truth trajectories, but only calibrating the IMU and recording data during normal operation. Across six datasets spanning pedestrians, drones, quadrupeds, and a humanoid, the same recipe with no velocity or position labels trains models that come within 0.07~m/s average velocity error of a same-architecture supervised baseline.",
+          "url": "https://arxiv.org/abs/2610.25988v2",
+          "pdf_url": "https://arxiv.org/pdf/2610.25988v2",
           "published": "2026-10-19T08:14:43Z",
-          "updated": "2026-10-19T08:14:43Z",
+          "updated": "2026-10-21T07:24:54Z",
           "categories": [
             "cs.RO"
           ],
@@ -5501,7 +5502,7 @@
       "paper_count": 5,
       "papers": [
         {
-          "id": "2610.24291v1",
+          "id": "2610.24291v2",
           "title": "An important Bottleneck in LLM Optimizers: Principle-Level Local Optima",
           "authors": [
             "Nian Ran",
@@ -5515,10 +5516,10 @@
             "Richard Allmendinger"
           ],
           "abstract": "Feedback-driven LLM optimizers are increasingly used for evolutionary search, Bayesian optimization, heuristic design, and scientific discovery. Yet rapid initial gains often give way to prolonged plateaus despite substantial remaining evaluation budgets. We investigate \\emph{principle-level search collapse}, where an optimizer's search becomes confined to a narrow set of design principles, even though it may continue to generate distinct candidates and achieve small improvements. We assemble a diagnostic benchmark spanning molecular optimization, network sentinel-node selection, and GPU-kernel optimization, and introduce a decision-tree protocol combining principle narrowing, prolonged performance plateaus, and gaps to attainable reference solutions. Across 161 assessable runs on the three problem domains, 78.3\\% receive support for collapse, including 55.3\\% with strong support. Candidate-level variation can nevertheless conceal restricted search at the principle level. We then test \\emph{diversity injection}, a common response to search stagnation, such as higher t, multiple LLMs, and web search, and show that it provides limited and inconsistent benefits: among 65 molecular runs, still 73.8\\% and 53.8\\% receive support and strong support respectively. We finally test reference-principle interventions and find that they improve some runs, but their benefits vary across models and tasks: access to a better principle does not guarantee its effective use. Our benchmark and diagnostic protocol provide a basis for evaluating future optimizers on principle-level collapse. Our findings highlight the need for online collapse detection and better mechanisms for generating and maintaining alternative principles during optimization.",
-          "url": "https://arxiv.org/abs/2610.24291v1",
-          "pdf_url": "https://arxiv.org/pdf/2610.24291v1",
+          "url": "https://arxiv.org/abs/2610.24291v2",
+          "pdf_url": "https://arxiv.org/pdf/2610.24291v2",
           "published": "2026-10-16T22:39:17Z",
-          "updated": "2026-10-16T22:39:17Z",
+          "updated": "2026-10-21T16:38:00Z",
           "categories": [
             "cs.LG"
           ],
