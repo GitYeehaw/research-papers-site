@@ -2,243 +2,235 @@
   "category": "robotics",
   "name": "Robotics Research",
   "description": "Robotics \u2014 Motion Planning, Control Systems, Human-Robot Interaction, Autonomous Systems",
-  "scraped_at": "2026-10-25T13:08:19.388602+00:00",
+  "scraped_at": "2026-10-26T15:05:52.407798+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2610.31670v1",
-      "title": "Sensorimotor Alignment: A Platonic Proxy for Embodied Policy Success",
+      "id": "2610.32978v1",
+      "title": "SceneBloom: Agentic Indoor Environment Generation with Realistic and Diverse Layouts for Embodied Learning",
       "authors": [
-        "Yunfei Xie",
-        "Howard H. Qian",
-        "Shiyi Lan",
-        "Kaiyu Hang",
-        "Chen Wei"
+        "Yuhan Liu",
+        "Lianhui Qin",
+        "Shenji Wan"
       ],
-      "abstract": "Robotic foundation models are typically evaluated through costly closed-loop rollouts, which motivates cheap offline proxies for model capability. The Platonic Representation Hypothesis (PRH) suggests that as representations improve, different modalities such as vision and language converge toward a shared statistical model of reality. We ask whether motion trajectories form another such modality: as embodied models become more capable, should their sensory representations converge toward the structure of physical motion? To examine this, we propose Sensorimotor Alignment ($S^2$), a training-free offline metric that measures how well a model's sensory representation aligns with the geometry of physical motion. We find that $S^2$ correlates positively with downstream robot task success across embodied model families, making it a low-cost offline proxy for prioritizing models before closed-loop evaluation. $S^2$ can also identify promising vision-language model (VLM) backbones even before costly fine-tuning into vision-language-action models (VLAs). Beyond this correlation, $S^2$ offers representation-level explanations for phenomena observed in VLAs and world action models (WAMs). With $S^2$, we extend PRH to embodied models and make sensorimotor alignment empirically measurable, offering insight into why an embodied model succeeds beyond its closed-loop success rate.",
-      "url": "https://arxiv.org/abs/2610.31670v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.31670v1",
-      "published": "2026-10-22T17:59:51Z",
-      "updated": "2026-10-22T17:59:51Z",
+      "abstract": "Training generalizable embodied agents requires realistic, varied, and simulation-ready indoor environments. Language-guided methods support semantic planning and object-level reasoning, but precise spatial grounding remains difficult. Visual generative models offer rich priors over plausible arrangements, yet their outputs require geometric reasoning to become physically valid 3D scenes. We introduce SceneBloom, an agentic framework that combines visual layout sampling with contract-guided 3D compilation. A hierarchical sampler uses diffusion priors to generate furniture arrangements within functional zones. A compiler then uses relations extracted from each proposal to guide geometric fitting and local pose correction. Across five room types, SceneBloom attains the highest visual quality and physical stability among the compared methods and is the only method with no detected mesh collisions and out-of-bounds objects. Its layouts are also closer to the distribution of real rooms than those of all compared baselines. Object navigation policies trained in these realistic scenes achieve a higher success rate in held-out real scans than those trained on an equal number of real training scans. Code is available at https://github.com/Tinaliu0123/scenebloom.",
+      "url": "https://arxiv.org/abs/2610.32978v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.32978v1",
+      "published": "2026-10-23T17:59:21Z",
+      "updated": "2026-10-23T17:59:21Z",
       "categories": [
         "cs.CV",
-        "cs.LG",
+        "cs.AI",
         "cs.RO"
       ],
       "primary_category": "cs.CV"
     },
     {
-      "id": "2610.31661v1",
-      "title": "OpenTac: An Open Ecosystem for Customizable, Scalable, and Transferable 3D Tactile Sensing",
+      "id": "2610.32971v1",
+      "title": "RobustRLlib: A Unified Library and Benchmark for Robust Reinforcement Learning Algorithms",
       "authors": [
-        "Ariel Slepyan",
-        "Geeta Chandra Raju Bethala",
-        "Jiafeng Gu",
-        "Anagha Rajendra Dangle",
-        "Yinzhe Zhou",
-        "Hongyuan Fu",
-        "Jade Sim",
-        "Tuhin Basu",
-        "Xinyi Yin",
-        "Md Faizal Karim",
-        "Gregory Hager",
-        "Homanga Bharadhwaj",
-        "Anand Bhattad",
-        "Krishna Murthy Jatavallabhula",
-        "Nitish V. Thakor"
+        "Xi Chen",
+        "Fengqi Hu",
+        "Zeyu Shen",
+        "Jiaying Xu",
+        "Shangding Gu",
+        "Pan Xu",
+        "Anqi Liu",
+        "Laixi Shi"
       ],
-      "abstract": "We present OpenTac, a novel sensor and a full-stack ecosystem for tactile skins that are highly customizable, scalable, and readily deployed in downstream robot control and learning applications. Our core contribution is twofold. First, we develop a scalable resistive tactile skin with a structured deformable overlay that converts tangential loading into spatially varying pressure. Differential responses across neighboring \"taxels\" support decoding of local shear vectors, and the common-mode response encodes normal force. Second, we provide a highly customizable sensor design tool that is able to automatically generate fabrication files for these tactile skins from 2D outlines and developable 3D surfaces, including from abstract descriptions such as text (e.g., \"design a sensor for a size 9 shoe insole\"). We develop an ecosystem around the OpenTac sensor, including the CAD design tool, a sensor simulator, cross-sensor transfer, and fast/adaptive data acquisition. We demonstrate the broad applicability of the OpenTac-CAD sensor design tool by designing and fabricating more than 30 sensors across a variety of robot embodiments. We characterize the three-dimensional tactile fields produced by OpenTac with a commercial, high-precision force/torque sensor. We demonstrate the broad applicability of 3D tactile sensing across contact-rich feedback control and manipulation policy learning on four real-world robot embodiments. Additionally, adaptive acquisition enables kilohertz-rate partial readouts, exceeding full-array raster scanning on the same sensor by 19.2X at 16 sampled taxels per update for a 1024-taxel skin. We provide all hardware, software, and result videos are at opentac.github.io",
-      "url": "https://arxiv.org/abs/2610.31661v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.31661v1",
-      "published": "2026-10-22T17:59:06Z",
-      "updated": "2026-10-22T17:59:06Z",
+      "abstract": "Robust reinforcement learning (RL) is critical for reliable real-world deployment, where policies may fail under diverse shifts and disruptions. Existing robust RL algorithms offer a rich set of mechanisms and principles, yet two major barriers limit their broader potential: limited algorithm reusability and an unclear empirical capability boundary. We introduce RobustRLlib, an algorithm-centric library and benchmark that addresses both challenges. It integrates 17 representative robust online, offline, and safe RL algorithms under a unified interface for substantially improved reusability, together with an enhanced evaluation platform spanning diverse real-world shifts and advanced humanoid and vision-language-action tasks. Systematic evaluation over 273 perturbation configurations provides an up-to-date capability map of current robust RL algorithms, revealing where they remain effective and where substantial robustness gaps persist. As an open-source, user-friendly platform, RobustRLlib offers a reproducible and extensible codebase for applying existing methods to new problems and developing new robust RL algorithms.",
+      "url": "https://arxiv.org/abs/2610.32971v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.32971v1",
+      "published": "2026-10-23T17:57:22Z",
+      "updated": "2026-10-23T17:57:22Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "primary_category": "cs.LG"
+    },
+    {
+      "id": "2610.32969v1",
+      "title": "DexPort: A Hand-Held Skill Interface for Dexterous Hand Data Collection",
+      "authors": [
+        "Amber Xie",
+        "Jiawei Fu",
+        "Xiaofeng Guo",
+        "Carmelo Sferrazza",
+        "Guanya Shi",
+        "Haozhi Qi"
+      ],
+      "abstract": "Collecting high-quality demonstrations remains a central bottleneck for learning dexterous manipulation. Teleoperation records executable robot actions, but it requires a complete robot setup and places the burden of coordinating many finger joints on the operator. Human demonstrations are easier to collect, but their motions must be estimated and retargeted to the robot, and they do not directly provide robot actions. In this paper, we introduce DexPort, a portable data-collection interface for high-DoF robot hands. It uses the same hand hardware for collection and deployment, avoiding a hand embodiment gap, and records both commanded joint targets and measured joint states. Our key observation is that a small set of skills can support a wide range of dexterous tasks. During collection, the operator moves the hand-held interface to specify the robot wrist motion and selects or adjusts skills that coordinate the finger motion. This removes the need to control each joint independently while retaining behaviors such as precise grasping and in-hand manipulation. We collect demonstrations across several real-world tasks and in unstructured environments without a robot arm. We then use behavior cloning to train visuomotor policies directly on the recorded wrist motions and hand commands, without skill labels. We evaluate across 4 tasks: pick-and-place with diverse objects, screwing with in-hand tool use, drawer stowage which requires simultaneous grasp and pulling, and a bimanual scanning task. We collect over 2,500 demonstrations with our portable device, in both laboratory and in-the-wild settings. Across our tasks, we see an improvement from 11% to 64% when using recorded robot commands instead of states, and an improvement from 36% to 78% for task success when using in-the-wild data.",
+      "url": "https://arxiv.org/abs/2610.32969v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.32969v1",
+      "published": "2026-10-23T17:56:28Z",
+      "updated": "2026-10-23T17:56:28Z",
       "categories": [
         "cs.RO",
-        "eess.SP",
-        "eess.SY"
+        "cs.AI",
+        "cs.LG"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2610.31627v1",
-      "title": "Workload-Aware Monitoring for AI-RAN",
+      "id": "2610.32966v1",
+      "title": "ViT-H: Generative Video-To-Humanoid Control with Motion Tracking Feedback",
       "authors": [
-        "Babak Azkaei",
-        "Georgios Exarchakos",
-        "Kishor Chandra Joshi"
+        "Zimo He",
+        "Tianyi Bian",
+        "Zizhong Yang",
+        "Hongjie Li",
+        "Nan Jiang",
+        "Jieming Cui",
+        "Baoxiong Jia",
+        "Yizhou Wang",
+        "Siyuan Huang",
+        "Yixin Zhu"
       ],
-      "abstract": "AI-RAN platforms are expected to share CPU and GPU resources between radio workloads and AI services. Aggregate telemetry reports operating conditions, but timing changes may reflect different workloads, processors, or measurement boundaries. We propose workload-aware monitoring that associates radio-work descriptors with processing paths, timing boundaries, and operating context before comparing like with like. In 16 over-the-air downlink experiments, hybrid dispatch (CPU for transport blocks (TBs) below 4,096 bytes and GPU otherwise) has 29.66% and 22.93% lower mean host-callback durations than direct GPU dispatch, without and with a synthetic GPU co-runner, respectively. Grouping locates the separation in small TBs, while large-TB callback-duration ranges overlap. These observations identify a candidate for complementary CPU/GPU use.",
-      "url": "https://arxiv.org/abs/2610.31627v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.31627v1",
-      "published": "2026-10-22T17:45:44Z",
-      "updated": "2026-10-22T17:45:44Z",
-      "categories": [
-        "cs.NI",
-        "eess.SY"
-      ],
-      "primary_category": "cs.NI"
-    },
-    {
-      "id": "2610.31625v1",
-      "title": "Extending Harmonic Function Methods via Root Locus for Coordinated Path Generation",
-      "authors": [
-        "Matteo Frascarelli",
-        "Lucia Pallottino",
-        "Alberto Landi"
-      ],
-      "abstract": "We consider the offline generation of coordinated paths for N interchangeable robots and N goals in planar environments with polygonal obstacles. After a conformal map to a circular domain, starts and goals become the poles and zeros of a rational function R, and the paths are the branches of its Generalized Root Locus (GRL), i.e. the streamlines of the logarithmic potential -log R. We show that, for every phase outside a finite set of critical phases and a set of boundary phases, the induced gradient motion drives each robot to a distinct goal along pairwise disjoint paths that never reach the obstacles; the robot-goal assignment is produced by the construction, and with the gain used as a clock all robots move as the closed-loop roots of the GRL and arrive together at a prescribed time. Obstacles become streamlines through successive Milne-Thomson reflections, and for a finite number of reflections a finite test certifies safety for the potential that is actually computed. Reciprocal root-locus planning is recovered as a special case. The method is illustrated on two polygonal workspaces, 100 random instances compared with independent harmonic planning and artificial potentials, and a scene with ten robots and ten obstacles.",
-      "url": "https://arxiv.org/abs/2610.31625v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.31625v1",
-      "published": "2026-10-22T17:45:31Z",
-      "updated": "2026-10-22T17:45:31Z",
+      "abstract": "Learning humanoid control from monocular human videos offers a scalable way to acquire diverse whole-body behaviors. Yet, existing reconstruction-retargeting-tracking pipelines are limited in system-level scalability by separately optimized intermediate stages and cannot directly optimize reference motion executability using downstream tracking feedback. We present ViT-H, a video-to-humanoid control framework following a generation-and-tracking paradigm. ViT-H directly generates humanoid reference motions from videos with a diffusion model, bypassing human motion reconstruction and retargeting, and uses motion-tracking outcomes to post-train the generator with direct preference optimization. We further introduce an autoregressive variant that enables real-time humanoid video teleoperation with sub-400 ms latency. Extensive experiments on the Unitree G1 demonstrate that ViT-H outperforms state-of-the-art reconstruction-retargeting-tracking pipelines in both motion quality and executability. We further show that ViT-H scales favorably with model size and with both pre-training and post-training data scale, while motion-tracking feedback consistently improves executability across different motion trackers.",
+      "url": "https://arxiv.org/abs/2610.32966v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.32966v1",
+      "published": "2026-10-23T17:54:09Z",
+      "updated": "2026-10-23T17:54:09Z",
       "categories": [
         "cs.RO",
-        "eess.SY"
+        "cs.CV"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2610.31617v1",
-      "title": "DiffDreamer: Coupling World Models with Differentiable Simulation for Agile Quadrotor Control",
+      "id": "2610.32965v1",
+      "title": "RynnUnify: Towards Unified Embodied Brain",
       "authors": [
-        "Fanxing Li",
-        "Yuxiang Huang",
-        "Shengyang Wang",
-        "Fangyu Sun",
-        "Shuyu Wu",
-        "Tianbao Zhang",
-        "Dexin Zuo",
-        "Yan Yufei",
-        "Danping Zou",
-        "Wenxian Yu"
+        "Minghao Zhu",
+        "Bohan Hou",
+        "Kun Xiang",
+        "Zixuan Wang",
+        "Yinzhou Tang",
+        "Yifei Yang",
+        "Zhikai Wang",
+        "Tianyi Zhang",
+        "Kehan Li",
+        "Haoyu Zhao",
+        "Siteng Huang",
+        "Leigang Qu",
+        "Sicong Leng",
+        "Dongchi Huang",
+        "Mingxiu Chen",
+        "Shijian Lu",
+        "Yue Wang",
+        "Xiaodan Liang",
+        "Zhenyu Zeng",
+        "Deli Zhao",
+        "Chengju Liu",
+        "Jianfei Yang",
+        "Xin Li"
       ],
-      "abstract": "Tasks such as quadrotor dynamic-gate racing require agents to anticipate external motion while maintaining precise high-frequency control. World-model-based reinforcement learning provides a natural solution by learning latent dynamics for future imagination, yet it often entangles environmental evolution and the robot's own dynamics in a single learned rollout, where model bias can affect policy optimization efficiency. We propose DiffDreamer, a differentiable reinforcement learning framework that tightly couples a learned world model with differentiable simulation for actor optimization. In one optimization step, the learned world model propagates latent states that capture external dynamics and history-dependent features, while the differentiable simulator propagates the robot's explicit physical state. We further decompose the actor objective into a critic-driven pathway for non-differentiable task rewards and a simulator-driven pathway for differentiable motion rewards. Experiments on aggressive tracking and dynamic-gate racing show that DiffDreamer improves training convergence over the model-free, model-based, and differentiable-RL baselines, and final performance over these baselines and classical planning and control methods. Additional experiments assess reward decomposition and the odometry-conditioned relative-state representation through ablations. We also provide proof-of-concept real-world flight experiments for validation.",
-      "url": "https://arxiv.org/abs/2610.31617v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.31617v1",
-      "published": "2026-10-22T17:41:13Z",
-      "updated": "2026-10-22T17:41:13Z",
+      "abstract": "We introduce RynnUnify, a 16B unified embodied model that combines strong embodied understanding with long-horizon visual planning through interleaved video--language reasoning. With capabilities spanning spatial reasoning, physical prediction, and grounding, RynnUnify connects an understanding of the physical world with visual anticipation of how it evolves across successive subtasks. Building on these capabilities, we further develop an agentic extension through reinforcement learning to selectively use video predictions for reasoning about unobserved states and interaction outcomes. We also develop a world-action extension of the full RynnUnify model, translating its understanding and prediction capabilities into robot control. To evaluate these capabilities, we introduce Rynn-VP and Rynn-GEU for long-horizon visual planning and anticipatory reasoning. Experiments show that RynnUnify achieves the highest average embodied understanding score among the evaluated unified multimodal models and improves the Rynn-VP overall score by 9.75 points over Cosmos 3 Nano. Its agentic extension improves the Rynn-GEU average by 6.0 points over direct reasoning, while the world-action extension achieves 51.5\\% success on 20 selected composite RoboCasa365 tasks and 46.7\\% average success across three real-robot tasks. Together, these results establish RynnUnify as a shared foundation for embodied understanding, visual planning, and robot control, taking a step toward a unified embodied brain.",
+      "url": "https://arxiv.org/abs/2610.32965v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.32965v1",
+      "published": "2026-10-23T17:54:07Z",
+      "updated": "2026-10-23T17:54:07Z",
       "categories": [
         "cs.RO"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2610.31613v1",
-      "title": "Progress Probes $P^2$: Lightweight Runtime Monitoring for Vision-Language-Action Models",
+      "id": "2610.32961v1",
+      "title": "Robotic Optical Coherence Tomography-Guided Geometric Modeling of Soft Tissue: 3D Representations for Data-Driven Closed-Loop Shape Control",
       "authors": [
-        "Atiksh Bhardwaj",
-        "Edward W. Duan",
-        "Junwon Seo",
-        "Prithwish Dan",
-        "Wei-Chiu Ma",
-        "Andrea Bajscy",
-        "Preston Culbertson"
+        "Chaoyu Zhang",
+        "Guangshen Ma",
+        "Mark Draelos"
       ],
-      "abstract": "Vision-Language-Action (VLA) models can perform diverse manipulation tasks directly from visual observations and natural language instructions, but they remain prone to mistakes and unpredictable failures. Deploying these policies without continuous human supervision will require robust runtime monitors that detect when the policy has gone off-course. Existing monitors use external foundation models, such as vision-language models (VLMs) to supervise the policy, introducing significant complexity and computational cost for monitoring at runtime. In this work, we investigate an alternate approach: \\textit{can a VLA's own internal activations provide the information needed to monitor its execution?} Our method trains linear probes on policy activations from demonstrations to estimate progress, then flags executions that deviate from expected progress. In experiments with the open-source VLA $\u03c0_{0.5}$ and across simulated and real-world manipulation tasks, this approach is competitive with or outperforms VLM-based monitors in task failure detection, as well as methods which require failure data for training. These findings suggest that simple probes of VLA internals can be used to develop reliable runtime monitors, opening a path toward building policies that can act reliably and monitor their execution without external foundation models.",
-      "url": "https://arxiv.org/abs/2610.31613v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.31613v1",
-      "published": "2026-10-22T17:40:19Z",
-      "updated": "2026-10-22T17:40:19Z",
+      "abstract": "In medical robotics, data-driven soft-tissue shape control requires deforming tissue toward desired morphologies through sequential physical interactions. This challenge is particularly important in microscale manipulation, where localized deformation is difficult to observe, represent, and control, while physics-based models can be computationally expensive and difficult to adapt to realistic environments. Optical coherence tomography (OCT) provides high-resolution volumetric perception of tissue deformation, but target-conditioned control requires effective representations of both observed and desired tissue states. In this work, we introduce an OCT-guided data-driven framework for tissue shape control, learned from user-guided demonstrations and executed with closed-loop OCT feedback. We study full-volume, tissue-masked sparse-volume, and voxelized point-cloud representations, with or without residual conditioning, using deterministic (Explicit) and generative diffusion (Diffusion) policies. Across 12 configurations and 576 phantom rollouts on 3-DoF depth and 6-DoF directional tasks, OCT-derived 3D representations support both Explicit and Diffusion policies, with performance depending on representation and residual conditioning. Residual conditioning reduces directional Shape RMSE from 0.748 to 0.555 mm for full-volume Diffusion, while voxelized point-cloud Explicit with residuals achieves 0.534 mm for depth and 0.443 mm for directional control, with comparable accuracy at intermediate unseen targets and consistent performance across deployments. We further evaluate the framework in 60 ex vivo porcine rollouts, extending to biological tissue with final geometric errors comparable to human demonstrations. These results establish volumetric OCT as current and goal representations for learned closed-loop tissue shape control across deterministic and generative action models.",
+      "url": "https://arxiv.org/abs/2610.32961v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.32961v1",
+      "published": "2026-10-23T17:52:30Z",
+      "updated": "2026-10-23T17:52:30Z",
       "categories": [
         "cs.RO"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2610.31608v1",
-      "title": "Humanoid Mobility via Attention-based Contacts",
+      "id": "2610.32941v1",
+      "title": "If at First You Don't Succeed, Backtrack: Lightweight Recovery for Frozen VLAs",
       "authors": [
-        "Junzhe He",
-        "Kehan Wen",
-        "Chong Zhang",
-        "Clemens Schwarke",
-        "Zewei Zhang",
-        "Kaixian Qu",
-        "Siyuan Hu",
-        "Matthias M\u00fcller",
-        "Vladlen Koltun",
-        "Marco Hutter"
+        "Thomas Landeg",
+        "Thierry Tambe"
       ],
-      "abstract": "Humanoid mobility over complex terrain requires accurate foot placement and coordinated whole-body motion capable of robust adaptation. Reinforcement learning (RL) policies trained without motion references generalize well across terrains, yet eliciting effective whole-body coordination through reward design and exploration alone remains challenging. In contrast, reference-based methods yield natural motions but struggle to adapt beyond the predefined trajectories in their training data. We introduce a learning framework that bridges these two approaches by using motion data strictly as a training prior. An explicit, self-supervised, attention-based contact planner predicts future body-environment contacts, while a contact-conditioned tracker translates these plans into coordinated whole-body motion. Together, they establish contact as an interface between sensory observations and control actions. This abstraction allows the policy to internalize the contact-aware structure of locomotion rather than directly replicating kinematics. Consequently, a single policy can exploit data-driven motion priors for natural whole-body coordination while retaining the flexibility to discover environment-dependent behaviors through reinforcement learning. Building on the learned contact planner and tracker, a subsequent fine-tuning stage bootstraps their acquired capabilities to explore environment variations beyond those covered by the original motion data. Operating entirely from onboard observations without any reference inputs at deployment, this framework enables versatile humanoid mobility in challenging environments.",
-      "url": "https://arxiv.org/abs/2610.31608v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.31608v1",
-      "published": "2026-10-22T17:37:36Z",
-      "updated": "2026-10-22T17:37:36Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2610.31598v1",
-      "title": "Controlled Radio Fault Injection and Telemetry Evaluation for Open 5G RANs",
-      "authors": [
-        "Babak Azkaei",
-        "Maxim B\u00eetiu",
-        "Georgios Exarchakos",
-        "Kishor Chandra Joshi"
-      ],
-      "abstract": "Radio access network (RAN) telemetry reveals radio conditions, protocol behavior, and their consequences for applications. Evaluating its usefulness requires controlled impairments and observations of the same execution. We present C and Python channel brokers and a fault injection workflow for software 5G testbeds connecting an OCUDU base station and a software UE through ZeroMQ. The brokers apply scheduled, directional transformations to I/Q samples and restore the link, while the workflow jointly records applied faults, native and programmable (codelet) telemetry, and application delay. We demonstrate this capability through 45 comparative trials of brief uplink interruptions and stepped additive noise. These use cases distinguish recognizing a radio change from measuring its service consequence: native missing-feedback events retrospectively identify interruptions, whereas noise changes decoding-error measurements without producing those events. Median on-time round-trip times remain near 30 ms, but the prespecified comparisons show mean increases in on-time 95th-percentile delay of 354 and 604 ms for one and five interruptions, and 113 ms for noise. Adding receive-side radio link control (RLC) codelet summaries did not improve interruption classification on held-out trials. The framework provides a reusable way to evaluate measurement choices under known radio faults, before using them in monitoring or learning systems.",
-      "url": "https://arxiv.org/abs/2610.31598v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.31598v1",
-      "published": "2026-10-22T17:31:18Z",
-      "updated": "2026-10-22T17:31:18Z",
-      "categories": [
-        "cs.NI",
-        "eess.SY"
-      ],
-      "primary_category": "cs.NI"
-    },
-    {
-      "id": "2610.31569v1",
-      "title": "Echo: Coupled Action and Task Status Signal Denoising for Vision Language Action Models",
-      "authors": [
-        "Yufeng Liu",
-        "Bohao Fan",
-        "Juntu Zhao",
-        "Xinyi Wang",
-        "Hang Yu",
-        "Wenzhuan Luo",
-        "Yingzhi Wang",
-        "Qinghai Li",
-        "Yingdong Hu",
-        "Junliang Guo",
-        "Richard Wang",
-        "Dequan Wang",
-        "Yang Gao",
-        "Cheng Ma"
-      ],
-      "abstract": "Recognizing task completion and failure enables robots to stop upon success and initiate recovery or replanning after failure. Existing methods augment Vision Language Action (VLA) policies with task status signal prediction to support these execution decisions. However, learning and integrating these signals can require fine-grained supervision, external monitoring models, or complex architectural designs. Moreover, the potential of task status signals to directly guide action generation remains underexplored. We present Echo, a framework that combines task status signal learning without frame-level progress annotations with a compact design for status prediction and action generation within a single VLA. Specifically, Echo represents task status with stop and failure signals, added as two dimensions of each action chunk and denoised together with robot actions. Their combination distinguishes ongoing execution, successful completion, and failure. To learn these signals without fine-grained progress annotations, Echo constructs successful, failed, and recovery trajectories with complementary supervision properties. To enable status signal-guided action generation, Echo controls interactions between the signals and actions and denoises the signals faster than the actions. These allow later action denoising steps to condition on cleaner status estimates while preserving accurate signal prediction. Extensive real-world manipulation experiments show that Echo accurately predicts task status and consistently improves policy performance.",
-      "url": "https://arxiv.org/abs/2610.31569v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.31569v1",
-      "published": "2026-10-22T17:12:16Z",
-      "updated": "2026-10-22T17:12:16Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2610.31567v1",
-      "title": "Geometry-Dependent Properties of Physically Crosslinked PPy-PVA Hydrogels Enable Tunable Iontophoretic Drug Delivery",
-      "authors": [
-        "Heather Jin Hee Kim",
-        "Mohsen Alishahi",
-        "Kyuin Park",
-        "Mikaila K. Roncevich",
-        "Larissa M. Shepherd",
-        "Cara M. Nunez"
-      ],
-      "abstract": "Objective: Iontophoretic drug delivery has primarily relied on current modulation to regulate drug transport. Here, we investigate hydrogel geometry, microstructure, and local electric fields as alternative mechanisms for controlling transdermal delivery. Methods: Bovine serum albumin (BSA) was encapsulated in polypyrrole-polyvinyl alcohol (PPy-PVA) hydrogels. Five geometries, including Hilbert curve-based designs, were fabricated to vary pore architecture and local electric field distributions. We optimized PPy content, drug loading, and current density. Electric fields were evaluated using finite element analysis, and microstructures were characterized by scanning electron microscopy. Drug transport was assessed using Franz diffusion cells with artificial membranes. Results: Hydrogel geometries exhibited distinct microstructures and electric field distributions. Iontophoresis substantially enhanced permeability compared with passive diffusion, while individual geometries produced different cumulative release, flux, and permeability profiles. The average iontophoretic permeability was (3.80 +/- 1.93) x 10^-5, exceeding previously reported values using artificial membranes. Conclusion: Geometry-driven fabrication of drug-loaded hydrogels enables tunable transport characteristics under both iontophoretic and passive conditions. Significance: Geometry-mediated control offers an alternative approach to regulating iontophoretic drug delivery without requiring individual current-density modulation.",
-      "url": "https://arxiv.org/abs/2610.31567v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.31567v1",
-      "published": "2026-10-22T17:10:35Z",
-      "updated": "2026-10-22T17:10:35Z",
+      "abstract": "Vision-Language-Action (VLA) models perform well on robotic manipulation, yet remain brittle once their own actions carry them into states their training data barely covers. Recovering from such failures usually requires recovery demonstrations, policy retraining, or a separate model at inference time. We introduce Backtrack, a lightweight failure detection and recovery mechanism for frozen VLAs that needs none of these. A small failure prediction head, trained only on outcome-labeled rollouts of the frozen policy, reads the VLA's existing internal representations to estimate whether the current episode will fail. When the predicted failure probability exceeds a threshold, a controller pauses the policy, retraces the arm's recently achieved motion, and hands control back to the unchanged policy so it can retry from an earlier configuration. The head adds only 0.48-0.88% to the policy's parameter count. We evaluate Backtrack on LIBERO with three VLAs spanning two action-generation families: SmolVLA and $\u03c0$0.5, which use flow-matching action experts, and the autoregressive $\u03c0$0-FAST. On LIBERO-Long, the suite of long-horizon multi-step tasks and the one on which all three policies fail most often, Backtrack reduces each policy's failure rate by 19-48%, raising success by up to 7.4 percentage points; on the three shorter suites, where control success is already 85-99%, its effect is smaller. On MetaWorld, all twelve controller configurations tested with SmolVLA improve on the unassisted policy.",
+      "url": "https://arxiv.org/abs/2610.32941v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.32941v1",
+      "published": "2026-10-23T17:35:33Z",
+      "updated": "2026-10-23T17:35:33Z",
       "categories": [
         "cs.RO",
-        "physics.med-ph"
+        "cs.LG"
       ],
       "primary_category": "cs.RO"
+    },
+    {
+      "id": "2610.32911v1",
+      "title": "Classical, Machine Learning, and Hybrid Solvers for Partial Differential Equations: An Evidence-Weighted Review and Decision Framework",
+      "authors": [
+        "Yingchao Huang",
+        "Xin Wang",
+        "Shanshan Yao",
+        "Fanhua Zeng",
+        "Wei Peng"
+      ],
+      "abstract": "Machine learning for partial differential equations raises a practical question: when are classical, learned, or hybrid solvers justified? This survey compares the three families in a decision framework organized by data availability, query volume, and certification needs. An amortization law, tested on parametric Darcy flow, shows that surrogates trained on solver-generated data break even only after many queries, beyond thirty thousand for errors below one percent. An evidence ladder, a benchmark reanalysis, and three case studies show that claims of speedup and generalization carry the weakest evidence. Solver choice should follow regime, query volume, and evidence quality, not method novelty.",
+      "url": "https://arxiv.org/abs/2610.32911v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.32911v1",
+      "published": "2026-10-23T17:14:29Z",
+      "updated": "2026-10-23T17:14:29Z",
+      "categories": [
+        "eess.SY"
+      ],
+      "primary_category": "eess.SY"
+    },
+    {
+      "id": "2610.32909v1",
+      "title": "HoloBoxing: A Simple Recipe for Humanoid Boxing with 7 Minutes of Single-GPU Training",
+      "authors": [
+        "Xihan Ma",
+        "Bo Zhang",
+        "Boxiong Li",
+        "Yuhan Bao",
+        "Ziyue Liu",
+        "Yucheng Wang"
+      ],
+      "abstract": "HoloBoxing presents a simple recipe for learning humanoid boxing by building on a pretrained whole-body controller. The recipe separates reusable motor skills from task decisions: a compact planner requests future body-point targets, while the frozen controller handles joint-level execution. A learned decoder maps 32-dimensional actions to structured target windows, and measured-state imitation initializes the planner before reinforcement learning. Task learning then refines interaction behavior while reusing the decoder and controller, avoiding the need to relearn whole-body control. This combination keeps task optimization focused on a compact upper policy and supplies an initial behavior before reward-driven exploration. Starting from that available controller, the recipe accounts for about seven minutes of additional training, including reused representation fitting and a single-GPU task run. This excludes controller pretraining, data preparation, evaluation, and search. Simulated boxing experiments and component controls evaluate the resulting behavior and the roles of imitation initialization and the target representation.",
+      "url": "https://arxiv.org/abs/2610.32909v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.32909v1",
+      "published": "2026-10-23T17:11:28Z",
+      "updated": "2026-10-23T17:11:28Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2610.32898v1",
+      "title": "Polyhedral RIS Architecture with Quantum-Assisted Facet Selection for Uniform Coverage",
+      "authors": [
+        "Noha Hassan",
+        "Halim Yanikomeroglu"
+      ],
+      "abstract": "Reconfigurable intelligent surfaces (RISs) direct coverage toward moving user equipment (UE), but practical deployments involve discrete phase control, uncertain facet positions, and UE mobility, which require the problem to be re-solved continually. We consider these challenges for the chamfered hexagonal polyhedral RIS, which provides nearly uniform coverage. With both incidence and departure angles, we bound in closed form the gain loss of its best facet relative to the best possible reflecting facet, include the known b-bit quantization loss, and extend the bound to joint random mounting errors of all facets. For a precoded multi-user downlink, each facet-selection subproblem of the max-min rate design is shown to be an exact quadratic unconstrained binary optimization (QUBO) problem, suited to repeated time-constrained solving. The deployment of the base station in relation to the RIS allows the polyhedral surface to bring down the percentage of dead zones in vertical planar panels from 77% to 0.3% and increase the minimum rate by 34% relative to the STAR panel. The simulated annealing algorithm finds the optimum solution in 95% of the cases. The quantum approximation algorithm fails to do so.",
+      "url": "https://arxiv.org/abs/2610.32898v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.32898v1",
+      "published": "2026-10-23T17:04:25Z",
+      "updated": "2026-10-23T17:04:25Z",
+      "categories": [
+        "cs.IT",
+        "eess.SY"
+      ],
+      "primary_category": "cs.IT"
     }
   ]
 }
