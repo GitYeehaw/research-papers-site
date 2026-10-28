@@ -2,202 +2,219 @@
   "category": "biology",
   "name": "Biology Research",
   "description": "Quantitative Biology \u2014 Genomics, Biophysics, Neuroscience",
-  "scraped_at": "2026-10-27T14:19:03.690074+00:00",
+  "scraped_at": "2026-10-28T15:00:40.864928+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2610.35856v1",
-      "title": "On the stability of learning",
+      "id": "2610.37606v1",
+      "title": "A unified coarse-grained neural network potential for the dynamics of biomolecular complexes",
       "authors": [
-        "John J. Vastola"
+        "Antonio Mirarchi",
+        "Stephen E. Farr",
+        "Adri\u00e0 Per\u00e9z",
+        "Gianni De Fabritiis"
       ],
-      "abstract": "Learning algorithms are usually analyzed under the assumption that informative gradients are continuously available. But this is not always true---learning signals in biological neural networks, for example, may be sparse, local, and only intermittently available at any given synapse. In this work, we show that if gradient information is noisy and only intermittently available, learning may be unstable. In particular, even if average learning dynamics converge to the correct optimum, variance in learning may be asymptotically infinite. We explore this point in a number of analytically tractable settings, including single-layer and multi-layer linear networks, and derive explicit conditions under which learning is stable. These conditions complement, but are conceptually distinct from, existing conditions related to the stability of stochastic gradient descent. Our work demonstrates that unbiased credit assignment is not enough for reliable learning; sufficiently frequent and informative feedback is also required, which yields an additional constraint on models of biologically plausible learning.",
-      "url": "https://arxiv.org/abs/2610.35856v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.35856v1",
-      "published": "2026-10-26T17:58:14Z",
-      "updated": "2026-10-26T17:58:14Z",
+      "abstract": "The behavior of biomolecular complexes is governed by chemically specific interactions and often involves rare events that atomistic molecular dynamics struggle to capture within accessible timescales. Here we introduce AMARO v2.0, a coarse-grained neural network potential that retains all heavy atoms and treats solvent implicitly. Hydrogen-aware bead types and total-charge conditioning provide a shared representation for proteins, drug-like molecules, and their complexes, including ternary protein-protein-ligand systems. The model preserves folded proteins and captures key features of protein conformational free-energy landscapes. Across 262 complexes spanning 11 targets, the learned potential retains most ligand poses, although quaternary structure reorientation is observed for the HIF2A ternary complex. In targeted case studies, AMARO v2.0 distinguishes the two protonation states of trypsin-benzamidine and reaches the crystal binding pose in 3.3-fold more trajectories than all-atom molecular mechanics at a fixed estimated GPU-time budget. The same framework also recovers a reference binding pose in TYK2 and supports binding free-energy estimation for both trypsin-benzamidine and TYK2-EJM31, although the resulting values are more energetically favorable than the experimental references. SHP2 and CDK8 systems expose remaining limitations in binding-pose recovery and site specificity, respectively. Together, these results support AMARO v2.0 as a shared heavy-atom potential for biomolecular complex dynamics.",
+      "url": "https://arxiv.org/abs/2610.37606v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.37606v1",
+      "published": "2026-10-27T17:37:10Z",
+      "updated": "2026-10-27T17:37:10Z",
       "categories": [
-        "q-bio.NC",
-        "cs.LG"
-      ],
-      "primary_category": "q-bio.NC"
-    },
-    {
-      "id": "2610.35785v1",
-      "title": "A theory of noisy linear recurrent neural network learning dynamics",
-      "authors": [
-        "John J. Vastola",
-        "Kanaka Rajan"
-      ],
-      "abstract": "Biological neural networks are noisy: their dynamics involve difficult-to-predict fluctuations which are likely due not just to chaos, but also to a variety of low-level biophysical processes. Despite the omnipresence of intrinsic noise, its theoretical consequences are incompletely understood, especially in the context of learning. For example, does noise meaningfully shape representation learning, or is it better viewed as a nuisance factor whose presence or absence changes little about what solution is found and when? Here, we argue that intrinsic noise can significantly modulate representation learning in recurrent neural networks (RNNs), since it can strongly break solution-space degeneracies and in some cases control whether a non-degenerate solution exists at all. We show that this is true for an analytically tractable model of noisy RNN learning with a linear activation function and white noise inputs. We find that, in the so-called rich regime (where weights are initialized with small values), noise strongly modulates the directions in which the read-in, readout, and recurrent weights align. Moreover, we find that noise produces a kind of phase transition: for sufficiently high noise, a non-degenerate solution is not even optimal if parameter scales are limited (e.g., via regularization). These results extend recent analytic work on RNN representation learning and show that noise can act as a fundamental determinant of representations.",
-      "url": "https://arxiv.org/abs/2610.35785v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.35785v1",
-      "published": "2026-10-26T17:25:19Z",
-      "updated": "2026-10-26T17:25:19Z",
-      "categories": [
-        "cs.LG",
-        "q-bio.NC"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2610.35638v1",
-      "title": "Phase response approach to networked neural activity models with delays",
-      "authors": [
-        "Martin R Nelson",
-        "Jonathan J Crofts"
-      ],
-      "abstract": "Networks of delay-coupled neural mass models alternate between synchrony and anti-phase locking as the delay between brain regions increases. The origin of these delay-dependent bands has remained unclear. Here, we show that a single function, the phase interaction function $H$ of an isolated node, predicts where the bands occur and explains why they repeat. For a Wilson--Cowan model with intra-nodal delay $\u03c4$ and inter-nodal delay $\u03c1$, we compute the limit cycle and phase response, and hence $H$, by harmonic balance. Each band boundary is a zero of $H'$ shifted by the phase lag $\u03a9\u03c1$, so the bands repeat in $\u03c1$ with the oscillation period. Simulations of the full delay-differential networks confirm these predictions, from two nodes, where predicted frequencies agree to second order in the coupling strength, to rings, where the theory also identifies coexisting stable twisted states that random initial conditions rarely reach. At weak coupling, the delays at which synchrony gains or loses stability are set by the node dynamics alone, whereas stable anti-phase states require a bipartite network. For a macaque connectome, metastability peaks at the edges of the synchrony bands, where the stability margin of phase-locking vanishes. The reduction is accurate for coupling strengths well below the slowest Floquet exponent of the node, beyond which a phase--amplitude description is needed. More broadly, vanishing phase-locking stability provides a simple route to metastability in delay-coupled oscillator networks and a candidate mechanism for the flexible coordination of brain dynamics.",
-      "url": "https://arxiv.org/abs/2610.35638v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.35638v1",
-      "published": "2026-10-26T15:46:59Z",
-      "updated": "2026-10-26T15:46:59Z",
-      "categories": [
-        "q-bio.NC",
-        "math.DS"
-      ],
-      "primary_category": "q-bio.NC"
-    },
-    {
-      "id": "2610.35204v1",
-      "title": "mdRNAcat: A Molecular Dynamics RNA Catalog of REST2 Conformational Ensembles",
-      "authors": [
-        "Anton E. Dorn",
-        "Emile de Bruyn",
-        "Fabrice von der Lehr",
-        "Philipp Knechtges",
-        "Stefan Kesselheim",
-        "Alexander Schug"
-      ],
-      "abstract": "Learning molecular models of RNA requires simulation data that capture conformational variability and provide consistent physical training signals. Here, we introduce mdRNAcat, a curated dataset of all-atom molecular dynamics (MD) simulations of 48 RNA systems selected to promote sequence diversity. Each system is simulated using replica-exchange with solute scaling (REST2), with 32 Hamiltonian states and production lengths of 200-300 ns per state. The dataset provides atomic coordinates, instantaneous forces, and forces reevaluated under the unscaled reference Hamiltonian, together with structural annotations and replica-exchange metadata. Coordinates and forces are available at 1 ps intervals for the reference state and 100 ps intervals across all states in a standardized HDF5 format. We characterize conformational sampling, exchange behavior, base pairing, and sugar-pucker distributions to document the properties of the simulated ensembles. mdRNAcat provides a reusable resource for developing and evaluating data-driven RNA models, including coarse-grained force fields.",
-      "url": "https://arxiv.org/abs/2610.35204v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.35204v1",
-      "published": "2026-10-26T10:56:24Z",
-      "updated": "2026-10-26T10:56:24Z",
-      "categories": [
-        "q-bio.BM",
-        "cs.LG",
-        "physics.bio-ph"
+        "q-bio.BM"
       ],
       "primary_category": "q-bio.BM"
     },
     {
-      "id": "2610.35200v1",
-      "title": "Comparing Measurements of Pictorial Depth: Conditions for Placing Methods, Observers and Depiction Styles on One Scale",
+      "id": "2610.37587v1",
+      "title": "Every route counts, but some count more: a max-plus view of the C. elegans brain",
       "authors": [
-        "Adam Y. Shavit"
+        "Emma Reyner-Fuentes",
+        "Sebastian Rudolph",
+        "Carmen Pel\u00e1ez-Moreno",
+        "Francisco J. Valverde-Albacete"
       ],
-      "abstract": "Two observers can agree about what lies in front in a picture yet report different amounts of apparent depth. People report pictorial depth by judging which of two points looks nearer, setting a probe to match a surface, adjusting relative sizes, or rating three-dimensionality. Two such methods can agree closely without sharing a unit. We ask when different methods, observers, depiction styles and viewing conditions can share one scale. Each set of scores, a measurement block, is a graph node. Two blocks are linked only if their shared observations pass six checks fixed in advance, among them outcome type, removal of declared offsets and position effects, proportionality and covariance. If the adjusted shared patterns are exactly proportional, a connected graph fixes every block's gain, its relative scale factor. The checks accept proportionality only within a set margin, so a link supports the gains without proving exact proportionality. One unit is still not one depth coordinate. Suppose each block scores shared stimuli with its own origin and positive unit. A matrix-rank test then decides when a common coordinate is identified: when only one overall origin and unit remain free. If each shared stimulus, an anchor, is scored by exactly two blocks, this needs two disjoint sets of anchors, each connecting every block, their compatibility assumed, not tested. They also suffice, except for anchor values satisfying exact polynomial relations (probability zero for anchor values drawn from any distribution with a density). We adapt network gain estimation from test linking, with a loop-consistency check. A reanalysis of published probe settings on 3-D renderings passes one of 171 candidate depiction-style links through all six checks, each judged by its own 95% bound, unadjusted for the 171 pairs. Links between tasks remain untested; they need shared stimuli and a joint uncertainty model.",
-      "url": "https://arxiv.org/abs/2610.35200v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.35200v1",
-      "published": "2026-10-26T10:53:20Z",
-      "updated": "2026-10-26T10:53:20Z",
-      "categories": [
-        "stat.ME",
-        "q-bio.NC"
-      ],
-      "primary_category": "stat.ME"
-    },
-    {
-      "id": "2610.35161v1",
-      "title": "The mathematical journey of spatial reciprocity",
-      "authors": [
-        "Chaoqian Wang",
-        "Xiang Li",
-        "Attila Szolnoki"
-      ],
-      "abstract": "Over the past three decades, evolutionary game theory in structured populations has witnessed explosive progress. Counterintuitive cooperative phenomena discovered in simulations have stimulated the development of rigorous mathematical theories to describe the underlying dynamics. In this paper, we review these theoretical advancements, including pair approximation and coalescent theory, which offer analytical solutions to evolutionary games on networks. We summarize the key results obtained by these theories, while also discussing their limitations, such as high computational complexity and constrained flexibility when applied to complex models. We therefore suggest that mathematical approaches provide a complementary tool for understanding cooperation in structured populations alongside simulations.",
-      "url": "https://arxiv.org/abs/2610.35161v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.35161v1",
-      "published": "2026-10-26T10:26:05Z",
-      "updated": "2026-10-26T10:26:05Z",
-      "categories": [
-        "q-bio.PE",
-        "cond-mat.stat-mech"
-      ],
-      "primary_category": "q-bio.PE"
-    },
-    {
-      "id": "2610.35107v1",
-      "title": "Retrieval-Augmented Parkinson's Disease Classification from Resting-State Functional Connectivity",
-      "authors": [
-        "Tara Niknam",
-        "Sana Hassan Imam",
-        "Daniel Kristanto"
-      ],
-      "abstract": "Altered resting-state functional connectivity (FC) is a candidate marker for the diagnosis of Parkinson's disease (PD). Publicly available PD datasets, however, are small and fragmented across sites, scanners and clinical criteria. Transfer learning mitigates data scarcity by reusing a model trained on larger cohorts, but represents their knowledge primarily through a single set of weights shared by all individuals. Motivated by precision neuroimaging, we propose a retrieval-augmented classification (RAC) framework that additionally places each target individual in the context of similar individuals from external cohorts. A graph convolutional autoencoder (GAE), trained on external PD and control cohorts, encodes these cohorts into a neuro-knowledge base. Each target individual is encoded using the pretrained GAE, and its nearest neighbors are retrieved from the external knowledge base. Their embeddings are combined with the target embedding using mean aggregation or attention for classification. A systematic comparison on the TaoWu cohort separated the contributions of encoder pretraining, retrieval, attention and partial fine-tuning. Pretraining improved mean classification accuracy from 60.5% to 66.0%. However, retrieval and attention did not consistently improve performance over the pretrained-only variants. Several retrieval-based configurations nevertheless showed modestly higher ROC-AUC than the randomly initialized baseline. Varying the number of retrieved neighbors and partially fine-tuning the encoder provided no consistent additional gains. Retrieval-neighborhood analysis further showed diagnostically mixed neighborhoods. These findings provide initial evidence that population-learned representations can be complemented by individual-specific retrieval in neuroimaging, although larger datasets are needed to determine when such contextual information improves classification.",
-      "url": "https://arxiv.org/abs/2610.35107v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.35107v1",
-      "published": "2026-10-26T09:46:26Z",
-      "updated": "2026-10-26T09:46:26Z",
-      "categories": [
-        "q-bio.NC"
-      ],
-      "primary_category": "q-bio.NC"
-    },
-    {
-      "id": "2610.34643v1",
-      "title": "Competitive exploration in structured environments",
-      "authors": [
-        "James P. Wolfe",
-        "Joshua B. Plotkin"
-      ],
-      "abstract": "Organisms must constantly weigh exploiting the resources they know against exploring for better ones. When foragers compete, the best behavior for each forager also depends on what its competitors do. How does competition change the strategic balance between exploration and exploitation? Here we address this question in a minimal model: two $\u03b5$-greedy temporal-difference learners on a one-dimensional lattice, who start at a small reward at one end and are unaware of a larger reward at the other. For a lone forager, the optimal exploration rate increases monotonically with the value of the distant reward, and with its distance up to a critical distance. When two foragers share the lattice and split rewards, the choice of exploration rate becomes a game whose Nash equilibria have both foragers exploring, both staying, or one exploring while the other stays (anti-coordination). Under local best-response dynamics, pairs of foragers often converge on both exploring or both staying, even when anti-coordination would be socially optimal. This social dilemma arises for a wide range of parameters, and it persists even in a simplified model without explicit spatial structure. A minimal, naturalistic signal, in which one forager informs the other that it has found the distant reward, can remove many of the dilemmas in which both foragers explore, and can produce a Nash equilibrium whose collective payoff exceeds that of every outcome available without signaling.",
-      "url": "https://arxiv.org/abs/2610.34643v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.34643v1",
-      "published": "2026-10-26T00:02:01Z",
-      "updated": "2026-10-26T00:02:01Z",
-      "categories": [
-        "physics.soc-ph",
-        "cs.GT",
-        "q-bio.PE"
-      ],
-      "primary_category": "physics.soc-ph"
-    },
-    {
-      "id": "2610.34638v1",
-      "title": "Intrinsic Goals for Autonomous Agents: Hierarchical Exploration Captures Future Volitional Action in Drosophila",
-      "authors": [
-        "Declan Kutscher",
-        "Reece Keller",
-        "Alyn Kirsch",
-        "Felix Pei",
-        "Aran Nayebi"
-      ],
-      "abstract": "Animals have a remarkable capacity for autonomy---driven by intrinsic motivation---without external sensory cues or extrinsic objectives, yet the computational mechanisms behind this ability largely remain a mystery. We combine whole-brain recordings in the fruit fly (Drosophila melanogaster), which reveal neural representations of spontaneous exploratory decisions more than 10 seconds in advance, with a neuromechanical digital twin to test whether optimizing intrinsic goals yields realistically embodied artificial agents that quantitatively match fly behavior and internal representations of future volitional action during exploration. Our hierarchical policy selects from a discrete library of low-level motor primitives, consistent with ethological theories of behavioral syllables. We train agents without external reward using 20 intrinsic motivation algorithms spanning curiosity, entropy, and competency methods. The agents are evaluated in a virtual tethered-ball assay modeled on the fly experiment, comparing spontaneous locomotor statistics and internal representations and decoding future turn direction from kinematics and neural activity on the same timescales observed in flies. DIAYN, a hierarchical competency algorithm learning discrete policies that maximize behavioral entropy and the separability of induced sensory observations, achieves the strongest joint behavioral and neural prospective coding performance relative to flies. Its learned policies closely capture individual variability in fly exploration strategies, suggesting that this diversity serves to maximize state-space coverage at the population level. DIAYN's latent activity also closely captures the sum-difference rule for interhemispheric encoding of kinematics in biological flies. These results establish hierarchical, intrinsically motivated agents as a powerful framework for reverse-engineering animal autonomy.",
-      "url": "https://arxiv.org/abs/2610.34638v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.34638v1",
-      "published": "2026-10-25T23:40:13Z",
-      "updated": "2026-10-25T23:40:13Z",
+      "abstract": "Brains do not simply add up every signal they receive: they select which routes dominate. Yet connectomes are usually analyzed with tools that sum over all paths and place neural states in Euclidean spaces, blurring the feedback circuits that may sustain internal states. Here we treat neural signaling as routing instead of diffusion and describe it with max-plus algebra, in which signals accumulate along a path and the strongest route prevails. We propose a model in which the functional connectome of Caenorhabditis elegans emerges from the time-varying combination of electrical, synaptic, monoaminergic, neuropeptidergic and hormonal layers, and analyze five networks within this framework. Each collapses onto a handful of dominant feedback loops, which recover well-characterized circuits and point to new candidates for experimental study. Unlike linear spectra, these structures keep the biological meaning of the data, and their order-based description suggests that brain states live in lattices rather than Euclidean spaces.",
+      "url": "https://arxiv.org/abs/2610.37587v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.37587v1",
+      "published": "2026-10-27T17:25:46Z",
+      "updated": "2026-10-27T17:25:46Z",
       "categories": [
         "q-bio.NC",
-        "cs.AI",
-        "cs.LG",
-        "cs.RO"
+        "cs.NE",
+        "math.SP"
       ],
       "primary_category": "q-bio.NC"
     },
     {
-      "id": "2610.34524v1",
-      "title": "Analysis of Biomarkers from Visual Explorations in Individuals Suspected to Be in the Prodromal Phase of Parkinson's Disease",
+      "id": "2610.37486v1",
+      "title": "Sufficiency Theorem and Closed-Form Posterior for a Windowed Change Point Detection Task",
       "authors": [
-        "Maria F. Alcala-Durand",
-        "J. Camilo Puerta-Acevedo",
-        "Valle P\u00e9rez del Olmo",
-        "Elisa Luque-Buzo",
-        "Juli\u00e1n D. Arias-Londo\u00f1o",
-        "Francisco J. Grandas-P\u00e9rez",
-        "Juan I. Godino-Llorente"
+        "Payton Hanks",
+        "Rishidev Chaudhuri",
+        "Timothy D. Hanks"
       ],
-      "abstract": "Identifying prodromal Parkinson's Disease is a precondition for any future treatment that modifies the course of the disease, since such therapies would ideally act on the initial pathogenic events, early enough to delay the clinical onset of the disease rather than only slow its progression. In this work, a visual exploration model is retrained on an expanded corpus. Without any further training or threshold recalibration, it is then tested on an enriched cohort of patients with high risk of being in the prodromal phase of Parkinson's Disease, testing whether the learned signal follows a continuum of disease rather than only separating patients from controls. The resulting score distribution is analysed as an external evaluation of the hypothesis that the oculomotor signature targeted by the model is already partly present before clinical diagnosis. With every subject scored on data not used to train the model, the scores are ordered as controls < high-risk patients < Parkinson's Disease, with 42% of the high-risk patients exceeding the decision threshold. A SHAP decomposition of the scores into classifiers and gaze features shows that high scores in this cohort are driven mainly by reduced saccadic excursion, fewer fixations and longer fixations, the hypokinetic oculomotor profile that characterises Parkinson's Disease. The model score is also compared against the prodromal markers used for recruitment. The score is not correlated with hyposmia, constipation, depression or REM sleep behaviour disorder; these results, interpreted in the context of the selection induced by the recruitment criteria, are discussed as evidence that within the high-risk cohort the score is largely not explained by the available ancillary clinical variables. The results suggest that the visual biomarkers analysed are a complementary indicator to identify patients at risk of being in the prodromal stage.",
-      "url": "https://arxiv.org/abs/2610.34524v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.34524v1",
-      "published": "2026-10-25T19:32:28Z",
-      "updated": "2026-10-25T19:32:28Z",
+      "abstract": "To function effectively in a changing world, agents must detect changes and act on them in a timely fashion. We study this in the context of a change point detection task in which clicks arrive from a Poisson process whose rate changes at an unknown time. An agent must declare the change within a detection window of fixed width or the trial ends in a miss. Here we prove a window sufficiency theorem, which states that the posterior probability of a change depends only on the clicks within the most recent window, regardless of the prior on the change time. This result follows from combining survival conditioning, which rules out change times whose windows have already expired, with cancellations driven by independent increments of a known baseline process. Window sufficiency generalizes to an unknown post-change process, as long as the baseline process is known. For an exponential prior on the change time, we further derive the posterior in closed form as a function of the elapsed times since each click in the most recent window, the known rates, and the window width. These results suggest that discarding old evidence can be optimal rather than a limitation when decisions face a deadline.",
+      "url": "https://arxiv.org/abs/2610.37486v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.37486v1",
+      "published": "2026-10-27T16:13:54Z",
+      "updated": "2026-10-27T16:13:54Z",
       "categories": [
         "q-bio.NC"
       ],
       "primary_category": "q-bio.NC"
+    },
+    {
+      "id": "2610.37410v1",
+      "title": "Accurate structural modelling of protein-glycan recognition with GlycoWeave",
+      "authors": [
+        "Huifeng Zhao",
+        "Jintu Zhang",
+        "Yifei Xiao",
+        "Youqiao Qian",
+        "Silong Zhai",
+        "Zichang Jin",
+        "Li Wang",
+        "Yuchao Wang",
+        "Hang Dong",
+        "Yifan Zhao",
+        "Zhenxing Wu",
+        "Hongyan Du",
+        "Yuansheng Huang",
+        "Bowei Zhao",
+        "Xiaorui Wang",
+        "Shukai Gu",
+        "Jike Wang",
+        "Zhongjun Li",
+        "Zhongtang Li",
+        "Tingjun Hou",
+        "Yu Kang"
+      ],
+      "abstract": "Protein-glycan recognition underlies diverse biological processes, yet accurate prediction of protein-glycan complex structures remains challenging owing to the chemical diversity, conformational flexibility and sparse experimental structural coverage of glycans. Here we present GlycoWeave, a glycan-specific diffusion framework that integrates chemically constrained conformational sampling, multiscale molecular representations and multi-source learning. By operating in internal-coordinate space, GlycoWeave preserves glycan connectivity and stereochemistry while efficiently exploring bound conformations. A heterogeneous equivariant network couples atom-level interaction geometry with monosaccharide-level structural context, whereas multi-source, multi-head training integrates experimental complexes with structures refined using classical and quantum mechanics-informed potentials. On a benchmark of 698 protein-glycan complexes, GlycoWeave achieves a 71.9% Top-25 high-quality success rate, compared with 19.2% for AlphaFold 3, while requiring only 0.34 s per sampled pose. GlycoWeave further preserves glycan structural validity, recovers native protein-glycan interactions and reproduces linkage-specific conformational preferences, maintaining high accuracy across diverse glycan architectures and protein environments. These results establish GlycoWeave as an accurate, efficient and chemically faithful framework for modelling protein-glycan recognition. GlycoWeave is freely available at https://cadd.zju.edu.cn/glycoweave.",
+      "url": "https://arxiv.org/abs/2610.37410v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.37410v1",
+      "published": "2026-10-27T15:27:09Z",
+      "updated": "2026-10-27T15:27:09Z",
+      "categories": [
+        "q-bio.BM"
+      ],
+      "primary_category": "q-bio.BM"
+    },
+    {
+      "id": "2610.37327v1",
+      "title": "Local learning is all you need: brain-aligned predictive coding networks",
+      "authors": [
+        "Dirk G\u00fctlin",
+        "Ryszard Auksztulewicz",
+        "Adrien Doerig"
+      ],
+      "abstract": "Predictive Coding (PC) is an influential account of how brain representations emerge through hierarchical, local, self-supervised prediction-based learning, without requiring globally propagated error signals. Despite extensive evidence supporting PC, a striking paradox persists: computational models built on these biologically grounded principles have consistently failed to match state-of-the-art Deep Neural Networks in performance and brain-alignment. Here, we show that this paradox can be overcome. We introduce Predictive Brain Networks (PBNs), a hierarchical recurrent framework that implements local PC-based learning and achieves representational alignment with the human ventral visual stream matching or exceeding established vision models. Importantly, PBN top-down predictions encode unique, brain-aligned information not captured during bottom-up feature extraction, with this contribution increasing in locally trained variants. Further, PBNs substantially outperform existing PC-inspired networks on downstream classification tasks, reproduce key signatures of PC (with higher-level predictions shaping lower-level visual responses as observed in the primate cortex), and support uncertainty estimation. PBNs therefore close a longstanding gap in computational neuroscience by combining two properties that have been largely separated: the brain-inspired learning mechanisms of predictive coding and the representational power of modern deep networks. They provide a scalable framework for studying biologically grounded learning without sacrificing the capacity to produce rich neural representations.",
+      "url": "https://arxiv.org/abs/2610.37327v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.37327v1",
+      "published": "2026-10-27T14:36:52Z",
+      "updated": "2026-10-27T14:36:52Z",
+      "categories": [
+        "q-bio.NC"
+      ],
+      "primary_category": "q-bio.NC"
+    },
+    {
+      "id": "2610.37031v1",
+      "title": "pyTransRate: 1 reference-free quality assessment of de novo transcriptome assemblies with current aligners and quantifiers",
+      "authors": [
+        "Matthew MacManes"
+      ],
+      "abstract": "Summary: The original software TransRate scores a de novo transcriptome assembly by mapping the reads it was built from back to it, with no reference required. Its last release (1.0.3) depends on Ruby 2.2 and on aligner and quantifier versions that can no longer be installed on most systems. pyTransRate is a Python reimplementation of the TransRate method built on snap-aligner 2.0.5 and salmon 2.7.0. In 5,031 paired comparisons (39 assembly-level metrics on each of 129 public assemblies), it reproduces the original sequence metrics and read counts exactly and ranks assemblies consistently with 1.0.3 (Spearman rho = 0.94 for assembly score, 0.98 for good-mapping rate), although its read-based scores are not numerically interchangeable with the original. It also reads gzip- and bgzip-compressed input directly. Availability and Implementation: pyTransRate is implemented in Python 3 and is freely available under the MIT license at https://github.com/macmanes-lab/pytransrate. It runs on Linux and macOS; snap-aligner and salmon are installed from Bioconda. Supplementary information: Supplementary data are available online. Supplementary Table S1 lists the assembly and read accessions for every assembly analyzed; Supplementary Table S2 gives per-assembly values from both implementations.",
+      "url": "https://arxiv.org/abs/2610.37031v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.37031v1",
+      "published": "2026-10-27T11:08:52Z",
+      "updated": "2026-10-27T11:08:52Z",
+      "categories": [
+        "q-bio.GN",
+        "q-bio.QM"
+      ],
+      "primary_category": "q-bio.GN"
+    },
+    {
+      "id": "2610.36920v1",
+      "title": "Exploring Neural Dynamics with Time Delays: A Numerical and Bifurcation Analysis Approach",
+      "authors": [
+        "Martin R Nelson",
+        "Jonathan J Crofts"
+      ],
+      "abstract": "The Wilson-Cowan model is a classic example of a ``neural mass model'' - a simplified yet powerful way to describe the activity of large networks of neurons. It is particularly interesting because, even in its relatively simple form, it can produce a surprising variety of behaviours, from steady rhythms to complex oscillations. A key factor influencing these dynamics is the presence of time delays, reflecting the time it takes for signals to travel between neurons. This article offers an accessible introduction to the Wilson-Cowan model, focusing on how these time delays affect its behaviour. We explore the core concepts behind the model, survey the existing literature, and introduce some numerical techniques specifically designed for analysing such delay differential equations. We also provide a practical, hands-on tutorial on using the DDE-BIFTOOL software package, demonstrating its application to the Wilson-Cowan model. Downloadable code allows the reader to reproduce our results and to explore the model's dynamics further, including MATLAB code for all computations, using DDE-BIFTOOL for the continuation, and Python versions of simulation codes.",
+      "url": "https://arxiv.org/abs/2610.36920v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.36920v1",
+      "published": "2026-10-27T09:47:15Z",
+      "updated": "2026-10-27T09:47:15Z",
+      "categories": [
+        "q-bio.NC",
+        "math.DS",
+        "nlin.CD"
+      ],
+      "primary_category": "q-bio.NC"
+    },
+    {
+      "id": "2610.36745v1",
+      "title": "Neuronal Identity as an Organizational Basis for Analyzing Neural Population Dynamics",
+      "authors": [
+        "Seungjae Han",
+        "Joshua Yedam You",
+        "Soi Kim",
+        "Minho Eom",
+        "Jinho Park",
+        "Seunghee Park",
+        "Byeongwook Lee",
+        "Young-Gyu Yoon"
+      ],
+      "abstract": "Individual neurons exhibit diverse molecular, morphological, and electrophysiological properties that shape their distinct roles in neural circuits. While these multimodal features are largely shared across individuals, they remain an underutilized source of information in analyzing neural population dynamics. We posit that these shared biological profiles provide a common reference for relating neural dynamics across subjects and recording sessions. Our framework leverages this structure by routing neurons into latent groups based on their biological profiles and analyzing population dynamics through group-level representations. Because these assignments are anchored in biological properties that are consistent across subjects, the learned organization supports transfer to unseen animals without retraining or neuron-wise correspondence. We evaluate our framework on whole-brain calcium imaging in larval zebrafish and large-scale electrophysiology in the mouse visual cortex. Across both species and recording modalities, the framework delivers state-of-the-art performance in both neural decoding and manifold analysis: it achieves superior decoding of behavior and stimulus labels while better preserving the temporal consistency and local geometric structure of latent trajectories on unseen data. Our experiments demonstrate that not only does providing biological features improve baseline performance, but our proposed framework achieves even stronger results by using these properties to explicitly structure the population rather than treating them as auxiliary inputs. Together, these results suggest that organizing neural populations by their multimodal biological features offers a promising framework for generalizing population dynamics across subjects and recording sessions.",
+      "url": "https://arxiv.org/abs/2610.36745v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.36745v1",
+      "published": "2026-10-27T07:02:04Z",
+      "updated": "2026-10-27T07:02:04Z",
+      "categories": [
+        "q-bio.NC",
+        "cs.LG",
+        "eess.SP"
+      ],
+      "primary_category": "q-bio.NC"
+    },
+    {
+      "id": "2610.36541v1",
+      "title": "The geometry of cognition: from neural populations to neurotechnology",
+      "authors": [
+        "Lucas Bayones",
+        "Devika Narain",
+        "Roman Rossi-Pool"
+      ],
+      "abstract": "Cognition is implemented by distributed neural populations whose collective activity evolves through structured, low-dimensional state spaces. In this review, we survey the analytical and conceptual tools used to study latent population dynamics in biological neural networks. We begin with single-unit coding, which remains essential for interpreting neuronal selectivity, and then review population-level approaches, including population vectors, cosine similarity, principal component analysis and its mnemonic variants, multivariable linear regression axes, demixed principal component analysis, and single-trial latent-variable models, and distinguish operationally defined population subspaces from neural manifolds with reproducible geometry or topology. We use these methods to discuss sensory coding, working memory, decision-making, temporal processing, and sensorimotor transformations. Two organizing principles are emphasized throughout. First, cognitive variables can be expressed in separable or near-orthogonal population dimensions, reducing interference between sensory, mnemonic, decision-related, and motor signals. Second, such geometric separation does not require anatomically or functionally discrete cell classes; separable population readouts can coexist with a continuum of mixed-selective single-neuron responses within a shared biological substrate. We then consider recurrent neural networks as testbeds for generating and evaluating mechanistic hypotheses about how circuits produce low-dimensional dynamics, and intracortical brain-computer interfaces as a translational domain in which population geometry becomes an operational control signal. Overall, this review argues that population dynamics now provide a common language for linking neurophysiology, computational modelling, and neurotechnology.",
+      "url": "https://arxiv.org/abs/2610.36541v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.36541v1",
+      "published": "2026-10-27T02:54:14Z",
+      "updated": "2026-10-27T02:54:14Z",
+      "categories": [
+        "q-bio.NC"
+      ],
+      "primary_category": "q-bio.NC"
+    },
+    {
+      "id": "2610.36500v1",
+      "title": "ACOR: incremental evidence accumulation towards real-time DNA storage reconstruction",
+      "authors": [
+        "Linxuan Han",
+        "Huaming Wu",
+        "Shi Jia",
+        "Guanjin Qu"
+      ],
+      "abstract": "DNA offers high-density, durable storage by encoding digital information into synthetic strands and retrieving it through sequencing. Sequence reconstruction combines noisy copies of each strand before downstream decoding. Conventional offline methods typically reconstruct completed read clusters, separating reconstruction from ongoing read collection. Streaming reconstruction offers a way to overlap evidence processing with sequencing and reduce the computation remaining before downstream decoding. We present ACOR, a streaming consensus reconstruction method that records $k$-mer transitions and boundary support in a persistent ledger, then decodes through length-constrained beam search and priority-based selection at cluster closure. Evaluation on real and simulated DNA-storage datasets showed competitive recovery. On our own short-read next-generation sequencing (NGS) wet-lab library, ACOR combined near-complete recovery with second-scale reconstruction of more than ten million reads. A smaller public benchmark was completed in a fraction of a second. Parallel ACOR achieved speedups of tens to over a thousand-fold relative to the tested serial baseline configurations. Sparse storage reduced high-context memory requirements, while parallel execution accelerated reconstruction computation. ACOR is designed for streaming readout pipelines that process assigned reads while sequencing continues.",
+      "url": "https://arxiv.org/abs/2610.36500v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.36500v1",
+      "published": "2026-10-27T01:58:03Z",
+      "updated": "2026-10-27T01:58:03Z",
+      "categories": [
+        "cs.IR",
+        "q-bio.GN"
+      ],
+      "primary_category": "cs.IR"
     }
   ]
 }

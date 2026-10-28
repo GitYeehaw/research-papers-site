@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-10-27T14:24:10.781211+00:00",
+  "scraped_at": "2026-10-28T15:05:48.085543+00:00",
   "researcher_count": 54,
   "researchers": [
     {
@@ -1365,6 +1365,50 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2610.37602v1",
+          "title": "RESPLE2: Inertial-Informed Recursive Non-Uniform Spline Estimation for Multi-Sensor Odometry with Global Refinement",
+          "authors": [
+            "Ziyu Cao",
+            "William Talbot",
+            "Song Li",
+            "Pakpong Chirarattananon",
+            "Fredrik Gustafsson",
+            "Marco Hutter",
+            "Kailai Li"
+          ],
+          "abstract": "We present RESPLE2, a recursive multi-sensor state estimation framework using non-uniform B-splines for 6-DoF motion representation. By exploiting the knot-clamping boundary property, we propose a theoretically grounded mechanism for exact control-point prediction directly informed by inertial kinematics along the trajectory, with knot placement adapted to motion and measurement availability. Within an iterated extended Kalman filter, we perform this prediction using a subset of inertial measurements. A subsequent reset step preserves trajectory consistency as the knots extend. The update step further incorporates heterogeneous sensor measurements at their native timestamps through continuous-time observation models, supporting flexible combinations of LiDARs, cameras, inertial measurement units, and leg kinematics. We further develop a lightweight global optimization module that directly refines non-uniform B-spline control points by incorporating loop-closure constraints derived from LiDAR-visual cues. We conduct extensive evaluations on public and experimental datasets across handheld, tracked, legged, and hybrid aerial-legged platforms, covering highly dynamic maneuvers with extreme accelerations. Compared with state-of-the-art multi-sensor odometry systems, RESPLE2 achieves competitive or superior estimation accuracy and robustness in the corresponding sensor configurations, particularly under aggressive motion, while maintaining real-time operation. We publicly release our code and experimental datasets at https://github.com/ASIG-X/RESPLE2.",
+          "url": "https://arxiv.org/abs/2610.37602v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.37602v1",
+          "published": "2026-10-27T17:33:19Z",
+          "updated": "2026-10-27T17:33:19Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2610.36270v1",
+          "title": "Learning Multi-Phase Robot Loco-Manipulation via Phase-Conditioned Policy Optimization",
+          "authors": [
+            "Simone Manni",
+            "Annika Wollschl\u00e4ger",
+            "Dario Bellicoso",
+            "Abel Gawel",
+            "Marco Hutter",
+            "Simon Le Cleac'h",
+            "Jan Br\u00fcdigam"
+          ],
+          "abstract": "Complex whole-body loco-manipulation requires executing diverse maneuvers, such as crouching, grasping, and locomotion, within a single long-horizon task. While performing simple pick-and-place behaviors is well-established, scaling to complex, long-horizon tasks remains difficult. Currently, this challenge is addressed by relying on human motion data and correspondingly humanoid platforms, which limits platform independence and introduces substantial data processing overhead. Instead, we extend proximal policy optimization (PPO) to train a single policy for multi-phase tasks across diverse robotic hardware, leveraging prior task structure to shape behavior. Our method adapts PPO using a phase-conditioned critic, phase-gated reward functions, and a multi-phase reset curriculum to guide exploration. To support varied hardware, we employ a decoupled hierarchical control architecture that separates lower-level balancing dynamics from high-level phase execution. We demonstrate multi-stage loco-manipulation skills on hardware on both the Unitree G1 and a Boston Dynamics Spot equipped with a manipulator arm, and validate our design choices through ablations. Our approach enables the acquisition of complex loco-manipulation behaviors purely through environment interaction while directly incorporating high-level task structure into policy learning.",
+          "url": "https://arxiv.org/abs/2610.36270v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.36270v1",
+          "published": "2026-10-26T20:44:05Z",
+          "updated": "2026-10-26T20:44:05Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2610.31608v1",
           "title": "Humanoid Mobility via Attention-based Contacts",
           "authors": [
@@ -1431,48 +1475,6 @@
             "cs.LG"
           ],
           "primary_category": "cs.RO"
-        },
-        {
-          "id": "2610.29586v1",
-          "title": "End-to-End Reinforcement Learning for Quadrupedal Jumping in Lunar Gravity",
-          "authors": [
-            "Levin M\u00fcller",
-            "Oliver Fischer",
-            "Marco Trentini",
-            "Yusuke Tanaka",
-            "Marco Hutter"
-          ],
-          "abstract": "Legged robots can extend planetary exploration to rugged and discontinuous terrain that is inaccessible to conventional rovers. In lunar gravity, jumping further expands this mobility by enabling robots to cross obstacles and gaps that cannot be traversed by walking alone. We present a multistage reinforcement-learning approach that produces a single end-to-end control policy for commanded point-to-point jumping under lunar gravity. The resulting policy has a simple architecture and relies exclusively on mission-compatible onboard sensing, making its deployment on a real lunar mission plausible. In simulation, the learned policy performs accurate point-to-point jumps with landing errors smaller than the robot's body size. We analyze the torque and power demands of lunar jumping and characterize performance degradation under extreme outlier events, including control-update freezes of up to \\SI{1}{s} during flight. Hardware transfer demonstrates that the policy can successfully execute a vertical jump under lunar-gravity offloading. Furthermore, the measured torque and power profiles are consistent with the simulation results and remain within the robot's hardware limits.",
-          "url": "https://arxiv.org/abs/2610.29586v1",
-          "pdf_url": "https://arxiv.org/pdf/2610.29586v1",
-          "published": "2026-10-21T11:27:05Z",
-          "updated": "2026-10-21T11:27:05Z",
-          "categories": [
-            "cs.RO"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2610.25288v1",
-          "title": "Vision as Proprioception: Estimating Humanoid Robot Pose from Video",
-          "authors": [
-            "Jiaxi Jiang",
-            "Matthias Heyrman",
-            "Ren\u00e9 Zurbr\u00fcgg",
-            "Marco Hutter",
-            "Christian Holz"
-          ],
-          "abstract": "Estimating a humanoid robot's internal state from video has a wide range of real-world applications but remains unexplored. During interactions with a robot, its onboard state information may be unavailable due to privacy, ownership, or communication constraints. Meanwhile, online and AI-generated robot videos provide rich sources of data but typically lack corresponding joint configurations, limiting their direct use in robot learning. To address these issues, we present HumanoidPose, a new framework that treats vision as proprioception to recover full-body joint configurations in world space from video alone. Specifically, we combine pretrained human-pose features with robot kinematics in a unified model that predicts each embodiment's joint configurations. We retarget human motions to sixteen different humanoid embodiments, enabling scalable learning entirely from synthetic data. To improve real-world generalization, we further leverage unlabeled online videos through self-training to develop a 2D robot-pose detector. In our evaluation, HumanoidPose improves joint-angle and joint-position accuracy over the evaluated baselines and reduces joint-angle error by 18-32% relative to the best-performing baseline on each of the three real humanoid platforms. We further show improved global localization and generalization to unseen embodiments. HumanoidPose enables visual understanding of other robots during interaction and extraction of robot motion from online and generated videos.",
-          "url": "https://arxiv.org/abs/2610.25288v1",
-          "pdf_url": "https://arxiv.org/pdf/2610.25288v1",
-          "published": "2026-10-18T14:10:39Z",
-          "updated": "2026-10-18T14:10:39Z",
-          "categories": [
-            "cs.RO",
-            "cs.AI",
-            "cs.CV"
-          ],
-          "primary_category": "cs.RO"
         }
       ]
     },
@@ -1484,6 +1486,29 @@
       "website": "https://people.csail.mit.edu/rus/",
       "paper_count": 5,
       "papers": [
+        {
+          "id": "2610.37619v1",
+          "title": "Perceiving and Predicting Dynamic Sports: Spatiotemporal Intelligence in Vision Models for Egocentric Tennis Video",
+          "authors": [
+            "Tudor Braicu",
+            "Joseph DelPreto",
+            "Jared Boyer",
+            "M\u00f3nika Farsang",
+            "Maximilian St\u00f6lzle",
+            "Tim Niklas Seyde",
+            "Daniela Rus"
+          ],
+          "abstract": "Agile robots require spatiotemporal intelligence to interpret scenes, reason about interactions, and anticipate future events. Yet it remains unclear how well foundation vision models support these capabilities, particularly from a moving egocentric camera, which is a natural view for robots. To investigate this, we collect an annotated tennis dataset and train a suite of vision models on spatiotemporal tasks. Our dataset contains egocentric video synchronized with five allocentric videos, estimated global positions, labeled contact times, and annotated stroke types. We then evaluate seven prediction tasks from egocentric images: 2D ego player and 3D ball localization, future player and ball trajectories, forehand or backhand stroke anticipation, time to the next ego player ball contact, and 3D ball position at that contact. We compare image encoders, video encoders, and vision-language models with jointly trained prediction heads. The best performing models achieve mean current-frame localization errors of 0.14 m for the ego player and 0.54 m for the ball, future forecasting errors of 0.34 m for the ego player and 0.91 m for the ball over 1.1 s, and a mean contact-time prediction error of 0.14 s. Auxiliary depth information substantially improves 3D ball localization, suggesting that inferring metric depth remains a challenge. Longer image histories do not improve ball forecasting, indicating that representations exploit scene context rather than rely solely on inter-frame motion. Finally, we propose a conditional diffusion model to generate whole-body kinematic tennis motion from vision encoder predictions on egocentric video at real-time rates, adapting movements as predictions are refined. These results move towards a deeper understanding of how foundation vision models can support real-time dynamic robots using egocentric video.",
+          "url": "https://arxiv.org/abs/2610.37619v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.37619v1",
+          "published": "2026-10-27T17:47:14Z",
+          "updated": "2026-10-27T17:47:14Z",
+          "categories": [
+            "cs.CV",
+            "cs.RO"
+          ],
+          "primary_category": "cs.CV"
+        },
         {
           "id": "2610.31438v1",
           "title": "DIAL: Steerable Language Models with Distilled Instruction-Adherence Levels",
@@ -1573,26 +1598,6 @@
             "cs.LG"
           ],
           "primary_category": "cs.AI"
-        },
-        {
-          "id": "2609.37432v1",
-          "title": "Looped Actor: Depth-Recurrent Reasoning Models for Reinforcement Learning",
-          "authors": [
-            "T. Konstantin Rusch",
-            "Tim Seyde",
-            "Jared Boyer",
-            "Zach J. Patterson",
-            "Daniela Rus"
-          ],
-          "abstract": "Looped reasoning models repeatedly apply a shared set of parameters, enabling more computation without increasing the model size. These models also support input-dependent computation by dynamically deciding when to stop looping. Motivated by the recent success of looped transformers in language modeling and reasoning, we investigate whether dynamic looping can similarly benefit sequential decision-making. We provide a complexity-theoretic motivation for this approach by showing that there exist Markov decision processes in which a state-adaptive policy achieves the optimal return with asymptotically less expected computation than any optimal fixed-runtime policy. To learn compute-adaptive policies in practice, we introduce Looped Actor, a transformer-based policy that repeatedly refines a latent representation toward a fixed point using a shared computational block. This allows the model to allocate computation adaptively by varying the number of loops based on the current state. We evaluate Looped Actor on 22 tasks across six environments, ranging from combinatorial puzzles to robotic manipulation and spanning online and offline reinforcement learning (RL) with discrete and continuous actions. Looped Actor matches or exceeds the performance of an untied baseline with 16$\\times$ more parameters, with the largest gains in environments where action selection requires substantial multistep planning. For the Boxoban environment, we find that the computation allocation is structured: the number of loops increases with the number of remaining pushes and future optimal pushes become increasingly predictable from the latent state over successive loops. Together, these results highlight actor looping as a simple and efficient way to equip RL agents with adaptive computation and improve their planning capabilities. Code is available at https://github.com/camail-official/LoopedActor",
-          "url": "https://arxiv.org/abs/2609.37432v1",
-          "pdf_url": "https://arxiv.org/pdf/2609.37432v1",
-          "published": "2026-09-29T12:57:04Z",
-          "updated": "2026-09-29T12:57:04Z",
-          "categories": [
-            "cs.LG"
-          ],
-          "primary_category": "cs.LG"
         }
       ]
     },
@@ -2443,6 +2448,27 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2610.37175v1",
+          "title": "MLE-World: Predicting Machine Learning Experiment Outcomes with a Learned World Model",
+          "authors": [
+            "Brian Ko",
+            "Han Wang",
+            "Hejia Geng",
+            "Li Erran Li",
+            "Sherry Yang"
+          ],
+          "abstract": "AI research agents can propose, execute, and improve programs that solve machine learning tasks. However, executing each candidate program requires training and evaluating ML models, limiting how many candidates an agent can explore at each step. We introduce MLE-World, a world model finetuned from Qwen3.5-4B that predicts a program's terminal output (error traces, training logs, and validation scores) from its code and data description without executing it, together with a confidence score estimating the prediction's correctness. Because a prediction costs one inference call rather than a training run, MLE-World makes test time scaling (TTS) affordable for these agents. We build five TTS policies, guided by MLE-World, that compare several candidates per step by their predicted outputs: Sequential revision, Best-of-N, Pairwise judging, Fusion, and a UCB style rule that also adds an exploration bonus from this confidence score. Since predictions can be wrong, we run a candidate for real only when its confidence score is low. On 17 MLE-bench Lite tasks, MLE-World matches the real terminal output on 77.9% of held out programs, versus 41.1% for much larger prompted models. MLE-World guided TTS achieves up to 22.1% higher observed mean performance than the agent without a world model, with less real execution. Project webpage: https://mle-world.github.io/.",
+          "url": "https://arxiv.org/abs/2610.37175v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.37175v1",
+          "published": "2026-10-27T13:01:29Z",
+          "updated": "2026-10-27T13:01:29Z",
+          "categories": [
+            "cs.LG",
+            "cs.AI"
+          ],
+          "primary_category": "cs.LG"
+        },
+        {
           "id": "2610.34663v1",
           "title": "Video World Models Need Predictable Latents",
           "authors": [
@@ -2526,30 +2552,6 @@
             "cs.AI"
           ],
           "primary_category": "cs.LG"
-        },
-        {
-          "id": "2609.18435v1",
-          "title": "WetRobo: A Reproducible Robot Kit for Coding Agents in Biological Laboratories",
-          "authors": [
-            "Yuna Oikawa",
-            "Kei Endo",
-            "Takanori Uzawa",
-            "Yunzhe Zhang",
-            "Manan Anjaria",
-            "Lerrel Pinto",
-            "Sherry Yang",
-            "Koji Tsuda"
-          ],
-          "abstract": "Automating biological research requires general-purpose, reproducible robot systems that allow individual wet-lab researchers to delegate robot tasks without performing teleoperation or neural-network training. Vision-language-action policies have been proposed for general-purpose arms, but can lose performance when their operating environment changes. We therefore built WetRobo, a robot kit that can readily transfer between laboratories. It consists of one robot arm, laboratory equipment (an incubator, a reagent bottle with a cap, and a Petri dish), the existing code that moves the arm, teleoperation demonstrations of each task that we recorded, and a general AGENTS.md skill file. A biological experimentalist provides natural-language tasks without collecting local teleoperation training data or training a neural network. The coding agent observes the local laboratory and writes and executes programs, using external tools as needed for adaptation. We demonstrate use of WetRobo with OpenAI Codex (gpt-5.6-sol) on three successful tasks: lifting a Petri dish lid, removing a bottle cap, and opening the incubator door, all in real-world laboratories. The coding agent achieved the cap task in both laboratories, Lab X and Lab Y, whereas a VLA fine-tuned on Lab X demonstrations succeeded there but failed to transfer to Lab Y. These results point to a practical route for laboratory robotics: instead of training a policy for each laboratory, distribute a kit and let a coding agent adapt it in each laboratory. Code, demonstrations, and the evolved programs are available at https://github.com/tsudalab/WetRobo.",
-          "url": "https://arxiv.org/abs/2609.18435v1",
-          "pdf_url": "https://arxiv.org/pdf/2609.18435v1",
-          "published": "2026-09-16T10:27:32Z",
-          "updated": "2026-09-16T10:27:32Z",
-          "categories": [
-            "cs.AI",
-            "cs.RO"
-          ],
-          "primary_category": "cs.AI"
         }
       ]
     },
@@ -5356,6 +5358,26 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2610.36425v1",
+          "title": "Repulsive Population Policy Gradients for Behaviorally Diverse Reinforcement Learning",
+          "authors": [
+            "Saeed Hedayatian",
+            "Harsh Shah",
+            "Celine Mneimneh",
+            "Stefanos Nikolaidis"
+          ],
+          "abstract": "The goal of Quality-Diversity Reinforcement Learning (QD-RL) is to find a population of high-performing policies that solve a decision-making problem in diverse ways. Despite recent progress, QD-RL methods predominantly rely on evolutionary operators--including black-box optimizers, mutations, and crossovers--to facilitate exploration and induce diversity. Scaling these methods becomes increasingly costly as policies and behavior spaces grow larger. Building on the Soft QD view of quality-diversity optimization, we introduce \\textbf{Re}pulsive \\textbf{P}opulation \\textbf{P}olicy \\textbf{O}ptimization (\\textbf{RePPO}), which adapts PPO to jointly optimize a compact population of diverse, high-quality policies using a population-dependent, dynamically shaped reward. On standard continuous-control tasks, RePPO achieves a strong quality-diversity tradeoff compared with state-of-the-art QD-RL methods. Ablations further characterize this tradeoff by examining how each component affects individual quality and collective diversity. To assess RePPO's scalability, we extend our evaluation to learning from pixels and fine-tuning large language models. In pixel-based tasks, where large policies make most traditional QD-RL methods infeasible, RePPO maintains quality on par with standard PPO while achieving substantially higher diversity. Its successful application to language model fine-tuning further demonstrates, for the first time, that QD-RL methods can scale to this domain. Together, these results show that directly optimizing compact populations with RePPO provides a scalable approach to QD-RL across increasingly complex domains.",
+          "url": "https://arxiv.org/abs/2610.36425v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.36425v1",
+          "published": "2026-10-27T00:16:33Z",
+          "updated": "2026-10-27T00:16:33Z",
+          "categories": [
+            "cs.LG",
+            "cs.AI"
+          ],
+          "primary_category": "cs.LG"
+        },
+        {
           "id": "2610.14415v1",
           "title": "Red-Teaming of Vision-Language-Action Models via Quality Diversity Environment Generation",
           "authors": [
@@ -5456,29 +5478,6 @@
             "cs.CL"
           ],
           "primary_category": "cs.RO"
-        },
-        {
-          "id": "2603.09011v1",
-          "title": "Improving through Interaction: Searching Behavioral Representation Spaces with CMA-ES-IG",
-          "authors": [
-            "Nathaniel Dennler",
-            "Zhonghao Shi",
-            "Yiran Tao",
-            "Andreea Bobu",
-            "Stefanos Nikolaidis",
-            "Maja Matari\u0107"
-          ],
-          "abstract": "Robots that interact with humans must adapt to individual users' preferences to operate effectively in human-centered environments. An intuitive and effective technique to learn non-expert users' preferences is through rankings of robot behaviors, e.g., trajectories, gestures, or voices. Existing techniques primarily focus on generating queries that optimize preference learning outcomes, such as sample efficiency or final preference estimation accuracy. However, the focus on outcome overlooks key user expectations in the process of providing these rankings, which can negatively impact users' adoption of robotic systems. This work proposes the Covariance Matrix Adaptation Evolution Strategies with Information Gain (CMA-ES-IG) algorithm. CMA-ES-IG explicitly incorporates user experience considerations into the preference learning process by suggesting perceptually distinct and informative trajectories for users to rank. We demonstrate these benefits through both simulated studies and real-robot experiments. CMA-ES-IG, compared to state-of-the-art alternatives, (1) scales more effectively to higher-dimensional preference spaces, (2) maintains computational tractability for high-dimensional problems, (3) is robust to noisy or inconsistent user feedback, and (4) is preferred by non-expert users in identifying their preferred robot behaviors. This project's code is available at github.com/interaction-lab/CMA-ES-IG",
-          "url": "https://arxiv.org/abs/2603.09011v1",
-          "pdf_url": "https://arxiv.org/pdf/2603.09011v1",
-          "published": "2026-03-09T23:00:42Z",
-          "updated": "2026-03-09T23:00:42Z",
-          "categories": [
-            "cs.RO",
-            "cs.AI",
-            "cs.HC"
-          ],
-          "primary_category": "cs.RO"
         }
       ]
     },
@@ -5490,6 +5489,37 @@
       "website": "https://viterbischool.usc.edu/faculty/yue-wang/",
       "paper_count": 5,
       "papers": [
+        {
+          "id": "2610.37037v1",
+          "title": "Zooming without Zooming v2: From Seeing Details to Connecting Evidence for Generalizable Multimodal Perception",
+          "authors": [
+            "Lai Wei",
+            "Yatai Li",
+            "Liangbo He",
+            "Jun Lan",
+            "Renjie Gu",
+            "Linhan Cao",
+            "Junkai Lin",
+            "Huijia Zhu",
+            "Weiqiang Wang",
+            "Linghe Kong",
+            "Yue Wang",
+            "Zhuosheng Zhang",
+            "Weiran Huang"
+          ],
+          "abstract": "Multimodal perception forms the foundation of multimodal intelligence. In particular, spatial perception and multimodal long-context understanding are two pivotal tasks that underpin embodied AI and multimodal agents. However, synthesizing targeted, high-quality training data for these tasks remains difficult and costly. Our key insight is that these tasks share an underlying capability, which we call connecting evidence: identifying relevant visual facts, binding them to the correct entities, recovering their relations, and composing them into an answer. Crucially, targeted training data are far easier to synthesize for this capability than for these tasks themselves. To strengthen this capability, we propose EvidenceConnect, an easy-to-implement data synthesis framework that uses zoomed views of related regions within a single image to generate questions requiring comparison, aggregation, or chaining of visual evidence. To ensure quality, a reference answer is retained only when independent VLMs agree on it, and region-ablation tests discard questions whose answer survives the removal of selected regions. We then train base VLMs on the resulting data with RLVR, obtaining Zooming without Zooming v2 (ZwZ2). Although the synthesized data are not tailored to any downstream benchmark, ZwZ2 improves fine-grained and spatial perception, with further gains on embodied spatial reasoning, multimodal long-context understanding, multimodal agent tasks, and general visual reasoning. These results establish EvidenceConnect as an effective framework for supervising evidence connection and suggest that strengthening this shared capability leads to more generalizable multimodal perception.",
+          "url": "https://arxiv.org/abs/2610.37037v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.37037v1",
+          "published": "2026-10-27T11:11:53Z",
+          "updated": "2026-10-27T11:11:53Z",
+          "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.CL",
+            "cs.LG"
+          ],
+          "primary_category": "cs.CV"
+        },
         {
           "id": "2610.32965v1",
           "title": "RynnUnify: Towards Unified Embodied Brain",
@@ -5593,26 +5623,6 @@
             "cs.LG"
           ],
           "primary_category": "cs.LG"
-        },
-        {
-          "id": "2610.23550v1",
-          "title": "Reason-guided Human Reward Modeling for Preference-based Reinforcement Learning",
-          "authors": [
-            "Anshul Nayak",
-            "Shahil Shaik",
-            "Jonathan Smereka",
-            "Yue Wang"
-          ],
-          "abstract": "Reinforcement learning (RL) policies optimized for task rewards may produce behaviors that are efficient but misaligned with human expectations, safety preferences, or intent. This paper presents a reason-guided preference-based reinforcement learning (PbRL) framework that learns a human reward model from trajectory-level feedback. In addition to preference labels, the framework incorporates reason tags explaining why a behavior is preferred, enabling the learned reward to capture both human choices and their underlying rationale. Compared with preference-only reward learning, the reason-guided formulation provides additional supervision for learning human-aligned rewards and improves the interpretability of the resulting policy. The learned human reward is combined with the environment reward during policy optimization, allowing the agent to improve task performance while producing more interpretable, human- aligned, and preference-sensitive behavior",
-          "url": "https://arxiv.org/abs/2610.23550v1",
-          "pdf_url": "https://arxiv.org/pdf/2610.23550v1",
-          "published": "2026-10-16T14:41:13Z",
-          "updated": "2026-10-16T14:41:13Z",
-          "categories": [
-            "cs.RO",
-            "cs.AI"
-          ],
-          "primary_category": "cs.RO"
         }
       ]
     },
@@ -5737,17 +5747,17 @@
       "paper_count": 5,
       "papers": [
         {
-          "id": "2608.27860v1",
+          "id": "2608.27860v2",
           "title": "From Perspective to Fisheye Depth Estimation and Open-Vocabulary Segmentation",
           "authors": [
             "Rit Gangopadhyay",
             "Alex Wong"
           ],
           "abstract": "Vision foundation models are capable of generalizing across 3-dimensional (3D) scenes with high-fidelity estimates; their empirical success can be attributed to training on large-scale datasets of perspective images. However, when transferred to wide field-of-view (FoV) images, such as those captured by fisheye cameras, they return erroneous outputs due to a covariate shift stemming from the radial distortion on the image pixels. We propose a method to generalize vision foundation models to fisheye cameras. The crux of our method lies in a set of learnable parameters, termed Distortion Extenders (DEX), that model the fisheye distortion coefficients and the distributional shift between fisheye and perspective images encoded in the latent space. By minimizing a self-supervised alignment loss, DEX transforms the latent embeddings of fisheye images to resemble those of perspective images to recover high-fidelity estimates. DEX is architecture- and task-agnostic: We demonstrate DEX on monocular depth estimation and open-vocabulary segmentation for convolution- and Transformer-based architectures, where we consistently improve over baselines across indoor and outdoor fisheye datasets. As a byproduct, the activations of DEX can also be decoded to distortion coefficients to support camera calibration. Code available at: https://github.com/Suchisrit/DEX.",
-          "url": "https://arxiv.org/abs/2608.27860v1",
-          "pdf_url": "https://arxiv.org/pdf/2608.27860v1",
+          "url": "https://arxiv.org/abs/2608.27860v2",
+          "pdf_url": "https://arxiv.org/pdf/2608.27860v2",
           "published": "2026-08-28T03:10:18Z",
-          "updated": "2026-08-28T03:10:18Z",
+          "updated": "2026-10-26T21:50:37Z",
           "categories": [
             "cs.CV",
             "cs.AI"
