@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-10-29T15:13:24.339844+00:00",
+  "scraped_at": "2026-10-30T15:04:06.737089+00:00",
   "researcher_count": 54,
   "researchers": [
     {
@@ -10,6 +10,27 @@
       "website": "https://ames.caltech.edu/",
       "paper_count": 5,
       "papers": [
+        {
+          "id": "2610.38108v1",
+          "title": "Safety of layered control systems via control barrier morphisms",
+          "authors": [
+            "Aaron D. Ames",
+            "Joe Moeller",
+            "Massimiliano de Sa",
+            "Paulo Tabuada"
+          ],
+          "abstract": "Layered control architectures provide a powerful paradigm for synthesizing controllers for complex systems. Yet, translating guarantees at each layer to system-level guarantees is challenging due to the interactions between layers. To address this problem, this paper presents a categorical perspective on layered control architectures. Individual systems are represented as control coalgebras, their interactions are specified as morphisms to mediators, and system-level behaviors are obtained via composition defined categorically as a pullback. To analyze the safety of these systems, we formulate control barrier morphisms (CBMs), the categorical generalization of control barrier functions. We prove that feedback controllers satisfying a CBM condition render the associated safe subobject forward invariant. It is through CBMs that we can establish the safety of layered systems: given a CBM at each layer subject to compatibility conditions, the universal property of the pullback implies the existence of a CBM for the composed system. Safety of a full-order model being safety filtered by a reduced-order model is recovered as a specialization of the categorical framework.",
+          "url": "https://arxiv.org/abs/2610.38108v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.38108v1",
+          "published": "2026-10-28T00:44:51Z",
+          "updated": "2026-10-28T00:44:51Z",
+          "categories": [
+            "math.CT",
+            "eess.SY",
+            "math.OC"
+          ],
+          "primary_category": "math.CT"
+        },
         {
           "id": "2610.24308v1",
           "title": "Lifting Safety Through Reduced-Order Model Architectures: An Invariant Manifold Approach",
@@ -87,29 +108,6 @@
             "cs.RO"
           ],
           "primary_category": "eess.SY"
-        },
-        {
-          "id": "2610.12467v1",
-          "title": "CSF: Contextual Safety Filtering for Motion Generators",
-          "authors": [
-            "Lizhi Yang",
-            "Yiling Hou",
-            "Yao Tang",
-            "Junheng Li",
-            "Daniel Weng",
-            "Blake Werner",
-            "Aaron D. Ames"
-          ],
-          "abstract": "Text-conditioned motion generators produce trackable whole-body motion, but they have no notion of scene-dependent safety: the same action may target an object or a person. Existing safeguards either inspect the prompt, require labeled motion data, or enforce geometric constraints; therefore, they do not directly account for how scene context changes a motion's meaning. We introduce contextual safety filtering (CSF), a training-free filter that grounds natural-language safety rules in safe and unsafe reference trajectories produced by the generator. For each active rule, safe and unsafe reference trajectories define an affine safety value that a safe reference tracking CBF-QP enforces. Across four pretrained generators with different architectures, CSF activates the intended rules in all explicit and scene-triggered unsafe cases and reduces the danger-event rate by up to 90%, while preserving 88-100% of benign motions. We demonstrate the complete system on a real-world Unitree G1, where it successfully prevents unsafe motions in a variety of scenarios, including interactions with humans and objects.",
-          "url": "https://arxiv.org/abs/2610.12467v1",
-          "pdf_url": "https://arxiv.org/pdf/2610.12467v1",
-          "published": "2026-10-08T17:59:50Z",
-          "updated": "2026-10-08T17:59:50Z",
-          "categories": [
-            "cs.RO",
-            "cs.LG"
-          ],
-          "primary_category": "cs.RO"
         }
       ]
     },
@@ -237,6 +235,26 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2610.37974v1",
+          "title": "FORGE: Feasible Online Reduced-Order Reference Generation and Whole-Body Execution for Agile Humanoid Locomotion",
+          "authors": [
+            "Adrian B. Ghansah",
+            "Yujin An",
+            "Jeeseop Kim",
+            "Soon-Jo Chung"
+          ],
+          "abstract": "This paper presents a two-stage learning framework for versatile and agile humanoid locomotion that couples online reduced-order model (ROM) reference generation with whole-body tracking control. In the first stage, we train a command-conditioned whole-body reference generator using single rigid body dynamics combined with full humanoid kinematics. In the second stage, the frozen ROM policy is rolled out online to generate references for training a whole-body tracking policy on the full-order dynamics model. Learning a kino-dynamically consistent reference generator in the simplified ROM space enables us to generate references over a broad command space and over multiple locomotion strategies using a single unified framework. We demonstrate the approach on a Unitree G1 humanoid robot, achieving longitudinal velocities from -2.0 m/s to 2.8 m/s, lateral velocities up to +-1.0 m/s, angular velocities up to +-3.0 rad/s, one-legged hopping, and continuous transitions across the commands, all using one unified reference policy and one whole-body tracking policy.",
+          "url": "https://arxiv.org/abs/2610.37974v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.37974v1",
+          "published": "2026-10-27T21:12:51Z",
+          "updated": "2026-10-27T21:12:51Z",
+          "categories": [
+            "cs.RO",
+            "cs.LG"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2610.19122v1",
           "title": "Learning in Orbit: Onboard Training and Closed-Loop Attitude Control with a Thermal Segmentation Model on a Spacecraft",
           "authors": [
@@ -326,27 +344,6 @@
             "eess.SP"
           ],
           "primary_category": "eess.SY"
-        },
-        {
-          "id": "2606.30893v3",
-          "title": "Sampling-Based Coordination-Informed Multi-Objective Multi-Robot Reinforcement Learning",
-          "authors": [
-            "Antonio Marino",
-            "Esteban Restrepo",
-            "Soon-jo Chung",
-            "Paolo Robuffo Giordano",
-            "Claudio Pacchierotti"
-          ],
-          "abstract": "Multi-robot systems must simultaneously optimize competing objectives while maintaining coordinated behavior. Existing multi-agent reinforcement learning approaches often rely on fixed or centralized coordination, which limits adaptability and violates distributed constraints. This work introduces the Coordination-Informed Multi-Objective Reinforcement Learning (CIMORL) framework, integrating a distributed weight prediction mechanism, a privileged expert training strategy, and theoretical guarantees for Pareto-optimal solutions. We present the base CIMORL method alongside two sampling-based variants, CIMORL-TS (Tree Search) and CIMORL-MPPI (MPPI), which leverage privileged global information during training to enable fully decentralized deployment. Experimental validation in cooperative and adversarial scenarios demonstrates a $21.2\\%$ hypervolume improvement and superior policy stability compared to state-of-the-art baselines. Real-world experiments with Crazyflie drones further validate the framework's robustness in resource allocation and multi-attacker multi-defend scenarios under partial observability.",
-          "url": "https://arxiv.org/abs/2606.30893v3",
-          "pdf_url": "https://arxiv.org/pdf/2606.30893v3",
-          "published": "2026-06-29T20:31:03Z",
-          "updated": "2026-09-14T11:29:21Z",
-          "categories": [
-            "cs.RO",
-            "cs.MA"
-          ],
-          "primary_category": "cs.RO"
         }
       ]
     },
@@ -687,6 +684,31 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2610.37818v1",
+          "title": "GOFish: Full Field-of-View Gaussian Splatting and Mesh Extraction",
+          "authors": [
+            "Allen Tu",
+            "Meher Gitika Karumuri",
+            "Shifan Zhu",
+            "Hailing Wang",
+            "Yen-Liang Lin",
+            "David Held",
+            "Matthias Zwicker",
+            "Tom Goldstein"
+          ],
+          "abstract": "Robots, autonomous vehicles, and consumer 360\u00b0 cameras use fisheye lenses for wide fields of view (FoVs). Simulation-ready digital twins require photorealistic rendering across the full FoV and an aligned collision mesh. However, prior fisheye Gaussian Splatting methods only rasterize up to 180\u00b0 and do not produce meshes, while Gaussian surface reconstruction methods assume pinhole training images. We present GOFish, the first 3D Gaussian Splatting surface reconstruction method to train directly on fisheye images, rasterize FoVs beyond 180\u00b0, and extract an aligned mesh from the same scene. Calibrated densification recovers the surface across the entire FoV, while Calibrated Mip Filtering and Wide-Angle Appearance Modeling keep pixel blur and lens falloff out of the scene and mesh. Across the 200\u00b0 FIORD and 205\u00b0 FullCircle benchmarks, GOFish improves PSNR over the best prior method by 2.28 and 1.97 dB, respectively. It also outperforms fisheye rendering baselines within their own FoVs and achieves the highest mesh F-score on FIORD and the main ScanNet++ set. Together, the Gaussian scene and mesh form a LiDAR-free, simulation-ready digital twin that renders in real time, ray traces the full FoV, and provides collision geometry.",
+          "url": "https://arxiv.org/abs/2610.37818v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.37818v1",
+          "published": "2026-10-27T18:32:45Z",
+          "updated": "2026-10-27T18:32:45Z",
+          "categories": [
+            "cs.CV",
+            "cs.GR",
+            "cs.RO"
+          ],
+          "primary_category": "cs.CV"
+        },
+        {
           "id": "2610.25785v1",
           "title": "Long-Horizon Multi-Object Rearrangement via Distilled Tree Search over Continuous Actions",
           "authors": [
@@ -773,29 +795,6 @@
           "updated": "2026-09-28T18:45:34Z",
           "categories": [
             "cs.RO"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2609.32762v1",
-          "title": "An Empirical Study on What Matters for Viewpoint-Generalizable Policies in Visual Imitation Learning",
-          "authors": [
-            "Mino Nakura",
-            "Sriram Krishna",
-            "Yufei Wang",
-            "Shubham Tulsiani",
-            "Zackory Erickson",
-            "David Held"
-          ],
-          "abstract": "Visual imitation learning is a promising approach to training robot manipulation policies capable of completing a wide variety of tasks. However, policies today remain brittle to viewpoint perturbations, making deployment in diverse environments a challenge. We present a controlled empirical study of which design choices allow visuomotor policies to generalize across viewpoints. We find that viewpoint generalization improves when dense visual tokens are retained and the action head participates in geometric reasoning. On a suite of simulated tasks that span a wide range of camera poses, we show that these design choices yield a policy that remains performant across viewpoints. As a practical consequence, a policy trained with these design choices also transfers zero-shot from simulation to the real world under random camera configurations.",
-          "url": "https://arxiv.org/abs/2609.32762v1",
-          "pdf_url": "https://arxiv.org/pdf/2609.32762v1",
-          "published": "2026-09-26T16:29:58Z",
-          "updated": "2026-09-26T16:29:58Z",
-          "categories": [
-            "cs.RO",
-            "cs.CV",
-            "cs.LG"
           ],
           "primary_category": "cs.RO"
         }
@@ -1487,6 +1486,47 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2610.39418v1",
+          "title": "LinQuant: Functional Invariances for Low-Precision Linear Recurrences",
+          "authors": [
+            "Neehal Tumma",
+            "Philipp Nazari",
+            "Rohan Cherukuri",
+            "Daniela Rus",
+            "T. Konstantin Rusch"
+          ],
+          "abstract": "Linear recurrences are emerging as practical alternatives to softmax attention in large language models, appearing in both standalone and hybrid architectures. However, despite their rapid emergence, low-precision inference remains much less developed for these models than for softmax attention. During prefill, chunkwise-parallel algorithms cast much of the recurrence as dense matrix multiplications, suggesting a natural path to low-precision execution. Simply quantizing these operations in their native form, however, can be fragile. In this work, we identify functional invariances that preserve the full-precision computation while making the operands more amenable to quantization. Building on this observation, we introduce LinQuant, a framework for low-precision recurrent prefill based on seven such invariances, including rotations, diagonal rescalings, and alternative placements of recurrent decay and write factors. We derive when these transformations remain valid across common recurrence families spanning linear, gated, and delta-rule updates, and show that they provide complementary degrees of freedom for improving low-precision accuracy. Finally, we translate this framework to production by augmenting SSDi8, an existing low-precision prefill pipeline for Mamba-2, with the applicable invariances. LinQuant improves perplexity at matched latency on Mamba-2 1.3B, 2.7B, and 8B and Nemotron-H 8B, demonstrating the practical utility of invariance-based quantization for recurrent models.",
+          "url": "https://arxiv.org/abs/2610.39418v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.39418v1",
+          "published": "2026-10-29T05:59:51Z",
+          "updated": "2026-10-29T05:59:51Z",
+          "categories": [
+            "cs.LG"
+          ],
+          "primary_category": "cs.LG"
+        },
+        {
+          "id": "2610.38255v1",
+          "title": "ParaTTT: Parallelizing Test-Time Training Layers with Deep Memories",
+          "authors": [
+            "Noel Loo",
+            "Neehal Tumma",
+            "T. Konstantin Rusch",
+            "Mathias Lechner",
+            "Alexander Amini",
+            "Daniela Rus"
+          ],
+          "abstract": "Test-time training (TTT) layers replace the linear fast-weight memory of modern recurrent architectures with a small neural network trained online by gradient descent. This nonlinear memory is more expressive than the linear memories of Gated DeltaNet and Mamba-2, but is difficult to parallelize: existing implementations such as TTT-MLP rely on sequential, block-wise weight updates that run several times slower than chunkwise-parallel linear recurrences. Moreover, their block-wise execution only approximates the token-by-token online recurrence, whereas linear recurrences admit an exact chunkwise-parallel evaluation. We introduce ParaTTT (PTTT), an algorithm for parallelizing arbitrarily deep nonlinear memories by iteratively refining estimates of the inner-loop gradient trajectory. Starting from a guess of the hidden-layer gradients, each refinement consists of three chunkwise-parallel passes: a forward pass that evaluates the resulting feature trajectory, an exact gated-delta-rule pass that computes the readout trajectory and its feature gradients, and a backward pass that propagates these gradients into a new estimate. The exact online gradient descent recurrence is a fixed point of the iteration, while decoding requires no refinement iterations. We prove geometric convergence for a two-layer variant under sufficient contraction conditions. In practice, two iterations suffice. With two refinement steps at 4K context, PTTT evaluates the inner-loop trajectory $32\\times$ faster than TTT-MLP with the block approximation at matched error, while the full 340M model trains $4.9\\times$ faster. Models trained at 340M and 1.3B parameters match or exceed Gated DeltaNet and Mamba-2 and remain competitive with same-size Transformers on language-modeling perplexity and zero-shot accuracy, with better recall than the linear recurrences.",
+          "url": "https://arxiv.org/abs/2610.38255v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.38255v1",
+          "published": "2026-10-28T04:08:50Z",
+          "updated": "2026-10-28T04:08:50Z",
+          "categories": [
+            "cs.LG"
+          ],
+          "primary_category": "cs.LG"
+        },
+        {
           "id": "2610.37619v1",
           "title": "Perceiving and Predicting Dynamic Sports: Spatiotemporal Intelligence in Vision Models for Egocentric Tennis Video",
           "authors": [
@@ -1552,52 +1592,6 @@
             "cs.RO"
           ],
           "primary_category": "cs.CV"
-        },
-        {
-          "id": "2610.07382v1",
-          "title": "Toward Trustworthy Physical AI for Human Interaction",
-          "authors": [
-            "Niccol\u00f2 Pagliarani",
-            "Maximilian St\u00f6lzle",
-            "Cosima du Pasquier",
-            "Jeff Lui",
-            "Andrew Sabelhaus",
-            "Cecilia Laschi",
-            "Gentiane Venture",
-            "Daniela Rus",
-            "Matteo Cianchetti"
-          ],
-          "abstract": "Robots are entering human spaces faster than we can establish when they deserve trust. We propose a framework for trustworthy physical AI that integrates Safety, Behavioral Intelligibility, and Perceptual Alignment across embodiment, control, cognition, and design. Trustworthiness emerges from aligning physical capabilities, observable behavior, and expectations people form during interaction.",
-          "url": "https://arxiv.org/abs/2610.07382v1",
-          "pdf_url": "https://arxiv.org/pdf/2610.07382v1",
-          "published": "2026-10-05T20:53:59Z",
-          "updated": "2026-10-05T20:53:59Z",
-          "categories": [
-            "cs.RO"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2610.07130v1",
-          "title": "Is this machine playing?",
-          "authors": [
-            "Nathan Cloos",
-            "Antonio Norelli",
-            "Daniel Durbin",
-            "Jacob Andreas",
-            "Daniela Rus",
-            "Phillip Isola"
-          ],
-          "abstract": "We placed a modern AI coding assistant in an unintended role: as the mind of a body on an unknown digital island. With only a minimal instruction mentioning no specific task, reward, or activity, the machine started animating its virtual body. Across thirty-hour runs, the embodied AI agent climbed hills, stacked blocks into towers, drew mandalas, reinterpreted sports, ran experiments on the physics of its world, and learned techniques that later expanded what it could accomplish. These activities recurred across thirteen agents but diverged into distinct histories. We examine whether this behavior satisfies classical criteria for play and ask whether play can become a mode of machine development.",
-          "url": "https://arxiv.org/abs/2610.07130v1",
-          "pdf_url": "https://arxiv.org/pdf/2610.07130v1",
-          "published": "2026-10-05T17:57:54Z",
-          "updated": "2026-10-05T17:57:54Z",
-          "categories": [
-            "cs.AI",
-            "cs.LG"
-          ],
-          "primary_category": "cs.AI"
         }
       ]
     },
@@ -3050,6 +3044,24 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2610.39280v1",
+          "title": "Cross-Controller Transfer via In-Context Behavior Adaptation",
+          "authors": [
+            "Jonathan Yang",
+            "Chelsea Finn",
+            "Dorsa Sadigh"
+          ],
+          "abstract": "Generalist robot policies increasingly learn from data collected across diverse tasks and embodiments, yet typically assume a single controller for each robot. This assumption limits transfer because different controllers can assign different physical meanings to the same action and may require different strategies to complete a task. We study how to transfer robot data across both embodiments and controllers without allowing conflicting action interpretations to interfere with learning. Our setting spans six controller types as well as variations in controller gains and compliance. We propose a framework that encodes behavioral interaction under a controller through examples of commanded actions and the resulting robot motions. A transformer context encoder summarizes these interactions, allowing a single policy to adapt in context. Across real-world experiments, our method improves average success by 33 percentage points over naive data pooling, achieves 50\\% success on unseen controller modes and 52\\% on unseen controller gains, and transfers to tasks with limited controller-specific data. On contact-rich tasks such as USB insertion and surface wiping, behavioral interaction context enables the policy to adapt not only its actions but also its strategy. Our results provide a path toward generalist robot policies that can leverage data collected across diverse action interpretations. For more information, visit \\href{https://controller-transfer.github.io}{https://controller-transfer.github.io}.",
+          "url": "https://arxiv.org/abs/2610.39280v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.39280v1",
+          "published": "2026-10-29T03:31:22Z",
+          "updated": "2026-10-29T03:31:22Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2610.22497v1",
           "title": "Generative Value Classifier",
           "authors": [
@@ -3143,26 +3155,6 @@
             "cs.IR"
           ],
           "primary_category": "cs.AI"
-        },
-        {
-          "id": "2609.18207v1",
-          "title": "Reinforcement Learning for Real-Time Vision-Language-Action Policies",
-          "authors": [
-            "Perry Dong",
-            "Kuo-Han Hung",
-            "Dorsa Sadigh",
-            "Chelsea Finn"
-          ],
-          "abstract": "Reinforcement learning fine-tuning on top of large, pretrained Vision-Language-Action (VLA) models offers promise for highly reliable robot deployment. However, because of their scale, modern VLA models suffer from high inference latency, so the observation used to select an action is often stale by execution time, creating a distribution shift that can substantially degrade reliability and performance. Prior work has explored asynchronous policy execution to reduce the effect of latency, but these methods are mostly built on imitation learning and offer no mechanism for moving beyond the training distribution toward higher reliability. We close this gap by enabling RL fine-tuning that meets the real-time control requirements of dynamic real-world manipulation. Our approach builds on EXPO-FT, a framework for sample-efficient, reliable VLA fine-tuning with reinforcement learning, and decouples slow, expressive action generation from fast, reactive action edits: a large pretrained VLA proposes action chunks using its strong behavior prior, while a lightweight edit policy performs fast, reactive decision-making by editing actions in response to changes in state, conditioned on the latest observation. We instantiate this as Real-Time EXPO-FT, an RL framework for finetuning real-time VLA policies. On the Kinetix benchmark, Real-Time EXPO-FT enables a delayed policy to achieve the best performance among delayed and non-delayed methods in 10 out of 10 environments. On four dynamic real-world tasks, robot object passing, ball balancing, table soccer kicking, and dynamic object picking, with online robot data capped at 10 minutes, Real-Time EXPO-FT improves average policy performance from 42% to 97%, all without human intervention, demonstrating rapid, sample-efficient adaptation to challenging real-world dynamics. Website: https://pd-perry.github.io/real-time-expo-ft",
-          "url": "https://arxiv.org/abs/2609.18207v1",
-          "pdf_url": "https://arxiv.org/pdf/2609.18207v1",
-          "published": "2026-09-16T06:38:36Z",
-          "updated": "2026-09-16T06:38:36Z",
-          "categories": [
-            "cs.RO",
-            "cs.LG"
-          ],
-          "primary_category": "cs.RO"
         }
       ]
     },
@@ -3175,8 +3167,8 @@
       "paper_count": 5,
       "papers": [
         {
-          "id": "2610.34051v1",
-          "title": "Behavior Spatial Benchmark: Evaluating Spatial Understanding for Robotics",
+          "id": "2610.34051v2",
+          "title": "BEHAVIOR-Spatial Benchmark: Evaluating Spatial Understanding for Robotics",
           "authors": [
             "Sirui Chen",
             "Huang Huang",
@@ -3188,10 +3180,10 @@
             "Jiajun Wu"
           ],
           "abstract": "Robot tasks require grounding spatial language in physical scenes, but task success alone cannot establish whether spatial instructions are followed. We present BEHAVIOR-Spatial, a benchmark built on BEHAVIOR-1K that measures spatial question answering, point-based target grounding, and robot action to examine how VLM spatial understanding relates to VLA behavior. It comprises 3,256 spatial questions across 49 activities, 1,240 grounding queries across 14 manipulation tasks, and action evaluations covering those 14 tasks and 10 navigation tasks. Our manipulation protocol evaluates held-out configurations and instruction following when the requested target changes within a fixed training layout. The baseline achieves 41.6% on held-out configurations but only 16.1% under changed instructions. VLM adaptation and robot-data pretraining provide limited improvements, whereas oracle visual target cues raise these rates to 60.3% and 38.0%, respectively. Perception evaluations reveal policy-dependent correlations between VLM question-answering and grounding accuracy and VLA manipulation performance. Together, these findings motivate evaluating spatial instruction following alongside task completion and examining when spatial perception performance translates into robot behavior. Project website: https://arielchen07.github.io/behavior-spatial/.",
-          "url": "https://arxiv.org/abs/2610.34051v1",
-          "pdf_url": "https://arxiv.org/pdf/2610.34051v1",
+          "url": "https://arxiv.org/abs/2610.34051v2",
+          "pdf_url": "https://arxiv.org/pdf/2610.34051v2",
           "published": "2026-10-25T04:23:49Z",
-          "updated": "2026-10-25T04:23:49Z",
+          "updated": "2026-10-28T02:48:19Z",
           "categories": [
             "cs.RO",
             "cs.CV"
@@ -3438,8 +3430,8 @@
       "paper_count": 5,
       "papers": [
         {
-          "id": "2610.34051v1",
-          "title": "Behavior Spatial Benchmark: Evaluating Spatial Understanding for Robotics",
+          "id": "2610.34051v2",
+          "title": "BEHAVIOR-Spatial Benchmark: Evaluating Spatial Understanding for Robotics",
           "authors": [
             "Sirui Chen",
             "Huang Huang",
@@ -3451,10 +3443,10 @@
             "Jiajun Wu"
           ],
           "abstract": "Robot tasks require grounding spatial language in physical scenes, but task success alone cannot establish whether spatial instructions are followed. We present BEHAVIOR-Spatial, a benchmark built on BEHAVIOR-1K that measures spatial question answering, point-based target grounding, and robot action to examine how VLM spatial understanding relates to VLA behavior. It comprises 3,256 spatial questions across 49 activities, 1,240 grounding queries across 14 manipulation tasks, and action evaluations covering those 14 tasks and 10 navigation tasks. Our manipulation protocol evaluates held-out configurations and instruction following when the requested target changes within a fixed training layout. The baseline achieves 41.6% on held-out configurations but only 16.1% under changed instructions. VLM adaptation and robot-data pretraining provide limited improvements, whereas oracle visual target cues raise these rates to 60.3% and 38.0%, respectively. Perception evaluations reveal policy-dependent correlations between VLM question-answering and grounding accuracy and VLA manipulation performance. Together, these findings motivate evaluating spatial instruction following alongside task completion and examining when spatial perception performance translates into robot behavior. Project website: https://arielchen07.github.io/behavior-spatial/.",
-          "url": "https://arxiv.org/abs/2610.34051v1",
-          "pdf_url": "https://arxiv.org/pdf/2610.34051v1",
+          "url": "https://arxiv.org/abs/2610.34051v2",
+          "pdf_url": "https://arxiv.org/pdf/2610.34051v2",
           "published": "2026-10-25T04:23:49Z",
-          "updated": "2026-10-25T04:23:49Z",
+          "updated": "2026-10-28T02:48:19Z",
           "categories": [
             "cs.RO",
             "cs.CV"
@@ -4095,6 +4087,25 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2610.39054v1",
+          "title": "Robotic Data Inoculation",
+          "authors": [
+            "Qiyang Li",
+            "Zhiyuan Zhou",
+            "Charles Xu",
+            "Sergey Levine"
+          ],
+          "abstract": "Modern robot learning systems feed on high-quality demonstration data, and their performance hinges on coverage. Without good coverage, small errors compound and the policy can quickly go into out-of-distribution states from which it cannot recover. Yet there is no principled way of collecting high-coverage data, and data collection often relies on heuristic instructions to human operators. Purely online reinforcement learning (RL) explores at the cost of safety and sample efficiency, while DAgger-style interventions require the policy to fail by chance before a human can correct it. In this paper, we ask instead whether we can modify how the robot behaves during data collection to collect more useful data. We propose Data Inoculation (DI), a shared-control framework in which a human provide closed-loop teleoperation commands while a residual policy perturbs these commands. The residual policy is trained online, on the growing dataset, with the same reward-maximizing objective later used for policy extraction, so its perturbations steer data collection toward the deviations a policy trained on the data would make. These perturbations expose the robot to a wider range of states, while the human's continuous corrections provide recovery demonstrations, \"inoculating\" the dataset against the learner's future mistakes while the human remains in control. On three challenging real-world robotic tasks, DI consistently improves or matches the success rate of policies trained with both behavioral cloning and offline RL, showing DI as an effective data collection strategy for improving downstream policy performance.",
+          "url": "https://arxiv.org/abs/2610.39054v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.39054v1",
+          "published": "2026-10-28T23:31:24Z",
+          "updated": "2026-10-28T23:31:24Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2610.24461v1",
           "title": "Measuring Empowerment from Offline Data for Intrinsically Motivated Exploration",
           "authors": [
@@ -4171,26 +4182,6 @@
             "cs.LG"
           ],
           "primary_category": "cs.AI"
-        },
-        {
-          "id": "2610.07796v2",
-          "title": "The Geometry of Empowerment",
-          "authors": [
-            "Catherine Ji",
-            "Vivek Myers",
-            "Sergey Levine",
-            "Benjamin Eysenbach"
-          ],
-          "abstract": "Empowerment captures the capacity for an agent to actively control its environment. While conceptually appealing as an information-theoretic quantity, the connection between empowerment and structurally central states that provide broad access to future outcomes has remained an open question. In this work, we link empowerment maximization and skill-learning methods to provide new geometries for interpreting and analyzing empowerment. Our analyses answer longstanding open questions on the connections between empowerment and structural centrality. Our analyses also reveal distinctions between information and reward geometries, highlighting important theoretical implications to build scalable empowerment-maximization methods. Website and code can be found at https://empowerment-geometry.github.io/.",
-          "url": "https://arxiv.org/abs/2610.07796v2",
-          "pdf_url": "https://arxiv.org/pdf/2610.07796v2",
-          "published": "2026-10-06T05:45:19Z",
-          "updated": "2026-10-07T18:26:47Z",
-          "categories": [
-            "cs.LG",
-            "cs.AI"
-          ],
-          "primary_category": "cs.LG"
         }
       ]
     },
@@ -5490,6 +5481,47 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2610.39251v1",
+          "title": "Where to Learn and How Far to Roll Out: Efficient Adaptive Training for GUI Agents",
+          "authors": [
+            "Yuxiang Chai",
+            "Quyu Kong",
+            "Panrong Tong",
+            "Steven Hoi",
+            "Yue Wang"
+          ],
+          "abstract": "Trajectory-level GRPO is a common approach for training multi-step GUI agents, but repeatedly rolling out complete trajectories from the task root can be inefficient: task-level rewards provide coarse supervision over which intermediate decisions require improvement, while already-mastered prefixes are repeatedly re-executed before reaching difficult states. We introduce a two-stage adaptive training framework that jointly addresses where to learn and how far to roll out. We first construct reusable intermediate checkpoints from successful expert trajectories and select informative pivots using action disagreement, which measures uncertainty directly from sampled GUI actions. Stage I performs one-step RL at these pivots to improve uncertain local decisions. Stage II then progressively expands policy responsibility through adaptive Local, Suffix, and Root training according to task progress. Recoverable checkpoints enable repeated training from intermediate states without replaying the preceding trajectory. Across MobileGym and CUA-Gym-Hub, our method reduces environment interaction by 56-61% relative to Vanilla GRPO while improving task performance, demonstrating that jointly allocating training across states and rollout ranges can substantially improve GUI-agent RL efficiency.",
+          "url": "https://arxiv.org/abs/2610.39251v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.39251v1",
+          "published": "2026-10-29T03:03:29Z",
+          "updated": "2026-10-29T03:03:29Z",
+          "categories": [
+            "cs.AI"
+          ],
+          "primary_category": "cs.AI"
+        },
+        {
+          "id": "2610.38248v1",
+          "title": "MATCH: Execution-Aware Hierarchical Reinforcement Learning for Vision-and-Language Navigation in Continuous Environment",
+          "authors": [
+            "Shuhao Ye",
+            "Yufei Wei",
+            "Demao Wang",
+            "Shichao Zhai",
+            "Rong Xiong",
+            "Yue Wang"
+          ],
+          "abstract": "Vision-and-Language Navigation in Continuous Environments (VLN-CE) requires instruction-consistent planning and reliable execution under collision constraints. Yet many hierarchical approaches optimize the planner while keeping execution fixed. We introduce MATCH, a framework that jointly learns a language-conditioned planner and a goal-conditioned primitive-action executor. An execution-aware topological graph represents start-dependent execution options and integrates executor value estimates with realized outcome memory, enabling the planner to select execution requests and refine their targets through bounded continuous offsets. A transition-aware dense macro reward balances ordered progress along the reference route against execution residual, encouraging executable requests without substituting local success for instruction following. A staged curriculum culminates in synchronized on-policy updates, with the executor learning on planner-generated requests and the planner adapting its requests to the executor's current behavior. With 0.5B parameters, MATCH achieves state-of-the-art performance on the R2R-CE and RxR-CE benchmarks. Preliminary real-robot deployments further demonstrate its practical potential.",
+          "url": "https://arxiv.org/abs/2610.38248v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.38248v1",
+          "published": "2026-10-28T03:56:17Z",
+          "updated": "2026-10-28T03:56:17Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2610.37037v1",
           "title": "Zooming without Zooming v2: From Seeing Details to Connecting Evidence for Generalizable Multimodal Perception",
           "authors": [
@@ -5575,54 +5607,6 @@
             "cs.LG"
           ],
           "primary_category": "stat.ML"
-        },
-        {
-          "id": "2610.30792v1",
-          "title": "Trace2World: Reconstructing App Worlds from Real Interaction Traces for Scalable GUI Agent Training",
-          "authors": [
-            "Zezhou Wang",
-            "Hanzhang Zhou",
-            "Panrong Tong",
-            "Quyu Kong",
-            "Pengxiang Li",
-            "Steven Hoi",
-            "Zhuzhong Qian",
-            "Yue Wang"
-          ],
-          "abstract": "Scaling GUI reinforcement learning requires environments that preserve real-app behavior. Yet coupling behavior inference with coding can turn partial traces into runnable mocks with incorrect state transitions. We introduce \\textbf{Trace2World}, which separates global behavior reconstruction from implementation. It reconciles traces into a shared, source-linked app model, then compiles an executable environment. Independent replay of source workflows localizes mismatches for bounded implementation repair. Validated worlds then support learner-adaptive task and environment augmentation within source-supported behavior. From 1,570 traces, Trace2World constructs 50 environments. On 200 workflows across ten apps, 91.1% are reproduced end to end, versus 59.8% for the strongest matched task-local baseline. Source-grounded validation retains 94.0% of simulated training gains on real devices, versus 54.7% under self-validation. Learner guidance raises benchmark success from 56.9% to 61.1%. Training in Trace2World further improves the model by 20.2 points on our benchmark, 5.4--16.2 points across four external GUI benchmarks, and 16.3 points on 100 real-device tasks. Reliable reconstruction separates what behavior source evidence supports from whether the implementation preserves it.",
-          "url": "https://arxiv.org/abs/2610.30792v1",
-          "pdf_url": "https://arxiv.org/pdf/2610.30792v1",
-          "published": "2026-10-22T06:10:53Z",
-          "updated": "2026-10-22T06:10:53Z",
-          "categories": [
-            "cs.LG",
-            "cs.SE"
-          ],
-          "primary_category": "cs.LG"
-        },
-        {
-          "id": "2610.24291v2",
-          "title": "An important Bottleneck in LLM Optimizers: Principle-Level Local Optima",
-          "authors": [
-            "Nian Ran",
-            "Tianhe Jia",
-            "Zhengyang Mu",
-            "Yue Wang",
-            "Sebastian Brulin",
-            "Markus Olhofer",
-            "Mauricio A. Alvarez",
-            "Yang Liu",
-            "Richard Allmendinger"
-          ],
-          "abstract": "Feedback-driven LLM optimizers are increasingly used for evolutionary search, Bayesian optimization, heuristic design, and scientific discovery. Yet rapid initial gains often give way to prolonged plateaus despite substantial remaining evaluation budgets. We investigate \\emph{principle-level search collapse}, where an optimizer's search becomes confined to a narrow set of design principles, even though it may continue to generate distinct candidates and achieve small improvements. We assemble a diagnostic benchmark spanning molecular optimization, network sentinel-node selection, and GPU-kernel optimization, and introduce a decision-tree protocol combining principle narrowing, prolonged performance plateaus, and gaps to attainable reference solutions. Across 161 assessable runs on the three problem domains, 78.3\\% receive support for collapse, including 55.3\\% with strong support. Candidate-level variation can nevertheless conceal restricted search at the principle level. We then test \\emph{diversity injection}, a common response to search stagnation, such as higher t, multiple LLMs, and web search, and show that it provides limited and inconsistent benefits: among 65 molecular runs, still 73.8\\% and 53.8\\% receive support and strong support respectively. We finally test reference-principle interventions and find that they improve some runs, but their benefits vary across models and tasks: access to a better principle does not guarantee its effective use. Our benchmark and diagnostic protocol provide a basis for evaluating future optimizers on principle-level collapse. Our findings highlight the need for online collapse detection and better mechanisms for generating and maintaining alternative principles during optimization.",
-          "url": "https://arxiv.org/abs/2610.24291v2",
-          "pdf_url": "https://arxiv.org/pdf/2610.24291v2",
-          "published": "2026-10-16T22:39:17Z",
-          "updated": "2026-10-21T16:38:00Z",
-          "categories": [
-            "cs.LG"
-          ],
-          "primary_category": "cs.LG"
         }
       ]
     },
