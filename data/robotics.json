@@ -2,70 +2,140 @@
   "category": "robotics",
   "name": "Robotics Research",
   "description": "Robotics \u2014 Motion Planning, Control Systems, Human-Robot Interaction, Autonomous Systems",
-  "scraped_at": "2026-11-01T14:56:25.325690+00:00",
+  "scraped_at": "2026-11-02T18:09:00.315479+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2610.40646v1",
-      "title": "SwapBot: Tool-Centric Robot Manipulation via Interchangeable End-Effectors and Tactile Sensing",
+      "id": "2610.42146v1",
+      "title": "Hierarchical World Models with Implicit Dynamics",
       "authors": [
-        "Yunchu Zhang",
-        "Ray Song",
-        "Junhan Jiao",
-        "Liyiming Ke",
-        "Yuchen Yang",
-        "Ruihan Gao",
-        "Emma Romig",
-        "Siddhartha Srinivasa",
-        "Yiyue Luo"
+        "Gaoyue Zhou",
+        "Yvonne Wu",
+        "Zichen Jeff Cui",
+        "Nicolas Ballas",
+        "Mido Assran",
+        "Lerrel Pinto",
+        "Yann LeCun"
       ],
-      "abstract": "Robot manipulation in everyday environments inherently involves substantial tool usage. Seemingly simple household tasks, such as cooking pan-fried tofu, require forceful cutting, delicate brushing, and precise placement using different tools under contact-rich interaction. Thus, the ability to autonomously swap and use task-appropriate tools is important for tool-centric manipulation. We introduce SwapBot, a modular, tool-centric end effector system featuring low-cost adapters that quickly convert common household tools into robot end effectors. Rather than pursuing a single universal gripper, SwapBot adopts a unified design principle that combines a fixed robot-side coupling interface with low-cost, tool-side adapters, enabling compatibility with diverse tools, including articulated ones, and multiple robot platforms. Each adapter integrates compact tactile sensors, supports fast autonomous swapping, and interfaces with an intuitive teleoperation system for efficient demonstration collection. User studies show that, during teleoperation, SwapBot reduces task completion time and operator workload. Using collected demonstrations on the robot, we train imitation learning policies to successfully perform tool-centric tasks like cooking tofu, stirring salad, flipping meat. Our ablation study shows that using tactile-augmented demonstrations improves policy performance across contact-rich skills, increasing success rates by 15 to 25 percentage points over RGB-only policies. These results highlight modular, tactile-equipped tools as a practical and extensible pathway toward robust and capable robot manipulation. Project website https://personalrobotics.github.io/SwapBot.",
-      "url": "https://arxiv.org/abs/2610.40646v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.40646v1",
-      "published": "2026-10-29T17:59:20Z",
-      "updated": "2026-10-29T17:59:20Z",
+      "abstract": "Planning with world models enables test-time adaptation for embodied agents, offering superior generalization over direct policy learning. However, long-horizon tasks remain hindered by cumulative errors and search complexity. Existing hierarchical methods often use rigid macro-actions or latent skills, leading to brittle representations and limited fine-grained control. We introduce ID-WM (Implicit Dynamics World Models), a hierarchical world model that decouples state-space reachability from local control. Our framework utilizes a high-level model to sample feasible transitions across the state manifold and a low-level world model as an inverse dynamics solver to ground these transitions into precise actions. This allows the planner to identify reachable subgoals without being constrained by low-level execution details. By prioritizing local physical feasibility over global behavioral patterns, ID-WM synthesizes novel long-horizon plans from short segments, transcending the specific behavioral modes seen during training. We demonstrate its effectiveness across three navigation and manipulation suites, achieving a 38.5% improvement over state-of-the-art policy and diffusion-based planners. Crucially, by leveraging this hierarchical structure to mitigate compounding errors, our approach yields a 135% performance gain over single-level world model MPC, particularly in complex, unseen configurations for long-horizon tasks. Videos can be viewed at https://id-wm.github.io",
+      "url": "https://arxiv.org/abs/2610.42146v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.42146v1",
+      "published": "2026-10-30T17:59:25Z",
+      "updated": "2026-10-30T17:59:25Z",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2610.42141v1",
+      "title": "RoboArchitect: Automating the Design of Robotic Agents with Persistent Memory",
+      "authors": [
+        "Shengguang Wu",
+        "Suning Huang",
+        "Cherie Ho",
+        "Ria Doshi",
+        "Hao Zhu",
+        "Serena Yeung-Levy"
+      ],
+      "abstract": "Recent work shows that a frozen robot policy performs far better inside an agent harness, where control code decides when to query the policy, consult vision tools, or command the arm directly. Yet today these harnesses are built by hand and redesigned for each new robot or benchmark. We show that harness design can be automated, offering a strong alternative to finetuning on a novel setup. In RoboArchitect, a coding model observes a robot's rollouts, diagnoses failures, and iteratively revises the harness around the frozen policy. The harness evolves on a set of episodes for its optimization and is evaluated on held-out scenes and tasks. Without updating any model weights, RoboArchitect raises average success from 9.7% to 43.3% on unseen scenes (4.5x) and from 12.7% to 40.2% on unseen tasks (3.2x), across multiple benchmarks and policies. The gains are largest where the benchmark is far from the policy's training data: wrapping a general-purpose policy, the evolved harness yields a specialist that often outperforms even the finetuned version. Intuitive control strategies are automatically designed, such as lifting a jammed arm clear or reaching in horizontally when an obstacle blocks the way from above. The harness also evolves its own persistent memory, carrying learned experience, such as effective grasp depths, into later decisions. These results suggest that substantial headroom in robotic manipulation lies in the agent harness, and its design can be effectively automated and optimized without weight updates.",
+      "url": "https://arxiv.org/abs/2610.42141v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.42141v1",
+      "published": "2026-10-30T17:58:48Z",
+      "updated": "2026-10-30T17:58:48Z",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2610.42097v1",
+      "title": "ROOF: Learning Humanoid Fall Recovery under Overhead Constraints",
+      "authors": [
+        "Yidan Lu",
+        "Jiayuan Yu",
+        "Zongrui Cai",
+        "Jingwen Sun",
+        "Jinrui Han",
+        "Jing Wang",
+        "Ping Luo",
+        "Peng Lu"
+      ],
+      "abstract": "A fallen humanoid beneath an overhead obstacle faces a coupled recovery problem. It must create clearance while organizing support for a stable rise, since attempting to stand before making room can further increase obstruction. We introduce a reinforcement learning method with contact-supported geometric escape guidance, which rewards incremental reduction of robot-obstacle overlap without prescribing an escape path. To achieve this, a learned motion prior, together with posture-dependent support and joint-stall costs, is proposed to shape a single policy that learns when to clear the obstacle, how to establish support, and when to complete the rise, all using proprioception alone. In simulation, it recovers in 88.5% of trials beneath plates that can only be lifted, compared with 18.9% without geometric guidance, and in 98.6% of trials beneath free plates with randomized size, mass and placement. On a Unitree G1, the deployed policy recovered in 95 of 150 attempts across seven real-world obstacle scenes, including furniture and multi-object arrangements absent from training. Project page: https://lu-yidan.github.io/ROOF/",
+      "url": "https://arxiv.org/abs/2610.42097v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.42097v1",
+      "published": "2026-10-30T17:41:32Z",
+      "updated": "2026-10-30T17:41:32Z",
       "categories": [
         "cs.RO"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2610.40644v1",
-      "title": "Adaptive Scenario Generation for KL-DRO Around a Learned Density Model",
+      "id": "2610.42096v1",
+      "title": "CausalWAM: Learning the Causes of Actions in World Action Models",
       "authors": [
-        "Aron Brenner",
-        "Saurabh Amin"
+        "Juntao Cheng",
+        "Jinzhou Tang",
+        "Fan Feng",
+        "Henrik I. Christensen",
+        "Yujia Zheng"
       ],
-      "abstract": "Distributionally robust optimization (DRO) hedges data-driven two-stage stochastic programs against error in the distribution estimated from a finite record, and standard ambiguity sets differ in how they treat realizations absent from that record. A divergence ball around the empirical distribution contains only reweightings of the record, whereas a transport ball also contains distributions supported off the record, including on realizations the data-generating process cannot produce, against which the decision is then hedged as well. We instead propose a Kullback-Leibler (KL) ball centered at a density model fitted to the record, the learned nominal, which lets the adversary up-weight costly unobserved realizations in proportion to the probability the model assigns them. Solving the resulting problem poses a second difficulty, because it can accommodate only a few scenarios, and an independent sample of that size is likely to omit the rare realizations on which the worst case concentrates. We therefore build the scenario set adaptively, alternating between solving the finite problem and drawing new realizations from the learned nominal, steered toward the worst case at the current decision, with importance weights that correct the draws back to the model. On a multi-item newsvendor problem and a capacity expansion problem on realistic grid data, centering the ball at the learned nominal rather than at the record lowers cost under distribution shift, at comparable in-distribution cost, when the record is scarce and the model class captures structure that lets it extrapolate beyond the record. The advantage fades as the record grows or as the shift departs from the structure the model has learned.",
-      "url": "https://arxiv.org/abs/2610.40644v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.40644v1",
-      "published": "2026-10-29T17:59:01Z",
-      "updated": "2026-10-29T17:59:01Z",
+      "abstract": "World action models (WAMs) learn latent variables from observations and use these to both predict the evolution of the scene and to generate actions. The prediction has to be of the whole scene, whereas only a portion of the scene causes actions. WAMs fitted to demonstrations do not, in general, guarantee that they will generate actions solely from the latent causes of the demonstrated actions (the action-relevant latent variables), as the model could just as well learn to imitate in this way whilst entangling the action-relevant latent variables with the nuisance variables. We therefore separate out what causes action from what prediction depends on. We prove that under a sparsity constraint the latent variables used to generate actions are an invertible function of the action-relevant latent variables alone and the true structure is identified up to a permutation of the latent variables. This requires neither sufficient temporal dependence nor any assumptions on how the unobserved regimes evolve and holds even when the action-relevant latent variables are statistically dependent on the rest. We therefore propose CWAM (Causal WAM), which incorporates the constraint into a pretrained WAM by adding a sparse routing path to its action head, with the world modeling objective remaining unchanged. Experiments on both synthetic data and real-world robots validate the theory as well as showcase the improved efficiency in closed-loop success.",
+      "url": "https://arxiv.org/abs/2610.42096v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.42096v1",
+      "published": "2026-10-30T17:40:00Z",
+      "updated": "2026-10-30T17:40:00Z",
       "categories": [
-        "eess.SY",
-        "cs.LG"
+        "cs.AI",
+        "cs.RO",
+        "stat.ML"
+      ],
+      "primary_category": "cs.AI"
+    },
+    {
+      "id": "2610.42073v1",
+      "title": "Measurement-Based Assessment of Decadal Inertia and Primary Frequency Response Trends in the US Eastern Interconnection",
+      "authors": [
+        "Saurav Dulal",
+        "Mark Baldwin",
+        "Narges Ghiasi",
+        "Mohammed Olama",
+        "Ali R. Ekti",
+        "Nils M. Stenvig",
+        "Yilu Liu"
+      ],
+      "abstract": "Changes in the generation mix of the U.S. Eastern Interconnection (EI) raise questions about long-term frequency performance, particularly inertia and primary frequency response (PFR). This paper jointly examines these characteristics using synchronized FNET/GridEye frequency measurements and confirmed generation-trip events from 2013 to 2025. A representative EI frequency trajectory is constructed using the median of geographically distributed measurements. Effective inertia is estimated quarterly from the early post-disturbance rate of change of frequency (RoCoF), using a 3-second window and least-squares fitting. PFR is evaluated using the beta metric, which measures aggregate frequency response from disturbance size and the A-to-B frequency deviation. Annual beta estimates are obtained after filtering events by starting frequency and disturbance size to improve comparability across years. Results show that EI effective inertia varies seasonally and follows a non-monotonic trend rather than a uniform long-term decline. Over the same period, coal generation decreased while natural gas, wind, and solar generation increased. Changes in synchronous generator commitment and operating conditions may have offset some expected inertia reductions. Filtered beta generally increased from the mid-2010s to the early 2020s, with year-to-year variability thereafter. The different trends show that early inertial behavior and broader aggregate frequency response have not evolved in parallel. Joint analysis of inertia and beta offers a more complete measurement-based assessment of EI frequency performance during the generation transition.",
+      "url": "https://arxiv.org/abs/2610.42073v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.42073v1",
+      "published": "2026-10-30T17:30:23Z",
+      "updated": "2026-10-30T17:30:23Z",
+      "categories": [
+        "eess.SY"
       ],
       "primary_category": "eess.SY"
     },
     {
-      "id": "2610.40632v1",
-      "title": "SymAnt: Grounding Long-Horizon Action Anticipation with Adaptable Symbolic Priors",
+      "id": "2610.42053v1",
+      "title": "REA: A Routed Embodied Agent Runtime for Asynchronous Brain-Cerebellum Control",
       "authors": [
-        "Fnu Aryan",
-        "Yaqi Xie",
-        "Joseph Campbell",
-        "Woojun Kim",
-        "Kwonjoon Lee",
-        "Hossein Nourkhiz Mahjoub",
-        "Ehsan Moradi-Pari",
-        "Katia Sycara",
-        "Simon Stepputtis"
+        "Pengfei Zhou",
+        "Yixing Ma",
+        "Zhengfeiyang Zhang",
+        "Haoyuan Chen",
+        "Zhenglin Wan",
+        "Hexin Wang",
+        "Wangbo Zhao",
+        "Yang You"
       ],
-      "abstract": "As robots and intelligent systems increasingly interact with humans, they must anticipate long sequences of future actions from only brief observations. While purely neural models typically require extensive observations to predict future actions and remain difficult to interpret and adjust, symbolic priors offer a structured alternative. To this end, we introduce SymAnt, a novel neuro-symbolic approach that unifies the expressiveness of neural networks with the structured reasoning of scene and knowledge graphs. Given a short video, SymAnt performs a joint-search over both graphs to construct a symbolic context, enabling unified reasoning over spatial relationships, object attributes, affordances, and associated actions. This symbolic context serves as a prior for an iterative refinement process that progressively generates and improves the sequence of future actions. By grounding predictions in symbolic context, SymAnt anticipates long-horizon actions from short observation windows in a parameter-efficient manner, while enabling users to directly edit the underlying knowledge to adjust predictions without further training. Through our experiments, we demonstrate the effectiveness of SymAnt, particularly when only short observation contexts are available, across five diverse datasets: Breakfast, 50 Salads, EPIC-KITCHENS, EGTEA Gaze+, and Assembly101.",
-      "url": "https://arxiv.org/abs/2610.40632v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.40632v1",
-      "published": "2026-10-29T17:58:00Z",
-      "updated": "2026-10-29T17:58:00Z",
+      "abstract": "Foundation models are becoming remarkably reliable at high-level reasoning, yet they remain too slow and costly to serve as fine-grained controllers. Conversely, fast policies like VLAs and whole-body controllers offer more efficient reflexes, but struggle to generalize. While pairing a deliberative brain (foundation models) with a reactive cerebellum (fast policies) seems natural for embodied systems, two obstacles remain: methods are built and scored on incompatible stacks, and their asynchronous coordination is difficult. For example, an agent that calls the VLA in the agentic loop can stall the fast execution, while a VLA that calls the agent on errors tends to re-trigger fallbacks repeatedly or completely miss silent failures. To address this, we propose REA (Routed Embodied Agent), a unified runtime where a deliberative System 2, an embodied router System 1 and reactive System 0 policies cooperate under a single golden rule - no running policy waits on the brain. Instead of querying the brain at each failure, REA employs a route memory that stores each policy's measured success ahead of time, a boundary-triggered judge gate that consults the brain on policy execution, and a shared-budget escalation ladder for bounded recovery. Evaluated on 3,000 test episodes across 60 LIBERO-Pro tasks, REA reaches 95.9% success and beats the best single-agent baseline in its own policy pool (94.7%) while reducing control steps by 25% and control time by 17%. In a separate 100-episode RoboTwin 2.0 study, REA achieves 84% success with VLA policies and 86% with VLA+code, compared with 80% for the strongest single VLA baseline MEDex. These results demonstrate learned and programmatic policies operating within the same runtime. REA also transfers to BEHAVIOR-1K and a real Unitree G1 humanoid, achieving the highest observed success among the compared methods.",
+      "url": "https://arxiv.org/abs/2610.42053v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.42053v1",
+      "published": "2026-10-30T17:18:13Z",
+      "updated": "2026-10-30T17:18:13Z",
       "categories": [
         "cs.RO",
         "cs.CV"
@@ -73,134 +143,82 @@
       "primary_category": "cs.RO"
     },
     {
-      "id": "2610.40600v1",
-      "title": "A Conveyor Belt Mechanism for Repositionable Magnetic Coupling Between Continuum Robots",
+      "id": "2610.42049v1",
+      "title": "A Hybrid Path Planning Framework for Assistive Wheelchair Navigation in Dynamic Pedestrian Environments",
       "authors": [
-        "Ella Walsh",
-        "Eric Diller",
-        "Jessica Burgner-Kahrs"
+        "Damla Leblebicio\u011flu",
+        "Rachel Barume",
+        "Ta\u015fk\u0131n Pad\u0131r"
       ],
-      "abstract": "This work proposes a novel conveyor belt mechanism enabling continuous, active repositioning of functional elements along the body of a tendon-driven continuum robot. Up to three conveyor belt mechanisms are integrated within a 9 mm diameter continuum robot. We demonstrate equivalent or reduced conveyor belt actuation forces compared to robot tendon actuation forces. As a case study, we mount permanent magnets along two conveyor belts, and demonstrate actively reconfigurable inter-robot coupling. Coupling point location and quantity can be adjusted during robot operation to actively tune the effective stiffness of the coupled multi-robot system. We show that effective stiffness follows a predictable inverse-cubic relationship with coupling location, and increases with the number of coupling points. These findings demonstrate that the conveyor belt mechanism enables active functional element repositioning for changing tasks requirements, with magnetic inter-robot coupling as one proof-of-concept.",
-      "url": "https://arxiv.org/abs/2610.40600v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.40600v1",
-      "published": "2026-10-29T17:50:56Z",
-      "updated": "2026-10-29T17:50:56Z",
+      "abstract": "Autonomous wheelchairs can improve the quality of life for individuals with mobility impairments by providing greater independence. However, reliable navigation especially in human environments is a major challenge due to factors such as dynamic obstacles, unpredictable pedestrian behavior, and the users' need to complete multiple stops along the way before reaching their final destination. This paper presents a hybrid path planning framework for multi-goal navigation in dynamic environments. The framework integrates the Traveling Salesman Problem (TSP) for global task ordering with the Potential Field (PF) method and heuristic local planners such as Rapidly-exploring Random Tree (RRT) and A-star (A*) to achieve collision-free navigation. Within this hybrid framework, TSP determines the visiting order of intermediate stations, PF transfers global path information, and local planners avoid obstacles while guiding the robot to the stations. The local planners generate feasible paths that allow the robot to follow the global trajectory and reroute to avoid static and dynamic obstacles. For this purpose, two algorithms have been developed: (i) TSP-PF-RRT and (ii) TSP-PF-A*. The performance of the proposed algorithms are evaluated using Monte Carlo simulations in crowded and extra-crowded scenarios that contain heterogeneous dynamic and static obstacles. Experimental results demonstrate that the proposed hybrid framework enables efficient multi-goal navigation while maintaining safe operation in dynamic environments with humans, with TSP-PF-RRT achieving fewer or no collisions and shorter travel distances.",
+      "url": "https://arxiv.org/abs/2610.42049v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.42049v1",
+      "published": "2026-10-30T17:16:59Z",
+      "updated": "2026-10-30T17:16:59Z",
       "categories": [
-        "cs.RO"
+        "cs.RO",
+        "eess.SY"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2610.40597v1",
-      "title": "Analog Realization and Measurement of a Forced Aliev-Panfilov Excitable Oscillator",
+      "id": "2610.42047v1",
+      "title": "System-Level Factors Influencing AGC Cyber-Attack Success and RAS Vulnerability in Multi-Area Grids",
       "authors": [
-        "Zixuan Fu",
-        "Unnikrishna Pillai"
+        "Abdulmannan Ajabnoor",
+        "Zhi Jin Zhang",
+        "Maryam Saeedifard",
+        "Dominic Gro\u00df"
       ],
-      "abstract": "A single resistor moves a discrete analog realization of the forced Aliev-Panfilov excitable oscillator from a chaotic operating point of the model to a regular one. In this model a rate parameter multiplies the complete right-hand side of the excitation equation, forcing term included. The input resistor of the excitation integrator sets that parameter, so no state, delay element, or controller is added. Sampled waveforms were recorded at two resistor values, with two independent runs each. The measured excitation excursion agrees with numerical integration to within three percent at the baseline setting and five percent at the rate-controlled setting. Between the two settings the excitation excursion contracts by a factor of thirteen. At the rate-controlled setting the recovery excursion exceeds prediction by a factor of eight. This excess traces to a displaced operating point on the state-dependent recovery rate. Thermal drift in the multiplier chain and leakage at the high-impedance recovery-rate divider could each produce it, and the present data do not separate them. A tested bipolar input stage strongly loads that divider, a constraint absent from the ideal equations. The divider, not the sub-hertz signal bandwidth, sets the amplifier input-stage requirement.",
-      "url": "https://arxiv.org/abs/2610.40597v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.40597v1",
-      "published": "2026-10-29T17:50:11Z",
-      "updated": "2026-10-29T17:50:11Z",
+      "abstract": "Automatic generation control (AGC) stabilizes frequency and scheduled power exchanges among interconnected areas, yet its reliance on communication networks introduces cyber-vulnerabilities. This work examines coordinated AGC cyber-attacks in the presence of remedial action schemes (RAS) and identifies operating conditions under which an attacker can drive grid frequency beyond safe limits while evading RAS. A feedback-based attack policy is used to manipulate AGC signals and steer system frequency toward unsafe trajectories. Then, a large nested-loop parametric sweep---spanning attacked-area inertia relative to its interconnected neighboring area, AGC capacity versus maximum tie-line transfer, AGC update rate, load damping, and bi-directional power transfers---generates over 1.45 million scenarios. These are classified using a decision tree to establish guidelines to distinguish successful from unsuccessful attacks based on frequency deviations. The resulting vulnerability guidelines are validated on a three-area system using phasor-domain simulations with IEEE 9-bus area models, detailed turbine--governor dynamics, and under/over-frequency load and generation shedding. Results show that specific combinations of AGC capacity, inertia distribution, and pre-attack tie-line loading increase the likelihood of successful attacks, offering operators actionable criteria for identifying vulnerable operating conditions.",
+      "url": "https://arxiv.org/abs/2610.42047v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.42047v1",
+      "published": "2026-10-30T17:14:56Z",
+      "updated": "2026-10-30T17:14:56Z",
       "categories": [
-        "eess.SY",
-        "nlin.CD"
+        "eess.SY"
       ],
       "primary_category": "eess.SY"
     },
     {
-      "id": "2610.40565v1",
-      "title": "Gym-Anything for Robotics: Scaling physical simulations with digital agents",
+      "id": "2610.42043v1",
+      "title": "Proof-Carrying Evolution: Black-Box Search, White-Box Flight",
       "authors": [
-        "Pranjal Aggarwal",
-        "Sean Welleck"
+        "Amit Jain",
+        "Sergio Sanchez-Hurtado",
+        "Victor Rodriguez-Fernandez",
+        "Richard Linares"
       ],
-      "abstract": "Realistic, fast robotics simulations could enable large-scale training of embodied AI models that transfer to the real world. However, despite decades of progress, available simulations cover only a narrow range of real-world tasks and physical phenomena. The core bottleneck is that creating better simulations requires significant expert effort and therefore does not scale. To address this, we introduce Gym-Anything for Robotics, a framework in which coding agents create realistic robotics simulations. Our core insight is that simulation creation is a coding agent task, so improvements in coding agents translate directly into richer and more faithful simulations. We select simulations based on U.S. GDP data to cover economically valuable physical work, define what makes a good simulation and a good task, and develop an adversarial creation-audit loop that checks each simulation and task against these definitions. Using this pipeline, we build RoboWorld, a set of 25 simulations with 25 test and 175 training RL environments of varying difficulty. Even the best frontier models fail on every RoboWorld test task, achieving an average reward of only 0.06. Building on RoboWorld, we introduce several new ways for frontier models to improve, including in-context learning across repeated attempts, a privileged teacher that reads the simulator state and teaches a student in context, self-assisted learning from the model's own privileged experience, and code policies that generate demonstrations across varied scenes to train vision-language-action models (VLAs) such as $\u03c0_{0.5}$. Each of these substantially improves performance. We release our pipeline, RL environments, and benchmark to facilitate future research. Code and data are available at https://gym-anything.github.io/robotics",
-      "url": "https://arxiv.org/abs/2610.40565v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.40565v1",
-      "published": "2026-10-29T17:42:32Z",
-      "updated": "2026-10-29T17:42:32Z",
+      "abstract": "We study whether a language model can help design controllers whose behavior can be formally checked. In proof-carrying evolution (PCE), a search proposes controllers together with their certificates. Their mathematical forms are fixed; a proposer chooses their numerical parameters together. Certificate checks guide selection, and only a certified candidate can be returned. The deployed artifact is a control law and its certificate; the language model is used only during design. We compare four language models with classical search and synthesis on docking under a speed limit, pursuit of a maneuvering target, and attitude control on SO(3), using paired runs and shared proposal allowances. Certificates are checked in exact rational arithmetic during search on the linear problems. On SO(3), the search uses floating-point checks, followed by exact re-verification of every reported champion. The best run of each method also receives Lean 4 proofs of its stated control properties. On the linear problems, the strongest models beat the standard classical baselines on every run, but a classical optimizer that chooses certificates for the same objective closes most of that lead. Among the cited pursuit champions, the ranking does not survive a change from Euler to zero-order-hold dynamics. On SO(3), no model detectably outperforms CMA-ES when mixed with classical mutation. When models write every proposal, one tested model improves on CMA-ES and the other performs worse than its mixed variant. All search medians remain below the hand-tuned law. In a docking control with the objective and mutation operator held fixed, retaining certified candidates yields new certified designs in every run; removing this rule yields none.",
+      "url": "https://arxiv.org/abs/2610.42043v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.42043v1",
+      "published": "2026-10-30T17:06:12Z",
+      "updated": "2026-10-30T17:06:12Z",
       "categories": [
         "cs.RO",
-        "cs.AI",
+        "cs.NE",
+        "eess.SY"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2610.42027v1",
+      "title": "A Neural Network Approach towards Real-Time Knot Point Density Estimates for the Nonlinear Quadrotor",
+      "authors": [
+        "Jasmine Ratchford",
+        "Raffaele Romagnoli",
+        "Mark H. Klein"
+      ],
+      "abstract": "Spline representations provide a compact way to approximate continuous trajectories using a finite number of parameters. When approximating trajectories generated by dynamical systems, the efficiency of a spline representation depends strongly on the placement of knot points. Uniform knot distributions often lead to inefficient representations, requiring either unnecessary control points or producing poor approximations in regions where the trajectory varies rapidly. In this work we propose a learning-based method for adaptive knot placement in B-spline approximations of trajectories generated by ordinary differential equations. A neural network learns a mapping from the initial condition of the system to quantities that characterize the local variation of the resulting trajectory. These estimates are used to construct nonuniform knot distributions that approximately equidistribute a local error indicator, reducing the number of control points needed to meet a prescribed accuracy.",
+      "url": "https://arxiv.org/abs/2610.42027v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.42027v1",
+      "published": "2026-10-30T16:55:38Z",
+      "updated": "2026-10-30T16:55:38Z",
+      "categories": [
+        "eess.SY",
         "cs.LG"
       ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2610.40559v1",
-      "title": "A Tutorial on Shape Servoing of Deformable Objects-Part I: Fundamentals",
-      "authors": [
-        "Ignacio Cuiral-Zueco",
-        "Alessio Caporali",
-        "Miguel Aranda",
-        "Gianluca Palli",
-        "Gonzalo L\u00f3pez-Nicol\u00e1s",
-        "Youcef Mezouar"
-      ],
-      "abstract": "In robotics, shape control (or shape servoing) refers to the automatic manipulation of a deformable object to achieve a desired shape. It involves a feedback loop that exploits the relation between robot motion and changes in the measured shape. This relation, known as the interaction Jacobian or, in this context, the deformation Jacobian, depends on the object's mechanical properties, geometry, and boundary conditions (e.g., where the object is grasped). Because these factors are often difficult to model accurately, the deformation Jacobian can be estimated locally from observed shape changes produced by commanded robot motions, without requiring a fine-tuned mechanical model. This article is the first of a two-part tutorial on data-driven Jacobian-based shape control of deformable objects. It introduces the central elements of the approach: the formulation of the shape-control problem, shape representation, estimation and online update of the deformation Jacobian, and a standard control law from the literature. It then assembles these elements into a complete shape-servoing loop, derives a local stability condition for this loop, and illustrates why some target shapes cannot be reached. Part II covers more advanced topics. Throughout both parts, a simulated planar example in which two robot arms manipulate an elastic rod observed by a camera illustrates the concepts.",
-      "url": "https://arxiv.org/abs/2610.40559v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.40559v1",
-      "published": "2026-10-29T17:40:56Z",
-      "updated": "2026-10-29T17:40:56Z",
-      "categories": [
-        "cs.RO",
-        "eess.SY"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2610.40542v1",
-      "title": "A Behavioral approach to Constrained Linear Quadratic Control: Feasibility and Optimality",
-      "authors": [
-        "Soutrik Bandyopadhyay",
-        "Debasattam Pal",
-        "Shubhendu Bhasin"
-      ],
-      "abstract": "This paper develops a constrained linear-quadratic (LQ) optimal control framework within the behavioral approach. Unlike classical formulations that rely on state-input representations, our method treats both the system dynamics and the constraints as trajectory-level objects. The system is modeled through a kernel representation, while inequality constraints are captured using behavioral inequalities defined over infinite-dimensional convex cones. Using quadratic differential forms (QDFs) to encode performance indices, we formulate the constrained LQ problem as a convex variational optimization over trajectories. By employing Gateaux differentials, we derive the stationarity and complementarity conditions and show that they admit a representation as an augmented behavioral system whose unique decomposition into autonomous and controllable sub-behaviors yields a complete parameterization of all optimal constrained trajectories. The resulting conditions constitute a behavioral analogue of the Karush-Kuhn-Tucker (KKT) framework. A numerical example illustrates the effect of inequality constraints on the optimal behavior. The framework provides a general, trajectory-level representation for constrained optimal control and opens avenues for closed-loop and data-driven extensions.",
-      "url": "https://arxiv.org/abs/2610.40542v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.40542v1",
-      "published": "2026-10-29T17:36:13Z",
-      "updated": "2026-10-29T17:36:13Z",
-      "categories": [
-        "math.OC",
-        "eess.SY"
-      ],
-      "primary_category": "math.OC"
-    },
-    {
-      "id": "2610.40539v1",
-      "title": "PhysVLMM: Interaction-Conditioned Physical Belief Maps for Articulated Objects in Robot Scene Maps",
-      "authors": [
-        "Dibyendu Ghosh"
-      ],
-      "abstract": "Mobile robots must open doors and drawers, yet their scene maps record what each object is and whether it has moved, not how it will respond to a pull. This paper proposes PhysVLMM, a method that maintains a physical belief for every articulated part of a Vision-Language-Motion Map and answers a planner's queries about it, with two algorithms: a map update and a query. Watching a part move provably cannot identify its dynamics, and a measured pull identifies only the pulled part, up to one direction. PhysVLMM therefore (i) keeps that direction as a posterior instead of a point estimate, (ii) passes the evidence of each pull in closed form to the untouched look-alike parts of the map, and (iii) answers whether an action will succeed at a stated risk, or abstains. On real doors and drawers in 18 homes, it identifies the joint type in 86% of held-out pulls (48% for a learned single-view method) and predicts the response to a pull with 41% lower error than differentiable simulation (CRPS 0.323 vs. 0.544), four orders of magnitude faster (13 ms vs. 230 s per case). The posterior lowers the final-position error from 0.460 to 0.270, sharing lowers the force error of untouched parts from 56% to 42%, and at every stated risk from 0.02 to 0.30 the false-safe answers stay within it. Pooling all measured parts of a home does as well as the look-alike groups, and simpler variants predict where a pulled part stops at least as well.",
-      "url": "https://arxiv.org/abs/2610.40539v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.40539v1",
-      "published": "2026-10-29T17:35:40Z",
-      "updated": "2026-10-29T17:35:40Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2610.40537v1",
-      "title": "DAWN: Diffusion-based Alignment and unfastening Workflow Network",
-      "authors": [
-        "Hemant Kumar",
-        "Piyush Goenka",
-        "Nikhil Chopra"
-      ],
-      "abstract": "We present DAWN (Diffusion-based Alignment and unfastening Workflow Network), a hierarchical robotic framework designed to perform real-world, unfastening tasks through multi-modal sensory integration. Autonomous robotic unfastening is crucial for improving recycling processes, enhancing safety, and reducing operational costs; yet, it remains predominantly manual due to inherent challenges in precise screwdriver engagement with fasteners, detailed force execution, and robustness to environmental variability. To address the complexity of learning long-horizon, contact-rich manipulation tasks, we subdivide the unfastening task procedure into two sequential stages: (1) alignment & insertion, and (2) unfastening. DAWN consists of three key components: AlignNet, a diffusion-based policy ensuring precise screwdriver tip engagement; LatchNet, a multi-modal classifier reliably detecting successful stage transitions; and UnfastNet, which achieves stable, force-controlled screw removal. Experimental validation on a Franka Emika robot demonstrates that DAWN achieves alignment & insertion success rates comparable to trained human operators, robustly transitions between stages, and attains an impressive success rate in unfastening across various unseen scenarios. Ablation studies further elucidate critical input modalities and effective training strategies, highlighting DAWN's scalability, robustness, and data efficiency.",
-      "url": "https://arxiv.org/abs/2610.40537v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.40537v1",
-      "published": "2026-10-29T17:35:16Z",
-      "updated": "2026-10-29T17:35:16Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
+      "primary_category": "eess.SY"
     }
   ]
 }
