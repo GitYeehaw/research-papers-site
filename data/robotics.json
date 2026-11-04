@@ -2,229 +2,230 @@
   "category": "robotics",
   "name": "Robotics Research",
   "description": "Robotics \u2014 Motion Planning, Control Systems, Human-Robot Interaction, Autonomous Systems",
-  "scraped_at": "2026-11-03T16:04:18.942423+00:00",
+  "scraped_at": "2026-11-04T16:08:20.480159+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2611.03647v1",
-      "title": "Pixel-UMI: Learning Environment-Aware Whole-Body Manipulation from Sensorized Human Demonstrations",
+      "id": "2611.05377v1",
+      "title": "DreamX: Video Diffusion Model is a Universal Latent Action Learner",
       "authors": [
-        "Jason Jingzhou Liu",
-        "Tony Tao",
-        "Deepak Pathak",
-        "Ruslan Salakhutdinov"
+        "Jisoo Kim",
+        "Chaehyun Kim",
+        "Junsu Kim",
+        "Jiho Park",
+        "Seongchan Kim",
+        "Eunbeen Hong",
+        "Soowon Son",
+        "Fu-En Yang",
+        "Seungryong Kim"
       ],
-      "abstract": "Sensorized human demonstrations offer scalable data for mobile manipulation, but embodiment differences complicate policy learning. We present Pixel-UMI, a pipeline for learning environment-aware whole-body policies from human data. We first introduce Environment-Aware Retargeting (EAR), which combines reconstructed scene geometry with demonstrated head and gripper trajectories to determine robot posture and generate collision-aware joint and base targets. Delay-calibrated action assignment converts these trajectories into actions. However, kinematic differences can leave residual pose errors, creating viewpoint mismatches between human demonstrations and robot observations. We therefore introduce Retargeting-Error-Aware Masking (REAM), which uses these errors during training to reduce reliance on mismatched views at deployment. Finally, because estimated actions cannot fully capture contact-rich interactions, we collect on-policy human corrections through DAgger to improve performance. We evaluate Pixel-UMI on five challenging tasks spanning articulated-object manipulation, deformable-object handling, constrained-space reaching, whole-body collision avoidance, and contact-rich bimanual coordination, achieving 87.0% average task progress. Video results are available at https://pixel-robot.com/pixel-umi",
-      "url": "https://arxiv.org/abs/2611.03647v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.03647v1",
-      "published": "2026-11-02T18:59:32Z",
-      "updated": "2026-11-02T18:59:32Z",
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.CV",
-        "cs.LG",
-        "eess.SY"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2611.03648v1",
-      "title": "Pixel: A Co-Designed Full-Stack Robot System for Learning General-Purpose Mobile Manipulation",
-      "authors": [
-        "Tony Tao",
-        "Jason Jingzhou Liu",
-        "Ruslan Salakhutdinov",
-        "Deepak Pathak"
-      ],
-      "abstract": "General-purpose mobile manipulation requires a combination of capable robot hardware, scalable demonstration collection, expressive whole-body control, and effective policy learning. Yet these components are often developed independently, creating mismatches that limit the capabilities of the complete system. We present Pixel, a co-designed full-stack system for learning general-purpose mobile manipulation. Pixel combines a low-cost wheeled humanoid with human-aligned kinematics and compliant grippers, multiple teleoperation and robot-free human data-collection interfaces, a unified whole-body controller, and a common policy learning pipeline across human and robot demonstrations. A hierarchical learning stack further enables language-conditioned visuomotor control and long-horizon task execution. We evaluate the system across hardware, data collection, and policy learning, and demonstrate mobile-manipulation behaviors requiring dexterity, active perception, navigation, and whole-body coordination. We hope that Pixel provides an integrated and extensible foundation for studying how robot hardware, data, control, and learning can be designed together for robot learning. More results at https://pixel-robot.com/pixel",
-      "url": "https://arxiv.org/abs/2611.03648v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.03648v1",
-      "published": "2026-11-02T18:59:32Z",
-      "updated": "2026-11-02T18:59:32Z",
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.CV",
-        "cs.LG",
-        "eess.SY"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2611.03622v1",
-      "title": "D&A: Decoupling Description and Assessment Enables VLMs as Zero-Shot Robotic Reward Models",
-      "authors": [
-        "Marius Memmel",
-        "Shawn Yin",
-        "Urvi Rutia",
-        "Angad Wadhwa",
-        "Eldon Li",
-        "Gavin Angeloff",
-        "Ankit Goyal",
-        "Jesse Zhang",
-        "Dieter Fox",
-        "Fabio Ramos",
-        "Anqi Li",
-        "Abhishek Gupta"
-      ],
-      "abstract": "Vision-Language Models (VLMs) hold promise for zero-shot video task-progress estimation in robot learning, yet existing frameworks frequently suffer from confirmation bias, hallucinating progress in failed executions due to implicit success assumptions or relative temporal ranking designs. Naive prompting of frontier models collapses into a binary success detector that fails to capture nuanced, non-linear progress and failures. While post-training approaches can mitigate this through explicit training, they demand expensive real-world robotics data and require computationally intensive post-training for every individual base model. To resolve these limitations, we introduce D&A (Describe & Assess): our approach decouples progress estimation into an objective, task-grounded textual description of scene dynamics followed by an assessment phase using explicit rubrics. By compelling the VLM to synthesize an explicit, text-based definition of absolute success before scoring, the framework anchors evaluations to an external, global criterion rather than the video's internal timeline. Empirical results demonstrate that our method calibrates zero-shot estimates and mitigates confirmation bias, providing fine-grained, partial progress metrics that accurately penalize failed executions while correctly interpolating successful runs. Being purely prompt-based, D&A generalizes across tasks, embodiments, and benchmarks---matching or surpassing post-trained reward models---and its reward estimates enable efficient downstream reinforcement learning.",
-      "url": "https://arxiv.org/abs/2611.03622v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.03622v1",
-      "published": "2026-11-02T18:52:11Z",
-      "updated": "2026-11-02T18:52:11Z",
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.CL",
-        "cs.LG",
-        "eess.SY"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2611.03588v1",
-      "title": "3D-BBDA: Backpropagation-Free Black-Box Domain Adaptation for Robust 3D Point Cloud Recognition",
-      "authors": [
-        "Shivangi Rai",
-        "Kunal Jangid",
-        "Vaibhav Kumar",
-        "Vinod K Kurmi"
-      ],
-      "abstract": "Robust 3D point-cloud recognition is critical for robotics, mapping, and urban sensing, yet point-cloud classifiers often suffer performance drops under domain shifts caused by sensor changes, environmental variation, and acquisition artifacts. Many existing adaptation methods are difficult to deploy in practice because they require access to source data or the internal parameters of the source model, which may be restricted by privacy, licensing, or security constraints. We present 3D-BBDA, a backpropagation-free black-box domain adaptation framework that adapts a source-trained predictor to unlabeled target data using only black-box outputs. Our method performs pseudo-label guided prototype-based alignment and employs a weighted prediction module to fuse source logits with alignment logits, reducing sensitivity to noisy pseudo-labels. To stabilize prototype memory when pseudo-label coverage is incomplete, we construct a Gaussian-perturbed prototype prior from unlabeled target predictions and use it as a fallback for missing or unreliable class prototypes during alignment. Experiments on four corrupted 3D benchmarks demonstrate consistent improvements over strong baselines. On ModelNet-40C, 3D-BBDA achieves mean errors of 32.08% (PointNet) and 29.62% (GDANet), outperforming Source-only (35.88% / 34.03%) and BFTT3D (33.78% / 32.36%). 3D-BBDA requires only a single forward pass with no gradient updates making it suitable for real-time, privacy-preserving deployment in transferable 3D recognition pipelines. Project page is available at https://visdomlab.github.io/3D_BBDA",
-      "url": "https://arxiv.org/abs/2611.03588v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.03588v1",
-      "published": "2026-11-02T18:33:10Z",
-      "updated": "2026-11-02T18:33:10Z",
+      "abstract": "Learning a universal action representation from video requires modeling dynamics that are consistent across different executions of the same action yet invariant to changes in embodiment and appearance. Existing latent action models infer actions from visual transitions, but their representations often entangle the underlying action with irrelevant visual variations, limiting transfer across embodiments. We introduce DreamX, which repurposes a pretrained video diffusion model as a universal latent action learner. Our approach extracts compact latent actions from the video model's rich spatiotemporal features, compressing each latent video frame by $\\boldsymbol{300\\times}$ ($\\boldsymbol{1{,}200 \\rightarrow 4}$ tokens). In addition, by leveraging the video model's generative prior, these latent actions capture action-relevant dynamics disentangled from visual appearance. The resulting latent space serves as a shared action interface across embodiments (human and robot), environments, and action parameterizations. On LARY-Bench, DreamX achieves state-of-the-art performance among latent action models. Moreover, actions encoded in one setting remain effective in another: the latent space supports any-to-any video transfer and zero-shot action transfer across diverse embodiments and environments. Furthermore, this shared interface also enables policy learning in a compact latent action space, reducing the computational cost of video-diffusion-based policies.",
+      "url": "https://arxiv.org/abs/2611.05377v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.05377v1",
+      "published": "2026-11-03T18:59:56Z",
+      "updated": "2026-11-03T18:59:56Z",
       "categories": [
         "cs.CV",
-        "cs.CE",
+        "cs.AI",
         "cs.RO"
       ],
       "primary_category": "cs.CV"
     },
     {
-      "id": "2611.03584v1",
-      "title": "TAMPAgent: Agentic Belief-Space Planning for Mobile Manipulation",
+      "id": "2611.05372v1",
+      "title": "PolicyIK: High-Precision Inverse Kinematics for Robot Arms with Reinforcement Learning",
       "authors": [
-        "Utkarsh A. Mishra",
-        "Alperen Degirmenci",
-        "Yongxin Chen",
-        "Danfei Xu",
-        "Tucker Hermans",
-        "Caelan Garrett"
+        "Yuhan Liu",
+        "Xinqi Liu",
+        "Zixuan Dong",
+        "Keith W. Ross",
+        "Shenji Wan"
       ],
-      "abstract": "Open-world robotic mobile manipulation requires acting in physical environments with only partial information. While recent Large Vision-Language Model (LVLM) agents show strong open-world reasoning capabilities, existing architectures that rely on direct tool calling struggle with geometric uncertainty and thus are limited to fully-observable tabletop environments. In contrast, Task and Motion Planning (TAMP) systems can solve long-horizon tasks under partial observability but incur high computational costs and require closed worlds. We propose \\textbf{TAMPAgent}, an agentic planning framework that unifies the reasoning of LVLMs with the structured constraint satisfaction of TAMP systems. We endow an LVLM agent with a belief-space planning model operating over an extensible API of perception, planning, and control tools. The agent formulates a partial task plan composed of parameterized observation and execution actions, which is subsequently completed using classical search algorithms. After extracting the plan's geometric constraints, the agent leverages its tool API to bind valid parameter values, satisfying feasibility requirements and producing an executable motion plan. Upon execution, the agent continuously updates its belief history and repeats this closed-loop process by interleaving observation and manipulation actions. Evaluated across complex household mobile manipulation tasks on Rainbow Y1 and Unitree G1 platforms, TAMPAgent significantly outperforms direct tool-calling agentic baselines, demonstrating that integrating TAMP constraint satisfaction into agentic planning loops is essential for unstructured, partially observable environments.",
-      "url": "https://arxiv.org/abs/2611.03584v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.03584v1",
-      "published": "2026-11-02T18:32:18Z",
-      "updated": "2026-11-02T18:32:18Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2611.03585v1",
-      "title": "Seeing Through the Illusion: Test-Time Scaling for World Action Models",
-      "authors": [
-        "Cheikh Ahmed",
-        "Mahdi Mostajabdaveh",
-        "Milad Yazdani",
-        "Zirui Zhou"
-      ],
-      "abstract": "World action models (WAMs) jointly generate actions and imagined futures, but a plausible prediction need not be realized by its co-generated action. We introduce WISE (\\emph{World Action Inference Scaling through Evaluation}), a pre-execution selector that scores each sampled rollout on action validity and temporal regularity, inverse-dynamics consistency between the proposed action and the imagined motion, and instruction-conditioned task progress, and executes the highest-scoring candidate while keeping the WAM frozen. With four candidates per decision, WISE raises closed-loop success from 6.0\\% to 24.0\\% on RoboLab with Cosmos~3 Edge and from 75.1\\% to 78.3\\% mean success on LIBERO with DreamZero, and exceeds the best existing selector in aggregate by 4.0 and 0.9 points. Component ablations and agreement analyses show that the three scores rank candidates differently and that task progress carries the largest weight in the fused decision.",
-      "url": "https://arxiv.org/abs/2611.03585v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.03585v1",
-      "published": "2026-11-02T18:32:18Z",
-      "updated": "2026-11-02T18:32:18Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2611.03573v1",
-      "title": "Dynamical Unbalanced Optimal Transport: Duality, Reachability, and Computation",
-      "authors": [
-        "Dongjun Wu",
-        "Anders Rantzer"
-      ],
-      "abstract": "We study dynamical unbalanced optimal transport for nonlinear control-affine systems in which the control input affects both the transportation of mass and its growth or decay. This phenomenon arises naturally in controlled transport-reaction systems such as cancer treatment, and distinguishes the problem from standard unbalanced optimal transport, where transport and mass variation are typically independent. To address this problem, we combine classical relaxed-control theory with a weighted superposition principle to obtain an infinite-dimensional linear programming reformulation over weighted trajectories. Under suitable convexity and compactness assumptions, we show that this relaxation is tight. Based on the relaxation, we derive a Kantorovich dual formulation in terms of Hamilton-Jacobi-Bellman inequalities, and establish strong duality over smooth subsolutions. We then utilize the dual formulation to characterize reachability of the system, namely, when a given terminal measure is reachable from a given initial measure. In addition, tractable sufficient conditions for reachability are provided. Finally, we develop an augmented-Lagrangian algorithm based on the dual formulation for numerical computation of the optimal transport plan. The framework is illustrated on a phenotype-structured cancer treatment problem in which therapy simultaneously drives phenotypic adaptation and population growth or death.",
-      "url": "https://arxiv.org/abs/2611.03573v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.03573v1",
-      "published": "2026-11-02T18:26:44Z",
-      "updated": "2026-11-02T18:26:44Z",
-      "categories": [
-        "math.OC",
-        "eess.SY"
-      ],
-      "primary_category": "math.OC"
-    },
-    {
-      "id": "2611.03548v1",
-      "title": "Mediating Human-Swarm Interactions Through a Robot Helper: A Shepherding-Inspired Approach",
-      "authors": [
-        "Arihant Yadav",
-        "Sophie J\u00f6rg",
-        "Eakta Jain"
-      ],
-      "abstract": "This work investigates human-swarm interaction (HSI) for steering large collectives through an intermediary robot helper. While prior robot-swarm control and HSI techniques commonly assume swarm members are addressable, these assumptions often fail for ``ungovernable'' swarms such as wildlife flocks and schools of fish. Motivated by pastoral shepherding, we compare low-level teleoperation to a higher-autonomy motion-primitives interface in a virtual reality (VR) shepherding task under varied swarm cohesion dynamics. Results indicate that motion primitives that operate on collective shape (e.g., boundary-based control) improve task performance and reduce perceived workload.",
-      "url": "https://arxiv.org/abs/2611.03548v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.03548v1",
-      "published": "2026-11-02T18:10:01Z",
-      "updated": "2026-11-02T18:10:01Z",
+      "abstract": "Inverse kinematics (IK) converts end-effector pose commands into joint motion, and many vision-language-action (VLA) policies rely on it to act on a given arm and to transfer across embodiments. Precise IK remains laborious: redundancy and singularities complicate the inverse mapping, execution depends on hand-tuned controllers, and training data on physical robots are costly to collect. We present PolicyIK, a goal-conditioned reinforcement learning policy for high-precision IK. It updates joint-position references from pose feedback and observes its accumulated reference relative to the measured joints, so it can retain the offset that the position controller needs at rest. Two-scale pose errors with an error-dependent action gain resolve millimeter residuals while preserving large motions. Progress and dwell rewards teach it to both reach the tolerance and stay within it. In simulation, a single attempt by the trained PPO policy keeps the mean errors over the final second within 1 mm and 0.2\u00b0 on 93.5% of held-out tasks, and a deployment protocol raises success to 98.9%. When trained directly on a physical arm with an off-policy RL learner, PolicyIK achieves higher reaching and holding success than all four classical IK controllers under the same time budgets. In simulated pick-and-place, PolicyIK executes the end-effector commands of the $\u03c0_{0.5}$ VLA policy with 95.7% success. These results show that reinforcement learning can provide high-precision inverse kinematics for robot arms. Code is available at https://github.com/Tinaliu0123/PolicyIK.",
+      "url": "https://arxiv.org/abs/2611.05372v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.05372v1",
+      "published": "2026-11-03T18:59:14Z",
+      "updated": "2026-11-03T18:59:14Z",
       "categories": [
         "cs.RO",
-        "cs.HC"
+        "cs.LG"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2611.03540v1",
-      "title": "Reinforcement Twinning via Twin-Calibrated Bayesian Policy Search and Replay-Driven Identification",
+      "id": "2611.05371v1",
+      "title": "Iterative Methods for Solving Feedback-Type Linear Equations under Small Phase Condition",
       "authors": [
-        "Miguel A. Mendez",
-        "Lorenzo Schena",
-        "Romain Poletti",
-        "Yannick Lecomte",
-        "Sebastiano Randino",
-        "Jan van den Berghe"
+        "Zhou Xie",
+        "Wei Chen",
+        "Li Qiu"
       ],
-      "abstract": "The feasibility of updating and synchronising digital twins of actuated systems from operational data depends strongly on how the system is controlled and, consequently, on the data generated during operation. This establishes a direct link between control actuation and model identifiability. This work presents a reinforcement-twinning framework that exploits this link through three computational components. A Gaussian-process surrogate of the physical return combines the twin prediction, used as a calibrated trend, with a discrepancy learned from measured returns, allowing Bayesian policy search to exploit the twin without being tied to its predictions. Candidate policies are proposed around the policy that is optimal for the twin, while measured returns can expand this region. The resulting physical episodes are replayed on the twin after observer-based synchronisation with sparse measurements, and its parameters are identified by combining Bayesian optimisation with gradient-based refinement. Selected information-oriented episodes deploy an excitation policy to improve parameter identifiability. The framework is demonstrated on a Burgers-flow analogue of dynamic-induction control in wind farms, with a deliberately misspecified model structure. Despite substantially biased return predictions, the twin provides a useful starting policy and search region, placing the guided search ahead of unguided Bayesian optimisation from its first physical evaluations. This advantage is maintained when the search region is allowed to expand in response to changes in measured returns, whereas searches over-constrained by the twin-defined region are eventually overtaken by the unguided alternatives. The results support reinforcement twinning as a framework for jointly adapting models and control policies when physical interaction is limited and model discrepancy cannot be neglected.",
-      "url": "https://arxiv.org/abs/2611.03540v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.03540v1",
-      "published": "2026-11-02T18:03:48Z",
-      "updated": "2026-11-02T18:03:48Z",
+      "abstract": "This paper investigates iterative methods for solving feedback-type linear equations under small phase condition. We first develop an iterative solution scheme for linear equations with sectorial (semi-sectorial) matrices, i.e., matrices whose numerical ranges are contained in an open (closed) half complex plane. Exploiting the geometric properties of the numerical range, we introduce the notion of numerical-radius contraction as a convergence criterion. Such a scheme, with some extra effort, leads to an iterative method for the feedback-type equations under small phase condition, whose convergence condition is characterized in terms of phase information. This complements classical iterative methods for feedback-type equations based on the small gain condition. A case study on large-scale power networks is presented to illustrate the computational efficiency of the proposed method.",
+      "url": "https://arxiv.org/abs/2611.05371v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.05371v1",
+      "published": "2026-11-03T18:59:05Z",
+      "updated": "2026-11-03T18:59:05Z",
       "categories": [
         "eess.SY"
       ],
       "primary_category": "eess.SY"
     },
     {
-      "id": "2611.03520v1",
-      "title": "PanoTac: A Dense Three-Axis Tactile Sensor for Robust Touch-Centric Manipulation",
+      "id": "2611.05368v1",
+      "title": "GUILD: Guided Iterative Data Collection for Imitation Learning",
       "authors": [
-        "Binglin",
-        "Wang",
-        "Xiaole",
-        "Jiang",
-        "Zicheng Teng",
-        "Xinqi Liu",
-        "Yunzhu Li",
-        "Lerrel Pinto",
-        "Zichen Jeff Cui",
-        "Binghao Huang"
+        "Shivin Dass",
+        "Kevin Nguyen",
+        "Rohan Yelandur",
+        "Junhong Xu",
+        "Roberto Mart\u00edn-Mart\u00edn"
       ],
-      "abstract": "Contact-rich manipulation benefits from tactile feedback that captures both detailed contact geometry and interaction forces. When scooping grains, contact patterns help infer spoon orientation, while resistance transmitted through the grasp guides motion. To provide these complementary sensing capabilities, we present PanoTac, a low-cost, compliant tactile fingertip designed for dense three-axis tactile sensing. Each fingertip provides a $12 \\times 32 \\times 3$ tactile representation, with one normal ($z$) and two shear ($x$, $y$) response components at each taxel. The sensor operates at 60 Hz and costs less than $50 per fingertip. Sensor characterization quantifies response repeatability and consistency across sensor instances and contact locations. We integrate PanoTac into a robotic system with a visuo-tactile pipeline. Across test-tube preparation, grain scooping, and salt pouring, the resulting policies outperform vision-only baselines by an average of 46.7 percentage points. Ablations show that removing either spatial contact information or shear feedback reduces overall performance across the task suite. Our project page is available at https://panotac.github.io.",
-      "url": "https://arxiv.org/abs/2611.03520v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.03520v1",
-      "published": "2026-11-02T17:55:07Z",
-      "updated": "2026-11-02T17:55:07Z",
+      "abstract": "Imitation learning policies in robotics are trained on datasets collected through costly real-world teleoperation. Often, the data-collection process is unguided, relying on the teleoperator's intuition, resulting in data that contributes little to overall policy performance. Recent work has shown that curating such unguided datasets can substantially improve policy performance, but these approaches operate by filtering existing datasets after collection and therefore do not prevent the acquisition of uninformative data. In this work, we propose GUILD, a novel Guided Data Collection (GDC) method that actively reasons about which data should be collected to maximize downstream policy performance. We introduce an iterative framework that alternates between 1) task proposal and data collection and 2) data evaluation to close the loop. For task proposal, we leverage semantic priors from vision-language models to identify relevant environments, object configurations, and goals for data collection. However, since semantic relevance does not imply policy improvement, we perform data evaluation. By leveraging predictive data attribution we approximate how the collected trajectories influence policy performance on a target deployment setting. This signal is then used as feedback to guide subsequent data collection, closing the data collection loop. We evaluate our approach in simulation and real robot settings, demonstrating that guided data collection substantially improves sample efficiency and deployment performance compared to passive data collection strategies, multiple baselines and experienced roboticists. More information at https://robin-lab.cs.utexas.edu/guild2026/",
+      "url": "https://arxiv.org/abs/2611.05368v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.05368v1",
+      "published": "2026-11-03T18:57:35Z",
+      "updated": "2026-11-03T18:57:35Z",
       "categories": [
         "cs.RO",
-        "cs.AI",
         "cs.LG"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2611.05361v1",
+      "title": "Visibility-Aware Reference Generation for Benchmarking Visual 3D Reconstruction in Vegetation-Rich Environments",
+      "authors": [
+        "Zhipeng Zhong",
+        "Matthew Coombes",
+        "Cunjia Liu"
+      ],
+      "abstract": "Reliable evaluation of visual 3D reconstruction and depth estimation in vegetation-rich outdoor environments is limited by the scarcity of geometric ground-truth data and the cost of complete scanner surveys. We present a LiDARbased reference-generation pipeline for evaluating the zero-shot performance of feed-forward visual-geometry models alongside conventional structure-from-motion (SfM) methods. The pipeline reuses camera images, LiDAR scans, and reference poses from existing multi-sensor localization datasets to generate per-view depth maps and visible reference point clouds. To address visibility errors in accumulated LiDAR scans, we introduce the LargeDepth-Gap Visibility Score (LDGVS) for point-wise visibility filtering and automatic scale selection in Hidden Point Removal(HPR). Experiments on TartanAirV2 and TartanGround show that, compared with Poisson surface reconstruction, which is an approach suited to completed scan surveys, the combined HPR and LDGVS filtering retains approximately three times the point density at comparable absolute relative error. We also apply the pipeline to the BotanicGarden dataset to systematically compare depth estimation and 3D reconstruction methods. Feedforward methods produce dense depth predictions efficiently, but their 3D reconstructions can contain duplicated structures. Conventional SfM generally produces more coherent geometry, but its reconstructions remain sparse and more prone to failure in challenging vegetated scenes. The benchmark toolkit and datasets will be released.",
+      "url": "https://arxiv.org/abs/2611.05361v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.05361v1",
+      "published": "2026-11-03T18:54:52Z",
+      "updated": "2026-11-03T18:54:52Z",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2611.05320v1",
+      "title": "PyRUA-DataFarm: LLM Agent as a Cost-Efficient Teleoperator for Real-Ready Robot Data",
+      "authors": [
+        "Kewei Zhang",
+        "Juncheng Ma",
+        "Guodong Lv",
+        "Duomin Wang",
+        "Feixiang Ruan",
+        "Ruiyang Si",
+        "Chuanrui Zhang",
+        "Yuxuan Chen",
+        "Hao Chen",
+        "Yichen Liu",
+        "Yintianrun Zhang",
+        "Yufan Deng",
+        "Enze Xie",
+        "Daquan Zhou"
+      ],
+      "abstract": "Teleoperation remains the default way to collect robot demonstrations, but every episode costs robot and operator time, and every new task starts from scratch. We ask whether a coding agent can take over the teleoperator's job. In our DataFarm, the agent receives a data request and one calibration episode of the robot in the target scene and rebuilds the task in simulation: it writes the scene, an expert controller, and a success judge. The simulator supplies exact actions, and a video model conditioned on real images renders each rollout as photographic video, generating all camera views together consistently. The output is real-ready data: synchronized camera views labelled with the robot's actions, on which a policy can be trained directly and deployed on the real robot. Independent judges certify the expert and every rendered episode before admission. On five real-robot tasks, policies trained only on farm data match policies trained on as many teleoperated episodes (93 vs. 84 successes in 100 trials), and under an unseen tablecloth and coloured light they keep 87 successes where the teleoperation-trained policies fall to 46. Adapting a task is fully automatic and costs \\$21 of API usage on average, paid once per task, plus \\$5 for a render contract; every further episode costs \\$0.80 on average for simulation, rendering, and review, with no robot or operator. One hour of three-view data for a task costs \\$107 on average, these costs included, slightly below a quote of \\$117 for teleoperation in China and below \\$290 in labour alone in North America.",
+      "url": "https://arxiv.org/abs/2611.05320v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.05320v1",
+      "published": "2026-11-03T18:25:14Z",
+      "updated": "2026-11-03T18:25:14Z",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2611.05302v1",
+      "title": "PACT: Pose-Robust Actuation Co-Design for Tendon-Driven Robotic Hands",
+      "authors": [
+        "Prashant Kumar",
+        "Rachael Granberry",
+        "Taylor Niehues",
+        "Andrew A. Stanley",
+        "Gabe Pirie"
+      ],
+      "abstract": "Humanoid robotic hands must provide sufficient force, speed, and backdrivability within a human-scale envelope. Tendon-driven transmissions address this challenge by relocating actuators to the palm and forearm, but routing paths, moment arms, and capstan dimensions jointly determine both force capability and joint speed, so selecting them sequentially satisfies one requirement at the expense of the other. This paper presents a pose-robust actuation co-design for tendon-driven robot hands (PACT) framework that optimizes tendon routing, moment arms, and capstan dimensions under pose-dependent force requirements and drivetrain-bandwidth constraints. A feasible-force formulation enforces actuator bounds and equilibrium at all joints, while a max-min objective maximizes task-force coverage at the weakest pose. Applied to a four-degree-of-freedom finger, the framework produces an asymmetric N + 1 tendon topology using quasi-direct-drive actuators. Across eight poses, the design achieves task-force coverage of 0.88-1.00 and a predicted 5 Hz minimum isolated-joint flexion/extension bandwidth within a 70th-percentile human-size envelope. Prototype measurements deviate from predictions by up to 24.5%, primarily due to unmodeled transmission losses. These results indicate that co-designing routing with the drivetrain can meet pose-dependent force requirements without relaxing the bandwidth constraint, paving the way for human-sized robotic hands with human-level performance.",
+      "url": "https://arxiv.org/abs/2611.05302v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.05302v1",
+      "published": "2026-11-03T18:13:41Z",
+      "updated": "2026-11-03T18:13:41Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2611.05295v1",
+      "title": "GSBR: Geometric Support Behavior Regularization for Online RL",
+      "authors": [
+        "Charles Xu",
+        "Jacob Berg",
+        "Liyiming Ke",
+        "Sergey Levine"
+      ],
+      "abstract": "Regularizing online reinforcement learning (RL) toward a pretrained base policy can improve sample efficiency and learning stability, but regularization that is too restrictive limits how much the policy can improve. Base policies -- typically diffusion or flow-matching models trained by imitation learning on large, diverse datasets -- capture many behaviors that are reasonable but suboptimal. Existing regularizers using such base policies are too restrictive in one of two ways: behavioral cloning regularizers pull the actor toward the full base-policy distribution, penalizing it for discarding suboptimal modes, while hard support constraints forbid improvements that lie just outside the base policy's support. We propose Geometric Support Behavior Regularization (GSBR), which penalizes actions by their distance from the base policy's support. Actions within the support incur no penalty, so the actor can concentrate on high-value modes; outside the support, where value estimates are less reliable, the penalty grows smoothly with distance while still permitting improvement when the value gained outweighs the penalty. GSBR estimates this distance from a finite set of base-policy samples, so it requires only sample access to the base policy. Across 19 tasks on four robotic benchmarks, GSBR raises the average success rate from 33% for the base policy to 95%, achieving the highest average success rate and throughput among all compared methods, with about 23% higher normalized throughput than the next-best RL method. Project website and open-source code at https://charlesxu0124.github.io/gsbr/ .",
+      "url": "https://arxiv.org/abs/2611.05295v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.05295v1",
+      "published": "2026-11-03T18:08:32Z",
+      "updated": "2026-11-03T18:08:32Z",
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2611.05249v1",
+      "title": "Should the Action Expert Train the VLM? Action-Token Supervision and Gradient Routing in Mixture-of-Transformer VLAs",
+      "authors": [
+        "Asher James Hancock",
+        "Boyi Li",
+        "Yuxiao Chen",
+        "Shuhan Tan",
+        "Wenhao Ding",
+        "Thomas Tian",
+        "Yan Wang",
+        "Boris Ivanovic",
+        "Marco Pavone"
+      ],
+      "abstract": "Vision-language-action (VLA) models increasingly pair a pre-trained vision-language model (VLM) with a flow-matching expert that conditions its action predictions on the VLM's key-value representations. Those representations must carry information useful for control, yet the VLM was never trained for the action expert's flow-matching objective. Two signals can address this: gradients backpropagated from the expert's loss (coupling), or VLM supervision to predict discrete tokens encoding the same target actions. Prominent training recipes forgo the first, blocking expert-to-VLM gradients (insulation) to protect the VLM's existing capabilities, while also supervising it on vision-language data and action tokens. Because vision-language co-training also aims to preserve those capabilities, the additional protection provided by insulation is unclear. At the same time, insulation removes a direct signal about which features continuous action prediction requires. On the other hand, action-token supervision offers an alternative way to learn action-relevant representations, which may explain why insulation succeeds in practice. We disentangle these factors in autonomous driving and manipulation by independently varying action-token supervision and whether the expert's loss updates the VLM. In open-loop driving, insulation is competitive with coupling when action tokens are supervised; without them, coupling reduces trajectory-prediction error by roughly 25%. When both components are trained jointly from the outset, coupling increases closed-loop driving route progress by approximately 17% with action-token supervision and 40% without it, and similarly improves robot manipulation performance under both settings. These findings show that the value of gradient insulation depends on the VLM's action supervision and the evaluation setting, challenging insulation as a default VLA training recipe.",
+      "url": "https://arxiv.org/abs/2611.05249v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.05249v1",
+      "published": "2026-11-03T17:35:27Z",
+      "updated": "2026-11-03T17:35:27Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2611.05244v1",
+      "title": "Reality and Perceptual Gaps in Expressive Swarm Robotics",
+      "authors": [
+        "Ali Imran",
+        "Abdalwhab Bakheet Mohammed Abdalwhab",
+        "Rafael Gomes Braga",
+        "H\u00e9l\u00e8ne Duval",
+        "Audrey Rochette",
+        "Vivek Shankar Varadhajan",
+        "Yann Bouteiller",
+        "Jean Mazerolle",
+        "Giovanni Beltrame",
+        "David St-Onge"
+      ],
+      "abstract": "Moving robot swarms from simulation into the physical world can be difficult because small discrepancies in hardware, timing and communication can cascade across interacting robots and alter group behaviour. This challenge is known as the reality gap. When swarms operate in human environments, a second challenge emerges: a perceptual gap between what the swarm physically does and what human onlookers actually perceive. This study examines the same decentralised coordination code deployed across three robotic swarms-tabletop, aerial and human-scale mobile manipulators-during live artistic performances. We find that while the underlying algorithms executed reliably on all three platforms, physical embodiment drastically altered visible motion-distorting execution timescales by more than a factor of three and reshaping trajectory geometry. More importantly, audience surveys revealed that human interpretation does not mirror technical success: how observers attribute meaning (perceived purpose) and how they react emotionally (comfort versus threat) depend heavily on physical form. Meaning attribution and emotional responses did not vary together. Our results demonstrate that successfully transferring swarm software to physical hardware is insufficient for real-world deployment. Addressing the reality gap does not guarantee that the resulting collective motion will be readily interpreted by human observers. Swarms destined for human environments must be engineered not only for decentralised stability but also for the expressive physical dynamics through which humans interpret collective motion.",
+      "url": "https://arxiv.org/abs/2611.05244v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.05244v1",
+      "published": "2026-11-03T17:26:56Z",
+      "updated": "2026-11-03T17:26:56Z",
+      "categories": [
+        "cs.RO"
       ],
       "primary_category": "cs.RO"
     }

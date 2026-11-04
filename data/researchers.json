@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-11-03T16:09:19.714676+00:00",
+  "scraped_at": "2026-11-04T16:13:12.908824+00:00",
   "researcher_count": 54,
   "researchers": [
     {
@@ -1071,7 +1071,7 @@
       "paper_count": 5,
       "papers": [
         {
-          "id": "2610.34534v1",
+          "id": "2610.34534v2",
           "title": "Multimodal Socially Aware Framework for Human-Robot Interaction in Virtual Reality",
           "authors": [
             "Richard Xu",
@@ -1080,10 +1080,10 @@
             "Wenzhen Yuan"
           ],
           "abstract": "Social robots must coordinate speech and movement while interpreting multimodal human input. We present a multimodal framework that integrates speech, vision, and touch to generate contextually appropriate robot speech and movement. We evaluated the framework in virtual reality with 18 participants across five social interaction scenarios, comparing its performance against a human-teleoperated baseline. Although participants rated the autonomous system above the neutral midpoint for both naturalness and social appropriateness, the teleoperated baseline received significantly higher ratings on both measures. Behavioral coding and qualitative feedback revealed that conversational timing, clarification of ambiguous requests, and spatial coordination were important factors contributing to this performance gap. These findings highlight key challenges in developing autonomous robots capable of natural, multimodal social interaction.",
-          "url": "https://arxiv.org/abs/2610.34534v1",
-          "pdf_url": "https://arxiv.org/pdf/2610.34534v1",
+          "url": "https://arxiv.org/abs/2610.34534v2",
+          "pdf_url": "https://arxiv.org/pdf/2610.34534v2",
           "published": "2026-10-25T19:49:11Z",
-          "updated": "2026-10-25T19:49:11Z",
+          "updated": "2026-11-03T13:15:38Z",
           "categories": [
             "cs.RO"
           ],
@@ -1363,7 +1363,27 @@
       "paper_count": 5,
       "papers": [
         {
-          "id": "2611.03498v1",
+          "id": "2611.05129v1",
+          "title": "WayTrace: A Map-to-Language-to-Trace Hierarchy for Embodied Urban Navigation",
+          "authors": [
+            "Manthan Patel",
+            "Jonas Frey",
+            "Pascal Roth",
+            "Marco Hutter",
+            "Cesar Cadena"
+          ],
+          "abstract": "Web services provide walking directions for nearly every city, but following them reliably over long routes remains challenging for autonomous robots. Point-goal navigation policies rely heavily on accurate GNSS, while most vision-language navigation models struggle to execute even short instructions outdoors. We present WayTrace, a hierarchical system that connects web-map directions to robot motion through language. An off-the-shelf orchestrator vision-language model reads the turn-by-turn directions, a satellite map and recent camera images, and issues one atomic language command at a time, such as \"cross the road to the left\". An onboard trace predictor, trained on over one million automatically labelled samples from street-level images, draws the path for this command in the image, and a reinforcement learning policy tracks it. In long-range simulated missions, WayTrace remains robust to GNSS noise and rarely leaves crosswalks or sidewalks, while point-goal baselines degrade sharply with about ten times more violations. Deployed on a wheeled-legged robot, WayTrace completes real-world missions of up to 1.37 km at about 1.1 m/s through a busy city centre, rural trails and a university campus, handling crosswalks, staircases and construction sites. Project page: https://way-trace.github.io",
+          "url": "https://arxiv.org/abs/2611.05129v1",
+          "pdf_url": "https://arxiv.org/pdf/2611.05129v1",
+          "published": "2026-11-03T16:13:42Z",
+          "updated": "2026-11-03T16:13:42Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2611.03498v2",
           "title": "SNAP: Semantic Navigation Among Pedestrians",
           "authors": [
             "Jakob Wolfram",
@@ -1373,10 +1393,10 @@
             "Marco Hutter"
           ],
           "abstract": "Navigating crowded urban environments requires robots to avoid pedestrians while adhering to social norms such as remaining on sidewalks. Existing approaches typically address either crowd avoidance or semantic path planning in isolation. We propose a reinforcement learning (RL) navigation policy that jointly reasons about semantic terrain and dynamic obstacles from a single semantically annotated bird's-eye-view (BEV) map, without relying on explicit human-state estimation. Our policy outperforms established crowd-navigation and semantic-aware baselines and transfers zero-shot to a legged robot, demonstrating socially compliant navigation in highly dynamic real-world scenarios.",
-          "url": "https://arxiv.org/abs/2611.03498v1",
-          "pdf_url": "https://arxiv.org/pdf/2611.03498v1",
+          "url": "https://arxiv.org/abs/2611.03498v2",
+          "pdf_url": "https://arxiv.org/pdf/2611.03498v2",
           "published": "2026-11-02T17:37:50Z",
-          "updated": "2026-11-02T17:37:50Z",
+          "updated": "2026-11-03T16:04:56Z",
           "categories": [
             "cs.RO"
           ],
@@ -1438,28 +1458,6 @@
           "pdf_url": "https://arxiv.org/pdf/2610.41456v1",
           "published": "2026-10-30T09:01:50Z",
           "updated": "2026-10-30T09:01:50Z",
-          "categories": [
-            "cs.RO"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2610.37602v1",
-          "title": "RESPLE2: Inertial-Informed Recursive Non-Uniform Spline Estimation for Multi-Sensor Odometry with Global Refinement",
-          "authors": [
-            "Ziyu Cao",
-            "William Talbot",
-            "Song Li",
-            "Pakpong Chirarattananon",
-            "Fredrik Gustafsson",
-            "Marco Hutter",
-            "Kailai Li"
-          ],
-          "abstract": "We present RESPLE2, a recursive multi-sensor state estimation framework using non-uniform B-splines for 6-DoF motion representation. By exploiting the knot-clamping boundary property, we propose a theoretically grounded mechanism for exact control-point prediction directly informed by inertial kinematics along the trajectory, with knot placement adapted to motion and measurement availability. Within an iterated extended Kalman filter, we perform this prediction using a subset of inertial measurements. A subsequent reset step preserves trajectory consistency as the knots extend. The update step further incorporates heterogeneous sensor measurements at their native timestamps through continuous-time observation models, supporting flexible combinations of LiDARs, cameras, inertial measurement units, and leg kinematics. We further develop a lightweight global optimization module that directly refines non-uniform B-spline control points by incorporating loop-closure constraints derived from LiDAR-visual cues. We conduct extensive evaluations on public and experimental datasets across handheld, tracked, legged, and hybrid aerial-legged platforms, covering highly dynamic maneuvers with extreme accelerations. Compared with state-of-the-art multi-sensor odometry systems, RESPLE2 achieves competitive or superior estimation accuracy and robustness in the corresponding sensor configurations, particularly under aggressive motion, while maintaining real-time operation. We publicly release our code and experimental datasets at https://github.com/ASIG-X/RESPLE2.",
-          "url": "https://arxiv.org/abs/2610.37602v1",
-          "pdf_url": "https://arxiv.org/pdf/2610.37602v1",
-          "published": "2026-10-27T17:33:19Z",
-          "updated": "2026-10-27T17:33:19Z",
           "categories": [
             "cs.RO"
           ],
@@ -2182,6 +2180,29 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2611.04083v1",
+          "title": "MABEL: An Open Anthropomorphic Mobile Bimanual Platform for Teleoperation and Learning",
+          "authors": [
+            "Qilong Cheng",
+            "Rooholla Khorrambakht",
+            "Mohamed Yassine Kabouri",
+            "Quang Nam Nguyen",
+            "Luca Macesanu",
+            "Haoran Zhou",
+            "Yipeng Wang",
+            "Ludovic Righetti"
+          ],
+          "abstract": "As robot learning moves beyond the tabletop, many tasks require mobility, adjustable reach, active perception, and bimanual dexterity. Commercial platforms combining these capabilities are costly, while affordable open-source alternatives cover only a subset and require software integration. We present MABEL, an open-source anthropomorphic mobile bimanual robot with 56 degrees of freedom (DOF) and a US$8.1k parts cost. It combines two 7-DOF arms with 17-DOF hands, a pitching torso, a lift, a 3-DOF neck, and a holonomic base. Back-drivable arms and torso support compliant interaction, with fingertip reach from floor level to 2.23 m. The head and torso roughly triple modeled camera coverage relative to a torso-fixed camera. Apple Vision Pro head and hand tracking enables whole-body teleoperation without handheld controllers, with 137 ms mean glass-to-glass stereo video latency over the robot's Wi-Fi hotspot. We demonstrate an end-to-end imitation learning pipeline, from teleoperated data collection to policy deployment, using a shared command interface and whole-body controller.",
+          "url": "https://arxiv.org/abs/2611.04083v1",
+          "pdf_url": "https://arxiv.org/pdf/2611.04083v1",
+          "published": "2026-11-02T23:47:53Z",
+          "updated": "2026-11-02T23:47:53Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2610.17069v1",
           "title": "Task-Space Motion-Force Nonlinear Model Predictive Control for Precise and Compliant Control under Uncertainties",
           "authors": [
@@ -2260,27 +2281,6 @@
           "updated": "2026-09-28T16:57:15Z",
           "categories": [
             "cs.RO"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2604.23863v1",
-          "title": "Cooptimizing Safety and Performance Using Safety Value-Constrained Model Predictive Control",
-          "authors": [
-            "Hao Wang",
-            "Nam Nguyen",
-            "Armand Jordana",
-            "Ludovic Righetti",
-            "Somil Bansal"
-          ],
-          "abstract": "Autonomous systems are increasingly deployed in real-world environments, where they must achieve high performance while maintaining safety under state and input constraints. Although Model Predictive Control (MPC) provides a principled framework for constrained optimal control, guaranteeing safety beyond its finite planning horizon remains a fundamental challenge. In this work, we augment MPC with a safety value function-based terminal constraint that enforces membership in a control-invariant safe set at the end of each planning horizon. This formulation enables real-time synthesis of trajectories that are both high-performing and provably safe. We show that, under an exact safety value function and a feasible initialization, the proposed MPC scheme is recursively feasible, thereby ensuring persistent safety. In contrast to traditional terminal set constructions that rely on local linearizations or conservative approximations, our approach incorporates a reachability-based safety value function for terminal constraints, yielding less conservative and more expressive safety guarantees. We validate the proposed framework through simulation and hardware experiments on a Flexiv Rizon 10s manipulator. Results demonstrate improved constraint satisfaction and robustness compared to standard state-constrained MPC and reactive safety filtering, while maintaining competitive task performance. The full implementation and experiments are available on the project website.",
-          "url": "https://arxiv.org/abs/2604.23863v1",
-          "pdf_url": "https://arxiv.org/pdf/2604.23863v1",
-          "published": "2026-04-26T20:10:03Z",
-          "updated": "2026-04-26T20:10:03Z",
-          "categories": [
-            "cs.RO",
-            "eess.SY"
           ],
           "primary_category": "cs.RO"
         }
@@ -3931,6 +3931,26 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2611.05266v1",
+          "title": "Stabilizing On-Policy Targeted Guidance in Agentic Reinforcement Learning",
+          "authors": [
+            "Kevin Frans",
+            "Alexander M Rush",
+            "Sergey Levine",
+            "Pieter Abbeel",
+            "Ashvin Nair"
+          ],
+          "abstract": "Naive on-policy RL is often bottlenecked by the capabilities of the base model --- insufficient coverage can result in an inability to learn from certain rewards. At the same time, rewards in modern post-training systems often come from rich textual sources, e.g. judge models with a rubric of criteria. Can we utilize such structures to provide a rich directional signal that enables improving on otherwise difficult to optimize rewards? In this work, we examine a framework we refer to as targeted guidance that learns from per-turn textual feedback via an on-policy self-distillation objective. Our focus is not only on directly improving hard-to-optimize behaviors, but on how to do so throughout the training process without degrading baseline RL performance. Over a range of settings across an agentic multi-turn software engineering environment, we find success by combining targeted self-distillation with a per-criteria RL reward, and by limiting feedback to turns where the policy specifically fails. We further examine the design choices that lead to stable entropy and reduce oscillatory behavior throughout training.",
+          "url": "https://arxiv.org/abs/2611.05266v1",
+          "pdf_url": "https://arxiv.org/pdf/2611.05266v1",
+          "published": "2026-11-03T17:54:33Z",
+          "updated": "2026-11-03T17:54:33Z",
+          "categories": [
+            "cs.LG"
+          ],
+          "primary_category": "cs.LG"
+        },
+        {
           "id": "2611.02546v1",
           "title": "Energy-Based Policy Orchestration",
           "authors": [
@@ -3956,7 +3976,7 @@
           "primary_category": "cs.RO"
         },
         {
-          "id": "2611.01560v1",
+          "id": "2611.01560v2",
           "title": "Democratizing Robot-Use Agents: A Unified Harness with Open Models",
           "authors": [
             "Jiarui Yuan",
@@ -3989,10 +4009,10 @@
             "Ning Ding"
           ],
           "abstract": "Robot-use Agents (RUAs) have shown promising zero-shot manipulation capabilities, but reliance on frontier, proprietary models limits research into further training. To democratize RUA research, we introduce uni-robot-agent, a unified harness for competitive open-weight robot use that supports further training. Without privileged inputs, an out-of-the-box Qwen3.8-Flash-Next achieves a RoboDojo Score of 31.39, surpassing the published GPT-6 Astra-RoboProbe result of 28.97 and many VLA/WAM baselines, and performs competitively on 19 real-world tasks. Our analysis across model generations, families, and sizes links effective robot use to four general capabilities, suggesting that future RUA training should develop them jointly.",
-          "url": "https://arxiv.org/abs/2611.01560v1",
-          "pdf_url": "https://arxiv.org/pdf/2611.01560v1",
+          "url": "https://arxiv.org/abs/2611.01560v2",
+          "pdf_url": "https://arxiv.org/pdf/2611.01560v2",
           "published": "2026-11-01T04:32:23Z",
-          "updated": "2026-11-01T04:32:23Z",
+          "updated": "2026-11-03T18:09:09Z",
           "categories": [
             "cs.RO"
           ],
@@ -4047,29 +4067,6 @@
             "cs.RO"
           ],
           "primary_category": "cs.RO"
-        },
-        {
-          "id": "2610.25711v1",
-          "title": "SWAP: Test-Time Steerable Humanoid Whole-Body Collision Avoidance",
-          "authors": [
-            "Zeji Yi",
-            "Guanqi He",
-            "Xiaofeng Guo",
-            "Guannan Qu",
-            "Pieter Abbeel",
-            "Yan Duan",
-            "Karen Liu",
-            "Guanya Shi"
-          ],
-          "abstract": "Humanoid robots operating in human-centric environments must coordinate the entire body to traverse tight, cluttered spaces while maintaining balance. Existing methods often struggle to jointly consider dynamic stability and collision avoidance from high-dimensional perceptual inputs. Moreover, for humanoids, safe behavior is inherently multimodal: the same obstacle may admit multiple valid traversals, which is difficult to represent with a single deterministic policy. To address these challenges, we propose SWAP (Steerable Whole-body Avoidance Policy), a hierarchical framework that separates collision-aware decision making from stabilization. A high-level, perception-conditioned diffusion policy generates multimodal, collision-aware motion proposals, while a low-level whole-body RL controller tracks these proposals and maintains dynamic balance. To efficiently train the high-level policy, we obtain scalable supervision via hindsight labeling: we roll out the low-level policy under randomized commands, place obstacles only in the space that each executed motion did not sweep, so the motion is collision-free by construction, and re-render the perception the robot would have seen. At deployment, Monte Carlo sampling with simple cost signals steers the diffusion model toward safe, task-aligned behaviors without heavy reward tuning. Experiments in simulation and on a real Unitree G1 humanoid show reliable avoidance with static and dynamic obstacles. Test-time steering further enables customization, improving targeted rewards (e.g., speed, orientation, or posture) by 34% on average while maintaining a high collision avoidance rate. Together, these results support a practical solution to humanoid whole-body collision avoidance with test-time steerability. Project website: https://iscoyizj.github.io/SWAP-steerable-humanoid-oa-website/",
-          "url": "https://arxiv.org/abs/2610.25711v1",
-          "pdf_url": "https://arxiv.org/pdf/2610.25711v1",
-          "published": "2026-10-19T03:00:50Z",
-          "updated": "2026-10-19T03:00:50Z",
-          "categories": [
-            "cs.RO"
-          ],
-          "primary_category": "cs.RO"
         }
       ]
     },
@@ -4081,6 +4078,46 @@
       "website": "https://people.eecs.berkeley.edu/~svlevine/",
       "paper_count": 5,
       "papers": [
+        {
+          "id": "2611.05295v1",
+          "title": "GSBR: Geometric Support Behavior Regularization for Online RL",
+          "authors": [
+            "Charles Xu",
+            "Jacob Berg",
+            "Liyiming Ke",
+            "Sergey Levine"
+          ],
+          "abstract": "Regularizing online reinforcement learning (RL) toward a pretrained base policy can improve sample efficiency and learning stability, but regularization that is too restrictive limits how much the policy can improve. Base policies -- typically diffusion or flow-matching models trained by imitation learning on large, diverse datasets -- capture many behaviors that are reasonable but suboptimal. Existing regularizers using such base policies are too restrictive in one of two ways: behavioral cloning regularizers pull the actor toward the full base-policy distribution, penalizing it for discarding suboptimal modes, while hard support constraints forbid improvements that lie just outside the base policy's support. We propose Geometric Support Behavior Regularization (GSBR), which penalizes actions by their distance from the base policy's support. Actions within the support incur no penalty, so the actor can concentrate on high-value modes; outside the support, where value estimates are less reliable, the penalty grows smoothly with distance while still permitting improvement when the value gained outweighs the penalty. GSBR estimates this distance from a finite set of base-policy samples, so it requires only sample access to the base policy. Across 19 tasks on four robotic benchmarks, GSBR raises the average success rate from 33% for the base policy to 95%, achieving the highest average success rate and throughput among all compared methods, with about 23% higher normalized throughput than the next-best RL method. Project website and open-source code at https://charlesxu0124.github.io/gsbr/ .",
+          "url": "https://arxiv.org/abs/2611.05295v1",
+          "pdf_url": "https://arxiv.org/pdf/2611.05295v1",
+          "published": "2026-11-03T18:08:32Z",
+          "updated": "2026-11-03T18:08:32Z",
+          "categories": [
+            "cs.RO",
+            "cs.LG"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2611.05266v1",
+          "title": "Stabilizing On-Policy Targeted Guidance in Agentic Reinforcement Learning",
+          "authors": [
+            "Kevin Frans",
+            "Alexander M Rush",
+            "Sergey Levine",
+            "Pieter Abbeel",
+            "Ashvin Nair"
+          ],
+          "abstract": "Naive on-policy RL is often bottlenecked by the capabilities of the base model --- insufficient coverage can result in an inability to learn from certain rewards. At the same time, rewards in modern post-training systems often come from rich textual sources, e.g. judge models with a rubric of criteria. Can we utilize such structures to provide a rich directional signal that enables improving on otherwise difficult to optimize rewards? In this work, we examine a framework we refer to as targeted guidance that learns from per-turn textual feedback via an on-policy self-distillation objective. Our focus is not only on directly improving hard-to-optimize behaviors, but on how to do so throughout the training process without degrading baseline RL performance. Over a range of settings across an agentic multi-turn software engineering environment, we find success by combining targeted self-distillation with a per-criteria RL reward, and by limiting feedback to turns where the policy specifically fails. We further examine the design choices that lead to stable entropy and reduce oscillatory behavior throughout training.",
+          "url": "https://arxiv.org/abs/2611.05266v1",
+          "pdf_url": "https://arxiv.org/pdf/2611.05266v1",
+          "published": "2026-11-03T17:54:33Z",
+          "updated": "2026-11-03T17:54:33Z",
+          "categories": [
+            "cs.LG"
+          ],
+          "primary_category": "cs.LG"
+        },
         {
           "id": "2611.02160v1",
           "title": "Value Forcing: Aligning Return Distributions at All Noise Levels",
@@ -4139,41 +4176,6 @@
           "updated": "2026-10-17T05:02:09Z",
           "categories": [
             "cs.LG"
-          ],
-          "primary_category": "cs.LG"
-        },
-        {
-          "id": "2610.19783v2",
-          "title": "Reinforcement Learning via Advantage Guidance",
-          "authors": [
-            "Zhiyuan Zhou",
-            "Sergey Levine"
-          ],
-          "abstract": "Reinforcement learning (RL) holds the promise of learning a policy that can outperform what is shown in the data. However, in practice, such systems suffer from instability and hyperparameter sensitivity. In contrast, supervised learning provides a stable and scalable training objective, but is fundamentally limited by the quality of the demonstrated behavior. In this paper, we ask whether we can perform policy optimization with something as simple and stable as supervised learning but as performant as RL. Unfortunately, naively training the policy with supervised learning and conditioning on future rewards or advantages typically underperform dedicated RL methods. We introduce a new policy extraction method, Advantage Guidance, that retains the simple supervised learning structure with advantage conditioning while outperforming prior RL methods through effective conditional training and contrastive diffusion guidance during sampling. We show that Advantage Guidance can significantly improve a model's ability to respond to conditional advantage signals, and the contrastive guidance during sampling can use the learned advantage-conditioned policy to target the KL-regularized optimal policy. Empirically, we find that Advantage Guidance significantly outperforms prior state-of-the-art RL methods on 26 long-horizon, sparse reward tasks across datasets with varying degrees of optimality.",
-          "url": "https://arxiv.org/abs/2610.19783v2",
-          "pdf_url": "https://arxiv.org/pdf/2610.19783v2",
-          "published": "2026-10-14T08:31:55Z",
-          "updated": "2026-10-19T17:28:54Z",
-          "categories": [
-            "cs.LG"
-          ],
-          "primary_category": "cs.LG"
-        },
-        {
-          "id": "2610.18838v1",
-          "title": "Scaling Online Optimal Transport Minibatches for Flow Matching",
-          "authors": [
-            "Peter Chen",
-            "Sergey Levine"
-          ],
-          "abstract": "A central challenge in scaling flow models is maintaining stability in training and integration. In flow matching, this stability depends critically on how source samples are paired with data. Independent random pairing introduces substantial stochasticity, motivating minibatch optimal transport (OT) to construct online source-target couplings that reduce this randomness (Tong et al., 2024). However, as applications extend to larger and higher-dimensional datasets, small minibatches can limit these benefits, while scaling the coupling to substantially larger minibatches at every iteration is computationally prohibitive. Moreover, how OT coupling affects the full stochastic gradient and integration remains theoretically unresolved. In this work, we develop a scalable online entropic OT approximation that enables substantially larger source-target couplings while preserving the benefits of OT. We close the theoretical gap for both unregularized and entropic OT by proving strict reductions in full stochastic-gradient variance and integration error relative to independent pairing, and further characterize how these improvements strengthen as the online coupling minibatch grows. Experiments on single-cell gene interpolation-flow and image-flow training validate these predictions, showing that larger online couplings consistently improve training stability and final generation performance.",
-          "url": "https://arxiv.org/abs/2610.18838v1",
-          "pdf_url": "https://arxiv.org/pdf/2610.18838v1",
-          "published": "2026-10-13T17:56:26Z",
-          "updated": "2026-10-13T17:56:26Z",
-          "categories": [
-            "cs.LG",
-            "cs.CV"
           ],
           "primary_category": "cs.LG"
         }
@@ -6430,6 +6432,30 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2611.04080v1",
+          "title": "FEIJOA: Task-Driven Grounding and Execution for Mobile Manipulation",
+          "authors": [
+            "Aditya Agarwal",
+            "William Shen",
+            "Sahit Chintalapudi",
+            "Lucy Cai",
+            "Nishanth Kumar",
+            "Aidan Curtis",
+            "Travis Manderson",
+            "Tom\u00e1s Lozano-P\u00e9rez",
+            "Leslie Pack Kaelbling"
+          ],
+          "abstract": "A mobile manipulator asked to \"put the toys away in the toy box\" must decide which objects are toys and which container the user means, then find base poses, grasps, and placements it can execute. Because a scene representation is built before the instruction is known, it may lack the attributes, affordances, or concepts needed to resolve the task. We present FEIJOA, a language-model agent that grounds the instruction at test time. It queries a grounding tool over a posed RGB-D scan, inspects the returned candidates, and refines its queries until they resolve the instruction. An embodiment-aware harness checks each skill's preconditions, samples base poses from which the target is reachable, and verifies the skill's effect from observations before and after execution. On 103 open-ended grounding queries, FEIJOA resolves 94.2% exactly, compared with 68.0% for the best prebuilt representation. Over 50 real-world trials on Spot, it completes 35 tasks; 17 of these successes follow recovery from a failed tool call or verification check. Of the 15 failed trials, 13 were caused by the robot's physical skills, and only 2 by grounding or the agent's reasoning. Project website: https://williamshen-nz.github.io/feijoa/.",
+          "url": "https://arxiv.org/abs/2611.04080v1",
+          "pdf_url": "https://arxiv.org/pdf/2611.04080v1",
+          "published": "2026-11-02T23:42:40Z",
+          "updated": "2026-11-02T23:42:40Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2611.02546v1",
           "title": "Energy-Based Policy Orchestration",
           "authors": [
@@ -6515,32 +6541,6 @@
             "cs.RO"
           ],
           "primary_category": "cs.RO"
-        },
-        {
-          "id": "2603.09971v2",
-          "title": "TiPToP: A Modular Open-Vocabulary Robot Manipulation System That Plans",
-          "authors": [
-            "William Shen",
-            "Nishanth Kumar",
-            "Sahit Chintalapudi",
-            "Ryan Lindeborg",
-            "Jie Wang",
-            "Christopher Watson",
-            "Edward Hu",
-            "Jing Cao",
-            "Dinesh Jayaraman",
-            "Leslie Pack Kaelbling",
-            "Tom\u00e1s Lozano-P\u00e9rez"
-          ],
-          "abstract": "We present TiPToP, a modular manipulation system that integrates pretrained foundation models with a GPU-accelerated Task and Motion Planner to solve tasks directly from RGB images and natural language. TiPToP composes perception, planning, and execution modules and requires no robot training data. It can be deployed on a standard DROID setup in under an hour and adapted to new embodiments with minimal effort. We evaluate TiPToP against $\u03c0_{0.5}\\text{-DROID}$, a state-of-the-art VLA fine-tuned on 350 hours of demonstrations, across two real-world DROID setups (one operated by an external team) and simulation, where TiPToP attains a higher average success rate and faster average completion time. We also evaluate on the MolmoSpaces benchmark, where TiPToP ranks first overall on pick and pick-and-place tasks among methods not trained on in-distribution data. We further show that TiPToP's modularity enables us to trace failures to specific components, revealing where to target improvements. We release TiPToP open-source to serve as a reproducible baseline and to enable further research on modular manipulation systems. Project website and code: https://tiptop-robot.github.io",
-          "url": "https://arxiv.org/abs/2603.09971v2",
-          "pdf_url": "https://arxiv.org/pdf/2603.09971v2",
-          "published": "2026-03-10T17:59:00Z",
-          "updated": "2026-07-28T19:12:58Z",
-          "categories": [
-            "cs.RO"
-          ],
-          "primary_category": "cs.RO"
         }
       ]
     },
@@ -6552,6 +6552,30 @@
       "website": "https://people.csail.mit.edu/tlp/",
       "paper_count": 5,
       "papers": [
+        {
+          "id": "2611.04080v1",
+          "title": "FEIJOA: Task-Driven Grounding and Execution for Mobile Manipulation",
+          "authors": [
+            "Aditya Agarwal",
+            "William Shen",
+            "Sahit Chintalapudi",
+            "Lucy Cai",
+            "Nishanth Kumar",
+            "Aidan Curtis",
+            "Travis Manderson",
+            "Tom\u00e1s Lozano-P\u00e9rez",
+            "Leslie Pack Kaelbling"
+          ],
+          "abstract": "A mobile manipulator asked to \"put the toys away in the toy box\" must decide which objects are toys and which container the user means, then find base poses, grasps, and placements it can execute. Because a scene representation is built before the instruction is known, it may lack the attributes, affordances, or concepts needed to resolve the task. We present FEIJOA, a language-model agent that grounds the instruction at test time. It queries a grounding tool over a posed RGB-D scan, inspects the returned candidates, and refines its queries until they resolve the instruction. An embodiment-aware harness checks each skill's preconditions, samples base poses from which the target is reachable, and verifies the skill's effect from observations before and after execution. On 103 open-ended grounding queries, FEIJOA resolves 94.2% exactly, compared with 68.0% for the best prebuilt representation. Over 50 real-world trials on Spot, it completes 35 tasks; 17 of these successes follow recovery from a failed tool call or verification check. Of the 15 failed trials, 13 were caused by the robot's physical skills, and only 2 by grounding or the agent's reasoning. Project website: https://williamshen-nz.github.io/feijoa/.",
+          "url": "https://arxiv.org/abs/2611.04080v1",
+          "pdf_url": "https://arxiv.org/pdf/2611.04080v1",
+          "published": "2026-11-02T23:42:40Z",
+          "updated": "2026-11-02T23:42:40Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
         {
           "id": "2611.02546v1",
           "title": "Energy-Based Policy Orchestration",
@@ -6644,25 +6668,6 @@
           "updated": "2026-07-28T19:12:58Z",
           "categories": [
             "cs.RO"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2508.08983v2",
-          "title": "Rational Inverse Reasoning: Few-Shot Imitation by Inferring Intent through Planning",
-          "authors": [
-            "Ben Zandonati",
-            "Tom\u00e1s Lozano-P\u00e9rez",
-            "Leslie Pack Kaelbling"
-          ],
-          "abstract": "Humans can learn a new manipulation task from one or two demonstrations and then perform it in a new room, with new objects, under new constraints. Modern robot imitation learning, in contrast, typically needs hundreds to thousands of demonstrations and still degrades under modest shifts in layout, geometry, object set or task constraints. We argue this gap is not just about data, but also about the level of abstraction at which learning occurs; generalization requires inferring the latent intent underlying why a demonstrator behaved in a certain way, rather than reproducing how they moved. We present Rational Inverse Reasoning (RIR), which casts few-shot imitation as inference over latent explanation programs: compact, executable descriptions of intent that map an object-centric scene to a structured task-and-motion-planning (TAMP) specification of goals, subgoals and constraints. A vision-language model proposes candidate programs, and a hierarchical planner supplies a bounded-rational likelihood. By combining VLM program proposals, and planner-grounded feedback, RIR iteratively refines the candidate set to approximate a posterior over concise, executable programs. On a 2D reasoning benchmark and a real Franka FR3, RIR recovers transferable task structure from as little as one demonstration. Generalizing to substantially new layouts and object sets, RIR outperforms VLM-planning baselines that lack explicit rationality and planning-grounded inference, increasing downstream success rate by $34$ and $28$ percentage points in the one- and three-shot settings.",
-          "url": "https://arxiv.org/abs/2508.08983v2",
-          "pdf_url": "https://arxiv.org/pdf/2508.08983v2",
-          "published": "2025-08-12T14:49:44Z",
-          "updated": "2026-07-03T00:28:09Z",
-          "categories": [
-            "cs.RO",
-            "cs.AI"
           ],
           "primary_category": "cs.RO"
         }
