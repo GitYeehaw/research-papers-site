@@ -2,326 +2,213 @@
   "category": "cs",
   "name": "CS Research",
   "description": "Computer Science \u2014 AI, Machine Learning, NLP, Computer Vision",
-  "scraped_at": "2026-11-05T16:22:20.270350+00:00",
+  "scraped_at": "2026-11-06T15:50:46.295797+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2611.06918v1",
-      "title": "From Pixels to Actions - Towards Native Vision-Language-Action Policies",
+      "id": "2611.08487v1",
+      "title": "User Embeddings are Superpositions of Interpretable Behavioral Modes",
       "authors": [
-        "Weichen Fan",
-        "Haiwen Diao",
-        "Penghao Wu",
-        "Siyuan Hu",
-        "Ziqi Huang",
-        "Tianqi Liu",
-        "Mingze Sun",
-        "Ziyi Wang",
-        "Zhongang Cai",
-        "Hanming Deng",
-        "Quan Wang",
-        "Lei Yang",
-        "Lewei Lu",
-        "Fangzhou Hong",
-        "Zhaoxi Chen",
-        "Dahua Lin",
-        "Ziwei Liu"
+        "Jonathan Kozaczuk",
+        "Zheng Dong",
+        "Noyan Evirgen",
+        "Keivan Majidi",
+        "Eddie K. H. Ng",
+        "Chris Porter",
+        "Qi Zhao",
+        "Jia Geng",
+        "Changmao Li",
+        "Brandon R. Feng"
       ],
-      "abstract": "Vision-language-action models are typically built on a simple premise: perception is first compressed by visual encoders, and action reasoning begins only afterwards. Yet manipulation often hinges on precisely the visual signals most vulnerable to this abstraction, e.g., local geometry, boundaries, depth, and subtle state changes. This raises a fundamental question: should action policies inherit a fixed visual endpoint, or directly access evolving visual computation? We introduce NEO-VLA, a structurally encoder-free vision-language-action framework. Images are tokenized by lightweight patch convolutional layers and evolve jointly with language throughout the backbone, allowing a flow-matching action expert to draw from instruction-conditioned visual representations at different depths. This simple change reveals a consistent pattern. Native architectures outperform encoder-based counterparts under controlled comparisons; full fine-tuning reduces but does not erase the gap, and additional scale alone cannot recover it. More strikingly, layer-wise probing shows that the action-critical signals often peak well before the final visual representation. Across diverse manipulation settings and distribution shifts, NEO-VLA consequently achieves stronger and more robust control. Together, these results suggest that embodied control benefits from access to visual representations across the computational hierarchy, rather than a fixed encoder output.",
-      "url": "https://arxiv.org/abs/2611.06918v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.06918v1",
-      "published": "2026-11-04T18:59:58Z",
-      "updated": "2026-11-04T18:59:58Z",
+      "abstract": "User embeddings are central components of modern recommendation, personalization, and behavioral modeling systems. Though these embeddings can compactly encode rich behavioral information, they are inherently dense and opaque, limiting interpretability. To address this gap, we argue that user embeddings can be understood as sparse superpositions of interpretable behavioral modes. This structure is directly predicted by generative models of user behavior for linear embeddings and extends approximately to deep-learning representations by the superposition hypothesis. Superimposed modes can naturally be recovered by sparse dictionary learning methods, such as sparse autoencoders (SAEs), and recovered modes can be automatically named and queried in natural language. We validate mode recovery against known ground truth on synthetic data, where SAEs recover modes better than classical sparse baselines, including on transformer-encoded embeddings. We then apply the method to classical and transformer-based user embeddings from two real-world datasets. We also show how the corresponding natural-language labels enable zero-shot audience retrieval and characterization over embeddings never trained on text. The framework is post-hoc and model-agnostic, requiring no modification to the upstream embedding system.",
+      "url": "https://arxiv.org/abs/2611.08487v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.08487v1",
+      "published": "2026-11-05T18:59:42Z",
+      "updated": "2026-11-05T18:59:42Z",
       "categories": [
-        "cs.CV"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2611.06914v1",
-      "title": "A Framework for Context Enrichment and Selective Robustness in LLM Social Agents",
-      "authors": [
-        "Mattia Greiche",
-        "Reihaneh Rabbany",
-        "Maximilian Puelma Touzel"
-      ],
-      "abstract": "Researchers use large language models as agents in social simulations, where agents are prompted with observations and background information intended to shape their actions. Yet LLM agents have been shown to substantially change their behavior under meaning-preserving prompt variations, creating a validation problem for social simulation. One plausible hypothesis is that this brittleness reflects a lack of grounding and can be reduced by enriching the context provided to the agents. Whether richer context improves robustness remains unclear, in part because context richness and robustness are rarely defined in ways that support controlled comparisons. We address the first need with controlled context enrichment, a set of prompt substitution rules that systematically enriches distinct types of context: neutral padding, generic social background, descriptive decision grounding, and normative decision grounding. We address the second by introducing selective robustness as a validation criterion: insensitivity to meaning-preserving prompt variation combined with a directional response to decision-relevant changes in the social world. We demonstrate the framework in a Prisoner's Dilemma-like game, showing how it can be used to identify which forms of context enrichment produce more desirable and robust agent behavior. We find that these forms of enrichment produce distinct behavioral patterns that vary between the two models tested.",
-      "url": "https://arxiv.org/abs/2611.06914v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.06914v1",
-      "published": "2026-11-04T18:58:23Z",
-      "updated": "2026-11-04T18:58:23Z",
-      "categories": [
-        "cs.MA",
-        "cs.CL",
         "cs.LG"
-      ],
-      "primary_category": "cs.MA"
-    },
-    {
-      "id": "2611.06912v1",
-      "title": "FlowReconBench: Accuracy, calibration and cost of learned and classical flow reconstruction from sparse sensors",
-      "authors": [
-        "Nicolas Tricard",
-        "Linzheng Wang",
-        "Jason Chen",
-        "Sili Deng"
-      ],
-      "abstract": "Reconstructing full flow fields from sparse sensors requires prior assumptions about unmeasured regions and physical variables. Yet it remains unclear when learned models outperform classical estimators and which aspects of their predictions can be trusted. FlowReconBench evaluates ten learned and five classical methods on three regimes: a laminar cylinder wake across Reynolds numbers, two-dimensional Kolmogorov turbulence and a large-scale three-dimensional (3D) isotropic turbulence. Methods share leakage-controlled splits and sensor draws and are scored on per-channel error, ensemble spread, calibration, spectra and cost. The leading method changes for each regime. Classical methods perform strongly in low-order and dense-sensing regimes. On the cylinder wake, linear stochastic estimation and gappy proper orthogonal decomposition lead, including for unobserved pressure. In 3D, inverse-distance weighting matches the best learned methods on observed channels. Data-driven methods become superior at decreasing sensor density or poor sensor observability. On Kolmogorov flow, continuous ranked probability score and error yield different method rankings: generative models offer broader but underdispersed ensembles, while deterministic models prioritize pointwise error. Generative models balance this tradeoff through their sampler budget, with a larger budget improving ensemble quality at higher computational cost. In 3D, scaling tests demonstrate that queryable methods are flat in memory, while full-grid construction methods run out of memory. Observing only 2 of 4 fields leaves the problem kinematically underconstrained, yet a latent model can reproduce structural similarities to the ground truth.",
-      "url": "https://arxiv.org/abs/2611.06912v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.06912v1",
-      "published": "2026-11-04T18:57:47Z",
-      "updated": "2026-11-04T18:57:47Z",
-      "categories": [
-        "physics.flu-dyn",
-        "cs.LG"
-      ],
-      "primary_category": "physics.flu-dyn"
-    },
-    {
-      "id": "2611.06911v1",
-      "title": "BEAKER: An Expert-Curated Benchmark for Embodied Brains in Self-Driving Chemical Laboratories",
-      "authors": [
-        "Fei Lin",
-        "Tengchao Zhang",
-        "Ziyang Gong",
-        "Xiaotong Yu",
-        "Bohan Zhang",
-        "Yifan Zhou",
-        "Qihao Yang",
-        "Ji Dai",
-        "Dong Li",
-        "Yining Jiang",
-        "Qinghua Ni",
-        "Jun Huang",
-        "Qiang Zhang",
-        "Yue Zhou",
-        "Zhihang Zhong",
-        "Yonglin Tian",
-        "Fei-Yue Wang",
-        "Xue Yang"
-      ],
-      "abstract": "Self-Driving Chemical Laboratories (SDCLs) are moving chemical experimentation toward embodied automation, where machines must perceive laboratory scenes, reason about experimental states, and act under physical, procedural, and safety constraints. Although Multimodal Large Language Models (MLLMs) are increasingly considered as embodied brains for such systems, existing laboratory benchmarks mainly focus on safety, anomaly detection, or general scientific understanding, leaving their execution-oriented embodied capabilities underexplored. To fill this gap, we introduce BEAKER, a Benchmark for evaluating Embodied Actionability, Knowledge, Experimentation, and Reasoning in SDCLs. BEAKER contains 1,000 expert-curated question-answer samples across 11 image and video task types, covering key judgments required for chemical laboratory execution, including affordance grounding, trajectory planning, equipment, state, and safety recognition, apparatus setup, operation and step reasoning, and temporal procedure reasoning. All questions and annotations are manually created and reviewed by chemistry and embodied Artificial Intelligence (AI) experts, without AI-assisted generation or annotation. We evaluate 28 general-purpose, science-oriented, chemistry-specialized, and embodied MLLMs in an offline, single-turn setting. Results show that current models can follow coarse experimental procedures in videos, but still struggle to ground actions into operable regions and feasible trajectories, to recognize fine-grained laboratory apparatus, states, and safety norms, and to order steps in mid-length procedures. BEAKER thus reveals a clear gap between coarse procedural understanding and the precise, action-grounded perception required for laboratory execution, providing a diagnostic benchmark for future MLLMs in SDCLs.",
-      "url": "https://arxiv.org/abs/2611.06911v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.06911v1",
-      "published": "2026-11-04T18:57:17Z",
-      "updated": "2026-11-04T18:57:17Z",
-      "categories": [
-        "cs.AI"
-      ],
-      "primary_category": "cs.AI"
-    },
-    {
-      "id": "2611.06910v1",
-      "title": "FrontierPhysics: Evaluating Agents for End-to-End Physics Research",
-      "authors": [
-        "Bingran You",
-        "Wenjun Ke",
-        "Ria Rosenauer",
-        "Bo Liu",
-        "Wenbo Chen",
-        "Min Chen",
-        "Shuqi Xu",
-        "Yue Ma",
-        "Jiechao Feng",
-        "Bo Chen",
-        "Xiangkai Sun",
-        "Jiarui Liu",
-        "Jinen Guo",
-        "Zeyu Zhou",
-        "Xu Huang",
-        "Zhuohan Li",
-        "Haoyu Li",
-        "Heguang Lin",
-        "Lijie Ding",
-        "Yadong Zeng",
-        "Kangqi Zhang",
-        "Xinge Liu",
-        "Hanwen Liu",
-        "Zhenghong Li",
-        "Alexander von Recum",
-        "Yuchen Zhu",
-        "Felix Schwarzfischer",
-        "Yizhou Zhao",
-        "Jicheng Wang",
-        "Binxu Li",
-        "Qian Yu",
-        "Chan Li",
-        "Cheng Dai",
-        "Di Wang",
-        "Haoyu Zhang",
-        "Jiankai Sun",
-        "Kaituo Feng",
-        "Mian Qin",
-        "Ruihong Yin",
-        "Yiqun Luo",
-        "Weiwei Wu",
-        "Shihong Pan",
-        "Tsung Yeh Hsieh",
-        "Xiao Huang",
-        "Yan Zhang",
-        "Sihan Li",
-        "Zirui Ren",
-        "Zengji Tu",
-        "Kyoung Whan Choe",
-        "Ke Sun",
-        "Vincenzo Galia",
-        "Vaisakhi Mishra",
-        "Jiashu He",
-        "Hongyang Wang",
-        "Zhiheng Yang",
-        "Shubham Gaur",
-        "Yifan Gu",
-        "Shuyi Wang",
-        "Zihao Zuo",
-        "Steven Dillmann",
-        "Yiyou Sun",
-        "Xinyang Han",
-        "Hanchung Lee",
-        "Molei Tao",
-        "Yue Zhao",
-        "Shilong Liu",
-        "Yuchen Wu",
-        "Xuandong Zhao",
-        "Xiangyi Li",
-        "Florian Brand",
-        "Gerbrand Ceder",
-        "Hartmut Haeffner"
-      ],
-      "abstract": "AI agents are playing an increasingly important role in physics research. However, existing physics benchmarks only evaluate fixed questions, isolated sub-tasks, or paper reproduction with given solutions, and rarely check research quality alongside correctness. We introduce FrontierPhysics, an end-to-end benchmark with 56 tasks made by 42 physicists based on their own research, covering nine domains across theoretical, computational, and experimental physics. Each task requires agents to review the literature, develop a research plan, conduct research and experiments, and produce structured outputs and scientific manuscripts. Combining deterministic verifiers with expert-authored rubrics, FrontierPhysics evaluates whether agents' research is correct and publishable. Across 22 models in 26 configurations, no configuration passes more than 46 of its 168 rollouts. Manual review of agent trajectories shows that frontier agents' main weaknesses are insufficiently rigorous reasoning and limited expert intuition, rather than gaps in physics knowledge or execution errors.",
-      "url": "https://arxiv.org/abs/2611.06910v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.06910v1",
-      "published": "2026-11-04T18:56:22Z",
-      "updated": "2026-11-04T18:56:22Z",
-      "categories": [
-        "cs.AI"
-      ],
-      "primary_category": "cs.AI"
-    },
-    {
-      "id": "2611.06908v1",
-      "title": "Perceptive Humanoid Motion from Simulation",
-      "authors": [
-        "Siyuan Hu",
-        "Abulikemu Abuduweili",
-        "Yue Meng",
-        "Shipeng Liu",
-        "Quentin Leboutet",
-        "Chen Chen",
-        "Matthias M\u00fcller",
-        "Vladlen Koltun"
-      ],
-      "abstract": "Humanoid robots have the potential to automate a wide range of physical tasks. Progress toward generalist humanoid autonomy, however, remains constrained by a data bottleneck: mapping pixels and free-form language to low-level joint commands requires paired supervision, and no corpus of such data exists at sufficiently large scale. Some approaches rely on human teleoperation and wearable capture devices, which require at least an hour of human time to produce an hour of data. We present HALO, a humanoid autonomy system powered by a pipeline that synthesizes vision-language-motion data across a thousand procedurally generated homes. The corpus scales with compute rather than human labor. HALO acquires a repertoire of physical skills, including sitting on chairs, navigating to named objects, stepping sideways through half-open doors, crouching and crawling beneath tables, and pushing boxes. It orchestrates these skills to solve composite, long-horizon tasks. Without ever seeing a real home during training, HALO transfers zero-shot to the physical world, achieving a 91% success rate across 360 trials in six unmapped real-world environments. See https://apple-aiml-research.github.io/ml-halo/ for code and videos.",
-      "url": "https://arxiv.org/abs/2611.06908v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.06908v1",
-      "published": "2026-11-04T18:55:33Z",
-      "updated": "2026-11-04T18:55:33Z",
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.CV",
-        "cs.LG"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2611.06905v1",
-      "title": "Reinforcement Learning Enables Scaling Generalist Robot Policy Improvement",
-      "authors": [
-        "Michal Korniak",
-        "Marco Bagatella",
-        "Ralf R\u00f6mer",
-        "Michal Nauman",
-        "Yarden As",
-        "Pranav Vignesh",
-        "Manan Agarwal",
-        "Leander Diaz-Bone",
-        "Piotr Zalewski",
-        "Miko\u0142aj Czarnecki",
-        "Lenart Treven",
-        "Shashwat Saxena",
-        "Sreyas Venkataraman",
-        "Sarvesh Patil",
-        "Zhiyuan Zhou",
-        "Daniel Marta",
-        "Oier Mees",
-        "Nur Muhammad Mahi Shafiullah",
-        "Carmelo Sferrazza",
-        "Bhavya Sukhija",
-        "Angela P. Schoellig",
-        "Andreas Krause",
-        "Max Simchowitz",
-        "Andrew Wagenmaker"
-      ],
-      "abstract": "The introduction of generalist robot policies has enabled a single, large model to learn to perform a variety of tasks from a vast pre-training corpus. While these models often exhibit powerful zero-shot generalization capabilities, they typically require an adaptation phase to achieve sufficient performance in deployment. Iterated self-improvement via reinforcement learning (RL) has demonstrated promise in enabling this adaptation, yet such approaches have been largely explored in single-task settings - where the goal is to simply improve on a narrow deployment task - which lies in stark contrast to the multi-task capabilities of the base policy. In this work we ask whether generalist robot policies are capable of multi-task, generalist improvement in deployment - targeting many diverse tasks simultaneously - and what algorithmic recipe enables this. To answer this question, we first develop a set of structured evaluations to test generalist improvement capabilities, and systematically evaluate algorithmic and practical design choices regarding value estimation, policy extraction and resource allocation. We show that not only can generalist policies be improved online across diverse tasks, but that the right recipe can enable generalization and increase performance on tasks not considered during online training. We characterize when this generalization occurs and show that both the training task distribution and the use of value-based RL are critical. To the best of our knowledge, this is among the first evidence for online generalist improvement for robot foundation models.",
-      "url": "https://arxiv.org/abs/2611.06905v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.06905v1",
-      "published": "2026-11-04T18:52:28Z",
-      "updated": "2026-11-04T18:52:28Z",
-      "categories": [
-        "cs.LG",
-        "cs.RO"
       ],
       "primary_category": "cs.LG"
     },
     {
-      "id": "2611.06901v1",
-      "title": "Motion-guided Contrastive Regularization For Latent World Models",
+      "id": "2611.08486v1",
+      "title": "Do You Miss the Nights We Spent Crafting Figures? Rethinking Teaser and Framework Figures in the Age of Generative AI",
       "authors": [
-        "Yiwen Chen",
-        "Qiqi Hou",
-        "Jisoo Jeong",
-        "Yinhao Zhu",
-        "Huaizu Jiang",
-        "Amir Said"
+        "Xiaoqi Zhao",
+        "Youwei Pang",
+        "Kailai Zhou"
       ],
-      "abstract": "JEPA-style world models learn action-conditioned latent dynamics without reconstructing observations, but distributional regularization alone does not ensure that their representations preserve information needed for control. We identify static collapse, a failure mode in which the encoder preserves episode-specific static content while suppressing manipulation-relevant state changes. Because static content is temporally predictable yet diverse across episodes, this failure can persist despite regularizers such as SIGReg. A controlled study on OGBench-Cube shows that introducing randomized backgrounds substantially degrades planning performance while leaving the underlying manipulation task unchanged. To address this problem, we propose motion-guided contrastive regularization. Our approach compares predicted latent transitions with transitions to candidate observations from the same episode, reducing the usefulness of static background identity for distinguishing action outcomes. Optical-flow similarities provide soft contrastive targets, allowing candidates with similar motion to receive similar supervision. Combined with latent prediction and SIGReg, our objective encourages representations to preserve within-episode state distinctions and similarities between related transitions. Our method improves planning success over LeWorldModel (LeWM) from 52% to 78% on OGBench-Cube with randomized backgrounds and from 14% to 54% on LIBERO-Object, while maintaining comparable performance on four other visual-control benchmarks.",
-      "url": "https://arxiv.org/abs/2611.06901v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.06901v1",
-      "published": "2026-11-04T18:49:35Z",
-      "updated": "2026-11-04T18:49:35Z",
+      "abstract": "Scientific figures give research ideas a visual form through choices of abstraction, composition, and emphasis. Generative AI offers new ways to realize these choices, raising questions about explanatory clarity and purposeful visual expression. We examine these questions through a visual retrospective of 371 motivation and framework figures from 200 papers. The corpus comprises a quota-based main sample of 160 papers spanning four temporal periods and a separate purposive style-contrast sample of 40 papers. A single multimodal judge evaluates six dimensions of communication and design, with three repeated judgments per figure. We attempt source-constrained revisions of all 371 figures, of which 369 pass the recorded fidelity checks. Original-figure ratings show no uniform decline across periods. Revisions increase mean clarity ratings by 0.428 points and decrease aesthetic coherence ratings by 0.111 points on a five-point scale. Gains in the six-dimension average are larger for main-sample motivation figures than for frameworks. Case analyses show that added explanation can clarify comparisons while leaving typographic hierarchy and visual economy unresolved. These model-based findings support researcher-led design, with AI assisting exploration and authors retaining responsibility for explanatory purpose, composition, and scientific relationships. The accompanying atlas and evaluation records are available at https://ntu-ai4x.github.io/Rethinking_Figures/index_en.html.",
+      "url": "https://arxiv.org/abs/2611.08486v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.08486v1",
+      "published": "2026-11-05T18:59:33Z",
+      "updated": "2026-11-05T18:59:33Z",
       "categories": [
         "cs.CV"
       ],
       "primary_category": "cs.CV"
     },
     {
-      "id": "2611.06899v1",
-      "title": "Occlusion for Free: Detecting Occlusion from the Disagreement Between Two Monocular Distance Cues",
+      "id": "2611.08485v1",
+      "title": "Where and Why is Grounded Reasoning Useful?",
       "authors": [
-        "Chibueze Praise Onyenweaku",
-        "Toyibat Adele",
-        "Sikirulahi Opeyemi Abdulkareem",
-        "Obed Honour Eje"
+        "David Yan",
+        "Le Xue",
+        "Forrest Huang",
+        "Qiuyi Zhang",
+        "Dustin Tran",
+        "Andrew M. Dai",
+        "Yinfei Yang"
       ],
-      "abstract": "Knowing that a pedestrian is occluded is useful to a robot even when the detector cannot recover the hidden pixels, but occlusion estimators are normally trained on occlusion annotations that deployment settings rarely have. We show that occlusion can be read off two distance estimates a camera-only pipeline already computes. Apparent height is largely unchanged by occlusion, because the detected box still spans the whole person; monocular metric depth is pulled toward the occluder, because the nearest surface inside the box is what a depth map reports. Only their ordering matters, so no focal length, stature, or depth scale is needed, provided the depth model's error is close to a pure gain, a condition that can be checked without labels. The score detects heavy occlusion on KITTI with AUC 0.909 (0.888 over all annotated pedestrians, including those the detector misses), requires no training and no occlusion labels, and is not a proxy for range: within fixed distance bands it holds AUC 0.894-0.925 while true distance alone sits near chance. On synthetic CARLA scenes with measured visibility it reaches 0.819, against 0.644 for distance alone. We arrived here after measuring three standard architectural responses to occlusion, depth fusion, occlusion-simulating augmentation, and attention, none of which improved detection outside its training distribution in the configurations we tested, and after finding that a detector trained on German roads loses half its accuracy on self-annotated street scenes in Lagos, Nigeria. Signals that need no local annotation are worth more in settings that benchmarks do not represent.",
-      "url": "https://arxiv.org/abs/2611.06899v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.06899v1",
-      "published": "2026-11-04T18:49:13Z",
-      "updated": "2026-11-04T18:49:13Z",
+      "abstract": "Grounded reasoning, where a model outputs text coordinates of relevant locations in chain-of-thought reasoning, is a common strategy for solving complex visual reasoning problems. However, the benefits and limitations of grounded reasoning are understudied. We study where and why grounded reasoning is most useful. To do so, we introduce a chain-of-thought analysis method to measure how much a model uses its outputted grounding in its thinking trace and perform a detailed ablation study of a grounded reasoning training recipe. We find that grounded reasoning improves counting but shows no significant gain over baselines without coordinate grounding across a wide range of spatial reasoning and perception benchmarks. Using several synthetic tasks, we show that grounded reasoning is most useful when a task requires undescribable references, which are visual concepts that are difficult to describe in language. However, we observe that many existing visual reasoning benchmarks are solvable with only describable text references. To close this gap, we introduce BrickVision, a new benchmark that requires undescribable visual references to solve.",
+      "url": "https://arxiv.org/abs/2611.08485v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.08485v1",
+      "published": "2026-11-05T18:59:32Z",
+      "updated": "2026-11-05T18:59:32Z",
       "categories": [
-        "cs.CV",
-        "cs.AI"
+        "cs.CV"
       ],
       "primary_category": "cs.CV"
     },
     {
-      "id": "2611.06897v1",
-      "title": "MCP-Eco: A Linked Dataset of MCP Servers, Consumers, and Development Activity",
+      "id": "2611.08483v1",
+      "title": "SwarmEvolve: Latent Agent Swarms for Evolutionary Discovery and Optimization",
       "authors": [
-        "Khalid Tounoussi",
-        "Mohammed Sayagh",
-        "Ali Ouni",
-        "Yutaro Kashiwa"
+        "Qile Jiang",
+        "George Em Karniadakis"
       ],
-      "abstract": "The Model Context Protocol (MCP) enables LLM agents to access external tools and data. Studying its software ecosystem requires connecting server interfaces, the projects that configure these servers, and their development activity. However, this information is scattered across directories, package registries, configuration files, and repository histories. We present MCP-Eco, a relational dataset that integrates these sources and links consumer configuration declarations to candidate server projects. Its frozen release contains 16,880,899 records across 19 Parquet tables, covering 78,302 candidate server projects, 16,165 candidate consuming repositories, and 9,200 configuration declarations. Of these declarations, 5,975 resolve to 5,138 distinct repository-server pairs. The dataset also includes tool, resource, and prompt descriptions, declared dependencies, and associated development records, including pull requests, reviews, issues, and commits. Provenance fields distinguish directory-reported capabilities from those observed through live probing and document discovery sources and declaration-matching methods. These connections support research on MCP interface design, configuration practices, and repository maintenance, while enabling practitioners to inspect tool schemas and existing integration configurations. The dataset and accompanying analysis scripts are publicly available at https://huggingface.co/datasets/mcp-research-alliance/mcp-ecosystem Demo video: https://www.youtube.com/watch?v=N7TqnNneSfU",
-      "url": "https://arxiv.org/abs/2611.06897v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.06897v1",
-      "published": "2026-11-04T18:47:50Z",
-      "updated": "2026-11-04T18:47:50Z",
+      "abstract": "LLM-guided evolutionary search uses AI agents to improve programs for mathematical and computational problems by iteratively refining solutions and combining high-scoring methods. However, the process is often slow because the LLM generates a long textual chain of thought for each round and must repeat this generation many times to maintain population diversity. We present SwarmEvolve, a framework in which hundreds of low-cost agents per round work in swarms, reason in latent space without decoding to text, and share information by passing KV caches. Each swarm studies the problem from a different angle. A novelty filter keeps the most distinct agent ideas by directly measuring the distances between the agents' hidden state vectors. Crossover of ideas happens naturally in latent space, as a summarizer agent receives the combined KV caches of all swarm members. On 21 problems in mathematical discovery and scientific computing, SwarmEvolve gets the highest average score and needs a median of only 3 to 8 minutes to reach the best scores that other state-of-the-art frameworks reach in 60 minutes. On several problems, SwarmEvolve with Qwen3 8B improves on the solutions that AlphaEvolve first found with frontier LLMs. Our work shows that agent swarms that communicate in latent space offer a fast, low-cost approach to program search for scientific problems.",
+      "url": "https://arxiv.org/abs/2611.08483v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.08483v1",
+      "published": "2026-11-05T18:59:29Z",
+      "updated": "2026-11-05T18:59:29Z",
       "categories": [
-        "cs.SE"
+        "cs.AI",
+        "cs.NE"
       ],
-      "primary_category": "cs.SE"
+      "primary_category": "cs.AI"
+    },
+    {
+      "id": "2611.08478v1",
+      "title": "Scientist World: Grow a Research World for AI-Scientists",
+      "authors": [
+        "Taiming Lu",
+        "Sachin Konan",
+        "Zhuang Liu"
+      ],
+      "abstract": "AI-Scientists arrived, but a world for them to grow in did not. Human scientists take theirs for granted $-$ centuries of open problems and shared ideas, waiting in the scientific literature. To AI-Scientists, that world is readable but not runnable, so we build Scientist World for them: every research paper becomes an executable environment. Our autonomous pipeline extracts each paper's open-ended research question and reproduces its proposed method as the baseline; an AI-Scientist entering the environment is evaluated against what the human authors achieved. We release the first 1,000 verified environments. With the world as an evaluation, we found that frontier AI-Scientists can already surpass the human researchers 74% of the time. As a record of how AI does science, it contains 6,400 hours of research traces, with every idea, experiment, failure, and success. As a training ground, we are able to raise (+158%) a small model to match frontier models in research ideation. At last, AI-Scientists' own world has arrived, grown from and growing with science itself.",
+      "url": "https://arxiv.org/abs/2611.08478v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.08478v1",
+      "published": "2026-11-05T18:58:17Z",
+      "updated": "2026-11-05T18:58:17Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "primary_category": "cs.AI"
+    },
+    {
+      "id": "2611.08477v1",
+      "title": "EgoGeneralist: Unifying Egocentric Action-Video Tasks through Video-Native Modeling",
+      "authors": [
+        "Yanlin Jin",
+        "Bowen Yang",
+        "Cheng Zhang",
+        "Yifan Yang",
+        "Zhe Li",
+        "Jianfei Cai",
+        "Kai Zhu"
+      ],
+      "abstract": "Modern video models possess strong visual priors, yet do not natively represent human action in metric 3D space. We present EgoGeneralist, which adapts pretrained video generators to unify action-conditioned egocentric video generation, pose estimation, and joint action-video generation. Our role-adaptive action renderer provides video-native representations for multidirectional action-video learning, making metric motion usable as both a spatial control signal and a recoverable generation target. Cross-stream action-video coupling establishes close correspondence between metric motion and visual dynamics through lightweight adaptation while preserving the pretrained visual prior. Together, these designs establish a generalist framework spanning five action-video tasks. Despite adaptation only on controlled laboratory recordings, EgoGeneralist generalizes to diverse unseen scenes and interactions with effective action control and visual quality, bridging pretrained visual knowledge and metric 3D human motion.",
+      "url": "https://arxiv.org/abs/2611.08477v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.08477v1",
+      "published": "2026-11-05T18:58:13Z",
+      "updated": "2026-11-05T18:58:13Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2611.08472v1",
+      "title": "XStack: A Benchmark for ML Repo Migration",
+      "authors": [
+        "Linrong Cai",
+        "Taiming Lu",
+        "Haozhe Chen",
+        "Zhuang Liu"
+      ],
+      "abstract": "ML code should run where researchers choose, not where it was first written. Today, machine learning code mainly lives in two ecosystems, PyTorch on NVIDIA GPUs and JAX on Google TPUs. Migrating repositories between them means building and testing across frameworks and hardware. This migration is (1) a practical need, since it unlocks different hardware for researchers, and (2) a natural benchmark: it involves different frameworks and hardware, covers whole repositories, and is long-horizon and challenging. We introduce XStack, a benchmark that evaluates agents on migrating ML repositories between these two ecosystems. Each agent receives a PyTorch repository and a clean TPU machine and must deliver a JAX repository. Its output passes if it meets our grading criteria, based on the source repository's published result, authenticated and calibrated by us. Migration by agents remains unreliable: Claude Opus 5 passes 75%, GPT-5.6-sol 45%, and every other agent at most 40%. XStack is a step toward freeing ML code from its ecosystem. We release XStack to make progress toward reliable migration across frameworks and hardware measurable.",
+      "url": "https://arxiv.org/abs/2611.08472v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.08472v1",
+      "published": "2026-11-05T18:55:54Z",
+      "updated": "2026-11-05T18:55:54Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "primary_category": "cs.LG"
+    },
+    {
+      "id": "2611.08469v1",
+      "title": "Same Behavior, Different Mechanism: What Finite Experiments Can Certify About Integrated Information",
+      "authors": [
+        "Linqian Wu",
+        "Diaoxuan He"
+      ],
+      "abstract": "Interpretability, AI auditing and assessments of machine consciousness increasingly rest on mechanism-level quantities: functionals of a system's causal transition law that describe how it computes, not what it outputs. Experiments see that law only through finite, partial and noisy interventions. We ask when such a quantity is identifiable from an experiment's access, continuous in the mechanism and certifiable from finite data, and answer exactly for a deliberately demanding case - the integrated information $\\varphi$ of integrated information theory - in stochastic networks of four and five units with known ground truth. Behavior can be silent: a recurrent and a feed-forward network with identical input-output laws at their response delay carry 0.28 and 0 bits, yet internal recordings separate them within 4-53 trials. Partial access can be just as blind: in our examples, units left out of a one-step recording impose precision floors of 0.30-1.02 bits that no sample size lowers, and in all-but-self parity networks, recordings of any length see several hidden units only through the product of their fidelities - a symmetry that one intervention broke in exact checks. The measure has sharp edges: because $\\varphi$ selects a partition, and the cause and effect it specifies, by one criterion and reports another, infinitesimal changes of mechanism that cross an edge change it by 25-100% at 99% of the edges we found in random networks, and about 1% of surrogate models that fit interventional data almost perfectly misreport it by more than 20%. One-sided claims survive: the same data certify a lower bound on both sides of an edge, and we prove $\\varphi>1.004$ bits throughout a 64-dimensional region of mechanisms and certify it from about $10^7$ controlled transitions with false-certificate probability at most $\u03b1$. Measurability is thus a design question with computable answers.",
+      "url": "https://arxiv.org/abs/2611.08469v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.08469v1",
+      "published": "2026-11-05T18:55:31Z",
+      "updated": "2026-11-05T18:55:31Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "q-bio.NC"
+      ],
+      "primary_category": "cs.LG"
+    },
+    {
+      "id": "2611.08465v1",
+      "title": "Towards interpreting any residual stream direction by scaling activation inversion",
+      "authors": [
+        "Celeste De Schamphelaere",
+        "Juan J. Vazquez",
+        "Ari Spiesberger",
+        "Tom\u00e1\u0161 Gaven\u010diak",
+        "Gavin Leech",
+        "Euan Ong",
+        "Jiahai Feng"
+      ],
+      "abstract": "To interpret a direction in a language model's residual stream, we can look for text that strongly activates it. But when such text is found by scanning a corpus, it is limited to what that corpus contains. We develop Maximally-Activating Example Metamodels (MAEMs), language models which map residual stream directions from a subject model to text exemplars that strongly activate those directions. Our objective is to maximise the cosine similarity of a supplied residual stream direction with the activations of the text generated by the MAEM. This label-free RL objective helps to scale MAEMs on diverse sources of residual stream directions. Empirically, we find the resultant metamodel produces informative exemplars: a Qwen3.6-27B MAEM inverts held-out activations better than corpus search or a natural-language autoencoder (NLA), beats corpus search (at 10M tokens) on a majority of held-out languages/domains, and activates 89% of held-out SAE features. It also identifies concepts behind steering vectors about as well as NLAs, recovers the payloads of LoRA backdoors more often than corpus search, and can even verbalise some model workspace inner monologue. Unlike explanations produced by other metamodels (e.g. NLAs), MAEM exemplars can be verified with a forward pass on the subject model, making the MAEM objective a grounded alternative for scaling the training of metamodels.",
+      "url": "https://arxiv.org/abs/2611.08465v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.08465v1",
+      "published": "2026-11-05T18:54:40Z",
+      "updated": "2026-11-05T18:54:40Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "primary_category": "cs.LG"
+    },
+    {
+      "id": "2611.08457v1",
+      "title": "Adversarial Training with Large Step Sizes: Implicit Bias, Optimization, and Sharpness",
+      "authors": [
+        "Yi Feng",
+        "Andrea Paudice"
+      ],
+      "abstract": "Adversarial Training (AT) is an important method for improving model robustness. We study the dynamics of deterministic Gradient Descent (GD) in AT. Most existing works in this direction focus on the small or vanishing step sizes regime, where GD resembles a continuous-time flow. However, such step sizes can make training inefficient and are rarely used in practice. In this paper, we study the AT dynamics of GD with large constant step sizes. We first study GD in adversarial linear logistic regression, focusing on two aspects: where the model parameters converge (implicit bias) and how quickly the losses decrease (optimization). We then turn to neural networks training and study how the sharpness of losses evolve during AT. Our results advance the understanding of the behaviors of GD with large step sizes in AT and highlight three key differences from its behavior in Standard Training (ST): (i) the implicit bias gap between AT and ST, previously established only for small step sizes, persists for arbitrarily large constant step sizes, (ii) different from ST, there is no uniform rate of convergence for the optimization error in AT, and (iii) sharpness can exhibit two-stage dynamics that differ from the Edge-of-Stability behavior observed in ST.",
+      "url": "https://arxiv.org/abs/2611.08457v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.08457v1",
+      "published": "2026-11-05T18:48:50Z",
+      "updated": "2026-11-05T18:48:50Z",
+      "categories": [
+        "cs.LG",
+        "math.OC"
+      ],
+      "primary_category": "cs.LG"
     }
   ]
 }
