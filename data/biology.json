@@ -2,37 +2,39 @@
   "category": "biology",
   "name": "Biology Research",
   "description": "Quantitative Biology \u2014 Genomics, Biophysics, Neuroscience",
-  "scraped_at": "2026-11-12T16:43:53.021717+00:00",
+  "scraped_at": "2026-11-13T16:05:17.124657+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2611.14508v1",
-      "title": "When Does the Real Wiring Win? Testing connectome structure-function claims against unmeasured physiology",
+      "id": "2611.17219v1",
+      "title": "Structure-Preserving Leaky Integrate-and-Fire Dynamics on Arbitrary Time Scales",
       "authors": [
-        "Yeyuan Liu"
+        "Billur Kaymak\u00e7alan",
+        "Behiye \u0130layda Sel\u00e7uk"
       ],
-      "abstract": "Connectome-constrained models are often used to argue that a measured wiring diagram outperforms shuffled or rewired wiring, and hence that structure shapes function. Such comparisons can confound wiring with how the models are tuned: a connectome fixes who connects to whom, not the excitability, gains or plasticity rates the model also needs, and modellers often tune these until the real-wiring model works. We separate three estimands: physiology tuned on the real wiring and transferred to nulls (P1), each wiring tuned on its own (P2), and P2 restricted to physiology consistent with independent data (P3). The biases involved are known in machine learning (under-tuned baselines, inherited weights, winner's curse); we measure what they do to biological conclusions, using synthetic ground truth, placebo nulls and three Drosophila circuit models. Some claims survive every protocol we test: segregated reward and punishment dopamine improves learning, and head-direction topography is required for a persistent bump. Others do not. In the mushroom body, the real Kenyon-cell output wiring beats a cross-subtype identity shuffle by 0.09 under P1 and P2 but loses to it by 0.09 under P3 (95% CIs exclude zero; held-out runs confirm). The verdict is set by the share of alpha'beta' cells among active Kenyon cells, which P1 selects low; at the share implied by imaging (about 44%) the real-wiring model fails to learn, exposing a model inadequacy rather than a deficit of the fly's wiring. In flyvis, P1 penalises a mirrored connectome, which has a constructed solution within 0.07 (median) of the real error, more than a spatially shuffled one in 50 of 50 members; the ranking survives ten-fold longer retraining but depends on the checkpoint at fifty-fold. A credible structural claim needs matched optimisation, data-constrained physiology and a model that still works there.",
-      "url": "https://arxiv.org/abs/2611.14508v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.14508v1",
-      "published": "2026-11-10T18:55:48Z",
-      "updated": "2026-11-10T18:55:48Z",
+      "abstract": "The leaky integrate-and-fire (LIF) neuron combines a passive membrane law with threshold-triggered firing and reset. We formulate this hybrid neuron model, under constant input, on an arbitrary Hilger time scale $\\mathbb{T}$. Our central result is that, after the first spike, the firing times satisfy $t_{n+1}=\u03a0_{\\mathbb{T}}^{+}(t_n+T_c)$, where $T_c$ is the classical reset-to-threshold travel time. This recursion requires no periodicity, homogeneity, or translation invariance of $\\mathbb{T}$; it holds for every time scale that is unbounded above. To preserve the passive membrane physics, we use the inverse cylinder transformation to construct a positively regressive coefficient $p_m$. The resulting delta-dynamic equation is exactly the restriction to $\\mathbb{T}$ of the classical continuous-time LIF trajectory. By contrast, the direct transcription $V^\u0394=-(V-V_\\infty)/\u03c4_m$ exhibits graininess-dependent sign reversal and amplification at coarse right-scattered points. The first firing time is the forward projection of the classical continuous threshold-crossing time onto $\\mathbb{T}$, and, when the graininess is bounded by $\u03bc^\\ast$, the per-event forward-projection delay -- from each reset to the next realized firing time, relative to the continuous crossing time computed from that same reset -- is bounded above by $\u03bc^\\ast$. On $\\mathbb{T}=h\\mathbb{Z}$ we obtain the explicit lattice-quantized law $T_{\\mathrm{ISI}}^{(h)}=h\\lceil T_c/h\\rceil$, which converges to the classical continuous-time inter-spike interval as $h\\to0^+$. The framework therefore separates preserved membrane physics from the temporal opportunity structure imposed by the time domain. To our knowledge, this is the first systematic Hilger-calculus treatment of a threshold-and-reset LIF spiking neuron on an arbitrary time scale.",
+      "url": "https://arxiv.org/abs/2611.17219v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.17219v1",
+      "published": "2026-11-12T18:16:14Z",
+      "updated": "2026-11-12T18:16:14Z",
       "categories": [
-        "cs.LG",
+        "math.DS",
         "q-bio.NC"
       ],
-      "primary_category": "cs.LG"
+      "primary_category": "math.DS"
     },
     {
-      "id": "2611.14504v1",
-      "title": "Emergent Biological Capabilities in a Foundation Model for Molecular Interactions",
+      "id": "2611.17121v1",
+      "title": "Using an energy pixels approach to estimate the size a 2nd Generation DEL must be to train a high-resolution binding model",
       "authors": [
-        "Adi Mashiach"
+        "Boris P. Belotserkovskii",
+        "R. Edward Watts"
       ],
-      "abstract": "Foundation models trained on large unlabeled corpora develop emergent capabilities, tasks that go beyond the training objective. We extend this paradigm to multimodal biology with Bonbon, a foundation model for molecular interactions trained on approximately 3.2 trillion tokens of paired protein-ligand sequences. From a single representation space, Bonbon exhibits three zero-shot emergent capabilities at hierarchical levels of resolution: functional (mechanism of action), residue (binding site localization, including orthosteric/allosteric discrimination), and bond (covalent versus non-covalent engagement). All three capabilities generalize to out-of-distribution complexes. Bonbon was trained on protein-ligand sequences alone, without any task-specific supervision and without structural coordinates. We conducted controlled scaling experiments across six model scales from 42M to 1.6B parameters; every capability evaluated shows a sharp jump at the largest scale on continuous metrics, even as pretraining loss decreases smoothly. This demonstrates that loss-based scaling laws alone are insufficient to predict when zero-shot emergent capabilities become available. The capabilities reported here emerge after training at a 1:2,000 parameter-to-token ratio to accommodate the sparsity of paired biological interaction data. The same frozen representations achieve state-of-the-art binding and affinity prediction at five orders of magnitude greater speed than co-folding methods. In prospective wet-lab validation across nine disease targets spanning seven protein families, Bonbon achieves a 61.5% dose-response hit rate on de novo compounds, yielding structurally novel molecules not previously reported to inhibit these proteins, including for out-of-distribution targets.",
-      "url": "https://arxiv.org/abs/2611.14504v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.14504v1",
-      "published": "2026-11-10T18:53:01Z",
-      "updated": "2026-11-10T18:53:01Z",
+      "abstract": "DNA-encoded libraries (DELs) are commonly used to find small-molecule binders to a target protein. But the hard part is no longer finding a hit. It is building a machine-learning model good enough to guide the medicinal chemistry that follows, one that can resolve the shift in affinity when a chemist changes a single atom. Such a model needs two things from its training data: dense sampling of the small patch of chemical space around the hit, and an adequate number of genuinely tight binders within it. A diverse naive DEL gives neither. It samples an enormous space, so any one neighborhood is covered far too thinly, and the tightest binders are rare. A model trained on that naive DEL data must extrapolate to binders tighter than any it has seen, and that is where models can fail. One way to get training data with both properties is a second-generation DEL built around the hit. We ask how complex that library must be. We treat binding as a sum of small, independent interactions, called pixels on the target and antipixels on the ligand. From the spread of affinities measured in the naive library, with no structural information and nothing yet synthesized, we estimate the complexity such a library must have to supply that dense sampling and those tight binders. The method does two useful things. It turns the number of tight binders a model needs into the number of compounds a library must contain. And it estimates the expected yield of a randomly designed second-generation DEL, so the gain from designing the library with machine learning or active learning can be measured against a baseline, without the expense of a control library as large as the experiment itself.",
+      "url": "https://arxiv.org/abs/2611.17121v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.17121v1",
+      "published": "2026-11-12T17:13:57Z",
+      "updated": "2026-11-12T17:13:57Z",
       "categories": [
         "cs.LG",
         "q-bio.BM"
@@ -40,164 +42,170 @@
       "primary_category": "cs.LG"
     },
     {
-      "id": "2611.14501v1",
-      "title": "Mutual Linearity in Nonlinear Population Dynamics",
+      "id": "2611.17015v1",
+      "title": "AI for Biologists: The Knowledge Boundaries of Foundation Models in the Age of Agentic Systems",
       "authors": [
-        "Shiling Liang"
+        "Tian Cai",
+        "Andrew Kleist",
+        "Jaimin Patel",
+        "Duccio Malinverni",
+        "Alexander K. Taylor",
+        "Malvika Sharan",
+        "Renato Umeton",
+        "M. Madan Babu"
       ],
-      "abstract": "Mutual Linearity in Nonlinear Population DynamicsMutual linearity, the persistence of affine relations among stationary observables under arbitrarily strong changes of one transition rate, is known for Markov jump processes and chemical reaction networks. We show that generalized Lotka--Volterra dynamics form a new class of mutually linear systems, even though species can go extinct and attractors can be chaotic. Any change to one species' equation acts on the others as one effective press and keeps all abundances affinely related: piecewise across extinctions, and as time averages on chaotic attractors.",
-      "url": "https://arxiv.org/abs/2611.14501v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.14501v1",
-      "published": "2026-11-10T18:51:44Z",
-      "updated": "2026-11-10T18:51:44Z",
+      "abstract": "Artificial intelligence (AI) is changing how biological research is done. Biological foundation models trained on millions of nucleotides, protein, and single-cell measurements predict protein structures, mutation effects, and cellular responses to genetic perturbations. Agentic systems, AI assistants built on large language models, can run multistep analyses from plain-language requests and increasingly call foundation models as tools. Yet it is often unclear when these models' outputs can be trusted. We frame this as a model's knowledge boundary: the range of inputs, tasks, and conditions over which its outputs are reliable. This review explains how foundation models are built and proposes that five design elements (data, architecture, training scheme, evaluation scheme, and post-analysis) define this boundary. We examine evidence on where current models succeed or fail and present standardized descriptions of model limits so that researchers, and the agents acting for them, can use these tools reliably.",
+      "url": "https://arxiv.org/abs/2611.17015v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.17015v1",
+      "published": "2026-11-12T16:08:33Z",
+      "updated": "2026-11-12T16:08:33Z",
       "categories": [
-        "cond-mat.stat-mech",
-        "physics.bio-ph",
-        "q-bio.PE"
+        "q-bio.BM",
+        "cs.AI"
       ],
-      "primary_category": "cond-mat.stat-mech"
+      "primary_category": "q-bio.BM"
     },
     {
-      "id": "2611.14498v1",
-      "title": "Measuring Robustness and Efficiency in a Connectome-Constrained Fly Visual System Model: Linking an Adversarial and a Perceptual Illusion",
+      "id": "2611.17011v1",
+      "title": "Random Exploration is Random",
       "authors": [
-        "Alexandre Garcia-Duran",
-        "Alejandro Rodriguez-Garcia",
-        "Manuel Molano-Maz\u00f3n",
-        "Alexandre Hyafil",
-        "Srikanth Ramaswamy",
-        "Janne K. Lappalainen"
+        "Yingkang Luo",
+        "Hua-Dong Xiong",
+        "Hanbo Xie",
+        "Caroline Phelps",
+        "Madeline Harms",
+        "Ryan Smith",
+        "James Waltz",
+        "Robert Wilson"
       ],
-      "abstract": "Biological visual systems compute reliably under tight metabolic and wiring constraints, whereas artificial vision systems consume far more energy and can be sensitive to adversarial perturbations. Whether networks with brain-like wiring are more robust at lower computational cost is unclear. We address this by benchmarking a task-optimized, continuous-time recurrent neural network of the fly visual system constrained by its synaptic connectome (FlyNet) against artificial neural networks. We compare it against CNNs, RAFT, and continuous-time recurrent neural networks without detailed connectome constraints (sCTRNN, CTRNN) on a collision-detection task within a differentiable 3D rendering pipeline. FlyNet is adversarially vulnerable but, relative to its compute, more robust to common video corruptions than RAFT, while using up to five orders of magnitude fewer FLOPs. The CTRNNs remain more robust than FlyNet across almost all tested perturbations, suggesting that connectome constraints benefit efficiency, through their low edge count, over robustness. Recurrence improves robustness to white-box attacks in RAFT and temporal context improves robustness to common corruptions. FlyNet's position and velocity representations degrade under adversarial textures but recover under counterfactual textures that restore correct classification while staying equally far from training, ruling out unfamiliar textures as the cause of failure. The reverse-phi illusion similarly disrupts these representations and inverts the same low-level motion statistic as the adversarial textures. Optimizing this input statistic alone, without access to the network, suffices to induce classification failure, attributing both perturbations to the same circuit vulnerability. Connectome-constrained models can thus surface adversarial failure mechanisms as testable hypotheses about biological perceptual vulnerabilities.",
-      "url": "https://arxiv.org/abs/2611.14498v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.14498v1",
-      "published": "2026-11-10T18:51:31Z",
-      "updated": "2026-11-10T18:51:31Z",
-      "categories": [
-        "cs.CV",
-        "q-bio.NC"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2611.14468v1",
-      "title": "Bayesian inverse problems and epidemic-threshold uncertainty for a heterogeneous SIS reaction-diffusion model",
-      "authors": [
-        "Duc-Lam Duong"
-      ],
-      "abstract": "We study Bayesian inference of persistence from early observations of a heterogeneous susceptible--infected--susceptible (SIS) reaction--diffusion model with standard incidence. We show that the leading prevalence dynamics depend on the unknown coefficients only through the difference between the transmission and recovery rates and the infected diffusivity. The same pair determines the principal eigenvalue whose sign governs persistence, so early prevalence can inform the threshold even when the individual rates remain uncertain. We prove global weak well-posedness and quantitative parameter stability for the SIS system and use the resulting observation-map estimates to establish Bayesian well-posedness. For an initial infection of size $\\varepsilon$, we derive a uniform second-order expansion that describes how the separate rates enter prevalence. Incidence depends explicitly on transmission at leading order. When the noise standard deviation is proportional to $\\varepsilon$, we prove $O(\\varepsilon)$ convergence in Hellinger distance of the nonlinear posteriors to their low-prevalence limits for both prevalence alone and joint prevalence and incidence data. We bound the principal eigenvalue using the growth rate of the infected $L^2$ norm between two times. This rate gives a lower bound for the full nonlinear system, and the upper bound separates spatial transients from nonlinear saturation. Uniform spectral estimates and bounds on infection size and measurement error give sufficient conditions for persistence and extinction. We also bound the error in posterior persistence probabilities under forward and eigenvalue approximation, accounting for posterior mass near the threshold. Numerical examples illustrate threshold inference and the predicted \\(O(\\varepsilon)\\) convergence of the nonlinear posteriors to their low-prevalence limits in Hellinger distance.",
-      "url": "https://arxiv.org/abs/2611.14468v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.14468v1",
-      "published": "2026-11-10T18:32:19Z",
-      "updated": "2026-11-10T18:32:19Z",
-      "categories": [
-        "math.AP",
-        "cs.LG",
-        "math.NT",
-        "math.ST",
-        "q-bio.PE"
-      ],
-      "primary_category": "math.AP"
-    },
-    {
-      "id": "2611.14423v1",
-      "title": "Cotangent-lift inference of stochastic microbial dynamics",
-      "authors": [
-        "Jos\u00e9 A. Capit\u00e1n",
-        "Alberto Meg\u00edas",
-        "Cristina Sard\u00f3n"
-      ],
-      "abstract": "We study the parameter estimation for the stochastic logistic and Lotka--Volterra diffusions from discrete, irregularly spaced observations corrupted by measurement noise, a setting typical of microbiome time series. For the logistic equation, the growth rate acts as a time change and does not enter the stationary law, so it can be identified only from the temporal structure of the data. We prove that the maximum-likelihood estimator of the Euler scheme, with the observations taken as the states, coincides with the regression of log-increments on abundances used in the literature, and we characterise what this estimator cannot see under measurement noise: for the linearised dynamics, the law of consecutive pairs of observations is invariant along an explicit one-parameter family of relaxation rates and noise levels, and the regression converges to a limit set by the noise. Treating the true abundances as latent, we compute the likelihood with a Gaussian moment filter and show that measurement noise is precisely what couples the filter states across samples. The exact gradient is then the backward recursion of the discrete cotangent lift, whose cost, two to three likelihood evaluations, does not depend on the number of parameters, and we give the covector map of each filter step in closed form. In simulations, the latent estimator recovers the relaxation times, noise levels and interaction strengths that the regression biases, while larger communities require prior information on the interactions. In gut microbiome time series it attributes most of the variability of a dominant genus to measurement noise and estimates its relaxation time at about $64$ hours, with a large standard error.",
-      "url": "https://arxiv.org/abs/2611.14423v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.14423v1",
-      "published": "2026-11-10T18:00:26Z",
-      "updated": "2026-11-10T18:00:26Z",
-      "categories": [
-        "physics.bio-ph",
-        "math.OC",
-        "q-bio.PE",
-        "stat.AP"
-      ],
-      "primary_category": "physics.bio-ph"
-    },
-    {
-      "id": "2611.14381v1",
-      "title": "Optimization principles, revisited",
-      "authors": [
-        "William Bialek"
-      ],
-      "abstract": "The brain solves a wide range of problems, and some of these solutions are very good indeed. It is an old idea that, in some cases, these solutions may be as good as possible given the relevant constraints. If this is true we can promote this notion of optimization to a principle from which aspects of function and mechanism can be derived, ideally with no free parameters. Optimization principles are powerful and have had many successes, but they remain controversial. We start with a reminder of a classic example---diffraction limited optics in insect eyes---and then a summary of why you should worry about optimization as a more general principle. Next we turn to recent progress on the theory of optimal motion estimation in fly vision, and finally summarize recent results on the landscape for optimization, arguing that (contrary to widely held intuitions) optimal performance need not require the underlying mechanisms to have finely tuned parameters. I hope to convince you that this is a moment to take optimization seriously as the basis for theories of neural coding and computation. This is based on a rather informal lecture at the summer school LASCON X in Sao Paulo, and I have tried to preserve that tone here; pointers are given to more detailed and technical discussions.",
-      "url": "https://arxiv.org/abs/2611.14381v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.14381v1",
-      "published": "2026-11-10T17:36:48Z",
-      "updated": "2026-11-10T17:36:48Z",
+      "abstract": "Decision making often requires balancing exploitation of familiar options with exploration of uncertain alternatives. One strategy for exploration is random exploration, in which choices become more variable and less tied to the option that currently appears best. However, it remains unclear whether this variability reflects genuine stochasticity or instead a deterministic structure that traditional cognitive models fail to capture. We examined this question using the Horizon Task in an aggregated dataset of 1,392 participants completing over 1,270,695 trials. In this task, exploration becomes more valuable when participants have more future choices, and choice variability increases under longer horizons. We tested whether more expressive neural network models could recover deterministic structure from this additional variability. Although neural networks provided better overall fits to behavior than the traditional model, long-horizon choices remained consistently less predictable than short-horizon choices. These findings show that limited model expressiveness cannot fully account for the increased variability associated with random exploration, suggesting random exploration truly is substantially random.",
+      "url": "https://arxiv.org/abs/2611.17011v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.17011v1",
+      "published": "2026-11-12T16:07:42Z",
+      "updated": "2026-11-12T16:07:42Z",
       "categories": [
         "q-bio.NC",
-        "physics.bio-ph"
+        "cs.LG"
       ],
       "primary_category": "q-bio.NC"
     },
     {
-      "id": "2611.14287v1",
-      "title": "ANTIOCH-VS: From Sequence to Hits with Modular, Open-Source Ensemble Virtual Screening",
+      "id": "2611.16999v1",
+      "title": "Dynamical mean-field theory of latching Potts networks",
       "authors": [
-        "Hale S. Hasdemir",
-        "Venkata Sai Sreyas Adury",
-        "Pratyush Tiwary"
+        "Anindita Basu",
+        "Carlo Orientale Caputo",
+        "Fernando Lucas Metz",
+        "Alessandro Treves"
       ],
-      "abstract": "Structure-based virtual screening needs a receptor conformation that fits the ligand class, but for most targets no ligand-bound crystal is available -- and a single predicted model or an apo structure often misses the binding-competent state. We present ANTIOCH-VS, an open-source framework that runs an entire in silico screening campaign, from a protein sequence to a ranked shortlist of candidate binders, as one plug-and-play workflow. It first builds a conformational ensemble by reduced-MSA subsampling with ColabFold, then uses AlphaFold2-RAVE (AF2RAVE) -- short molecular-dynamics simulations with State Predictive Information Bottleneck analysis -- to pick out docking-ready, Boltzmann-weighted metastable states. It then detects the binding pocket, prepares receptors and ligands, docks the library across the ensemble with DOCK6 or AutoDock Vina, builds a consensus ranking, and triages the top hits by physics-based metadynamics (CTMD). We benchmark it on two very different targets, JAK2 kinase and ADRB2 GPCR, using their DUD-E benchmark sets of known binders and property-matched decoys. Starting from sequence alone -- no ligand-bound crystal, no manual intervention -- the AF2RAVE ensembles gave top-20 shortlists strongly enriched for true binders: a 20% hit rate for JAK2 and 60% for ADRB2 (random ~1-2%), on par with ligand-bound crystals and, for the kinase, above single AF2 models and an apo crystal. The full pipeline runs end to end on a workstation or HPC from a single command, or each module can be run on its own with user-supplied inputs. ANTIOCH-VS is freely available at https://github.com/tiwarylab/antioch-vs",
-      "url": "https://arxiv.org/abs/2611.14287v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.14287v1",
-      "published": "2026-11-10T16:27:14Z",
-      "updated": "2026-11-10T16:27:14Z",
+      "abstract": "Spontaneous transitions between memories, as observed in internally generated cognition such as mind-wandering and free association, require neural dynamics capable of destabilizing one attractive memory state and moving towards another. We ask what minimal representational structure is required for such transitions to emerge in random associative networks. To address this question, we study Potts associative networks with $S$ active states per unit and slow adaptive thresholds. The $S=1$ case can model a standard Hopfield-like network of binary units. We employ dynamical mean-field theory in the extensive-load regime, where the number of stored patterns scales linearly with network size and connectivity, and we focus on transitions between two condensed memories, which are singled out in the connectivity matrix. In the finite-load regime, we show that transitions are governed by an effective drive term, whose sign and temporal evolution distinguish high-latching (structured), low-latching (random), and non-latching regimes. The resulting phase diagram shows that adaptation alone is not sufficient: transitions only occur within certain ranges of the overlap between the two memories. In the binary case $S=1$, in particular, no unit can be active in both memories but in different Potts states, thus strongly supressing the high-latching, structured transitions that exist for $S>1$. In the extensive-load regime, non-condensed memories generate colored fluctuations and retarded self-interactions through an effective memory kernel. We find that latching trajectories change the effective timescale of this kernel, a dynamical signature of transitions in the extensive-load regime. These results indicate that multi-state Potts-like representations are essential for structured memory-to-memory transitions, a hallmark of spontaneous thought.",
+      "url": "https://arxiv.org/abs/2611.16999v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.16999v1",
+      "published": "2026-11-12T16:02:03Z",
+      "updated": "2026-11-12T16:02:03Z",
       "categories": [
-        "physics.chem-ph",
-        "q-bio.BM"
+        "q-bio.NC",
+        "cond-mat.dis-nn"
       ],
-      "primary_category": "physics.chem-ph"
+      "primary_category": "q-bio.NC"
     },
     {
-      "id": "2611.14132v1",
-      "title": "Mesoscopic derivation of predator-prey dynamics via diffusive fast-reaction asymptotics: cross-diffusion and fear effects",
+      "id": "2611.16935v1",
+      "title": "Universal Infectious Disease Forecasting with Mantis 2",
       "authors": [
-        "Marzia Bisi",
-        "Andrea Bondesan",
-        "Maria Groppi",
-        "Cinzia Soresina"
+        "Carson Dudley",
+        "Reiden Magdaleno",
+        "Yutong Bi",
+        "Anthony Valencia",
+        "Xiaofeng Liu",
+        "Marisa Eisenberg"
       ],
-      "abstract": "We propose a kinetic derivation of a spatial predator-prey model with cross-diffusion interactions and a Beddington-DeAngelis functional response. At the mesoscopic level, we divide the two populations into distinct behavioral states: prey can be active or hidden in a refuge, while predators can be either searching or handling. The microscopic state of each subpopulation is described in terms of group size and a continuous directional velocity variable, with state transitions governed by suitable Boltzmann-type interaction operators. By combining a diffusive scaling with a slow-fast formulation of the kinetic reaction operators, we formally derive a macroscopic reaction-cross-diffusion system for the total population densities of prey and predators. The limiting model consistently recovers the Beddington-DeAngelis functional response along with its associated nonlinear diffusion terms. Crucially, the kinetic upscaling yields a predator-dependent prey growth term taking a logistic form with an effective carrying capacity. This carrying capacity depends non-monotonically on predator density because prey redistribute between active and refuge states. Since density-dependent competition acts separately within these behavioral states, intermediate predator levels reduce aggregate crowding and thereby increase the effective carrying capacity of the total prey population. Overall, our derivation provides a mechanistic link connecting predator-induced behavioral shifts, refuge use, and macroscopic cross-diffusion.",
-      "url": "https://arxiv.org/abs/2611.14132v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.14132v1",
-      "published": "2026-11-10T14:18:52Z",
-      "updated": "2026-11-10T14:18:52Z",
+      "abstract": "Public health agencies need to anticipate how outbreaks will unfold, when they will peak, and how long demand on health services will remain elevated. We previously developed a foundation model, Mantis, which was trained entirely on simulated outbreaks---enabling us to generate the diversity and scale of training data needed to support forecasting across diseases. However, our previous work left unresolved when simulation improves predictions and how it should complement observational data. Here, we varied the balance of simulated and observed training data while holding forecasting tasks fixed and varying the available surveillance history. We found that simulation-rich training was particularly valuable with limited local history, and its relative advantage diminished as more observations became available. We also found that simulation-based training reduced exceptionally large forecast errors, suggesting that mechanistic knowledge can help compensate for limited local evidence. Building on these findings, we developed Mantis 2, which combines simulated and observational training to jointly forecast up to six variables sixteen weeks ahead. Across 30 forecasting tasks, Mantis 2 achieved the best aggregate probabilistic accuracy over short, medium, and long horizons among the machine learning, statistical, and baseline models evaluated. It missed roughly 30\\% fewer outbreak peaks than the strongest comparison model, with successfully anticipated peaks identified more than six weeks in advance on average. We publicly release Mantis 2, enabling public health agencies and researchers to forecast disease outcomes without developing a separate model for each disease or location.",
+      "url": "https://arxiv.org/abs/2611.16935v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.16935v1",
+      "published": "2026-11-12T15:20:49Z",
+      "updated": "2026-11-12T15:20:49Z",
       "categories": [
-        "math.AP",
-        "nlin.AO",
+        "cs.AI",
         "q-bio.PE"
       ],
-      "primary_category": "math.AP"
+      "primary_category": "cs.AI"
     },
     {
-      "id": "2611.14035v1",
-      "title": "ScaleBrain: A Scale-Consistent Framework for EEG Foundation Models",
+      "id": "2611.16915v1",
+      "title": "On the minimum energy required to trigger a spike",
       "authors": [
-        "Minyu Zhou",
-        "Yajing Wu",
-        "Yongqiang Tang",
-        "Wang Jia",
-        "Wensheng Zhang"
+        "Guanchun Tong",
+        "Rodolphe Sepulchre"
       ],
-      "abstract": "Foundation models pre-trained on large unlabeled electroencephalography (EEG) corpora have emerged as a transformative paradigm for Brain-Computer Interface (BCI) applications. Recent EEG foundation models have shown that multi-scale representations derived from fixed-length patches can improve EEG representation learning. Existing frameworks commonly construct temporal scales through feature-level operations. However, these operations leave the correspondence between learned features and scale-specific characteristics of the original EEG signals implicit. Moreover, when the self-supervised objective is not aligned with the multi-scale input representations, information at some temporal scales may receive insufficient supervision during pre-training. In light of this, we propose ScaleBrain, a scale-consistent pre-training framework that explicitly coordinates multi-scale representations of EEG from both the model input and optimization objective sides. Specifically, ScaleBrain introduces multi-scale EEG tokenization to represent the same EEG segment through analysis windows with different temporal spans and shared temporal anchors, and pairs these representations with scale-specific reconstruction to align with the multi-scale input structure and provide supervision across temporal resolutions during self-supervised learning. We further develop an axial spatio-temporal attention mechanism to contextualize the fused multi-scale representation along spatial and temporal dimensions. Extensive evaluations on six public BCI benchmarks against 12 representative baselines show that ScaleBrain achieves the highest mean Balanced Accuracy on five datasets and ranks third on the remaining one, with only 5.0M parameters, demonstrating strong performance and favorable parameter efficiency.",
-      "url": "https://arxiv.org/abs/2611.14035v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.14035v1",
-      "published": "2026-11-10T13:03:41Z",
-      "updated": "2026-11-10T13:03:41Z",
+      "abstract": "We formulate and numerically study the problem of finding the minimum energy required to trigger a spike in a three-dimensional conductance-based excitable model. The variational formulation seeks a state trajectory that reaches the boundary of the spiking region with the least \\textit{peak} cumulative work supplied through the membrane port. We approximate voltage histories by sums of real exponentials, reducing the problem to a finite-dimensional optimization. The best-found voltage waveform consists of a hyperpolarization phase followed by a depolarization phase, which seems to match the experimentally determined optimal stimulus in squid giant axons.",
+      "url": "https://arxiv.org/abs/2611.16915v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.16915v1",
+      "published": "2026-11-12T15:04:48Z",
+      "updated": "2026-11-12T15:04:48Z",
       "categories": [
-        "cs.LG",
-        "eess.SP",
+        "math.OC",
         "q-bio.NC"
       ],
-      "primary_category": "cs.LG"
+      "primary_category": "math.OC"
+    },
+    {
+      "id": "2611.16887v1",
+      "title": "Diversification under Global Competition: A Cutoff-Induced Localization Mechanism",
+      "authors": [
+        "David A. Kessler",
+        "Nadav M. Shnerb"
+      ],
+      "abstract": "Niche differentiation promotes biological diversity but does not necessarily eliminate competition for shared limiting resources. What determines the extent of diversity when evolutionary diversification takes place under such constraints? We investigate this question using a simple, analytically tractable model combining mutations in continuous trait space, local competition, and global competition for shared resources. We show that, without an establishment threshold, the population spreads indefinitely in trait space even as its total abundance approaches a finite limit. In contrast, an arbitrarily small establishment threshold allows a stable localized distribution. Together with mortality induced by global competition, the threshold creates bistability, and global feedback drives the system exponentially close to the Maxwell point, where an isolated invasion front is stationary. The resulting soliton has height $H\\propto\\varepsilon^{2/3}$ and width $W\\propto\\varepsilon^{-2/3}$. Simulations with discrete individuals reveal an archipelago of fluctuating clusters whose spatial extent eventually reaches statistical saturation, unlike the continuous deterministic soliton. Nevertheless, an effective cutoff $\\varepsilon_{\\mathrm{eff}}\\simeq0.8/(N\\sqrt\u03bc)$ reproduces the observed scaling of the population mass deficit. Remarkably, both occupied trait-site richness and effective species richness exhibit approximately the same scaling as the deterministic soliton width. Thus, deterministic cutoff theory captures global diversity scaling despite failing to reproduce the community's spatial organization.",
+      "url": "https://arxiv.org/abs/2611.16887v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.16887v1",
+      "published": "2026-11-12T14:48:54Z",
+      "updated": "2026-11-12T14:48:54Z",
+      "categories": [
+        "q-bio.PE"
+      ],
+      "primary_category": "q-bio.PE"
+    },
+    {
+      "id": "2611.16555v1",
+      "title": "Similarity-Guided Optimization Strategies for Approximate Network Symmetry Detection",
+      "authors": [
+        "David Hartman",
+        "Jaroslav Hlinka",
+        "Dominik Klepl",
+        "Anna Pidnebesna",
+        "Petra Vidnerov\u00e1"
+      ],
+      "abstract": "Symmetry in complex networks is a structural property with broad implications for network function, dynamics, and robustness. While classical approaches rely on exact automorphisms and thus remain highly sensitive to small perturbations, recent work of Liu has introduced approximate formulations that relax the strict invariance condition and recast symmetry detection as an optimization problem over permutations. We investigate how node-level similarity information can be used to bias the search toward structurally plausible vertex correspondences, with network centralities serving as one interpretable instance. Building on this perspective, we adapt simulated annealing, genetic algorithms, tabu search, particle swarm optimization, differential evolution and the quadratic symmetry approximator to this problem, add similarity guidance to each, and introduce Bilinear Approximate Symmetry Inference (BASIN), which learns a soft assignment matrix via bilinear embeddings. Using a unified evaluation pipeline, we compare their guided and unguided variants, BASIN and a random baseline on four synthetic graph families, structural brain connectomes, and three empirical networks with known automorphism groups. Node-similarity guidance is decisive where a planted orbit exists that the unguided search misses, and algorithm-dependent elsewhere, on synthetic and empirical networks alike. Overall, tabu search achieves the strongest performance; its guided variant (SGTS) has the lowest median score among the guided variants in all 44 synthetic conditions, while BASIN is the better of the continuous relaxations on rewired lateral graphs. The effect of node-similarity guidance is therefore regime-dependent rather than uniformly positive.",
+      "url": "https://arxiv.org/abs/2611.16555v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.16555v1",
+      "published": "2026-11-12T09:44:02Z",
+      "updated": "2026-11-12T09:44:02Z",
+      "categories": [
+        "cs.NE",
+        "cs.LG",
+        "q-bio.NC"
+      ],
+      "primary_category": "cs.NE"
+    },
+    {
+      "id": "2611.16427v1",
+      "title": "Exact power spectra and effective dimensionality in critical block-GOE networks",
+      "authors": [
+        "Konstantinos Grammenos",
+        "Dionissios Hristopulos"
+      ],
+      "abstract": "Criticality in neural networks is crucial for optimal information processing. Recent studies have shifted focus from static criticality to frequency-dependent behavior, particularly in oscillatory systems modeled by block-Gaussian orthogonal ensemble (block-GOE) matrices. However, analytical tools to predict spectral properties such as power spectrum and effective dimensionality remain scarce. In this work, we derive exact solutions for the network-averaged power spectrum $\\operatorname{Tr}_{N}[\\mathbf{S}(\u03c9)]$, the network autocovariance $\\operatorname{Tr}_{N}[\\mathbf{C}(\u03c4)]$, and the normalized effective dimensionality $D_N(\u03c9)$ in block-GOE ensembles. These results provide a comprehensive framework for understanding how oscillatory networks operate near criticality, offering insights into the dynamic balance between stability and flexibility in large-scale neural systems.",
+      "url": "https://arxiv.org/abs/2611.16427v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.16427v1",
+      "published": "2026-11-12T07:37:29Z",
+      "updated": "2026-11-12T07:37:29Z",
+      "categories": [
+        "stat.OT",
+        "cond-mat.dis-nn",
+        "q-bio.NC"
+      ],
+      "primary_category": "stat.OT"
     }
   ]
 }
