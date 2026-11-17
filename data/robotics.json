@@ -2,30 +2,80 @@
   "category": "robotics",
   "name": "Robotics Research",
   "description": "Robotics \u2014 Motion Planning, Control Systems, Human-Robot Interaction, Autonomous Systems",
-  "scraped_at": "2026-11-16T18:18:24.678117+00:00",
+  "scraped_at": "2026-11-17T17:31:43.719731+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2611.18562v1",
-      "title": "Training Reasoning Models in Simulation to Natively Use Real Robots",
+      "id": "2611.21607v1",
+      "title": "ScaleVLA: Scaling Vision-Language-Action Models to 552 Billion Parameters",
       "authors": [
-        "Jiaming Tang",
-        "Zhuoyang Zhang",
-        "Junxian Guo",
-        "Fangzhou Zhao",
-        "Yilong Zhao",
+        "Ruixi Yu",
+        "Dairu Liu",
+        "Xuchuan Chen",
+        "Zekun Qi",
         "Zekai Li",
-        "Xingyang Li",
-        "Yuyang Zhao",
-        "Song Bian",
-        "Zhijian Liu",
-        "Song Han"
+        "Zhuo Cao",
+        "Luyang Niu",
+        "Yingsheng Zhang",
+        "Sikai Liang",
+        "Ke Fan",
+        "He Wang",
+        "Li Yi"
       ],
-      "abstract": "Robot-use agents (RUAs) have emerged as a promising approach to general-purpose robot control. However, strong performance has so far been achieved only by frontier proprietary models such as GPT-6 Astra and Claude Fable 5.2, whereas open-weight models remain substantially less capable. We show that an open-weight 27B reasoning model can be trained to use real robots natively through reinforcement learning, entirely in simulation and without demonstrations. Like a computer-use agent (CUA), the model observes the environment, reasons in a chain of thought, and generates the next end-effector pose, without any harness. We build a Post-training Engine for Agentic Robotics (PEAR) and use it to train the model on simulated robot tasks at scale with robot-use reinforcement learning (RURL), mirroring how frontier models acquire computer use. We find that the skills acquired in simulation generalize well beyond the training tasks: they transfer to an unseen robot, to the real world, and to novel instructions. After training on LIBERO and RoboDojo in simulation, the model succeeds in 60% of our trials on a real dual-arm robot, whereas the base model succeeds in none. On LIBERO, training raises the success rate from 1.6% to 74.4%, approaching GPT-6 Astra and GPT-6.1 Sol at maximum reasoning effort. Compared with $\u03c0_{0.5}$, a vision-language-action model fine-tuned on demonstrations, our model is substantially more robust to changes in the task itself. On LIBERO-Pro, $\u03c0_{0.5}$ succeeds in only 0.75% of episodes when assigned a new task in a familiar scene whereas our model succeeds in 57.4%. Finally, the model retains its general capabilities, with no measurable degradation on nine reasoning, coding and vision benchmarks. These results highlight robot-use reinforcement learning as a promising component of foundation-model post-training.",
-      "url": "https://arxiv.org/abs/2611.18562v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.18562v1",
-      "published": "2026-11-13T18:59:02Z",
-      "updated": "2026-11-13T18:59:02Z",
+      "abstract": "Frontier Vision-Language Models (VLMs) such as GPT-6 Astra have demonstrated remarkable capabilities in robot control, suggesting that broad pretraining provides knowledge valuable for physical action. Yet most Vision-Language-Action (VLA) policies still rely on much smaller VLM backbones, leaving this potential largely untapped. We ask whether frontier-scale representations can provide a stronger foundation for robot learning. We introduce ScaleVLA, which connects a 552B DeepSeek-V4.1-Flash backbone to a trainable action DiT, and systematically compare VLMs from 2B to 552B under a shared training setup. We evaluate three fundamental capabilities of robot foundation models. In sample efficiency, just 10 demonstrations outperform a 2B backbone trained with 50 (87.8% vs. 85.6%). In generalization, LIBERO-PRO success reaches 45.1%, compared with at most 31.3% for smaller backbones. In precise manipulation, real-world charger insertion improves from 4/10 to 9/10 successes, with gains concentrated in contact-sensitive alignment. Despite its scale, ScaleVLA achieves 216 ms median latency per action chunk. Our findings suggest that frontier VLMs can serve not only as reasoning agents, but also as powerful representational foundations for efficient and generalizable robot policies.",
+      "url": "https://arxiv.org/abs/2611.21607v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.21607v1",
+      "published": "2026-11-16T18:59:37Z",
+      "updated": "2026-11-16T18:59:37Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2611.21599v1",
+      "title": "Hyperlyve: Parallelized Enumeration and Exact Lyapunov Stability Certification for Deep ReLU Networks",
+      "authors": [
+        "Brian Yarbrough",
+        "Jesse Wayment",
+        "Jingbo Wang",
+        "Philip E. Par\u00e9",
+        "Shreyas Sundaram"
+      ],
+      "abstract": "We introduce Hyperlyve (Hyperplane Partitioned Lyapunov Verification and Enumeration), a framework for proving the asymptotic stability of nonlinear dynamical systems, including those with neural network controllers. Hyperlyve learns and formally certifies continuous piecewise-affine (CPA) neural Lyapunov functions within a counterexample-guided inductive synthesis (CEGIS) loop. Hyperlyve's key innovation is a parallel algorithm that enumerates the hyperplane arrangement formed by the ReLU activations of deep networks and certifies that Lyapunov conditions hold within each polyhedral region. We derive sound and complete regional tests to verify the asymptotic stability of the exact smooth dynamics (rather than a piecewise-linear approximation) within a compact domain of interest. Furthermore, we formally characterize the computational complexity of the CPA neural Lyapunov verification problem as co-NP-complete, filling a key gap in the literature. Empirical results demonstrate that Hyperlyve enumerates ReLU networks over 150-times faster than competing tools, which contributes to Hyperlyve proving the asymptotic stability of systems that are currently intractable for state-of-the-art verifiers.",
+      "url": "https://arxiv.org/abs/2611.21599v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.21599v1",
+      "published": "2026-11-16T18:58:29Z",
+      "updated": "2026-11-16T18:58:29Z",
+      "categories": [
+        "eess.SY",
+        "cs.CG",
+        "cs.LG",
+        "cs.LO",
+        "math.DS"
+      ],
+      "primary_category": "eess.SY"
+    },
+    {
+      "id": "2611.21596v1",
+      "title": "SADL: On the Demand-Supply Geometry of Representation Collapse",
+      "authors": [
+        "Junhan Sun",
+        "Yigui Feng",
+        "Mingzhe Liu",
+        "Haoyan Xu",
+        "Lei Ye",
+        "Ziqi Han",
+        "Hanru Bai",
+        "Yanzhao Zhang",
+        "Hao Zhao",
+        "Guofeng Zhang"
+      ],
+      "abstract": "In Joint-Embedding Predictive Architectures (JEPAs), a well-constrained projector output does not by itself prevent representation collapse. We find that, from initialization, the encoder representation is dominated by a component shared by different inputs. A batch-normalized projector removes this component, so regularization after the projector cannot correct it, and the differences between representations shrink until they collapse. We propose SADL (Supply And Demand Loss), which keeps the original training objective and constrains the encoder directly when needed. SADL compares the representation differences that the projector output demands with the differences the encoder can retain and pass on to the projector, and adds a constraint on the encoder only when supply falls short of demand. It works with different Demand Regularizers and introduces no auxiliary networks, additional trainable parameters, or architectural changes. In single-task and jointly trained four-task LeWorldModel (LeWM) and INTACT experiments, SADL lowers the collapse rate over ten random seeds from 50% to 0%. After one epoch of training, encoder effective rank is 3.4-6.4 times that of the corresponding baseline without SADL, and latent prediction error falls to 1/20-1/303 of it. Without additional tuning, SADL stays robust as its loss weight spans orders of magnitude, and with several Demand Regularizers INTACT exceeds 95% mean search-free control success. On four image datasets, SADL also consistently improves accuracy and stability across random seeds. These results show that matching the representation differences a regularizer demands with the differences the encoder can supply leads to faster and more stable representation learning in control and image classification.",
+      "url": "https://arxiv.org/abs/2611.21596v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.21596v1",
+      "published": "2026-11-16T18:58:03Z",
+      "updated": "2026-11-16T18:58:03Z",
       "categories": [
         "cs.RO",
         "cs.LG"
@@ -33,75 +83,58 @@
       "primary_category": "cs.RO"
     },
     {
-      "id": "2611.18546v1",
-      "title": "Modeling the Frictional Contact of Continuum Robots with Environments through Linear Complementarity Problem",
+      "id": "2611.21547v1",
+      "title": "Fundamental Tradeoffs in Sampling, Transmission and Information Freshness: Instantaneous Feedback",
       "authors": [
-        "Jia Shen",
-        "Junhyoung Ha",
-        "Yue Chen"
+        "Subhankar Banerjee",
+        "Sennur Ulukus"
       ],
-      "abstract": "Accurate friction modeling in continuum robots is essential for precise motion control and path planning. However, current approaches make predictions only for the mechanism's internal friction that is limited by the boundary forces of the Coulomb friction cone, which fail to characterize the static friction and motion hysteresis. In this paper, we propose a novel friction model based on complementarity constraints under the Coulomb friction assumption. This model predicts various friction effects caused by environmental interactions, including both static and sliding frictions and hysteresis behavior, as well as the corresponding robot deformation induced by these interactions, which are crucial for the practical motion planning and control of continuum robots. Additionally, real-time implementation of this model can be achieved, meeting the demand for computational efficiency in robotic applications. Experimental validations demonstrated that this model is able to reduce the maximum tip position error from 45.4 mm in the frictionless model to 5.85 mm in our friction-included model with a 287.9 mm-long tendon-driven continuum robot.",
-      "url": "https://arxiv.org/abs/2611.18546v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.18546v1",
-      "published": "2026-11-13T18:51:17Z",
-      "updated": "2026-11-13T18:51:17Z",
+      "abstract": "We study a time-slotted generate-at-will status-update system over an erasure channel with transmission success probability $q$, subject to average sampling- and transmission-rate constraints $f_s$ and $f_r$, respectively. The sampler-transmitter pair jointly decides whether to idle, retransmit a stale packet, or replace it with a fresh sample. We derive a universal lower bound on the optimal average age of information, analyze a class of stationary randomized policies, and obtain an optimal policy within this class that provides a $4$-approximation guarantee. The joint problem reduces to the sampling-constrained problem when $f_s\\leq qf_r$ and the transmission-constrained problem when $f_s\\geq f_r$. For $qf_r<f_s<f_r$, we formulate a constrained Markov decision process (CMDP) and introduce the class $\\bar\u03a0$ of $(W,R)$ policies, where $W$ specifies a waiting threshold for transmission and $R$ specifies a packet-replacement threshold. We prove that, for every choice of Lagrange multipliers, the corresponding Lagrangian-relaxed Markov decision process admits an optimal policy in $\\bar\u03a0$. We then formulate a linear program (LP) over distributions of $(W,R)$ policies and prove that choosing a policy according to an optimal LP solution yields an optimal CMDP policy. Moreover, there exists an optimal LP solution assigning positive probability to at most three $(W,R)$ policies. Since $\\bar\u03a0$ is countably infinite, for every $\u03b5>0$ we construct a finite subset $\\bar\u03a0_\u03b5\\subset\\bar\u03a0$ and show that the LP restricted to this set yields an $\u03b5$-optimal policy. Finally, we derive a stronger pair of lower bounds by considering systems with only the sampling-rate or transmission-rate constraint. Using these bounds, we construct a policy randomizing among four $(W,R)$ policies with a $2$-approximation guarantee for $qf_r<f_s<f_r$.",
+      "url": "https://arxiv.org/abs/2611.21547v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.21547v1",
+      "published": "2026-11-16T18:31:04Z",
+      "updated": "2026-11-16T18:31:04Z",
       "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2611.18534v1",
-      "title": "Impact of Grid-Forming Inverter Placement and Penetration on Local and Aggregate Frequency",
-      "authors": [
-        "Fatma Alfailkawi",
-        "Marena Trujillo",
-        "Bri-Mathias Hodge"
-      ],
-      "abstract": "Modern power systems are undergoing a huge shift in generation mix, including inverter-based resources that are fundamentally changing the stability dynamics of the grid. Thus, synchronous Generators (SG) are gradually being displaced by Grid-forming inverters (GFM) that are proposed as a solution to continue supporting grid stability. However, the effect of GFM placement in the network on frequency performance and how well aggregate-frequency assessment captures placement sensitivity observed in local frequency metrics remains unclear. This paper evaluates all SG and droop-controlled GFM assignments in the IEEE 39-bus system. A reduced-order model is used for the exhaustive search with load disturbances applied separately at every eligible load bus while considering nadir and Rate of Change of Frequency (RoCoF) derived from both device rating weighted aggregate frequency and local bus frequencies. Results reveal that at fixed GFM penetration, placement produced up to 104 mHz variation in worst-case local nadir and 0.21 Hz/s in maximum local RoCoF. Aggregate-frequency assessment reduced the apparent across placements by 89\\% for nadir and 88\\% for RoCoF at 50\\% GFM penetration. These results indicate that aggregate-frequency assessment alone may obscure favorable or adverse placement effects on local frequency performance.",
-      "url": "https://arxiv.org/abs/2611.18534v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.18534v1",
-      "published": "2026-11-13T18:46:18Z",
-      "updated": "2026-11-13T18:46:18Z",
-      "categories": [
+        "cs.IT",
+        "cs.NI",
         "eess.SY"
       ],
-      "primary_category": "eess.SY"
+      "primary_category": "cs.IT"
     },
     {
-      "id": "2611.18505v1",
-      "title": "Disturbance-Aware Informative Planning in Spatiotemporal Environments",
+      "id": "2611.21517v1",
+      "title": "Lazy-MOSAIC: Accelerating Skill-Centric Manipulation Planning with Learned Skill-Effect World Models",
       "authors": [
-        "Kaleb Ben Naveed",
-        "Haejoon Lee",
-        "Anouck Girard",
-        "Dimitra Panagou"
+        "Itamar Mishani",
+        "Mukund Krishnakumar",
+        "Oren Salzman",
+        "Maxim Likhachev"
       ],
-      "abstract": "Autonomous robots are widely used for persistent monitoring of spatiotemporal environments, where quantities of interest (QoI) change across space and time and require repeated measurements. In practice, robot motion can be affected by external disturbances that vary across the environment. When such external disturbances are not considered in trajectory optimization, it can lead to inaccurate predictions of robot motion and, consequently, the information acquired about the QoI during execution. However, estimating disturbances throughout the environment can be inefficient, as disturbances in regions with little overlap with monitoring trajectories have limited impact on monitoring performance. We therefore propose a two-stage informative planning framework for unknown, spatially varying but time-invariant disturbances, combining informed disturbance sampling with disturbance-aware trajectory optimization. First, we identify where QoI measurements are needed and generate alternative paths to these locations using the environment geometry. We then prioritize disturbance measurements based on their expected reduction of disturbance uncertainty along these paths. Second, rather than optimizing information acquisition based on nominal robot motion, we incorporate the learned disturbance belief into trajectory optimization to account for its effects on robot motion and information acquisition. Across four simulation scenarios, the proposed method reduces disturbance-learning time by 25.0--52.3 percent compared with environment-wide estimation and identifies paths that appear costly under nominal dynamics but become preferable when disturbances are considered.",
-      "url": "https://arxiv.org/abs/2611.18505v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.18505v1",
-      "published": "2026-11-13T18:22:50Z",
-      "updated": "2026-11-13T18:22:50Z",
+      "abstract": "Long-horizon manipulation tasks require a robot to perform a sequence of physical interactions with its environment, typically combining several different skills. Planning such behaviors efficiently is challenging: given a library of parameterized skills, solutions lie in a vast hybrid space of skill sequences and their parameters, and evaluating each candidate skill's feasibility and effect with a high-fidelity world model such as a physics simulator is computationally expensive. MOSAIC, a recent skill-centric approach, lets the skills guide a non-sequential search toward the regions of this space where they are likely to succeed; however, it pays the full cost of simulation for every parameterized skill it considers. In this work, we introduce Lazy-MOSAIC, a lazy planning framework that instead searches over hypothesized skill outcomes. A cheap learned skill-effect world model predicts, in a fraction of a millisecond, a skill's feasibility and the world state it produces. Lazy-MOSAIC then uses these predictions to focus expensive simulation on promising candidate skills and, when a hypothesis is invalidated, repairs only the affected part of the search, while ensuring that every skill in a returned plan is validated in simulation. We evaluate Lazy-MOSAIC on cluttered-shelf retrieval tasks of increasing difficulty and demonstrate it on a physical robot, showing that it plans substantially faster than baselines with fewer simulator queries, while matching or exceeding their success rate in every setting. Visit skill-mosaic.github.io.",
+      "url": "https://arxiv.org/abs/2611.21517v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.21517v1",
+      "published": "2026-11-16T18:10:52Z",
+      "updated": "2026-11-16T18:10:52Z",
       "categories": [
-        "cs.RO"
+        "cs.RO",
+        "cs.AI"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2611.18502v1",
-      "title": "EPIGRIDS: Documentation and Validation of Seven Open Synthetic Transmission Grid Cases",
+      "id": "2611.21513v1",
+      "title": "A Scalable Decentralized Event-Triggered Topology-Switching Protocol for Verifiable Safety in Multi-Agent Systems",
       "authors": [
-        "Jonathan M. Snodgrass",
-        "Scott Greene",
-        "Thomas J. Overbye",
-        "Christopher L. DeMarco",
-        "Bernard C. Lesieutre"
+        "Amber He Wei",
+        "Shiyu Cheng",
+        "Andrew Clark",
+        "Bruno Sinopoli"
       ],
-      "abstract": "This paper documents and checks EPIGRIDS, seven open synthetic transmission grid cases from four independently built networks, made with an optimization-based construction method instead of the graph-statistics method behind most large public synthetic grids. The cases range from 250 to 78,484 buses, with geolocated substations, voltages up to 765 kV, and line parameters taken from conductor data. Each ships under an open license in three common power flow formats that agree at the solved operating point, and the six larger cases have a companion hourly, bus-level load series for one year. The Texas, Florida, and Michigan, Ohio, and Indiana cases are sub-networks of the Eastern case. Every case solves an alternating-current power flow from its stored operating point. With parallel circuits merged, the Eastern and Western cases are 9 and 16% denser than the real interconnections, while graph-statistics cases on the same footprints lie within 6% and meet more published realism criteria. A full single-outage contingency analysis completes on every case, and in an optimal power flow benchmark every case except the New England base case and one of its 12 operating points solves in polar form.",
-      "url": "https://arxiv.org/abs/2611.18502v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.18502v1",
-      "published": "2026-11-13T18:17:52Z",
-      "updated": "2026-11-13T18:17:52Z",
+      "abstract": "This paper develops a decentralized event-triggered topology-switching protocol that allows agents to disconnect from the communication network while preserving state safety and excluding Zeno behavior. We establish a robust barrier function condition that guarantees safety as long as the estimation error remains within a prescribed threshold. Each agent uses locally computable certificates to determine when to connect and disconnect from the network. The certificate construction improves scalability by reducing the complexity of topology-dependent computations from $O(2^N)$ to $O(N)$, where $N$ is the number of agents. We formally prove that the protocol ensures the estimation error does not exceed the prescribed threshold and is non-Zeno. An alternating method computes an error-weighting matrix and a quadratic barrier function that guarantee safety under the proposed protocol. Finally, we evaluate the protocol on four interconnected microgrids. Compared with maintaining network connectivity at all times, the protocol reduces the time agents remain connected while keeping phase and frequency within their safe operating region.",
+      "url": "https://arxiv.org/abs/2611.21513v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.21513v1",
+      "published": "2026-11-16T18:09:22Z",
+      "updated": "2026-11-16T18:09:22Z",
       "categories": [
         "eess.SY",
         "math.OC"
@@ -109,108 +142,84 @@
       "primary_category": "eess.SY"
     },
     {
-      "id": "2611.18501v1",
-      "title": "In Situ Monitoring and Predictive Modeling of Harmful Algal Blooms with Autonomous Surface Vehicles",
+      "id": "2611.21507v1",
+      "title": "GHySSeg: Real-Time Geometric Ground and Road Segmentation for Hybrid Solid-State LiDAR",
       "authors": [
-        "Nenyi Kweku Nkensen Dadson",
-        "Jean Paul Gonzalez",
-        "Daniel P. Arabie",
-        "Ryan J. Cedel",
-        "Dorin Boldor",
-        "Corina Barbalata"
+        "Mart\u00edn Palos",
+        "Fernando Garc\u00eda"
       ],
-      "abstract": "Harmful Algal Blooms (HABs) pose significant environmental, economic, and public-health challenges in coastal and inland water bodies, creating a need for scalable methods to collect spatially distributed water-quality data. This paper presents an autonomous surface vessel-based sensing system for in-situ water-quality monitoring related to harmful algal bloom detection. The system integrates a BlueBoat Autonomous Surface Vessel (ASV), a motorized winch for depth-controlled sonde deployment, a multiparameter water-quality sonde, side-scan sonar, and an event-camera payload. Autonomous waypoint missions were used to collect measurements across selected sampling regions and multiple depths, enabling both horizontal and vertical characterization of environmental conditions. Field deployments were conducted in Lake Pontchartrain, Louisiana, with additional measurements collected in False River, Louisiana to increase dataset diversity. The collected measurements included algal pigment indicators, nutrient concentration, turbidity, temperature, and other water-quality parameters relevant to bloom formation. In addition, complementary sonar and event-camera data were collected during vehicle operation to provide contextual environmental information. A machine-learning classification approach was also evaluated using the collected water-quality measurements to support HAB and non-HAB classification. The results demonstrate the feasibility of using a modular ASV platform for repeatable, multi-modal water-quality data collection and support future development of autonomous monitoring systems.",
-      "url": "https://arxiv.org/abs/2611.18501v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.18501v1",
-      "published": "2026-11-13T18:14:56Z",
-      "updated": "2026-11-13T18:14:56Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2611.18496v1",
-      "title": "Toward Resilient Self-Driving Laboratories through Telerobotic Interventions",
-      "authors": [
-        "Ziheng Wu",
-        "Adrian Vecina Tercero",
-        "Andre A. Fatehi",
-        "Abhik Sarkar",
-        "Brian Giera",
-        "Eric B. Duoss",
-        "Christopher M. Spadaccini",
-        "Nikhil Deshpande",
-        "Aldair E. Gongora"
-      ],
-      "abstract": "Self-driving laboratories (SDLs) accelerate scientific research by integrating robotics, automated experimentation, and machine learning to execute experiments autonomously. Biology and chemistry have adopted these systems. However, increasing SDL complexity heightens susceptibility to unexpected faults in automated workflows, highlighting the need for efficient recovery mechanisms. In this study, we investigate telerobotic interventions to enhance SDL resilience against unexpected failures. We developed a teleoperation interface enabling human operators to resolve disruptions during automated tasks. The interface enables precise control of a six-degree-of-freedom (DOF) robotic arm (UR3e) using a 3D mouse (3Dconnexion SpaceMouse Pro). Two velocity-based controller strategies were evaluated: (i) a coupled mode mapping all six DOFs to the 3D mouse's central knob and (ii) a decoupled mode separating translational and rotational motions. To evaluate the framework, teleoperators intervened across three SDL fault scenarios. In the first study, comparative trials showed that the decoupled controller was associated with shorter completion times and reduced rotational motion. In a second study, teleoperators performed an aiming task with and without reference-path guidance. Users were more target-driven and risk-tolerant without guidance but showed behavioral differences under different guidance strategies. These findings suggest that controller configuration and reference-path design influence operator performance during SDL fault recovery, informing teleoperation interface optimization. This work demonstrates the potential feasibility of teleoperation as a human-in-the-loop recovery mechanism for SDL workflows, combining robotic precision with human adaptability and problem-solving. These findings also provide a foundation for future studies in shared autonomy and semi-autonomous intervention.",
-      "url": "https://arxiv.org/abs/2611.18496v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.18496v1",
-      "published": "2026-11-13T18:06:25Z",
-      "updated": "2026-11-13T18:06:25Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2611.18491v1",
-      "title": "When Will You Hand It Over? A Hidden Start Delay Makes Self-Play Handover Robust to Unfamiliar Partners",
-      "authors": [
-        "Mohammad Khoshnazar",
-        "Mike Degany",
-        "Deyuan Qu",
-        "Qing Yang",
-        "Matyas Szanto"
-      ],
-      "abstract": "Cooperative self-play can teach a humanoid to receive an object without any human data, but the partner it meets after training is never the one it trained with; we show that a fluent self-play handover policy breaks with unfamiliar partners, identify the main cause, and repair it. In a physics-based parcel handover between a Unitree G1 and a learned giver, both trained by alternating PPO self-play, the receiver completes 95% and 90% of handovers with its own partner (two training seeds) but only 31% with scripted partners it has never met. Paired interventions isolate the cause: under a shared reward the learned giver always starts its offer at once, so the receiver learns a single rendezvous, and delaying its own partner by one second cuts success from 95% to 6% (87% to 34% in the second seed). We introduce hidden start-delay randomisation (HSD), a one-line rule on the learned partner that the receiver never observes. After 300 further updates, success with unseen scripted partners rises from 31% to 80% in both seeds, against 35--41% for a budget-matched control. The gain holds on a fresh scenario seed, on eleven held-out partner conditions and on partners that start later than any training delay; it cuts high-force contact three- to five-fold and needs no retraining of the partner.",
-      "url": "https://arxiv.org/abs/2611.18491v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.18491v1",
-      "published": "2026-11-13T18:04:37Z",
-      "updated": "2026-11-13T18:04:37Z",
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2611.18484v1",
-      "title": "From AI-Enabled Remote Patient Monitoring Toward Agentic Robotics: Embodiment, Governance, and Care Integration",
-      "authors": [
-        "Ivana Ragusa",
-        "Lorenzo Guiducci",
-        "Filippo Cavallo"
-      ],
-      "abstract": "AI-enabled remote patient monitoring is evolving beyond passive data collection toward agentic AI systems that interpret patient states, coordinate care, and initiate action across domestic and clinical settings. This structured scoping review finds that mature agentic care has not yet emerged: Most systems remain human led, while stronger decision-action coupling and embodied AI remain largely confined to prototypes and pilots. Healthcare robotics makes the transition from monitoring to action especially visible by translating AI-generated recommendations and decisions into speech, movement, prompting, physical assistance, escalation, and care coordination, making embodiment, clinical integration, human oversight, and governance fundamental design requirements. Further progress requires safe and interoperable care architectures in which intelligent components operate through clinically validated and accountable workflows. We propose agentic robotics as a future direction for supervised systems embedded in the care ecosystem, connecting AI agents and robots with clinicians, caregivers, and patients through auditable workflows that can be interrupted and remain subject to human oversight and explicit AI governance.",
-      "url": "https://arxiv.org/abs/2611.18484v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.18484v1",
-      "published": "2026-11-13T17:59:40Z",
-      "updated": "2026-11-13T17:59:40Z",
+      "abstract": "Hybrid solid-state LiDAR sensors are making their way into production vehicles, yet the data they produce differs structurally from that of the established spinning mechanical sensors behind today's autonomous-driving datasets: it is ring-free, dense, cluttered, and concentrated in a frontal field of view. The classical geometric methods that autonomous vehicles rely on for drivable space computation and navigation assume the ordered ring-and-column structure of a 360-degree spinning LiDAR and degrade or fail on this data, while learned alternatives are computationally heavy, hard to certify, and trained almost exclusively on spinning-LiDAR data. We demonstrate that the same dense, per-curve geometry is instead an opportunity to close the divide between the industry's preferred sensors and autonomous-driving research. We present GHySSeg, a purely geometric method that segments ground and drivable road from a single hybrid solid-state LiDAR frame by tracing each scan curve and reading two geometric signatures, a step in height and a fold-back in range, with no training and no graphics processing unit. To evaluate it, we release HySoLiD-Drive, the first public benchmark dedicated to ground and road segmentation on an automotive hybrid solid-state LiDAR, comprising 100 manually labeled and 7000 unlabeled frames recorded by two vehicles in real driving. On this benchmark, GHySSeg surpasses both geometric and learned state-of-the-art baselines across ground and road segmentation, reaching an intersection-over-union of 0.907 for road and 0.896 for ground at over 0.96 precision, while running in real time at about 22 milliseconds per frame on a single core.",
+      "url": "https://arxiv.org/abs/2611.21507v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.21507v1",
+      "published": "2026-11-16T18:04:36Z",
+      "updated": "2026-11-16T18:04:36Z",
       "categories": [
         "cs.RO",
-        "cs.AI",
-        "cs.MA",
-        "cs.SE",
-        "eess.SY"
+        "cs.CV"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2611.18451v1",
-      "title": "Policy-Conditioned Koopman Representations for Parameterized Closed-Loop Systems",
+      "id": "2611.21483v1",
+      "title": "Input-to-State Stability in Distributed Adaptive Identification of Nonlinear Systems without Input Sharing",
       "authors": [
-        "Kiran G. Krishnan",
-        "Shankar A. Deka"
+        "Moh Kamalul Wafi"
       ],
-      "abstract": "Predicting the response of a nonlinear system across different feedback controllers requires a model that captures how the closed-loop dynamics change with the controller parameters. In a finite-dimensional Koopman model, these changes may affect both the latent dynamics and the observable coordinates used to represent them. In this paper, we propose a policy-conditioned Koopman representation framework to address this problem. This framework allows a single learned model to predict a family of closed-loop trajectories without retraining for each controller. We test the framework on four nonlinear prediction benchmarks, where the model stays below a 15% error threshold on every system, while each baseline exceeds it on at least one. As an example application, the resulting surrogate supports one-shot feedback-parameter selection: an optimization at the initial state selects a controller that then operates with fixed parameters and ongoing state feedback. On nonlinear control benchmarks including MuJoCo, the selected controllers stabilize every system with 3 to 97 times less online computation than nonlinear model predictive control. These results demonstrate how policy-dependent coordinates can support both prediction across closed-loop systems and controller selection without repeated online trajectory optimization.",
-      "url": "https://arxiv.org/abs/2611.18451v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.18451v1",
-      "published": "2026-11-13T17:22:59Z",
-      "updated": "2026-11-13T17:22:59Z",
+      "abstract": "This paper studies continuous-time distributed adaptive identification of unknown nonlinear systems over directed communication networks without requiring source or neighboring inputs to be shared. Each sensing node reconstructs the source state while adapting local estimates of the unknown linear and nonlinear dynamics using only locally available information and neighboring state estimates. A network-level error representation is derived to characterize the interaction among the communication topology, observer dynamics, parameter uncertainty, and nonlinear mismatch. Norm-based, structured Lyapunov, and robust LMI conditions are established to guarantee that the resulting coupling operator is Hurwitz. Unlike the corresponding discrete-time formulation, the proposed continuous-time adaptive laws do not require normalization. A Lyapunov analysis establishes boundedness of the adaptive parameters and asymptotic convergence of the estimation and source-tracking errors in the unperturbed case. Input-to-state stability is further established under bounded predictor mismatch and source disturbances. Numerical studies over star, cyclic, and path topologies support the theoretical results and demonstrate approximately linear computational scaling with the number of sensing nodes.",
+      "url": "https://arxiv.org/abs/2611.21483v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.21483v1",
+      "published": "2026-11-16T17:53:31Z",
+      "updated": "2026-11-16T17:53:31Z",
       "categories": [
         "eess.SY"
       ],
       "primary_category": "eess.SY"
+    },
+    {
+      "id": "2611.21480v1",
+      "title": "RESILAGENT: A Three-Pillar Architecture for Cyber-Physical Resilience in Electrical Power and Energy Systems",
+      "authors": [
+        "Nikolaos Kekatos",
+        "Georgios Koutidis",
+        "Konstantinos Antonakopoulos",
+        "Stylianos Basagiannis",
+        "Sokratis Katsikas",
+        "Georgios Kavallieratos",
+        "Alexios Lekidis",
+        "Tom Nianios",
+        "Elpiniki Papageorgiou"
+      ],
+      "abstract": "Electrical Power and Energy Systems face hybrid threats that combine cyber intrusions, physical sabotage and climate-driven stress, and routinely outpace today's siloed monitoring stacks. We present RESILAGENT, a concept architecture organised around three operational pillars, Sensing & Data Intelligence, Resilience Analytics & Reporting, and Incident Response & Recovery, mediated by a Cloud-based Orchestrator and exercised through a closed Detect-Simulate-Decide-Sign loop. The framework fuses agentic artificial intelligence and multimodal large language models for cross-modal detection, real-time digital twins for what-if simulation, and a permissioned blockchain anchor for tamper-evident threat intelligence and CER/NIS2-aligned evidence. We instantiate it on two scenarios, a transmission operator under coordinated cyber compromise, sabotage and heatwave, and a distribution operator under a supply-chain compromise during a storm, and report an IEEE-bus micro-benchmark that quantifies each pillar through false-data-injection attack detection, cyber-physical fusion lift, N-1 contingency screening and anchor cost.",
+      "url": "https://arxiv.org/abs/2611.21480v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.21480v1",
+      "published": "2026-11-16T17:51:46Z",
+      "updated": "2026-11-16T17:51:46Z",
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "eess.SY"
+      ],
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2611.21465v1",
+      "title": "Warm Starting Neural Dynamics Models From Few Jacobian Samples",
+      "authors": [
+        "Maxime Rochkoulets",
+        "Joppe De Jonghe",
+        "Mariya Ishteva"
+      ],
+      "abstract": "Model-based reinforcement learning (MBRL) leverages a model of the environment, used for planning and generating samples without interacting with the real world. Motivated by evidence that informed initialization significantly improves the efficiency of MBRL, we propose TDec-Init, an algorithm to warm-start neural dynamics models using transition Jacobians. Using a decoupling algorithm based on the decomposition of a tensor of stacked Jacobian samples, we recover weights and flexible nonlinearities, and use them to initialize a feedforward neural network. In the low-data regime, we show on several benchmark environments that our approach outperforms random initialization and value training, and either matches or outperforms Sobolev training, while requiring fewer training steps between episodes.",
+      "url": "https://arxiv.org/abs/2611.21465v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.21465v1",
+      "published": "2026-11-16T17:46:39Z",
+      "updated": "2026-11-16T17:46:39Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "eess.SY"
+      ],
+      "primary_category": "cs.LG"
     }
   ]
 }
