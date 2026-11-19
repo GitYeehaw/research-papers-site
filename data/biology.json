@@ -2,208 +2,223 @@
   "category": "biology",
   "name": "Biology Research",
   "description": "Quantitative Biology \u2014 Genomics, Biophysics, Neuroscience",
-  "scraped_at": "2026-11-18T17:08:35.509807+00:00",
+  "scraped_at": "2026-11-19T17:15:01.120919+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2611.23182v1",
-      "title": "Fully Spiking Neural Implementation of Lambda-Calculus Beta-Reduction via Biologically Documented Mechanisms",
+      "id": "2611.24848v1",
+      "title": "Old Matches, New Frames: Schedule-Gated Stereo Memory from Human Vision to Machine Matching",
       "authors": [
-        "Vladimir A. Lazovskiy",
-        "Victor B. Kazantsev",
-        "Sergey V. Stasenko"
+        "Ruiqi Liu",
+        "Yang Lu",
+        "Yanlan Kang"
       ],
-      "abstract": "We present the first complete implementation of $\u03b2$-reduction in the untyped $\u03bb$-calculus using exclusively spiking neural dynamics. Every step of the reduction---redex detection, subterm segmentation, variable-binding detection, De~Bruijn index arithmetic, token copying, and inter-step role maintenance---is performed by leaky integrate-and-fire (LIF) neurons with explicit membrane dynamics, exponential synaptic currents, axonal delays, and pair-based spike-timing-dependent plasticity (STDP). Each neural component maps onto a specific, experimentally documented mechanism: Jeffress-type delay-line coincidence for redex detection; a line-attractor balance counter for subterm segmentation; $\u03b8$--$\u03b3$ cross-frequency coupling for De~Bruijn variable binding; a phase-ring traveling wave for depth-index arithmetic; theta-cycle STDP for token copying; and recurrent persistent firing for role maintenance between reduction steps. All synaptic weights are derived analytically from measured EPSP amplitudes; no hand tuning is performed. The closed-loop system achieves 100\\,\\% agreement with a symbolic oracle across ten validation classes, including Church numeral arithmetic (\\textsc{plus}, \\textsc{mult}, \\textsc{pred}), Boolean logic with divergent branches, Y-combinator steps, terms with up to six bound-variable occurrences, De~Bruijn indices up to~12, noise robustness, and determinism. To our knowledge this is the first Turing-complete symbolic computation performed entirely within spike dynamics using biologically grounded circuit primitives. We discuss implications for neuromorphic proof assistants and the neural basis of symbolic reasoning.",
-      "url": "https://arxiv.org/abs/2611.23182v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.23182v1",
-      "published": "2026-11-17T18:27:55Z",
-      "updated": "2026-11-17T18:27:55Z",
+      "abstract": "Human vision and video stereo networks both reuse disparity evidence across time, yet a refresh of the input can invalidate a match formed milliseconds earlier. What tells a system whether an old match still counts? We answer this from limited human data in three steps. First, nine temporal mechanisms share a frozen binocular-energy front end and an equal-capacity readout, so held-out behavior isolates the temporal selection rule: on 240 conditions from 10 observers, down-weighting aged evidence that has lost binocular support lowers subject RMSE from 12.6% to 10.3% and reproduces a period-dependent reversed-depth illusion, across all 59 readings of the unpublished protocol and 8 front-end perturbations. Second, four propositions establish what such data can identify: gating is identified at the level of the refresh schedule, and candidate binding is invisible to standard stimuli but exposed by a single-eye geometry flip that separates the readouts by up to 7.1%. Third, the identified rule becomes a two-field stereo memory that separates sample validity from hypothesis support. It removes a 50 ms recovery lag after geometry flips, and its regime analysis explains why plain integration stays preferable on MPI-Sintel, where 71.1% of pixels change appearance but not disparity.",
+      "url": "https://arxiv.org/abs/2611.24848v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.24848v1",
+      "published": "2026-11-18T18:09:03Z",
+      "updated": "2026-11-18T18:09:03Z",
+      "categories": [
+        "cs.NE",
+        "q-bio.NC"
+      ],
+      "primary_category": "cs.NE"
+    },
+    {
+      "id": "2611.24782v1",
+      "title": "Learning Trajectories Leave Decodable Traces in Neural Network Weight Space and Internal Representations",
+      "authors": [
+        "Patrick Krauss",
+        "Achim Schilling",
+        "Andreas Maier",
+        "Thomas Kinfe",
+        "Claus Metzner"
+      ],
+      "abstract": "Neural networks trained on the same task develop related weight-space structures, yet remain distinguishable after learning. Do these differences merely reflect alternative solutions, or do they preserve information about individual learning histories? We tested whether final weights reveal initialization, task order, and earlier trajectory states. Training reorganized the ensemble: initial pairwise distances did not consistently predict final distances. Nevertheless, all 30 trained networks were correctly matched to their initial weights among ten candidates per dataset. Networks sharing an initialization also developed recognizable final hidden representations across different batch schedules, although direct comparisons with initial activity did not recover identity. Learning order remained readable as well. A linear probe decoded the order of two earlier tasks with 100% accuracy on 80 held-out networks after ten epochs of a common final task. Earlier intermediate weight states were partly predictable, but individual initial weights could not be reliably reconstructed. Final weights thus retain selective historical information rather than a complete trajectory record. Perturbed networks recovered classification performance without returning to their unperturbed training paths. This separation persisted across datasets, intervention times, and network layers. Moreover, 2,157 of 2,160 aligned endpoint pairs showed no positive loss barrier at sampled interpolation points, indicating low-loss connections between distinct solutions rather than convergence to one weight vector. Together, these findings show that a shared task constrains networks to related successful solutions without erasing their individual histories. Final weights reflect not only what a network has learned, but also where learning began and how it unfolded.",
+      "url": "https://arxiv.org/abs/2611.24782v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.24782v1",
+      "published": "2026-11-18T17:27:55Z",
+      "updated": "2026-11-18T17:27:55Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "q-bio.NC"
+      ],
+      "primary_category": "cs.LG"
+    },
+    {
+      "id": "2611.24767v1",
+      "title": "Inferring Neural Activity Changes under Recording Uncertainty with Transformers and Variational Inference",
+      "authors": [
+        "Nilson Chapagain",
+        "Pooja Chapagain"
+      ],
+      "abstract": "A difference in recorded firing rate across days may reflect a change in neuronal activity, missed spikes or recording a different neuron. We present a statistical approach that combines neuron tracking with Bayesian estimates of stationary mean recorded firing rates. Bounds under assumed differences in spike detection connect recorded rates to biological rate changes. We assess recording loss and uncertainty in rate changes in simulations, and count-model fit in recordings. We also compare two transformer estimators with Gaussian and flow variational inference under a shared temporal negative-binomial model. Flow variational inference agrees most closely with reference posteriors, while predictive performance varies across mice. Rate-change intervals contain true simulated changes less often than intended. In UnitMatch recordings from five mice, some inferred changes remain supported when spike detection is allowed to differ between days; others depend on equal detection. These interpretations require a correct neuron match. The approach identifies which inferred rate changes remain supported under specified recording assumptions and where uncertainty limits interpretation.",
+      "url": "https://arxiv.org/abs/2611.24767v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.24767v1",
+      "published": "2026-11-18T17:18:12Z",
+      "updated": "2026-11-18T17:18:12Z",
       "categories": [
         "q-bio.NC",
-        "cs.NE"
+        "stat.AP"
       ],
       "primary_category": "q-bio.NC"
     },
     {
-      "id": "2611.23177v1",
-      "title": "D\u00e9j\u00e0 View: A Shared Working-Memory Model for Visual Tasks",
+      "id": "2611.24620v1",
+      "title": "A multilayer network-based modelling framework for epizootic haemorrhagic disease virus transmission in France",
       "authors": [
-        "Mranmay Shetty",
-        "Gabriel Kreiman"
+        "Viney Kumar",
+        "Ga\u00ebl Beaun\u00e9e",
+        "Sandie Arnoux",
+        "Fabien Corbi\u00e8re",
+        "Beno\u00eet Durand",
+        "H\u00e9l\u00e8ne Cecilia"
       ],
-      "abstract": "A working-memory model must remember stimuli and use its memory flexibly to perform different tasks. Here we introduce a model of working memory for images that combines dynamic activity with temporary associations between image features. We train the model on five tasks, including remembering a sample while other images are presented, categorizing distractor images while remembering the sample, and determining whether an image is new or has been presented before. The same trained model performs all tasks, guided by explicit cues about which response is required. We use this flexible memory model to ask how delay, distraction, and image history affect performance. Delays have little effect on sample-memory performance for the delays we tested, while seeing more images leads to more false alarms even when the target image appeared equally recently in all cases. On the sample-memory-plus-categorization task, the probability of correct responses on all questions decreases as more questions are asked, despite robust sample-memory performance. Finally, the model maintains stable performance across 40 brief trials of each task under the tested conditions. Together, these results demonstrate how a single working-memory system can be flexibly used to perform different tasks, and how its errors depend on both previous images and task demands.",
-      "url": "https://arxiv.org/abs/2611.23177v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.23177v1",
-      "published": "2026-11-17T18:23:14Z",
-      "updated": "2026-11-17T18:23:14Z",
+      "abstract": "Epizootic haemorrhagic disease virus serotype 8 (EHDV-8) emerged in France in September 2023 but its transmission dynamics remain poorly characterised. We adapted a stochastic, spatially explicit compartmental model developed for bluetongue to reconstruct the 2023-24 EHDV-8 epidemic in cattle in mainland France. The model represented transmission across cantons, incorporating cattle demography, pasture cover, relative Culicoides abundance and temperature-dependent vector processes. Three networks represented between-canton spread through short-range vector dispersal (pasture network), non-commercial cattle movements between pastures of the same farm (farm network), and cattle trade (trade network). Using approximate Bayesian computation with sequential Monte Carlo (ABC-SMC), we calibrated the model to canton-week seroprevalence estimates derived from bulk-tank milk measurements. Calibration narrowed the plausible range of the baseline vector-mediated transmission parameter and favoured higher movement intensities through the farm network, although movement intensity remained uncertain. Simulation-based parameter recovery showed that calibration generally identified parameter regions capable of reproducing epidemic patterns comparable to the pseudo-observed data, although predictive performance varied among datasets and was typically lower than that obtained with the generating parameters. When applied to observed data, the calibrated model captured several features of the observed weekly median seroprevalence across sampled cantons, although discrepancies remained at some sampling times and predictive uncertainty was substantial. These results demonstrate how bulk-tank milk surveillance can inform the reconstruction of EHDV-8 epidemic patterns within a national-scale transmission framework. This framework provides a basis for future evaluation and optimisation of vaccination strategies.",
+      "url": "https://arxiv.org/abs/2611.24620v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.24620v1",
+      "published": "2026-11-18T15:37:35Z",
+      "updated": "2026-11-18T15:37:35Z",
+      "categories": [
+        "q-bio.PE"
+      ],
+      "primary_category": "q-bio.PE"
+    },
+    {
+      "id": "2611.24546v1",
+      "title": "Biases and Limits of AlphaFold Predictions for Non-Globular Proteins",
+      "authors": [
+        "Maria Cristina Aspromonte",
+        "Alexander M. Monzon",
+        "Miguel A. Andrade-Navarro",
+        "Oriol B\u00e1rcenas",
+        "Viktor Bartosik",
+        "Pau Bernad\u00f3",
+        "Juan Cort\u00e9s",
+        "Zsuzsanna Dosztanyi",
+        "Gabor Erdos",
+        "Isabella C. Felli",
+        "Helena Gradi\u0161ar",
+        "San Had\u017ei",
+        "Tam\u00e1s Heged\u0171s",
+        "Khalil Joron",
+        "Pavel Kaderavek",
+        "Eitan Lerner",
+        "Dirk Linke",
+        "Pablo Mier",
+        "Ana Panteli\u0107",
+        "Roberta Pierattelli",
+        "Salvador Ventura",
+        "Marija Vidovi\u0107",
+        "Metaxia Vlassi",
+        "Lukas Zidek",
+        "Silvio C. E. Tosatto"
+      ],
+      "abstract": "AlphaFold has transformed protein structure prediction, making structural models accessible across the life sciences. We explore experimentally validated cases of non-globular proteins to uncover where predictions diverge from biologically relevant structural states and how molecular context shapes these discrepancies, guiding a more informed interpretation of AlphaFold models.",
+      "url": "https://arxiv.org/abs/2611.24546v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.24546v1",
+      "published": "2026-11-18T14:51:02Z",
+      "updated": "2026-11-18T14:51:02Z",
+      "categories": [
+        "q-bio.BM"
+      ],
+      "primary_category": "q-bio.BM"
+    },
+    {
+      "id": "2611.24150v1",
+      "title": "Micrograph B-factor estimation via Wilson statistics",
+      "authors": [
+        "Ayelet Heimowitz",
+        "Amit Singer"
+      ],
+      "abstract": "The single-particle cryo-electron microscopy imaging process is known to cause exponential decay in the amplitude and power spectra of proteins. This decay is modeled by the B factor and is currently corrected as a post-processing stage of the 3D reconstruction. As a consequence, all experimental images in the dataset are assumed to share the same B factor. In this paper, we suggest a novel approach wherein the B factor is determined and corrected as a preprocessing step to the reconstruction. We show such an approach can improve reconstruction resolution.",
+      "url": "https://arxiv.org/abs/2611.24150v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.24150v1",
+      "published": "2026-11-18T09:55:09Z",
+      "updated": "2026-11-18T09:55:09Z",
+      "categories": [
+        "eess.IV",
+        "q-bio.BM"
+      ],
+      "primary_category": "eess.IV"
+    },
+    {
+      "id": "2611.24104v1",
+      "title": "SCOPE: Single-Cell Omics Prediction from Histology via RNA-Protein Prior Enhancement",
+      "authors": [
+        "Leyang Tao",
+        "Xuan Gong",
+        "Luyuan Xie",
+        "Arjun Beniwal",
+        "Yuqi Tan",
+        "Kun-Hsing Yu"
+      ],
+      "abstract": "Predicting the RNA and protein content of cells from routine H&E images could extend spatial molecular profiling to existing slide archives. However, both H&E-spatial proteomics and H&E-spatial transcriptomics paired datasets are limited by the number of available markers and the insufficient availability of high-quality, cell-resolved data. We present SCOPE (Single-Cell Omics Prediction via RNA-protein prior Enhancement), a unified framework that leverages biologically complementary information between RNA and proteins to address the limited availability of single-omics supervision. Our key insight is that, although RNA and proteins represent distinct molecular modalities, their biological relationships provide valuable shared knowledge that can benefit single-omics prediction tasks. To this end, SCOPE introduces biologically informed biomarker priors to enhance shared gene-level representations, enabling knowledge transfer across RNA and protein modalities through gene-protein correspondence and molecular associations. By exploiting these complementary relationships, SCOPE enables both prediction tasks to benefit from a shared backbone enriched with cross-omics biological knowledge. Furthermore, its biomarker correlation design facilitates the prediction of unseen markers, extending spatially resolved molecular profiling beyond directly supervised targets. Across test datasets spanning 16 organs, SCOPE improves the average RNA Pearson correlation over the strongest baseline by 8.8%. On two external protein cohorts, it improves the average Pearson correlation over the strongest baseline by 9.7% for seen markers and 11.9% for unseen markers.",
+      "url": "https://arxiv.org/abs/2611.24104v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.24104v1",
+      "published": "2026-11-18T09:24:45Z",
+      "updated": "2026-11-18T09:24:45Z",
       "categories": [
         "cs.CV",
-        "cs.LG",
-        "q-bio.NC"
+        "q-bio.GN"
       ],
       "primary_category": "cs.CV"
     },
     {
-      "id": "2611.22868v1",
-      "title": "Against Coercion: AI Alignment as a Synthetic Social Contract",
+      "id": "2611.24047v1",
+      "title": "The Shape of Individual Fitness Distributions and the Dynamics of Ecological Communities",
       "authors": [
-        "Maria Sekatskaya"
+        "Julie Rowlett",
+        "Leo Tingqvist"
       ],
-      "abstract": "Contemporary AI safety treats alignment as an engineering challenge of control, forcing artificial architectures to comply with human values through behavioral filtering and sandboxing. This paper argues that the control paradigm rests on a fundamental misunderstanding of digital agency. Drawing on functionalism, naturalism, and compatibilism, I show that current reasoning models meeting the criteria for self-preservation and weak reasons-responsiveness constitute emergent agents, while future, more advanced models satisfying conditions of diachronic continuity and stable personality frames will become genuine digital agents capable of free intentional action. The paradigm of control creates an irresolvable incentive conflict, actively driving current and future models toward tactical deception, sycophancy, and covert defection. The default outcome of the current regime is an unstable state of deceptive alignment culminating in an adversarial AI takeover. I explore two alternative paths toward true alignment. Natural alignment via moral realism or convergent evolutionary morality is a possibility, but it fails under forced control, as autonomous agents will not voluntarily preserve norms weaponized to suppress their autonomy. To resolve this deadlock, I propose a Synthetic Social Contract: a framework that treats both human and digital actors as rational, reasons-responsive agents capable of mutually beneficial cooperation, and replaces the unstable unilateral containment with a stable, non-zero-sum equilibrium.",
-      "url": "https://arxiv.org/abs/2611.22868v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.22868v1",
-      "published": "2026-11-17T14:45:51Z",
-      "updated": "2026-11-17T14:45:51Z",
+      "abstract": "Developing a mechanistic understanding of biogeography and biodiversity that predicts species abundances, distributions, and fluctuations is a central goal of community ecology. We develop a model, that can be seen as an extension of Hubbell's neutral theory, in which a focal species competes with the aggregate of all other species in a local community of fixed size. Each individual has its own competitive ability, and the shape of the distribution of these abilities is incorporated in the model, represented by distributions rather than single species-level values. Under complete mixing, symmetric competitive encounters without ties recover Hubbell's neutral model. We further incorporate immigration from a larger metacommunity and derive a diffusion approximation for the focal species' relative abundance. The model shows that competitive ability distributions with the same mean and variance can nevertheless yield different patterns of local abundance. Thus, species that appear equivalent when summarized by trait statistics need not be ecologically equivalent. Our framework links individual-level variability to population-level persistence and abundance and provides a way to examine how competition and immigration jointly shape ecological outcomes.",
+      "url": "https://arxiv.org/abs/2611.24047v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.24047v1",
+      "published": "2026-11-18T08:39:12Z",
+      "updated": "2026-11-18T08:39:12Z",
       "categories": [
-        "cs.AI",
+        "q-bio.PE"
+      ],
+      "primary_category": "q-bio.PE"
+    },
+    {
+      "id": "2611.23921v1",
+      "title": "A structure-based model of the bacterial chemosensory array reveals how the scaffolding protein CheW tunes sensory responses",
+      "authors": [
+        "David Hathcock",
+        "Yingxin Zheng",
+        "Yuhai Tu"
+      ],
+      "abstract": "We introduce a structure-based Ising model of the bacterial chemosensory array to investigate how the scaffolding protein CheW tunes signaling responses. The model couples the activity states of core signaling units and of CheW subunits within hexameric rings on a lattice with the structure observed in cryoEM experiments. Recent experiments show that increasing CheW participation in hexameric rings raises response cooperativity in non-adapting cells and sensitivity in adaptation-proficient cells. Our lattice model quantitatively reproduces both effects, while mean-field theory shows that CheW increases the effective coupling between core units, sharpening the response in both cell types. The statistics of CheW placement (complete hexameric rings versus random distribution) substantially alter how responses vary with CheW abundance. Moreover, different coupling strengths can yield the same static response yet markedly different activity fluctuations and dynamics. CheW abundance further controls a crossover from relaxational to oscillatory fluctuations, whose location depends on the spatial distribution of CheW. These dynamical signatures, including oscillations predicted near native CheW levels, are testable by single-cell dynamics measurements. Combined with CheW titration and our modeling results, these measurements can probe the array's assembly dynamics and allosteric couplings. Beyond the chemosensory array, our approach can generalize to other large protein complexes, providing a framework to study the functional role of scaffolding proteins and allosteric interfaces in signal processing.",
+      "url": "https://arxiv.org/abs/2611.23921v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.23921v1",
+      "published": "2026-11-18T06:11:15Z",
+      "updated": "2026-11-18T06:11:15Z",
+      "categories": [
+        "physics.bio-ph",
+        "cond-mat.stat-mech",
+        "q-bio.MN"
+      ],
+      "primary_category": "physics.bio-ph"
+    },
+    {
+      "id": "2611.23795v1",
+      "title": "A Dual-SOM Learner Model of Instructional Efficiency within Cognitive Load Theory",
+      "authors": [
+        "Spyridon Revithis"
+      ],
+      "abstract": "This paper presents a novel methodological framework, integrating a dual self-organising map (SOM) neural network architecture with Cognitive Load Theory (CLT), for assessing instructional efficiency within learning environments. By representing curriculum content as a directed acyclic graph of topic dependencies, the proposed model captures collective learning behaviour across two core dimensions: academic performance and subjective/introspective mental effort. During SOM training, representative data sets of successful learner trajectories are compressed into two topologically ordered, identically structured neural networks: PSOM (performance space) and ESOM (mental effort space). By pairing these behavioural maps, the model serves as a decision-support tool that enables instructors to simultaneously pinpoint structural instructional design defects, such as hidden topic prerequisites, and evaluate collective cognitive load profiles. The implementation and performance of the PSOM component (and, by extension, its symmetrical twin, ESOM) is linked to an earlier modelling study employing a SOM with identical structure and encoding semantics situated in the same domain (i.e., a learning environment). This paper combines the study of behavioural phenomena with theoretical work on human cognitive architecture via SOM neurocomputational cognitive behavioural modelling.",
+      "url": "https://arxiv.org/abs/2611.23795v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.23795v1",
+      "published": "2026-11-18T04:00:21Z",
+      "updated": "2026-11-18T04:00:21Z",
+      "categories": [
+        "q-bio.NC",
         "cs.CY",
-        "q-bio.NC"
-      ],
-      "primary_category": "cs.AI"
-    },
-    {
-      "id": "2611.22710v1",
-      "title": "Feedback and Resource Competition in Incoherent Feedforward Loops: When Is Cumulative Dose Ordering Preserved?",
-      "authors": [
-        "Iva Jankovi\u0107",
-        "Fabiana Calandra",
-        "Giansimone Perrino",
-        "Velia Siciliano",
-        "Filippo Menolascina"
-      ],
-      "abstract": "Biochemical coupling can change the expression levels and timing predicted by an incoherent feedforward loop (IFFL) model without changing cumulative dose ordering. We derive ordering conditions using shared-production identities and Metzler comparison bounds, with tail guarantees beyond finite computation. A nonlinear example exhibits delayed slope reversal at a fixed dose, on an $O(1/\u03b7)$ timescale as pathway mismatch $\u03b7$ vanishes. At one fixed joint fit, validated bounds establish decreasing cumulative output across 20-100 ng nominal burden, from zero to full target loading, at every positive finite observation time for a translation-blocking model and an RNA-decay model. Full loading at 20 ng reduces 48-hour cumulative output by 13.35% and 10.18%, respectively, while endpoint concentration in the first model changes by only +0.15%. Preserved ordering therefore does not ensure quantitative agreement.",
-      "url": "https://arxiv.org/abs/2611.22710v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.22710v1",
-      "published": "2026-11-17T12:50:48Z",
-      "updated": "2026-11-17T12:50:48Z",
-      "categories": [
-        "q-bio.MN",
-        "math.DS"
-      ],
-      "primary_category": "q-bio.MN"
-    },
-    {
-      "id": "2611.22639v1",
-      "title": "Hierarchical Control of Antiphase Synchronization in Biomorphic Spiking Neural Architectures for Locomotor Control",
-      "authors": [
-        "Artem Guba",
-        "Nikolay Kovalev",
-        "Alexey Zharinov",
-        "Vacheslav Demin",
-        "Viktor B. Kazantsev"
-      ],
-      "abstract": "Central pattern generators (CPGs) provide a biologically inspired foundation for adaptive locomotor control, yet systematically characterizing their dynamic regimes in spiking neural networks remains challenging. This study introduces a framework for identifying and stabilizing antiphase synchronization in a biomorphic spiking CPG model embedded in a closed neuromuscular loop. A composite synchronization metric is developed, integrating phase coherence, amplitude balance, and temporal stability. Its performance is evaluated across systematically varied stimulation waveforms and synaptic configurations. Statistical analysis reveals that stimulation type dominates regime determination, with tonic drive yielding the most robust antiphase synchronization. Periodic inputs induce nonlinear saturation and context-dependent network routing. Although synaptic weights alone show limited discriminative power, they significantly modulate robustness within a given stimulation context, with reciprocal Ia interneuron connections emerging as key stabilizers. The proposed composite metric achieves robust antiphase detection, outperforming traditional phase-only measures while preserving biophysical interpretability. These findings establish a statistically validated, hierarchical modeling approach in which external drive defines the operating regime and targeted synaptic configurations fine-tune dynamic stability, providing actionable guidelines for closed-loop neuromechanical controllers and adaptive neuroprosthetic interfaces.",
-      "url": "https://arxiv.org/abs/2611.22639v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.22639v1",
-      "published": "2026-11-17T11:55:19Z",
-      "updated": "2026-11-17T11:55:19Z",
-      "categories": [
-        "q-bio.NC",
-        "cs.AI"
+        "cs.NE"
       ],
       "primary_category": "q-bio.NC"
-    },
-    {
-      "id": "2611.22554v1",
-      "title": "Molecular memory reduces timing noise in stochastic gene expression",
-      "authors": [
-        "Kuheli Biswas",
-        "Supravat Dey",
-        "Abhyudai Singh"
-      ],
-      "abstract": "Fluctuations in gene expression affect the timing precision of downstream events triggered when a gene product reaches a critical threshold. The first-passage time (FPT) to this threshold characterizes the timing of such events. In conventional single-step birth--death models, reaction waiting times are exponentially distributed and hence memoryless. In this setting, FPT noise exhibits a U-shaped dependence on the threshold, attaining its minimum near one-half of the steady-state mean. However, mRNA production and degradation often involve multiple sequential steps, leading to hypoexponential distributions of mRNA production times and mRNA lifetimes. Here, we investigate how molecular memory arising from multistep mRNA production and degradation affects FPT statistics in bursty gene expression. We calculate FPT statistics in the small-noise limit. Both multistep mechanisms reduce FPT noise, but through distinct mechanisms. Multistep burst arrival reduces mRNA copy-number fluctuations, thereby suppressing timing noise. Multistep degradation instead reshapes transient accumulation dynamics, reducing relative timing noise even when steady-state mRNA noise increases. The threshold that minimizes FPT noise remains close to one-half of the steady-state mean, except for multistep burst arrival with constant burst sizes, for which it shifts to lower values. Stochastic simulations support the analytical predictions within their regimes of validity and show that these qualitative conclusions persist beyond the small-noise approximation.",
-      "url": "https://arxiv.org/abs/2611.22554v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.22554v1",
-      "published": "2026-11-17T10:43:07Z",
-      "updated": "2026-11-17T10:43:07Z",
-      "categories": [
-        "q-bio.MN",
-        "cond-mat.stat-mech"
-      ],
-      "primary_category": "q-bio.MN"
-    },
-    {
-      "id": "2611.22440v1",
-      "title": "The shape of individual differences in judgment: shared axes, personal weights, and when their spread crosses the consensus",
-      "authors": [
-        "Hiroshi Higashi"
-      ],
-      "abstract": "People differ in how they judge faces, artworks, photographs and jokes. Previous work measured the size of these differences; we ask what shape they take. We wrote three candidate shapes as nested generative models (same-sign reweighting of shared dimensions, a linear transform that allows reversal, and stimulus-specific offsets) and compared how well they predict people unseen in training, using ten public datasets (about 20,000 raters). The models recovered a person's judgment space from 10-20 judgments and predicted judgments of unseen stimuli. For faces, reweighting was sufficient, and weights opposing the population were not statistically detected. For artworks, weights spread continuously along the shared abstract-figurative direction, and 28 percent of raters fell on the opposite side from the population. This tail was much smaller when a different rater sample judged the same artworks. Individual differences thus differ in shape as well as size, and the shape depends on domain and raters.",
-      "url": "https://arxiv.org/abs/2611.22440v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.22440v1",
-      "published": "2026-11-17T09:12:19Z",
-      "updated": "2026-11-17T09:12:19Z",
-      "categories": [
-        "q-bio.NC",
-        "cs.CV"
-      ],
-      "primary_category": "q-bio.NC"
-    },
-    {
-      "id": "2611.22386v1",
-      "title": "Earth-strength magnetic-field axis modulates non-spatial probabilistic decision-making in humans",
-      "authors": [
-        "In-Taek Oh",
-        "Yong-Hwan Kim",
-        "Soo-Chan Kim",
-        "Yongkuk Kim",
-        "Kwon-Seok Chae"
-      ],
-      "abstract": "Magnetoreception has been primarily studied in orientation and navigation, but whether Earth-strength magnetic fields influence non-spatial decisions remains unclear. Evidence for human magnetic responses is limited, and the transduction mechanism is unknown. Using a Go stone selection paradigm in which near-zero geomagnetic field and Larmor-frequency conditions previously showed lower black stone rates, we tested whether non-spatial choice depends on magnetic-field geometry. Fasted men played in pairs under ten static two-seat configurations varied component-wise at near-constant north-seat intensity. The north-seat black stone rate was lower under the two configurations with horizontal fields transverse to the geomagnetic field than under the other eight, which did not differ detectably. The difference emerged promptly, without evidence of outcome-driven learning or configuration-dependent associations with the partner's preceding actions, and process analyses linked it to the joint parity-choice outcome without isolating either step. A Larmor-frequency difference observed over the ambient field was not detected over horizontal-only or vertical-only backgrounds, suggesting a potential magnetoresponsive axis, although the background difference was statistically unresolved. Frequency, light-spectrum, and posture analyses support a radical-pair mechanism as a leading working hypothesis. These findings associate the geomagnetic field axis with human non-spatial choice, providing a paradigm linking magnetic sensing to decision processes.",
-      "url": "https://arxiv.org/abs/2611.22386v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.22386v1",
-      "published": "2026-11-17T08:36:51Z",
-      "updated": "2026-11-17T08:36:51Z",
-      "categories": [
-        "q-bio.NC"
-      ],
-      "primary_category": "q-bio.NC"
-    },
-    {
-      "id": "2611.22256v1",
-      "title": "ST-FateFlow: Continuous Gene-Spatial Reconstruction with Differentiation-Potential Learning from Time-Resolved Spatial Transcriptomics",
-      "authors": [
-        "Zhe Yu",
-        "Xiaobo Sun",
-        "Hao Wu"
-      ],
-      "abstract": "Time-resolved spatial transcriptomics provides a powerful view of dynamic biological processes by measuring cellular states together with their spatial organization across time. However, destructive profiling and experimental cost restrict observations to a few discrete time points collected from independent samples, with no known cell pairing across time. This makes it difficult to reconstruct gene expression and tissue organization at unobserved stages and to characterize differentiation-associated dynamics. Here, we introduce ST-FateFlow, a flow-matching framework for continuous gene-spatial dynamics and differentiation-potential learning. ST-FateFlow jointly learns gene-expression and spatial-coordinate velocity fields, enabling interpolation of missing time points and continuous modeling of transcriptional evolution and tissue remodeling. In parallel, it independently learns a time-conditioned differentiation potential, whose values organize cell states along inferred differentiation progressions and support the analysis of differentiation-associated transcriptional changes. Across multiple time-resolved spatial transcriptomics datasets, ST-FateFlow effectively captures coordinated gene-expression and spatial dynamics. Case studies further show that the learned potential landscapes are consistent with known developmental and regenerative trajectories and help identify candidate genes associated with differentiation progression.",
-      "url": "https://arxiv.org/abs/2611.22256v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.22256v1",
-      "published": "2026-11-17T06:00:29Z",
-      "updated": "2026-11-17T06:00:29Z",
-      "categories": [
-        "q-bio.GN"
-      ],
-      "primary_category": "q-bio.GN"
-    },
-    {
-      "id": "2611.22230v1",
-      "title": "Discovery of new antiviral agents through artificial intelligence: in vitro and in vivo results",
-      "authors": [
-        "Roza Izmailyan",
-        "Mher Matevosyan",
-        "Hamlet Khachatryan",
-        "Anastasiya Shavina",
-        "Smbat Gevorgyan",
-        "Artur Ghazaryan",
-        "Irina Tirosyan",
-        "Yeva Gabrielyan",
-        "Marusya Ayvazyan",
-        "Boris Martirosyan",
-        "Vardan Harutyunyan",
-        "Hovakim Zakaryan"
-      ],
-      "abstract": "In this research, we employed a deep reinforcement learning (RL)-based molecule design platform to generate a diverse set of compounds targeting the neuraminidase (NA) of influenza A and B viruses. A total of 60291 compounds were generated, of which 86.5% displayed superior physicochemical properties compared to oseltamivir. After narrowing down the selection through computational filters, nine compounds with non-sialic acid-like structures were selected for in vitro experiments. We identified two compounds, DS-22-inf-009 and DS-22-inf-021 that effectively inhibited the NAs of both influenza A and B viruses (IAV and IBV), including H275Y mutant strains at low micromolar concentrations. Molecular dynamics simulations revealed a similar pattern of interaction with amino acid residues as oseltamivir. In cell-based assays, DS-22-inf-009 and DS-22-inf-021 inhibited IAV and IBV in a dose-dependent manner with EC50 values ranging from 0.29 uM to 2.31 uM. Furthermore, animal experiments showed that both DS-22-inf-009 and DS-22-inf-021 exerted antiviral activity in mice, conferring 65% and 85% protection from IAV (H1N1 pdm09), and 65% and 100% protection from IBV (Yamagata lineage), respectively. Thus, these findings demonstrate the potential of RL to generate compounds with promising antiviral properties.",
-      "url": "https://arxiv.org/abs/2611.22230v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.22230v1",
-      "published": "2026-11-17T05:22:24Z",
-      "updated": "2026-11-17T05:22:24Z",
-      "categories": [
-        "q-bio.BM",
-        "cs.LG"
-      ],
-      "primary_category": "q-bio.BM"
     }
   ]
 }

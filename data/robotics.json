@@ -2,132 +2,34 @@
   "category": "robotics",
   "name": "Robotics Research",
   "description": "Robotics \u2014 Motion Planning, Control Systems, Human-Robot Interaction, Autonomous Systems",
-  "scraped_at": "2026-11-18T17:10:03.528783+00:00",
+  "scraped_at": "2026-11-19T17:15:17.288823+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2611.23215v1",
-      "title": "Feedback-Linearised Trajectory Tracking via Model-Informed Robust Geometric DDPC",
+      "id": "2611.24940v1",
+      "title": "$Z$-sight: Unifying Vision-Language-Action and Latent World Modeling",
       "authors": [
-        "Pranav Gupta",
-        "Deepan Muthirayan",
-        "Ravi Banavar"
+        "Junjie Ye",
+        "Yiqi Zhao",
+        "Muchen Xu",
+        "Celina Shiyu Wang",
+        "Hao Dong",
+        "Ruohai Ge",
+        "Rong Xue",
+        "Benjamin J Kolligs",
+        "Aditya Dutt",
+        "Sasanka Nagavalli",
+        "Nassim A. Samad",
+        "Gaurav S. Sukhatme",
+        "Jyotirmoy V. Deshmukh",
+        "Yue Wang",
+        "Yuliang Guo"
       ],
-      "abstract": "Data-driven predictive control (DDPC) predicts system responses from recorded trajectories, but nonlinear dynamics can limit the accuracy of fixed linear predictors. This paper studies geometric robust DDPC for trajectory tracking of a fully actuated manipulator using model-based feedback linearisation. A mechanical model maps virtual acceleration commands into joint torques, while recorded data capture residual dynamics arising from imperfect model parameters. The controller minimises worst-case prediction error over an open Grassmannian ball centred at the fitted trajectory subspace. Simulations on a planar 2R manipulator under gravity compare the proposed method with double-integrator model predictive control (MPC) and direct regularised data-enabled predictive control (DeePC). Results show improved tracking over double-integrator MPC despite increased torque effort, while performance relative to DeePC depends on the reference trajectory.",
-      "url": "https://arxiv.org/abs/2611.23215v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.23215v1",
-      "published": "2026-11-17T18:56:09Z",
-      "updated": "2026-11-17T18:56:09Z",
-      "categories": [
-        "cs.RO",
-        "eess.SY"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2611.23211v1",
-      "title": "Multimodal Masked Diffusion Autoencoder for Modeling Impaired Driving",
-      "authors": [
-        "John Gideon",
-        "Anshul Gupta",
-        "Megan Applegate-Kenton",
-        "Kayli Battel",
-        "Todd J Rowell",
-        "Patricio Reyes Gomez",
-        "Laporsha Dees",
-        "Emily Sumner",
-        "Avinash Balachandran",
-        "Guy Rosman"
-      ],
-      "abstract": "Human cognitive state (e.g., distraction, stress), gaze, and behavior interact with the driving environment in subtle ways that AI could use to assist drivers, but ground-truth labels for human cognitive state levels are costly to obtain at scale. We propose a multimodal masked-diffusion autoencoder, ID-MAE, that adds a self-supervised objective to impairment prediction: alongside predicting the impairment label as a masked token, it reconstructs masked gaze and trajectory. To probe the effects of different modalities and types of impairments on model inference, we introduce DIVERT, a driving-simulator dataset containing 103 hours of driving data (n = 109) with ten impairment inductions spanning cognitive, visual, and emotional states, recorded with gaze, vehicle state, and scene video. We demonstrate how ID-MAE affords significant improvements in impairment inference results on both the DIVERT dataset and existing datasets, and enables strong results in additional tasks, such as trajectory and gaze prediction. For location-matched pairs, our model achieves a paired AUC of 0.706 for impairment detection on DIVERT, compared to 0.590 without reconstruction loss, improving over existing baselines. We probe the design space in terms of input modalities, masking scheme, positional encoding, attention mechanism, and decoding. We also investigate the interaction between various impairments in training and inference, demonstrating that visually demanding distractions are separable from cognitive distractions. Code and data will be available upon acceptance.",
-      "url": "https://arxiv.org/abs/2611.23211v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.23211v1",
-      "published": "2026-11-17T18:50:22Z",
-      "updated": "2026-11-17T18:50:22Z",
-      "categories": [
-        "cs.CV",
-        "cs.LG",
-        "cs.RO"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2611.23198v1",
-      "title": "Learned versus Kinematic Trajectory Prediction under Reduced Observation Frequency",
-      "authors": [
-        "Nukhbala Gadzhiev",
-        "Alexander Morochko"
-      ],
-      "abstract": "Trajectory prediction models for automated driving are usually trained on data with a fixed sampling frequency, while positions received via vehicle-to-everything (V2X) communication arrive at 1-10 Hz. We study whether a learned predictor that uses only the observation history keeps its advantage over constant velocity (CV) and constant acceleration (CA) models when the history frequency drops. On the Argoverse 2 motion forecasting dataset, the 5 s history of the focal agent was downsampled from 10 Hz to 5, 2, and 1 Hz, and the 6 s future was predicted without maps or neighboring agents. An LSTM-based recurrent neural network (RNN) trained for each frequency was compared with the same network trained at 10 Hz and applied to sparse histories after linear interpolation. Hypotheses and thresholds were fixed before training, the main RNNs were trained with ten seeds each, and results on 24,984 test scenarios have bootstrap confidence intervals over scenarios and seeds. The average displacement error of the frequency-specific RNN grew by 3.1% at 5 Hz, 10.1% at 2 Hz, and 20.3% at 1 Hz. Contrary to our hypothesis, its advantage over the better kinematic model did not vanish on straight motion and was 24-30% on both straight motion and turns at every frequency, while for pedestrians CV was more accurate. The 10 Hz model with interpolation was at most 1.3% less accurate than the frequency-specific model down to 2 Hz but 11.5% less accurate at 1 Hz. Each hypothesis was only partly supported.",
-      "url": "https://arxiv.org/abs/2611.23198v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.23198v1",
-      "published": "2026-11-17T18:38:28Z",
-      "updated": "2026-11-17T18:38:28Z",
-      "categories": [
-        "cs.LG",
-        "cs.RO"
-      ],
-      "primary_category": "cs.LG"
-    },
-    {
-      "id": "2611.23192v1",
-      "title": "WoRD: Diffusion-Based Posterior Inference for Online Goal Recognition",
-      "authors": [
-        "Almog Anschel",
-        "Sarah Keren"
-      ],
-      "abstract": "Goal recognition is the task of inferring an agent's intended goal from its observed behavior. Most existing work focuses on high-level symbolic recognition, abstracting away the continuous motion through which agents reach their goal. Methods that do reason over continuous trajectories rely on an explicit dynamics model that is hard to acquire and rarely transfers across settings. Neither approach explicitly learns how agents move toward each candidate goal, limiting accuracy on ambiguous trajectory prefixes where such knowledge is most needed. We present WoRD (Waypoint Recognition with Diffusion), which uses a learned trajectory prior to infer the agent's goal from partial observations. At each step, WoRD runs one warm-started denoising chain per candidate goal, steers each chain toward the observed trajectory through a closed-form log-likelihood gradient, and reweights the resulting samples by Bayes' rule into a calibrated posterior over goals. We evaluate WoRD on simulated robot settings, pedestrian trajectories, and vehicle trajectories using four metrics targeting distinct failure modes. Across all three settings, the same inference procedure preserves calibrated multimodal beliefs through ambiguous prefixes where filter- and classifier-based observers collapse to a single mode or grow overconfident.",
-      "url": "https://arxiv.org/abs/2611.23192v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.23192v1",
-      "published": "2026-11-17T18:35:53Z",
-      "updated": "2026-11-17T18:35:53Z",
-      "categories": [
-        "cs.AI",
-        "cs.LG",
-        "cs.RO"
-      ],
-      "primary_category": "cs.AI"
-    },
-    {
-      "id": "2611.23149v1",
-      "title": "Capability Composition in Heterogeneous Teams via Barrier-Guided Diffusion Sampling",
-      "authors": [
-        "Diana Laura Morales",
-        "Ruoyu Lin",
-        "Magnus Egerstedt",
-        "Fabio Pasqualetti"
-      ],
-      "abstract": "The agents in a heterogeneous team can cooperate to accomplish tasks that exceed their individual capabilities. The team trajectories for a cooperative task can be generated by a generative model, provided that the model has been trained on demonstrations of the agents cooperating. Yet, demonstrations of cooperation are costly and may not exist for tasks that the team has never performed. The conditions under which the agents can combine their capabilities, however, are physical properties of the team and are known before any demonstration is collected. We encode the conditions as constraints on the team trajectories, and we enforce the constraints while sampling from generative models trained on demonstrations of each agent alone. We prove that the proposed method can generate every team trajectory that satisfies the constraints, although the demonstrations contain no cooperation. Hence the constraints determine which team trajectories can be generated, and the demonstrations determine how likely each team trajectory is. Numerical results on two cooperative tasks show the effectiveness of the method, which generates cooperative team trajectories that satisfy the constraints and requires no retraining when agents join or leave the team. Finally, we implement the method on a multi-robot testbed.",
-      "url": "https://arxiv.org/abs/2611.23149v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.23149v1",
-      "published": "2026-11-17T18:03:24Z",
-      "updated": "2026-11-17T18:03:24Z",
-      "categories": [
-        "cs.RO",
-        "cs.LG",
-        "cs.MA",
-        "eess.SY"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2611.23143v1",
-      "title": "TCP4D: A Unified Tool-Center-Point Tracking and Generation Model for Robot Manipulation",
-      "authors": [
-        "Haosong Peng",
-        "Xiangyang Liu",
-        "Zhengshen Zhang",
-        "Yunfeng Fan",
-        "Tianyu Qi",
-        "Xin Xia",
-        "Yufeng Zhan",
-        "Wenchao Xu"
-      ],
-      "abstract": "Robot manipulation videos provide a rich visual experience, yet recovering robot action and gripper-state annotations from RGB observations still remains challenging. Using the embodiment-agnostic tool-center-point (TCP) pose as the action space, we present TCP4D, a unified model in which a shared 4D scene representation both tracks observed TCP motion and generates future TCP trajectories. Given a monocular video and initial 2D TCP queries, the tracker directly recovers metric TCP poses in SE(3) and gripper states alongside scene geometry and camera parameters. The generator samples local features from the same 4D representation along the recovered TCP tracks, then combines them with robot observations and language instructions to predict future TCP states. Our new cross-embodiment augmentation pipeline converts existing RGB videos into demonstrations for alternative embodiments by retargeting the recovered motion and synthesizing the corresponding observations, without recorded source-robot states. Experiments show that the tracker achieves absolute trajectory errors of 7.60 and 16.07 mm on DROID and RoboLab and adapts to a new embodiment with only ten demonstrations. The generator achieves 69.19% mean success on RoboTwin and outperforms well-established policy models on two real-world tasks, while joint training on source and augmented demonstrations improves target-robot success by 41.5% over augmented-only training.",
-      "url": "https://arxiv.org/abs/2611.23143v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.23143v1",
-      "published": "2026-11-17T17:59:42Z",
-      "updated": "2026-11-17T17:59:42Z",
+      "abstract": "We introduce $Z$-sight, a unified robot foundation model that couples vision-language-action (VLA) and generative latent world modeling. Video-based world action models (WAMs) show the value of joint future-and-action generation for control, yet inherit the heavy cost of video generators. Recent latent-space policies avoid pixel generation, yet typically align intermediate features or rely on frozen target encoders, decoupling future prediction from the VLM's native feature space. $Z$-sight instead predicts the future directly in the visual token space in which its VLM perceives the present. Coupling a foresight expert and a continuous action expert with the VLM in a mixture-of-transformers, $Z$-sight jointly denoises future spatial tokens and actions at inference without pixel reconstruction or external encoders. Trained on human video and robot trajectories, $Z$-sight achieves 81.9% success on SIMPLE (+9.6 points over the strongest baseline) and 73.3% across six Unitree G1 tasks (+20.0 points) at 110 ms per chunk, while remaining competitive on tabletop benchmarks.",
+      "url": "https://arxiv.org/abs/2611.24940v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.24940v1",
+      "published": "2026-11-18T18:59:38Z",
+      "updated": "2026-11-18T18:59:38Z",
       "categories": [
         "cs.RO",
         "cs.CV"
@@ -135,35 +37,165 @@
       "primary_category": "cs.RO"
     },
     {
-      "id": "2611.23120v1",
-      "title": "Pressure Drop: Gravity Vector Estimation from a Distributed Barometric Pressure Sensor Array",
+      "id": "2611.24938v1",
+      "title": "Phoenix: Learning Scene Structure Representations for Generalizable World-Action Models",
       "authors": [
-        "William Dubois",
-        "Nicolas Lauzon",
-        "Johann Laconte",
-        "Fran\u00e7ois Pomerleau"
+        "Yupeng Zheng",
+        "Chaoyue Li",
+        "Linbo Wang",
+        "Xiang Li",
+        "Yuhang Zheng",
+        "Xiaotong Su",
+        "Songen Gu",
+        "Yichen Zhang",
+        "Zebin Xing",
+        "Shuai Tian",
+        "Jingxiang Guo",
+        "Jing Li",
+        "Zhiyong Zhao",
+        "Zhongpu Xia",
+        "Qichao Zhang",
+        "Haoran Li",
+        "Shuicheng Yan",
+        "Dongbin Zhao"
       ],
-      "abstract": "While gravity is often used in mobile robotics as a global constraint for Simultaneous Localization and Mapping (SLAM) algorithms, most estimation methods rely on indirect observation of the gravity vector. In this paper, we propose the use of altimeter measurements to directly observe the direction of the gravity vector. We provide a theoretical evaluation of the estimation noise and validate it through extensive experimental data, along with an evaluation of the impact of intersensor distance on our gravity vector estimates. Experimental results demonstrate that a median error of $0.87^\\circ$ on the tilt estimation can be achieved with our system in semi-static scenarios. Furthermore, we demonstrate the potential of this approach by comparing it with state-of-the-art methods based on Inertial Measurement Units (IMUs). We highlight that we achieve similar performance to that of IMU-based systems in highly dynamic scenarios and even outperform in specific cases of accelerometer measurement saturation. Finally, an additional experiment shows the potential use within a robotic system through the integration into an Iterative Closest Point (ICP) algorithm.",
-      "url": "https://arxiv.org/abs/2611.23120v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.23120v1",
-      "published": "2026-11-17T17:38:28Z",
-      "updated": "2026-11-17T17:38:28Z",
+      "abstract": "World-action models jointly predict future observations and actions, yet reconstruction-oriented visual representations do not explicitly emphasize the spatial relationships and object-state changes needed for manipulation. We introduce Phoenix, which learns representations of scene structure for world-action modeling. Specifically, Phoenix Encoder enriches DINOv3's general visual semantics through dual-teacher distillation of geometric and spatiotemporal semantic knowledge. Next, CS-VAE causally aggregates and compresses Phoenix Encoder features into generative latents while preserving scene information and spatial layout. Finally, Phoenix jointly predicts these latents, complementary appearance latents, and robot actions, linking scene evolution with action generation. To study pretraining data efficiency, we curate approximately 39,000 hours of egocentric and robot manipulation data for representation learning and use the robot demonstration subset for WAM pretraining. Following benchmark-specific post-training, Phoenix achieves state-of-the-art performance across simulation and real-robot benchmarks spanning single-arm, bimanual, and dexterous manipulation. It demonstrates strong robustness to perturbations, achieving success rates of 94.8% on LIBERO-Plus and 72.4% on RoboTwin 2.0 C2R, alongside strong cross-embodiment transfer and real-world manipulation performance on Bench2Dex and RoboDojo-RealWorld, respectively. Pretraining-scale analysis shows larger performance gains from data scaling than a video-VAE-only baseline, indicating stronger scaling benefits and more effective data utilization. Moreover, Phoenix maintains high success rates when adapted with limited downstream demonstrations, demonstrating strong few-shot adaptation. Our code, pretraining data, and models are available on the project page to help the community reproduce our results.",
+      "url": "https://arxiv.org/abs/2611.24938v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.24938v1",
+      "published": "2026-11-18T18:59:04Z",
+      "updated": "2026-11-18T18:59:04Z",
       "categories": [
         "cs.RO"
       ],
       "primary_category": "cs.RO"
     },
     {
-      "id": "2611.23118v1",
-      "title": "Auditing a Learned Simulator for Legged Robots: The Robotic World Model on ANYmal D",
+      "id": "2611.24926v1",
+      "title": "Grana: Compositional Reward Modeling for Long-Horizon Robot Manipulation",
       "authors": [
-        "Joyjeet Singh"
+        "Zi-ang Cao",
+        "Kaiyuan Zheng",
+        "Yinzhen Xu",
+        "Haonan Duan",
+        "Jiasheng Gu",
+        "Fengyuan Hu",
+        "Nan Zhu",
+        "Kun Lei",
+        "Kevin Lin",
+        "Ruijie Zheng",
+        "Shenyuan Gao",
+        "Fangqi Zhu",
+        "Zhe Zhang",
+        "Radha Poovendran",
+        "Linxi Fan",
+        "Guanzhi Wang",
+        "Yuke Zhu"
       ],
-      "abstract": "A legged robot can learn to walk inside a learned simulator: a neural network that predicts the robot's next state and is run forward on its own predictions. They are usually trained and checked one step ahead, although a policy uses them for a hundred steps or more. We audit one published system end to end, without a GPU: the dynamics model of the Robotic World Model (RWM) for the ANYmal D quadruped, and the uncertainty estimate of its follow-up, RWM-U. We rebuilt the model to match the released code's outputs, losses and gradients exactly, measured 101 trained simulators, 200 compressed copies and 38 simulators of three other architectures, and trained policies inside simulators that we tested in a hand-built MuJoCo model of the robot. Training on the model's own rollouts beat one-step training at 368 steps on all ten held-out episodes (registered), although one-step training was better one step ahead. One-step checks therefore misjudge design choices: pruning 30% of the weights kept 90% of the model's skill one step ahead and 39% at 2 s. Ensemble disagreement ranked rollout error well (Spearman +0.90 at 100 steps), yet covered 4.6% of outcomes at one sigma, against 68% for a calibrated estimate, as each network's own variance collapses under the implemented loss. Two checks that need no recorded future ranked some pools of simulators well, but neither was shown better than 8-step error in a primary test. At the robot level, accuracy has not predicted walking: all 18 fine-tuned copies we tested predicted better than the released model one and eight steps ahead, yet 13 gave failing policies, and registered tests of whether any check ranks simulators by their policies were not settled. In a secondary test, running the authors' policy inside each simulator ranked them well. We also report nine of our own claims that we withdrew. Scope: one robot, one gait, simulated data, no hardware.",
-      "url": "https://arxiv.org/abs/2611.23118v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.23118v1",
-      "published": "2026-11-17T17:36:40Z",
-      "updated": "2026-11-17T17:36:40Z",
+      "abstract": "Robot reward modeling faces two challenges: generalizing across tasks and accurately tracking progress in long-horizon manipulation. General-purpose reward models demonstrate broad task transfer, but transfer from short-task pretraining to long-horizon tasks remains underexplored. Long-horizon progress models often rely on task-specific subtask classifiers or fixed action vocabularies, limiting the reuse of learned progress knowledge when adapting to new tasks. To address these challenges, we introduce Grana, a vision-language robot reward model that learns to identify unfinished subtasks and estimate their continuous progress using open-vocabulary subtask descriptions. We train a language-conditioned model to estimate progress in short-horizon tasks and individual subtasks of long-horizon tasks. For long-horizon tasks, we combine the selected subtask's predicted progress with credit for preceding completed subtasks to estimate whole-task progress. General progress prediction requires training the model across diverse tasks with progress supervision that accounts for imperfect execution. Elapsed-time proxies can misrepresent progress when relative subtask durations vary, or failures reverse local progress. We therefore introduce an annotation protocol that converts sparse subtask boundaries and action-quality annotations into dense progress targets, without requiring annotators to assign numerical progress scores. Pretraining with this supervision on 200 diverse, mostly short-horizon manipulation tasks enables zero-shot reward prediction on unseen tasks and improves progress prediction after adaptation to multi-minute, long-horizon tasks. Experiments demonstrate (i) generalizable reward prediction, including adaptation to five long-horizon tasks, (ii) benefits from pretraining and composing subtask progress estimates, and (iii) improved downstream policy performance.",
+      "url": "https://arxiv.org/abs/2611.24926v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.24926v1",
+      "published": "2026-11-18T18:53:53Z",
+      "updated": "2026-11-18T18:53:53Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2611.24925v1",
+      "title": "Render the Robot, Generate the World: One Video World Model Across Embodiments",
+      "authors": [
+        "Yash Jangir",
+        "Karan Mirakhor",
+        "Renos Zabounidis",
+        "Muhammad Zubair Irshad",
+        "Sergey Zakharov",
+        "Yonatan Bisk",
+        "Homanga Bharadhwaj"
+      ],
+      "abstract": "Predicting the consequences of an agent's actions requires modeling both the body's motion and the environment's response. Most video world models attempt to learn both from numerical actions, even though geometry and kinematics already specify the intended motion. We introduce Doppel, an embodiment-agnostic video world model conditioned on camera-aligned renderings of future body configurations and numerical action trajectories. By explicitly providing the intended motion, Doppel can focus on predicting object motion and interaction-driven changes in the environment. Rendered motion also provides a common visual interface across different embodiments and action spaces. To train on robot datasets without camera extrinsics, we recover camera poses and align rendered trajectories with recorded observations. We jointly train a single shared video backbone and conditioning adapter on eight datasets spanning eight robot and human embodiments, from single- and bimanual robot arms to a dexterous humanoid and human hands and bodies, using about 600 hours of video without embodiment labels. Across three robot-arm datasets, Doppel improves PSNR over action-only baselines by 1.00 dB on held-out trajectories and 1.20 dB under out-of-distribution evaluation, while predicting more consistent object motion. Training on all eight embodiments (Doppel-8) improves robot predictions over the three-robot model (Doppel-3) on four of six evaluation sets. Project page: https://doppelwm.github.io/.",
+      "url": "https://arxiv.org/abs/2611.24925v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.24925v1",
+      "published": "2026-11-18T18:52:28Z",
+      "updated": "2026-11-18T18:52:28Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2611.24893v1",
+      "title": "AMISS: An Integrity Framework for Magnetic Navigation",
+      "authors": [
+        "Sharad C. Shankar",
+        "Prasenjit Sengupta",
+        "J. Scott Clawson",
+        "Sam Pullen"
+      ],
+      "abstract": "Magnetic Navigation (MagNav) is a promising alternative to traditional systems like Global Navigation Satellite Systems (GNSS), offering resistance to jamming or spoofing attacks to which the latter are vulnerable. MagNav matches scalar magnetic measurements over time against a known map of Earth's magnetic anomaly in order to position a vehicle. MagNav is therefore sensitive to the quality of these maps, especially to errors in the survey data that the maps are derived from. In order to be a reliable and mature navigation technology, MagNav must satisfy integrity requirements for mitigation of such faults. To this end, a solution-separation monitoring algorithm is developed that performs a role equivalent to Advanced Receiver Autonomous Integrity Monitoring (ARAIM) in GNSS, which detects faults as well as generates worst-case bounds (protection levels) on estimation error for faults too small to be detected. It is shown how these integrity methods can be developed in a \\emph{windowed-in-time} sense, where subsets of measurements over a time window are compared with each other in order to detect outliers that can potentially result from errors in the map. The applicability of the approach is demonstrated using results obtained using synthetic aircraft data with injected faults.",
+      "url": "https://arxiv.org/abs/2611.24893v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.24893v1",
+      "published": "2026-11-18T18:34:59Z",
+      "updated": "2026-11-18T18:34:59Z",
+      "categories": [
+        "eess.SY"
+      ],
+      "primary_category": "eess.SY"
+    },
+    {
+      "id": "2611.24883v1",
+      "title": "Teleoperated Haircutting with Delay Compensation and Passivity-Based Control for Unilateral Internet Teleoperation under Real Communication Uncertainties",
+      "authors": [
+        "Viridiana Luna-Zempoalteca",
+        "Zhendai Huang",
+        "Rosalba Galvan-Guerra",
+        "Antonio Rosales",
+        "Xiaoli Liu",
+        "Shuai Li"
+      ],
+      "abstract": "Robotic haircutting requires accurate motion execution and reliable communication to safely reproduce the operator's commands. Internet-based teleoperation is a key enabling technology to remotely perform precise manipulation tasks such as haircutting. However, communication uncertainties, including variable transmission delays and packet jitter, degrade synchronization between the master and slave systems and affect tracking performance. This paper presents a unilateral Internet teleoperation framework for robotic haircutting that takes into account experimentally measured communication uncertainties. Three delay-compensation techniques, namely Zero-Order Hold (ZOH), First-Order Hold (FOH), and Low-Pass Filtering (LPF), are evaluated together with a classical proportional-derivative (PD) controller and a passivity-based synchronization controller. Unlike conventional studies based on synthetic delay models, the proposed framework is validated using communication data acquired from a real cloud-based teleoperation platform, where both packet delay and effective delay are characterized. The results demonstrate that combining delay-compensation techniques with passivity-based synchronization improves the robustness of unilateral Internet teleoperation under realistic communication uncertainties, providing a reliable control framework for robotic haircutting applications.",
+      "url": "https://arxiv.org/abs/2611.24883v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.24883v1",
+      "published": "2026-11-18T18:28:34Z",
+      "updated": "2026-11-18T18:28:34Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "primary_category": "cs.RO"
+    },
+    {
+      "id": "2611.24880v1",
+      "title": "Local AI Agents in Power Electronics Simulation: Deployment, Measurements and Costs",
+      "authors": [
+        "Yuzhuo Li",
+        "Pasan Gunawardena",
+        "Yunwei Li"
+      ],
+      "abstract": "Agentic artificial intelligence (AI) is emerging in power electronics, where it drives the simulation loop that engineers used to close largely by hand. In this loop, a converter design, or a study of the network it connects to, is built, run, measured and revised until it satisfies its specification. Such an agent can be served from a cloud API or from an inference device on the premises. For organizations whose designs, customer data or export-controlled material cannot leave the site, and whose simulators are licensed there, local deployment is the natural choice. In such a deployment, the agent becomes an electrical load on the organization's own equipment, i.e., every run consumes power and energy on a local device, generates tokens and takes time. However, existing work focuses mainly on what the agent can achieve with cloud-hosted models. What a local deployment costs in power, energy, tokens and time on real simulation tasks, and what its choices trade against one another, has received little quantitative investigation under comparable conditions. To address this gap, a systematic evaluation framework is presented in this paper. It applies locally served models to agentic power electronics tasks, from the converter level to the system level, and measures their power, energy, token and time costs. Based on these measurements, the capability boundary of a local agent on such tasks and the cost per solved task are characterized. The results are expected to provide practical insight for the use of agentic AI in power electronics and the power systems it serves.",
+      "url": "https://arxiv.org/abs/2611.24880v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.24880v1",
+      "published": "2026-11-18T18:27:40Z",
+      "updated": "2026-11-18T18:27:40Z",
+      "categories": [
+        "cs.AI",
+        "eess.SY"
+      ],
+      "primary_category": "cs.AI"
+    },
+    {
+      "id": "2611.24876v1",
+      "title": "Learning to Interact in Multi-Agent Self-Play for Controllable Autonomous Driving Scenario Generation",
+      "authors": [
+        "Beyazit Yalcinkaya",
+        "Ethan Pronovost",
+        "Maximilian Naumann",
+        "Marcell Vazquez-Chanlatte"
+      ],
+      "abstract": "Large-scale, multi-agent self-play trains robust driving policies effectively in simulation, but controlling these models to generate specific, safety-critical edge cases remains a key challenge. Existing goal-conditioned self-play frameworks rely primarily on static map-location goals and fail to reliably produce complex agent interactions such as aggressive tailgating or adversarial cut-offs. These agent interactions are necessary for rigorous autonomous vehicle (AV) testing. To address this, we present an extended multi-agent self-play framework that introduces agent-relative dynamic goals. By conditioning policies on this extended goal representation, our framework enables targeted, controllable scenario synthesis. We demonstrate that our approach successfully generates interactive driving behaviors that static-goal baselines cannot simulate, providing a flexible tool for long-tail scenario generation in AV testing.",
+      "url": "https://arxiv.org/abs/2611.24876v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.24876v1",
+      "published": "2026-11-18T18:23:29Z",
+      "updated": "2026-11-18T18:23:29Z",
       "categories": [
         "cs.RO",
         "cs.LG"
@@ -171,41 +203,50 @@
       "primary_category": "cs.RO"
     },
     {
-      "id": "2611.23102v1",
-      "title": "CADENCE: Learning Acyclic Gaits for Model-Based Quadruped Locomotion",
+      "id": "2611.24864v1",
+      "title": "NereidVLA: Learning to Understand and Navigate the Underwater World",
       "authors": [
-        "Owen Sullivan",
-        "Sourav Selvaraj",
-        "Mahdi Agheli"
+        "Chenjie Zhao",
+        "Zhiliang Zhu",
+        "Quan Chen",
+        "Yuquan Xue",
+        "Xingxue Shi",
+        "Puyue Wang",
+        "Zhiqiang Zhao",
+        "Kangye Zheng",
+        "Boyang Xu",
+        "Mingwei Lin",
+        "Dejun Li"
       ],
-      "abstract": "Model-based quadruped controllers usually step on a cyclic gait, which lifts the legs in a fixed order on a fixed period, wherever the safe footholds are. We present CADENCE, a learned step planner with a small action space. Every 40 ms, it picks one of at most 65 discrete choices: no step, or one leg's step to a safe foothold. It also predicts a swing time. We train CADENCE by reinforcement learning on top of a convex model predictive controller (MPC). Nothing prescribes a gait: there is no gait schedule, and the reward has no gait term, only a cost per step. The one structural constraint is that at most two legs may swing at once. The policy we analyzed developed an acyclic gait, with no fixed period or stepping order, yet it still paired diagonal legs. An inverse footstep model (IFM), fitted on a controller's logged steps, turns each foothold into a command. With only the IFM refitted, on fewer than 20,000 steps, CADENCE ran frozen on OCS2's nonlinear MPC. In simulated trials on a range of terrains (26% to 49% voids) and speeds (0.1 m/s and 0.2 m/s), it succeeded in 85.1% (mean of five seeds), against 67.8% for OCS2-Trot, 65.5% for OCS2-Single, and 39.6% in a static walk ablation of CADENCE. At 49% voids, it succeeded in 72.9%, against 43.0% for OCS2-Trot.",
-      "url": "https://arxiv.org/abs/2611.23102v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.23102v1",
-      "published": "2026-11-17T17:25:29Z",
-      "updated": "2026-11-17T17:25:29Z",
+      "abstract": "Underwater navigation requires translating visual spatial cues into motion, yet marine vision-language datasets rarely include paired robot trajectories. We present NereidVLA, a vision-language-action model that transfers marine spatial knowledge to language-conditioned 3D navigation. We first train Sea2Know on approximately two million marine examples to learn target grounding, spatial relations, and scene structure without paired robot-motion supervision. We then adapt it using expert trajectories executed under simulated underwater vehicle dynamics. Given RGB histories and a language instruction, NereidVLA predicts discrete motion tokens that decode into local 3D trajectories for closed-loop tracking. Evaluation combines an independent six-dimensional underwater navigation understanding benchmark with offline prediction and closed-loop navigation. Under matched navigation training and execution settings, marine spatial pretraining increases simulation success from 72.4% to 84.4%. Without fine-tuning on the real test environment, NereidVLA achieves 78.75% success in laboratory-pool robot trials, compared with 47.50% for InternVLA-N1. These results show that marine spatial supervision can support downstream motion learning and physical underwater navigation.",
+      "url": "https://arxiv.org/abs/2611.24864v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.24864v1",
+      "published": "2026-11-18T18:19:00Z",
+      "updated": "2026-11-18T18:19:00Z",
       "categories": [
+        "cs.CV",
         "cs.RO"
       ],
-      "primary_category": "cs.RO"
+      "primary_category": "cs.CV"
     },
     {
-      "id": "2611.23070v1",
-      "title": "PAIR: Bringing Household Robots into the Smart Home",
+      "id": "2611.24858v1",
+      "title": "Communications-free Collective Intelligence Via Allocentric Belief",
       "authors": [
-        "Junseong Pyo",
-        "Hyeongjin Kim",
-        "Jongwook Han",
-        "Seungwon Kook",
-        "Sungjib Lim",
-        "Yohan Jo"
+        "Cameron Mehlman",
+        "Arjun Mulchandani",
+        "Hovik Grigoryan",
+        "Anurag Koyyada",
+        "Gregory Falco"
       ],
-      "abstract": "Household robots often need to operate appliances, and smart appliances offer both control panels and device APIs. Existing embodied AI simulation environments, however, model appliances solely as physical objects. We introduce PAIR, a smart-home simulation environment grounded in the Matter protocol~\\footnote{https://csa-iot.org/all-solutions/matter/}, the industry standard for smart-home devices. PAIR provides 84 smart-device assets whose functional control panels and APIs act on a shared device state, with ambient conditions that evolve in response to both. From a survey of 1,443 requests, we construct a benchmark of 40 tasks that all require object manipulation yet remain solvable without API access, with 340 human demonstrations for policy training. Whether run alone, with a high-level planner, or with an API-enabled planner, two fine-tuned VLA policies complete none of the 120 evaluation episodes. Robots rarely get far enough to use the API: even with oracle plans and API access, over 90\\% of failed rollouts stall at navigating, grasping, or operating a door. With a perfect oracle in place of the robot's body, the best planner still gets through only 57.3\\% of its plan. When choosing between pressing a button and calling an API, several planners go by whether they can read the panel, not by API latency.\\footnote{We will release our code and data upon publication.}",
-      "url": "https://arxiv.org/abs/2611.23070v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.23070v1",
-      "published": "2026-11-17T16:58:30Z",
-      "updated": "2026-11-17T16:58:30Z",
+      "abstract": "A team of skilled card players share no information amongst each other, and yet still are able to coordinate their play by watching the same players and reading the same tells. Autonomous systems have failed to exploit this logic, relying instead on explicit communication or complex state estimation schemes that can fail when it matters most. Without it, decentralized agents diverge in their world beliefs, and coordination collapses. Here we show that anchoring all agents to a single shared external actor, a common witness whose reactions encode team state, produces spontaneous, communication-free coordination. An allocentric belief network trained on witness behavior allows each agent to independently reconstruct full team state, keeping group beliefs consistent with no inter-agent exchange. Across five competitive environments allocentric belief alignment outperforms egocentric approaches in collective performance, and even scales to sixty-agent teams where standard methods fail. These results establish a new principle for collective intelligence: in the absence of communication, a shared gaze replaces a shared channel.",
+      "url": "https://arxiv.org/abs/2611.24858v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.24858v1",
+      "published": "2026-11-18T18:17:30Z",
+      "updated": "2026-11-18T18:17:30Z",
       "categories": [
-        "cs.RO"
+        "cs.RO",
+        "eess.SY"
       ],
       "primary_category": "cs.RO"
     }
