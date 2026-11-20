@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-11-19T17:27:34.674235+00:00",
+  "scraped_at": "2026-11-20T16:58:46.352842+00:00",
   "researcher_count": 54,
   "researchers": [
     {
@@ -1267,6 +1267,32 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2611.25215v1",
+          "title": "Bridging vision-language reasoning and learned control for legged navigation in the wild",
+          "authors": [
+            "Takahiro Miki",
+            "Robin Schmid",
+            "Manthan Patel",
+            "Turcan Tuna",
+            "Julia Richter",
+            "Julian Nubert",
+            "Joonho Lee",
+            "Matthias M\u00fcller",
+            "Marco Hutter"
+          ],
+          "abstract": "Autonomous navigation in diverse real-world environments remains one of the greatest challenges in robotics. It demands both robust low-level motion control to handle diverse terrain and high-level reasoning to interpret environmental cues. We present ROAM (Robust Open-world Autonomous Mobility), a system that enables legged robots to perform kilometer-scale navigation in complex alpine and urban settings. ROAM combines the world knowledge of a Vision-Language Model (VLM), pre-trained on internet-scale data, with robust locomotion and local planning policies learned in simulation via reinforcement learning (RL). The VLM provides common-sense reasoning and semantic interpretation of the scene, assessing risks, interpreting signs, and producing semantic labels with associated navigation costs. An open-vocabulary segmentation module converts these labels into a dense, real-time risk map, which conditions two pre-trained RL policies responsible for agile locomotion and local navigation, effectively coupling high-level VLM reasoning with low-level physical control. Real-world experiments showed the system's ability to autonomously navigate a wide range of complex real-world environments. The robot completes kilometer-long hikes with minimal intervention, interprets signs to avoid danger, and evaluates its environment to identify safe areas on which to step. This work represents a step toward the reliable deployment of systems in unstructured environments. However, it also underscores the challenges that remain in VLM reliability and spatial reasoning, indicating that foundational models are a crucial component but not yet a complete solution for navigation in the wild.",
+          "url": "https://arxiv.org/abs/2611.25215v1",
+          "pdf_url": "https://arxiv.org/pdf/2611.25215v1",
+          "published": "2026-11-18T21:40:00Z",
+          "updated": "2026-11-18T21:40:00Z",
+          "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2611.18365v1",
           "title": "Heavy Metal Acrobatics: Learning Dynamic Control for Skid-Steer Loaders",
           "authors": [
@@ -1359,26 +1385,6 @@
           "pdf_url": "https://arxiv.org/pdf/2611.08075v1",
           "published": "2026-11-05T14:26:43Z",
           "updated": "2026-11-05T14:26:43Z",
-          "categories": [
-            "cs.RO"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2611.05129v1",
-          "title": "WayTrace: A Map-to-Language-to-Trace Hierarchy for Embodied Urban Navigation",
-          "authors": [
-            "Manthan Patel",
-            "Jonas Frey",
-            "Pascal Roth",
-            "Marco Hutter",
-            "Cesar Cadena"
-          ],
-          "abstract": "Web services provide walking directions for nearly every city, but following them reliably over long routes remains challenging for autonomous robots. Point-goal navigation policies rely heavily on accurate GNSS, while most vision-language navigation models struggle to execute even short instructions outdoors. We present WayTrace, a hierarchical system that connects web-map directions to robot motion through language. An off-the-shelf orchestrator vision-language model reads the turn-by-turn directions, a satellite map and recent camera images, and issues one atomic language command at a time, such as \"cross the road to the left\". An onboard trace predictor, trained on over one million automatically labelled samples from street-level images, draws the path for this command in the image, and a reinforcement learning policy tracks it. In long-range simulated missions, WayTrace remains robust to GNSS noise and rarely leaves crosswalks or sidewalks, while point-goal baselines degrade sharply with about ten times more violations. Deployed on a wheeled-legged robot, WayTrace completes real-world missions of up to 1.37 km at about 1.1 m/s through a busy city centre, rural trails and a university campus, handling crosswalks, staircases and construction sites. Project page: https://way-trace.github.io",
-          "url": "https://arxiv.org/abs/2611.05129v1",
-          "pdf_url": "https://arxiv.org/pdf/2611.05129v1",
-          "published": "2026-11-03T16:13:42Z",
-          "updated": "2026-11-03T16:13:42Z",
           "categories": [
             "cs.RO"
           ],
@@ -1898,7 +1904,7 @@
           "primary_category": "cs.RO"
         },
         {
-          "id": "2610.14988v1",
+          "id": "2610.14988v2",
           "title": "Mixing Regularization for Average-Reward $Q$-Learning and $Q$-Planning",
           "authors": [
             "Julien Roger",
@@ -1906,11 +1912,11 @@
             "Jian Qian",
             "Benjamin Riviere"
           ],
-          "abstract": "The average-reward setting for reinforcement learning is challenging because its Bellman operator is known to contract in span only when the underlying Markov chain is mixing. Whereas existing work typically assumes a contraction property, e.g., through environment mixing, we consider the setting where we are given a reward-agnostic $m$-step mixing policy, and we control the contraction and exploration properties of the learned policy by regularizing toward the mixing policy. We provide finite-time analysis of $Q$-learning algorithms that can be instantiated with multiple choices of regularization, with guarantees measured with respect to the regularized fixed point. Our framework exposes novel regularizer-dependent objects that control contraction, exploration, and operator bias. In the one-step setting, our rates match the best known rates for $Q$-iteration and synchronous $Q$-learning, and for $m$-step mixing we derive new rates. We also study $Q$-planning variants, and show that planning acts as time-localized learning, where the planning horizon $H$ trades off the bias from the boundary value against the sample complexity. Finally, we present numerical studies validating the analysis: (i) knowledge of a strong mixing policy improves convergence and exploration, and its advantage increases with bottleneck severity and, (ii) our theory predicts the convergence and bias rankings of regularizers from the $\u03b1$-divergence family.",
-          "url": "https://arxiv.org/abs/2610.14988v1",
-          "pdf_url": "https://arxiv.org/pdf/2610.14988v1",
+          "abstract": "The average-reward setting for reinforcement learning is challenging because, without discounting, the span-contraction of the Bellman operator depends on the mixing properties of the underlying Markov dynamics. Whereas existing work typically assumes contraction, for instance through environment mixing, we study regularization toward a given reward-agnostic, $m$-step mixing policy to control the mixing properties of the learned policy. Our central mixing lemma quantifies how the reference policy's mixing properties transfer to the resulting learned policies. In particular, a single regularizer-dependent quantity simultaneously controls the contraction of the regularized Bellman operator and the exploration of the resulting policies. A second regularizer-dependent quantity controls the bias introduced by regularization, revealing a trade-off between convergence speed and approximation accuracy. Building on this result, we establish finite-time guarantees for regularized $Q$-iteration, synchronous and single-trajectory $Q$-learning, and $Q$-planning. Under one-step mixing, our bounds for approximating the regularized fixed point match the classical model-query bound for relative value iteration and, up to logarithmic factors, an existing sample-complexity bound for synchronous $Q$-learning. We also establish finite-time guarantees under multi-step mixing. For $Q$-planning, we characterize how the planning horizon trades off boundary bias against sample complexity. Finally, we present numerical studies validating the analysis: (i) knowledge of a strong mixing policy improves convergence and exploration, with larger benefits under more severe bottlenecks; and (ii) the observed rankings of $\u03b1$-divergence regularizers by bias and convergence speed are consistent with our theoretical analysis.",
+          "url": "https://arxiv.org/abs/2610.14988v2",
+          "pdf_url": "https://arxiv.org/pdf/2610.14988v2",
           "published": "2026-10-10T15:06:10Z",
-          "updated": "2026-10-10T15:06:10Z",
+          "updated": "2026-11-19T15:09:50Z",
           "categories": [
             "cs.LG",
             "cs.AI",
@@ -3370,8 +3376,162 @@
       "field": "3D reasoning, world models, embodied understanding",
       "institution": "Stanford University",
       "website": "https://jiajunwu.com/",
-      "paper_count": 0,
-      "papers": []
+      "paper_count": 5,
+      "papers": [
+        {
+          "id": "2611.25500v1",
+          "title": "PRIO: Pre-trained Representation for Interactive Objects in 4D Worlds",
+          "authors": [
+            "Shixun Huang",
+            "Lifu Wei",
+            "Yue Chang",
+            "Chen Geng",
+            "Heng Zhang",
+            "Jinhyung Ahn",
+            "Caoliwen Wang",
+            "Siyuan Chen",
+            "Donglai Xiang",
+            "Jiajun Wu",
+            "Peter Yichen Chen"
+          ],
+          "abstract": "3D worlds can now be captured, reconstructed, and generated at scale, yet the objects in them stay still: a pressed pillow does not compress, and a pulled door does not swing. Bringing these objects into interactive 4D world models requires a representation of how they can move, deform, and respond physically to user actions in real time. We present PRIO, a pre-trained representation for interactive objects. Given static geometry, PRIO predicts an object-specific configuration space in a single forward pass. This space provides generalized coordinates for Lagrangian mechanics, allowing physical laws and user actions to govern motion. Configurations are linear in these coordinates, allowing the quantities needed by the dynamics to be precomputed. Dynamics then run at interactive rates without further network inference. Pre-trained on diverse 4D trajectories, PRIO learns priors over object configurations that generalize to unseen shapes. It supports meshes, point clouds, and 3D Gaussians, bringing objects in reconstructed and generated scenes into interaction. We demonstrate its use in real-to-sim workflows and robot manipulation. In addition, compared with existing 4D generation methods, PRIO generates dynamics faster and follows user actions more faithfully.",
+          "url": "https://arxiv.org/abs/2611.25500v1",
+          "pdf_url": "https://arxiv.org/pdf/2611.25500v1",
+          "published": "2026-11-19T04:45:52Z",
+          "updated": "2026-11-19T04:45:52Z",
+          "categories": [
+            "cs.CV"
+          ],
+          "primary_category": "cs.CV"
+        },
+        {
+          "id": "2611.12177v1",
+          "title": "Embodied First Exam",
+          "authors": [
+            "Kangrui Wang",
+            "Qineng Wang",
+            "Changhe Chen",
+            "Pingyue Zhang",
+            "Chi Gui",
+            "Feishi Wang",
+            "Canyu Chen",
+            "Wenli Xiao",
+            "Xiaoyu Huang",
+            "Tonghe Zhang",
+            "Linjie Li",
+            "Zihan Wang",
+            "Minyeong Kim",
+            "Yiyou Sun",
+            "Mingkai Deng",
+            "Jinyu Hou",
+            "Qi Zhu",
+            "Han Liu",
+            "Eric P. Xing",
+            "Huaxiu Yao",
+            "Zhiwen Fan",
+            "Yuejiang Liu",
+            "Dawn Song",
+            "Pieter Abbeel",
+            "Li Fei-Fei",
+            "Jiajun Wu",
+            "Yuke Zhu",
+            "Guanya Shi",
+            "Ruohan Zhang",
+            "Manling Li"
+          ],
+          "abstract": "Early successes on agentic robotics point to a potential paradigm shift toward using coding agents to control robots. Existing robotics benchmarks are built around visuomotor policy learning, leaving it open whether coding agents can reliably control diverse robots under physical-world constraints. We therefore introduce the Embodied First Exam, a unified, comprehensive, and agent-native evaluation framework where coding agents can choose their own control approach: direct control, code to control, or train a policy to control. We hope it serves as a first exam for coding agents before they enter the physical world, with 1,156 tasks in 35 suites on 47 robots, including 9 new suites that go beyond pick-and-place to spatial puzzles, dexterous manipulation, multi-robot interaction, dynamic whole-body control, and sim-to-sim engineering. Each task can be run in up to three evaluation settings. The Standard Setting mimics the real world: the agent receives only sensor observations and, by default, cannot reset the environment. Its Realtime variant keeps the environment running while the agent reasons. The Privileged Setting gives the agent access to the full simulator state and unlimited resets, allowing it to search for an oracle solution for training purposes. Success rates in this setting serve as an approximate upper bound. On the 456 core tasks, the strongest of eight agents, GPT-6 Astra in Codex, achieves a success rate of 34% in the Standard Setting, leaving much room for improvement. To see where agents fail, we label the stage at which failed attempts go wrong and compare failures across agents, settings, and stage categories.",
+          "url": "https://arxiv.org/abs/2611.12177v1",
+          "pdf_url": "https://arxiv.org/pdf/2611.12177v1",
+          "published": "2026-11-09T10:29:19Z",
+          "updated": "2026-11-09T10:29:19Z",
+          "categories": [
+            "cs.RO",
+            "cs.AI"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2611.09476v1",
+          "title": "LEMMO: A Large Electromagnetic Model leveraging Pretrained LLMs for Million-Sample Signal Understanding",
+          "authors": [
+            "Mingkai Li",
+            "Jiajun Wu",
+            "Yihan Mao",
+            "Zilin Sang",
+            "Taosong Yu",
+            "Yuan Ma",
+            "Minghe Liu",
+            "Qianqian Yang",
+            "Zhiguo Shi"
+          ],
+          "abstract": "Large language models have expanded beyond text to vision, audio, and other modalities, but understanding raw electromagnetic (EM) signals remains challenging. Wideband recordings can contain millions of samples, whereas existing waveform-based EM models are primarily evaluated on short in-phase and quadrature (IQ) segments, leaving long-recording understanding and detailed description insufficiently explored. We introduce LEMMO, a large EM model for instruction-driven recognition and description of long raw IQ recordings. LEMMO combines a linear-attention EM encoder with anti-aliased temporal resampling to process up to eight million complex samples. Its EM-text interaction module conditions learnable queries on instructions before retrieving signal evidence. Compact queries support recognition, while structured queries with auxiliary factual supervision organize scene-level properties, signal attributes, and cross-signal relationships for detailed description. We also construct and release a unified 1.38-TB corpus of real-world and synthetic EM signals, including LEMMO-ShortQA and LEMMO-LongDesc. Compared with MERLIN-LoRA, LEMMO improves mean EM-Bench perception accuracy by 15.77 %, mean strategy-generation ROUGE-L F1 by 4.38 points, and mean LEMMO-ShortQA accuracy by 14.31 %. It also improves categorical and numerical fact F1 on both LEMMO-LongDesc tasks while preserving its language backbone's MMLU performance. Our code and datasets are available at https://github.com/N1rv4n4/LEMMO and https://huggingface.co/datasets/DaftJun/RFLAS, respectively.",
+          "url": "https://arxiv.org/abs/2611.09476v1",
+          "pdf_url": "https://arxiv.org/pdf/2611.09476v1",
+          "published": "2026-11-06T13:56:33Z",
+          "updated": "2026-11-06T13:56:33Z",
+          "categories": [
+            "cs.AI",
+            "cs.SD"
+          ],
+          "primary_category": "cs.AI"
+        },
+        {
+          "id": "2611.09036v1",
+          "title": "ToolDex: An Ego-Exo Human Demonstration Dataset for Creative Physical Tool Use",
+          "authors": [
+            "Mohamed Elmoghany",
+            "Kehan Li",
+            "Ruoqu Chen",
+            "Tarun Chiruvolu",
+            "Shutong Zhang",
+            "Ryan Wang",
+            "Stephen Tian",
+            "Yaru Niu",
+            "Michelle Guo",
+            "Ding Zhao",
+            "Weiyu Liu",
+            "Mengdi Xu",
+            "Li Fei-Fei",
+            "Jiajun Wu"
+          ],
+          "abstract": "Creative tool use is a fundamental human capability and an important step toward general-purpose embodied intelligence. It requires agents to reason about object affordances, physical constraints, and manipulation strategies, especially when standard tools are unavailable. However, progress in this area is limited by the lack of real-world datasets that capture human tool-use behavior with sufficient scale, fidelity, and diversity. Existing benchmarks are often simulation-based, focus on simplified interactions, or lack detailed observations and annotations. We introduce ToolDex, a large-scale egocentric-exocentric (ego-exo) human demonstration dataset for creative physical tool use. ToolDex captures scenarios in which humans select, adapt, and repurpose available objects as tools. Using synchronized egocentric cameras and eight exocentric cameras, the dataset provides high-fidelity multi-view observations and rich annotations for hands, tools, target objects, and their deformable interactions. Beyond data collection, we establish a benchmark suite characterizing three core capabilities: physical tool-use reasoning, sparse-view 3D and 4D reconstruction, and robot policy learning. ToolDex provides a foundation for studying human tool-use behavior and developing embodied agents that can adaptively use tools in complex real-world environments. Dataset visualizations and benchmarking results are available at https://tooluse-dataset.github.io/.",
+          "url": "https://arxiv.org/abs/2611.09036v1",
+          "pdf_url": "https://arxiv.org/pdf/2611.09036v1",
+          "published": "2026-11-06T06:12:33Z",
+          "updated": "2026-11-06T06:12:33Z",
+          "categories": [
+            "cs.RO",
+            "cs.AI"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2611.08790v1",
+          "title": "SteerGR: Steering Generative Recommendation via Sparse Autoencoders for Controllable Game Discovery",
+          "authors": [
+            "Sunkyung Lee",
+            "Xiaokai Wei",
+            "Da Long",
+            "Hyunsik Jeon",
+            "Jiajun Wu",
+            "Rithwik Seth",
+            "Jongwuk Lee",
+            "Michelle Gong",
+            "Gungor Polatkan"
+          ],
+          "abstract": "Generative recommendation aims to predict item identifiers from user interaction histories, but explicit control over the properties of recommended items remains underexplored. A key challenge is to connect human-readable concepts to internal features whose interventions effectively change the recommended items. To address this, we propose Steerable Generative Recommender (SteerGR), a framework that uses sparse autoencoders for concept-level control in game discovery. SteerGR proceeds through three stages: (i) Concept Definition and Grounding for defining play concepts with an LLM; (ii) Feature Discovery and Selection for discovering candidate features by their concept associations and selecting one by its steering effect; and (iii) Sparse Feature Intervention for amplifying or suppressing selected features to steer recommendations without retraining the recommender. Extensive experiments with two industrial generative recommendation models on a real-world game dataset show that the selected features successfully steer recommendations toward or away from target concepts. We believe this work takes a first step to extend SAE-based steering from LLMs to industrial generative recommendation.",
+          "url": "https://arxiv.org/abs/2611.08790v1",
+          "pdf_url": "https://arxiv.org/pdf/2611.08790v1",
+          "published": "2026-11-05T23:25:08Z",
+          "updated": "2026-11-05T23:25:08Z",
+          "categories": [
+            "cs.IR",
+            "cs.AI",
+            "cs.CL"
+          ],
+          "primary_category": "cs.IR"
+        }
+      ]
     },
     {
       "id": "kennedy_m",
@@ -3499,8 +3659,113 @@
       "field": "Embodied AI, 3D scene understanding, robot perception-manipulation",
       "institution": "Stanford University",
       "website": "https://shurans.github.io/",
-      "paper_count": 0,
-      "papers": []
+      "paper_count": 5,
+      "papers": [
+        {
+          "id": "2611.10148v1",
+          "title": "BATCH: Behavior Alignment for Cross-Embodiment Learning from Humans",
+          "authors": [
+            "Zeyi Liu",
+            "Shuran Song"
+          ],
+          "abstract": "Human demonstrations provide a scalable source of diverse manipulation data, but leveraging them for robot learning remains challenging due to differences in embodiment, viewpoint, action spaces, and temporal structure. We introduce BATCH, a cross-embodiment learning framework that explicitly aligns human and robot behaviors. BATCH learns self-supervised temporal representations with a cycle-consistency objective to establish cross-embodiment correspondences without manual annotation. We further introduce two complementary training objectives that leverage these correspondences within an autoregressive videoaction diffusion model: behavior-aligned co-training and human-to-robot style transfer. On real-world manipulation tasks, BATCH improves generalization to unseen task configurations compared with training on unaligned data and prior cross-embodiment baselines, with additional gains from the style-transfer objective. Our results demonstrate that explicit behavior alignment enables more effective transfer from human demonstrations to robot policies.",
+          "url": "https://arxiv.org/abs/2611.10148v1",
+          "pdf_url": "https://arxiv.org/pdf/2611.10148v1",
+          "published": "2026-11-06T19:12:29Z",
+          "updated": "2026-11-06T19:12:29Z",
+          "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2611.01565v1",
+          "title": "Beyond Validation Loss: Coverage and Reliability Dynamics in Robot Policy Pretraining",
+          "authors": [
+            "Zhanyi Sun",
+            "Max Simchowitz",
+            "Shuran Song"
+          ],
+          "abstract": "In modern robot learning, generative robot policies are first pretrained through supervised learning from demonstrations, then refined through reinforcement learning, supervised finetuning, or other forms of posttraining. Yet conventional pretraining metrics, such as validation loss and average task success, provide an incomplete account of which policies support both effective direct deployment and subsequent posttraining. In this work, we study closed-loop pass@k, which evaluates the probability that k rollouts from the same initial condition attain at least one success. Thus, pass@1 measures mean task success; large-k pass@k measures whether success remains reachable under repeated sampling. Across a wide range of posttraining recipes, we show that large-k pass@k reveals posttraining differences not captured by pass@1. In particular, checkpoints with similar pass@1 but different large-k pass@k have different posttraining performance. Moreover, we show pass@k peaks at different checkpoints during supervised pretraining, revealing a coverage-reliability tradeoff over the course of training. Based on these observations, we propose two practical interventions: (1) a purely offline checkpoint-selection criterion that balances coverage and reliability without closed-loop evaluation, and (2) a generative data augmentation procedure that expands supervision beyond the finite demonstration set, preserving large-k pass@k while maintaining or improving pass@1 and raising the observed coverage-reliability Pareto frontier. Together, our results motivate evaluation, checkpoint selection, and training procedures that explicitly account for posttraining. Blog post, visualizations, and code are available at https://zhanyisun.github.io/robot-policy-learning-dynamics/.",
+          "url": "https://arxiv.org/abs/2611.01565v1",
+          "pdf_url": "https://arxiv.org/pdf/2611.01565v1",
+          "published": "2026-11-01T04:43:33Z",
+          "updated": "2026-11-01T04:43:33Z",
+          "categories": [
+            "cs.LG",
+            "cs.RO"
+          ],
+          "primary_category": "cs.LG"
+        },
+        {
+          "id": "2610.13929v1",
+          "title": "Chronos Policy: Learning Robot Policies on Physical Time",
+          "authors": [
+            "Changhao Wang",
+            "Jaden Clark",
+            "Shuran Song"
+          ],
+          "abstract": "Robot policies often convert sensing and control into fixed-rate observation-action sequences, leaving physical time implicit in sequence position. This assumption breaks when observation rates or delays vary, or when inference latency changes. We introduce Chronos Policy, which makes physical time explicit by conditioning on observation capture times and desired action execution times. We study two ways to incorporate time into a diffusion transformer: adding timestamp embeddings to token features, or encoding physical time in positional encoding through time-aware rotary positional encodings (time-aware RoPE). We find that time-aware RoPE is more robust, allowing attention to depend directly on physical time while keeping token content unchanged. During training, we temporally randomize which observations are sampled and when the action chunk begins, exposing the policy to a wider range of sensing and execution schedules that may occur during deployments. This also enables learning from asynchronous, multi-rate data without forcing all measurements onto a fixed temporal grid. Across simulation and real-world experiments, Chronos Policy improves performance on dynamic tasks, where observation-to-action timing is critical, and on multisensory tasks, where the relative timing between observations matters. On standard quasi-static tasks, it preserves nominal performance while improving robustness to changes in sensing and inference timing.",
+          "url": "https://arxiv.org/abs/2610.13929v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.13929v1",
+          "published": "2026-10-09T17:55:20Z",
+          "updated": "2026-10-09T17:55:20Z",
+          "categories": [
+            "cs.RO",
+            "cs.CV"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2610.12558v1",
+          "title": "PanTact: Teaching Whole-Body Dexterity with a Wearable Contact Interface",
+          "authors": [
+            "Xiaomeng Xu",
+            "Han Zhang",
+            "Zhian Ruan",
+            "Xiaofeng Guo",
+            "Jinkun Cao",
+            "Ruihan Yang",
+            "Carmelo Sferrazza",
+            "Shuran Song",
+            "Guanya Shi"
+          ],
+          "abstract": "Humanoid robots have many degrees of freedom and contact surfaces, yet most loco-manipulation research restricts manipulation to the hands and avoids other body contacts with the environment. To extend manipulation beyond the hands, we present PanTact, a system that learns humanoid whole-body dexterity, the capability to manipulate with any suitable body surface, directly from robot-free human demonstrations. Our key idea is to use contact as manipulation-centric information that transfers across embodiments. Contact locations and timing specify the interactions needed to accomplish a task, while the robot chooses how to coordinate its body to realize them within its own physical constraints. Specifically, PanTact captures, learns, and executes whole-body contact via: 1) a wearable, robot-free data collection interface that augments egocentric vision and bimanual UMI grippers with whole-body modular contact patches to record body contact locations and states; 2) a visuomotor policy that mitigates the egocentric observation gap and predicts whole-body contact goals; and 3) contact-aware whole-body control formulations that realize active contact goals using suitable robot surfaces. We deploy PanTact on a Unitree G1 humanoid without additional body contact sensors, demonstrating whole-body dexterity involving body support, pushing, sweeping, and load-sharing. Website: https://pantact.github.io",
+          "url": "https://arxiv.org/abs/2610.12558v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.12558v1",
+          "published": "2026-10-08T18:00:02Z",
+          "updated": "2026-10-08T18:00:02Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2610.07681v2",
+          "title": "EigenDEXplore: Structured Exploration for Dexterous Manipulation with Human Priors",
+          "authors": [
+            "Harsh Gupta",
+            "Tyler Ga Wei Lum",
+            "Changhao Wang",
+            "Chuer Pan",
+            "C. Karen Liu",
+            "Jeannette Bohg",
+            "Shuran Song"
+          ],
+          "abstract": "Dexterous manipulation poses a challenging high-dimensional optimization problem, as useful behaviors require coordinated motion across many hand joints. In reinforcement learning (RL) and sampling-based trajectory optimization, exploration commonly relies on independent robot joint perturbations, making coordinated behaviors difficult to discover. Prior work reduces this search space for grasp learning using low-dimensional spaces of coordinated joint motions learned from human hand data, but this restricts the expressivity required for general manipulation. Some combine learned and joint-space actions to restore expressivity, but this increases dimensionality and introduces redundancy. We study these effects across diverse manipulation settings, varying action dimensionality, exploration strategy, and the source of human data. Our experiments suggest that human-motion priors are most effective when used to structure exploration rather than change the action representation. Motivated by this finding, we propose EigenDEXplore, which induces correlated exploration by adding perturbations along human-derived eigenvectors to independent joint-space noise, leaving the action space unchanged. Across multiple dexterous hands, EigenDEXplore consistently outperforms joint-space and learned action-space baselines in grasping, in-hand reorientation, and contact-rich manipulation. These gains span unstructured and reference-guided RL, trajectory optimization, and sim-to-real deployment, and are largest in settings with less reward shaping and curriculum design.",
+          "url": "https://arxiv.org/abs/2610.07681v2",
+          "pdf_url": "https://arxiv.org/pdf/2610.07681v2",
+          "published": "2026-10-06T03:15:59Z",
+          "updated": "2026-10-13T20:12:15Z",
+          "categories": [
+            "cs.RO",
+            "cs.AI"
+          ],
+          "primary_category": "cs.RO"
+        }
+      ]
     },
     {
       "id": "goldberg_k",
@@ -3651,8 +3916,165 @@
       "field": "Robot learning, reinforcement learning, autonomous control",
       "institution": "University of California, Berkeley",
       "website": "https://people.eecs.berkeley.edu/~pabbeel/",
-      "paper_count": 0,
-      "papers": []
+      "paper_count": 5,
+      "papers": [
+        {
+          "id": "2611.12177v1",
+          "title": "Embodied First Exam",
+          "authors": [
+            "Kangrui Wang",
+            "Qineng Wang",
+            "Changhe Chen",
+            "Pingyue Zhang",
+            "Chi Gui",
+            "Feishi Wang",
+            "Canyu Chen",
+            "Wenli Xiao",
+            "Xiaoyu Huang",
+            "Tonghe Zhang",
+            "Linjie Li",
+            "Zihan Wang",
+            "Minyeong Kim",
+            "Yiyou Sun",
+            "Mingkai Deng",
+            "Jinyu Hou",
+            "Qi Zhu",
+            "Han Liu",
+            "Eric P. Xing",
+            "Huaxiu Yao",
+            "Zhiwen Fan",
+            "Yuejiang Liu",
+            "Dawn Song",
+            "Pieter Abbeel",
+            "Li Fei-Fei",
+            "Jiajun Wu",
+            "Yuke Zhu",
+            "Guanya Shi",
+            "Ruohan Zhang",
+            "Manling Li"
+          ],
+          "abstract": "Early successes on agentic robotics point to a potential paradigm shift toward using coding agents to control robots. Existing robotics benchmarks are built around visuomotor policy learning, leaving it open whether coding agents can reliably control diverse robots under physical-world constraints. We therefore introduce the Embodied First Exam, a unified, comprehensive, and agent-native evaluation framework where coding agents can choose their own control approach: direct control, code to control, or train a policy to control. We hope it serves as a first exam for coding agents before they enter the physical world, with 1,156 tasks in 35 suites on 47 robots, including 9 new suites that go beyond pick-and-place to spatial puzzles, dexterous manipulation, multi-robot interaction, dynamic whole-body control, and sim-to-sim engineering. Each task can be run in up to three evaluation settings. The Standard Setting mimics the real world: the agent receives only sensor observations and, by default, cannot reset the environment. Its Realtime variant keeps the environment running while the agent reasons. The Privileged Setting gives the agent access to the full simulator state and unlimited resets, allowing it to search for an oracle solution for training purposes. Success rates in this setting serve as an approximate upper bound. On the 456 core tasks, the strongest of eight agents, GPT-6 Astra in Codex, achieves a success rate of 34% in the Standard Setting, leaving much room for improvement. To see where agents fail, we label the stage at which failed attempts go wrong and compare failures across agents, settings, and stage categories.",
+          "url": "https://arxiv.org/abs/2611.12177v1",
+          "pdf_url": "https://arxiv.org/pdf/2611.12177v1",
+          "published": "2026-11-09T10:29:19Z",
+          "updated": "2026-11-09T10:29:19Z",
+          "categories": [
+            "cs.RO",
+            "cs.AI"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2611.05266v2",
+          "title": "Stabilizing On-Policy Targeted Guidance in Agentic Reinforcement Learning",
+          "authors": [
+            "Kevin Frans",
+            "Alexander M Rush",
+            "Sergey Levine",
+            "Pieter Abbeel",
+            "Ashvin Nair"
+          ],
+          "abstract": "Naive on-policy RL is often bottlenecked by the capabilities of the base model --- insufficient coverage can result in an inability to learn from certain rewards. At the same time, rewards in modern post-training systems often come from rich textual sources, e.g. judge models with a rubric of criteria. Can we utilize such structures to provide a rich directional signal that enables improving on otherwise difficult to optimize rewards? In this work, we examine a framework we refer to as targeted guidance that learns from per-turn textual feedback via an on-policy self-distillation objective. Our focus is not only on directly improving hard-to-optimize behaviors, but on how to do so throughout the training process without degrading baseline RL performance. Over a range of settings across an agentic multi-turn software engineering environment, we find success by combining targeted self-distillation with a per-criteria RL reward, and by limiting feedback to turns where the policy specifically fails. We further examine the design choices that lead to stable entropy and reduce oscillatory behavior throughout training.",
+          "url": "https://arxiv.org/abs/2611.05266v2",
+          "pdf_url": "https://arxiv.org/pdf/2611.05266v2",
+          "published": "2026-11-03T17:54:33Z",
+          "updated": "2026-11-04T17:41:20Z",
+          "categories": [
+            "cs.LG"
+          ],
+          "primary_category": "cs.LG"
+        },
+        {
+          "id": "2611.02546v1",
+          "title": "Energy-Based Policy Orchestration",
+          "authors": [
+            "Weirui Ye",
+            "Yen-Jen Wang",
+            "Elvis Hsieh",
+            "Zhiyang Dou",
+            "Shibo Zhao",
+            "Pieter Abbeel",
+            "Yilun Du",
+            "Leslie Pack Kaelbling",
+            "Tom\u00e1s Lozano-P\u00e9rez"
+          ],
+          "abstract": "Hierarchical control scales robot behavior by separating task-level planning from low-level control. In dynamic, high-dimensional tasks, however, a fixed planner-to-policy interface can fail when contacts, balance, or disturbances evolve faster than high-level policy updates. Execution therefore requires choosing not only which low-level policy to run, but also which policy-specific goal should be given to it. We formulate this problem as policy orchestration: runtime selection of a policy-goal pair that is likely to remain feasible while tracking the planner target. We develop EPO, an energy-based policy orchestrator for modular goal-conditioned policy families. For each policy, EPO learns a composite energy over low-level goals, where lower energy corresponds to higher feasibility and more accurate target realization. At runtime, EPO refines each policy's goal and executes the lowest-energy policy-goal pair. Because energies are policy-specific, new policies can be incorporated by learning their own energy models, without retraining the existing policies or a centralized scheduler. In simulation, EPO improves the empirical precision-robustness trade-off by refining policy-specific goals before selectively switching among policies based on energy scores. We further demonstrate sim-to-real deployment of the same frozen policies and energy models on real humanoid loco-manipulation tasks. Project website: https://yewr.github.io/epo",
+          "url": "https://arxiv.org/abs/2611.02546v1",
+          "pdf_url": "https://arxiv.org/pdf/2611.02546v1",
+          "published": "2026-11-02T05:16:05Z",
+          "updated": "2026-11-02T05:16:05Z",
+          "categories": [
+            "cs.RO",
+            "cs.LG"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2611.01560v2",
+          "title": "Democratizing Robot-Use Agents: A Unified Harness with Open Models",
+          "authors": [
+            "Jiarui Yuan",
+            "Yuxin Zuo",
+            "Xiaoyu Huang",
+            "Wenbo Zhang",
+            "Kwanyoung Park",
+            "Junlin Yang",
+            "Tianxiang Zhang",
+            "Ruoqu Chen",
+            "Yutao Ouyang",
+            "Bingxiang He",
+            "Xingtai Lv",
+            "Hongjin Wu",
+            "Jiajun Liu",
+            "Jiahao Zhao",
+            "Tianwei Luo",
+            "Haozhan Li",
+            "Cheng Qian",
+            "Jiaxin Ge",
+            "Huan-ang Gao",
+            "Kaisen Yang",
+            "Jiaqi Deng",
+            "Qixin Xu",
+            "Siqiao Huang",
+            "Bowen Zhou",
+            "Mengdi Xu",
+            "Zhiyuan Liu",
+            "Pieter Abbeel",
+            "Ning Ding"
+          ],
+          "abstract": "Robot-use Agents (RUAs) have shown promising zero-shot manipulation capabilities, but reliance on frontier, proprietary models limits research into further training. To democratize RUA research, we introduce uni-robot-agent, a unified harness for competitive open-weight robot use that supports further training. Without privileged inputs, an out-of-the-box Qwen3.8-Flash-Next achieves a RoboDojo Score of 31.39, surpassing the published GPT-6 Astra-RoboProbe result of 28.97 and many VLA/WAM baselines, and performs competitively on 19 real-world tasks. Our analysis across model generations, families, and sizes links effective robot use to four general capabilities, suggesting that future RUA training should develop them jointly.",
+          "url": "https://arxiv.org/abs/2611.01560v2",
+          "pdf_url": "https://arxiv.org/pdf/2611.01560v2",
+          "published": "2026-11-01T04:32:23Z",
+          "updated": "2026-11-03T18:09:09Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2610.28480v3",
+          "title": "SuperMimic: Scaling Humanoid Whole-Body Control with One Differentiable World Model",
+          "authors": [
+            "Qiayuan Liao",
+            "Yiyang Shao",
+            "Junfeng Long",
+            "Kevin Zakka",
+            "Roberto Horowitz",
+            "Pieter Abbeel",
+            "Koushil Sreenath"
+          ],
+          "abstract": "Tracking large human-motion datasets has become the dominant route to general, expressive humanoid whole-body control, but scaling across many motions is expensive. Current pipelines use model-free reinforcement learning, either merging per-motion specialists through lossy distillation, or brute-forcing a single policy with cluster-scale compute. SuperMimic amortizes learning across all motions with one differentiable world model of their shared dynamics, fit from logged transitions of a standard rigid-body simulator. The world model and the tracking policy train together in one loop, and backpropagation-through-time over short imagined rollouts gives the policy analytic gradients. Fast imagined rollouts and analytic gradients make policy learning efficient. In 3 hours on a single GPU, SuperMimic surpasses the return of a state-of-the-art motion tracker baseline trained for 7 days on 128 GPUs. It reduces GPU-hours by more than $1000\\times$ and fails on only 25 of 129,514 benchmark motions, versus 179 failures for the baseline. After 9.8 hours on two GPUs, SuperMimic achieves zero failures. From 1 to 264 hours of motion, the world model's prediction error stays stable, and GPU-hours to a target return grow slowly. Our policy transfers to a physical Unitree G1 across diverse and acrobatic motions. SuperMimic removes compute as the bottleneck to scaling humanoid whole-body control, making it practical to measure motion-tracking scaling laws.",
+          "url": "https://arxiv.org/abs/2610.28480v3",
+          "pdf_url": "https://arxiv.org/pdf/2610.28480v3",
+          "published": "2026-10-20T16:29:30Z",
+          "updated": "2026-11-19T04:11:04Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        }
+      ]
     },
     {
       "id": "levine_s",
@@ -3660,8 +4082,107 @@
       "field": "Robot learning, deep RL, manipulation",
       "institution": "University of California, Berkeley",
       "website": "https://people.eecs.berkeley.edu/~svlevine/",
-      "paper_count": 0,
-      "papers": []
+      "paper_count": 5,
+      "papers": [
+        {
+          "id": "2611.07245v1",
+          "title": "MAC-v2: Long-horizon model-based value expansion from pixels",
+          "authors": [
+            "Kwanyoung Park",
+            "Sergey Levine"
+          ],
+          "abstract": "We study whether \\emph{long-horizon model-based value expansion} can serve as an effective framework in pixel-based offline reinforcement learning (RL). Long-horizon model-based value expansion from pixels is substantially harder than state-based environments, as the agent must learn both the representation and its dynamics, and errors from either can accumulate recursively over imagined trajectories. We introduce MAC-v2, which enables long-horizon model-based expansion from pixels by training a reconstruction-free latent world model with action chunking. By learning representations from prediction and control objectives, MAC-v2 does not need to encode control-irrelevant visual details that can hinder the dynamics prediction. Action chunking further mitigates the prediction error by reducing the number of recursive model predictions required for value expansion. Across diverse visual benchmarks including visual OGBench, MMBench2, Robomimic, and LIBERO-10, MAC-v2 achieves strong performance against model-free and model-based offline RL baselines. Our analyses show that long-horizon model-based value expansion is critical for the performance of MAC-v2, and that both action chunking and latent learning objectives are essential for reliable long-horizon latent imagination.",
+          "url": "https://arxiv.org/abs/2611.07245v1",
+          "pdf_url": "https://arxiv.org/pdf/2611.07245v1",
+          "published": "2026-11-04T23:51:02Z",
+          "updated": "2026-11-04T23:51:02Z",
+          "categories": [
+            "cs.LG",
+            "cs.AI"
+          ],
+          "primary_category": "cs.LG"
+        },
+        {
+          "id": "2611.05295v1",
+          "title": "GSBR: Geometric Support Behavior Regularization for Online RL",
+          "authors": [
+            "Charles Xu",
+            "Jacob Berg",
+            "Liyiming Ke",
+            "Sergey Levine"
+          ],
+          "abstract": "Regularizing online reinforcement learning (RL) toward a pretrained base policy can improve sample efficiency and learning stability, but regularization that is too restrictive limits how much the policy can improve. Base policies -- typically diffusion or flow-matching models trained by imitation learning on large, diverse datasets -- capture many behaviors that are reasonable but suboptimal. Existing regularizers using such base policies are too restrictive in one of two ways: behavioral cloning regularizers pull the actor toward the full base-policy distribution, penalizing it for discarding suboptimal modes, while hard support constraints forbid improvements that lie just outside the base policy's support. We propose Geometric Support Behavior Regularization (GSBR), which penalizes actions by their distance from the base policy's support. Actions within the support incur no penalty, so the actor can concentrate on high-value modes; outside the support, where value estimates are less reliable, the penalty grows smoothly with distance while still permitting improvement when the value gained outweighs the penalty. GSBR estimates this distance from a finite set of base-policy samples, so it requires only sample access to the base policy. Across 19 tasks on four robotic benchmarks, GSBR raises the average success rate from 33% for the base policy to 95%, achieving the highest average success rate and throughput among all compared methods, with about 23% higher normalized throughput than the next-best RL method. Project website and open-source code at https://charlesxu0124.github.io/gsbr/ .",
+          "url": "https://arxiv.org/abs/2611.05295v1",
+          "pdf_url": "https://arxiv.org/pdf/2611.05295v1",
+          "published": "2026-11-03T18:08:32Z",
+          "updated": "2026-11-03T18:08:32Z",
+          "categories": [
+            "cs.RO",
+            "cs.LG"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2611.05266v2",
+          "title": "Stabilizing On-Policy Targeted Guidance in Agentic Reinforcement Learning",
+          "authors": [
+            "Kevin Frans",
+            "Alexander M Rush",
+            "Sergey Levine",
+            "Pieter Abbeel",
+            "Ashvin Nair"
+          ],
+          "abstract": "Naive on-policy RL is often bottlenecked by the capabilities of the base model --- insufficient coverage can result in an inability to learn from certain rewards. At the same time, rewards in modern post-training systems often come from rich textual sources, e.g. judge models with a rubric of criteria. Can we utilize such structures to provide a rich directional signal that enables improving on otherwise difficult to optimize rewards? In this work, we examine a framework we refer to as targeted guidance that learns from per-turn textual feedback via an on-policy self-distillation objective. Our focus is not only on directly improving hard-to-optimize behaviors, but on how to do so throughout the training process without degrading baseline RL performance. Over a range of settings across an agentic multi-turn software engineering environment, we find success by combining targeted self-distillation with a per-criteria RL reward, and by limiting feedback to turns where the policy specifically fails. We further examine the design choices that lead to stable entropy and reduce oscillatory behavior throughout training.",
+          "url": "https://arxiv.org/abs/2611.05266v2",
+          "pdf_url": "https://arxiv.org/pdf/2611.05266v2",
+          "published": "2026-11-03T17:54:33Z",
+          "updated": "2026-11-04T17:41:20Z",
+          "categories": [
+            "cs.LG"
+          ],
+          "primary_category": "cs.LG"
+        },
+        {
+          "id": "2611.02160v1",
+          "title": "Value Forcing: Aligning Return Distributions at All Noise Levels",
+          "authors": [
+            "Chongyi Zheng",
+            "Zhiyuan Zhou",
+            "Qiyang Li",
+            "Benjamin Eysenbach",
+            "Sergey Levine"
+          ],
+          "abstract": "Learning accurate value functions is central to reinforcement learning (RL), yet remains challenging because supervision is limited and indirect: ground-truth values are unavailable, and each transition in the data only provides an immediate reward that can be used to construct bootstrapped targets as supervision. This challenge is particularly pronounced when data is limited or reward signals are sparse, as is common in real-world applications such as robotics. We argue that the key to accurate value learning in this limited data regime is extracting richer learning signals from the available data. In this paper, we introduce Value Forcing, a new approach that uses flow matching to estimate return distributions and enables accurate value learning from limited data. Our key insight is that we can extract richer learning signals by enforcing Bellman consistency at every noise level. Empirically, Value Forcing improves the accuracy of estimating the return distribution, and prevents the distribution from collapsing to a single value, as occurs with prior methods. We instantiate Value Forcing with two practical value-learning algorithms: VF, an actor-critic method, and IVF, an implicit value-learning method. We evaluate both algorithms across $26$ long-horizon tasks in the offline RL setting and find that they outperform prior value-learning methods, with particularly large gains when data is limited. Our project website is available at https://chongyi-zheng.github.io/value-forcing.",
+          "url": "https://arxiv.org/abs/2611.02160v1",
+          "pdf_url": "https://arxiv.org/pdf/2611.02160v1",
+          "published": "2026-11-01T19:51:01Z",
+          "updated": "2026-11-01T19:51:01Z",
+          "categories": [
+            "cs.LG",
+            "cs.AI"
+          ],
+          "primary_category": "cs.LG"
+        },
+        {
+          "id": "2610.39054v1",
+          "title": "Robotic Data Inoculation",
+          "authors": [
+            "Qiyang Li",
+            "Zhiyuan Zhou",
+            "Charles Xu",
+            "Sergey Levine"
+          ],
+          "abstract": "Modern robot learning systems feed on high-quality demonstration data, and their performance hinges on coverage. Without good coverage, small errors compound and the policy can quickly go into out-of-distribution states from which it cannot recover. Yet there is no principled way of collecting high-coverage data, and data collection often relies on heuristic instructions to human operators. Purely online reinforcement learning (RL) explores at the cost of safety and sample efficiency, while DAgger-style interventions require the policy to fail by chance before a human can correct it. In this paper, we ask instead whether we can modify how the robot behaves during data collection to collect more useful data. We propose Data Inoculation (DI), a shared-control framework in which a human provide closed-loop teleoperation commands while a residual policy perturbs these commands. The residual policy is trained online, on the growing dataset, with the same reward-maximizing objective later used for policy extraction, so its perturbations steer data collection toward the deviations a policy trained on the data would make. These perturbations expose the robot to a wider range of states, while the human's continuous corrections provide recovery demonstrations, \"inoculating\" the dataset against the learner's future mistakes while the human remains in control. On three challenging real-world robotic tasks, DI consistently improves or matches the success rate of policies trained with both behavioral cloning and offline RL, showing DI as an effective data collection strategy for improving downstream policy performance.",
+          "url": "https://arxiv.org/abs/2610.39054v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.39054v1",
+          "published": "2026-10-28T23:31:24Z",
+          "updated": "2026-10-28T23:31:24Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        }
+      ]
     },
     {
       "id": "posner_i",
@@ -3669,8 +4190,108 @@
       "field": "Robot learning, data-efficient learning, real-world robot deployment",
       "institution": "University of Oxford",
       "website": "https://ori.ox.ac.uk/people/ingmar-posner/",
-      "paper_count": 0,
-      "papers": []
+      "paper_count": 5,
+      "papers": [
+        {
+          "id": "2611.05658v1",
+          "title": "Beyond Accuracy: Information-Theoretic Decoder Evaluation Under Latent Intent",
+          "authors": [
+            "Tasha Kim",
+            "Benjamin Ballyk",
+            "Anson Lei",
+            "Ingmar Posner",
+            "Oiwi Parker Jones"
+          ],
+          "abstract": "A central challenge in assistive brain-to-robot control is decoding a user's latent intent from complex and noisy brain signals. Prior approaches evaluate decoders as single-trial classifiers with accuracy-based metrics, but this neglects the inherently sequential nature of assistive control. Since a planner must integrate intermittent, noisy decoder outputs over time, single-step accuracy can only be a proxy when predicting downstream task performance. We formalize brain-to-robot control as a partially observable Markov decision process (POMDP), and prove that there is a sharp phase transition: regret is uniformly bounded across the horizon as long as pairs of goals are all decoder-distinguishable, but grows linearly otherwise. We show that a single channel statistic, the worst-pair Chernoff information $\u0393_{\\min}$ sets this boundary. Then, we derive a closed-form regret predictor $U_{\\mathrm{id}}(C)$, that can be computed from any confusion matrix in $O(K^2)$ time. Across two domains spanning orthogonal information channels, we show that $U_{\\mathrm{id}}$ predicts cumulative planning regret beyond what accuracy can explain. We then highlight a pathological accuracy trap, in which two decoders have identical validation accuracy 35.1% on real EEG data (BNCI2014001 subject 5) but result in a difference of $9.6\\times$ in held-out regret, which $U_{\\mathrm{id}}$ predicts. Same-signal control confirms $U_{\\mathrm{id}}$'s advantage with decoders that span independent feature channels. Ultimately, our work provides a drop-in diagnostic to evaluate and select sensors and decoders in sequential assistive control.",
+          "url": "https://arxiv.org/abs/2611.05658v1",
+          "pdf_url": "https://arxiv.org/pdf/2611.05658v1",
+          "published": "2026-11-03T21:43:43Z",
+          "updated": "2026-11-03T21:43:43Z",
+          "categories": [
+            "cs.LG",
+            "cs.RO"
+          ],
+          "primary_category": "cs.LG"
+        },
+        {
+          "id": "2610.04612v1",
+          "title": "An End-to-End Framework for Modelling Pneumatic Soft Robots Based on Differentiable Finite Element Methods",
+          "authors": [
+            "Shaohong Zhong",
+            "Yao Yao",
+            "Perla Maiolino",
+            "Ingmar Posner"
+          ],
+          "abstract": "Soft robots present significant modelling challenges due to their non-linearity, complex dynamics and potentially intricate geometries. These difficulties in accurate system identification and dynamics modelling limit their applications in precise robotics tasks. Prior modelling approaches typically suffer from trade-offs in accuracy, computational efficiency, or speed. The differentiable finite element method (FEM) offers a promising balance between these desiderata for soft robot modelling, and enables the use of gradients for efficient calibration and trajectory optimisation. In this paper, we propose an end-to-end differentiable FEM-based framework designed to streamline modelling and system identification for pneumatic soft robots, enabling the generation of reliable models for downstream tasks. The framework automates the conversion of computer-aided designs into voxelised tetrahedral viscoelastic FEM meshes that accurately represent the robot's geometry and actuation mechanism. By integrating easily acquired point cloud data with differentiable FEM, the framework achieves precise identification of material and dynamic actuation parameters using a minimal experimental setup. Additionally, the differentiable nature of the model facilitates trajectory optimisation by leveraging gradients from robot dynamics and contact interactions. We validate the framework by modelling a complex bellow-shaped pneumatic soft robot and demonstrate its efficacy in real-world motion planning tasks. Experimental results indicate high modelling accuracy, with a maximum positional error of less than 3 mm, and successful application in tasks such as path following and grasping.",
+          "url": "https://arxiv.org/abs/2610.04612v1",
+          "pdf_url": "https://arxiv.org/pdf/2610.04612v1",
+          "published": "2026-10-03T15:52:35Z",
+          "updated": "2026-10-03T15:52:35Z",
+          "categories": [
+            "cs.RO",
+            "eess.SY"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2609.38418v1",
+          "title": "PneuTac: Tactile Manipulation with Soft Pneumatic Robots via Unified MPM-Gaussian Splatting Simulation",
+          "authors": [
+            "Shaohong Zhong",
+            "Marco Pontin",
+            "Joe Watson",
+            "Perla Maiolino",
+            "Ingmar Posner"
+          ],
+          "abstract": "Soft robots and tactile sensors have demonstrated great potential in delicate manipulation tasks. Soft pneumatic robots enable safe contact through compliance, and vision-based tactile sensors offer high-resolution touch perception. However, learning tactile manipulation with compliant robots has been challenging, bottlenecked by the lack of efficient simulation. Existing simulators typically model them in isolation, and exhibit large calibration gaps that are difficult to overcome efficiently. We present PneuTac, a unified framework for tactile-feedback manipulation with soft pneumatic robots. We leverage the material point method (MPM) for modelling the dynamics of the soft robot and the deformable tactile membrane, and 3D Gaussian splatting (3DGS) for rendering. Real-to-sim modelling is done with a simple vision-based method, to then train action and perception networks for efficient simulation with surrogate models. We use the framework to drive a tactile-guided pipeline to collect demonstrations in simulation. Through experiments on a custom-designed pneumatic soft finger with a tactile sensing tip, together with additional cross-device evaluations, we show that PneuTac is capable of accurately modelling soft robots with tactile sensors, and that policies trained with simulation-augmented demonstrations outperform baselines trained on the same real data on three real-world contact-rich compliant manipulation tasks, making it a practical framework for tactile manipulation on compliant hardware.",
+          "url": "https://arxiv.org/abs/2609.38418v1",
+          "pdf_url": "https://arxiv.org/pdf/2609.38418v1",
+          "published": "2026-09-29T19:12:12Z",
+          "updated": "2026-09-29T19:12:12Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
+          "id": "2609.22055v1",
+          "title": "Benchmarking World Models for Continual Learning on Compositional Tasks",
+          "authors": [
+            "Haoyu Zhou",
+            "Joe Watson",
+            "Anson Lei",
+            "Ingmar Posner"
+          ],
+          "abstract": "A desirable property of a world model is the ability to learn continually across tasks, adapting to new environments without forgetting what the agent has already learnt. In particular, the ability to retain and reuse knowledge obtained from prior experiences underpins an agent's ability to efficiently adapt to novel environments, as the dynamics of the physical world can often be described in recurring mechanisms. However, the world model's measure of adaptation entangles two abilities: the speed and capacity to learn unseen tasks, and the reuse of knowledge already acquired, since incoming tasks carry novel content alongside what recurs. In order to isolate knowledge reuse from prior experiences, we propose a compositional continual learning benchmark for world models in robot manipulation. Specifically, we design each task curriculum with compositional tasks that combine aspects of the tasks seen in the sequence. We further factorise this composition along the axes of action and perception to better understand how different input modalities bottleneck knowledge reuse. We evaluate state-of-the-art world models under canonical continual learning methods, alongside a modular world model whose dynamics backbone contains explicitly reusable components. Results show that modularity balances reuse against forgetting better than conventional methods, but none solve the problem fully, leaving clear room for continual world models built to reuse without forgetting. More details are available on our project website: https://object814.github.io/Compositional-Continual-Learning/.",
+          "url": "https://arxiv.org/abs/2609.22055v1",
+          "pdf_url": "https://arxiv.org/pdf/2609.22055v1",
+          "published": "2026-09-18T17:46:28Z",
+          "updated": "2026-09-18T17:46:28Z",
+          "categories": [
+            "cs.LG",
+            "cs.RO"
+          ],
+          "primary_category": "cs.LG"
+        },
+        {
+          "id": "2607.12474v2",
+          "title": "From Observation to Insight: Mechanistic World Models and the Quest for Autonomous Discovery",
+          "authors": [
+            "Ingmar Posner",
+            "Anson Lei",
+            "Bernhard Sch\u00f6lkopf"
+          ],
+          "abstract": "Recent advances in foundation models have transformed AI for Science, enabling remarkably accurate predictive performance across domains ranging from protein folding to weather forecasting. Yet prediction alone does not constitute scientific discovery. Scientific understanding depends on uncovering the reusable explanatory mechanisms that generate observations, whereas contemporary machine learning remains fundamentally organised around predictive mappings rather than explanatory structure. In this paper, we argue that scientific discovery is fundamentally a problem of knowledge organisation. To this end, we introduce Mechanistic World Models, a new design paradigm that places reusable mechanisms at the centre of representation, computation and learning. Drawing on insights from the philosophy of science, we derive the computational capabilities required for discovery, identify the design principles and inductive pressures that encourage explanatory knowledge to emerge, and formalise the anatomy of a mechanism-centric world model. Finally, we show how diverse research directions including mechanistic interpretability, causal representation learning, equation discovery and modular architectures capture complementary ingredients of this paradigm while lacking a unified framework. We propose Mechanistic World Models as a conceptual foundation and computational blueprint for moving AI beyond predictive forecasting towards autonomous scientific discovery.",
+          "url": "https://arxiv.org/abs/2607.12474v2",
+          "pdf_url": "https://arxiv.org/pdf/2607.12474v2",
+          "published": "2026-07-14T08:03:27Z",
+          "updated": "2026-07-15T16:13:32Z",
+          "categories": [
+            "cs.AI"
+          ],
+          "primary_category": "cs.AI"
+        }
+      ]
     },
     {
       "id": "havoutis_i",
@@ -3680,6 +4301,25 @@
       "website": "https://ori.ox.ac.uk/people/ioannis-havoutis/",
       "paper_count": 5,
       "papers": [
+        {
+          "id": "2611.26596v1",
+          "title": "PGX: Physically Grounded Execution for Long-Horizon Humanoid Loco-Manipulation",
+          "authors": [
+            "Kai Lu",
+            "Chenyang Ma",
+            "Ioannis Havoutis"
+          ],
+          "abstract": "Robotic vision-language-action (VLA) models can execute diverse individual manipulation skills, yet they still struggle with long-horizon loco-manipulation tasks, where temporal structure, skills, and precision are tightly coupled within a monolithic model. We propose Physically Grounded Execution (PGX), a framework that offloads temporal and precision control to two classical training-free components, allowing the VLA to focus on stage-specific skill dynamics. PGX decomposes long-horizon loco-manipulation into three layers: (i) a predicate-based state machine governs task progression, using physical predicates to gate phase transitions, trigger recovery, and coordinate navigation and waiting. Shared predicate semantics connect offline demonstration segmentation, online execution, and stage-wise evaluation; (ii) VLA skills operate within active manipulation phases, with flat or stage-trained models concentrating on task-relevant actions; and (iii) world-coordinate locking (WCL) maintains spatial consistency through base station keeping, object-relative positioning, and world-anchored contact targets. We demonstrate the effectiveness of PGX with extensive experiments conducted on three simulated tasks and one real-world task using a Unitree G1 humanoid robot for long-horizon loco-manipulation, showing improvements in stage progression and task success rates. Project page is available at: https://kl-research.github.io/pgx",
+          "url": "https://arxiv.org/abs/2611.26596v1",
+          "pdf_url": "https://arxiv.org/pdf/2611.26596v1",
+          "published": "2026-11-19T18:52:18Z",
+          "updated": "2026-11-19T18:52:18Z",
+          "categories": [
+            "cs.RO",
+            "cs.AI"
+          ],
+          "primary_category": "cs.RO"
+        },
         {
           "id": "2609.36540v1",
           "title": "Reactive Real-Time Flow Policies via Asynchronous Distribution Alignment",
@@ -3754,27 +4394,6 @@
           "updated": "2026-08-20T12:50:18Z",
           "categories": [
             "cs.RO"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2607.06824v2",
-          "title": "CaLiSym: Learning Symplectic Dynamics of Real-World Systems through Structured Canonical Lifts",
-          "authors": [
-            "Aristotelis Papatheodorou",
-            "Pranav Vaidhyanathan",
-            "Natalia Ares",
-            "Ioannis Havoutis",
-            "Gerard J. Milburn"
-          ],
-          "abstract": "Physics-informed learning promises data-efficient and stable dynamics prediction, yet its strongest geometric guarantees have largely remained confined to closed conservative systems. This excludes robotic systems of interest, where actuation, dissipation, and constraints exchange energy and momentum with the environment. We introduce CaLiSym, a lightweight framework that extends symplectic learning to such systems by changing where the geometric prior is imposed. Rather than enforcing symplecticity on the measured state, CaLiSym embeds the state and its ports into a lifted phase space, where the dynamics evolve through a symplectic map. The lift is explicit and algebraic, requiring neither recurrent latent states, transformer decoders, implicit optimization, nor inference-time numerical integration. We instantiate the framework with SympNet predictors and introduce GRB-SympNet, a B-spline variant combining approximation with exact symplectic structure. Experiments on a controlled dissipative double pendulum, a real-world quadrotor, and a contact-constrained real-world quadruped demonstrate the lowest out-of-distribution autoregressive rollout error across systems, improving by up to 69.5% while using fewer parameters and up to 85x fewer floating-point operations per step than sequence-model baselines. The lifted dynamics preserve the symplectic form to numerical precision, extending symplectic learning beyond conservative mechanics toward real-world robotics.",
-          "url": "https://arxiv.org/abs/2607.06824v2",
-          "pdf_url": "https://arxiv.org/pdf/2607.06824v2",
-          "published": "2026-07-07T21:41:59Z",
-          "updated": "2026-07-15T13:59:55Z",
-          "categories": [
-            "cs.RO",
-            "cs.LG"
           ],
           "primary_category": "cs.RO"
         }
