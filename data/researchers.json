@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-11-23T20:07:57.616734+00:00",
+  "scraped_at": "2026-11-24T19:32:51.935089+00:00",
   "researcher_count": 54,
   "researchers": [
     {
@@ -10,6 +10,26 @@
       "website": "https://ames.caltech.edu/",
       "paper_count": 5,
       "papers": [
+        {
+          "id": "2611.29089v1",
+          "title": "Construction of Universal Safe Stabilizing Formulas with Weighted Centroid Methodology",
+          "authors": [
+            "Pio Ong",
+            "Max H. Cohen",
+            "Aaron D. Ames",
+            "Jorge Cortes"
+          ],
+          "abstract": "Control Lyapunov and control barrier functions ensure stability and safety, respectively, by imposing state-dependent affine constraints on the control input. Controller design can therefore be viewed as the problem of selecting an admissible input from the set defined by these constraints. This paper adopts this perspective and develops a weighted-centroid methodology for constructing explicit feedback formulas that are provably smooth. The selection method relies on the fact that weighted centroids of a convex set lie within the set. We establish conditions on the weight functions that guarantee smoothness and continuity for several classes of constraints, including single constraints, mirrored constraints, linearly independent multiple constraints, and two-constraint Gaussian constructions. The framework recovers Sontag's universal formula and generates other new explicit formulas. When specialized to control-theoretic settings, the resulting formulas yield smooth safety filters, stabilizing controllers, and safe-stabilizing controllers. Simulation and hardware experiments on a small quadrotor illustrate the practical benefits of the proposed construction.",
+          "url": "https://arxiv.org/abs/2611.29089v1",
+          "pdf_url": "https://arxiv.org/pdf/2611.29089v1",
+          "published": "2026-11-21T23:25:34Z",
+          "updated": "2026-11-21T23:25:34Z",
+          "categories": [
+            "math.OC",
+            "eess.SY"
+          ],
+          "primary_category": "math.OC"
+        },
         {
           "id": "2611.19616v1",
           "title": "Towards Probabilistically Safe Reinforcement Learning: Theory and Deployment on Humanoid and Aerial Robots",
@@ -91,26 +111,6 @@
             "eess.SY"
           ],
           "primary_category": "eess.SY"
-        },
-        {
-          "id": "2610.18675v1",
-          "title": "Optimal Decay Matrix Control Barrier Functions: Soundness and Completeness for Matrix Safety Constraints",
-          "authors": [
-            "Samuel G. Gessow",
-            "Albert Wu",
-            "Aaron D. Ames",
-            "Brett T. Lopez"
-          ],
-          "abstract": "Many safety requirements, such as keeping a manipulator away from kinematic singularities, a network connected, or a system observable, amount to keeping a state-dependent matrix positive definite. Matrix control barrier functions (MCBFs) enforce such requirements with a semidefinite program that minimally modifies a nominal control input. The MCBF constraint bounds how fast the safety margin, the smallest eigenvalue of the matrix, may decay. Yet a fixed decay rule is conservative, rejecting safe controls that drive the state quickly toward, but never across, the boundary of the safe set. Scalar optimal decay (SOD) addresses this issue by scaling the decay term by a scalar weight that is optimized together with the control. For scalar barrier functions, SOD then rejects a control at the boundary only if the control would decrease the margin. For MCBFs, however, SOD can reject controls that leave the margin unchanged, and near the safety boundary SOD accepts such controls only at a high cost. We introduce matrix optimal decay (MOD), which replaces the scalar weight with a matrix multiplier while keeping the semidefinite program convex. MOD is provably sound and complete, certifying at the boundary exactly the controls that do not decrease the margin. If some control can strictly increase the margin at every boundary point, the MOD-MCBF filtered controller is continuous and renders the safe set forward invariant. We also add an optional recovery condition that drives the system toward the safe set after a violation without affecting soundness or completeness. On a planar two-link arm avoiding singularities, MOD-MCBF certifies safe motions that both a fixed decay rule and SOD reject, and tracks an end-effector target more closely than SOD.",
-          "url": "https://arxiv.org/abs/2610.18675v1",
-          "pdf_url": "https://arxiv.org/pdf/2610.18675v1",
-          "published": "2026-10-13T16:33:51Z",
-          "updated": "2026-10-13T16:33:51Z",
-          "categories": [
-            "math.OC",
-            "eess.SY"
-          ],
-          "primary_category": "math.OC"
         }
       ]
     },
@@ -726,6 +726,26 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2611.29913v1",
+          "title": "MoMa-NMP: Scene-Scale Neural Motion Planning for Mobile Manipulators",
+          "authors": [
+            "Adam Kan",
+            "Jason Jingzhou Liu",
+            "Jiahui Yang",
+            "Kenneth Shaw",
+            "Deepak Pathak"
+          ],
+          "abstract": "Mobile manipulators operating in homes and other complex environments must coordinate their base and arm over long horizons, navigating around obstacles, through narrow passages, and between constrained workspaces. Neural motion planners can provide fast closed-loop planning from partial observations, but scaling them to room-sized environments is difficult because generating high-quality training trajectories is itself a challenging motion-planning problem. To address this, we introduce MoMa-DemoSmith, a demonstration-generation pipeline that separates the problem into global path discovery for large complex scenes and local motion refinement for collision avoidance. This key separation enables the generation of millions of challenging whole-body trajectories across our procedurally generated scenes. We train MoMa-NMP on these demonstrations through behavior cloning (BC) followed by privileged on-policy distillation, achieving 87.0% success on our simulation benchmark and 77.5% across 80 trials in unseen real-world scenes. See video results at https://adamhkan.com/moma-nmp/.",
+          "url": "https://arxiv.org/abs/2611.29913v1",
+          "pdf_url": "https://arxiv.org/pdf/2611.29913v1",
+          "published": "2026-11-23T02:10:52Z",
+          "updated": "2026-11-23T02:10:52Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2611.03647v1",
           "title": "Pixel-UMI: Learning Environment-Aware Whole-Body Manipulation from Sensorized Human Demonstrations",
           "authors": [
@@ -814,29 +834,6 @@
             "cs.RO"
           ],
           "primary_category": "cs.CV"
-        },
-        {
-          "id": "2609.03497v1",
-          "title": "BRIDGE: An Open-Source Humanoid Platform via Morphology-Control Co-Design for Physical AI",
-          "authors": [
-            "Jianren Wang",
-            "Letian Qian",
-            "Zikai Wang",
-            "Weiwei Wu",
-            "Junjie Zong",
-            "Abhinav Gupta",
-            "Deepak Pathak"
-          ],
-          "abstract": "Developing humanoid robots capable of leveraging human behavioral data is essential for general-purpose embodiment, yet conventional development remains bottlenecked by a decoupled paradigm that isolates hardware design from whole-body control. This approach leads to suboptimal systems that compromise human-like fluidity and agility. To bridge this gap, we introduce a data-driven morphology-control co-design framework that optimizes humanoid morphology for human-like movement. To quantify morphological fidelity, we also introduce a novel metric that jointly considers kinematic retargeting fidelity to human motion and dynamic tracking performance. Our framework achieves state-of-the-art (SOTA) performance across all metrics compared to baseline humanoids (Bumi, K1, and Toddlerbot). Finally, we realize this design in Bridge, an open-source, 88cm-tall humanoid platform released alongside its control policy. We demonstrate that Bridge captures human motion data with superior fidelity, exhibiting exceptional performance across foundational locomotion, robust balance, and highly dynamic maneuvers. Videos and open-source materials: https://sites.google.com/view/bridgerobot.",
-          "url": "https://arxiv.org/abs/2609.03497v1",
-          "pdf_url": "https://arxiv.org/pdf/2609.03497v1",
-          "published": "2026-09-03T08:01:19Z",
-          "updated": "2026-09-03T08:01:19Z",
-          "categories": [
-            "cs.RO",
-            "cs.AI"
-          ],
-          "primary_category": "cs.RO"
         }
       ]
     },
@@ -1267,6 +1264,27 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2611.30312v1",
+          "title": "One Policy, Many Bodies: Cooperative Human-Object Interaction with Heterogeneous Teams",
+          "authors": [
+            "Zhihao Cao",
+            "Tianxu An",
+            "Chenhao Li",
+            "Chenyangguang Zhang",
+            "Stelian Coros",
+            "Marco Hutter"
+          ],
+          "abstract": "Physics-based human-object interaction (HOI) has enabled multiple characters to cooperatively transport objects, but existing cooperative controllers largely assume homogeneous embodiments and predefined interaction tasks. We ask whether a single physics-based policy can enable cooperation across diverse embodiments, team compositions, and interaction skills. We present MorphHOI, a decentralised framework built on a key insight: effective heterogeneous cooperation requires a unified representation across embodiments while accounting for differences in their physical capabilities. To realise this insight, we introduce a canonical body interface that unifies observation and action spaces, together with an embodiment-conditioned transformer that adapts cooperative decisions to the physical capabilities of each agent and its teammates. To extend cooperation to new interaction skills, we reuse the learned cooperative policy through task-specific tokens and lightweight adaptation, preserving its original capabilities. Our framework achieves success rates of up to 96.7\\% on seen embodiments, 95.6\\% on unseen embodiments, and 91.4\\% on novel payloads. Furthermore, the learned cooperation extends to diverse interaction skills with high success rates, including box carrying, transport on stairs, and waypoint following, while preserving previously acquired cooperative capabilities.",
+          "url": "https://arxiv.org/abs/2611.30312v1",
+          "pdf_url": "https://arxiv.org/pdf/2611.30312v1",
+          "published": "2026-11-23T08:58:19Z",
+          "updated": "2026-11-23T08:58:19Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2611.25215v1",
           "title": "Bridging vision-language reasoning and learned control for legged navigation in the wild",
           "authors": [
@@ -1364,27 +1382,6 @@
           "pdf_url": "https://arxiv.org/pdf/2611.15280v1",
           "published": "2026-11-11T10:10:35Z",
           "updated": "2026-11-11T10:10:35Z",
-          "categories": [
-            "cs.RO"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2611.08075v1",
-          "title": "Leave It Better Than Found: Value-Guided Cooperation in Sequential Tasks",
-          "authors": [
-            "Mario Gomez Andreu",
-            "Michael Amir",
-            "Antonio Marino",
-            "Tianxu An",
-            "Marco Hutter",
-            "Amanda Prorok"
-          ],
-          "abstract": "We consider the problem of sequential task continuation, where one robot acts in a workspace that has been affected by a previous robot. Current approaches in multi-robot cooperation rely heavily on co-training or co-optimization, assumingthat the robots have access to collective interaction data during the policy training or planning process. However, as increasingly varied robotic embodiments and policies are deployed and operate in the same real-world environment, learning policies for cooperation becomes infeasible due to the combinatorial explosion of possible robot combinations that need to be accounted for. To address this challenge, this paper considers the problem of ad hoc sequential cooperation between robots that have never before operated together in a shared environment. We demonstrate that robots can explicitly communicate their environmental preferences through sharing their value functions, enabling coordination without the need for prior joint training. To ground this exchange and prevent overconfidence in out-of-distribution states, we further introduce a k-nearest neighbors (KNN)- based uncertainty filter. Our method yields an increase of up to 48.5 pp compared with naive or even selfish agents, in task success rates across simulated and real-world experiments, demonstrating that value function transmission between agents is useful not merely as an internal learning tool, but as an effective basis for ad hoc coordination. Website: https://proroklab.github.io/PAVE/",
-          "url": "https://arxiv.org/abs/2611.08075v1",
-          "pdf_url": "https://arxiv.org/pdf/2611.08075v1",
-          "published": "2026-11-05T14:26:43Z",
-          "updated": "2026-11-05T14:26:43Z",
           "categories": [
             "cs.RO"
           ],
@@ -1848,7 +1845,7 @@
       "paper_count": 5,
       "papers": [
         {
-          "id": "2610.25600v2",
+          "id": "2610.25600v3",
           "title": "Vector-Quantized World Model: Latent Feedback Motion Planning for Robot Manipulation",
           "authors": [
             "Xuezhou Xu",
@@ -1857,10 +1854,10 @@
             "Benjamin Riviere"
           ],
           "abstract": "Visual world models have shown strong potential for robot planning, yet long-horizon manipulation remains challenging due to compounding prediction errors, large search complexity, and latent plans that the low-level controller cannot reliably reach. In this work, we introduce Vector-Quantized World Model (VQ-WM), a latent feedback motion planning framework that integrates discrete long-horizon search with continuous visual feedback control: a discrete latent predictor models transitions between vector-quantized latent states, allowing the planner to look far ahead and find a shortest path to the goal through discrete search and a continuous learned controller sequentially reaches the planned states through visual feedback, correcting deviations to mitigate compounding errors. Whereas most vector quantization uses Euclidean distance, we use a novel estimator of the first-passage-time as a quasi-metric, which aligns the planning abstraction with the controller's capabilities. We evaluate on the physical robot manipulation of the Tower of Hanoi puzzle: whereas existing state-of-the-art foundation models (VLAs, WAMs) only succeed when the solution trace in their training dataset, our method achieves 100\\% success rate with only short-play data, demonstrate its ability to compose long-horizon solutions beyond the short demonstrated trajectories and execute them reliably. Our solution also outperforms strongest world-models by 13.3--85.3 percentage points on simulation benchmarks spanning manipulation and locomotion, demonstrating consistent progress and new capabilities.",
-          "url": "https://arxiv.org/abs/2610.25600v2",
-          "pdf_url": "https://arxiv.org/pdf/2610.25600v2",
+          "url": "https://arxiv.org/abs/2610.25600v3",
+          "pdf_url": "https://arxiv.org/pdf/2610.25600v3",
           "published": "2026-10-19T00:06:44Z",
-          "updated": "2026-10-20T20:08:37Z",
+          "updated": "2026-11-23T03:47:03Z",
           "categories": [
             "cs.RO"
           ],
@@ -2825,6 +2822,34 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2611.29771v1",
+          "title": "Into My Arms: Structured reinforcement learning for autonomous transport of objects and humans",
+          "authors": [
+            "Elle Miller",
+            "Reem Almheiri",
+            "Takuma Tsukakoshi",
+            "Ben Sanati",
+            "Tamon Miyake",
+            "Yushi Wang",
+            "Namiko Saito",
+            "Shigeki Sugano",
+            "Tetsuya Ogata",
+            "Rika Antonova",
+            "Oisin Mac Aodha",
+            "Sethu Vijayakumar"
+          ],
+          "abstract": "Whole-body humanoid manipulation remains bottlenecked by high-dimensional state-action spaces, contact-rich environments, and long task horizons. This trilemma is a challenge that state-of-the-art reinforcement learning (RL) methods are yet to resolve reliably. We address it with three contributions that add just enough structure to guide exploration: Sparse Interaction Edges (SIE) for whole-body manipulation, Interaction Gated Transport (IGT) for sustained transport over long horizons, and a Hinted Object Path (HOP) that resolves collision and search complexity bottlenecks. Across all three, the policy remains free to discover its own manipulation strategy. The method generalises from rigid object to human transport. As a flagship demonstration, we show, to our knowledge, the first bed-to-wheelchair transfer of a medical mannequin by a humanoid robot completed with no human intervention during execution. In the domain of human transfer, we show that a single policy can adapt across substantial variations in body mass, size, and random force perturbations, all while training on a single GPU in under an hour. Our approach offers a pathway to fully RL-driven humanoid manipulation, enabling assistive robots that can help humans. Website: https://elle-miller.github.io/into_my_arms",
+          "url": "https://arxiv.org/abs/2611.29771v1",
+          "pdf_url": "https://arxiv.org/pdf/2611.29771v1",
+          "published": "2026-11-22T21:03:09Z",
+          "updated": "2026-11-22T21:03:09Z",
+          "categories": [
+            "cs.RO",
+            "cs.AI"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2611.12162v1",
           "title": "Same Physics, Different Gradients: A State-of-the-Art Report on Differentiable Physics Simulation",
           "authors": [
@@ -2927,31 +2952,6 @@
             "cs.RO"
           ],
           "primary_category": "cs.LG"
-        },
-        {
-          "id": "2610.02338v1",
-          "title": "SoTa: Soft Tactile Skins for Dexterous Manipulation",
-          "authors": [
-            "Jingyun Yang",
-            "Baiyu Shi",
-            "Timothy Yu",
-            "Haitian Liu",
-            "Alberta Longhini",
-            "Weichen Wang",
-            "Rika Antonova",
-            "Zhenan Bao",
-            "Jeannette Bohg"
-          ],
-          "abstract": "A growing body of work suggests that tactile sensing gives robot policies contact information that complements vision in dexterous manipulation. However, visuo-tactile robot data remains scarce: dexterous demonstrations require teleoperating robots, which limits dataset scale. Human demonstrations are far cheaper to collect and offer a path to scale this data, but only if human and robot hands carry tactile sensors with corresponding signals. This requires sensors that conform to different hand geometries, cover the full hand, and share a common layout across embodiments. We present SoTa, a low-cost capacitive tactile skin that provides full-hand coverage on humans and robots while preserving a shared layout of 202 taxels across corresponding finger and palm regions. Our multilayer design with fabric electrodes enables in-house fabrication of thin, soft skins with customizable geometry for under $10 in materials per skin. The sensor retains over 97% of its initial response span after 10,000 loading-unloading cycles with traces retaining continuity through 1,280 tight-fist folding cycles. The shared taxel layout supports human-robot co-training with a common tactile encoder and no learned cross-sensor mapping. Across three contact-rich manipulation tasks, tactile observations improve in-distribution success over vision-only policies. With a fixed robot demonstration budget, adding human demonstrations more than doubles mean success across eight evaluation conditions, from 22.8% to 45.9%, improving success in all five out-of-distribution conditions. We plan to open-source the resources needed to fabricate and operate these skins.",
-          "url": "https://arxiv.org/abs/2610.02338v1",
-          "pdf_url": "https://arxiv.org/pdf/2610.02338v1",
-          "published": "2026-10-01T18:08:59Z",
-          "updated": "2026-10-01T18:08:59Z",
-          "categories": [
-            "cs.RO",
-            "cs.LG"
-          ],
-          "primary_category": "cs.RO"
         }
       ]
     },
@@ -3301,20 +3301,21 @@
           "primary_category": "cs.CV"
         },
         {
-          "id": "2611.08209v1",
+          "id": "2611.08209v2",
           "title": "RoboARCade: Benchmarking Agentic Robot Control",
           "authors": [
             "Satvik Sharma",
             "Hengyuan Hu",
             "Mihika Kamat",
+            "Samrat Sahoo",
             "Dorsa Sadigh",
             "Jeannette Bohg"
           ],
           "abstract": "Improvements in multi-modal capabilities have enabled agents to act directly as robot policies, a setting we refer to as agentic robot control (ARC). We introduce RoboARCade, a benchmark of long-horizon manipulation tasks across three embodiments designed to test in-context adaptation, memory, and reasoning for precise control. The tasks build on existing open-source benchmarks, which we make harder by widening the range of initial conditions. RoboARCade is easy to use and extend: all tasks run on a single simulation backend, MuJoCo, each task is a self-contained data pack, and agents connect through interchangeable interfaces, so new tasks, agents, and interfaces can be added independently. The benchmark separates leading agents: GPT-6 Astra achieves 49.8% compared with 43.6% for Claude Fable 5.1, leaving substantial room for improvement. Comparing two interfaces, we find that a richer visual interface adds only 1.5 to 6.8 points at 1.7 to 2.3 times the cost. Failures stem mostly from choosing a poor manipulation strategy or executing a good one imprecisely, rarely from misunderstanding the scene, and agents incorrectly claim success on 24% to 39% of attempted subtasks. Agents can also improve without human input: one successful demonstration in context raises Astra's score from 53.5% to 73.0% on a five-task subset, and a prompt the agent writes and revises itself reaches 72.0%. Code, videos and full traces are available at roboarcade.org.",
-          "url": "https://arxiv.org/abs/2611.08209v1",
-          "pdf_url": "https://arxiv.org/pdf/2611.08209v1",
+          "url": "https://arxiv.org/abs/2611.08209v2",
+          "pdf_url": "https://arxiv.org/pdf/2611.08209v2",
           "published": "2026-11-05T16:00:16Z",
-          "updated": "2026-11-05T16:00:16Z",
+          "updated": "2026-11-23T03:54:59Z",
           "categories": [
             "cs.RO"
           ],
@@ -5235,6 +5236,28 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2611.30900v1",
+          "title": "GlanceNav: Efficient Vision-and-Language Navigation with Streaming Memory and Counterfactual Rewind",
+          "authors": [
+            "Anh Dao",
+            "Quan-Dung Pham",
+            "Danh Vinh Le",
+            "Tuyen Pham Le",
+            "Quan Nguyen",
+            "Yuzhang Shang"
+          ],
+          "abstract": "Multimodal large language models (MLLMs) have become strong policies for vision-and-language navigation (VLN). However, most of them encode a sample of past frames again at every decision and are trained on isolated decisions, so computation is redundant and the usable history is short. They also learn from their own mistakes through outcome rewards that give one scalar to a whole episode. We ask whether a navigator can encode each frame only once, at a constant cost per step, and still remember what matters and learn efficiently from its mistakes. We present GlanceNav, a streaming navigator built on a hybrid MLLM. Its Gated DeltaNet layers carry a recurrent state through the whole episode, while its attention layers keep a short window of recent observations and a small bank of keyframes, selected by how much each frame changes the recurrent state. This constant-size memory keeps the cost per step fixed and allows training on whole episodes with the same memory as at inference. Because the entire memory can also be copied in constant time, we further propose Counterfactual Rewind (CoRe), a reinforcement learning stage that rewinds a drifting rollout to its closest approach to the goal, lets an expert correct a few actions, and credits decisions by the resulting change in outcome. Trained only on the R2R-CE and RxR-CE training splits, with 1,000 instructions for reinforcement learning, a 4B GlanceNav reaches success rates of 71.9% and 73.6% on R2R-CE and RxR-CE val-unseen. On R2R-CE, it outperforms the strongest previous single-RGB method trained without external data by 9.1 points, while running at 104 ms per step.",
+          "url": "https://arxiv.org/abs/2611.30900v1",
+          "pdf_url": "https://arxiv.org/pdf/2611.30900v1",
+          "published": "2026-11-23T16:02:19Z",
+          "updated": "2026-11-23T16:02:19Z",
+          "categories": [
+            "cs.CV",
+            "cs.RO"
+          ],
+          "primary_category": "cs.CV"
+        },
+        {
           "id": "2611.22275v2",
           "title": "Heave-Ho: Decentralized Long-Horizon Multi-Humanoid Collaboration",
           "authors": [
@@ -5321,28 +5344,6 @@
             "cs.AI"
           ],
           "primary_category": "cs.LG"
-        },
-        {
-          "id": "2611.06630v1",
-          "title": "Noise-regularized training of quantum circuit Born machines under a finite shot budget",
-          "authors": [
-            "Hoang M. Ngo",
-            "Quan Nguyen",
-            "Jung Taek Seo",
-            "Wanli Xing",
-            "My T. Thai"
-          ],
-          "abstract": "Quantum circuit Born machines (QCBMs) can learn distributions that are hard to sample from classically, but their value depends on generalizing from finite training data. Here, we study how hardware noise affects this generalization. We show that, for any noise process, the generalization gap of a QCBM trained with the maximum mean discrepancy is bounded by the complexity of the distributions the noisy model can reach. Scrambled local Pauli noise contracts this complexity but biases the model towards the uniform distribution, so residual noise acts as a regularizer whose optimal strength can be intermediate. We propose GENIE, a framework that realizes a chosen noise level with capped error mitigation and selects it during training from held-out data within a fixed execution budget, with provably bounded regret. In simulations on synthetic and census data, GENIE stays close to the best of four noise-control strategies, whereas every fixed noise level falls short in many settings.",
-          "url": "https://arxiv.org/abs/2611.06630v1",
-          "pdf_url": "https://arxiv.org/pdf/2611.06630v1",
-          "published": "2026-11-04T15:13:20Z",
-          "updated": "2026-11-04T15:13:20Z",
-          "categories": [
-            "quant-ph",
-            "cs.AI",
-            "cs.LG"
-          ],
-          "primary_category": "quant-ph"
         }
       ]
     },
@@ -5487,6 +5488,30 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2611.30962v1",
+          "title": "Self-Evolving Evaluation Environments for Computer-Use Agents",
+          "authors": [
+            "Wenhao Wang",
+            "Panrong Tong",
+            "Quyu Kong",
+            "Pengxiang Li",
+            "Haowen Yang",
+            "chenglin Cai",
+            "Siheng Chen",
+            "Yue Wang"
+          ],
+          "abstract": "Computer-use agents (CUAs) are rapidly improving, yet their evaluation remains largely static. Existing benchmarks provide a strong foundation, but fixed difficulty ceilings, limited feature coverage, and coarse aggregate scores progressively weaken their discriminative and diagnostic value. We introduce CUA-SEE, a closed-loop evaluation environment that co-evolves tasks and executable verifiers from rollout evidence. It disentangles three objectives: benchmark evolution expands evaluation scope through cohort-calibrated difficulty and coverage growth; diagnostic evolution increases resolution through agent-conditional capability-boundary probes; and verifier evolution improves precision by translating changing requirements into state-grounded checkpoints with adversarial validation. Across multiple agents, applications, and rounds, CUA-SEE generates challenging, measurable tasks while preserving process-level evidence. Our results position adaptive evaluation as a scalable counterpart to self-evolving agents, continuously tracking what agents can do, where their boundaries lie, and how reliably progress is measured.",
+          "url": "https://arxiv.org/abs/2611.30962v1",
+          "pdf_url": "https://arxiv.org/pdf/2611.30962v1",
+          "published": "2026-11-23T16:32:01Z",
+          "updated": "2026-11-23T16:32:01Z",
+          "categories": [
+            "cs.AI",
+            "cs.CV"
+          ],
+          "primary_category": "cs.AI"
+        },
+        {
           "id": "2611.24940v1",
           "title": "$Z$-sight: Unifying Vision-Language-Action and Latent World Modeling",
           "authors": [
@@ -5608,25 +5633,6 @@
             "cs.AI"
           ],
           "primary_category": "quant-ph"
-        },
-        {
-          "id": "2611.11951v1",
-          "title": "UltraVoxelGS: Voxel-First Feed-Forward Gaussian Splatting for 3D Ultrasound Reconstruction",
-          "authors": [
-            "Yue Wang",
-            "Haoxin Chen",
-            "Xiaoqing Guo"
-          ],
-          "abstract": "We present UltraVoxelGS, a 3D ultrasound reconstruction method that achieves both fast reconstruction and physically faithful rendering for the first time, bringing live spatial feedback during 2D ultrasound scanning within reach. This is made possible by a feed-forward design that predicts a complete Gaussian scene representation from posed ultrasound images directly, entirely bypassing the per-scene optimization bottleneck that has confined prior methods to offline use. Realising such feed-forward prediction in this setting is non-trivial: unlike natural images, ultrasound slices share at most one-dimensional intersections and exhibit view-dependent appearance due to acoustic propagation and attenuation, violating the dense overlap and photometric consistency assumed by existing feed-forward Gaussian methods. Hence, to achieve fast reconstruction, we introduce a feed-forward voxel-to-Gaussian pass that decouples representation size from input count by lifting all posed slices into a fixed-size voxel support and predicting Gaussian parameters directly. For faithful rendering, we propose ultrasound-aware appearance rendering strategy factorize reflection from cumulative attenuation during training and exploit appearance continuity among spatially adjacent slices for efficient Render-time Appearance Adaptation. On both real-world and simulated datasets, UltraVoxelGS achieves best PSNR/SSIM compared with per-scene optimization baselines while reducing inference from 10-20 minutes to approximately 10 seconds (over 35 times faster) and scales to sequences exceeding 1,000 frames. Code is available at https://github.com/YuebyYue/UltraVoxelGS-camera-ready.",
-          "url": "https://arxiv.org/abs/2611.11951v1",
-          "pdf_url": "https://arxiv.org/pdf/2611.11951v1",
-          "published": "2026-11-09T06:16:49Z",
-          "updated": "2026-11-09T06:16:49Z",
-          "categories": [
-            "cs.CV",
-            "eess.SP"
-          ],
-          "primary_category": "cs.CV"
         }
       ]
     },
