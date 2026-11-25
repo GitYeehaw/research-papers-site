@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-11-24T19:32:51.935089+00:00",
+  "scraped_at": "2026-11-25T18:40:16.823566+00:00",
   "researcher_count": 54,
   "researchers": [
     {
@@ -1398,6 +1398,25 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2611.32582v1",
+          "title": "Design, Control, and Teleoperation of a Dexterous Robotic Hand with Soft-Rigid Hybrid Fingers",
+          "authors": [
+            "Chao Liu",
+            "Wil J. Norton",
+            "Brandon Romero",
+            "Daniela Rus"
+          ],
+          "abstract": "Adding compliance to robot hands results in higher grasp quality and robust contact with the environment. Soft hands are inherently compliant, but are typically more complex to control and model than rigid equivalents. We extend prior work on soft-rigid hybrid robot fingers into a five-fingered dexterous gripper --- an integrated tendon-driven hand that is highly compliant and controllable. Structural compliance combined with a rigid skeleton, when realized in a five-fingered hand, allow us to use linear control to achieve soft-grasping generality. We evaluate the use of this hand in a variety of teleoperated manipulation tasks, demonstrating the effectiveness of the overall mechanical design and control strategy. Our contributions include: (1) Mechanical design of the a five-fingered Soft-Rigid Hybrid Hand, composed of 12 active degrees of freedom, demonstrating a high degree on generalization enabled by the soft-rigid architecture, with our gripper, able to complete 28 of the 33 (84.8\\%) grasp postures in the human range. (2) Precise, high bandwidth (up to 1432deg/s extension speed, compared with 700deg/s for the equivalent human joint). (3) Position and task space controllers for the soft-rigid hybrid finger and whole hand. (4) A teleoperation framework for control of this hand, as well as demonstrations of its efficacy in a variety of grasping and manipulation tasks Further tests illustrate the hand's advantages in completing non-rigid manipulation tasks, such as picking up thin deformable objects (such as a dollar bill or folding cloth) as well as in interfacing with soft or delicate targets.",
+          "url": "https://arxiv.org/abs/2611.32582v1",
+          "pdf_url": "https://arxiv.org/pdf/2611.32582v1",
+          "published": "2026-11-24T13:24:00Z",
+          "updated": "2026-11-24T13:24:00Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2611.23563v1",
           "title": "Learning the Dynamics of Deformable Linear Objects Through Coupled Oscillators for Bimanual Robotic Manipulation",
           "authors": [
@@ -1474,27 +1493,6 @@
           "pdf_url": "https://arxiv.org/pdf/2610.39418v2",
           "published": "2026-10-29T05:59:51Z",
           "updated": "2026-11-14T23:06:06Z",
-          "categories": [
-            "cs.LG"
-          ],
-          "primary_category": "cs.LG"
-        },
-        {
-          "id": "2610.38255v2",
-          "title": "ParaTTT: Parallelizing Test-Time Training Layers with Deep Memories",
-          "authors": [
-            "Noel Loo",
-            "Neehal Tumma",
-            "T. Konstantin Rusch",
-            "Mathias Lechner",
-            "Alexander Amini",
-            "Daniela Rus"
-          ],
-          "abstract": "Test-time training (TTT) layers replace the linear fast-weight memory of modern recurrent architectures with a small neural network trained online by gradient descent. This nonlinear memory is more expressive than the linear memories of Gated DeltaNet and Mamba-2, but is difficult to parallelize: existing implementations such as TTT-MLP rely on sequential, block-wise weight updates that run several times slower than chunkwise-parallel linear recurrences. Their block-wise execution only approximates the token-by-token online recurrence, whereas linear recurrences admit an exact chunkwise-parallel evaluation. We introduce ParaTTT (PTTT), an algorithm for parallelizing arbitrarily deep nonlinear memories by iteratively refining estimates of the inner-loop gradient trajectory. Each refinement consists of three chunkwise-parallel passes: a forward pass that evaluates the resulting feature trajectory, an exact gated-delta-rule pass that computes the readout trajectory and its feature gradients, and a backward pass that propagates these gradients into a new estimate. The exact online gradient descent recurrence is a fixed point of the iteration. Training and prefill approximate this recurrence with a finite number of iterations, while decoding applies the exact token-by-token update without refinement. We prove geometric convergence for a two-layer variant under sufficient contraction conditions. With two refinement steps at 4K context, PTTT evaluates the inner-loop trajectory $32\\times$ faster than TTT-MLP with the block approximation at matched error, while the full 340M model trains $4.9\\times$ faster. Models trained at 340M and 1.3B parameters match or exceed Gated DeltaNet and Mamba-2 and remain competitive with same-size Transformers on language-modeling perplexity and zero-shot accuracy, with better recall than the linear recurrences.",
-          "url": "https://arxiv.org/abs/2610.38255v2",
-          "pdf_url": "https://arxiv.org/pdf/2610.38255v2",
-          "published": "2026-10-28T04:08:50Z",
-          "updated": "2026-11-14T23:47:40Z",
           "categories": [
             "cs.LG"
           ],
@@ -1621,6 +1619,28 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2611.31588v1",
+          "title": "One Phase Is Enough: Sim-to-Real Transfer with Direct Visual Reinforcement Learning",
+          "authors": [
+            "John Marangola",
+            "Antonia Bronars",
+            "Younghyo Park",
+            "Stephen Andrews",
+            "Kushal Kedia",
+            "Pulkit Agrawal"
+          ],
+          "abstract": "Sim-to-real reinforcement learning (RL) has enabled impressive robotic behaviors, yet deploying policies directly from vision remains challenging. A common approach first trains a teacher policy with RL using privileged state observations, then distills its behavior into a vision-based student via imitation. However, the resulting student can substantially underperform its teacher. Directly training visual policies with RL offers a promising alternative, but learning task-relevant visual representations from scratch can be sample-inefficient, making one-phase visual RL intractable. We propose DRIFT, a simple recipe for efficient one-phase visual RL using image observations available at test time. Our key insight is to use frozen, pretrained foundation vision encoders, allowing RL to focus on learning control from existing visual representations. Freezing the encoder avoids costly backpropagation through the vision backbone, while its pretrained representations enable real-world transfer from fast, rasterized simulation rendering. Under matched architectures, observations, and compute budgets, DRIFT outperforms two-phase distillation and achieves a 58.8% relative improvement in average real-world success rate across three manipulation tasks. Controlled simulation evaluations demonstrate that DRIFT's relative advantage grows from roughly 9% in-distribution to over 61% under out-of-distribution shifts, suggesting that stronger generalization contributes to superior real-world transfer. Project website: https://jmarangola.github.io/one-phase-visual-rl/",
+          "url": "https://arxiv.org/abs/2611.31588v1",
+          "pdf_url": "https://arxiv.org/pdf/2611.31588v1",
+          "published": "2026-11-23T21:32:12Z",
+          "updated": "2026-11-23T21:32:12Z",
+          "categories": [
+            "cs.LG",
+            "cs.RO"
+          ],
+          "primary_category": "cs.LG"
+        },
+        {
           "id": "2611.03501v2",
           "title": "When Robots Outweigh Objects: How Inertia Mismatch Shapes Robot Policy Learning",
           "authors": [
@@ -1691,26 +1711,6 @@
           "pdf_url": "https://arxiv.org/pdf/2610.22119v1",
           "published": "2026-10-15T15:59:04Z",
           "updated": "2026-10-15T15:59:04Z",
-          "categories": [
-            "cs.RO"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2610.18991v1",
-          "title": "Contact-UAN: Unsupervised Actuator Networks as a Residual World Model for Humanoid Control",
-          "authors": [
-            "Nolan Fey",
-            "Khai Nguyen",
-            "Yash Prabhu",
-            "Gabriel B. Margolis",
-            "Pulkit Agrawal"
-          ],
-          "abstract": "Humanoid policies trained in simulation can transfer qualitatively to hardware while failing to transfer the force interactions learned during training, compromising torque efficiency, load regulation, and robustness to impacts. This failure can arise from actuator sim-to-real gaps because forces depend on actuator torques. We introduce Contact-UAN, a residual world model that preserves a simulator's physics priors while correcting actuator dynamics to align simulated rollouts with recorded hardware rollouts. For humanoid motion with contact, this requires contact-consistent replay: if hardware playback in simulation begins with misaligned contact wrenches, the residual model learns to correct reset artifacts rather than actuator discrepancies. Using only onboard proprioception, Contact-UAN infers the simulator-side stance-foot pose needed to initialize replay with consistent contact forces. We show that a UAN trained on 6.5 minutes of real-world walking data generalizes to tasks that benefit from accurate force and impulse regulation and produces policies that transfer seamlessly to the real world, yielding 20% lower running torque, 43% lower force-tracking error, extreme compliance, accurate impedance control, and dynamic, robust jumps.",
-          "url": "https://arxiv.org/abs/2610.18991v1",
-          "pdf_url": "https://arxiv.org/pdf/2610.18991v1",
-          "published": "2026-10-13T18:00:52Z",
-          "updated": "2026-10-13T18:00:52Z",
           "categories": [
             "cs.RO"
           ],
@@ -5488,6 +5488,40 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2611.32982v1",
+          "title": "When Repair Accuracy Misleads: Training a VLM on Its Own Failures",
+          "authors": [
+            "Ang Qi",
+            "Yue Wang"
+          ],
+          "abstract": "Fine-tuning a vision-language model on its own failures is a direct way to repair it, but accuracy on held-out failures, the obvious measure of success, misleads. Many mined failures are not model errors: a human audit of 100 failures of Qwen3-VL-8B-Instruct on questions generated from COCO and GQA found label errors in 37. And mined failures share wording regularities: question-only classifiers get both answers right on 73.2% of held-out failure pairs. We study both traps with verified failure-driven repair (VFR): typed minimal-pair failure mining, verification by three LLM judges that answer without seeing the stored labels, answer-first corrective targets, and LoRA fine-tuning with replay. VFR repairs 82.8% of held-out failures (base model: 10.0%), and on independently labeled, unconditioned pairs it raises overall accuracy from 87.4% to 92.4% through spatial relations, whose accuracy rises from 66.7% to 96.8% even where the wording points to the wrong answer. Yet on negation, of which it repairs 88.9% of held-out failures, its accuracy on unconditioned pairs falls from 88.7% to 79.7%: it breaks negations about absent objects, rare in its training set. Without verification, accuracy on unconditioned pairs falls to 80.8%, below the base model's 87.4%, through a negation shortcut our development benchmarks miss; without failure selection, it stays at 92.0% (one seed) while repair falls to 73.4%. Training also lowers two-image relation accuracy (74.3% to 49.6%; replay data alone: 48.4%); multi-image replay partly and unevenly reverses this. Paraphrasing the spatial questions keeps most of the gain (87.3% vs. the base model's 62.0%), though rewording lowers spatial repair on held-out failures from 92.9% to 76.8%. On What'sUp's independent photos of objects under others, caption choice stays perfect while accuracy on our yes/no pairs falls from 84.5% to 26.4%.",
+          "url": "https://arxiv.org/abs/2611.32982v1",
+          "pdf_url": "https://arxiv.org/pdf/2611.32982v1",
+          "published": "2026-11-24T17:14:31Z",
+          "updated": "2026-11-24T17:14:31Z",
+          "categories": [
+            "cs.CV",
+            "cs.CL"
+          ],
+          "primary_category": "cs.CV"
+        },
+        {
+          "id": "2611.32812v1",
+          "title": "Breaking the Joint Action Space Dependence in Distributionally Robust Multi-Agent Reinforcement Learning",
+          "authors": [
+            "Yue Wang"
+          ],
+          "abstract": "We study the sample complexity of learning robust coarse correlated equilibria (CCE) in finite-horizon, general-sum, distributionally robust Markov games with known rewards and a generative model of the nominal transitions. Each player evaluates a policy by its worst-case return over total-variation (TV) balls centered at the nominal transition distribution of every stage, state, and joint action; this is the standard $(s,a)$-rectangular uncertainty set. Existing generative-model guarantees for this model scale with the number $\\prod_iA_i$ of joint actions, where $A_i$ is the number of actions of player~$i$. Since this number grows exponentially with the number of players, these guarantees suffer from the curse of multiagency. We design an algorithm whose sample complexity depends on the action sets only through the largest individual action-set size $A_*:=\\max_iA_i$. The algorithm uses $\\widetilde O(SA_*H^5D^4/\\varepsilon^4)$ transition samples and, with probability at least $1-\u03b4$, returns a Markov policy that is an $\\varepsilon$-robust CCE from every initial state. Here $S$ is the number of states, $H$ is the horizon, and $D:=\\max_i\\min\\{H,1/\u03c1_i\\}$, where $\u03c1_i$ is the TV radius of player~$i$. Two ingredients make this possible: a plug-in estimate of the robust backup whose mean error does not depend on the number of states, and a single batch of samples per round that serves as bandit feedback for all players at once. The result shows that the dependence on $\\prod_iA_i$ can be avoided without modifying the $(s,a)$-rectangular uncertainty set.",
+          "url": "https://arxiv.org/abs/2611.32812v1",
+          "pdf_url": "https://arxiv.org/pdf/2611.32812v1",
+          "published": "2026-11-24T15:32:04Z",
+          "updated": "2026-11-24T15:32:04Z",
+          "categories": [
+            "cs.LG"
+          ],
+          "primary_category": "cs.LG"
+        },
+        {
           "id": "2611.30962v1",
           "title": "Self-Evolving Evaluation Environments for Computer-Use Agents",
           "authors": [
@@ -5587,52 +5621,6 @@
             "q-bio.QM"
           ],
           "primary_category": "cs.AI"
-        },
-        {
-          "id": "2611.22275v2",
-          "title": "Heave-Ho: Decentralized Long-Horizon Multi-Humanoid Collaboration",
-          "authors": [
-            "Ting-Hsuan Chen",
-            "Siheng Zhao",
-            "Han Jiang",
-            "Qi Pan",
-            "Louison Lu",
-            "Jiaheng Luo",
-            "Henghui Bao",
-            "Yiyu Chen",
-            "Quan Nguyen",
-            "Yue Wang"
-          ],
-          "abstract": "Collaboration promises to extend humanoid capabilities beyond what individual robots can achieve. However, realizing this potential requires coordinated whole-body interactions, coherent long-horizon planning, and precise synchronization across robots. We introduce Heave-Ho, a decentralized framework for long-horizon collaborative multi-humanoid loco-manipulation. At the low level, we develop a multi-agent post-training framework that adapts a humanoid foundation tracking model to physically coupled interactions between humanoids, enabling coordinated decentralized control from local observations alone. At the high level, we train a vision-language planner and design a speech-based leader-follower coordination mechanism to synchronize decentralized execution without network communication. Trained with two identical humanoids, our system scales to teams of up to ten robots and generalizes to heterogeneous teams without retraining. To benchmark these capabilities, we introduce HH-Bench, comprising 12 tasks involving teams of 2 to 10 humanoids, including heterogeneous teams. Systematic evaluations show that Heave-Ho consistently outperforms baseline methods, while real-world experiments demonstrate robust decentralized collaboration across challenging tasks.",
-          "url": "https://arxiv.org/abs/2611.22275v2",
-          "pdf_url": "https://arxiv.org/pdf/2611.22275v2",
-          "published": "2026-11-17T06:21:03Z",
-          "updated": "2026-11-18T06:46:21Z",
-          "categories": [
-            "cs.RO",
-            "cs.CV",
-            "cs.LG"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2611.15000v1",
-          "title": "QSim-Arena: an evolving developer for quantum simulation advantage",
-          "authors": [
-            "Jue Xu",
-            "Yue Wang",
-            "Qi Zhao"
-          ],
-          "abstract": "Where practical advantage emerges in quantum dynamics simulation remains a central debate in quantum computing. Claimed advantages can be rapidly narrowed or overturned by stronger classical methods, while progress on both sides can outpace the journal publication cycle. We present QSim-Arena, a research framework in which AI agents combine a closed loop of verification and benchmarking with open exploration. Hamiltonians, initial states and accuracy targets for evolved states or observable expectation values provide explicit specifications for evaluating simulation methods. Agents translate published techniques into executable components, reproduce reported results and benchmark their performance across diverse Hamiltonian families. Competing classical methods are implemented and independently crosschecked, providing credible baselines for end-to-end quantum resource estimates based on rigorous error bounds and empirical calibration. Alongside this closed loop, agents recombine classical simulation techniques and co-design fault-tolerant quantum circuits using knowledge extracted from the literature. Initial applications improve baseline resource estimates through the integration of established techniques. QSim-Arena thus treats quantum advantage assessment as an evolving, reproducible research process that can respond to advances in algorithms, error analysis and hardware.",
-          "url": "https://arxiv.org/abs/2611.15000v1",
-          "pdf_url": "https://arxiv.org/pdf/2611.15000v1",
-          "published": "2026-11-11T03:58:54Z",
-          "updated": "2026-11-11T03:58:54Z",
-          "categories": [
-            "quant-ph",
-            "cs.AI"
-          ],
-          "primary_category": "quant-ph"
         }
       ]
     },
@@ -6354,6 +6342,24 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2611.31446v1",
+          "title": "Learning from Human Corrections through Temporal Preferences",
+          "authors": [
+            "Anjiabei Wang",
+            "Tesca Fitzgerald"
+          ],
+          "abstract": "When people intervene to correct a robot, they provide information not only through how they correct its behavior, but also through when they choose to intervene. Existing approaches to Learning from Corrections focus on comparing the new trajectory to the robot's originally intended behavior, thus underutilizing the context of the robot's behavior before the intervention. In this work, we investigate how both pre- and post-intervention behavior can be translated into preference pairs for learning value functions that approximate a human's latent reward. We construct post-intervention preferences by comparing corrected behavior with the behavior it replaces, and pre-intervention preferences from temporal relationships among states leading up to an intervention. We evaluate the learned value representations through two downstream tasks: goal inference and correction forecasting. Our results show that post-intervention preferences are particularly effective for goal inference, while pre-intervention preferences provide strong correction-forecasting performance. Combining both sources of information performs strongly across both tasks, even when generalizing to participants unseen during training. These findings demonstrate that both when and how humans correct provide complementary information for learning value representations from corrective interactions.",
+          "url": "https://arxiv.org/abs/2611.31446v1",
+          "pdf_url": "https://arxiv.org/pdf/2611.31446v1",
+          "published": "2026-11-23T19:21:08Z",
+          "updated": "2026-11-23T19:21:08Z",
+          "categories": [
+            "cs.RO",
+            "cs.LG"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2606.23617v1",
           "title": "RECALL: Recovery Experience Collection for Active Lifelong Learning in Vision-Language-Action Models",
           "authors": [
@@ -6427,26 +6433,6 @@
           "categories": [
             "cs.RO",
             "cs.AI"
-          ],
-          "primary_category": "cs.RO"
-        },
-        {
-          "id": "2501.03515v1",
-          "title": "Effects of Robot Competency and Motion Legibility on Human Correction Feedback",
-          "authors": [
-            "Shuangge Wang",
-            "Anjiabei Wang",
-            "Sofiya Goncharova",
-            "Brian Scassellati",
-            "Tesca Fitzgerald"
-          ],
-          "abstract": "As robot deployments become more commonplace, people are likely to take on the role of supervising robots (i.e., correcting their mistakes) rather than directly teaching them. Prior works on Learning from Corrections (LfC) have relied on three key assumptions to interpret human feedback: (1) people correct the robot only when there is significant task objective divergence; (2) people can accurately predict if a correction is necessary; and (3) people trade off precision and physical effort when giving corrections. In this work, we study how two key factors (robot competency and motion legibility) affect how people provide correction feedback and their implications on these existing assumptions. We conduct a user study ($N=60$) under an LfC setting where participants supervise and correct a robot performing pick-and-place tasks. We find that people are more sensitive to suboptimal behavior by a highly competent robot compared to an incompetent robot when the motions are legible ($p=0.0015$) and predictable ($p=0.0055$). In addition, people also tend to withhold necessary corrections ($p < 0.0001$) when supervising an incompetent robot and are more prone to offering unnecessary ones ($p = 0.0171$) when supervising a highly competent robot. We also find that physical effort positively correlates with correction precision, providing empirical evidence to support this common assumption. We also find that this correlation is significantly weaker for an incompetent robot with legible motions than an incompetent robot with predictable motions ($p = 0.0075$). Our findings offer insights for accounting for competency and legibility when designing robot interaction behaviors and learning task objectives from corrections.",
-          "url": "https://arxiv.org/abs/2501.03515v1",
-          "pdf_url": "https://arxiv.org/pdf/2501.03515v1",
-          "published": "2025-01-07T04:17:15Z",
-          "updated": "2025-01-07T04:17:15Z",
-          "categories": [
-            "cs.RO"
           ],
           "primary_category": "cs.RO"
         }
