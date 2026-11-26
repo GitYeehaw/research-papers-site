@@ -2,234 +2,216 @@
   "category": "cs",
   "name": "CS Research",
   "description": "Computer Science \u2014 AI, Machine Learning, NLP, Computer Vision",
-  "scraped_at": "2026-11-25T18:35:05.778822+00:00",
+  "scraped_at": "2026-11-26T18:19:03.487868+00:00",
   "paper_count": 10,
   "papers": [
     {
-      "id": "2611.33158v1",
-      "title": "OmniAct: One Policy, One Million Embodiments",
+      "id": "2611.34944v1",
+      "title": "AnyCam: Anything Can Represent Camera for Video Generation",
       "authors": [
-        "Xiang Fan",
-        "Yuheng Wang",
-        "Jiayuan Yan",
-        "Bohan Fang",
-        "Wisdom Oluchi Ikezogwo",
-        "Ainaz Eftekhar",
-        "Max Argus",
-        "Jason Ren",
-        "Jiafei Duan",
-        "Ranjay Krishna"
+        "Weijie Lyu",
+        "Zhixin Shu",
+        "Yuntian Ke",
+        "Ming-Hsuan Yang"
       ],
-      "abstract": "A single policy that controls diverse robots must not only transfer task knowledge across embodiments, but also adapt its behavior to each robot's capabilities. Existing approaches facilitate transfer through shared action representations, but these representations do not necessarily capture how differences in robot morphology should shape manipulation strategies. We introduce OmniAct, a cross-embodiment manipulation policy that conditions directly on each robot's kinematics in a specific scene to produce embodiment-specific behavior. This kinematic graph represents the robot's joint positions, motion axes, and connectivity to its visual observation, allowing the policy to account for how its embodiment related to objects and surfaces in the scene. A flow-matching policy predicts relative joint motions for each node, enabling control across robots with different degrees of freedom and kinematic configurations. To learn how physical structure shapes behavior at scale, we procedurally design and filter one million physically feasible robot embodiments; next, we develop algorithms to generate robot trajectories in simulation for all embodiments; finally, we train across diverse simulated manipulation tasks. On 2,000 embodiment-scene-held-out evaluation episodes, OmniAct achieves 63.0% success, compared to 17.8% for pi 0.5 and 57.9% for the strongest baseline; on the task families GPT-6 Astra was evaluated on, it achieves 64.7% against GPT-6 Astra's 41.1%. On a previously unseen real-world robot, it achieves nearly twice the success rate of the next best method, MolmoAct2. Beyond task success, we observe that OmniAct learns distinct manipulation strategies that exploit the capabilities and accommodate the limitations of different morphologies. Project: https://omniact.github.io/",
-      "url": "https://arxiv.org/abs/2611.33158v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.33158v1",
-      "published": "2026-11-24T18:59:58Z",
-      "updated": "2026-11-24T18:59:58Z",
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.CV",
-        "cs.LG"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2611.33157v1",
-      "title": "PointX: Multi-View Consistent Intrinsics by Querying Surface Points",
-      "authors": [
-        "Miguel Farinha",
-        "Sam Sartor",
-        "Iliyan Georgiev",
-        "Giuseppe Vecchio",
-        "Ronald Clark",
-        "Michael Fischer"
-      ],
-      "abstract": "The appearance of a scene is determined by the albedo, roughness, metallicity and normal of every point on its surface, and by the light that reaches it, its irradiance. Recovering these intrinsics from images is ambiguous, and methods that predict them per pixel give the same surface point a different decomposition in every view. We introduce PointX, a simple feed-forward model that predicts intrinsics per 3D surface point instead. A multi-view transformer encodes a set of unposed images, and for any queried surface point, PointX pools the point's tokens across the views in which it appears and decodes the point's intrinsics once. Each point of a 3D reconstruction of the scene, such as a point cloud or a mesh, thus receives a single prediction, which is exactly consistent across views by construction and enables view-consistent relighting and editing. The same model also predicts per-view maps, from one image or many, by querying the point seen at every pixel. These maps agree across views up to the precision of the estimated geometry and correspondences. PointX is significantly more consistent than existing methods, while remaining competitive in accuracy from a single image and improving as views are added. Project page: https://pointx-paper.github.io/",
-      "url": "https://arxiv.org/abs/2611.33157v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.33157v1",
-      "published": "2026-11-24T18:59:42Z",
-      "updated": "2026-11-24T18:59:42Z",
+      "abstract": "Camera-controlled video generation re-renders a video along a target camera trajectory, yet moving the camera around an object, the most natural way to change the viewpoint of an object-centric scene, remains difficult. Existing methods condition either on camera parameters, which are scale-ambiguous in monocular video, or on explicit geometry such as warped point clouds or depth, which breaks down under large viewpoint changes. We present AnyCam, a method that represents the camera with an anchor object in the scene: we reconstruct it in 3D and render it along the target trajectory, a camera signal that is scale-aware, view-complete and easy to specify relative to the object. A video diffusion model transfers the content and dynamics of the source video to the new viewpoint. Its H-Concat layout aligns source and target frames in time, so the model can be distilled into AnyCam-AR, a streaming few-step generator for on-the-fly camera control. Both models are trained on paired videos with pixel-aligned anchor renderings from multi-camera videos and static-scene captures. Experiments on diverse datasets and trajectories show that AnyCam performs favorably against camera-controlled video generation and 3D reconstruction methods in camera control and visual quality.",
+      "url": "https://arxiv.org/abs/2611.34944v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.34944v1",
+      "published": "2026-11-25T18:59:59Z",
+      "updated": "2026-11-25T18:59:59Z",
       "categories": [
         "cs.CV"
       ],
       "primary_category": "cs.CV"
     },
     {
-      "id": "2611.33153v1",
-      "title": "DiaCap: Jointly Learning Who Speaks When for Audiovisual Dialogue Captioning",
+      "id": "2611.34943v1",
+      "title": "Tracking Any Point with Agentic Visual Reasoning",
       "authors": [
-        "Binfei Ji",
-        "Zhiwen Cao",
-        "Anqi Yang",
-        "Prem Seetharaman",
-        "Shuo Yang",
-        "Ratheesh Kalarot",
-        "Yingyan Celine Lin",
-        "Mingze Xu"
+        "Xuweiyi Chen",
+        "Jin Yao",
+        "Linzhan Mou",
+        "Lei Gong",
+        "Di Liu",
+        "Cheng Zhang",
+        "Ziqiao Ma",
+        "Sihan Xu",
+        "Adam W. Harley",
+        "Shengyi Qian",
+        "Zezhou Cheng"
       ],
-      "abstract": "We present DiaCap, an audiovisual LLM for comprehensive dialogue captioning, which produces the transcript, timestamps, and a visual description of the speaker for every utterance in a video. Considering that utterance timing and audiovisual diarization are tightly coupled, DiaCap unifies the tasks in a single model, trained in two complementary stages. First, we train DiaCap on 225K curated clips, using synthetic captions that densely label every utterance in detail. Second, we further refine the model via reinforcement learning on 2.9K human-corrected clips, using fine-grained feedback that directly evaluates utterance timing, speaker grouping, and speaker binding. On DiaDemBench, which we extend with utterance-level timestamps and subtitle redaction, both DiaCap with off-the-shelf transcripts and its end-to-end variant DiaCap-E2E achieve strong results. Specifically, DiaCap performs on par with Gemini 4 Argon in audiovisual diarization while clearly outperforming it in timestamp accuracy (76.59 vs. 42.76 TIME). It also maintains strong diarization on multilingual and minute-long videos, and transfers to audiovisual question answering.",
-      "url": "https://arxiv.org/abs/2611.33153v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.33153v1",
-      "published": "2026-11-24T18:59:08Z",
-      "updated": "2026-11-24T18:59:08Z",
+      "abstract": "A general-purpose Vision-Language Model (VLM) has surpassed expert vision models in many domains such as object detection and video recognition. However, point correspondence is known to be challenging for VLMs since it goes beyond object-level recognition: it requires pixel-level localization of the same physical surface point across observations, even when appearance changes or the point disappears and later reappears. In this paper, we introduce AgenTAP, a VLM-based agent that directly predicts point coordinates and visibility and actively reasons over videos. Starting from its own estimate, the agent autonomously chooses what to inspect and uses the resulting evidence to verify point identity and refine its predictions. With GPT-6 Astra, it surpasses expert vision models in both point localization and visibility prediction, without correspondence-specific fine-tuning. We further use AgenTAP to re-identify physical points after disappearance and reconnect fragmented tracks, constructing EgoTAP-4D, a dataset of 3D point trajectories in long real-world egocentric videos. On sampled reappearing points, its predictions approach human agreement, and adding EgoTAP-4D to D4RT training improves average 3D tracking performance.",
+      "url": "https://arxiv.org/abs/2611.34943v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.34943v1",
+      "published": "2026-11-25T18:59:58Z",
+      "updated": "2026-11-25T18:59:58Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2611.34942v1",
+      "title": "Spectrum Adaptation of AI-Native Autoencoder Communications with Transfer Learning",
+      "authors": [
+        "Yalin E. Sagduyu",
+        "Tugba Erpek"
+      ],
+      "abstract": "End-to-end physical-layer learning replaces separate modulation, coding, and detection operations with an autoencoder (AE) that consists of a jointly trained encoder-decoder pair at the transmitter and the receiver. This paper studies AI-native communications with AEs and quantifies the sensitivity to training-test mismatch in channel models. Models trained only on an AWGN channel achieve low bit error rates (BERs) under matched conditions but degrade severely on Rayleigh fading with practical front-end impairments. To reduce the time and energy required to adapt to new channel conditions, we propose a low-latency transfer-learning procedure that starts from an AWGN-pretrained system and fine-tunes only a small subset of transmitter and receiver layers while freezing the remainder. We further formulate layer selection as a budget-constrained optimization problem that identifies the most informative parameters to update during adaptation. This preserves the learned signal geometry and the deep decision structure while adapting lightweight front ends to fading- and impairment-induced mixing. For AE communications, we show that partial updates remove the mismatch-induced error floor and approach the BER of fully retrained models. We provide a layer-wise study and quantify resource-performance trade-offs, showing that modest adaptation substantially reduces BER while cutting training time, multiply-accumulate (MAC) operations, energy consumption, and the fraction of updated parameters for resource-efficient implementation.",
+      "url": "https://arxiv.org/abs/2611.34942v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.34942v1",
+      "published": "2026-11-25T18:59:57Z",
+      "updated": "2026-11-25T18:59:57Z",
+      "categories": [
+        "cs.NI",
+        "cs.AI",
+        "eess.SP"
+      ],
+      "primary_category": "cs.NI"
+    },
+    {
+      "id": "2611.34941v1",
+      "title": "Improving and Expanding Video Editing Capabilities Without Videos",
+      "authors": [
+        "Ji Xie",
+        "Yanhao Jia",
+        "Xiangpeng Yang",
+        "Martin Q. Ma",
+        "Sihan Xu",
+        "Erik Cambria",
+        "Louis-Philippe Morency"
+      ],
+      "abstract": "Image editing models can follow a wide range of instructions, but video editing models still lag behind, limited in part by the difficulty of collecting paired source and edited videos. Is it possible to transfer advanced image editing capabilities to video editors without new paired videos? We introduce Image-to-Video Transfer (I2VT), which improves pretrained video editors and expands them to new editing tasks using an image editor. It enables efficient post-training with no architectural changes and no new videos, using only individual images. Our key idea is to let the video editor role-play as an image editor: it edits an image as a one-frame video, with the image editor guiding the video editor's predictions at each denoising step. Although the video editor sees only single images during training, at test time it applies the improved and expanded capabilities to whole video clips while preserving temporal consistency. To push the boundaries of video editing, we introduce OpenVE++, an extension of OpenVE-Bench that adds four new editing tasks useful for video production, including action changes, expression changes, body movements, and scene relighting. Our experiments across three different video editors show that I2VT improves existing editing capabilities and expands them to new tasks, and our models achieve state-of-the-art (SOTA) performance on both OpenVE-Bench and OpenVE++.",
+      "url": "https://arxiv.org/abs/2611.34941v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.34941v1",
+      "published": "2026-11-25T18:59:55Z",
+      "updated": "2026-11-25T18:59:55Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2611.34940v1",
+      "title": "LuxAvatar: Real-Time Relightable Head Avatars via Causal Neural Shading of 3D Intrinsic Proxies",
+      "authors": [
+        "Yipengjing Sun",
+        "Chenyang Wang",
+        "Boyao Zhou",
+        "Jiapeng Zhu",
+        "Ka Leong Cheng",
+        "Shengping Zhang"
+      ],
+      "abstract": "We present LuxAvatar, a feed-forward framework for real-time head avatar animation and relighting from a single portrait. To achieve both 3D controllability and complex facial light transport, we factorize avatar synthesis into an animatable 3D intrinsic Gaussian proxy and a causal autoregressive neural shader. This proxy disentangles canonical geometry and reflectance attributes, rapidly rasterizing deformed Gaussians into view- and motion-consistent PBR buffers. Conditioned on these buffers, our neural shader formulates forward rendering as a conditional video diffusion process, bypassing explicit PBR computation to synthesize realistic shading effects under target illumination. We achieve real-time streaming through heterogeneous distillation from a pretrained multi-step bidirectional relighting teacher to a two-step causal autoregressive neural shader, inheriting broad synthetic lighting priors while minimizing conditioning and decoding latency. To further specialize these priors to human heads, we construct a hybrid relighting dataset for domain-specific fine-tuning, capturing authentic facial dynamics and physically grounded light transport. Extensive experiments show that our framework enables 3D-controllable, real-time portrait animation and relighting, outperforming state-of-the-art methods in visual fidelity, motion control, and lighting accuracy.",
+      "url": "https://arxiv.org/abs/2611.34940v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.34940v1",
+      "published": "2026-11-25T18:59:46Z",
+      "updated": "2026-11-25T18:59:46Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2611.34939v1",
+      "title": "A Mesh for Every Moment",
+      "authors": [
+        "Roy Or-El",
+        "Jeong Joon Park",
+        "Ira Kemelmacher-Shlizerman"
+      ],
+      "abstract": "We present MEMO (a Mesh for Every MOment), a method that reconstructs the geometry of complete dynamic scenes, captured by multiple synchronized cameras, and extracts a mesh at every frame. Existing dynamic Gaussian splatting methods either model appearance alone or target isolated objects segmented by foreground masks, and all of them recover meshes by TSDF fusion or Poisson reconstruction, whose fixed grids limit the detail they can capture. At the core of MEMO is a per-Gaussian motion model inspired by Gaussian processes, which represents each Gaussian's position and rotation over time as a combination of temporal Gaussian kernels. The model keeps every Gaussian a valid surface element throughout the sequence and carries an implicit representation of the dynamic geometry, so a mesh can be derived at any time from a field defined by the Gaussians. Although common in real captures, large and fast motion poses a challenge that dynamic Gaussian splatting methods usually overlook. To account for it, we design a track-based initialization scheme that fits each Gaussian's initial trajectory to point tracks in closed form. We evaluate MEMO on Blender-Moments, a new benchmark of nine animated scenes with ground-truth meshes at every frame, and on two real-world datasets. MEMO reconstructs the most accurate geometry among state-of-the-art methods, and remains competitive in novel-view synthesis and training time. Project page: https://memo-4d.github.io",
+      "url": "https://arxiv.org/abs/2611.34939v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.34939v1",
+      "published": "2026-11-25T18:59:45Z",
+      "updated": "2026-11-25T18:59:45Z",
       "categories": [
         "cs.CV",
+        "cs.GR"
+      ],
+      "primary_category": "cs.CV"
+    },
+    {
+      "id": "2611.34938v1",
+      "title": "Tokenisation is not in APX",
+      "authors": [
+        "Violeta Kastreva",
+        "Philip Whittington",
+        "Dennis Komm",
+        "Tiago Pimentel"
+      ],
+      "abstract": "In this paper, we prove that, unless P=NP, no polynomial-time algorithm can find a tokeniser whose objective is within any constant factor of the optimum, meaning that tokenisation is not in the APX complexity class. We prove this for direct and bottom-up tokenisation, under both a compression or unigram log-likelihood objectives, and for binary or larger alphabets. We further show that, even over unary alphabets, direct tokenisation is APX-hard, and thus admits no polynomial-time approximation scheme.",
+      "url": "https://arxiv.org/abs/2611.34938v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.34938v1",
+      "published": "2026-11-25T18:59:38Z",
+      "updated": "2026-11-25T18:59:38Z",
+      "categories": [
         "cs.CL",
-        "cs.MM",
-        "cs.SD"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2611.33151v1",
-      "title": "BioLoom: Scaling Biomedical Vision-Language Models by Learning from the Structure of Scientific Articles",
-      "authors": [
-        "Yuwei Yang",
-        "Xiaoxiao Sun",
-        "Alejandro Lozano",
-        "Yuan-Sen Ting",
-        "Yuhui Yuan",
-        "Liang Zheng",
-        "Serena Yeung-Levy"
-      ],
-      "abstract": "The development of biomedical vision-language models (VLMs) with contrastive image-text pretraining has been driven by scaling to increasingly large and diverse image-text datasets. Beyond scaling, further progress can come from learning richer representations from existing data. We hypothesize that the structure of scientific literature itself provides an additional source of supervision: figures, panels, captions, and accompanying article text encode rich relationships across modalities. Yet, treating these as independent image-text pairs overlooks their relationships. To address this limitation, we incorporate these structural relationships into contrastive image-text supervision. We preserve exact image-text matches while introducing weaker positive supervision for related pairs, such as a panel and the caption of a sibling panel. We upweight cross-article negatives of the same content type to encourage finer discrimination. We also enrich panel descriptions using visual content, original figure captions, and mentioning paragraphs. Pairing panels with these descriptions and whole figures with their original captions yields Loom52M, a dataset of 52.4 million image-text pairs spanning scientific charts and biomedical images. Using Loom52M, BioLoom (DFN-2B) achieves 56.82% domain-balanced mean accuracy across 67 zero-shot classification tasks from 43 datasets in 10 domains, compared with 48.77% for MedPMC-CLIP. On BioLoomBench with concise captions and BioMedFlickr, it achieves bidirectional mean Recall@1 of 63.20% and 10.59%, versus 46.37% and 7.55% for the respective strongest evaluated baselines, BiomedCLIP and MedPMC-CLIP. Code, datasets, benchmarks, and models are available at https://bioloom-clip.github.io/.",
-      "url": "https://arxiv.org/abs/2611.33151v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.33151v1",
-      "published": "2026-11-24T18:59:04Z",
-      "updated": "2026-11-24T18:59:04Z",
-      "categories": [
-        "cs.CV",
         "cs.LG"
-      ],
-      "primary_category": "cs.CV"
-    },
-    {
-      "id": "2611.33148v1",
-      "title": "CoT-Proxy: Cross-Format Transfer for Distilling Long-Horizon Policies",
-      "authors": [
-        "Dawid J. Kopiczko",
-        "Tijmen Blankevoort",
-        "Yuki M. Asano"
-      ],
-      "abstract": "Reasoning models become long-horizon agents through reinforcement learning or, more cheaply, through fine-tuning on a stronger teacher's trajectories, which contain the teacher's chain-of-thought as well as its actions. The standard fine-tuning approach imitates both, yet the strongest teachers are closed models whose chain-of-thought is hidden behind an API. We show that the chain-of-thought can be left out altogether and that the long-horizon policy can be distilled from the teacher's actions alone. The student is trained on these trajectories with its reasoning block left empty, while a KL loss on a replay buffer of its own generations limits drift from its initial model. Surprisingly, the policy learned from these trajectories with an empty reasoning block carries over to inference with thinking enabled, where the student reasons in its own style while acting like the teacher, an effect we call cross-format transfer. Distilling the actions of Qwen3.6-27B raises the task success of Qwen3-4B on AppWorld from 7% to 18% and that of Qwen3-32B from 12% to 25%. We further introduce CoT-proxies, short summaries of the teacher's reasoning placed after the empty reasoning block, which raise Qwen3-4B further, to 35%. Since neither actions nor CoT-proxies need the hidden chain-of-thought, the recipe applies unchanged to closed teachers. Distilling GPT-5.6 Luna from its visible outputs and the reasoning summaries its API returns raises Qwen3-4B from 7% to 48% on AppWorld and from 3% to 28% on SWE-bench Verified.",
-      "url": "https://arxiv.org/abs/2611.33148v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.33148v1",
-      "published": "2026-11-24T18:58:53Z",
-      "updated": "2026-11-24T18:58:53Z",
-      "categories": [
-        "cs.CL"
       ],
       "primary_category": "cs.CL"
     },
     {
-      "id": "2611.33147v1",
-      "title": "One Take, Many Cameras: Audio-Grounded Shot Synthesis for Dialogue Re-Cinematography",
+      "id": "2611.34935v1",
+      "title": "Can image generation help visual reasoning? An empirical study",
       "authors": [
-        "Anthony Chen",
-        "Naomi Ken Korem",
-        "Matan Ben-Yosef",
-        "Tavi Halperin",
-        "Urska Jelercic",
-        "Ofir Bibi",
-        "Daniel Cohen-Or",
-        "Or Patashnik",
-        "Maneesh Agrawala"
+        "Xueyang Yu",
+        "Yifan Jing",
+        "Taiming Lu",
+        "Linrong Cai",
+        "Zhipeng Cai",
+        "Yunyang Xiong",
+        "Gabriel Sarch",
+        "Zhuang Liu"
       ],
-      "abstract": "Creating a dialogue scene typically requires cutting between multiple views (e.g., close-ups, medium shots, and over-the-shoulder shots) of the actors. Yet capturing such coverage is costly and in many settings unavailable. We study dialogue re-cinematography: synthesizing additional shots from a single wide-angle dialogue video. Existing video generators can synthesize new shots, but rely on visual cues alone, so when the source video barely shows the lips, the generated lip motion fails to match the speech. Our key observation is that the speech audio is view-invariant: it constrains lip motion in any target view. Building on this insight, we adapt a pretrained audio-visual diffusion model to generate the new shot from a target frame that specifies the view, a source video that contains the performance, and the speech audio that drives lip motion. In multi-person scenes, however, pretrained audio-visual models drive every visible face with the same speech, causing speech leakage, where silent listeners mouth the speaker's words. We therefore introduce speaker-aware audio gating, a training-free module that lets the audio drive only the faces that speak in the target shot. On a cinematic paired-view benchmark spanning diverse viewpoints and framings, our method lowers perceptual error by 59%, landmark error by 56%, and speech leakage by 97% relative to the strongest baseline, Wan 3.0. Our method also remains robust on in-the-wild scenes, highlighting its potential for film post-production.",
-      "url": "https://arxiv.org/abs/2611.33147v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.33147v1",
-      "published": "2026-11-24T18:58:32Z",
-      "updated": "2026-11-24T18:58:32Z",
+      "abstract": "Language models think in words; then multimodal models might think in images. We test whether a generated helper improves the answer to a visual question. A model describes the helper it needs and then answers using the original and generated images together. Across 13 vision-language model and generator pairs, generation lowers mean accuracy by 3.7 percentage points, with declines on nine of ten tasks. Two unified models, BAGEL and Janus-Pro-7B, each lose accuracy on eight tasks. On VSTAR, adding a generated image to the same planning hint lowers accuracy by 10.47 points. Repeated image edits yield different outcomes across tasks. ChartQAPro and MathVista stay below their no-generation baselines, while ERQA gains three points after ten edits.",
+      "url": "https://arxiv.org/abs/2611.34935v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.34935v1",
+      "published": "2026-11-25T18:59:31Z",
+      "updated": "2026-11-25T18:59:31Z",
       "categories": [
+        "cs.LG",
+        "cs.CL",
         "cs.CV"
       ],
-      "primary_category": "cs.CV"
+      "primary_category": "cs.LG"
     },
     {
-      "id": "2611.33145v1",
-      "title": "Lost on Campus: Evaluating Embodied Spatial Reasoning of Vision-Language Models in the Wild",
+      "id": "2611.34934v1",
+      "title": "Attack Policy Selection can Mislead Monitor Evaluators",
       "authors": [
-        "Zehan Zheng",
-        "Yanyuan Chen",
-        "Deming Li",
-        "Yutao Tang",
-        "Jianwen Xie",
-        "Alan Yuille",
-        "Jieneng Chen",
-        "Cheng Peng"
+        "Charlie Griffin",
+        "Oliver Makins",
+        "Asa Cooper Stickland",
+        "Alessandro Abate",
+        "Yarin Gal",
+        "Abby D'Cruz",
+        "Xander Davies"
       ],
-      "abstract": "Embodied Spatial Reasoning (ESR) is central to deploying Vision-Language Models (VLMs) in real-world embodied tasks, yet remains inadequately evaluated. Existing benchmarks primarily assess spatial reasoning in static images or synthetic indoor environments, where semantic shortcuts often suffice, making it difficult to faithfully evaluate spatial reasoning capabilities in the wild. In light of this, we present Lost on Campus, a benchmark for evaluating ESR in large-scale real-world outdoor 3D environments reconstructed by 3D Gaussian Splatting. Our benchmark introduces a unified reasoning-action evaluation framework that seamlessly integrates diagnostic QA for isolated reasoning with closed-loop interactive navigation for active reasoning under multimodal instructions. To enable fine-grained diagnosis, we evaluate six capability aspects of ESR: action grounding, spatial foresight, metric awareness, goal-directed planning, ego-allocentric localization, and spatio-temporal consistency. Extensive experiments reveal that: (i) Compared to indoor settings, real-world outdoor environments impose substantially higher demands on spatial reasoning, where existing models exhibit poor performance; (ii) VLMs still struggle with fine-grained visual alignment, with failures in spatial foresight and ego-allocentric localization emerging as primary bottlenecks; (iii) Improving multimodal interaction capabilities and long-term spatial reasoning is crucial for advancing embodied intelligence. These findings highlight that faithful evaluation of ESR demands benchmarks tightly coupling perception, reasoning and action within realistic and continuous environments.",
-      "url": "https://arxiv.org/abs/2611.33145v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.33145v1",
-      "published": "2026-11-24T18:57:48Z",
-      "updated": "2026-11-24T18:57:48Z",
+      "abstract": "AI monitors, classifiers that flag dangerous behaviour by AI agents, are often evaluated against transcripts generated by attack policies acting as proxies for dangerous behaviour in deployment. We evaluate an ex-production OpenAI monitor as a case study and find that measured false negative rate is highly sensitive to both the method used to generate attack policies and the level of optimisation applied within that method. This rate ranged from 0.5\\% to 20.8\\% across optimisation levels of a single method (reinforcement learning), and from 6.4\\% to 23.0\\% across methods at their best observed optimisation level (optimised prompting vs.\\ transcript editing). Every attack policy was developed against proxy monitors only: all reported results show attacks transferring to the held-out GPT-5.4 target monitor. Our results suggest that monitor evasion evaluations can easily mislead: an evaluation using only basic attack methods may give false confidence that a monitor is strong. The sensitivity to attack-policy choice raises a problem: interpreting any particular result as evidence about deployment performance requires justification. The transcripts produced by attack policies are proxies for the dangerous behaviour a monitor must flag in deployment. These proxies can introduce visible artefacts, such as reasoning about a ``side task'' absent from the instructions shown to the monitor, that affect monitor judgements. Given the sensitivity above, the choice of proxy can change an evaluation's conclusion. Reading these results as evidence about deployment therefore requires a separate legitimacy argument for why the proxies are informative, including any justification of conservativeness. Making convincing arguments remains an open problem.",
+      "url": "https://arxiv.org/abs/2611.34934v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.34934v1",
+      "published": "2026-11-25T18:59:28Z",
+      "updated": "2026-11-25T18:59:28Z",
       "categories": [
-        "cs.CV"
+        "cs.LG",
+        "cs.AI"
       ],
-      "primary_category": "cs.CV"
+      "primary_category": "cs.LG"
     },
     {
-      "id": "2611.33143v1",
-      "title": "ROAM-Bench: Evaluating Embodied Active Spatial Intelligence through Evidence Verification",
+      "id": "2611.34931v1",
+      "title": "DynMF2: Rigid Motion Factorization by Expectation-Maximization for Monocular 4D Reconstruction and Motion Segmentation",
       "authors": [
-        "Xingjian Ran",
-        "Xiaoye Mo",
-        "Sihao Liu",
-        "Li Luo",
-        "Taiqiang Wu",
-        "Ji Zhao",
-        "Wenqi Shao",
-        "Hongyang Li",
-        "Jiaqi Wang",
-        "Bo Dai"
+        "Agelos Kratimenos",
+        "Yile Hua",
+        "Kostas Daniilidis"
       ],
-      "abstract": "Embodied spatial intelligence requires agents to gather information through exploration and interaction, then use it to reason and act. Existing benchmarks insufficiently distinguish correct outcomes from completion of these task requirements. We introduce ROAM-Bench to evaluate these abilities under robot motion and collision constraints. Independent checks use simulation state and episode records to assess outcomes and task requirements, with stronger checks of geometry, coverage, or placement. It comprises 250 manually validated tasks across 11 types in five groups and 27 indoor environments, covering object and room search, counting, geometric judgments, direction reasoning, and relocation. Human evaluators achieve 84% strict task success on 100 sampled tasks, with every correct outcome satisfying the required checks. Across seven frontier vision-language models, we identify two complementary failure modes: correct outcomes with unmet task requirements, and incorrect outcomes despite passing stronger checks. Oracle-input diagnostics show that more complete target observations and calibrated feedback improve final spatial judgments.",
-      "url": "https://arxiv.org/abs/2611.33143v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.33143v1",
-      "published": "2026-11-24T18:56:22Z",
-      "updated": "2026-11-24T18:56:22Z",
-      "categories": [
-        "cs.RO",
-        "cs.CV"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2611.33141v1",
-      "title": "iWAM: Efficient Action Prediction from World Models without Explicit Future Prediction",
-      "authors": [
-        "Vansh Kapoor",
-        "Max Sobol Mark",
-        "Sreyas Venkataraman",
-        "Max Simchowitz",
-        "Aviral Kumar"
-      ],
-      "abstract": "World-action models (WAMs) build policies on pretrained video-generation models, on the premise that predicting how a scene evolves helps determine how to act. However, generating future scenes is expensive for real-time control. This motivates efficient proxies for future imagination, but how to train such proxies without sacrificing action-prediction quality remains unclear. An effective proxy need not generate a high-resolution frame; it only needs to provide enough information to distinguish between possible futures. This leads to the design principle behind iWAM: rather than denoising an entire future frame, can we condition the action policy on intermediate features from a single video-model evaluation? We show that the answer is yes. Exploiting the reversible dynamics of flow-matching models, we invert each training future into the corresponding latent noise vector. However, a single velocity evaluation at this latent does not necessarily yield informative features for action prediction. We therefore learn a bidirectional flow map that amortizes future-generation computation, enabling a single model evaluation to provide effective conditioning features. At inference, we sample a latent noise vector from the prior and condition the policy using just one video-backbone forward pass. Across simulated benchmarks and real robots, iWAM recovers the generalization benefits of WAMs while substantially reducing its inference cost.",
-      "url": "https://arxiv.org/abs/2611.33141v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.33141v1",
-      "published": "2026-11-24T18:56:04Z",
-      "updated": "2026-11-24T18:56:04Z",
-      "categories": [
-        "cs.RO",
-        "cs.CV",
-        "cs.LG"
-      ],
-      "primary_category": "cs.RO"
-    },
-    {
-      "id": "2611.33137v1",
-      "title": "Physicl Scenes: An Artist-created 3D Dataset for Learning Perception and Action",
-      "authors": [
-        "Yueh-Cheng Liu",
-        "Snehal Jauhri",
-        "Matthias Nie\u00dfner",
-        "Angela Dai"
-      ],
-      "abstract": "We present Physicl Scenes, a high-quality artist-created and curated dataset of 6,499 3D scenes spanning household rooms, public interiors, and outdoor spaces. The dataset combines detailed geometry, physically based materials, and carefully composed environments with object- and part-level semantic annotations, providing rich, joint supervision for visual and embodied learning. We demonstrate its value as training data across inverse rendering, 3D reconstruction, scene understanding, and mobile manipulation. Across these tasks, training state-of-the-art methods with our scenes improves performance over alternative synthetic datasets. In addition, we introduce a mobile manipulation benchmark, evaluating vision-language-action models performing physical pick and place in diverse 3D scenes with realistic layouts, and using our part annotations to also score where each object is grasped. Our dataset will be released publicly to facilitate research in visual and embodied AI.",
-      "url": "https://arxiv.org/abs/2611.33137v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.33137v1",
-      "published": "2026-11-24T18:55:07Z",
-      "updated": "2026-11-24T18:55:07Z",
+      "abstract": "A single casual video leaves a moving scene under-determined: a point seen once from each place can slide toward or away from the camera and still match every frame. We constrain the reconstruction with the structure of the motion itself. Building on DynMF, we model a scene's motion as a handful of SE(3) trajectories, each rigid, and let every point follow one of them alone, never a blend. DynMF2 computes this factorization directly from 3D point trajectories, with no rendering, by Expectation-Maximization (EM). Its M-step fits, in closed form, every rigid motion to the points assigned to it, and its E-step reassigns every point to the motion that explains it with the least error. The background is simply one more motion, the camera's, so no masks are needed. Three tools then revise the factorization: requery adds trajectories where the rendering shows parts the tracker missed, merge joins motions that move together, and split separates those that do not. Thus the number of motions follows the scene. Without masks, DynMF2 clearly outperforms the mask-based baselines in view synthesis on iPhone and NVIDIA and in 3D tracking on iPhone. It recovers what masks leave out, from thin parts and details to small movers far in the background. Its motions segment the moving parts of MOVi-F and iTACO scenes competitively, although DynMF2 is never trained to segment. What moves in a scene is not decided in advance: it emerges from the rigid motions themselves.",
+      "url": "https://arxiv.org/abs/2611.34931v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.34931v1",
+      "published": "2026-11-25T18:59:14Z",
+      "updated": "2026-11-25T18:59:14Z",
       "categories": [
         "cs.CV"
       ],

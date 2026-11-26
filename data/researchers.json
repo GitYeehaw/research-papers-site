@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-11-25T18:40:16.823566+00:00",
+  "scraped_at": "2026-11-26T18:24:25.511423+00:00",
   "researcher_count": 54,
   "researchers": [
     {
@@ -1264,6 +1264,28 @@
       "paper_count": 5,
       "papers": [
         {
+          "id": "2611.33380v1",
+          "title": "FOCI: Trajectory Optimization on Gaussian Splats for Gaussian Robots",
+          "authors": [
+            "Mario Gomez Andreu",
+            "Carlos Martinez Cuenca",
+            "Maximum Wilder-Smith",
+            "Victor Klemm",
+            "Vaishakh Patil",
+            "Marco Hutter",
+            "Jesus Tordesillas"
+          ],
+          "abstract": "3D Gaussian Splatting (3DGS) has recently gained popularity as a faster alternative to Neural Radiance Fields (NeRFs) in 3D reconstruction and view synthesis methods. Leveraging the spatial information encoded in 3DGS, this work proposes FOCI (Field Overlap Collision Integral), an algorithm that is able to optimize trajectories directly on the Gaussians themselves. FOCI leverages a novel and interpretable collision formulation for 3DGS using the notion of the overlap integral between Gaussians. The formulation presented applies to different robot morphologies (e.g., fixed and mobile base manipulators, legged robots, UAVs) and handles both static and dynamic Gaussian-Splat environments. Contrary to other approaches, which represent the robot with conservative bounding boxes that underestimate the traversability of the environment, we propose to represent the environment and the robot as Gaussian Splats. This not only has desirable computational properties, but also allows for orientation-aware planning, allowing the robot to pass through very tight and narrow spaces. We extensively test our algorithm in both synthetic and real Gaussian Splats, showcasing that collision-free trajectories for legged, aerial and manipulator robots can be computed in seconds, even with hundreds of thousands of Gaussians making up the environment. The code is available at https://github.com/leggedrobotics/foci",
+          "url": "https://arxiv.org/abs/2611.33380v1",
+          "pdf_url": "https://arxiv.org/pdf/2611.33380v1",
+          "published": "2026-11-24T20:05:59Z",
+          "updated": "2026-11-24T20:05:59Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "primary_category": "cs.RO"
+        },
+        {
           "id": "2611.30312v1",
           "title": "One Policy, Many Bodies: Cooperative Human-Object Interaction with Heterogeneous Teams",
           "authors": [
@@ -1358,34 +1380,6 @@
             "cs.CV"
           ],
           "primary_category": "cs.RO"
-        },
-        {
-          "id": "2611.15280v1",
-          "title": "Autonomous Trail Racing with a Bicycle Robot",
-          "authors": [
-            "Fabian Jenelten",
-            "Deepana Ishtaweera",
-            "Pablo Garcia",
-            "Liana Margolese",
-            "Igor Bogoslavskyi",
-            "Luca Buonocore",
-            "Jan Migliazza",
-            "Aleksandrs Ecins",
-            "Annika Wollschlaeger",
-            "Dario Bellicoso",
-            "Gabriel Nelson",
-            "Abel Gawel",
-            "Marco Hutter"
-          ],
-          "abstract": "Navigating off-road trails on a mountain bike requires diverse locomotion skills, including aerial maneuvers, cornering, and slip recovery, paired with sophisticated perception for scene understanding. Translating these capabilities to autonomous, two-wheeled robots remains a formidable challenge. We show that autonomous, high-speed trail navigation can be achieved through a single idea: encoding the trail as a semantic layer of the terrain. In simulation, this layer embeds the navigation task into the training environment; during deployment, it is reconstructed onboard from camera and LiDAR data. First, we introduce a unified learning framework that treats local navigation and locomotion as a joint optimization problem, bypassing the twist or pose command interface of classical control hierarchies. With fixed reward weights, the same framework produces both trail racing and agile parkour, shaped only through terrain semantics and episode length. Second, our perception pipeline combines a frozen vision foundation model with a lightweight dual-head decoder that predicts per-pixel terrain semantics and confidence scores, which are fused with LiDAR range measurements into an egocentric semantic elevation map at 30 Hz onboard an NVIDIA AGX Orin. We validate our framework on the Ultra Mobility Vehicle (UMV), a bicycle robot that autonomously raced across all sections of a kilometer-long, unstructured mountain bike trail at speeds exceeding 5 m/s and averaging 3.26 m/s. In simulation, our policy fails up to an order of magnitude less often than hierarchical baselines while driving faster.",
-          "url": "https://arxiv.org/abs/2611.15280v1",
-          "pdf_url": "https://arxiv.org/pdf/2611.15280v1",
-          "published": "2026-11-11T10:10:35Z",
-          "updated": "2026-11-11T10:10:35Z",
-          "categories": [
-            "cs.RO"
-          ],
-          "primary_category": "cs.RO"
         }
       ]
     },
@@ -1398,19 +1392,19 @@
       "paper_count": 5,
       "papers": [
         {
-          "id": "2611.32582v1",
+          "id": "2611.32582v2",
           "title": "Design, Control, and Teleoperation of a Dexterous Robotic Hand with Soft-Rigid Hybrid Fingers",
           "authors": [
             "Chao Liu",
             "Wil J. Norton",
-            "Brandon Romero",
+            "Branden Romero",
             "Daniela Rus"
           ],
           "abstract": "Adding compliance to robot hands results in higher grasp quality and robust contact with the environment. Soft hands are inherently compliant, but are typically more complex to control and model than rigid equivalents. We extend prior work on soft-rigid hybrid robot fingers into a five-fingered dexterous gripper --- an integrated tendon-driven hand that is highly compliant and controllable. Structural compliance combined with a rigid skeleton, when realized in a five-fingered hand, allow us to use linear control to achieve soft-grasping generality. We evaluate the use of this hand in a variety of teleoperated manipulation tasks, demonstrating the effectiveness of the overall mechanical design and control strategy. Our contributions include: (1) Mechanical design of the a five-fingered Soft-Rigid Hybrid Hand, composed of 12 active degrees of freedom, demonstrating a high degree on generalization enabled by the soft-rigid architecture, with our gripper, able to complete 28 of the 33 (84.8\\%) grasp postures in the human range. (2) Precise, high bandwidth (up to 1432deg/s extension speed, compared with 700deg/s for the equivalent human joint). (3) Position and task space controllers for the soft-rigid hybrid finger and whole hand. (4) A teleoperation framework for control of this hand, as well as demonstrations of its efficacy in a variety of grasping and manipulation tasks Further tests illustrate the hand's advantages in completing non-rigid manipulation tasks, such as picking up thin deformable objects (such as a dollar bill or folding cloth) as well as in interfacing with soft or delicate targets.",
-          "url": "https://arxiv.org/abs/2611.32582v1",
-          "pdf_url": "https://arxiv.org/pdf/2611.32582v1",
+          "url": "https://arxiv.org/abs/2611.32582v2",
+          "pdf_url": "https://arxiv.org/pdf/2611.32582v2",
           "published": "2026-11-24T13:24:00Z",
-          "updated": "2026-11-24T13:24:00Z",
+          "updated": "2026-11-25T13:50:02Z",
           "categories": [
             "cs.RO"
           ],
@@ -1659,7 +1653,7 @@
           "primary_category": "cs.RO"
         },
         {
-          "id": "2610.29172v1",
+          "id": "2610.29172v2",
           "title": "Conditional Flow Models Convert Epistemic Uncertainty into Apparent Aleatoric Variance",
           "authors": [
             "Navodita Sharma",
@@ -1667,11 +1661,11 @@
             "Max Simchowitz",
             "Pulkit Agrawal"
           ],
-          "abstract": "Conditional Flow Models (CFMs) are increasingly being used in place of deterministic predictors across machine learning, including for tasks that were classically formulated as regression. Given their success in such tasks, we ask the question: what useful information do the conditional distributions produced by CFMs carry beyond what a point predictor would provide? We identify a systematic phenomenon: in many natural regimes, CFM samples routinely have larger variance than the true conditional distribution, even in nearly deterministic regression problems. This effect is most pronounced where the model has not resolved the dependence on the conditioning variable, and thus the additional variance can be viewed as converting epistemic uncertainty in fitting the ground truth conditional distribution into apparent aleatoric variance in the generated samples. Through controlled synthetic and real-data experiments, and comparisons with explicit smoothing estimators, we show that the induced variance tracks model underfitting of complex or hard-to-fit targets, and decreases with additional training or data. We provide a theoretical account of the phenomenon in a simplified setting and demonstrate a consequent practical use-case of conditional flow-matching: designing high-coverage predictive sets that cover the ground-truth regression target.",
-          "url": "https://arxiv.org/abs/2610.29172v1",
-          "pdf_url": "https://arxiv.org/pdf/2610.29172v1",
+          "abstract": "Conditional Flow Models (CFMs) are increasingly being used in place of deterministic predictors across machine learning, including for tasks that were classically formulated as regression. Given their success in such tasks, we ask the question: what useful information do the conditional distributions produced by CFMs carry beyond what a point predictor would provide? We identify a systematic phenomenon: in many natural regimes, CFM samples routinely have larger variance than the true conditional distribution, even in nearly deterministic regression problems. This effect is most pronounced where the model has not resolved the dependence on the conditioning variable, and thus the additional variance can be viewed as converting \\emph{epistemic uncertainty} in fitting the ground truth conditional distribution into apparent \\emph{aleatoric variance} in the generated samples. Through controlled synthetic and real-data experiments, and comparisons with explicit smoothing estimators, we show that the induced variance tracks model underfitting of complex or hard-to-fit targets, and decreases with additional training or data. We uncover surprising structure in this excess conditional variance that seems unique to CFMs and absent in the other standard probabilistic models that we test. We provide a theoretical account of the phenomenon in a simplified setting and demonstrate a consequent practical use-case of conditional flow-matching: designing high-coverage predictive sets that cover the ground-truth regression target.",
+          "url": "https://arxiv.org/abs/2610.29172v2",
+          "pdf_url": "https://arxiv.org/pdf/2610.29172v2",
           "published": "2026-10-21T04:02:35Z",
-          "updated": "2026-10-21T04:02:35Z",
+          "updated": "2026-11-25T17:04:05Z",
           "categories": [
             "cs.LG",
             "cs.AI"
